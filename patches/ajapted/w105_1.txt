@@ -1,0 +1,13 @@
+========================================================================
+
+Contributed by Andrew Apted <ajapted@users.sourceforge.net>
+
+FreeDOOM texture patch W105_1 (used in texture BIGDOOR7).
+
+Image sources:
+   (a) Existing FreeDOOM images (w96_1, art/skull*.png)
+
+Includes a hires version (w105_1_full2x.png), although only the
+skulls have more detail/color (not the door itself).
+
+========================================================================

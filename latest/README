@@ -1,0 +1,13 @@
+This contains the latest.wad, which is all of the new stuff since the 
+last proper release. To use, download the last real release from
+the sourceforge download page, then do something like:
+
+	(doom port of your choice) -file freedoom.wad latest.wad
+
+or to play with the iwad, assuming the freedoom iwad is called doom2.wad:
+
+	(doom port of your choice) -iwad doom2.wad -file latest.wad
+
+This will allow you to play freedoom including all of the recent
+stuff from latest.wad.
+

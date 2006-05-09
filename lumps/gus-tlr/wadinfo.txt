@@ -1,0 +1,16 @@
+# DeuTex 4.4.0 by Olivier Montanuy
+# PWAD creation directives
+
+# List of data Lumps
+[lumps]
+DMXGUS
+
+# End of extraction
+# DeuTex 4.4.0 by Olivier Montanuy
+# PWAD creation directives
+
+# List of data Lumps
+[lumps]
+DMXGUSC
+
+# End of extraction

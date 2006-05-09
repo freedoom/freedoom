@@ -1,0 +1,3 @@
+These are the wfall patches, they are simply the bfall patches with the red converted to blue.
+Credits: Espi for the bfall patches
+	 mmnpsrsoskl for converting them

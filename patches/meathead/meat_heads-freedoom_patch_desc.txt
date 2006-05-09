@@ -1,0 +1,5 @@
+Freedoom Texture Replacements by Meat_Head
+
+WALL78_1.GIF - red cubic textured wall
+
+WALL78_1_fullcolor_256x256.png - same as above

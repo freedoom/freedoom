@@ -1,0 +1,18 @@
+* Rework texture build system to be automatic:
+
+	For shareware build, extract a list of textures used in the 
+	shareware wad levels. Build the shareware wad containing only
+	these textures.
+
+	For the full build, include all textures.
+
+	This removes the need to fiddle the textures around whenever a 
+	new wad is added to the shareware build and also should make
+	the wad more compact.
+
+* Make textures be in alphabetical order.
+
+* Split up sprites so their offsets are stored with the image files.
+
+* Add Deathmatch IWAD build?
+

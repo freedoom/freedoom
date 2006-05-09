@@ -1,0 +1,8 @@
+I was sick of seeing these undone in map02 so I thought I'd give them
+a go.  One of the tekwall patches is used as the background for the pipes (as in the original texture).  These aren't perfect but they turned out alright, I might update them later on.
+
+Fix: I realised I'd made some mistakes with first textures I uploaded (this is what happens when you stay up until 6am working on textures), so here are some corrected ones.  The initial textures I uploaded had the pipes at different offsets from the original, however I was worried that this might screw up any maps that use precise offsets with the texture to make pipes.  This unfortunately does mean the texture now looks even more similar to the original.  These textures are very close to the originals, but in a way this is unavoidable given their design.  Feel free to upload altered versions, suggest alterations etc.  
+
+
+Jonathan Rimmer
+jonr@frad.org

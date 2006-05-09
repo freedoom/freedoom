@@ -1,0 +1,40 @@
+      _/_/_/_/  _/    _/  _/_/_/_/          _/_/_/_/_/  _/       _/_/_/
+     _/  _/_/  _/    _/  _/_/_/_/   _/_/_/     _/      _/       _/_/_/_/
+    _/    _/  _/    _/        _/              _/      _/       _/   _/
+   _/_/_/_/  _/_/_/_/  _/_/_/_/              _/      _/_/_/_/ _/     _/
+ 
+ by Sebastien Bacquet  <bacquet@bach.iie.cnam.fr>
+                    or <bacquet@rubis.iie.cnam.fr>
+    author of IIE, DEATHEB and GUS1M-II
+
+TLR : The Last Resort, the ultimate deathmatch experience,
+ by M. Houston, G. Houston, A. Warrington, D. Sears.
+If you don't know it then get it, it's great !
+============================================================================
+
+If you own a GUS with 1Mo on board and if you like playing TLR, 
+THEN THIS IS FOR YOU !
+This ZIP contains 2 WADS : 
+   * GUSTLR1.WAD if you play TLR for DOOM (1)
+   * GUSTLR2.WAD if you play TLR for DOOM ][
+These WADS contain the entries DMXGUS for DOOM, DMXGUSC for DOOM ][, which
+are the mappings of MIDI instruments for musics.
+David Sears, the author of TLR's musics, has used a lot of instruments
+that DOOM and DOOM ][ don't use. So it was essential to make a new mapping
+for TLR, to appreciate to the full these very good musics.
+Listen to the difference !
+
+How to use it ?
+~~~~~~~~~~~~~~~
+Nothing's easier : 
+  * copy GUSTLR1/2.wad in your TLR directory 
+  * then : doom(2) -file tlr\gustlr1/2.wad tlr\last.wad tlr\resort.wad
+
+or include it definitively in LAST.WAD or RESORT.WAD, thanks to DCK
+or DEUTEX (very good tools, congratulations to authors !).
+
+I hope you will like the new sound of TLR ...
+
+Copyright / Permissions
+~~~~~~~~~~~~~~~~~~~~~~~
+Do what you want with this.

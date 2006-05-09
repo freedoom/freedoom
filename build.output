@@ -1,0 +1,293 @@
+tools/simplecpp -DDOOM1 -DDOOM2 < textures/combined.txt > textures/doom2/texture1.txt
+./extract-pnames.pl < textures/doom2/texture1.txt > textures/doom2/pnames.txt
+tools/simplecpp -P -DDOOM2 < buildcfg.txt | ./wadinfo-builder.pl > wadinfo.txt
+make -C graphics/titlepic
+make[1]: Entering directory `/home/groups/f/fr/freedoom/htdocs/deutex/graphics/titlepic'
+./create_caption
+make[1]: Leaving directory `/home/groups/f/fr/freedoom/htdocs/deutex/graphics/titlepic'
+make -C lumps
+make[1]: Entering directory `/home/groups/f/fr/freedoom/htdocs/deutex/lumps'
+echo 0.4 > freedoom.lmp
+make[1]: Leaving directory `/home/groups/f/fr/freedoom/htdocs/deutex/lumps'
+ln -sf doom2/texture1.txt textures/texture1.txt
+rm -f /tmp/freedoom-wads/freedoom.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -textures -lumps -patch -flats -sounds -musics -graphics -sprites -build wadinfo.txt /tmp/freedoom-wads/freedoom.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Select textures
+Select lumps
+Select patches
+Select flats
+Select sounds
+Select musics
+Select graphics
+Select sprites
+Translating wadinfo.txt into a PWAD /tmp/freedoom-wads/freedoom.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating PWAD /tmp/freedoom-wads/freedoom.wad
+Color palette is Doom
+Making Lumps
+Making Texture1
+Read 493 Textures in ./textures/texture1.txt
+Making Pnames
+Making Sounds
+Making Musics
+Making Graphics
+Warning: GIF support may go away in the future (see
+Warning: http://lpf.ai.mit.edu/Patents/Gif/Gif.html).
+Warning: Switch to PPM or BMP.
+Warning: Color quantisation is slow. Use ppmquant.
+Making Sprites
+Making Wall Patches
+Making Flats
+WAD is complete: size 9964932 bytes.
+rm -f /tmp/freedoom-wads/freedoom_graphics.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -graphics -build wadinfo.txt /tmp/freedoom-wads/freedoom_graphics.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Select graphics
+Translating wadinfo.txt into a PWAD /tmp/freedoom-wads/freedoom_graphics.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating PWAD /tmp/freedoom-wads/freedoom_graphics.wad
+Color palette is Doom
+Making Graphics
+Warning: GIF support may go away in the future (see
+Warning: http://lpf.ai.mit.edu/Patents/Gif/Gif.html).
+Warning: Switch to PPM or BMP.
+Warning: Color quantisation is slow. Use ppmquant.
+WAD is complete: size 497028 bytes.
+rm -f /tmp/freedoom-wads/freedoom_levels.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -levels -build wadinfo.txt /tmp/freedoom-wads/freedoom_levels.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Select levels
+Translating wadinfo.txt into a PWAD /tmp/freedoom-wads/freedoom_levels.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating PWAD /tmp/freedoom-wads/freedoom_levels.wad
+Reading WAD ./levels/map01.wad:	(11 entries)
+Reading WAD ./levels/map02.wad:	(11 entries)
+Reading WAD ./levels/map03.wad:	(11 entries)
+Reading WAD ./levels/map04.wad:	(11 entries)
+Reading WAD ./levels/map05.wad:	(11 entries)
+Reading WAD ./levels/map06.wad:	(11 entries)
+Reading WAD ./levels/map07.wad:	(11 entries)
+Reading WAD ./levels/map10.wad:	(11 entries)
+Reading WAD ./levels/map11.wad:	(11 entries)
+Reading WAD ./levels/map12.wad:	(11 entries)
+Reading WAD ./levels/map13.wad:	(11 entries)
+Reading WAD ./levels/map16.wad:	(11 entries)
+Reading WAD ./levels/map17.wad:	(11 entries)
+Reading WAD ./levels/map18.wad:	(11 entries)
+Reading WAD ./levels/map20.wad:	(11 entries)
+Reading WAD ./levels/map21.wad:	(11 entries)
+Reading WAD ./levels/map22.wad:	(11 entries)
+Reading WAD ./levels/map23.wad:	(11 entries)
+Reading WAD ./levels/map25.wad:	(11 entries)
+Reading WAD ./levels/map26.wad:	(11 entries)
+Reading WAD ./levels/map27.wad:	(11 entries)
+Reading WAD ./levels/map29.wad:	(11 entries)
+Reading WAD ./levels/map30.wad:	(11 entries)
+Reading WAD ./levels/map31.wad:	(11 entries)
+Reading WAD ./levels/map32.wad:	(17 entries)
+WAD is complete: size 7475816 bytes.
+rm -f /tmp/freedoom-wads/freedoom_sprites.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -sprites -build wadinfo.txt /tmp/freedoom-wads/freedoom_sprites.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Select sprites
+Translating wadinfo.txt into a PWAD /tmp/freedoom-wads/freedoom_sprites.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating PWAD /tmp/freedoom-wads/freedoom_sprites.wad
+Color palette is Doom
+Making Sprites
+Warning: GIF support may go away in the future (see
+Warning: http://lpf.ai.mit.edu/Patents/Gif/Gif.html).
+Warning: Switch to PPM or BMP.
+WAD is complete: size 1795312 bytes.
+rm -f /tmp/freedoom-wads/freedoom_sounds.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -sounds -musics -build wadinfo.txt /tmp/freedoom-wads/freedoom_sounds.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Select sounds
+Select musics
+Translating wadinfo.txt into a PWAD /tmp/freedoom-wads/freedoom_sounds.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating PWAD /tmp/freedoom-wads/freedoom_sounds.wad
+Making Sounds
+Making Musics
+WAD is complete: size 2200156 bytes.
+ln -sf doom2/texture1.txt textures/texture1.txt
+rm -f /tmp/freedoom-wads/freedoom_textures.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -textures -patch -flats -build wadinfo.txt /tmp/freedoom-wads/freedoom_textures.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Select textures
+Select patches
+Select flats
+Translating wadinfo.txt into a PWAD /tmp/freedoom-wads/freedoom_textures.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating PWAD /tmp/freedoom-wads/freedoom_textures.wad
+Color palette is Doom
+Making Texture1
+Read 493 Textures in ./textures/texture1.txt
+Making Pnames
+Making Wall Patches
+Warning: GIF support may go away in the future (see
+Warning: http://lpf.ai.mit.edu/Patents/Gif/Gif.html).
+Warning: Switch to PPM or BMP.
+Making Flats
+WAD is complete: size 5374624 bytes.
+tools/simplecpp -DSHAREWARE < textures/combined.txt > textures/shareware/texture1.txt
+./extract-pnames.pl < textures/shareware/texture1.txt > textures/shareware/pnames.txt
+tools/simplecpp -P -DSHAREWARE < buildcfg.txt | ./wadinfo-builder.pl -dummy > wadinfo_sw.txt
+ln -sf shareware/texture1.txt textures/texture1.txt
+rm -f /tmp/freedoom-wads/doom1.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -iwad -build wadinfo_sw.txt /tmp/freedoom-wads/doom1.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Build an IWAD file.
+Translating wadinfo_sw.txt into a IWAD /tmp/freedoom-wads/doom1.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating IWAD /tmp/freedoom-wads/doom1.wad
+Reading WAD ./levels/e1m1.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/e1m3.wad:	(11 entries)
+Reading WAD ./levels/e1m4.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/e1m6.wad:	(11 entries)
+Reading WAD ./levels/e1m7.wad:	(11 entries)
+Reading WAD ./levels/e1m8.wad:	(11 entries)
+Reading WAD ./levels/e1m9.wad:	(17 entries)
+Color palette is Doom
+Making Lumps
+Making Texture1
+Read 182 Textures in ./textures/texture1.txt
+Making Pnames
+Making Sounds
+Making Musics
+Making Graphics
+Warning: GIF support may go away in the future (see
+Warning: http://lpf.ai.mit.edu/Patents/Gif/Gif.html).
+Warning: Switch to PPM or BMP.
+Warning: Color quantisation is slow. Use ppmquant.
+Making Sprites
+Making Wall Patches
+Making Flats
+Warning: Could not find file ./flats/dummy.wad, .ppm, .bmp or .gif
+WAD is complete: size 5437044 bytes.
+tools/simplecpp -P -DDOOM2 < buildcfg.txt | ./wadinfo-builder.pl -dummy > wadinfo_iwad.txt
+ln -sf doom2/texture1.txt textures/texture1.txt
+rm -f /tmp/freedoom-wads/doom2.wad
+tools/deutex -fullsnd -noshrink -rgb 0 255 255 -doom2 bootstrap/ -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_iwad.txt /tmp/freedoom-wads/doom2.wad
+DeuTex 4.4.0 Copyright 1994,95 O.Montanuy, Copyright 1999-2000 A.Majorel
+  Ported to DOS, Unix, OS/2, Linux, SGiX, DEC Alpha.
+  Thanx to M.Mathews, P.Allansson, C.Rossi, J.Bonfield, U.Munk.
+  This program is freeware.
+Type "deutex --help" to get the list of commands.
+Saving complete sounds.
+Transparent colour is R=0 G=255 B=255
+Main directory: bootstrap/.
+Build an IWAD file.
+Select textures
+Select lumps
+Select patches
+Select flats
+Select sounds
+Select musics
+Select graphics
+Select sprites
+Select levels
+Translating wadinfo_iwad.txt into a IWAD /tmp/freedoom-wads/doom2.wad
+Reading WAD bootstrap//doom2.wad:	(3 entries)
+Creating IWAD /tmp/freedoom-wads/doom2.wad
+Reading WAD ./levels/map01.wad:	(11 entries)
+Reading WAD ./levels/map02.wad:	(11 entries)
+Reading WAD ./levels/map03.wad:	(11 entries)
+Reading WAD ./levels/map04.wad:	(11 entries)
+Reading WAD ./levels/map05.wad:	(11 entries)
+Reading WAD ./levels/map06.wad:	(11 entries)
+Reading WAD ./levels/map07.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/map10.wad:	(11 entries)
+Reading WAD ./levels/map11.wad:	(11 entries)
+Reading WAD ./levels/map12.wad:	(11 entries)
+Reading WAD ./levels/map13.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/map16.wad:	(11 entries)
+Reading WAD ./levels/map17.wad:	(11 entries)
+Reading WAD ./levels/map18.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/map20.wad:	(11 entries)
+Reading WAD ./levels/map21.wad:	(11 entries)
+Reading WAD ./levels/map22.wad:	(11 entries)
+Reading WAD ./levels/map23.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/map25.wad:	(11 entries)
+Reading WAD ./levels/map26.wad:	(11 entries)
+Reading WAD ./levels/map27.wad:	(11 entries)
+Reading WAD ./levels/dummy.wad:	(11 entries)
+Reading WAD ./levels/map29.wad:	(11 entries)
+Reading WAD ./levels/map30.wad:	(11 entries)
+Reading WAD ./levels/map31.wad:	(11 entries)
+Reading WAD ./levels/map32.wad:	(17 entries)
+Color palette is Doom
+Making Lumps
+Making Texture1
+Read 493 Textures in ./textures/texture1.txt
+Making Pnames
+Making Sounds
+Making Musics
+Making Graphics
+Warning: GIF support may go away in the future (see
+Warning: http://lpf.ai.mit.edu/Patents/Gif/Gif.html).
+Warning: Switch to PPM or BMP.
+Warning: Color quantisation is slow. Use ppmquant.
+Making Sprites
+Making Wall Patches
+Making Flats
+Warning: Could not find file ./flats/dummy.wad, .ppm, .bmp or .gif
+WAD is complete: size 18219048 bytes.

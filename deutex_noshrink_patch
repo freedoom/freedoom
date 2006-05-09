@@ -1,0 +1,103 @@
+diff -u deutex-4.4.0/src/deutex.c deutex/deutex-4.4.0/src/deutex.c
+--- deutex-4.4.0/src/deutex.c	2000-01-03 11:32:47.000000000 -0500
++++ deutex/deutex-4.4.0/src/deutex.c	2002-08-06 11:24:12.000000000 -0400
+@@ -85,6 +85,7 @@
+ static Bool fullSND;
+ static Bool WSafe;
+ static Bool George;
++Bool shrink_sounds = 1;
+ #endif /*DeuTex*/
+ char trnR,trnG,trnB;
+ picture_format_t picture_format        = PF_NORMAL;
+@@ -454,6 +455,11 @@
+   ((int)trnR&0xFF),((int)trnG&0xFF),((int)trnB&0xFF));
+   (void)argc;
+ }
++void COMnoshrink(int argc, const char *argv[])
++{
++  shrink_sounds = 0;
++  (void)argc;(void)argv;
++}
+ 
+ void COMle (int argc, const char *argv[])
+ {
+@@ -726,6 +732,7 @@
+  {OPT,0,"wav",      COMwave,   NULL,   "save sound as wave (.wav)"},
+  {OPT,0,"voc",      COMvoc,    NULL,   "save sound as voc (.voc)"},
+  {OPT,0,"fullsnd",  COMfullsnd,NULL,   "save sound lumps beyond declared length"},
++ {OPT,0,"noshrink", COMnoshrink,NULL,  "do not adjust sound effects to be 11025 Hz always"},
+ 
+  {OPT,0,"levels",   COMlevel,  NULL,   "select levels"},
+  {OPT,0,"lumps",    COMlump ,  NULL,   "select lumps"},
+diff -u deutex-4.4.0/src/sound.c deutex/deutex-4.4.0/src/sound.c
+--- deutex-4.4.0/src/sound.c	1999-12-30 18:20:22.000000000 -0500
++++ deutex/deutex-4.4.0/src/sound.c	2002-08-06 11:27:33.000000000 -0400
+@@ -30,6 +30,8 @@
+ #include "sound.h"
+ #include "text.h"
+ 
++extern Bool shrink_sounds;
++
+ /*compile only for DeuTex*/
+ #if defined DeuTex
+ 
+@@ -402,31 +404,39 @@
+     case SNDVOC: data=SNDloadVocFile(file,&datasize,&speed);break;
+     default:  Bug("sndcw");
+   }
+-  rate = (11025L<<8)/((Int32)speed);
+-  soundsize= (datasize*rate)>>8;
+-  rate = ((Int32)speed<<8)/11025L;
+-  if(speed>11025)
+-  { Warning("shrinking %ld to 11025 sample/s",speed);
+-    for(s=0;s<soundsize;s++)
+-    { d= (s*rate)>>8;  /* (s*((Int32)speed))/11025;*/
+-      data[s]= data[d];
++  
++  if (shrink_sounds) {
++    rate = (11025L<<8)/((Int32)speed);
++    soundsize= (datasize*rate)>>8;
++    rate = ((Int32)speed<<8)/11025L;
++    if(speed>11025)
++    { Warning("shrinking %ld to 11025 sample/s",speed);
++      for(s=0;s<soundsize;s++)
++      { d= (s*rate)>>8;  /* (s*((Int32)speed))/11025;*/
++        data[s]= data[d];
++      }
++      data=(char  *)Realloc(data,soundsize);
+     }
+-    data=(char  *)Realloc(data,soundsize);
+-  }
+-  else if(speed < 11025)
+-  { Warning("expanding %ld to 11025 sample/s",speed);
+-    data=(char  *)Realloc(data,soundsize);
+-    for(s=soundsize-1;s>=0;s--)
+-    { d= (s*rate)>>8;
+-      data[s]= data[d];
++    else if(speed < 11025)
++    { Warning("expanding %ld to 11025 sample/s",speed);
++      data=(char  *)Realloc(data,soundsize);
++      for(s=soundsize-1;s>=0;s--)
++      { d= (s*rate)>>8;
++        data[s]= data[d];
++      }
+     }
++    else  /*11025*/
++    { soundsize=datasize;
++    }
++
++    speed = 11025;
++  } else {      /* shrink_sounds */
++    soundsize = datasize;
+   }
+-  else  /*11025*/
+-  { soundsize=datasize;
+-  }
++
+   if(soundsize>0)
+   { size= WADRwriteShort(info,3);
+-    size+=WADRwriteShort(info,11025);
++    size+=WADRwriteShort(info,speed);
+     size+=WADRwriteLong(info,soundsize);
+     size+=WADRwriteBytes(info,data,soundsize);
+   }

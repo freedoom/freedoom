@@ -1,0 +1,5 @@
+name: Tyler Pantella "picklehammer"
+project freedoom patches
+email: pickle_hammer@hotmail.com
+
+note: 2 pictures taken from doomworld: fraggle & linguica

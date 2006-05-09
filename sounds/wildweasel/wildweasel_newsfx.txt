@@ -1,0 +1,10 @@
+howdy. WildWeasel back again after making those 2 pain sounds about a year ago. This ZIP contains (or SHOULD contain) the following 3 WAV files:
+
+DSSWTCHN.WAV - A large *CHUNK* sound, similar to the original one in DOOM only based off of me hitting the microphone on my head out of frustration. (You'd be surprised how many good sounds I've got like that...)
+DSSWTCHX.WAV - A smaller *CHUNK* sound, with less reverberation, and a little beebeep on it too.
+DSSHOTGN.WAV - A shotgun that I made from something other than my head. I got sick of the weak-sounding shotgun already in the main WAD, so I grabbed one of my own sounds and tagged on the existing DSSGCOCK from the WAD file (at a little less of a frequency).
+
+Enjoy the sounds,
+WildWeasel
+
+"What do you expect me to do, patent your HEAD?!"

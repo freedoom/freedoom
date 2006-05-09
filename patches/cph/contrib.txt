@@ -1,0 +1,3 @@
+Contributed by Colin "cph" Phipps <cphipps@doomworld.com>
+
+License: BSD

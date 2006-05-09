@@ -1,0 +1,10 @@
+#!/bin/sh
+
+./ppmcaption base.ppm output.ppm                                        \
+								      \
+  -font ncenB24.bdf -scale 0.34 -fg white -bg black		      \
+  -pos 240,30 -right -text 'http://freedoom.sourceforge.net/'         \
+								      \
+  -font ncenB24.bdf -scale 0.34 -fg white -bg black                   \
+  -pos -10,-10 -right -text 'Build Date: %a, %b %d %Y'		      \
+  -pos -10,-25 -right -text "Version: $VERSION"

@@ -1,0 +1,41 @@
+# DeuTex 4.4.0 by Olivier Montanuy
+# PWAD creation directives
+
+# List of wall patches
+[patches]
+W113_1
+W113_2
+W113_3
+WALL02_1
+WALL02_2
+WALL02_3
+WALL62_1
+WALL62_2
+SUPPORT2
+RW25_1
+RW25_2
+RW25_3
+RW25_4
+RW10_1
+RW10_2
+RW10_3
+RW10_4
+RW38_3
+TP3_1
+TP3_2
+TP5_1
+TP5_2
+TP5_3
+TP5_4
+TP7_1
+TP7_2
+RP1_1
+RP1_2
+RP2_1
+RP2_2
+RP2_3
+RP2_4
+TP2_1
+TP2_2
+
+# End of extraction

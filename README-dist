@@ -1,0 +1,13 @@
+Freedoom is a project to create a complete Doom II-compatible 
+IWAD file which is Free Software.
+
+The IWAD file is the file used by Doom which contains all the 
+game data (graphics, sound effects, music, etc.). While the 
+Doom source code is Free, you currently still need one of the 
+proprietary IWAD files from id in order to play Doom. Freedoom 
+aims to create a Free alternative. Combined with the GPL-licensed 
+Doom source code this will result in a complete Free Doom-based 
+game.
+
+For more information, see http://freedoom.sf.net/
+

@@ -1,0 +1,13 @@
+ __        __     _____   _____   ______
+|  |      /  \   |___  | |   __| |  __  \
+|  |     / /\ \     / /  |  |_   | |__| /
+|  |    | /__\ |   / /   |   _|  |   _  \
+|  |__  |  ||  |  / /__  |  |__  |  | \  \
+|_____| |__||__| |_____| |_____| |__| |__|
+
+Name:  Devin Afshin
+Nick: Lazer
+Email: dafshin@mediaone.net
+What: Replacement patch for Freedoom.
+Replaces:
+rw32_2.bmp = rw32_2

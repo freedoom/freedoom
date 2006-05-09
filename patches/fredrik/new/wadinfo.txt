@@ -1,0 +1,10 @@
+# DeuTex 4.4.0 by Olivier Montanuy
+# PWAD creation directives
+
+# List of wall patches
+[patches]
+WALL22_1
+WALL23_1
+WALL23_2
+
+# End of extraction

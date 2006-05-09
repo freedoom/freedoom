@@ -1,0 +1,58 @@
+#!/usr/bin/env perl
+
+use strict;
+
+sub cmd
+{
+	my ($cmd) = @_;
+
+	print "$cmd\n";
+	`$cmd`;
+}
+
+my $version = $ENV{'VERSION'};
+
+foreach (@ARGV) {
+	my $file = $_;
+	die if $file !~ /(.*)\/([^\/]*)\.wad$/;
+
+	my ($path, $pkgname) = ($1, $2);
+
+	my %dirnames = (
+		'doom2' => 'freedoom-iwad',
+		'doom1' => 'freedoom-demo',
+		'freedoom' => 'freedoom-resource-wad',
+	);
+
+	my $basedir;
+
+	if ($dirnames{$pkgname}) {
+		$basedir = $dirnames{$pkgname};
+	} else {
+		$basedir = $pkgname;
+	}
+
+	$basedir .= "-$version";
+	$basedir =~ tr/_/-/;
+	
+	my $fulldir = "$path/$basedir";
+
+#	mkdir($dir);
+#	`cp NEWS ChangeLog COPYING CREDITS $dir`;
+#	`cp $file $dir`;
+
+	cmd("mkdir $fulldir");
+	cmd("cp NEWS ChangeLog COPYING CREDITS $fulldir");
+	cmd("cp README-dist $fulldir/README");
+	cmd("cp $file $fulldir\n");
+
+	my $cwd = `pwd`;
+	chomp $cwd;
+
+	chdir($path);
+	cmd("rm -f $basedir.zip");
+	cmd("zip -r $basedir.zip $basedir");
+	cmd("rm -rf $basedir");
+	chdir($cwd);
+}
+

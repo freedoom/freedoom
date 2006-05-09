@@ -1,0 +1,3 @@
+Alias: Bloodshedder
+Name: Bill Koch
+E-mail: bloodshedder@doomcenter.com

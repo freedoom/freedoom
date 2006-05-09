@@ -1,0 +1,7 @@
+Mancubus Sounds:
+
+I created these sounds to match Saint of Killers New Mancubus creature
+replacement.  I have tested the sounds in the WAD file.  Hopefully these
+sounds will be useful for Freedoom.
+
+Cacodemon Leader

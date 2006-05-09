@@ -1,0 +1,27 @@
+2006.03.03	v0.4.1
+
+Bugfix release: a texture error prevented 0.4 from working properly in
+some ports (prboom 2.2, eternity, possibly other early boom
+derivatives). I have also taken this opportunity to update the
+resource wads.
+
+2005.12.27	v0.4
+
+A belated christmas release: three new levels, a handful of new sounds
+and a lot of work behind the scenes.
+
+2004.12.25	v0.3
+
+This Christmas release features new levels and sprites as well as
+fixes for various bugs.
+
+2003.12.10	v0.2
+
+Changes in this release are mostly bugfixes. There are some new 
+sprites, however, and two new levels. This release is 
+celebrate Doom's 10th Anniversary.
+
+2003.04.16	v0.1
+
+Initial release
+

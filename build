@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# build wrapper
+# this runs make, redirecting all output to build.output for the
+# public to see. a tail process is spawned in the background
+# to send the output to the console as well.
+
+export VERSION="0.4"
+
+if [ x$* == x ] ; then
+#    make all $* >> build.output 2>&1
+    make latest/latest.wad.gz $* 2>&1 | tee build.output
+    make latest/ulatest.wad.gz $* 2>&1 | tee -a build.output
+else
+    make $* 2>&1 | tee build.output
+fi
+
