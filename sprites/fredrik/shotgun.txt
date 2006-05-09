@@ -1,0 +1,14 @@
+# DeuTex 4.4.0 by Olivier Montanuy
+# PWAD creation directives
+
+# List of Sprites
+[sprites]
+SHTGA0	-97	-95
+SHTGB0	-98	-96
+SHTGC0	-111	-98
+SHTGD0	-125	-100
+SHTFA0	-97	-87
+SHTFB0	-97	-87
+SHOTA0	29	17
+
+# End of extraction

@@ -1,0 +1,7 @@
+Replacement sprites for plasma bullets and arachnotron plasma bullets
+(PLSS, PLSE, APLS, APBX)
+They look similar to the original, but they are entirely new and done from scratch.
+
+:)
+
+Hyena

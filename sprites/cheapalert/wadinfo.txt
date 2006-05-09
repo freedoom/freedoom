@@ -1,0 +1,11 @@
+# DeuTex 4.4.0 by Olivier Montanuy
+# PWAD creation directives
+
+# List of Pictures (with insertion point)
+[graphics]
+CHGGA1	-92	-85
+CHGFA1	-126	-78
+CHGGB1	-104	-100
+CHGFB1	-119	-86
+
+# End of extraction

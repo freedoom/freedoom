@@ -1,0 +1,17 @@
+========================================================================
+
+Contributed by Andrew Apted <ajapted@users.sourceforge.net>
+
+FreeDOOM sprite: BON2A0 to BON2D0 (armor helmet).
+
+Drawn from scratch.  Transparent color is (0,255,255).
+
+Deutex info:
+
+[SPRITES]
+BON2A0 9 15
+BON2B0 9 15
+BON2C0 9 15
+BON2D0 9 15
+
+========================================================================

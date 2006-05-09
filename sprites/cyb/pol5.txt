@@ -1,0 +1,8 @@
+# DeuTex 4.4.0 by Olivier Montanuy
+# PWAD creation directives
+
+# List of Sprites
+[sprites]
+POL5A0	27	5
+
+# End of extraction

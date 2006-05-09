@@ -1,0 +1,14 @@
+Here's a silly looking poorly animated pistol, but pistol nevertheless.. :)
+
+pisga0 = -208:-89
+pisgb0 = -210:-90
+pisgc0 = -212:-91
+pisgd0 = same as pisgb0.
+pisge0 = same as pisga0.
+
+I can only wonder why the last two frames are in the IWAD but aren't used by the game.
+
+the 320x200.gif could be used for any suitable graphic, like intermission screen.
+
+-----
+Espi

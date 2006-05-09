@@ -1,0 +1,1 @@
+Recoloured reload frames so the back light was red- makes it more visually obvious the weapon can't be fired. - Jon

@@ -1,0 +1,12 @@
+Fix for the damn chaingun sprites which were annoying the fuck out of me for 
+two reasons:
+
+1) goddamn huge sprites (320x200 as to avoid aligning them apparently)
+2) horrible overlapping
+
+Both of those are fixed now, and also it doesn't break in the latest version 
+of zdoom like it used to (for some reason it reverted to the old doom2.wad 
+sprites when idle).  I think it may have been the order they were in but 
+I dunno.
+
+- Cyb

@@ -1,0 +1,6 @@
+SHTFA0  0       25
+SHTFB0  0       25
+SHTGA0  0       25
+SHTGB0  -52     -52
+SHTGC0  -10     -12
+SHTGD0  10      -22
