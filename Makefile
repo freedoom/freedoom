@@ -7,7 +7,7 @@ LAST_RELEASE_DATE = "dec 25 2005"
 WADS_DIR=/tmp/freedoom-wads
 
 CPP=tools/simplecpp
-DEUTEX=tools/deutex
+DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-fullsnd -noshrink -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
