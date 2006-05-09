@@ -1,4 +1,0 @@
-The fcan sprites all have alignment of 14:57
-
------
-Espi
