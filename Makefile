@@ -4,7 +4,7 @@
 #LAST_RELEASE_DATE = "dec 25 2004"
 LAST_RELEASE_DATE = "dec 25 2005"
 
-WADS_DIR=/tmp/freedoom-wads
+WADS_DIR=wads/
 
 CPP=tools/simplecpp
 DEUTEX=deutex
