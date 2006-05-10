@@ -8,7 +8,7 @@ WADS_DIR=/tmp/freedoom-wads
 
 CPP=tools/simplecpp
 DEUTEX=deutex
-DEUTEX_BASIC_ARGS=-fullsnd -noshrink -rgb 0 255 255
+DEUTEX_BASIC_ARGS=-fullsnd -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
 OBJS = \
