@@ -12,5 +12,5 @@ convert -fill white -font Helvetica-Bold                               \
     -gravity southeast                                                 \
       -draw "text 10,25 'Version: $VERSION'"                           \
       -draw "text 10,5 '$DATE'"                                        \
-    base.ppm output.png
+    base.ppm output.ppm
 
