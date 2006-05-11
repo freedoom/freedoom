@@ -1,10 +1,16 @@
 #!/bin/sh
 
-ppmcaption base.ppm output.ppm                                        \
-								      \
-  -font ncenB24.bdf -scale 0.34 -fg white -bg black		      \
-  -pos 240,30 -right -text 'http://freedoom.sourceforge.net/'         \
-								      \
-  -font ncenB24.bdf -scale 0.34 -fg white -bg black                   \
-  -pos -10,-10 -right -text 'Build Date: %a, %b %d %Y'		      \
-  -pos -10,-25 -right -text "Version: $VERSION"
+DATE=`date +%D`
+
+convert -fill white -font Helvetica-Bold                               \
+  -pointsize 30                                                        \
+    -gravity north                                                     \
+      -draw "text 0,30 Freedoom"                                       \
+  -pointsize 11                                                        \
+    -gravity southwest                                                 \
+      -draw "text 5,5 'http://freedoom.sourceforge.net/'"              \
+    -gravity southeast                                                 \
+      -draw "text 10,25 'Version: $VERSION'"                           \
+      -draw "text 10,5 '$DATE'"                                        \
+    base.ppm output.png
+
