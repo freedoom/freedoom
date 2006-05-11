@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DATE=`date +%D`
+DATE=`date +%Y/%m/%d"
 
 convert -fill white -font Helvetica-Bold                               \
   -pointsize 30                                                        \
