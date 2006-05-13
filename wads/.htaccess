@@ -1,2 +1,0 @@
-AddEncoding identity .gz
-AddType application/x-gzip .gz
