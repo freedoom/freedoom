@@ -26,7 +26,7 @@ end
 # seek out invalid files and build a list
 
 puts "<ul>"
-IO.popen("find") do |proc|
+IO.popen("find | grep -v svn") do |proc|
     proc.each_line do |s|
         s = s.chomp
         s.sub!(/^\.\//, '')
