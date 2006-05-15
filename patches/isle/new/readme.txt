@@ -1,1 +1,0 @@
-whoever made w13_1 made it the wrong size. I resised it
