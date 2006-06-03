@@ -19,7 +19,8 @@ OBJS = \
 	$(WADS_DIR)/freedoom_sounds.wad   \
 	$(WADS_DIR)/freedoom_textures.wad \
 	$(WADS_DIR)/doom1.wad	          \
-	$(WADS_DIR)/doom2.wad
+	$(WADS_DIR)/doom2.wad             \
+	$(WADS_DIR)/freedm.wad
 
 # disable this for now
 #	$(WADS_DIR)/freedoom_hires.zip
@@ -43,6 +44,8 @@ textures/doom2/texture1.txt: textures/combined.txt
 	$(CPP) -DDOOM1 -DDOOM2 < $< > $@
 textures/doom/texture1.txt: textures/combined.txt
 	$(CPP) -DDOOM1 < $< > $@
+textures/freedm/texture1.txt: textures/combined.txt
+	$(CPP) -DFREEDM < $< > $@
 textures/shareware/texture1.txt: textures/combined.txt
 	$(CPP) -DSHAREWARE < $< > $@
 
@@ -64,6 +67,8 @@ wadinfo_sw.txt: buildcfg.txt force textures/shareware/pnames.txt
 	$(CPP) -P -DSHAREWARE < $< | ./wadinfo-builder.pl -dummy > $@
 wadinfo_iwad.txt: buildcfg.txt force textures/doom2/pnames.txt
 	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.pl -dummy > $@
+wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
+	$(CPP) -P -DFREEDM < $< | ./wadinfo-builder.pl -dummy > $@
 
 %.wad.gz: %.wad
 	gzip < $< > $@
@@ -92,6 +97,14 @@ $(WADS_DIR)/freedoom.wad: wadinfo.txt subdirs force $(WADS_DIR)
 	ln -sf doom2/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -textures -lumps -patch -flats -sounds -musics -graphics -sprites -build wadinfo.txt $@
+
+#---------------------------------------------------------
+# freedm iwad
+
+$(WADS_DIR)/freedm.wad: wadinfo_freedm.txt subdirs force $(WADS_DIR)
+	ln -sf freedm/texture1.txt textures/texture1.txt
+	rm -f $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
 
 #---------------------------------------------------------
 # iwad

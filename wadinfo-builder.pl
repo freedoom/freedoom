@@ -72,47 +72,61 @@ while (<STDIN>) {
 
 	# check for empty lines and comments
 
-	if(!/^[\#\;]/ && !/^\s*$/) {
+	# sections
 
-		# sections
+	if(/\[.*\]/) {
 
-		if(/\[.*\]/) {
+		# extract section name
 
-			# extract section name
+		$section = $_;
+		$section =~ s/.*\[//;
+		$section =~ s/\].*//;
 
-			$section = $_;
-			$section =~ s/.*\[//;
-			$section =~ s/\].*//;
+		# catch [texture1] and [texture2] which are in 
+		# textures/
 
-			# catch [texture1] and [texture2] which are in 
-			# textures/
+		$section = "textures"
+	 		if $section eq "texture1" ||
+			   $section eq "texture2";
 
-			$section = "textures"
-		 		if $section eq "texture1" ||
-				   $section eq "texture2";
+	} elsif (/^\s*(\S+)(\s*\=\s*(\S+))?/) {
+		
+        my ($resname, $override) = ($1, $3);
+           
+        $resname = lc($resname);
 
+        # allow "=foo" to override the filename used
+
+		my $filename;
+
+        if ($override) {
+            $filename = findfile($section, $override);
+        } else {
+            $filename = findfile($section, $resname);
+        }
+
+		if ($filename) {
+			if (!$forced_lump{$resname} && !recent($filename)) {
+				$_ = ";$_";
+			}
 		} else {
-			
-			my ($word) = split(' ', $_);
-			$word = lc($word);
-			my $filename = findfile($section, $word);
+			if ($forced_lump{$resname} || $dummy) {
 
-			if ($filename) {
-				if (!$forced_lump{$word} && !recent($filename)) {
-					$_ = ";$_";
+                # this hasnt been submitted yet - use a dummy lump
+                # instead
+
+				if ($resname =~ /^DEMO/i) {
+					$_ = "$resname = fakedemo";
+				} else {
+					$_ = "$resname = dummy";
 				}
 			} else {
-				if ($forced_lump{$word} || $dummy) {
-					if ($word =~ /^DEMO/i) {
-						$_ = "$_ = fakedemo";
-					} else {
-						$_ = "$_ = dummy";
-					}
-				} else {
-					$_ = ";$_";
-				}
+                # disabled entries are commented out
+
+				$_ = ";$_";
 			}
 		}
 	}
+
 	print $_ . "\n";
 }

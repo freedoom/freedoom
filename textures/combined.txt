@@ -23,6 +23,11 @@
 ;
 ; 10/3/2003: modified build to use a single file with #defines
 
+#ifdef FREEDM
+#define DOOM1
+#define DOOM2
+#endif
+
 #ifdef DOOM2
 #undef SHAREWARE
 #undef ULTDOOM
@@ -1067,6 +1072,22 @@ WFALL4			64	128
 
 #endif
 
+; These textures are only in FreeDM
+
+#ifdef FREEDM
+
+LOGO                    256     128
+*       LOGO            0       0
+LOGO4                   256     128
+*       LOGO4           0       0
+LOGO3                   256     128
+*       LOGO3           0       0
+LOGO5                   64      128
+*       LOGO5           0       0
+
+#endif
+
+
 ; common textures
 
 ASHWALL2    		64	128
@@ -1804,5 +1825,4 @@ MIDBARS3    		64	72
 *	RW45_1      	0	0
 MARBFAC3    		128	128
 *	MWALL5_1    	0	0
-;End
 
