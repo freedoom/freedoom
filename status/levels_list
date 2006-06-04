@@ -1,0 +1,41 @@
+# status:
+#	assigned   - 	A level is assigned to someone to work on
+#	in dev	   -	A beta version (not yet finished) of the level has
+#			been submitted and is in the build
+#	done	   -	Completed level in the build
+#	none	   -	Level has not yet been assigned to anyone
+#
+# map	name			status		author
+#
+MAP01 	entryway		done		spaceforce
+MAP02	underhalls		done		tarin
+MAP03	the gantlet		done 		sgtcrispy
+MAP04	the focus		done		Macro11_1 2005-12-25
+MAP05	the waste tunnels	done		amarande
+MAP06	the crusher		done		mystic
+MAP07	dead simple		done		tarin
+MAP08	tricks and traps	assigned	captain mellow 2005-08-10
+MAP09	the pit			assigned	godcells 2005-12-04
+MAP10	refueling base		in dev		Archvile64 14/04/02
+MAP11	'o' of destruction!	done		kaiser
+MAP12 	the factory		in dev		rickclark 24/1/02
+MAP13	downtown		in dev		lurker 6/10/02
+MAP14	the inmost dens		assigned	geekmarine 2005/03/14
+MAP15	industrial zone
+MAP16	suburbs			done		hyena
+MAP17	tenements		assigned	kaiser 2005/03/27
+MAP18	the courtyard		done		zigmund
+MAP19	the citadel
+MAP20	gotcha!			done		lazer
+MAP21	nirvana			done		amarande
+MAP22	the catacombs		done		tarin
+MAP23	barrels o' fun		in dev		submerge 9/11/2002
+MAP24	the chasm		
+MAP25	bloodfalls		done		cyb
+MAP26	the abandoned mines	done		torn
+MAP27	monster condo		in dev		bastet 15/9/02
+MAP28	the spirit world	assigned	jond 2005/03/12
+MAP29	the living end		done		amarande
+MAP30	icon of sin		done		Cacodemon_Leader
+MAP31	wolfenstein		in dev		oblivion 4/8/02
+MAP32	grosse			done		ajapted
