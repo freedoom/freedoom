@@ -1,3 +1,8 @@
-titlepic: 
-	./create_caption
-#	pnmtopng < output.ppm > output.png
+titlepic: freedoom.ppm freedm.ppm
+
+freedoom.ppm: base.ppm
+	./create_caption Freedoom $@
+
+freedm.ppm: base.ppm
+	./create_caption FreeDM $@
+

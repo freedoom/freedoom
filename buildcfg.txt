@@ -500,6 +500,13 @@ D_DM2INT
 
 ; List of Pictures (with insertion point)
 [graphics]
+
+#ifdef FREEDM
+TITLEPIC 0 0          = dmttl
+#else
+TITLEPIC 0 0          = doomttl
+#endif
+
 #ifdef DOOM2
 HELP	0	0
 #endif
@@ -510,7 +517,6 @@ HELP2	0	0
 #endif
 #endif
 
-TITLEPIC	0	0
 CREDIT	0	0
 BOSSBACK	0	0
 AMMNUM0	-1	0

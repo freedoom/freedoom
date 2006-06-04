@@ -89,7 +89,7 @@ while (<STDIN>) {
 	 		if $section eq "texture1" ||
 			   $section eq "texture2";
 
-	} elsif (/^\s*(\S+)(\s*\=\s*(\S+))?/) {
+	} elsif (/^\s*(\S+)[^\=]*(\s*\=\s*(\S+))?/) {
 		
         my ($resname, $override) = ($1, $3);
            

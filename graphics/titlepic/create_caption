@@ -5,12 +5,12 @@ DATE=`date +%Y/%m/%d`
 convert -fill white -font Helvetica-Bold                               \
   -pointsize 30                                                        \
     -gravity north                                                     \
-      -draw "text 0,30 Freedoom"                                       \
+      -draw "text 0,30 $1"                                             \
   -pointsize 11                                                        \
     -gravity southwest                                                 \
       -draw "text 5,5 'http://freedoom.sourceforge.net/'"              \
     -gravity southeast                                                 \
       -draw "text 10,25 'Version: $VERSION'"                           \
       -draw "text 10,5 '$DATE'"                                        \
-    base.ppm output.ppm
+    base.ppm $2
 
