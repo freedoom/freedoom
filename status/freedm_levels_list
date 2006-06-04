@@ -1,0 +1,49 @@
+#
+# These are the levels in FreeDM
+#
+# status:
+#	assigned   - 	A level is assigned to someone to work on
+#	in dev	   -	A beta version (not yet finished) of the level has
+#			been submitted and is in the build
+#	done	   -	Completed level in the build
+#	none	   -	Level has not yet been assigned to anyone
+#
+# NOTE: The current levels have been imported from the old FreeDM project.
+# At the moment rellik is listed as the author for all levels, but 
+# Hellbent is responsible for at least some of these levels.  There is
+# currently no information on who authored which level.
+#
+# map	status		author
+#
+DM01 	done        rellik
+DM02	done        rellik
+DM03	done        rellik
+DM04	done        rellik
+DM05	done        rellik
+DM06	done        rellik
+DM07	done        rellik
+DM08	done        rellik
+DM09	done        rellik
+DM10	done        rellik
+DM11	done        rellik
+DM12 	done        rellik
+DM13	done        rellik
+DM14	done        rellik
+DM15	done        rellik
+DM16	
+DM17	
+DM18	
+DM19	
+DM20	
+DM21	
+DM22	
+DM23	
+DM24	
+DM25	
+DM26	
+DM27	
+DM28	
+DM29	
+DM30	
+DM31	
+DM32	
