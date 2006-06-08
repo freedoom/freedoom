@@ -1,4 +1,0 @@
-# these lumps are forced to be in latest.wad despite their modification time
-                                                                                
- 
-

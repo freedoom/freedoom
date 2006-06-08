@@ -25,9 +25,6 @@ OBJS = \
 # disable this for now
 #	$(WADS_DIR)/freedoom_hires.zip
 
-usebuild :
-	@echo please use the ./build wrapper script
-
 all : $(OBJS)
 
 subdirs:
@@ -59,10 +56,6 @@ $(WADS_DIR):
 
 wadinfo.txt: buildcfg.txt force textures/doom2/pnames.txt
 	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.pl > $@
-wadinfo_ulatest.txt: buildcfg.txt force textures/doom/pnames.txt
-	$(CPP) -P -DDOOM1 < $< | ./wadinfo-builder.pl -since $(LAST_RELEASE_DATE) > $@
-wadinfo_latest.txt: buildcfg.txt force textures/doom2/pnames.txt
-	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.pl -since $(LAST_RELEASE_DATE) > $@
 wadinfo_sw.txt: buildcfg.txt force textures/shareware/pnames.txt
 	$(CPP) -P -DSHAREWARE < $< | ./wadinfo-builder.pl -dummy > $@
 wadinfo_iwad.txt: buildcfg.txt force textures/doom2/pnames.txt
@@ -75,20 +68,6 @@ wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 	chmod o-r $<
 	md5sum $<.gz > $<.md5sum
 	rm -f $<
-
-#---------------------------------------------------------
-# incremental wad
-
-latest/ulatest.wad: wadinfo_ulatest.txt subdirs force
-	# TODO: check this
-	ln -sf doom/texture1.txt textures/texture1.txt
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_BASIC_ARGS) -doom bootstrap/ -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_ulatest.txt $@
-
-latest/latest.wad: wadinfo_latest.txt subdirs force
-	ln -sf doom2/texture1.txt textures/texture1.txt
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_BASIC_ARGS) -doom2 bootstrap/ -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_latest.txt $@
 
 #---------------------------------------------------------
 # build wad
