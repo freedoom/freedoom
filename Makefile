@@ -1,9 +1,4 @@
 
-# date of the last release:
-
-#LAST_RELEASE_DATE = "dec 25 2004"
-LAST_RELEASE_DATE = "dec 25 2005"
-
 WADS_DIR=wads/
 
 CPP=tools/simplecpp
@@ -140,19 +135,6 @@ $(WADS_DIR)/doom1.wad : wadinfo_sw.txt force $(WADS_DIR)
 	ln -sf shareware/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_sw.txt $@
-
-#---------------------------------------------------------
-# hires texture zip
-
-HIRES_SRC=$(wildcard patches_hi/*.png) $(wildcard flats_hi/*.png)
-HIRES_TGA=$(HIRES_SRC:%.png=.tga/%.tga)
-
-.tga/%.tga : %.png
-	pngtopnm < $< | ppmtotga > $@
-
-$(WADS_DIR)/freedoom_hires.zip : $(HIRES_TGA) $(WADS_DIR)
-	rm -f $(WADS_DIR)/freedoom_hires.zip
-	zip -j $(WADS_DIR)/freedoom_hires.zip $(HIRES_TGA) > /dev/null
 
 dist : $(OBJS)
 	./makepkgs $(OBJS)
