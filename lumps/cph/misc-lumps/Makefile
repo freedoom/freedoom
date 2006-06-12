@@ -14,4 +14,7 @@ dist		:	doom-misc-lumps-$(VERSION).tar.gz
 doom-misc-lumps-$(VERSION).tar.gz       :       $(SOURCES)
 	tar czf $@ $(SOURCES)
 
-.PHONY  :       all dist
+clean:
+	rm -f playpal.lmp colormap.lmp doom-misc-lumps-$(VERSION).tar.gz
+
+.PHONY  :       dist clean

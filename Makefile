@@ -1,7 +1,7 @@
 
 WADS_DIR=wads/
 
-CPP=tools/simplecpp
+CPP=/usr/bin/cpp
 DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-fullsnd -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
@@ -139,4 +139,6 @@ $(WADS_DIR)/doom1.wad : wadinfo_sw.txt force $(WADS_DIR)
 dist : $(OBJS)
 	./makepkgs $(OBJS)
 
-
+clean:
+	rm -f ./wadinfo.txt deutex.log
+	make -C lumps clean

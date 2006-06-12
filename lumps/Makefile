@@ -9,3 +9,5 @@ freedoom.lmp: force
 
 force:
 
+clean:
+	make -C cph/misc-lumps clean

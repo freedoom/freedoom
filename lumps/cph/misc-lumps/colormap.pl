@@ -77,6 +77,7 @@ foreach my $i (0..31) {
   print map { pack("C",$_) } @$p;
   print STDERR ".";
 }
+print STDERR "\n";
 # And now INVERSECOLORMAP
 {
   my $p = darkenedpalette(
