@@ -75,7 +75,7 @@ while (<STDIN>) {
             $filename = findfile($section, $resname);
         }
 
-		if ($filename) {
+		if (!$filename) {
 			if ($dummy) {
 
                 # this hasnt been submitted yet - use a dummy lump

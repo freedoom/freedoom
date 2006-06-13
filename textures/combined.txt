@@ -310,7 +310,7 @@ TEKWALL5    		128	128
 
 #endif
 
-#if DOOM2
+#ifdef DOOM2
 
 ; these textures are in doom 2, but not doom 1:
 
