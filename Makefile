@@ -139,3 +139,4 @@ clean:
 		./wadinfo.txt ./wadinfo_sw.txt \
 		./wadinfo_freedm.txt ./wadinfo_iwad.txt
 	make -C lumps clean
+	make -C graphics/titlepic clean

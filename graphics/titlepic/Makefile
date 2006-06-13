@@ -6,3 +6,7 @@ freedoom.ppm: base.ppm
 freedm.ppm: base.ppm
 	./create_caption FreeDM $@
 
+clean:
+	rm -f freedm.ppm freedoom.ppm
+
+.PHONY: clean
