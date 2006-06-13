@@ -1,24 +1,22 @@
 
-WADS_DIR=wads/
-
 CPP=/usr/bin/cpp
 DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-fullsnd -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
 OBJS = \
-	$(WADS_DIR)/freedoom.wad          \
-	$(WADS_DIR)/freedoom_graphics.wad \
-	$(WADS_DIR)/freedoom_levels.wad   \
-	$(WADS_DIR)/freedoom_sprites.wad  \
-	$(WADS_DIR)/freedoom_sounds.wad   \
-	$(WADS_DIR)/freedoom_textures.wad \
-	$(WADS_DIR)/doom1.wad	          \
-	$(WADS_DIR)/doom2.wad             \
-	$(WADS_DIR)/freedm.wad
+	wads/freedoom.wad          \
+	wads/freedoom_graphics.wad \
+	wads/freedoom_levels.wad   \
+	wads/freedoom_sprites.wad  \
+	wads/freedoom_sounds.wad   \
+	wads/freedoom_textures.wad \
+	wads/doom1.wad	          \
+	wads/doom2.wad             \
+	wads/freedm.wad
 
 # disable this for now
-#	$(WADS_DIR)/freedoom_hires.zip
+#	wads/freedoom_hires.zip
 
 all : $(OBJS)
 
@@ -44,7 +42,7 @@ textures/shareware/texture1.txt: textures/combined.txt
 textures/%/pnames.txt: textures/%/texture1.txt
 	./extract-pnames.pl < $< > $@
 
-$(WADS_DIR):
+wads:
 	mkdir $@
 
 # update wadinfo.txt
@@ -67,7 +65,7 @@ wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 #---------------------------------------------------------
 # build wad
 
-$(WADS_DIR)/freedoom.wad: wadinfo.txt subdirs force $(WADS_DIR)
+wads/freedoom.wad: wadinfo.txt subdirs force wads
 	ln -sf doom2/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -textures -lumps -patch -flats -sounds -musics -graphics -sprites -build wadinfo.txt $@
@@ -75,7 +73,7 @@ $(WADS_DIR)/freedoom.wad: wadinfo.txt subdirs force $(WADS_DIR)
 #---------------------------------------------------------
 # freedm iwad
 
-$(WADS_DIR)/freedm.wad: wadinfo_freedm.txt subdirs force $(WADS_DIR)
+wads/freedm.wad: wadinfo_freedm.txt subdirs force wads
 	ln -sf freedm/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
@@ -83,7 +81,7 @@ $(WADS_DIR)/freedm.wad: wadinfo_freedm.txt subdirs force $(WADS_DIR)
 #---------------------------------------------------------
 # iwad
 
-$(WADS_DIR)/doom2.wad: wadinfo_iwad.txt subdirs force $(WADS_DIR)
+wads/doom2.wad: wadinfo_iwad.txt subdirs force wads
 	ln -sf doom2/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_iwad.txt $@
@@ -91,21 +89,21 @@ $(WADS_DIR)/doom2.wad: wadinfo_iwad.txt subdirs force $(WADS_DIR)
 #---------------------------------------------------------
 # graphics wad
 
-$(WADS_DIR)/freedoom_graphics.wad : wadinfo.txt subdirs force $(WADS_DIR)
+wads/freedoom_graphics.wad : wadinfo.txt subdirs force wads
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -graphics -build wadinfo.txt $@
 
 #---------------------------------------------------------
 # build levels wad
 
-$(WADS_DIR)/freedoom_levels.wad : wadinfo.txt force $(WADS_DIR)
+wads/freedoom_levels.wad : wadinfo.txt force wads
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -levels -build wadinfo.txt $@
 
 #---------------------------------------------------------
 # build texture wad
 
-$(WADS_DIR)/freedoom_textures.wad : wadinfo.txt force $(WADS_DIR)
+wads/freedoom_textures.wad : wadinfo.txt force wads
 	ln -sf doom2/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -textures -patch -flats -build wadinfo.txt $@
@@ -113,14 +111,14 @@ $(WADS_DIR)/freedoom_textures.wad : wadinfo.txt force $(WADS_DIR)
 #---------------------------------------------------------
 # build sprites wad
 
-$(WADS_DIR)/freedoom_sprites.wad : wadinfo.txt force $(WADS_DIR)
+wads/freedoom_sprites.wad : wadinfo.txt force wads
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -sprites -build wadinfo.txt $@
 
 #---------------------------------------------------------
 # build sounds wad
 
-$(WADS_DIR)/freedoom_sounds.wad : wadinfo.txt force $(WADS_DIR)
+wads/freedoom_sounds.wad : wadinfo.txt force wads
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -sounds -musics -build wadinfo.txt $@
 
@@ -131,7 +129,7 @@ $(WADS_DIR)/freedoom_sounds.wad : wadinfo.txt force $(WADS_DIR)
 # entries, so we have to change the texture1 symlink to point
 # to the shareware wad
 
-$(WADS_DIR)/doom1.wad : wadinfo_sw.txt force $(WADS_DIR)
+wads/doom1.wad : wadinfo_sw.txt force wads
 	ln -sf shareware/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_sw.txt $@
@@ -140,5 +138,5 @@ dist : $(OBJS)
 	./makepkgs $(OBJS)
 
 clean:
-	rm -f ./wadinfo.txt deutex.log
+	rm -f ./wadinfo.txt deutex.log $(OBJS)
 	make -C lumps clean
