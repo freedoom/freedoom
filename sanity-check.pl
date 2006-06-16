@@ -6,6 +6,8 @@
 sub sanitycheck {
 	my ($dir, $file) = @_;
 
+    print "Checking $dir\n";
+
 	open(LIST_FILE, $file) or die "cant open $file";
 
 	while (<LIST_FILE>) {
@@ -38,8 +40,7 @@ sub sanitycheck {
 	close(LIST_FILE);
 }
 
-my $status_dir = "/home/groups/f/fr/freedoom/htdocs/status";
-
+my $status_dir = "status";
 
 sanitycheck 'sprites', "$status_dir/sprites_list";
 sanitycheck 'patches', "$status_dir/patches_list";
