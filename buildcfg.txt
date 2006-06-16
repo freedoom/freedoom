@@ -2670,10 +2670,16 @@ YSKUB0	7	18
 
 #ifdef SHAREWARE
 #include "textures/shareware/pnames.txt"
-#else
+#endif
+
 #ifdef DOOM2
+
+#ifdef FREEDM
+#include "textures/freedm/pnames.txt"
+#else
 #include "textures/doom2/pnames.txt"
 #endif
+
 #endif
 
 #if 0
