@@ -89,7 +89,7 @@ $(WADS)/doom2.wad: wadinfo_iwad.txt subdirs force
 
 $(WADS)/freedoom_graphics.wad : wadinfo.txt subdirs force 
 	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -graphics -build wadinfo.txt $@
+	$(DEUTEX) $(DEUTEX_ARGS) -graphics -lumps -build wadinfo.txt $@
 
 #---------------------------------------------------------
 # build levels wad
