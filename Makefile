@@ -24,6 +24,7 @@ all : $(OBJS)
 subdirs:
 	make -C graphics/titlepic
 	make -C lumps
+	make -C sprites/jond/placeholder
 
 # this is a useless dependency to force builds
 
@@ -141,3 +142,4 @@ clean:
 		./wadinfo_freedm.txt ./wadinfo_iwad.txt
 	make -C lumps clean
 	make -C graphics/titlepic clean
+	make -C sprites/jond/placeholder clean
