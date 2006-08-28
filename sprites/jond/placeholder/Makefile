@@ -10,8 +10,6 @@ foo: $(DSTSPRITES)
 clean:
 	rm -f $(DSTSPRITES)
 
-# TODO: examine GNU Make's "secondary expansion" extension which would let
-# us put $@ in the prerequisite
 $(DSTSPRITES): $(DUMMY) Makefile
 	composite $(ARGS) $(DUMMY) $(SRCDIR)/$@ $@
 
