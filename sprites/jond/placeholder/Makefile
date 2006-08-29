@@ -7,22 +7,16 @@ SKELDIR   = $(SPRITEDIR)/linguica/aoddoom_skeletons
 SKELSRC   = $(wildcard $(SKELDIR)/sarg*)
 VILEDEST  = $(notdir $(SKELSRC))
 
-# use the arachnotron for the spiderdemon
 BSPISRC   = $(wildcard $(SPRITEDIR)/bspi*)
-SPIDDEST  = $(notdir $(BSPISRC))
-
-# use the baron for the HK
 BOSSSRC   = $(wildcard $(SPRITEDIR)/boss*)
-BOS2DEST  = $(notdir $(BOSSSRC))
-
-# use the caco for the pain elemental
 HEADSRC   = $(wildcard $(SPRITEDIR)/head*) 
-PAINDEST  = $(notdir $(HEADSRC))
+
+ALLSRC    = $(HEADSRC) $(BOSSSRC) $(BSPISRC)
+TARGETS   = $(notdir $(ALLSRC))
 
 DUMMY     =../../dummy.gif
 # TODO: if dst's width is < src's, src is clipped. Try to prevent this.
 ARGS=-compose src-over -gravity center
-TARGETS    = $(SPIDDEST) $(BOS2DEST) $(PAINDEST)
 
 foo: $(VILEDEST) $(TARGETS)
 
