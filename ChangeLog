@@ -1,6 +1,35 @@
 21/08/2006
 
-for future changelog entries, see the SVN log
+Freedoom 0.5 released.
+aggregation of changes in the SVN log to date:
+	* new sprites:
+		* sg; thanks Gargoylol
+		* ssg, rl, plasma; thanks Fredrik
+		* revenant, thanks Gargoylol
+		* WIP Baron, thanks Lokito
+		* barrel sprites from Fredrik
+	* New sprite placeholders:
+		* map revenant fireball sprite frames to others
+		* Use the AOD skeleton as a "not done yet" sprite
+			* map arch-vile to this
+			* map cyberdemon to this
+		* generate HK, PE, Mastermind placeholders using
+		  baron, caco, arachnotron respectively
+	* Level tweaks:
+		* E1M1: fix lights in DM corridor (jond)
+		* E1M3: misc updates (fraggle)
+		* E1M4: remove berserk (crashes game) (jond)
+		* MAP01: rotate last section 90 degrees (jond)
+		* MAP02: more space in column-room (jond)
+	* New sounds:
+		* mancubus pain; thanks David Lawrence
+		* dsbarexp, dspistol, dsrlaunc; thanks Gargoylol
+	* Many updated flats/patches from Fredrik
+	* add colormaps to freedoom_graphics.wad (jond)
+	* lots of build system tweaks (jond, fraggle)
+	* new packages added to release:
+		* distribute freedm with freedoom
+		* distribute source archive snapshot
 
 15/08/2006
 
