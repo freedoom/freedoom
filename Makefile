@@ -139,7 +139,16 @@ dist : $(OBJS)
 clean:
 	rm -f	deutex.log $(OBJS) \
 		./wadinfo.txt ./wadinfo_sw.txt \
-		./wadinfo_freedm.txt ./wadinfo_iwad.txt
+		./wadinfo_freedm.txt ./wadinfo_iwad.txt \
+		 ./lumps/freedoom.lmp \
+		./textures/doom2/pnames.txt \
+		./textures/doom2/texture1.txt \
+		./textures/freedm/pnames.txt \
+		./textures/freedm/texture1.txt \
+		./textures/shareware/pnames.txt \
+		./textures/shareware/texture1.txt \
+		./textures/texture1.txt
+
 	make -C lumps clean
 	make -C graphics/titlepic clean
 	make -C sprites/jond/placeholder clean
