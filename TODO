@@ -13,6 +13,3 @@
 * Make textures be in alphabetical order.
 
 * Split up sprites so their offsets are stored with the image files.
-
-* Add Deathmatch IWAD build?
-
