@@ -1,6 +1,7 @@
 #!/bin/sh
 
 DATE=`date +%Y/%m/%d`
+VERSION=`cat ../../VERSION`
 
 convert -fill white -font Helvetica-Bold                               \
   -pointsize 30                                                        \
