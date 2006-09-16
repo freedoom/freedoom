@@ -20,14 +20,14 @@ vile	archvile		assigned 	infurnus
 fire	fire(archvile)		done		espi
 fatb	revenant rocket
 fbxp	revenant rocket xp
-skel	revenant
+skel	revenant		done		leileilol
 manf	mancubus fireball	done		espi
 fatt	mancubus		done		saint_of_killers
 cpos	chaingun guy		done		geekmarine
-sarg	demon			done		scubasteve
+sarg	demon			done		fredrik
 head	cacodemon		done		nightfang
 bal7	baron plasmaball	done		cyb
-boss	baron			assigned	MaaMQ 2004-10-02	
+boss	baron			in dev		MaaMQ
 bos2	hellknight
 skul	lost soul		done		fredrik
 spid	spider mastermind
@@ -126,14 +126,14 @@ tlp2	short tech lamp		done		sirfragsalot
 #
 # player sprites
 #
-shtg	shotgun			done		fredrik
+shtg	shotgun			done		leilielol
 pung	fist			done		scubasteve
 pisg	pistol			done		scubasteve
 pisf	pistol flats		done		scubasteve
-shtf	shotgun flash		done		fredrik
-sht2	2x shotgun		done		scubasteve
-chgg	chaingun		done		cheapalert
-chgf	chaingun flash		done		cheapalert
+shtf	shotgun flash		done		leileilol
+sht2	2x shotgun		done		fredrik
+chgg	chaingun		done		fredrik
+chgf	chaingun flash		done		fredrik
 misg	rocket launcher		done		fredrik
 misf	rl flash		done		fredrik
 sawg	chainsaw		done		fredrik
