@@ -13,6 +13,7 @@ class AtticMe < File
 		/\.$/, /\.svn/, /\.txt$/i, /\.bmp$/i,
 		"Makefile", /aoddoom_skeletons/, /\.mid$/,
 		/dummy/, "fakedemo.lmp", "misc-lumps",
+		"blank.gif", "nomonst.gif", "titlepic",
 	]
 
 	def AtticMe.main
