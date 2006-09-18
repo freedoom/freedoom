@@ -12,6 +12,7 @@ class AtticMe < File
 	@@ignore = [
 		/\.$/, /\.svn/, /\.txt$/i, /\.bmp$/i,
 		"Makefile", /aoddoom_skeletons/, /\.mid$/,
+		/dummy/, "fakedemo.lmp", "misc-lumps",
 	]
 
 	def AtticMe.main
