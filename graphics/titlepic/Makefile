@@ -1,12 +1,12 @@
-titlepic: freedoom.ppm freedm.ppm
+titlepic: freedoom.gif freedm.gif
 
-freedoom.ppm: base.ppm
+freedoom.gif: titlepic.gif
 	./create_caption Freedoom $@
 
-freedm.ppm: base.ppm
+freedm.gif: titlepic.gif
 	./create_caption FreeDM $@
 
 clean:
-	rm -f freedm.ppm freedoom.ppm
+	rm -f freedm.gif freedoom.gif
 
 .PHONY: clean

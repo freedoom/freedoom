@@ -13,5 +13,5 @@ convert -fill white -font Helvetica-Bold                               \
     -gravity southeast                                                 \
       -draw "text 10,25 'Version: $VERSION'"                           \
       -draw "text 10,5 '$DATE'"                                        \
-    base.ppm $2
+    titlepic.gif $2
 
