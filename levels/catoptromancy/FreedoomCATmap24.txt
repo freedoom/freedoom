@@ -1,19 +1,19 @@
 ===========================================================================
 
 Advanced engine needed  : , Boom,
-Primary purpose         : Single+Coop play Freedoom
+Primary purpose         : Single+Coop play 
 ===========================================================================
 
 Filename                : FreedoomCATmap24  (its map 24)
 Release date            : 
 Author                  : Catoptromancy
-
+Email			  Catoptromancy@yahoo.com
 
 Description             : Only about 2-3% done, I made it playable though with a fake exit and teleports which will be removed from final version. Details and textures will also be attended to. 
 
 
-Coop and deathmatch will also have things flagged as well as skill levels on "things" in final version.
+Coop and deathmatch will also have things flagged as well as skill levels on things in final version.
 
-In status list I saw MAP24 was open...so here it is. 
+Tested in prboom-2.4.6-win32, heh
 
 Freedoom FTW! 
