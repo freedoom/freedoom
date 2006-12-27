@@ -7,14 +7,14 @@
 #
 # map	name			status		author
 #
-MAP01 	entryway		done		spaceforce
-MAP02	underhalls		done		tarin
+MAP01 	entryway		done		jond
+MAP02	underhalls		assigned	jond 2006-12-27
 MAP03	the gantlet		done 		sgtcrispy
 MAP04	the focus		done		Macro11_1 2005-12-25
 MAP05	the waste tunnels	done		amarande
 MAP06	the crusher		done		mystic
 MAP07	dead simple		done		tarin
-MAP08	tricks and traps	assigned	captain mellow 2005-08-10
+MAP08	tricks and traps	done		tarin
 MAP09	the pit			assigned	godcells 2005-12-04
 MAP10	refueling base		in dev		Archvile64 14/04/02
 MAP11	'o' of destruction!	done		kaiser
