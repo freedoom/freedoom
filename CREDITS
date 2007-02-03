@@ -208,7 +208,7 @@ D: Sounds
 F: jond
 N: Jon Dowland
 E: spambox@alcopop.org
-W: http://jon.dowland.name/
+W: http://alcopop.org/
 D: Admin, textures, web scripts, levels, hires zealotism, sounds
 
 F: rancor
@@ -501,7 +501,7 @@ D: sounds
 
 F: gargoylol
 S: gargoylol
-D: sounds
+D: sounds, flats
 
 F: rellik
 N: Jim McDougald
