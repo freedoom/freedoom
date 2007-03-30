@@ -1,19 +1,18 @@
-===========================================================================
+Freedoom Map 24
 
-Advanced engine needed  : , Boom,
-Primary purpose         : Single+Coop play 
-===========================================================================
+made in doom2.cfg
 
-Filename                : FreedoomCATmap24  (its map 24)
-Release date            : 
-Author                  : Catoptromancy
-Email			  Catoptromancy@yahoo.com
+Catoptromancy@yahoo.com
 
-Description             : Only about 2-3% done, I made it playable though with a fake exit and teleports which will be removed from final version. Details and textures will also be attended to. 
+Everything works! Hopefully....
+
+Needs coop testing, and texture alignment
 
 
-Coop and deathmatch will also have things flagged as well as skill levels on things in final version.
+Needs DM and coop tags
+Needs Skill tags, UV only for now
 
-Tested in prboom-2.4.6-win32, heh
+Tested in prboom
 
-Freedoom FTW! 
+
+
