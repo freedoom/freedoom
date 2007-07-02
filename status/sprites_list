@@ -20,7 +20,7 @@ vile	archvile		assigned 	infurnus
 fire	fire(archvile)		done		espi
 fatb	revenant rocket
 fbxp	revenant rocket xp
-skel	revenant		done		cheapalert
+skel	revenant		done		leileilol
 manf	mancubus fireball	done		espi
 fatt	mancubus		done		saint_of_killers
 cpos	chaingun guy		done		geekmarine
@@ -126,11 +126,11 @@ tlp2	short tech lamp		done		sirfragsalot
 #
 # player sprites
 #
-shtg	shotgun			done		cheapalert
+shtg	shotgun			done		leileilol
 pung	fist			done		scubasteve
 pisg	pistol			done		scubasteve
 pisf	pistol flats		done		scubasteve
-shtf	shotgun flash		done		cheapalert
+shtf	shotgun flash		done		leileilol
 sht2	2x shotgun		done		fredrik
 chgg	chaingun		done		fredrik
 chgf	chaingun flash		done		fredrik

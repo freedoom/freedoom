@@ -72,10 +72,13 @@ D: levels
 
 F: cheapalert
 S: CheapAlert
-S: leileilol
 S: gargoylol
 E: cheapalert@gmail.com
-D: graphics, sounds, flats
+D: graphics
+
+F: leileilol
+S: leileilol
+D: sounds, flats, sprites
 
 F: shadowrunner
 N: Michael T. Cole
