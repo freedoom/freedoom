@@ -7,7 +7,6 @@ DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
 OBJS = \
 	$(WADS)/freedoom.wad          \
-	$(WADS)/freedoom_graphics.wad \
 	$(WADS)/freedoom_levels.wad   \
 	$(WADS)/freedoom_sprites.wad  \
 	$(WADS)/freedoom_sounds.wad   \
@@ -84,13 +83,6 @@ $(WADS)/doom2.wad: wadinfo_iwad.txt subdirs force
 	ln -sf doom2/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_iwad.txt $@
-
-#---------------------------------------------------------
-# graphics wad
-
-$(WADS)/freedoom_graphics.wad : wadinfo.txt subdirs force 
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -graphics -lumps -build wadinfo.txt $@
 
 #---------------------------------------------------------
 # build levels wad
