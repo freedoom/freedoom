@@ -43,7 +43,7 @@ foreach (@ARGV) {
 
 	cmd("mkdir $fulldir");
 	cmd("cp NEWS ChangeLog COPYING CREDITS $fulldir");
-	cmd("cp README-dist $fulldir/README");
+	cmd("cp README $fulldir/README");
 	cmd("cp $file $fulldir\n");
 
 	my $cwd = `pwd`;
