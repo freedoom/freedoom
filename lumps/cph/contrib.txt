@@ -1,3 +1,0 @@
-A decent GENMIDI.
-By "Dan L'Ecuyer" (hope I spelt it right) <dlecuyer@tbase.com>
-Uploaded (with permission) by cph. Public domain.
