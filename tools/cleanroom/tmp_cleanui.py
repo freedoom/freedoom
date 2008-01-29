@@ -42,6 +42,11 @@ class HellowWorldGTK:
 		row = treeview.get_model()[offs[0]][0]
 		self.set_texture(row)
 
+	def rhs_callback(self, rhs):
+		offs,col = rhs.get_cursor()
+		row = rhs.get_model()[offs[0]][0]
+		print row
+
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
@@ -119,6 +124,7 @@ class HellowWorldGTK:
 		cell = gtk.CellRendererText()
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
+		rhs.connect("cursor-changed", self.rhs_callback)
 
 		# set the progress bar up
 		# by default we've "done" all the 1-patch textures
