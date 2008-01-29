@@ -39,9 +39,6 @@ class HellowWorldGTK:
 				current.patches.append(Patch(name,int(x),int(y)))
 			else:
 				line = line.split()
-				if len(line) != 3:
-					print "OH CRAP"
-					print line
 				current = Texture(line[0],line[1],line[2])
 				textures.append(current)
 	
