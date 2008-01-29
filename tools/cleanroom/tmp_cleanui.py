@@ -45,7 +45,9 @@ class HellowWorldGTK:
 		self.parse_texture_file("combined.txt")
 		lhs = self.wTree.get_widget("texture_list")
 		treestore = gtk.TreeStore(str)
-		for name in self.textures.keys():
+		a = self.textures.keys()
+		a.sort()
+		for name in a:
 			treestore.append(None, [ name ])
 		column = gtk.TreeViewColumn('Texture name ')
 		lhs.set_model(treestore)
