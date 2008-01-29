@@ -17,6 +17,9 @@ class Texture:
 		self.height = height
 		self.patches = []
 
+def do_nothing(arg):
+	print "ZOMG<"
+
 class HellowWorldGTK:
 	"""This is an Hello World GTK application"""
 	
@@ -35,37 +38,11 @@ class HellowWorldGTK:
 				line = line.split()
 				current = Texture(line[0],line[1],line[2])
 				textures[line[0]] = current
-	
-	def __init__(self):
-		self.gladefile = "cleanroom.glade"
-		self.wTree = gtk.glade.XML(self.gladefile,"window1")
-		self.image1 = self.wTree.get_widget("orig_texture")
-		
-		# read in the IWAD texture1 lump and populate our LHS list
-		self.parse_texture_file("combined.txt")
-		lhs = self.wTree.get_widget("texture_list")
-		treestore = gtk.TreeStore(str)
-		a = self.textures.keys()
-		a.sort()
-		for name in a:
-			treestore.append(None, [ name ])
-		column = gtk.TreeViewColumn('Texture name ')
-		lhs.set_model(treestore)
-		lhs.append_column(column)
-		cell = gtk.CellRendererText()
-		column.pack_start(cell, False)
-		column.add_attribute(cell, "text", 0)
 
-		# set the progress bar up
-		# by default we've "done" all the 1-patch textures
-		bar = self.wTree.get_widget("progressbar1")
-		done = len(filter(lambda x: len(x.patches) > 1, self.textures.values()))
-		bar.set_fraction(float(done) / len(self.textures))
-		bar.set_text("%d/%d" % (done, len(self.textures)))
-
+	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
-		texture = self.textures["COMPUTE2"]
+		texture = self.textures[name]
 
 		# read the patches into pixbufs
 		# a horrid hack to get them client->server side
@@ -98,7 +75,37 @@ class HellowWorldGTK:
 				pixbuf.get_height() * scale,
 				gtk.gdk.INTERP_NEAREST
 			))
+
+	def __init__(self):
+		self.gladefile = "cleanroom.glade"
+		self.wTree = gtk.glade.XML(self.gladefile,"window1")
+		self.image1 = self.wTree.get_widget("orig_texture")
 		
+		# read in the IWAD texture1 lump and populate our LHS list
+		self.parse_texture_file("combined.txt")
+		lhs = self.wTree.get_widget("texture_list")
+		treestore = gtk.TreeStore(str)
+		a = self.textures.keys()
+		a.sort()
+		for name in a:
+			treestore.append(None, [ name ])
+		column = gtk.TreeViewColumn('Texture name ')
+		lhs.set_model(treestore)
+		lhs.append_column(column)
+		cell = gtk.CellRendererText()
+		column.pack_start(cell, False)
+		column.add_attribute(cell, "text", 0)
+		lhs.connect("cursor-changed", do_nothing)
+
+		# set the progress bar up
+		# by default we've "done" all the 1-patch textures
+		bar = self.wTree.get_widget("progressbar1")
+		done = len(filter(lambda x: len(x.patches) > 1, self.textures.values()))
+		bar.set_fraction(float(done) / len(self.textures))
+		bar.set_text("%d/%d" % (done, len(self.textures)))
+
+		self.set_texture("COMPUTE2")
+
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
 
