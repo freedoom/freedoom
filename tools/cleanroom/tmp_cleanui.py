@@ -20,12 +20,6 @@ class Texture:
 class HellowWorldGTK:
 	"""This is an Hello World GTK application"""
 	
-	example_texture = """COMPUTE2                256     56
-*       COMP02_1        0       0
-*       COMP02_2        64      0
-*       COMP02_3        128     0
-*       COMP02_7        192     0"""
-
 	def parse_texture_file(self,fname):
 		texture1 = file(fname, "r").read()
 		self.textures = []
@@ -69,33 +63,23 @@ class HellowWorldGTK:
 
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
-		patches = []
-		width,height = 0,0
-		for line in self.example_texture.split("\n"):
-			if len(line) > 0:
-				# texture definition (we hope)
-				if line[0] != '*':
-					name,width,height = line.split()
-				# patch list (we hope)
-				else:
-					junk,name,y,x= line.split()
-					patches.append(Patch(name,int(x),int(y)))
-		
+		texture = filter(lambda x: x.name == "COMPUTE2", self.textures)[0]
+
 		# read the patches into pixbufs
 		# a horrid hack to get them client->server side
-		for patch in patches:
+		for patch in texture.patches:
 			self.image1.set_from_file(patch.name.lower() + ".gif")
 			patch.pixbuf = self.image1.get_pixbuf()
-		
+
 		texbuf = gtk.gdk.Pixbuf(
-			patches[0].pixbuf.get_colorspace(),
-			patches[0].pixbuf.get_has_alpha(),
-			patches[0].pixbuf.get_bits_per_sample(),
-			int(width),
-			int(height))
+			texture.patches[0].pixbuf.get_colorspace(),
+			texture.patches[0].pixbuf.get_has_alpha(),
+			texture.patches[0].pixbuf.get_bits_per_sample(),
+			int(texture.width),
+			int(texture.height))
 
 		# copy each patch into the texture pixbuf
-		for patch in patches:
+		for patch in texture.patches:
 			patch.pixbuf.copy_area(0,0,
 				patch.pixbuf.get_width(),
 				patch.pixbuf.get_height(),
