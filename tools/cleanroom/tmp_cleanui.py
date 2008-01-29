@@ -12,6 +12,14 @@ class HellowWorldGTK:
 		
 		self.image1 = self.wTree.get_widget("orig_texture")
 		self.image1.set_from_file("sw2_1.gif")
+		pixbuf = self.image1.get_pixbuf()
+		if pixbuf:
+			scale = 3
+			self.image1.set_from_pixbuf(pixbuf.scale_simple(
+				pixbuf.get_width()  * scale,
+				pixbuf.get_height() * scale,
+				gtk.gdk.INTERP_NEAREST
+			))
 		
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 
