@@ -22,7 +22,7 @@ class HellowWorldGTK:
 	
 	def parse_texture_file(self,fname):
 		texture1 = file(fname, "r").read()
-		self.textures = []
+		self.textures = {}
 		textures = self.textures
 		current = None
 		for line in texture1.split("\n"):
@@ -34,7 +34,7 @@ class HellowWorldGTK:
 			else:
 				line = line.split()
 				current = Texture(line[0],line[1],line[2])
-				textures.append(current)
+				textures[line[0]] = current
 	
 	def __init__(self):
 		self.gladefile = "cleanroom.glade"
@@ -45,8 +45,8 @@ class HellowWorldGTK:
 		self.parse_texture_file("combined.txt")
 		lhs = self.wTree.get_widget("texture_list")
 		treestore = gtk.TreeStore(str)
-		for texture in self.textures:
-			treestore.append(None, [ texture.name ])
+		for name in self.textures.keys():
+			treestore.append(None, [ name ])
 		column = gtk.TreeViewColumn('Texture name ')
 		lhs.set_model(treestore)
 		lhs.append_column(column)
@@ -57,13 +57,13 @@ class HellowWorldGTK:
 		# set the progress bar up
 		# by default we've "done" all the 1-patch textures
 		bar = self.wTree.get_widget("progressbar1")
-		done = len(filter(lambda x: len(x.patches) > 1, self.textures))
+		done = len(filter(lambda x: len(x.patches) > 1, self.textures.values()))
 		bar.set_fraction(float(done) / len(self.textures))
 		bar.set_text("%d/%d" % (done, len(self.textures)))
 
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
-		texture = filter(lambda x: x.name == "COMPUTE2", self.textures)[0]
+		texture = self.textures["COMPUTE2"]
 
 		# read the patches into pixbufs
 		# a horrid hack to get them client->server side
