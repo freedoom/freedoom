@@ -59,9 +59,11 @@ class HellowWorldGTK:
 				texbuf, patch.xoff, patch.yoff)
 
 		self.image1.set_from_pixbuf(texbuf)
+		
+		# scale the texture up
 		pixbuf = self.image1.get_pixbuf()
 		if pixbuf:
-			scale = 3
+			scale = 2
 			self.image1.set_from_pixbuf(pixbuf.scale_simple(
 				pixbuf.get_width()  * scale,
 				pixbuf.get_height() * scale,
