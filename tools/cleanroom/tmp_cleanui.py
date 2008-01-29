@@ -10,6 +10,13 @@ class Patch:
 		self.yoff = x
 		self.xoff =y
 
+class Texture:
+	def __init__(self,name,width,height):
+		self.name = name
+		self.width = width
+		self.height = height
+		self.patches = []
+
 class HellowWorldGTK:
 	"""This is an Hello World GTK application"""
 	
@@ -18,12 +25,43 @@ class HellowWorldGTK:
 *       COMP02_2        64      0
 *       COMP02_3        128     0
 *       COMP02_7        192     0"""
+
+	def parse_texture_file(self,fname):
+		texture1 = file(fname, "r").read()
+		self.textures = []
+		textures = self.textures
+		current = None
+		for line in texture1.split("\n"):
+			if len(line) == 0 or line[0] == ";" or line[0] == "#":
+				continue
+			elif line[0] == "*" and current:
+				current.patches.append(line)
+			else:
+				line = line.split()
+				if len(line) != 3:
+					print "OH CRAP"
+					print line
+				current = Texture(line[0],line[1],line[2])
+				textures.append(current)
 	
 	def __init__(self):
 		self.gladefile = "cleanroom.glade"
 		self.wTree = gtk.glade.XML(self.gladefile,"window1")
 		self.image1 = self.wTree.get_widget("orig_texture")
 		
+		# read in the IWAD texture1 lump and populate our LHS list
+		self.parse_texture_file("combined.txt")
+		lhs = self.wTree.get_widget("texture_list")
+		treestore = gtk.TreeStore(str)
+		for texture in self.textures:
+			treestore.append(None, [ texture.name ])
+		column = gtk.TreeViewColumn('Texture name ')
+		lhs.set_model(treestore)
+		lhs.append_column(column)
+		cell = gtk.CellRendererText()
+		column.pack_start(cell, False)
+		column.add_attribute(cell, "text", 0)
+
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
 		patches = []
