@@ -62,6 +62,13 @@ class HellowWorldGTK:
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
 
+		# set the progress bar up
+		# by default we've "done" all the 1-patch textures
+		bar = self.wTree.get_widget("progressbar1")
+		done = len(filter(lambda x: len(x.patches) > 1, self.textures))
+		bar.set_fraction(float(done) / len(self.textures))
+		bar.set_text("%d/%d" % (done, len(self.textures)))
+
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
 		patches = []
