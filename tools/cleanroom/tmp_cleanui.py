@@ -35,7 +35,8 @@ class HellowWorldGTK:
 			if len(line) == 0 or line[0] == ";" or line[0] == "#":
 				continue
 			elif line[0] == "*" and current:
-				current.patches.append(line)
+				junk,name,y,x= line.split()
+				current.patches.append(Patch(name,int(x),int(y)))
 			else:
 				line = line.split()
 				if len(line) != 3:
