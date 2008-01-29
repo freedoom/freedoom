@@ -17,9 +17,6 @@ class Texture:
 		self.height = height
 		self.patches = []
 
-def do_nothing(arg):
-	print "ZOMG<"
-
 class HellowWorldGTK:
 	"""This is an Hello World GTK application"""
 	
@@ -38,6 +35,12 @@ class HellowWorldGTK:
 				line = line.split()
 				current = Texture(line[0],line[1],line[2])
 				textures[line[0]] = current
+
+	def lhs_callback(self, treeview):
+		offs,col = treeview.get_cursor()
+		# TODO: sanity check the insane subscripting here
+		row = treeview.get_model()[offs[0]][0]
+		self.set_texture(row)
 
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
@@ -85,9 +88,9 @@ class HellowWorldGTK:
 		self.parse_texture_file("combined.txt")
 		lhs = self.wTree.get_widget("texture_list")
 		treestore = gtk.TreeStore(str)
-		a = self.textures.keys()
-		a.sort()
-		for name in a:
+		tmp_texnames = self.textures.keys()
+		tmp_texnames.sort()
+		for name in tmp_texnames:
 			treestore.append(None, [ name ])
 		column = gtk.TreeViewColumn('Texture name ')
 		lhs.set_model(treestore)
@@ -95,7 +98,7 @@ class HellowWorldGTK:
 		cell = gtk.CellRendererText()
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
-		lhs.connect("cursor-changed", do_nothing)
+		lhs.connect("cursor-changed", self.lhs_callback)
 
 		# set the progress bar up
 		# by default we've "done" all the 1-patch textures
@@ -104,7 +107,7 @@ class HellowWorldGTK:
 		bar.set_fraction(float(done) / len(self.textures))
 		bar.set_text("%d/%d" % (done, len(self.textures)))
 
-		self.set_texture("COMPUTE2")
+		self.set_texture(tmp_texnames[0])
 
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
