@@ -44,8 +44,12 @@ class HellowWorldGTK:
 
 	def rhs_callback(self, rhs):
 		offs,col = rhs.get_cursor()
-		row = rhs.get_model()[offs[0]][0]
+		model = rhs.get_model()
+		row = model[offs[0]][0]
+		selected_patches = self.wTree.get_widget("selected_patches")
+		model.append(None, [ row ])
 		print row
+		print type(model)
 
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
@@ -105,6 +109,16 @@ class HellowWorldGTK:
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
 		lhs.connect("cursor-changed", self.lhs_callback)
+
+		# prepare the patch list
+		patch_list = self.wTree.get_widget("selected_patches")
+		treestore = gtk.TreeStore(str)
+		column = gtk.TreeViewColumn('Patch name')
+		patch_list.set_model(treestore)
+		patch_list.append_column(column)
+		cell = gtk.CellRendererText()
+		column.pack_start(cell, False)
+		column.add_attribute(cell, "text", 0)
 
 		# populate the RHS list with patch names
 		# yes, I learnt perl once.
