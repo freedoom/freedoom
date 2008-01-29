@@ -44,12 +44,12 @@ class HellowWorldGTK:
 
 	def rhs_callback(self, rhs):
 		offs,col = rhs.get_cursor()
-		model = rhs.get_model()
-		row = model[offs[0]][0]
+		rhs_model = rhs.get_model()
+		row = rhs_model[offs[0]][0]
+
 		selected_patches = self.wTree.get_widget("selected_patches")
-		model.append(None, [ row ])
-		print row
-		print type(model)
+		selected_patches_model = selected_patches.get_model()
+		selected_patches_model.append(None, [ row ])
 
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
