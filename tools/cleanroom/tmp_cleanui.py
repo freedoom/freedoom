@@ -101,6 +101,25 @@ class HellowWorldGTK:
 		column.add_attribute(cell, "text", 0)
 		lhs.connect("cursor-changed", self.lhs_callback)
 
+		# populate the RHS list with patch names
+		# yes, I learnt perl once.
+		patches = {}
+		for texture in self.textures.values():
+			for patch in texture.patches:
+				patches[patch.name] = 1
+		patches = patches.keys()
+		rhs = self.wTree.get_widget("all_patch_tree")
+		treestore = gtk.TreeStore(str)
+		patches.sort()
+		for name in patches:
+			treestore.append(None, [ name ])
+		column = gtk.TreeViewColumn('Patch name')
+		rhs.set_model(treestore)
+		rhs.append_column(column)
+		cell = gtk.CellRendererText()
+		column.pack_start(cell, False)
+		column.add_attribute(cell, "text", 0)
+
 		# set the progress bar up
 		# by default we've "done" all the 1-patch textures
 		bar = self.wTree.get_widget("progressbar1")
