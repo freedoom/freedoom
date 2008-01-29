@@ -85,13 +85,14 @@ class HellowWorldGTK:
 		self.image1 = self.wTree.get_widget("orig_texture")
 		
 		# read in the IWAD texture1 lump and populate our LHS list
-		self.parse_texture_file("combined.txt")
+		self.parse_texture_file("../../textures/combined.txt")
 		lhs = self.wTree.get_widget("texture_list")
 		treestore = gtk.TreeStore(str)
 		tmp_texnames = self.textures.keys()
 		tmp_texnames.sort()
 		for name in tmp_texnames:
-			treestore.append(None, [ name ])
+			if len(self.textures[name].patches) > 1:
+				treestore.append(None, [ name ])
 		column = gtk.TreeViewColumn('Texture name ')
 		lhs.set_model(treestore)
 		lhs.append_column(column)
