@@ -47,7 +47,7 @@ class HellowWorldGTK:
 		# read the patches into pixbufs
 		# a horrid hack to get them client->server side
 		for patch in texture.patches:
-			self.image1.set_from_file(patch.name.lower() + ".gif")
+			self.image1.set_from_file("../../patches/" + patch.name.lower() + ".gif")
 			patch.pixbuf = self.image1.get_pixbuf()
 
 		texbuf = gtk.gdk.Pixbuf(
