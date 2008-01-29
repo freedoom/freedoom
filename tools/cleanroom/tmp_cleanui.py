@@ -71,6 +71,7 @@ class HellowWorldGTK:
 			))
 		
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
+		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
 
 if __name__ == "__main__":
 	hwg = HellowWorldGTK()
