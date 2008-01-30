@@ -46,10 +46,9 @@ class HellowWorldGTK:
 		offs,col = rhs.get_cursor()
 		rhs_model = rhs.get_model()
 		row = rhs_model[offs[0]][0]
-
-		selected_patches = self.wTree.get_widget("selected_patches")
-		selected_patches_model = selected_patches.get_model()
-		selected_patches_model.append(None, [ row ])
+		
+		image = self.wTree.get_widget("current_patch")
+		image.set_from_file("../../patches/" + row.lower() + ".gif")
 
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
