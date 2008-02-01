@@ -38,6 +38,7 @@ class HellowWorldGTK:
 
 	def lhs_callback(self, treeview):
 		offs,col = treeview.get_cursor()
+		print offs
 		# TODO: sanity check the insane subscripting here
 		row = treeview.get_model()[offs[0]][0]
 		self.set_texture(row)
@@ -113,6 +114,9 @@ class HellowWorldGTK:
 		column.add_attribute(cell, "text", 0)
 		lhs.connect("cursor-changed", self.lhs_callback)
 
+		# select the top-most item
+		lhs.set_cursor( (0,) , None, False)
+
 		# prepare the patch list
 		patch_list = self.wTree.get_widget("selected_patches")
 		treestore = gtk.TreeStore(str)
@@ -149,8 +153,6 @@ class HellowWorldGTK:
 		done = len(filter(lambda x: len(x.patches) > 1, self.textures.values()))
 		bar.set_fraction(float(done) / len(self.textures))
 		bar.set_text("%d/%d" % (done, len(self.textures)))
-
-		self.set_texture(tmp_texnames[0])
 
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
