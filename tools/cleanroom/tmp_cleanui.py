@@ -54,6 +54,8 @@ class HellowWorldGTK:
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
 		texture = self.textures[name]
+		print "composing texture %s (%dx%d)\n" % \
+			(name,int(texture.width),int(texture.height))
 
 		# read the patches into pixbufs
 		# a horrid hack to get them client->server side
@@ -70,9 +72,11 @@ class HellowWorldGTK:
 
 		# copy each patch into the texture pixbuf
 		for patch in texture.patches:
+			print "about to copy patch %s\n"%patch.name
+			width = min(patch.pixbuf.get_width(), int(texture.width))
+			height = min(patch.pixbuf.get_height(), int(texture.height))
 			patch.pixbuf.copy_area(0,0,
-				patch.pixbuf.get_width(),
-				patch.pixbuf.get_height(),
+				width, height,
 				texbuf, patch.xoff, patch.yoff)
 
 		self.image1.set_from_pixbuf(texbuf)
