@@ -73,9 +73,10 @@ class HellowWorldGTK:
 
 		# copy each patch into the texture pixbuf
 		for patch in texture.patches:
-			print "about to copy patch %s\n"%patch.name
-			width = min(patch.pixbuf.get_width(), int(texture.width))
-			height = min(patch.pixbuf.get_height(), int(texture.height))
+			print "about to copy patch %s (%d,%d)\n"% ( patch.name, patch.pixbuf.get_width(), patch.pixbuf.get_height())
+			width = max(patch.pixbuf.get_width(),   int(texture.width)  - patch.xoff)
+			height = max(patch.pixbuf.get_height(), int(texture.height) - patch.yoff)
+			print "debug: %d,%d,%d,%d\n" % (width,height,patch.xoff,patch.yoff)
 			patch.pixbuf.copy_area(0,0,
 				width, height,
 				texbuf, patch.xoff, patch.yoff)
