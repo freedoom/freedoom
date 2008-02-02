@@ -23,6 +23,7 @@ class HellowWorldGTK:
 	def parse_texture_file(self,fname):
 		texture1 = file(fname, "r").read()
 		self.textures = {}
+		self.wip_textures = {}
 		textures = self.textures
 		current = None
 		for line in texture1.split("\n"):
@@ -34,6 +35,7 @@ class HellowWorldGTK:
 			else:
 				line = line.split()
 				current = Texture(line[0],line[1],line[2])
+				self.wip_textures[line[0]] = Texture(line[0],line[1],line[2])
 				textures[line[0]] = current
 
 	def lhs_callback(self, treeview):
@@ -45,9 +47,8 @@ class HellowWorldGTK:
 	def rhs_drag_data_get(self,widget,ctx,selection,targettype,eventtime):
 		print "ZOMG"
 
-	# patchselected on rhs
+	# patch selected on rhs
 	def rhs_select_cb(self, rhs, path, view_column):
-		print "ZOMGLOL"
 		model = rhs.get_model()
 		row = model[path[0]][0]
 		selected_patches = self.wTree.get_widget("selected_patches")
