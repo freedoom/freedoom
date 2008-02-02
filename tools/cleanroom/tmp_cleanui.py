@@ -10,12 +10,21 @@ class Patch:
 		self.yoff = x
 		self.xoff =y
 
+	def __str__(self):
+		return "*\t%8s\t\t%d\t%d" % (self.name,self.xoff,self.yoff)
+
 class Texture:
 	def __init__(self,name,width,height):
 		self.name = name
 		self.width = width
 		self.height = height
 		self.patches = []
+		self.pixbuf = None
+
+	def __str__(self):
+		me   = "%8s\t\t%d\t%d\n" % (self.name,int(self.width),int(self.height))
+		kids = "\n".join(map(str, self.patches))
+		return (me + kids)
 
 class HellowWorldGTK:
 	"""This is an Hello World GTK application"""
@@ -54,6 +63,15 @@ class HellowWorldGTK:
 		selected_patches = self.wTree.get_widget("selected_patches")
 		model = selected_patches.get_model()
 		model.append(None, [ row ])
+		# redraw the rhs. a bit hacky
+		lhs = self.wTree.get_widget("texture_list")
+		offs,col = lhs.get_cursor()
+		current_texture_name = lhs.get_model()[offs[0]][0]
+		current_texture = self.wip_textures[current_texture_name]
+		current_texture.patches.append(Patch(row,0,0))
+		self.init_texture_pixbuf(self.wip_textures[current_texture_name])
+		# this redraws the lhs too, unnecessarily
+		self.set_texture(current_texture_name)
 
 	def rhs_cursor_cb(self, rhs):
 		offs,col = rhs.get_cursor()
@@ -72,54 +90,76 @@ class HellowWorldGTK:
 				gtk.gdk.INTERP_NEAREST
 			))
 
-
-	def set_texture(self, name):
-		# parse the example texture, fetch the width,height;
-		# create Patch objects and stuff them into a list
-		texture = self.textures[name]
-
-		# read the patches into pixbufs
-		# a horrid hack to get them client->server side
+	def init_texture_pixbuf(self, texture):
 		for patch in texture.patches:
-			self.image1.set_from_file("../../patches/" + patch.name.lower() + ".gif")
-			patch.pixbuf = self.image1.get_pixbuf()
+			# read the patches into pixbufs
+			# a horrid hack to get them client->server side
+			image = gtk.Image()
+			if not self.patch_pixbufs.has_key(patch.name):
+				image.set_from_file("../../patches/" + patch.name.lower() + ".gif")
+				self.patch_pixbufs[patch.name] = image.get_pixbuf()
 
 		texbuf = gtk.gdk.Pixbuf(
-			texture.patches[0].pixbuf.get_colorspace(),
-			texture.patches[0].pixbuf.get_has_alpha(),
-			texture.patches[0].pixbuf.get_bits_per_sample(),
+			self.patch_pixbufs.values()[0].get_colorspace(),
+			self.patch_pixbufs.values()[0].get_has_alpha(),
+			self.patch_pixbufs.values()[0].get_bits_per_sample(),
 			int(texture.width),
 			int(texture.height))
 
+		texbuf.fill(0x00ffffff)
+		texture.pixbuf = texbuf
+
 		# copy each patch into the texture pixbuf
 		for patch in texture.patches:
+
+
 			# top-left coords of source
 			src_x = max(-1 * patch.xoff, 0)
 			src_y = max(-1 * patch.yoff, 0)
 
 			# amount to copy
-			width = patch.pixbuf.get_width()
+			width = self.patch_pixbufs[patch.name].get_width()
 			if width + patch.xoff > int(texture.width):
 				width = min(int(texture.width), int(texture.width) - patch.xoff)
-			if width - patch.xoff > patch.pixbuf.get_width():
-				width = patch.pixbuf.get_width() + patch.xoff
-			height = patch.pixbuf.get_height()
+			if width - patch.xoff > self.patch_pixbufs[patch.name].get_width():
+				width = self.patch_pixbufs[patch.name].get_width() + patch.xoff
+			height = self.patch_pixbufs[patch.name].get_height()
 			if height + patch.yoff > int(texture.height):
 				height = min(int(texture.height), int(texture.height) - patch.yoff)
-			if height - patch.yoff > patch.pixbuf.get_height():
-				height = patch.pixbuf.get_height() + patch.yoff
+			if height - patch.yoff > self.patch_pixbufs[patch.name].get_height():
+				height = self.patch_pixbufs[patch.name].get_height() + patch.yoff
 
 			dest_xoff = max(0, patch.xoff)
 			dest_yoff = max(0, patch.yoff)
-			patch.pixbuf.copy_area( src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
+			self.patch_pixbufs[patch.name].copy_area( src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
 
-		self.image1.set_from_pixbuf(texbuf)
-		
+	def set_texture(self, name):
+		# parse the example texture, fetch the width,height;
+		# create Patch objects and stuff them into a list
+		texture = self.textures[name]
+		image = self.wTree.get_widget("orig_texture")
+
+		if not texture.pixbuf:
+			self.init_texture_pixbuf(texture)
+
+		image.set_from_pixbuf(texture.pixbuf)
+		self.scale_up_texture(image)
+
+		# now for the wip side
+		wip_image = self.wTree.get_widget("wip_texture")
+		wip_texture = self.wip_textures[name]
+		if not wip_texture.pixbuf:
+			self.init_texture_pixbuf(wip_texture)
+		wip_image.set_from_pixbuf(wip_texture.pixbuf)
+		self.scale_up_texture(wip_image)
+
+
+	def scale_up_texture(self, image):
 		# scale the texture up
-		pixbuf = self.image1.get_pixbuf()
+		pixbuf = image.get_pixbuf()
 		if pixbuf:
 			scale = 2
-			self.image1.set_from_pixbuf(pixbuf.scale_simple(
+			image.set_from_pixbuf(pixbuf.scale_simple(
 				pixbuf.get_width()  * scale,
 				pixbuf.get_height() * scale,
 				gtk.gdk.INTERP_NEAREST
@@ -132,6 +172,8 @@ class HellowWorldGTK:
 		
 		window = self.wTree.get_widget("window1")
 		window.resize(1024,768)
+
+		self.patch_pixbufs = {}
 		
 		# read in the IWAD texture1 lump and populate our LHS list
 		self.parse_texture_file("../../textures/combined.txt")
