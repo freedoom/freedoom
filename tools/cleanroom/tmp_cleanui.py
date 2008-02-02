@@ -42,6 +42,9 @@ class HellowWorldGTK:
 		row = treeview.get_model()[offs[0]][0]
 		self.set_texture(row)
 
+	def rhs_drag_data_get(self,widget,ctx,selection,targettype,eventtime):
+		print "ZOMG"
+
 	def rhs_callback(self, rhs):
 		offs,col = rhs.get_cursor()
 		rhs_model = rhs.get_model()
@@ -49,6 +52,16 @@ class HellowWorldGTK:
 		
 		image = self.wTree.get_widget("current_patch")
 		image.set_from_file("../../patches/" + row.lower() + ".gif")
+		# scale the texture up
+		pixbuf = image.get_pixbuf()
+		if pixbuf:
+			scale = 2
+			image.set_from_pixbuf(pixbuf.scale_simple(
+				pixbuf.get_width()  * scale,
+				pixbuf.get_height() * scale,
+				gtk.gdk.INTERP_NEAREST
+			))
+
 
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
@@ -159,6 +172,11 @@ class HellowWorldGTK:
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
 		rhs.connect("cursor-changed", self.rhs_callback)
+
+		image = self.wTree.get_widget("current_patch")
+		image.drag_source_set(gtk.gdk.BUTTON1_MASK, [('text/plain', 0,
+			80)], 0) # 80 = target type text
+		image.connect("drag_data_get", self.rhs_drag_data_get)
 
 		# set the progress bar up
 		# by default we've "done" all the 1-patch textures
