@@ -107,6 +107,9 @@ class HellowWorldGTK:
 		self.wTree = gtk.glade.XML(self.gladefile,"window1")
 		self.image1 = self.wTree.get_widget("orig_texture")
 		
+		window = self.wTree.get_widget("window1")
+		window.resize(1024,768)
+		
 		# read in the IWAD texture1 lump and populate our LHS list
 		self.parse_texture_file("../../textures/combined.txt")
 		lhs = self.wTree.get_widget("texture_list")
