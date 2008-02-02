@@ -54,8 +54,6 @@ class HellowWorldGTK:
 		# parse the example texture, fetch the width,height;
 		# create Patch objects and stuff them into a list
 		texture = self.textures[name]
-		print "composing texture %s (%dx%d)\n" % \
-			(name,int(texture.width),int(texture.height))
 
 		# read the patches into pixbufs
 		# a horrid hack to get them client->server side
@@ -72,34 +70,22 @@ class HellowWorldGTK:
 
 		# copy each patch into the texture pixbuf
 		for patch in texture.patches:
-			print "about to copy patch %s (%d,%d) to (%d,%d)"% \
-				( patch.name, patch.pixbuf.get_width(),
-				patch.pixbuf.get_height(),
-				patch.xoff, patch.yoff
-				)
 			# top-left coords of source
 			src_x = max(-1 * patch.xoff, 0)
 			src_y = max(-1 * patch.yoff, 0)
 
 			# amount to copy
-
 			width = patch.pixbuf.get_width()
 			if width + patch.xoff > int(texture.width):
-				print "patch too wide, shortening"
 				width = min(int(texture.width), int(texture.width) - patch.xoff)
 			if width - patch.xoff > patch.pixbuf.get_width():
-				print "patch width too wide, shortening"
 				width = patch.pixbuf.get_width() + patch.xoff
-
 			height = patch.pixbuf.get_height()
 			if height + patch.yoff > int(texture.height):
-				print "patch too high, shortening"
 				height = min(int(texture.height), int(texture.height) - patch.yoff)
 			if height - patch.yoff > patch.pixbuf.get_height():
-				print "patch height too high, shortening"
 				height = patch.pixbuf.get_height() + patch.yoff
 
-			print "debug: src x/y = %d,%d; w/h = %d,%d" % (src_x,src_y,width,height)
 			dest_xoff = max(0, patch.xoff)
 			dest_yoff = max(0, patch.yoff)
 			patch.pixbuf.copy_area( src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
