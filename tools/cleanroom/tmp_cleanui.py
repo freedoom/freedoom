@@ -38,7 +38,6 @@ class HellowWorldGTK:
 
 	def lhs_callback(self, treeview):
 		offs,col = treeview.get_cursor()
-		print offs
 		# TODO: sanity check the insane subscripting here
 		row = treeview.get_model()[offs[0]][0]
 		self.set_texture(row)
@@ -73,13 +72,27 @@ class HellowWorldGTK:
 
 		# copy each patch into the texture pixbuf
 		for patch in texture.patches:
-			print "about to copy patch %s (%d,%d)\n"% ( patch.name, patch.pixbuf.get_width(), patch.pixbuf.get_height())
-			width = max(patch.pixbuf.get_width(),   int(texture.width)  - patch.xoff)
-			height = max(patch.pixbuf.get_height(), int(texture.height) - patch.yoff)
-			print "debug: %d,%d,%d,%d\n" % (width,height,patch.xoff,patch.yoff)
-			patch.pixbuf.copy_area(0,0,
-				width, height,
-				texbuf, patch.xoff, patch.yoff)
+			print "about to copy patch %s (%d,%d) to (%d,%d)"% \
+				( patch.name, patch.pixbuf.get_width(),
+				patch.pixbuf.get_height(),
+				patch.xoff, patch.yoff
+				)
+			# top-left coords of source
+			src_x = max(-1 * patch.xoff, 0)
+			src_y = max(-1 * patch.yoff, 0)
+			# amount to copy
+			width = patch.pixbuf.get_width()
+			if width + patch.xoff > int(texture.width):
+				print "patch too wide, shortening"
+				width = int(texture.width) - patch.xoff
+			height = patch.pixbuf.get_height()
+			if height + patch.yoff > int(texture.height):
+				print "patch too high, shortening"
+				height = min(int(texture.height), int(texture.height) - patch.yoff)
+			print "debug: src x/y = %d,%d; w/h = %d,%d" % (src_x,src_y,width,height)
+			dest_xoff = max(0, patch.xoff)
+			dest_yoff = max(0, patch.yoff)
+			patch.pixbuf.copy_area( src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
 
 		self.image1.set_from_pixbuf(texbuf)
 		
