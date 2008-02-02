@@ -80,15 +80,25 @@ class HellowWorldGTK:
 			# top-left coords of source
 			src_x = max(-1 * patch.xoff, 0)
 			src_y = max(-1 * patch.yoff, 0)
+
 			# amount to copy
+
 			width = patch.pixbuf.get_width()
 			if width + patch.xoff > int(texture.width):
 				print "patch too wide, shortening"
-				width = int(texture.width) - patch.xoff
+				width = min(int(texture.width), int(texture.width) - patch.xoff)
+			if width - patch.xoff > patch.pixbuf.get_width():
+				print "patch width too wide, shortening"
+				width = patch.pixbuf.get_width() + patch.xoff
+
 			height = patch.pixbuf.get_height()
 			if height + patch.yoff > int(texture.height):
 				print "patch too high, shortening"
 				height = min(int(texture.height), int(texture.height) - patch.yoff)
+			if height - patch.yoff > patch.pixbuf.get_height():
+				print "patch height too high, shortening"
+				height = patch.pixbuf.get_height() + patch.yoff
+
 			print "debug: src x/y = %d,%d; w/h = %d,%d" % (src_x,src_y,width,height)
 			dest_xoff = max(0, patch.xoff)
 			dest_yoff = max(0, patch.yoff)
