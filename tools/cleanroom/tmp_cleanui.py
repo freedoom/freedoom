@@ -45,7 +45,16 @@ class HellowWorldGTK:
 	def rhs_drag_data_get(self,widget,ctx,selection,targettype,eventtime):
 		print "ZOMG"
 
-	def rhs_callback(self, rhs):
+	# patchselected on rhs
+	def rhs_select_cb(self, rhs, path, view_column):
+		print "ZOMGLOL"
+		model = rhs.get_model()
+		row = model[path[0]][0]
+		selected_patches = self.wTree.get_widget("selected_patches")
+		model = selected_patches.get_model()
+		model.append(None, [ row ])
+
+	def rhs_cursor_cb(self, rhs):
 		offs,col = rhs.get_cursor()
 		rhs_model = rhs.get_model()
 		row = rhs_model[offs[0]][0]
@@ -171,7 +180,8 @@ class HellowWorldGTK:
 		cell = gtk.CellRendererText()
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
-		rhs.connect("cursor-changed", self.rhs_callback)
+		rhs.connect("cursor-changed", self.rhs_cursor_cb)
+		rhs.connect("row-activated", self.rhs_select_cb)
 
 		image = self.wTree.get_widget("current_patch")
 		image.drag_source_set(gtk.gdk.BUTTON1_MASK, [('text/plain', 0,
