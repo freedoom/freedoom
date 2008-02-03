@@ -72,14 +72,19 @@ class HellowWorldGTK:
 		model = selected_patches.get_model()
 		model.append(None, [ row, 0, 0 ])
 		# redraw the rhs. a bit hacky
-		lhs = self.wTree.get_widget("texture_list")
-		offs,col = lhs.get_cursor()
-		current_texture_name = lhs.get_model()[offs[0]][0]
+		current_texture_name = self.current_texture()
 		current_texture = self.wip_textures[current_texture_name]
 		current_texture.patches.append(Patch(row,0,0))
 		self.init_texture_pixbuf(self.wip_textures[current_texture_name])
 		# this redraws the lhs too, unnecessarily
 		self.set_texture(current_texture_name)
+
+	def current_texture(self):
+		"""return the name of the currently selected texture"""
+		lhs = self.wTree.get_widget("texture_list")
+		offs,col = lhs.get_cursor()
+		lhs_model = lhs.get_model()
+		return lhs_model[offs[0]][0]
 
 	def rhs_cursor_cb(self, rhs):
 		offs,col = rhs.get_cursor()
@@ -175,7 +180,15 @@ class HellowWorldGTK:
 
 	def cell_callback(self, cellrenderertext, path, new_text):
 		"""cell edited in patch list"""
-		print "LOLLERSKATES"
+		current_texture = self.wip_textures[self.current_texture()]
+		path = int(path)
+		new_text = int(new_text)
+		if self.cellrendererwidth == cellrenderertext:
+			print "set patch %s width to %d" % (current_texture.patches[path].name, new_text)
+			current_texture.patches[path].xoff = new_text
+		else:
+			print "set patch %s height to %d" % (current_texture.patches[path].name, new_text)
+			current_texture.patches[path].yoff = new_text
 
 	def __init__(self):
 		self.gladefile = "cleanroom.glade"
@@ -211,16 +224,21 @@ class HellowWorldGTK:
 		patch_list.set_model(treestore)
 		patch_list.append_column(column)
 		cell = gtk.CellRendererText()
-		cell.set_property("editable", True)
-		cell.connect("edited", self.cell_callback)
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
 
+		cell = gtk.CellRendererText()
+		self.cellrendererwidth = cell
+		cell.set_property("editable", True)
+		cell.connect("edited", self.cell_callback)
 		column = gtk.TreeViewColumn('X offset')
 		patch_list.append_column(column)
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 1)
 
+		cell = gtk.CellRendererText()
+		cell.set_property("editable", True)
+		cell.connect("edited", self.cell_callback)
 		column = gtk.TreeViewColumn('Y offset')
 		patch_list.append_column(column)
 		column.pack_start(cell, False)
