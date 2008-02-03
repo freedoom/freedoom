@@ -280,11 +280,16 @@ class HellowWorldGTK:
 			buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
 				gtk.STOCK_SAVE, gtk.RESPONSE_OK))
 		if filesel.run() == gtk.RESPONSE_OK:
-			filename = filesel.get_filename()
-			writetome = open(filename,"w")
-			writetome.write("".join(map(str,self.wip_textures.values())))
-			writetome.close()
+			self.filename = filesel.get_filename()
 		filesel.destroy()
+		self.save_activated(arg)
+
+	def save_activated(self, arg):
+		if not self.filename:
+			self.saveas_activated(arg)
+		writetome = open(self.filename,"w")
+		writetome.write("".join(map(str,self.wip_textures.values())))
+		writetome.close()
 
 if __name__ == "__main__":
 	hwg = HellowWorldGTK()
