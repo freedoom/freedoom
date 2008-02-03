@@ -271,6 +271,7 @@ class HellowWorldGTK:
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
 		self.wTree.get_widget("saveas_menu_item").connect("activate", self.saveas_activated)
+		self.wTree.get_widget("save_menu_item").connect("activate", self.save_activated)
 
 		# select the top-most texture
 		lhs.set_cursor( (0,) , None, False)
@@ -285,7 +286,7 @@ class HellowWorldGTK:
 		self.save_activated(arg)
 
 	def save_activated(self, arg):
-		if not self.filename:
+		if not hasattr(self, "filename"):
 			self.saveas_activated(arg)
 		writetome = open(self.filename,"w")
 		writetome.write("".join(map(str,self.wip_textures.values())))
