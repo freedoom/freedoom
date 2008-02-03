@@ -185,12 +185,21 @@ class HellowWorldGTK:
 		new_text = int(new_text)
 		if self.cellrendererwidth == cellrenderertext:
 			current_texture.patches[path].xoff = new_text
+			column = 1
 		else:
 			current_texture.patches[path].yoff = new_text
+			column = 2
 		self.init_texture_pixbuf(current_texture)
 		wip_image = self.wTree.get_widget("wip_texture")
 		wip_image.set_from_pixbuf(current_texture.pixbuf)
 		self.scale_up_texture(wip_image)
+
+		# update the model now
+		selected_patches = self.wTree.get_widget("selected_patches")
+		model = selected_patches.get_model()
+		iter = model.get_iter(path)
+		model.set_value(iter, column, new_text)
+
 
 	def __init__(self):
 		self.gladefile = "cleanroom.glade"
