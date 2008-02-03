@@ -52,6 +52,14 @@ class HellowWorldGTK:
 		# TODO: sanity check the insane subscripting here
 		row = treeview.get_model()[offs[0]][0]
 		self.set_texture(row)
+		# clear out the patch-list for this texture
+		selected_patches = self.wTree.get_widget("selected_patches")
+		model = selected_patches.get_model()
+		model.clear()
+		wip_texture = self.wip_textures[row]
+		for patch in wip_texture.patches:
+			model.append(None, [ patch.name, patch.xoff, patch.yoff ])
+			
 
 	def rhs_drag_data_get(self,widget,ctx,selection,targettype,eventtime):
 		print "ZOMG"
@@ -192,9 +200,6 @@ class HellowWorldGTK:
 		column.add_attribute(cell, "text", 0)
 		lhs.connect("cursor-changed", self.lhs_callback)
 
-		# select the top-most item
-		lhs.set_cursor( (0,) , None, False)
-
 		# prepare the patch list
 		patch_list = self.wTree.get_widget("selected_patches")
 		treestore = gtk.TreeStore(str,int,int)
@@ -208,12 +213,12 @@ class HellowWorldGTK:
 		column = gtk.TreeViewColumn('X offset')
 		patch_list.append_column(column)
 		column.pack_start(cell, False)
-		column.add_attribute(cell, "text", 1) # ?
+		column.add_attribute(cell, "text", 1)
 
 		column = gtk.TreeViewColumn('Y offset')
 		patch_list.append_column(column)
 		column.pack_start(cell, False)
-		column.add_attribute(cell, "text", 2) # ?
+		column.add_attribute(cell, "text", 2)
 
 		# populate the RHS list with patch names
 		# yes, I learnt perl once.
@@ -250,6 +255,9 @@ class HellowWorldGTK:
 
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
+
+		# select the top-most texture
+		lhs.set_cursor( (0,) , None, False)
 
 if __name__ == "__main__":
 	hwg = HellowWorldGTK()
