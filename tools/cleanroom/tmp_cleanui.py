@@ -4,27 +4,7 @@ import sys
 import gtk
 import gtk.glade
 
-class Patch:
-	def __init__(self, n,x,y):
-		self.name = n
-		self.yoff = x
-		self.xoff =y
-
-	def __str__(self):
-		return "*\t%8s\t\t%d\t%d" % (self.name,self.xoff,self.yoff)
-
-class Texture:
-	def __init__(self,name,width,height):
-		self.name = name
-		self.width = width
-		self.height = height
-		self.patches = []
-		self.pixbuf = None
-
-	def __str__(self):
-		me   = "%8s\t\t%d\t%d\n" % (self.name,int(self.width),int(self.height))
-		kids = "\n".join(map(str, self.patches))
-		return (me + kids)
+from doom import Patch, Texture
 
 class HellowWorldGTK:
 	"""This is an Hello World GTK application"""
@@ -290,9 +270,21 @@ class HellowWorldGTK:
 
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
+		self.wTree.get_widget("saveas_menu_item").connect("activate", self.saveas_activated)
 
 		# select the top-most texture
 		lhs.set_cursor( (0,) , None, False)
+
+	def saveas_activated(self, arg):
+		filesel = gtk.FileChooserDialog(action=gtk.FILE_CHOOSER_ACTION_SAVE,
+			buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
+				gtk.STOCK_SAVE, gtk.RESPONSE_OK))
+		if filesel.run() == gtk.RESPONSE_OK:
+			filename = filesel.get_filename()
+			writetome = open(filename,"w")
+			writetome.write("".join(map(str,self.wip_textures.values())))
+			writetome.close()
+		filesel.destroy()
 
 if __name__ == "__main__":
 	hwg = HellowWorldGTK()
