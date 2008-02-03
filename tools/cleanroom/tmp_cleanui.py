@@ -62,7 +62,7 @@ class HellowWorldGTK:
 		row = model[path[0]][0]
 		selected_patches = self.wTree.get_widget("selected_patches")
 		model = selected_patches.get_model()
-		model.append(None, [ row ])
+		model.append(None, [ row, 0, 0 ])
 		# redraw the rhs. a bit hacky
 		lhs = self.wTree.get_widget("texture_list")
 		offs,col = lhs.get_cursor()
@@ -197,13 +197,23 @@ class HellowWorldGTK:
 
 		# prepare the patch list
 		patch_list = self.wTree.get_widget("selected_patches")
-		treestore = gtk.TreeStore(str)
+		treestore = gtk.TreeStore(str,int,int)
 		column = gtk.TreeViewColumn('Patch name')
 		patch_list.set_model(treestore)
 		patch_list.append_column(column)
 		cell = gtk.CellRendererText()
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
+
+		column = gtk.TreeViewColumn('X offset')
+		patch_list.append_column(column)
+		column.pack_start(cell, False)
+		column.add_attribute(cell, "text", 1) # ?
+
+		column = gtk.TreeViewColumn('Y offset')
+		patch_list.append_column(column)
+		column.pack_start(cell, False)
+		column.add_attribute(cell, "text", 2) # ?
 
 		# populate the RHS list with patch names
 		# yes, I learnt perl once.
