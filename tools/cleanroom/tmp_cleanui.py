@@ -173,6 +173,10 @@ class HellowWorldGTK:
 				gtk.gdk.INTERP_NEAREST
 			))
 
+	def cell_callback(self, cellrenderertext, path, new_text):
+		"""cell edited in patch list"""
+		print "LOLLERSKATES"
+
 	def __init__(self):
 		self.gladefile = "cleanroom.glade"
 		self.wTree = gtk.glade.XML(self.gladefile,"window1")
@@ -207,6 +211,8 @@ class HellowWorldGTK:
 		patch_list.set_model(treestore)
 		patch_list.append_column(column)
 		cell = gtk.CellRendererText()
+		cell.set_property("editable", True)
+		cell.connect("edited", self.cell_callback)
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 0)
 
