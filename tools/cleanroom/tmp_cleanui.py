@@ -157,6 +157,23 @@ class HellowWorldGTK:
 				pixbuf.get_height() * scale,
 				gtk.gdk.INTERP_NEAREST
 			))
+	
+	def patch_list_key(self,treeview,event):
+		"""handle key press events on the patch list"""
+		if gtk.keysyms.Delete == event.keyval:
+			offs,col = treeview.get_cursor()
+			# remove from data structure
+			texture = self.wip_textures[self.current_texture()]
+			del texture.patches[offs[0]]
+			# remove from UI
+			model = treeview.get_model()
+			iter = model.get_iter(offs)
+			model.remove(iter)
+			# redraw RHS
+			self.init_texture_pixbuf(texture)
+			wip_image = self.wTree.get_widget("wip_texture")
+			wip_image.set_from_pixbuf(texture.pixbuf)
+			self.scale_up_texture(wip_image)
 
 	def cell_callback(self, cellrenderertext, path, new_text):
 		"""cell edited in patch list"""
@@ -234,6 +251,8 @@ class HellowWorldGTK:
 		patch_list.append_column(column)
 		column.pack_start(cell, False)
 		column.add_attribute(cell, "text", 2)
+
+		patch_list.connect("key-press-event", self.patch_list_key)
 
 		# populate the RHS list with patch names
 		# yes, I learnt perl once.
