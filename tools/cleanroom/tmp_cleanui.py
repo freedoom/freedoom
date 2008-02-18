@@ -308,8 +308,10 @@ class HellowWorldGTK:
 	def save_activated(self, arg):
 		if not hasattr(self, "filename"):
 			self.saveas_activated(arg)
+		saveme = self.wip_textures.values()
+		saveme.sort()
 		writetome = open(self.filename,"w")
-		writetome.write("".join(map(str,self.wip_textures.values())))
+		writetome.write("".join(map(str,saveme)))
 		writetome.close()
 
 	def open_activated(self,arg):
