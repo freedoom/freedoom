@@ -291,6 +291,7 @@ class HellowWorldGTK:
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
 		self.wTree.get_widget("saveas_menu_item").connect("activate", self.saveas_activated)
 		self.wTree.get_widget("save_menu_item").connect("activate", self.save_activated)
+		self.wTree.get_widget("open_menu_item").connect("activate", self.open_activated)
 
 		# select the top-most texture
 		lhs.set_cursor( (0,) , None, False)
@@ -310,6 +311,30 @@ class HellowWorldGTK:
 		writetome = open(self.filename,"w")
 		writetome.write("".join(map(str,self.wip_textures.values())))
 		writetome.close()
+
+	def open_activated(self,arg):
+		filesel = \
+		gtk.FileChooserDialog(action=gtk.FILE_CHOOSER_ACTION_OPEN,
+			buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
+				gtk.STOCK_OPEN, gtk.RESPONSE_OK))
+		if filesel.run() == gtk.RESPONSE_OK:
+			self.filename = filesel.get_filename()
+		filesel.destroy()
+		print self.filename
+		
+		texture1 = file(self.filename, "r").read()
+		self.wip_textures = {}
+		current = None
+		for line in texture1.split("\n"):
+			if len(line) == 0 or line[0] == ";" or line[0] == "#":
+				continue
+			elif line[0] == "*" and current:
+				junk,name,y,x= line.split()
+				current.patches.append(Patch(name,int(x),int(y)))
+			else:
+				line = line.split()
+				current = Texture(line[0],line[1],line[2])
+				self.wip_textures[line[0]] = current
 
 if __name__ == "__main__":
 	hwg = HellowWorldGTK()
