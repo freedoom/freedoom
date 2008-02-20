@@ -26,6 +26,12 @@ class HellowWorldGTK:
 				current = Texture(line[0],line[1],line[2])
 				self.wip_textures[line[0]] = Texture(line[0],line[1],line[2])
 				textures[line[0]] = current
+		# now weed out the 1-patch ones
+		keys = self.textures.keys()
+		for key in keys:
+			if 1 == len(self.textures[key].patches):
+				del self.textures[key]
+				del self.wip_textures[key]
 
 	def lhs_callback(self, treeview):
 		offs,col = treeview.get_cursor()
@@ -198,6 +204,10 @@ class HellowWorldGTK:
 		model.set_value(iter, column, new_text)
 
 
+	def patch_list_reordered(self,treemodel,path,iter,new_order):
+		print "ZOMG"
+
+
 	def __init__(self):
 		self.gladefile = "cleanroom.glade"
 		self.wTree = gtk.glade.XML(self.gladefile,"window1")
@@ -253,6 +263,8 @@ class HellowWorldGTK:
 		column.add_attribute(cell, "text", 2)
 
 		patch_list.connect("key-press-event", self.patch_list_key)
+		patch_list.set_reorderable(True)
+		treestore.connect("rows-reordered", self.patch_list_reordered)
 
 		# populate the RHS list with patch names
 		# yes, I learnt perl once.
@@ -280,12 +292,7 @@ class HellowWorldGTK:
 			80)], 0) # 80 = target type text
 		image.connect("drag_data_get", self.rhs_drag_data_get)
 
-		# set the progress bar up
-		# by default we've "done" all the 1-patch textures
-		bar = self.wTree.get_widget("progressbar1")
-		done = len(filter(lambda x: len(x.patches) > 1, self.textures.values()))
-		bar.set_fraction(float(done) / len(self.textures))
-		bar.set_text("%d/%d" % (done, len(self.textures)))
+		self.set_up_progressbar()
 
 		self.wTree.get_widget("window1").connect("destroy", gtk.main_quit)
 		self.wTree.get_widget("quit_menu_item").connect("activate", gtk.main_quit)
@@ -295,6 +302,13 @@ class HellowWorldGTK:
 
 		# select the top-most texture
 		lhs.set_cursor( (0,) , None, False)
+
+	def set_up_progressbar(self):
+		"""We've "done" any textures in wip set with >0 patches"""
+		bar = self.wTree.get_widget("progressbar1")
+		done = len(filter(lambda x: len(x.patches) > 0, self.wip_textures.values()))
+		bar.set_fraction(float(done) / len(self.textures))
+		bar.set_text("%d/%d" % (done, len(self.textures)))
 
 	def saveas_activated(self, arg):
 		filesel = gtk.FileChooserDialog(action=gtk.FILE_CHOOSER_ACTION_SAVE,
@@ -337,6 +351,7 @@ class HellowWorldGTK:
 				line = line.split()
 				current = Texture(line[0],line[1],line[2])
 				self.wip_textures[line[0]] = current
+		self.set_up_progressbar()
 
 if __name__ == "__main__":
 	hwg = HellowWorldGTK()
