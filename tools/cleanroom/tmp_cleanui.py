@@ -323,7 +323,7 @@ class HellowWorldGTK:
 		if not hasattr(self, "filename"):
 			self.saveas_activated(arg)
 		saveme = self.wip_textures.values()
-		saveme.sort()
+		saveme.sort(lambda a,b: cmp(a.name,b.name))
 		writetome = open(self.filename,"w")
 		writetome.write("".join(map(str,saveme)))
 		writetome.close()
