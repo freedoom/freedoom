@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 from doom import Patch, Texture
-from copy import deepcopy
 import sys,re
 
 if len(sys.argv) != 2:
