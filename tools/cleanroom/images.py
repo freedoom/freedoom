@@ -40,7 +40,7 @@ class ImagesExample:
         baseimage.show()
 
         basepatch = gtk.Image()
-        basepatch.set_from_file("../../patches/wall42_3.gif")
+        basepatch.set_from_file("../../patches/ps20a0.gif")
         pb = basepatch.get_pixbuf()
         basepatch.set_from_pixbuf(pb.scale_simple(
             pb.get_width()  * scale,
