@@ -132,10 +132,13 @@ class HellowWorldGTK:
 
 			dest_xoff = max(0, patch.xoff)
 			dest_yoff = max(0, patch.yoff)
+			print "compositing %d,%d,%d,%d,%d,%d" % (dest_xoff, dest_yoff, width, height, src_x, src_y)
 			self.patch_pixbufs[patch.name].composite(
-				texbuf, dest_xoff, dest_yoff, width, height, src_x, src_y, 1, 1,
-				gtk.gdk.INTERP_NEAREST,
-				255)
+				texbuf,
+				dest_xoff, dest_yoff, width, height, # dest_x, dest_y dest_width, dest_height
+				src_x, src_y, # offset_x, offset_y
+				1, 1, # scale_x, scale_y
+				gtk.gdk.INTERP_NEAREST, 255)
 			#src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
 
 	def set_texture(self, name):
