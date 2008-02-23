@@ -31,7 +31,7 @@ class ImagesExample:
         baseimage.set_from_file("../../patches/wall40_1.gif")
         pixbuf = baseimage.get_pixbuf()
         if pixbuf:
-            scale = 2
+            scale = 1
             baseimage.set_from_pixbuf(pixbuf.scale_simple(
                 pixbuf.get_width()  * scale,
                 pixbuf.get_height() * scale,
