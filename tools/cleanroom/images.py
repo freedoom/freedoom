@@ -56,8 +56,9 @@ class ImagesExample:
             image.set_from_pixbuf(baseimage.get_pixbuf().copy())
             image.show()
 
-            dest_x = x
-            dest_y = y
+            # dest_x >= 0 && dest_x + dest_width <= dest->width
+            dest_x = max(0, x)
+            dest_y = max(0, y)
             dest_height = min(pb.get_height(), image.get_pixbuf().get_height() - dest_y)
             dest_width  = min(pb.get_width(),  image.get_pixbuf().get_width()  - dest_x)
             dest_x + dest_width
