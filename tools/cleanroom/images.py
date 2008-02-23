@@ -33,6 +33,14 @@ class ImagesExample:
         # buttons
         image = gtk.Image()
         image.set_from_file("../../patches/wall40_1.gif")
+        pixbuf = image.get_pixbuf()
+        if pixbuf:
+            scale = 2
+            image.set_from_pixbuf(pixbuf.scale_simple(
+                pixbuf.get_width()  * scale,
+                pixbuf.get_height() * scale,
+                gtk.gdk.INTERP_NEAREST
+            ))
         image.show()
         # a button to contain the image widget
         button = gtk.Button()
