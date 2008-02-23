@@ -54,14 +54,15 @@ class ImagesExample:
         ))
         pb = image2.get_pixbuf()
 
-        pb.composite(
-            image.get_pixbuf(),
-            0, 0,
-            pb.get_width(), pb.get_height(),
-            0, 0, # offsets
-            1, 1, # scale
-            gtk.gdk.INTERP_NEAREST, 255
-        )
+        for (x,y) in [(0,0), (51,0), (104,0)]:
+            pb.composite(
+                image.get_pixbuf(),
+                x * scale, y * scale,
+                pb.get_width(), pb.get_height(),
+                x * scale, y * scale, # offsets
+                1, 1, # scale
+                gtk.gdk.INTERP_NEAREST, 255
+            )
 
         # a button to contain the image widget
         button = gtk.Button()
