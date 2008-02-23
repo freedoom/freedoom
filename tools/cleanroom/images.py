@@ -49,7 +49,7 @@ class ImagesExample:
         ))
         pb = basepatch.get_pixbuf()
 
-        for x,y in [(0,0), (51,0), (104,16), (192,0)]:
+        for x,y in [(0,0), (24,24), (104,16), (24,104)]:
             x *= scale
             y *= scale
             image = gtk.Image()
@@ -58,9 +58,9 @@ class ImagesExample:
 
             dest_x = x
             dest_y = y
-            dest_width = pb.get_width()
-            dest_height = pb.get_height()
-            dest_height -= y
+            dest_height = min(pb.get_height(), image.get_pixbuf().get_height() - dest_y)
+            dest_width  = min(pb.get_width(),  image.get_pixbuf().get_width()  - dest_x)
+            dest_x + dest_width
             offset_x = x
             offset_y = y
 
