@@ -113,33 +113,28 @@ class HellowWorldGTK:
 		# copy each patch into the texture pixbuf
 		for patch in texture.patches:
 
-
-			# top-left coords of source
-			src_x = max(-1 * patch.xoff, 0)
-			src_y = max(-1 * patch.yoff, 0)
-
-			# amount to copy
-			width = self.patch_pixbufs[patch.name].get_width()
-			if width + patch.xoff > int(texture.width):
-				width = min(int(texture.width), int(texture.width) - patch.xoff)
-			if width - patch.xoff > self.patch_pixbufs[patch.name].get_width():
-				width = self.patch_pixbufs[patch.name].get_width() + patch.xoff
-			height = self.patch_pixbufs[patch.name].get_height()
-			if height + patch.yoff > int(texture.height):
-				height = min(int(texture.height), int(texture.height) - patch.yoff)
-			if height - patch.yoff > self.patch_pixbufs[patch.name].get_height():
-				height = self.patch_pixbufs[patch.name].get_height() + patch.yoff
-
-			dest_xoff = max(0, patch.xoff)
-			dest_yoff = max(0, patch.yoff)
-			print "compositing %d,%d,%d,%d,%d,%d" % (dest_xoff, dest_yoff, width, height, src_x, src_y)
-			self.patch_pixbufs[patch.name].composite(
+			dest_x = max(0, patch.xoff)
+			dest_y = max(0, patch.yoff)
+			dest_height = min(
+				self.patch_pixbufs[patch.name].get_height(),
+				texbuf.get_height() - dest_y
+			)
+			dest_width  = min(
+				self.patch_pixbufs[patch.name].get_width(),
+				texbuf.get_width()  - dest_x
+			)
+			if patch.xoff < 0:
+				dest_width += patch.xoff
+			if patch.yoff < 0:
+				dest_height += patch.yoff
+			offset_x = patch.xoff
+			offset_y = patch.yoff
+			pb = self.patch_pixbufs[patch.name]
+			pb.composite(
 				texbuf,
-				dest_xoff, dest_yoff, width, height, # dest_x, dest_y dest_width, dest_height
-				src_x, src_y, # offset_x, offset_y
-				1, 1, # scale_x, scale_y
+				dest_x, dest_y, dest_width, dest_height,
+                offset_x, offset_y, 1, 1, # scale
 				gtk.gdk.INTERP_NEAREST, 255)
-			#src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
 
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
