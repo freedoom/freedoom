@@ -96,7 +96,8 @@ class HellowWorldGTK:
 			image = gtk.Image()
 			if not self.patch_pixbufs.has_key(patch.name):
 				image.set_from_file("../../patches/" + patch.name.lower() + ".gif")
-				self.patch_pixbufs[patch.name] = image.get_pixbuf()
+				pb = image.get_pixbuf()
+				self.patch_pixbufs[patch.name] = pb.add_alpha(True,chr(0),chr(255),chr(255))
 
 		texbuf = gtk.gdk.Pixbuf(
 			self.patch_pixbufs.values()[0].get_colorspace(),
@@ -106,6 +107,7 @@ class HellowWorldGTK:
 			int(texture.height))
 
 		texbuf.fill(0x00ffffff)
+		texbuf = texbuf.add_alpha(True,chr(0),chr(255),chr(255))
 		texture.pixbuf = texbuf
 
 		# copy each patch into the texture pixbuf
@@ -130,7 +132,11 @@ class HellowWorldGTK:
 
 			dest_xoff = max(0, patch.xoff)
 			dest_yoff = max(0, patch.yoff)
-			self.patch_pixbufs[patch.name].copy_area( src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
+			self.patch_pixbufs[patch.name].composite(
+				texbuf, dest_xoff, dest_yoff, width, height, src_x, src_y, 1, 1,
+				gtk.gdk.INTERP_NEAREST,
+				255)
+			#src_x, src_y, width, height, texbuf, dest_xoff, dest_yoff)
 
 	def set_texture(self, name):
 		# parse the example texture, fetch the width,height;
