@@ -61,7 +61,10 @@ class ImagesExample:
             dest_y = max(0, y)
             dest_height = min(pb.get_height(), image.get_pixbuf().get_height() - dest_y)
             dest_width  = min(pb.get_width(),  image.get_pixbuf().get_width()  - dest_x)
-            dest_x + dest_width
+            if x < 0:
+                dest_width += x
+            if y < 0:
+                dest_height += y
             offset_x = x
             offset_y = y
 
