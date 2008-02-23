@@ -42,6 +42,27 @@ class ImagesExample:
                 gtk.gdk.INTERP_NEAREST
             ))
         image.show()
+
+
+        image2 = gtk.Image()
+        image2.set_from_file("../../patches/wall42_3.gif")
+        pb = image2.get_pixbuf()
+        image2.set_from_pixbuf(pb.scale_simple(
+            pb.get_width()  * scale,
+            pb.get_height() * scale,
+            gtk.gdk.INTERP_NEAREST
+        ))
+        pb = image2.get_pixbuf()
+
+        pb.composite(
+            image.get_pixbuf(),
+            0, 0,
+            pb.get_width(), pb.get_height(),
+            0, 0, # offsets
+            1, 1, # scale
+            gtk.gdk.INTERP_NEAREST, 255
+        )
+
         # a button to contain the image widget
         button = gtk.Button()
         button.add(image)
