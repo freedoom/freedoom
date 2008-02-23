@@ -38,7 +38,6 @@ class ImagesExample:
                 gtk.gdk.INTERP_NEAREST
             ))
         baseimage.show()
-        baseimage.get_pixbuf().add_alpha(True,chr(0),chr(255),chr(255))
 
         basepatch = gtk.Image()
         basepatch.set_from_file("../../patches/ps20a0.gif")
@@ -49,7 +48,7 @@ class ImagesExample:
             gtk.gdk.INTERP_NEAREST
         ))
         pb = basepatch.get_pixbuf()
-        pb.add_alpha(True,chr(0),chr(255),chr(255))
+        pb = pb.add_alpha(True,chr(0),chr(255),chr(255))
 
         for x,y in [(0,0), (24,24), (104,16), (24,104), (-16,0), (0,-16)]:
             x *= scale
