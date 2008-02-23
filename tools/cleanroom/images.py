@@ -53,12 +53,17 @@ class ImagesExample:
             image = gtk.Image()
             image.set_from_pixbuf(baseimage.get_pixbuf().copy())
             image.show()
+            dest_x = x * scale
+            dest_y = y * scale
+            dest_width = pb.get_width()
+            dest_height = pb.get_height()
+            offset_x = x * scale
+            offset_y = y * scale
+
             pb.composite(
                 image.get_pixbuf(),
-                x * scale, y * scale,
-                pb.get_width(), pb.get_height(),
-                x * scale, y * scale, # offsets
-                1, 1, # scale
+                dest_x, dest_y, dest_width, dest_height,
+                offset_x, offset_y, 1, 1, # scale
                 gtk.gdk.INTERP_NEAREST, 255
             )
 
