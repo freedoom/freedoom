@@ -49,7 +49,7 @@ class ImagesExample:
         ))
         pb = basepatch.get_pixbuf()
 
-        for (x,y) in [(0,0), (51,0), (104,0)]:
+        for (x,y) in [(0,0), (51,0), (104,16)]:
             image = gtk.Image()
             image.set_from_pixbuf(baseimage.get_pixbuf().copy())
             image.show()
