@@ -28,12 +28,14 @@ for line in texture1.split("\n"):
 oldtex = file("../../textures/combined.txt", "r").read()
 patches = []
 for line in oldtex.split("\n"):
-	if len(line) == 0 or line[0] == ";" or line[0] == "#":
-		print line
-	elif line[0] == "*":
+	# start of a patch line
+	if len(line) > 0 and line[0] == "*":
 		patches.append(line)
 	else:
 		if 1 == len(patches):
 			print patches[0]
 		patches = []
+		# start of a texture definition
+		if re.match(r'^[A-Z]', line):
+			texline = line
 		print line
