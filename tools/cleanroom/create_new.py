@@ -25,6 +25,15 @@ for line in texture1.split("\n"):
 		current = Texture(line[0],line[1],line[2])
 		textures[line[0]] = current
 
-a = textures.values()
-a.sort(lambda a,b: cmp(a.name,b.name))
-sys.stdout.write(''.join(map(str,a)))
+oldtex = file("../../textures/combined.txt", "r").read()
+patches = []
+for line in oldtex.split("\n"):
+	if len(line) == 0 or line[0] == ";" or line[0] == "#":
+		print line
+	elif line[0] == "*":
+		patches.append(line)
+	else:
+		if 1 == len(patches):
+			print patches[0]
+		patches = []
+		print line
