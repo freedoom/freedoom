@@ -27,14 +27,27 @@ for line in texture1.split("\n"):
 
 oldtex = file("../../textures/combined.txt", "r").read()
 patches = []
+texline = ''
 for line in oldtex.split("\n"):
 	# start of a patch line
 	if len(line) > 0 and line[0] == "*":
 		patches.append(line)
 	else:
+		# end of a texture definition and we had just one patch
 		if 1 == len(patches):
 			print patches[0]
-		patches = []
+			patches = []
+			texline = ''
+		# end of a texture definition,look up the patches
+		elif texline != '':
+			bits = texline.split()
+			if bits[0] in textures:
+				texture = textures[bits[0]]
+				print '\n'.join(map(str,texture.patches))
+				texline = ''
+			else:
+				sys.stderr.write("uh oh, no idea of patches for %s"%bits[0])
+
 		# start of a texture definition
 		if re.match(r'^[A-Z]', line):
 			texline = line
