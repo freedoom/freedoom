@@ -1,3 +1,20 @@
+2008.02.25      v0.6-rc2
+
+Tagging -rc2. We've made a big change to the TEXTURE lump definitions.
+We cut out all the multi-patch definitions as they were copied from
+the doom data.  We made the decision not to cut out the single patch
+definitions, as those are effectively a naming scheme (a 1-1
+translation from patches to textures) and not copyrightable.
+
+The texture data has been re-implemented using a cleanroom tool
+(available in tools/cleanroom).
+
+2008.01.03      v0.6-rc1
+
+Tagging 0.6-rc1 as the first release candidate for the 0.6 release.
+This will mostly be a maintenance release, but there are significant
+level changes.
+
 2006.09.02	v0.5
 
 Freedoom 0.5 released (less than a year since 0.4!) Quite a few new

@@ -1,4 +1,11 @@
-2008-01-21
+24/02/2008
+
+Replace texture definitions in combined.txt with new ones, created in a
+cleanroom environment (see tools/cleanroom).
+
+Freedoom 0.6-rc2 tagged in subversion.
+
+21/01/2008
 
 Updated map24 from catoptromancy
 
@@ -6,6 +13,10 @@ Updated map24 from catoptromancy
 
 Remove some of WildWeasel's sound effects, see
 <http://www.doomworld.com/vb/freedoom/42189-fair-use-confession/>
+
+03/01/2008
+
+Freedoom 0.6-rc1 tagged in subversion.
 
 21/08/2006
 
