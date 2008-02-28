@@ -1,3 +1,9 @@
+28/02/2008
+
+Add a DEMO1. I recorded this using prboom. I tried to set the complevel
+to the first BOOM level, but whenever I did it desynced on playback. This
+demo may desync in other ports, we'll see.
+
 27/02/2008
 
 add sounds/nthompson - replacement rocket launch and explosion.
