@@ -1,0 +1,3 @@
+oftc-#doom-tech.log:12:01 < RjY> Jon: if you're interested, i changed the secret exit on map02 to something a little more useful: http://rjy.org.uk/stuff/freedoom-map02.wad.gz
+oftc-#doom-tech.log:12:03 < Jon> RjY: brill, thanks
+
