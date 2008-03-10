@@ -1,3 +1,8 @@
+2008.03.05	v0.6.1
+
+0.6.1 released. Include all patches in all IWADS, to prevent crashes with
+WADs that use custom TEXTURE1 lumps. Several map fixes too (see ChangeLog)
+
 2008.02.28      v0.6
 
 0.6 released.

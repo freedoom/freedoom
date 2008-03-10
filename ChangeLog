@@ -1,3 +1,11 @@
+05/03/2008
+
+Include all patches in all IWADS, to prevent crashes with WADs that use custom
+TEXTURE1 lumps. Also, take this opportunity to fix some long-standing bug
+issues in MAP10 and MAP18. Improve MAP02 (remove secret exit switch); add an
+exit switch to the unfinished MAP12; add a new MAP14. Tweaked MAP05 to prevent
+an area you can get stuck in, courtesy of Catoptromancy.
+
 27/02/2008
 
 add sounds/nthompson - replacement rocket launch and explosion.
