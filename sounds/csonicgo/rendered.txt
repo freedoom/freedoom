@@ -1,0 +1,5 @@
+original => freedoomfinal.wav
+
+downsampled to 11025Hz by Jon => freedoomfinal_rendered.wav
+
+amplified and clipped at the front end =>freedoomfinal_rendered_ampl.wav 
