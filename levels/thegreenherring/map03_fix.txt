@@ -1,0 +1,51 @@
+map03_fix.wad
+
+This is a version of Freedoom MAP03 tweaked to fix some errors, including:
+
+1) One unclosed sector
+   Sector 68 consisted solely of two one-sided linedefs outside the valid
+   playing space to the sides of the doors to the blue key.  It has been
+   removed.
+2) Moving doortracks
+   These were on the following linedefs:
+    - 387, 728 (sides of the first door)
+    - 466, 472 (door into secret sector 85)
+    - 529, 530, 531, 532 (doors to the blue key, which were all /Upper/ Unpegged
+                          for some reason)
+    - 1054, 1057, 1060, 1063 (doors activated by linedef 1383
+    - 2021, 2026, 2054, 2055, 2056, 2057 (sides of the door immediately after
+                                          the blue key-locked door; the
+                                          DOORTRAKs were /Upper/ Unpegged)
+    - 2788, 2789 (sides of the door to a secret switch opened with the gunfire
+                  switch; textures changed from DOORSTOP to DOORTRAK)
+    - 2797, 2800 (sides of the door to secret sector 485; textures changed from
+                  DOORSTOP to DOORTRAK)
+3) Inaccessible secret
+   The gunfire switch was only accessible if you had a super shotgun, but the
+   only super shotgun in the whole map is in the secret accessible only with the
+   switch revealed by the gunfire switch.  The gunfire switch has been lowered,
+   so that you can now shoot it with any hitscan weapon.
+4) Lack of multiplayer
+   There were no deathmatch player starts on the map.  I added four of them,
+   shotguns and some shells provided for each position, and some doors in this
+   spots that could not be opened from their other ends now can.
+5) Unmarked locked doors
+   There are now better indicators of which keys are needed to open each door.
+6) Other odd stuff
+    - The door into secret sector 85 was unmarked.  It has now been marked by
+      shifting the alignment on its front side two map units down.
+    - The big crate near the gunfire switch (sector 234) had CRATE3 on the
+      sides, but the sector was raised to the point where the top of the brown
+      crate was clearly visible underneath it, sticking out of the floor.  It
+      has been altered to CRATELIT, with the texture alignment, flat, and floor
+      height changed accordingly.
+    - The yellow key-locked door was textured with BIGDOOR2 despite being only
+      64 units wide.  It has now been textured with SPCDOOR2 instead.
+    - In some places, you climb onto the monitors, which could mess up movement
+      around the yellow key.  This is no longer possible.
+
+Hope I didn't miss anything!
+
+- Eric "The Green Herring" Baker -
+- eabaker@san.rr.com -
+- March 14, 2008 -
