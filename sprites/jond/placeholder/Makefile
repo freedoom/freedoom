@@ -8,10 +8,8 @@ SKELSRC   = $(wildcard $(SKELDIR)/sarg*)
 VILEDEST  = $(notdir $(SKELSRC))
 
 BSPISRC   = $(wildcard $(SPRITEDIR)/bspi*)
-BOSSSRC   = $(wildcard $(SPRITEDIR)/boss*)
-HEADSRC   = $(wildcard $(SPRITEDIR)/head*) 
 
-ALLSRC    = $(HEADSRC) $(BOSSSRC) $(BSPISRC)
+ALLSRC    = $(BSPISRC)
 TARGETS   = $(notdir $(ALLSRC))
 
 DUMMY     =../../dummy.gif
