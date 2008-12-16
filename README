@@ -1,13 +1,86 @@
-Freedoom is a project to create a complete Doom II-compatible 
-IWAD file which is Free Software.
+= Freedoom
 
-The IWAD file is the file used by Doom which contains all the 
-game data (graphics, sound effects, music, etc.). While the 
-Doom source code is Free, you currently still need one of the 
-proprietary IWAD files from id in order to play Doom. Freedoom 
-aims to create a Free alternative. Combined with the GPL-licensed 
-Doom source code this will result in a complete Free Doom-based 
-game.
+Freedoom is a project to create a complete Doom II-compatible IWAD file
+which is Free Software.
 
-For more information, see http://freedoom.sf.net/
+The IWAD file is the file used by Doom which contains all the game data
+(graphics, sound effects, music, etc.). While the Doom source code is
+Free, you currently still need one of the proprietary IWAD files from id
+in order to play Doom. Freedoom aims to create a Free alternative.
+Combined with the GPL-licensed Doom source code this will result in a
+complete Free Doom-based game.
 
+For more information, see http://freedoom.sourceforge.net/
+
+== What "Free Software" means
+
+When we speak of Free Software, we refer to the software movement in
+which your freedoms to use, copy, modify, and study it are ensured.  For
+example, you may freely use Freedoom for any purpose you see fit, you
+may redistribute it to anyone without needing to ask for permission, you
+may modify it (provided you keep the license intact, see `COPYING`), and
+you may study it -- for example, to see how a Doom IWAD is built.  To
+facilitate this, you can get the full source code (here, in the form of
+a DeuTex tree) for Freedoom.
+
+You may read more about Free Software at the http://www.gnu.org/[GNU]
+and http://www.fsf.org/[Free Software Foundation] websites.
+
+== Contributing to Freedoom
+
+Contributions to Freedoom are always welcome, however there are a few
+guidelines that should be followed:
+
+=== Levels
+
+TODO: Write this section
+
+=== Resources (music, sprites, textures, etc)
+
+TODO: Write this section too
+
+=== Build process
+
+The Freedoom build process is fairly complete and should not change
+without good reason.  Write a decent explanation why your method is
+better; just enough to get your point across is good enough.
+
+=== Documentation
+
+Freedoom always needs help with the documentation, so please send your
+patches, but keep in mind:
+
+  * We use http://www.methods.co.nz/asciidoc/[AsciiDoc] for writing the
+    documentation.  AsciiDoc is a simple plaintext-based format which is
+    simple to read and write in its source form, and makes pretty HTML
+    documents out of them (it also supports other formats like
+    DocBook/PDF/manual pages...).
+  * Headers are formated in a wiki-style format, this makes it easier
+    for Vim (perhaps other editors, too) to automatically re-format
+    text.
+  * Text is kept at 72 characters wide.  In Vim, you can set the editor
+    to automatically insert line breaks as you're typing by performing
+    `set textwidth=72`.  Special exceptions to the width rule might be
+    allowed when necessary (for example, inserting long URLs).
+
+=== Submitting your work
+
+TODO: Figure out the best method of doing this.  Also expand this
+section.
+
+If you use git, make sure your commit messages start with a single line,
+under 72 characters, which provides an adequate summary of your changes.
+You should prefix this line with the component you are committing (for
+example, ``map17: fixed unbeatable map'').  This should be followed by a
+blank line and a paragraph or more to explain your change in detail (for
+example, explaining what part of the map was broken).  See commit
+27762aa5f34f590bfc29d1f667f9121907cb8a98 for an example.  If you use
+GPG, try to sign your commits with `git commit -s` if possible; this
+ensures that you are who you say you are.
+
+You should commit often; each important change should get its own
+commit, but minor changes need not.  Take advantage of git's ability to
+rewrite history, don't use `git revert` on your private copy of the
+repository, just remove (`git reset`) or amend (`git commit --amend`)
+the faulty commit as necessary.  Leave all the interesting and important
+history bits, leave out stupid mistakes like spell check errors.
