@@ -40,6 +40,7 @@ OBJS = \
 	$(WADS)/freedoom_textures.wad \
 	$(WADS)/doom1.wad	          \
 	$(WADS)/doom2.wad             \
+	$(WADS)/doom.wad	      \
 	$(WADS)/freedm.wad
 
 # disable this for now
