@@ -1060,6 +1060,17 @@ WFALL4			64	128
 
 #endif
 
+
+#ifdef ULTDOOM
+
+; These textures are only in Ultimate Doom
+
+SKY4        		256	128
+*	SKY4       	0	0
+
+#endif
+
+
 ; These textures are only in FreeDM
 
 #ifdef FREEDM
