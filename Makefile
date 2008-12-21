@@ -62,7 +62,7 @@ force:
 textures/doom2/texture1.txt: textures/combined.txt
 	$(CPP) -DDOOM1 -DDOOM2 < $< > $@
 textures/doom/texture1.txt: textures/combined.txt
-	$(CPP) -DDOOM1 < $< > $@
+	$(CPP) -DDOOM1 -DULTDOOM < $< > $@
 textures/freedm/texture1.txt: textures/combined.txt
 	$(CPP) -DFREEDM < $< > $@
 textures/shareware/texture1.txt: textures/combined.txt
@@ -86,7 +86,7 @@ wadinfo_sw.txt: buildcfg.txt force textures/shareware/pnames.txt
 wadinfo_iwad.txt: buildcfg.txt force textures/doom2/pnames.txt
 	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.pl -dummy > $@
 wadinfo_ult.txt: buildcfg.txt force textures/doom/pnames.txt
-	$(CPP) -P -DDOOM1 < $< | ./wadinfo-builder.pl -dummy > $@
+	$(CPP) -P -DDOOM1 -DULTDOOM < $< | ./wadinfo-builder.pl -dummy > $@
 wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 	$(CPP) -P -DFREEDM < $< | ./wadinfo-builder.pl -dummy > $@
 
