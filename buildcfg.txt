@@ -2700,6 +2700,10 @@ YSKUB0	7	18
 #include "textures/shareware/pnames.txt"
 #endif
 
+#ifdef ULTDOOM
+#include "textures/doom/pnames.txt"
+#endif
+
 #ifdef DOOM2
 
 #ifdef FREEDM
