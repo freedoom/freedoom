@@ -176,7 +176,10 @@ clean:
 	rm -f	deutex.log $(OBJS) \
 		./wadinfo.txt ./wadinfo_sw.txt \
 		./wadinfo_freedm.txt ./wadinfo_iwad.txt \
+		./wadinfo_ult.txt \
 		 ./lumps/freedoom.lmp \
+		./textures/doom/pnames.txt \
+		./textures/doom/texture1.txt \
 		./textures/doom2/pnames.txt \
 		./textures/doom2/texture1.txt \
 		./textures/freedm/pnames.txt \

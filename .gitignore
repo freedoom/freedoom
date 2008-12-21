@@ -6,6 +6,8 @@ lumps/cph/misc-lumps/colormap.lmp
 lumps/cph/misc-lumps/playpal.lmp
 lumps/freedoom.lmp
 sprites/jond/placeholder/*.gif
+textures/doom/pnames.txt
+textures/doom/texture1.txt
 textures/doom2/pnames.txt
 textures/doom2/texture1.txt
 textures/freedm/pnames.txt
