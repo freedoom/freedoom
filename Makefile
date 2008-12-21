@@ -119,6 +119,14 @@ $(WADS)/doom2.wad: wadinfo_iwad.txt subdirs force
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_iwad.txt $@
 
 #---------------------------------------------------------
+# udoom iwad
+
+$(WADS)/doom.wad: wadinfo_ult.txt subdirs force
+	ln -sf doom/texture1.txt textures/texture1.txt
+	rm -f $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_ult.txt $@
+
+#---------------------------------------------------------
 # build levels wad
 
 $(WADS)/freedoom_levels.wad : wadinfo.txt force 
