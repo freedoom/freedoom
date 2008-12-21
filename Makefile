@@ -85,6 +85,8 @@ wadinfo_sw.txt: buildcfg.txt force textures/shareware/pnames.txt
 	$(CPP) -P -DSHAREWARE < $< | ./wadinfo-builder.pl -dummy > $@
 wadinfo_iwad.txt: buildcfg.txt force textures/doom2/pnames.txt
 	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.pl -dummy > $@
+wadinfo_ult.txt: buildcfg.txt force textures/doom/pnames.txt
+	$(CPP) -P -DDOOM1 < $< | ./wadinfo-builder.pl -dummy > $@
 wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 	$(CPP) -P -DFREEDM < $< | ./wadinfo-builder.pl -dummy > $@
 
