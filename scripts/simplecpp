@@ -1,0 +1,174 @@
+#!/usr/bin/env perl
+#
+# Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
+# Contributors to the Freedoom project.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#  * Neither the name of the freedoom project nor the names of its
+#    contributors may be used to endorse or promote products derived from
+#    this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+# OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+# simple cpp-style preprocessor
+#
+# Understands:
+#
+# #define NAME
+#
+# Set an option
+# You can use -D on the command line too
+#
+# #undef NAME
+#
+# Unset an option if it is set
+#
+# #if .. #endif / #ifdef .. #endif
+#
+# Specify a list of options set, eg #ifdef DOOM2 || ULTDOOM || SHAREWARE
+# The block is only displayed if one of the options is set
+#
+# #ifn .. #endif / #ifndef .. #endif
+#
+# Similarly specify a list of options
+# The block is displayed if none of the options are set
+#
+# #include "filename"
+#
+# include the contents of a file
+
+use strict;
+
+my @readstack;
+my %defines;
+
+sub parse_cmdline {
+	foreach (@ARGV) {
+		if (/^-D/) {
+			my ($define) = /^-D(.*)$/;
+			$defines{$define} = 1;
+		}
+	}
+}
+
+# add contents of stdin to read stack
+
+sub read_stdin {
+	my @lines = <STDIN>;
+	chomp @lines;
+
+	@readstack = (@readstack, reverse(@lines));
+}
+
+# add contents of a file to stack
+
+sub read_file {
+	my ($filename) = @_;
+
+	open(FILE, $filename) or die "cant open $filename: $!";
+	my @lines = <FILE>;
+	close(FILE);
+
+	chomp @lines;
+	@readstack = (@readstack, reverse(@lines));
+}
+
+# recursive block reading function
+# if 'ignore' argument is 1, contents are ignored
+
+sub readblock {
+	my ($ignore) = @_;
+
+	while (scalar @readstack > 0) {
+	$_ = pop @readstack;
+
+	next if (/^\s*$/);
+
+	if (/^\#include\s+\".*\"\s*$/ ) {
+		if (!$ignore) {
+			my ($filename) = /^\#include\s+\"(.*)\"\s*/;
+			read_file $filename;
+		}
+	} elsif (/^\#define\s/ ) {
+		if (!$ignore) {
+			my ($name) = /^\#define\s*(\w+)/;
+			$defines{$name} = 1;
+		}
+	} elsif (/^\#undef\s/ ) {
+		if (!$ignore) {
+			my ($name) = /^\#undef\s*(\w+)/;
+			$defines{$name} = undef;
+		}
+	} elsif (/^\#(if|ifdef|ifn|ifndef)\s/) {
+		my ($type, $defines) = /^\#(\w+)\s+(.*)/;
+		$defines =~ s/\s*$//;
+
+		my @definelist = split(/\s*\|\|\s*/, $defines);
+
+		my $ev;
+
+		if ($type =~ /^(if|ifdef)$/) {
+			$ev = 0;
+
+			foreach (@definelist) {
+				$ev = 1 if $defines{$_};
+			}
+		} elsif ($type =~ /^(ifn|ifndef)$/) {
+			$ev = 1;
+
+			foreach (@definelist) {
+				$ev = 0 if $defines{$_};
+			}
+		} else { die "what type?"; }
+
+		my $result = readblock($ignore || !$ev);
+
+		die if $result == -1;
+
+		if ($result == 1) {
+			# block ended on an else
+			# call again for the second block
+
+			my $result = readblock($ignore || $ev);
+
+			die if $result != 0;
+		}
+
+	} elsif (/^\#endif/) {
+		return 0;
+	} elsif (/^\#else/) {
+		return 1;
+	} elsif (/^\#(.*)/) {
+		die "invalid # command: '$1'";
+	} else {
+		print "$_\n" if !$ignore;
+	}
+
+	}
+
+	return -1;
+}
+
+parse_cmdline;
+read_stdin;
+die if (readblock(0) != -1);
+

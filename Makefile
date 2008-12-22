@@ -27,7 +27,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 WADS=wads
-CPP=/usr/bin/cpp
+CPP=scripts/simplecpp
 DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-fullsnd -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
