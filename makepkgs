@@ -1,4 +1,5 @@
-#!/usr/bin/env perl
+#!/usr/bin/env python
+#
 # Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
 # Contributors to the Freedoom project.  All rights reserved.
 #
@@ -27,59 +28,82 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-use strict;
+import os
+import sys
 
-sub cmd
-{
-	my ($cmd) = @_;
+# Documentation files included with distributions.
 
-	print "$cmd\n";
-	`$cmd`;
+DIST_DOCS = [
+	"NEWS",
+	"ChangeLog",
+	"COPYING",
+	"CREDITS",
+	"README"
+]
+
+# Most WADs are given a ZIP equal to their name, but some have different
+# names:
+
+DIR_NAMES = {
+	'doom2'    : 'freedoom-iwad',
+	'doom1'    : 'freedoom-demo',
+	'doom'     : 'freedoom-episodes',
+	'freedoom' : 'freedoom-resource-wad',
 }
 
-my $version = $ENV{'VERSION'};
+# Run a command, displaying it before executing it.
 
-foreach (@ARGV) {
-	my $file = $_;
-	die if $file !~ /(.*)\/([^\/]*)\.wad$/;
+def run_command(command):
+	print "> " + command
+	os.system(command)
 
-	my ($path, $pkgname) = ($1, $2);
+# Find the version to build:
 
-	my %dirnames = (
-		'doom2' => 'freedoom-iwad',
-		'doom1' => 'freedoom-demo',
-		'freedoom' => 'freedoom-resource-wad',
-	);
+version = os.getenv("VERSION")
 
-	my $basedir;
+if version is None:
+	raise Exception("Version not specified for release!")
 
-	if ($dirnames{$pkgname}) {
-		$basedir = $dirnames{$pkgname};
-	} else {
-		$basedir = $pkgname;
-	}
+# Build all of the packages
 
-	$basedir .= "-$version";
-	$basedir =~ tr/_/-/;
-	
-	my $fulldir = "$path/$basedir";
+for filename in sys.argv[1:]:
 
-#	mkdir($dir);
-#	`cp NEWS ChangeLog COPYING CREDITS $dir`;
-#	`cp $file $dir`;
+	path = os.path.dirname(filename)
+	basename = os.path.basename(filename)
 
-	cmd("mkdir $fulldir");
-	cmd("cp NEWS ChangeLog COPYING CREDITS $fulldir");
-	cmd("cp README $fulldir/README");
-	cmd("cp $file $fulldir\n");
+	# Cut off the extension, and build the directory name
 
-	my $cwd = `pwd`;
-	chomp $cwd;
+	pkgname = basename[0:-4]
 
-	chdir($path);
-	cmd("rm -f $basedir.zip");
-	cmd("zip -r $basedir.zip $basedir");
-	cmd("rm -rf $basedir");
-	chdir($cwd);
-}
+	if pkgname in DIR_NAMES:
+		base_dir = DIR_NAMES[pkgname]
+	else:
+		base_dir = pkgname
+
+	# Append the version:
+
+	base_dir += "-" + version
+
+	# Replace underscores with hyphens:
+
+	base_dir = base_dir.replace("_", "-")
+
+	full_path = path + "/" + base_dir
+
+	# Create directory, and add files.
+
+	run_command("mkdir %s" % full_path)
+
+	for doc in DIST_DOCS + [ filename ]:
+		run_command("cp %s %s" % (doc, full_path))
+
+	# Change to the parent directory, and build the zip
+
+	orig_dir = os.getcwd()
+
+	os.chdir(path)
+	run_command("rm -f %s.zip" % base_dir)
+	run_command("zip -r %s.zip %s" % (base_dir, base_dir))
+	run_command("rm -rf %s" % base_dir)
+	os.chdir(orig_dir)
 
