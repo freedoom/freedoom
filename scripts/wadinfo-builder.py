@@ -163,12 +163,13 @@ def parse_stream(stream):
 			if section == "texture1" or section == "texture2":
 				section = "textures"
 
-		# Possibly comment out assignments.
+		else:
+			# Possibly comment out assignments.
 
-		match = assignment_re.match(line)
+			match = assignment_re.match(line)
 
-		if match:
-			line = parse_assignment(section, line, match)
+			if match:
+				line = parse_assignment(section, line, match)
 
 		print line
 
