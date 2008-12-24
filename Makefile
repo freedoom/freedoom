@@ -80,15 +80,15 @@ textures/freedm/pnames.txt: textures/freedm/texture1.txt
 # update wadinfo.txt
 
 wadinfo.txt: buildcfg.txt force textures/doom2/pnames.txt
-	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.pl > $@
+	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.py > $@
 wadinfo_sw.txt: buildcfg.txt force textures/shareware/pnames.txt
-	$(CPP) -P -DSHAREWARE < $< | ./wadinfo-builder.pl -dummy > $@
+	$(CPP) -P -DSHAREWARE < $< | ./wadinfo-builder.py -dummy > $@
 wadinfo_iwad.txt: buildcfg.txt force textures/doom2/pnames.txt
-	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.pl -dummy > $@
+	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.py -dummy > $@
 wadinfo_ult.txt: buildcfg.txt force textures/doom/pnames.txt
-	$(CPP) -P -DDOOM1 -DULTDOOM < $< | ./wadinfo-builder.pl -dummy > $@
+	$(CPP) -P -DDOOM1 -DULTDOOM < $< | ./wadinfo-builder.py -dummy > $@
 wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
-	$(CPP) -P -DFREEDM < $< | ./wadinfo-builder.pl -dummy > $@
+	$(CPP) -P -DFREEDM < $< | ./wadinfo-builder.py -dummy > $@
 
 %.wad.gz: %.wad
 	gzip < $< > $@
