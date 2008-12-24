@@ -1,9 +1,12 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env python
 # Script to generate the PLAYPAL lump used by the Doom engine, specifically the
 # which contains 14 alternative palettes which are used for various
 # environmental effects. The base palette from which these are derived is either
 # generated, or taken from a file.
 #
+# This is a Python version of the original Perl script.
+#
+# Copyright (C) 2008  Simon Howard
 # Copyright (C) 2001  Colin Phipps <cphipps@doomworld.com>
 # Parts copyright (C) 1999 by id Software (http://www.idsoftware.com/)
 #
@@ -21,7 +24,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-use strict;
+import sys
 
 # IHS (Intensity Hue Saturation) to RGB conversion, utility function
 #
@@ -36,70 +39,66 @@ use strict;
 #  Geosciences, Volume 13, published by Pergamon (Elsevier Science Ltd),
 #  pp. 120-125.
 
-use constant R2 => 1 / sqrt(2);
-use constant R3 => 1 / sqrt(3);
-use constant R6 => 1 / sqrt(6);
-use constant PI => 3.141592;
+R2 = 1.0 / 2
+R3 = 1.0 / 3
+R6 = 1.0 / 6
+PI = 3.141592
 
-sub ihs_to_rgb($$$)
-{
-  my ($i,$h,$s) = @_;
-# Hue and Saturation values are unscaled first:
-  $i = $i * (422/255);
-  $h = $h * (2 * PI / 255);
-  $s = $s * ("208.2066" / 255);
-  my ($b,$x) = ($s * cos $h, $s * sin $h);
-  return
-    [ 
-    R3 * $i - R6 * $b - R2 * $x,
-    R3 * $i - R6 * $b + R2 * $x,
-    R3 * $i + 2 * R6 * $b,
-    ];
-}
+def ihs_to_rgb(i, h, s):
+	i = (i * 422) / 255
+	h = (h * 2 * PI) / 255
+	s = (s * 208.2066) / 255
+
+	b, x = s * math.cos(h), s * math.sin(h)
+
+	return (R3 * i - R6 * b - R2 * x,
+		R3 * i - R6 * b + R2 * x,
+		R3 * i + R6 * 2 * b)
 
 # New palette builder
 
-sub make_pal_range($$$$)
-{
-  my ($i,$h,$s,$n) = @_;
-  my @r = map { ihs_to_rgb($i*(1 + $n - $_)/$n,$h,$s*(1 + $n - $_)/$n) } (1..$n);
-  die unless @r == $n;
-  return @r;
-}
+def make_pal_range(i, h, s, n):
+
+	map_function = lambda x: ihs_to_rgb(i * (n - x) / n,
+	                                    h,
+	                                    s * (n - x) / n),
+
+	return map(map_function, range(n))
 
 # Very crude traversal of the IHS colour ball
 
-sub make_palette_new ()
-{
-  my @p = (
-  make_pal_range(255,0,0,32),
-  ( map { make_pal_range(127,171+$_*256/7,255,16) } (1..7) ),
-  ( map { make_pal_range(256,$_*256/7,127,16) } (1..7) )
-  );
-  return \@p;
-}
+def make_palette_new():
+	result = []
+	
+	result += make_pal_range(255, 0, 0, 32)
+
+	for i in range(7):
+		result += make_pal_range(127, 171 + (i + 1) * 256 / 7, 255, 16)
+	
+	for i in range(7):
+		result += make_pal_range(256, (i + 1) * 256 / 7, 127, 16)
 
 # Return palette read from named file
-sub read_palette ($) {
-  {
-    my $palf = shift;
-    open(PALF,"<$palf") or die "failed to open PLAYPAL: $!";
-  }
-  my @colours = ();
-  foreach my $i (0..255) {
-    my $e;
-    read PALF,$e,3;
-    push @colours,[unpack("CCC",$e)];
-  }
-  close PALF;
-  return \@colours;
-}
 
-sub make_palette ()
-{
-  my $palf = shift @ARGV;
-  return $palf ? read_palette($palf) : make_palette_new;
-}
+def read_palette(filename):
+	f = file(filename)
+
+	colors = []
+
+	for i in range(256):
+		color = f.read(3)
+
+		colors.append((ord(color[0]), ord(color[1]), ord(color[2])))
+
+	f.close()
+
+	return colors
+
+def make_palette(filename):
+	if filename is None:
+		return make_palette_new
+	else:
+		return read_palette(filename)
 
 # Old palette builder
 #sub make_pal_range($$$$$$)
@@ -133,33 +132,49 @@ sub make_palette ()
 
 # Now the PLAYPAL stuff - take the main palette and construct biased versions
 # for the palette translation stuff
-sub bias_towards($$$) {
-  my ($rgb,$target,$p) = @_;
-  my (@r,$i);
-  for ($i=0; $i<3; $i++) { $r[$i] = $rgb->[$i]*(1-$p) + $target->[$i]*$p }
-  return \@r;
-}
 
-sub modify_palette_per_entry($$)
-{
-  my $palref = shift;
-  my $efunc = shift;
-  my @newpal = map { $efunc->($_) } @$palref; 
-  return \@newpal;
-}
+# Bias an entire palette
+
+def bias_palette_towards(palette, target, p):
+
+	def bias_rgb(rgb):
+		r = []
+
+		for i in range(3):
+			r.append(rgb[i] * (1 - p) + target[i] * p)
+
+		return r
+
+	return map(bias_rgb, palette)
 
 # Encode palette in the 3-byte RGB triples format expected by the engine
-sub clamp_pixval ($)
-{
-  my $v = int shift; 
-  return ($v < 0) ? 0 : ($v > 255) ? 255 : $v;
-}
 
-sub encode_palette
-{
-  my $p = shift;
-  return join("",map { pack("CCC", map { clamp_pixval $_ } @$_) } @$p);
-}
+def clamp_pixval(v):
+	if v < 0:
+		return 0
+	elif v > 255:
+		return 255
+	else:
+		return v
+
+def encode_palette(pal):
+
+	def color_byte(element):
+		return chr(int(clamp_pixval(element)))
+
+	def encode_color(color):
+		return "".join(map(color_byte, color))
+
+	encoded = map(encode_color, pal)
+
+	return "".join(encoded)
+
+# Main program - make a base palette, then do the biased versions
+
+if len(sys.argv) < 2:
+	print "Usage: %s <base filename> > playpal.lmp" % sys.argv[0]
+
+base_pal = read_palette(sys.argv[1])
 
 # From st_stuff.c, Copyright 1999 id Software, license GPL
 #define STARTREDPALS         1
@@ -168,37 +183,31 @@ sub encode_palette
 #define NUMBONUSPALS         4
 #define RADIATIONPAL         13
 
-my @needed_palettes = (
+palettes = []
+
 # Normal palette
-  sub { shift; },
+
+palettes.append(base_pal)
+
 # STARTREDPALS
-  (map {
-    my $p = $_*1/8;
-    sub {
-      modify_palette_per_entry(shift,
-          sub { bias_towards(shift, [255,0,0],$p) }
-                              )
-    }
-  } (1..8)),
+
+for i in range(8):
+	p = (i + 1) / 8.0
+
+	palettes.append(bias_palette_towards(base_pal, (255, 0, 0), p))
+
 # STARTBONUSPALS
-  (map {
-    my $p = $_*0.4/4;
-    sub {
-      modify_palette_per_entry(shift,
-          sub { bias_towards(shift, [128,128,128],$p) }
-                              )
-    }
-  } (1..4)),
+
+for i in range(4):
+	p = (i + 1) * 0.4 / 4
+
+	palettes.append(bias_palette_towards(base_pal, (128, 128, 128), p))
+
 # RADIATIONPAL
-  sub {
-    modify_palette_per_entry(shift,
-        sub { bias_towards(shift, [0,255,0],0.2) }
-                            )
-  }
-);
 
-# Main program - make a base palette, then do the biased versions
-my $pal = make_palette;
+palettes.append(bias_palette_towards(base_pal, (0, 255, 0), 0.2))
 
-print map { encode_palette(&$_($pal)) } @needed_palettes;
+result = "".join(map(encode_palette, palettes))
+
+sys.stdout.write(result)
 

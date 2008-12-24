@@ -1,7 +1,7 @@
 all             :       playpal.lmp colormap.lmp
 
-playpal.lmp	:	playpal-base.lmp playpal.pl
-	./playpal.pl playpal-base.lmp > playpal.lmp
+playpal.lmp	:	playpal-base.lmp playpal.py
+	./playpal.py playpal-base.lmp > playpal.lmp
 
 colormap.lmp	:	playpal.lmp colormap.py
 	./colormap.py playpal.lmp > colormap.lmp
