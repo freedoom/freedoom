@@ -69,13 +69,13 @@ textures/shareware/texture1.txt: textures/combined.txt
 	$(CPP) -DSHAREWARE < $< > $@
 
 textures/shareware/pnames.txt: textures/shareware/texture1.txt
-	./extract-pnames.pl < $< > $@
+	./extract-pnames.py < $< > $@
 textures/doom/pnames.txt: textures/doom/texture1.txt
-	./extract-pnames.pl -a > $@
+	./extract-pnames.py -a > $@
 textures/doom2/pnames.txt: textures/doom2/texture1.txt 
-	./extract-pnames.pl -a > $@
+	./extract-pnames.py -a > $@
 textures/freedm/pnames.txt: textures/freedm/texture1.txt
-	./extract-pnames.pl -a > $@
+	./extract-pnames.py -a > $@
 
 # update wadinfo.txt
 
