@@ -69,26 +69,26 @@ textures/shareware/texture1.txt: textures/combined.txt
 	$(CPP) -DSHAREWARE < $< > $@
 
 textures/shareware/pnames.txt: textures/shareware/texture1.txt
-	./extract-pnames.py < $< > $@
+	scripts/extract-pnames.py < $< > $@
 textures/doom/pnames.txt: textures/doom/texture1.txt
-	./extract-pnames.py -a > $@
+	scripts/extract-pnames.py -a > $@
 textures/doom2/pnames.txt: textures/doom2/texture1.txt 
-	./extract-pnames.py -a > $@
+	scripts/extract-pnames.py -a > $@
 textures/freedm/pnames.txt: textures/freedm/texture1.txt
-	./extract-pnames.py -a > $@
+	scripts/extract-pnames.py -a > $@
 
 # update wadinfo.txt
 
 wadinfo.txt: buildcfg.txt force textures/doom2/pnames.txt
-	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.py > $@
+	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py > $@
 wadinfo_sw.txt: buildcfg.txt force textures/shareware/pnames.txt
-	$(CPP) -P -DSHAREWARE < $< | ./wadinfo-builder.py -dummy > $@
+	$(CPP) -P -DSHAREWARE < $< | scripts/wadinfo-builder.py -dummy > $@
 wadinfo_iwad.txt: buildcfg.txt force textures/doom2/pnames.txt
-	$(CPP) -P -DDOOM2 < $< | ./wadinfo-builder.py -dummy > $@
+	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py -dummy > $@
 wadinfo_ult.txt: buildcfg.txt force textures/doom/pnames.txt
-	$(CPP) -P -DDOOM1 -DULTDOOM < $< | ./wadinfo-builder.py -dummy > $@
+	$(CPP) -P -DDOOM1 -DULTDOOM < $< | scripts/wadinfo-builder.py -dummy > $@
 wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
-	$(CPP) -P -DFREEDM < $< | ./wadinfo-builder.py -dummy > $@
+	$(CPP) -P -DFREEDM < $< | scripts/wadinfo-builder.py -dummy > $@
 
 %.wad.gz: %.wad
 	gzip < $< > $@
@@ -170,7 +170,7 @@ $(WADS)/doom1.wad : wadinfo_sw.txt force
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_sw.txt $@
 
 dist : $(OBJS)
-	./makepkgs $(OBJS)
+	scripts/makepkgs $(OBJS)
 
 clean:
 	rm -f	deutex.log $(OBJS) \
