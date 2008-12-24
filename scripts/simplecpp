@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!/usr/bin/env python
 #
 # Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
 # Contributors to the Freedoom project.  All rights reserved.
@@ -56,119 +56,161 @@
 #
 # include the contents of a file
 
-use strict;
+import sys
+import re
 
-my @readstack;
-my %defines;
+debug = False
+defines = {}
 
-sub parse_cmdline {
-	foreach (@ARGV) {
-		if (/^-D/) {
-			my ($define) = /^-D(.*)$/;
-			$defines{$define} = 1;
-		}
-	}
+command_re = re.compile("\#(\w+)(\s+(.*))?")
+include_re = re.compile("\s*\"(.*)\"\s*")
+
+def debug_msg(message):
+	if debug:
+		sys.stderr.write(message)
+
+# Parse command line options
+
+def parse_cmdline():
+	for arg in sys.argv[1:]:
+		if arg.startswith("-D"):
+			name = arg[2:]
+			defines[name] = True
+
+def parse_stream(stream):
+	result = read_block(stream, False)
+
+	if result is not None:
+		raise Exception("Mismatched #if in '%s'" % stream.name)
+
+def parse_file(filename):
+	f = file(filename)
+
+	try:
+		parse_stream(f)
+	finally:
+		f.close()
+
+# #include
+
+def cmd_include(arg):
+	# Extract the filename
+
+	match = include_re.match(arg)
+
+	if not match:
+		raise Exception("Invalid 'include' command")
+
+	filename = match.group(1)
+
+	# Open the file and process it
+
+	parse_file(filename)
+
+# #define
+
+def cmd_define(arg):
+	defines[arg] = True
+
+# #undef
+
+def cmd_undef(arg):
+	if arg in defines:
+		del defines[arg]
+
+# #ifdef/#ifndef
+
+def cmd_ifdef(arg, command, stream, ignore):
+
+	# Get the define name
+	name = arg.strip()
+
+	debug_msg("%s %s >\n" % (command, arg))
+
+	# Should we ignore the contents of this block?
+
+	sub_ignore = (name not in defines)
+
+	if "n" in command:
+		sub_ignore = not sub_ignore
+
+	# Parse the block
+
+	result = read_block(stream, ignore or sub_ignore)
+
+	debug_msg("%s %s < (%s)\n" % (command, arg, result))
+
+	# There may be a second "else" block to parse:
+
+	if result == "else":
+		debug_msg("%s %s else >\n" % (command, arg))
+		result = read_block(stream, ignore or (not sub_ignore))
+		debug_msg("%s %s else < (%s)\n" % (command, arg, result))
+
+	# Should end in an endif:
+
+	if result != "endif":
+		raise Exception("'if' block did not end in an 'endif'")
+
+commands = {
+	"include" : cmd_include,
+	"define"  : cmd_define,
+	"undef"   : cmd_undef,
+	"if"      : cmd_ifdef,
+	"ifdef"   : cmd_ifdef,
+	"ifn"     : cmd_ifdef,
+	"ifndef"  : cmd_ifdef,
 }
 
-# add contents of stdin to read stack
-
-sub read_stdin {
-	my @lines = <STDIN>;
-	chomp @lines;
-
-	@readstack = (@readstack, reverse(@lines));
-}
-
-# add contents of a file to stack
-
-sub read_file {
-	my ($filename) = @_;
-
-	open(FILE, $filename) or die "cant open $filename: $!";
-	my @lines = <FILE>;
-	close(FILE);
-
-	chomp @lines;
-	@readstack = (@readstack, reverse(@lines));
-}
-
-# recursive block reading function
+# Recursive block reading function
 # if 'ignore' argument is 1, contents are ignored
 
-sub readblock {
-	my ($ignore) = @_;
+def read_block(stream, ignore):
 
-	while (scalar @readstack > 0) {
-	$_ = pop @readstack;
+	for line in stream:
 
-	next if (/^\s*$/);
+		# Remove newline
 
-	if (/^\#include\s+\".*\"\s*$/ ) {
-		if (!$ignore) {
-			my ($filename) = /^\#include\s+\"(.*)\"\s*/;
-			read_file $filename;
-		}
-	} elsif (/^\#define\s/ ) {
-		if (!$ignore) {
-			my ($name) = /^\#define\s*(\w+)/;
-			$defines{$name} = 1;
-		}
-	} elsif (/^\#undef\s/ ) {
-		if (!$ignore) {
-			my ($name) = /^\#undef\s*(\w+)/;
-			$defines{$name} = undef;
-		}
-	} elsif (/^\#(if|ifdef|ifn|ifndef)\s/) {
-		my ($type, $defines) = /^\#(\w+)\s+(.*)/;
-		$defines =~ s/\s*$//;
+		line = line[0:-1]
 
-		my @definelist = split(/\s*\|\|\s*/, $defines);
+		# Ignore empty lines
 
-		my $ev;
+		if line == " " * len(line):
+			continue
 
-		if ($type =~ /^(if|ifdef)$/) {
-			$ev = 0;
+		# Check if this line has a command
 
-			foreach (@definelist) {
-				$ev = 1 if $defines{$_};
-			}
-		} elsif ($type =~ /^(ifn|ifndef)$/) {
-			$ev = 1;
+		match = command_re.match(line)
 
-			foreach (@definelist) {
-				$ev = 0 if $defines{$_};
-			}
-		} else { die "what type?"; }
+		if match:
+			command = match.group(1)
+			arg = match.group(3)
 
-		my $result = readblock($ignore || !$ev);
+			if command == "else" or command == "endif":
+				return command
+			elif command not in commands:
+				raise Exception("Unknown command: '%s'" % \
+						command)
 
-		die if $result == -1;
+			# Get the callback function.
 
-		if ($result == 1) {
-			# block ended on an else
-			# call again for the second block
+			func = commands[command]
 
-			my $result = readblock($ignore || $ev);
+			# Invoke the callback function. #ifdef commands
+			# are a special case and need extra arguments.
+			# Other commands are only executed if we are not
+			# ignoring this block.
 
-			die if $result != 0;
-		}
+			if func == cmd_ifdef:
+				cmd_ifdef(arg, command=command,
+					       stream=stream,
+					       ignore=ignore)
+			elif not ignore:
+				func(arg)
+		else:
+			if not ignore:
+				print line
 
-	} elsif (/^\#endif/) {
-		return 0;
-	} elsif (/^\#else/) {
-		return 1;
-	} elsif (/^\#(.*)/) {
-		die "invalid # command: '$1'";
-	} else {
-		print "$_\n" if !$ignore;
-	}
-
-	}
-
-	return -1;
-}
-
-parse_cmdline;
-read_stdin;
-die if (readblock(0) != -1);
+parse_cmdline()
+parse_stream(sys.stdin)
 
