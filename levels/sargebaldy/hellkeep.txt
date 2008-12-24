@@ -10,7 +10,7 @@ Author                  : Owen "Sarge Baldy" Lloyd
 Email Address           : lloydo@onid.orst.edu
 Other Files By Author   : Waster Treatment Center #911, MooDDoom
 Misc. Author Info       : Student at Oregon State with no life.
-Description             : An E3M1 replacement for Freedoom (http://freedoom.sourceforge.net/).
+Description             : An E3M1 replacement for Freedoom (http://www.nongnu.org/freedoom/).
                           Tries to stay somewhat like the original. This map can be played with or 
                           without 
 Freedoom resources.                          
@@ -57,4 +57,4 @@ intact.
 
 * Where to get the file that this text file describes *
 The Usual: ftp://archives.3dgamers.com/pub/idgames/ and mirrors
-Web: http://freedoom.sourceforge.net/
+Web: http://www.nongnu.org/freedoom/
