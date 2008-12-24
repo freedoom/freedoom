@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!/usr/bin/env python
 # 
 # perform sanity check on assignments lists; make sure everything in
 # the deutex tree is listed in the assignment lists
@@ -31,49 +31,76 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-sub sanitycheck {
-	my ($dir, $file) = @_;
+import glob
+import re
+import sys
 
-    print "Checking $dir\n";
+# Find the file matching the given lump name:
 
-	open(LIST_FILE, $file) or die "cant open $file";
+def find_file(dirname, lumpname):
 
-	while (<LIST_FILE>) {
-		chomp;
-		
-		next if /^\s*$/ or /^\#/;
+	if dirname == "musics":
+		lumpname = "d_" + lumpname
 
-		/^(\w+)/;
-		my $lumpname = $1;
+	files = glob.glob("%s/%s*" % (dirname, lumpname))
 
-		my @files;
+	if len(files) > 0:
+		return files[0]
+	else:
+		return None
 
-		if ($dir eq 'musics') {
-			@files = glob("$dir/d_$lumpname*");
-		} else {
-			@files = glob("$dir/$lumpname*");
-		}
+# Perform sanity check on the given directory:
 
-		if (/done/ or /in dev/) {
-			if (scalar @files <= 0) {
-				print "$dir: files not found for $lumpname\n";
-			}
-		} else {
-			if (scalar @files > 0) {
-				print "$dir: files found for $lumpname\n";
-			}
-		}
-	}
+def sanity_check(dirname, filename):
 
-	close(LIST_FILE);
+	print "Checking %s" % dirname
+
+	f = file(filename)
+
+	for line in f:
+
+		# Strip newline
+
+		line = line[0:len(line)-1]
+
+		# Ignore comments and empty lines
+
+		if line == " " * len(line) or line[0] == "#":
+			continue
+
+		match = re.match(r'(\w+)', line)
+
+		resource = match.group(1)
+
+		# Find the file for this lump, if it exists
+
+		filename = find_file(dirname, resource)
+
+		# Is this resource supposed to be present? Check this
+		# matches what is present.
+
+		if re.search(r"(done|in dev)", line):
+			if filename is None:
+				print "%s: files not found for %s" % \
+					(dirname, resource)
+		else:
+			if filename is None:
+				print "%s: files found for %s" % \
+					(dirname, resource)
+
+	f.close()
+
+status_dir = "status"
+
+sections = {
+	"sprites"  : "sprites_list",
+	"patches"  : "patches_list",
+	"flats"    : "flats_list",
+	"graphics" : "graphics_list",
+	"sounds"   : "sounds_list",
+	"musics"   : "musics_list",
 }
 
-my $status_dir = "status";
-
-sanitycheck 'sprites', "$status_dir/sprites_list";
-sanitycheck 'patches', "$status_dir/patches_list";
-sanitycheck 'flats', "$status_dir/flats_list";
-sanitycheck 'graphics', "$status_dir/graphics_list";
-sanitycheck 'sounds', "$status_dir/sounds_list";
-#sanitycheck 'musics', "$status_dir/musics_list";
+for section in sections.keys():
+	sanity_check(section, "%s/%s" % (status_dir, sections[section]))
 
