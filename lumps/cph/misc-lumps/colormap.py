@@ -74,10 +74,9 @@ def generate_colormap(colors, transform_function):
 
 def generate_darkened_colormap(colors, factor):
 
-	factor = 0.5
-	darken_function = lambda c: [ c[0] * factor,         \
+	darken_function = lambda c: ( c[0] * factor,         \
 	                              c[1] * factor,         \
-	                              c[2] * factor ]
+	                              c[2] * factor )
 
 	return generate_colormap(colors, darken_function)
 
