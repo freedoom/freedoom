@@ -6,7 +6,7 @@ playpal.lmp	:	playpal-base.lmp playpal.py
 colormap.lmp	:	playpal.lmp colormap.py
 	./colormap.py playpal.lmp > colormap.lmp
 
-SOURCES=playpal.pl colormap.pl COPYING Makefile
+SOURCES=playpal.py colormap.py COPYING Makefile
 VERSION=0.0.1
 
 dist		:	doom-misc-lumps-$(VERSION).tar.gz
