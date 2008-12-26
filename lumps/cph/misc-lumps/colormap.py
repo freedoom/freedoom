@@ -115,10 +115,6 @@ for i in range(32):
 	colormap = generate_darkened_colormap(colors, darken_factor)
 	output_colormap(colormap)
 
-	sys.stderr.write(".")
-
-sys.stderr.write("\n")
-
 # Print inverse color map
 
 inverse_colormap = generate_colormap(colors, inverse_color)
