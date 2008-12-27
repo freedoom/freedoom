@@ -35,24 +35,29 @@ guidelines that should be followed:
 
 Levels should be in Boom format; you may exceed the limits of Vanilla
 Doom and use Boom features; however, do not use features that are not
-supported by Boom-compatible ports. Levels should be in Doom's original
-format, not in "Hexen" format.
+supported by Boom 2.02 and compatible ports. Levels should be in Doom's
+original format, not in "Hexen" format.
 
 It is sensible to also heed the following guidelines:
 
   * Make sure that skill levels are implemented, and that all
     multiplayer start points are present.
   * Make levels appropriately difficult for their position within the
-    progression of the game.  Also bear in mind that not all players
-    may be as skilled a player as you.
+    progression of the game.  Also bear in mind that not all players may
+    be as skilled a player as you.
   * Do not use tricks that exploit Doom's software renderer; some source
     ports, especially those that use hardware accelerated rendering, may
-    not render it properly.  Examples of tricks to avoid include those
-    used to simulate 3D bridges and "deep water" effects.
-  * Boom compatible ports remove almost all of the limits on rendering;
-    however, do not make excessively complicated scenes.  It is
-    desirable that Freedoom levels should be playable on old or
-    low-powered hardware.
+    not render it properly.  Examples of tricks to avoid include those used
+    to simulate 3D bridges and "deep water" effects.
+  * Boom removes almost all of the limits on rendering; however, do not
+    make excessively complicated scenes.  It is desirable that Freedoom
+    levels should be playable on old or low-powered hardware.
+  * Always test in http://www.teamtnt.com/boompubl/boom2.htm[Boom]
+    itself rather than a derivative such as PrBoom.  This ensures that
+    your levels really are Boom-compatible rather than using any extra
+    features.  As DOS is rather rare these days, if you do not have a
+    system which runs Boom natively, you may use
+    http://www.dosbox.com/[DOSBox] or http://www.freedos.org/[FreeDOS].
 
 === Resources (music, sprites, textures, etc)
 
