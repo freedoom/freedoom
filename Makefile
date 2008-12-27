@@ -29,7 +29,7 @@
 WADS=wads
 CPP=scripts/simplecpp
 DEUTEX=deutex
-DEUTEX_BASIC_ARGS=-fullsnd -rate accept -rgb 0 255 255
+DEUTEX_BASIC_ARGS=-v0 -fullsnd -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
 OBJS = \
