@@ -105,7 +105,7 @@ def parse_assignment(section, line, match):
 	# allow "= filename.ext" to override the filename used
 
 	if override is not None:
-		filename = find_file(section, override)
+		filename = find_file(section, override.lower())
 	else:
 		filename = find_file(section, resource)
 
