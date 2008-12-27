@@ -33,7 +33,26 @@ guidelines that should be followed:
 
 === Levels
 
-TODO: Write this section
+Levels should be in Boom format; you may exceed the limits of Vanilla
+Doom and use Boom features; however, do not use features that are not
+supported by Boom-compatible ports. Levels should be in Doom's original
+format, not in "Hexen" format.
+
+It is sensible to also heed the following guidelines:
+
+  * Make sure that skill levels are implemented, and that all
+    multiplayer start points are present.
+  * Make levels appropriately difficult for their position within the
+    progression of the game.  Also bear in mind that not all players
+    may be as skilled a player as you.
+  * Do not use tricks that exploit Doom's software renderer; some source
+    ports, especially those that use hardware accelerated rendering, may
+    not render it properly.  Examples of tricks to avoid include those
+    used to simulate 3D bridges and "deep water" effects.
+  * Boom compatible ports remove almost all of the limits on rendering;
+    however, do not make excessively complicated scenes.  It is
+    desirable that Freedoom levels should be playable on old or
+    low-powered hardware.
 
 === Resources (music, sprites, textures, etc)
 
