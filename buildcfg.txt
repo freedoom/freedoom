@@ -185,13 +185,29 @@ MAP32
 PLAYPAL
 COLORMAP
 ENDOOM
-DEMO1
-DEMO2
-DEMO3
 GENMIDI
 ;DMXGUS
 ;DMXGUSC
 FREEDOOM
+
+#ifdef DOOM2
+
+DEMO1 = demo1_d2
+
+#else
+
+DEMO1
+
+#endif /* #ifdef DOOM2 */
+
+DEMO2
+DEMO3
+
+#ifdef ULTDOOM
+
+DEMO4
+
+#endif /* #ifdef ULTDOOM */
 
 ; boom colormaps
 
