@@ -12,7 +12,7 @@ complete Free Doom-based game.
 
 For more information, see http://www.nongnu.org/freedoom/.
 
-== What "Free Software" means
+== What ``Free Software'' means
 
 When we speak of Free Software, we refer to the software movement in
 which your freedoms to use, copy, modify, and study it are ensured.  For
@@ -31,12 +31,42 @@ and http://www.fsf.org/[Free Software Foundation] websites.
 Contributions to Freedoom are always welcome, however there are a few
 guidelines that should be followed:
 
+=== Intellectual Property
+
+We know people hate legalese, but this is important.  This applies to
+*everything* which is submitted.
+
+You must be incredibly careful when basing on existing graphics or
+sounds.  Most Doom projects are incredibly lax on reusing intellectual
+property -- there are plenty of WADs out there which contain modified
+Doom sprites, for example.  However, due to the nature of this project,
+we do not have the same liberty to rip as we please.
+
+The general rules go as follows:
+
+  * Everything you submit must be 100% your own work.  You must not base
+    upon resources from Doom or any other game.  You may not even rip
+    textures from WADs you have downloaded (if you find a WAD with
+    textures in which look useful, let us know -- that way, we can
+    contact the author).
+  * Do not simply copy the original resources.  Where possible, try to
+    make an effort to make the new versions look visibly different from
+    the originals.
+  * Be especially careful of ``free texture'' (or ``free sound'' or
+    ``free graphic'') sites.  Although these would appear at first to
+    be okay to use, many are free for ``non-commercial use only''.  One
+    of the things we want to be able to do is put this on GNU/Linux CDs
+    (which are sold -- ``a commercial use'').
+  * The main exception is that you may of course reuse anything in the
+    Freedoom source tree.  In fact, this is encouraged, as reusing
+    material will give the WAD a more consistent feel.
+
 === Levels
 
 Levels should be in Boom format; you may exceed the limits of Vanilla
 Doom and use Boom features; however, do not use features that are not
 supported by Boom 2.02 and compatible ports. Levels should be in Doom's
-original format, not in "Hexen" format.
+original format, not in ``Hexen'' format.
 
 It is sensible to also heed the following guidelines:
 
@@ -48,20 +78,36 @@ It is sensible to also heed the following guidelines:
   * Do not use tricks that exploit Doom's software renderer; some source
     ports, especially those that use hardware accelerated rendering, may
     not render it properly.  Examples of tricks to avoid include those used
-    to simulate 3D bridges and "deep water" effects.
+    to simulate 3D bridges and ``deep water'' effects.
   * Boom removes almost all of the limits on rendering; however, do not
     make excessively complicated scenes.  It is desirable that Freedoom
     levels should be playable on old or low-powered hardware.
   * Always test in http://www.teamtnt.com/boompubl/boom2.htm[Boom]
     itself rather than a derivative such as PrBoom.  This ensures that
     your levels really are Boom-compatible rather than using any extra
-    features.  As DOS is rather rare these days, if you do not have a
-    system which runs Boom natively, you may use
+    features.  As DOS is rather rare these days, you may not have a
+    system which can run Boom natively, so you may use either
     http://www.dosbox.com/[DOSBox] or http://www.freedos.org/[FreeDOS].
 
-=== Resources (music, sprites, textures, etc)
+=== Graphics
 
-TODO: Write this section too
+  * Graphics should be the same color and size as the originals to
+    remain compatible with PWADs (otherwise, they may end up looking
+    like a mess).  They cannot use the Doom font.
+  * Textures should be the same dimensions as the originals.  They
+    should be similar but not identical (to avoid IP infringement) --
+    in fact, they shuold be as different as possible while keeping to
+    the general theme of the texture.  As mentioned above, try to make
+    a concious effort to make the textures visibly different from the
+    originals.  Critically, the textures should tile in the same way as
+    the originals.
+  * Some textures contain the letters UAC or references to UAC; this is
+    an intellectual property of id Software (trademarked).  Instead, use
+    the letters AGM in your textures.
+  * Sprites should be roughly the same size and shape, but different to
+    the originals.  Doom monsters are id's intellectual property (which
+    means no imps, cyberdemons, etc).  The new monsters will behave the
+    same way as the originals, but will be totally new.
 
 === Build process
 
@@ -89,8 +135,8 @@ patches, but keep in mind:
 
 === Submitting your work
 
-TODO: Figure out the best method of doing this.  Also expand this
-section.
+TODO: Figure out the best method of doing this.  This mainly requires
+time to see what works best.
 
 If you use git, make sure your commit messages start with a single line,
 under 72 characters, which provides an adequate summary of your changes.
