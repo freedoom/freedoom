@@ -1,3 +1,69 @@
+01/01/2009
+
+Freedoom 0.6.3!  See git history for the full list of changes and
+differences, shortlog follows:
+
+Catoptromancy (4):
+      levels: fixed errors in maps
+      sprites: added new Hell Knight and Pain Elemental sprites
+      lumps: Add demo1
+      e1m2: Fix to be fully compatible in doom1.wad
+
+Jon Dowland (2):
+      silence colormap.py
+      quieten deutex
+
+Mike Swanson (11):
+      Added .gitignore files
+      titlepic: version from `git describe` if available
+      Documentation: rewrote most of README, reformatted COPYING
+      wadinfo-builder.pl: change license to BSD
+      lumps/genmidi: Update OpenBSD-derived code to newer license
+      Add copyrights, remove latest/ directory
+      Change website URL in documents
+      README: Clarify the usage of Boom 2.02
+      buildcfg: Separate demos to specific IWAD targets
+      README: Fix 50% of the TODO sections :-)
+      VERSION: Bump to 0.6.3
+
+RjY (17):
+      Add doom.wad object target
+      Add makefile section to build doom.wad
+      Build wadinfo_ult.txt, needed by udoom iwad target
+      Remove levels/e3m8.wad symlink
+      Update .gitignore and clean target
+      Define ULTDOOM when building wadinfo and texture1 for udoom
+      Include doom pnames in buildcfg.txt when ULTDOOM is defined
+      Add SKY4 to Ultimate Doom build
+      Add acc_e2m2 as E1M2
+      Minor fixes to acc's E1M2
+      Add acc to CREDITS
+      Shareware-compatible version of acc_e2m2 from Catoptromancy
+      acc_e2m2: rebuild REJECT
+      Add URL to ENDOOM
+      Add Catoptromancy's ENDOOM lump instead
+      Add free-fun.wad by Siggi and link it as map32
+      Add Siggi to CREDITS
+
+Simon Howard (17):
+      Change build to use simplecpp for preprocessing, as this does not munge
+      Convert makepkgs script to Python.
+      Convert extract-pnames script to Python.
+      Convert sanity-check script to Python.
+      Convert wadinfo-builder script to Python.
+      Convert simplecpp script to Python.
+      Move scripts that are part of the build system into scripts/.
+      Merge branch 'master' of git://git.savannah.nongnu.org/freedoom
+      Convert colormap.py to Python.
+      Fix Makefile.
+      Convert playpal generator script to Python.
+      Minor fix to wadinfo-builder script.
+      Fix Makefile dist: .pl -> .py
+      Fix colormap script: leftover debugging code meant that all colormaps were at the same level.
+      wadinfo-builder: Convert assignment overrides to lower case.
+      Merge branch 'master' of git://git.savannah.nongnu.org/freedoom
+      README: Add some initial level design guidelines.
+
 14/03/2008
 
 Fixes to MAP14 by The Green Herring.
