@@ -309,7 +309,6 @@ TEKWALL5    		128	128
 #ifdef DOOM2
 
 ; these textures are in doom 2, but not doom 1:
-
 ASHWALL3    		64	128
 *	RW22_2      	0	0
 ASHWALL4    		64	128
@@ -376,6 +375,16 @@ BSTONE1     		64	128
 *	RW1_1       	0	0
 BSTONE3     		64	128
 *	RW12_2      	0	0
+A-CAMO1			128	128
+*	CAMO1		0	0
+A-CAMO2			256	128
+*	CAMO1		0	0
+*	CAMO1		128	0
+*	W107_1		0	0
+A-CAMO3			256	128
+*	CAMO1		0	0
+*	CAMO1		128	0
+*	W106_1		0	0
 CEMENT7     		64	128
 *	RW7_1       	0	0
 CEMENT8     		64	128
@@ -388,6 +397,25 @@ CRACKLE4    		64	128
 *	RW44_4      	0	0
 DBRAIN1     		64	32
 *	RWDM11A     	0	0
+*	MC1		0	0
+*	MC2		0	0
+*	MC3		0	0
+*	MC4		0	0
+*	MC5		0	0
+*	MC6		0	0
+*	MC7		0	0
+*	MC8		0	0
+*	MC10		0	0
+*	MC11		0	0
+*	MC12		0	0
+*	MC13		0	0
+*	MC14		0	0
+*	MC15		0	0
+*	MC16		0	0
+*	MC17		0	0
+*	MC18		0	0
+*	MC19		0	0
+*	MC20		0	0
 DBRAIN2     		64	32
 *	RWDM11B     	0	0
 DBRAIN3     		64	32
