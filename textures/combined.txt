@@ -1650,9 +1650,10 @@ SUPPORT3    		64	128
 SW1BRCOM    		128	128
 *	WALL62_1		0	0
 *	   SW1S0		48	72
-SW1BRN1     		128	128
-*	WALL62_1		0	0
-*	   SW1S0		48	72
+SW1BRN1			64      128
+*       WALL02_2                0       56
+*       WALL02_2                0       0
+*       SW3S0                   15      75
 SW1BRN2     		64	128
 *	WALL02_2		0	56
 *	WALL02_2		0	0
@@ -1699,19 +1700,30 @@ SW1PIPE     		128	128
 SW1SLAD     		64	128
 *	WLA128_1		0	0
 *	  WARNB0		24	73
-SW1STARG    		128	128
-*	WALL62_1		0	0
-*	   SW1S0		48	72
+SW1STARG                        128     128
+*          SW19_4               0       0
+*          SW19_3               0       64
+*          SW3S0                48      76
 SW1STON1    		64	128
 *	   W28_8		0	64
 *	   W28_8		0	0
 *	   SW1S0		16	78
-SW1STON2    		128	128
-*	WALL62_1		0	0
-*	   SW1S0		48	72
-SW1STONE    		128	128
-*	WALL62_1		0	0
-*	   SW1S0		48	72
+SW1STON2                        64      128
+*          W28_5                0       0
+*          W28_8                0       64
+*          WARNB0               24      73
+SW1STONE                        64      128
+*          WALL01_1             0       0
+*          WALL01_2             16      0
+*          WALL01_3             32      0
+*          WALL01_4             48      0
+*          WALL01_1             0       72
+*          WALL01_2             16      72
+*          WALL01_3             32      72
+*          WALL01_4             48      72
+*          W33_8                0       64
+*          W33_8                0       120
+*          SW1S0                16      72
 SW1STRTN    		64	128
 *	  SW12_4		0	0
 *	  SW12_5		32	0
@@ -1719,9 +1731,10 @@ SW1STRTN    		64	128
 SW2BRCOM    		128	128
 *	WALL62_1		0	0
 *	   SW1S1		48	72
-SW2BRN1     		128	128
-*	WALL62_1		0	0
-*	   SW1S1		48	72
+SW2BRN1                         64      128
+*       WALL02_2                0       56
+*       WALL02_2                0       0
+*       SW3S1                   15      75
 SW2BRN2     		64	128
 *	WALL02_2		0	56
 *	WALL02_2		0	0
@@ -1768,19 +1781,30 @@ SW2PIPE     		128	128
 SW2SLAD     		64	128
 *	WLA128_1		0	0
 *	  WARNA0		24	73
-SW2STARG    		128	128
-*	WALL62_1		0	0
-*	   SW1S1		48	72
+SW2STARG                        128     128
+*          SW19_4               0       0
+*          SW19_3               0       64
+*          SW3S1                48      76
 SW2STON1    		64	128
 *	   W28_8		0	64
 *	   W28_8		0	0
 *	   SW1S1		16	78
-SW2STON2    		128	128
-*	WALL62_1		0	0
-*	   SW1S1		48	72
-SW2STONE    		128	128
-*	WALL62_1		0	0
-*	   SW1S1		48	72
+SW2STON2                        64      128
+*          W28_5                0       0
+*          W28_8                0       64
+*          WARNA0               24      73
+SW2STONE                        64      128
+*          WALL01_1             0       0
+*          WALL01_2             16      0
+*          WALL01_3             32      0
+*          WALL01_4             48      0
+*          WALL01_1             0       72
+*          WALL01_2             16      72
+*          WALL01_3             32      72
+*          WALL01_4             48      72
+*          W33_8                0       64
+*          W33_8                0       120
+*          SW1S1                16      72
 SW2STRTN    		64	128
 *	  SW12_4		0	0
 *	  SW12_5		32	0
