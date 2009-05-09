@@ -144,9 +144,12 @@ You should prefix this line with the component you are committing (for
 example, ``map17: fixed unbeatable map'').  This should be followed by a
 blank line and a paragraph or more to explain your change in detail (for
 example, explaining what part of the map was broken).  See commit
-27762aa5f34f590bfc29d1f667f9121907cb8a98 for an example.  If you use
-GPG, try to sign your commits with `git commit -s` if possible; this
-ensures that you are who you say you are.
+27762aa5f34f590bfc29d1f667f9121907cb8a98 for an example.  Sign your
+comments with `git commit -s`, these leaves a trail of whose hands a
+commit went through and could be useful for some purposes; git alone can
+give an indication of up to two people, however the AUTHOR/COMMITER
+fields are not quite reliable or flexible enough for the same
+information.
 
 You should commit often; each important change should get its own
 commit, but minor changes need not.  Take advantage of git's ability to
