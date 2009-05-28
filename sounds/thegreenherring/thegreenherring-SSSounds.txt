@@ -1,0 +1,11 @@
+DSSSSIT.WAV
+DSSSDTH.WAV
+
+These are sound replacements for the Wolfenstein SS that I recorded on the day I
+got myself a new headset (March 31, 2008.)  Both of them are voiceovers in
+Spanish; DSSSSIT.WAV is "¡Alto!" ("Halt!") while DSSSDTH.WAV is "¡Mierda!"
+("Shit!").  Hope these are worthy (and possibly comical) enough to include in
+the IWAD!
+
+Eric "The Green Herring" Baker
+- April 4, 2008 -
