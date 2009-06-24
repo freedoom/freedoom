@@ -1,4 +1,4 @@
-titlepic: freedoom.gif freedm.gif
+titlepic: freedoom.gif freedm.gif ultdoom.gif
 
 freedoom.gif: titlepic.gif
 	./create_caption Freedoom $@
@@ -6,7 +6,10 @@ freedoom.gif: titlepic.gif
 freedm.gif: titlepic.gif
 	./create_caption FreeDM $@
 
+ultdoom.gif: titlepic.gif
+	./create_caption "\"Ultimate Freedoom\"" $@
+
 clean:
-	rm -f freedm.gif freedoom.gif
+	rm -f freedm.gif freedoom.gif ultdoom.gif
 
 .PHONY: clean

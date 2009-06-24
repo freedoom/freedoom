@@ -7,7 +7,7 @@
 ; -DULTDOOM to build for ultimate doom
 ; -DSHAREWARE to build for shareware doom
 ;
-; Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
+; Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009
 ; Contributors to the Freedoom project.  All rights reserved.
 ;
 ; Redistribution and use in source and binary forms, with or without
@@ -547,10 +547,14 @@ D_DM2INT
 ; List of Pictures (with insertion point)
 [graphics]
 
+#ifdef ULTDOOM
+TITLEPIC 0 0          = doomuttl
+#else
 #ifdef FREEDM
 TITLEPIC 0 0          = dmttl
 #else
 TITLEPIC 0 0          = doomttl
+#endif
 #endif
 
 #ifdef DOOM2
