@@ -385,6 +385,7 @@ CRAWHBP			128	128
 *	BCRATEM1	80	64
 *	BCRATEM1	72	64
 *	BCRATEM1	64	64
+*	BCRATER1	96	64
 *	GCRATEL1	0	0
 *	GCRATER1	96	0
 *	GCRATEM1	48	0
@@ -2548,8 +2549,8 @@ SW1SLAD     		64	128
 *	WLA128_1		0	0
 *	  WARNB0		24	73
 SW1STARG                        128     128
-*          SW19_4               0       64
-*          SW19_3               64       128
+*          SW19_4               0       0
+*          SW19_3               64      0
 *          SW3S0                48      72
 SW1STON1    		64	128
 *	   W28_8		0	64
@@ -2629,9 +2630,9 @@ SW2SLAD     		64	128
 *	WLA128_1		0	0
 *	  WARNA0		24	73
 SW2STARG                        128     128
-*          SW19_4               0       64
-*          SW19_3               64       128
-*          SW3S1                48     	74
+*          SW19_4               0       0
+*          SW19_3               64      0
+*          SW3S1                48     	76
 SW2STON1    		64	128
 *	   W28_8		0	64
 *	   W28_8		0	0
