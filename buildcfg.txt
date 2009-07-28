@@ -193,6 +193,8 @@ FREEDOOM
 #ifdef DOOM2
 
 DEMO1 = demo1_d2
+DEMO2 = demo2_d2
+DEMO3 = demo3_d2
 
 #else
 
@@ -205,7 +207,10 @@ DEMO3
 
 #ifdef ULTDOOM
 
-DEMO4
+DEMO1 = demo1_ud
+DEMO2 = demo2_ud
+DEMO3 = demo3_ud
+DEMO4 = demo4_ud
 
 #endif /* #ifdef ULTDOOM */
 
