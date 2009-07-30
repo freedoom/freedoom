@@ -43,9 +43,6 @@ OBJS = \
 	$(WADS)/doom.wad	      \
 	$(WADS)/freedm.wad
 
-# disable this for now
-#	$(WADS)/freedoom_hires.zip
-
 all : $(OBJS)
 
 subdirs:
@@ -172,8 +169,12 @@ $(WADS)/doom1.wad : wadinfo_sw.txt force
 dist : $(OBJS)
 	scripts/makepkgs $(OBJS)
 
+doc:
+	asciidoc BUILD-SYSTEM
+	asciidoc README
+
 clean:
-	rm -f	deutex.log $(OBJS) \
+	rm -f	*.html deutex.log $(OBJS) \
 		./wadinfo.txt ./wadinfo_sw.txt \
 		./wadinfo_freedm.txt ./wadinfo_iwad.txt \
 		./wadinfo_ult.txt \
