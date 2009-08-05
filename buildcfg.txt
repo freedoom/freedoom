@@ -876,6 +876,10 @@ WILV35	0	0
 WILV36  0       0
 WILV37  0       0
 WILV38  0       0
+VICTORY2	0	0
+PFUB1	0	0
+PFUB2	0	0
+ENDPIC	0	0
 #endif
 
 #endif /* #ifndef SHAREWARE */
