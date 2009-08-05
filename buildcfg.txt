@@ -3178,6 +3178,7 @@ WALL79_1
 WALL97_1
 WALL97_2
 WALL97_3
+WOODMET1
 
 ; fraggle 23/7/2002: added waterfall textures
 WFALL1

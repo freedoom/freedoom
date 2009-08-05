@@ -1039,16 +1039,7 @@ ASHWALL6    		64	128
 ASHWALL7    		64	128
 *	RW27_3      	0	0
 ; fraggle 23/7/2002: added static bfall texture
-BFALL      		64	128
-*	BFALL1      	0	0
-BFALL1      		64	128
-*	BFALL1      	0	0
-BFALL2      		64	128
-*	BFALL2      	0	0
-BFALL3      		64	128
-*	BFALL3      	0	0
-BFALL4      		64	128
-*	BFALL4      	0	0
+
 BIGBRIK1    		64	128
 *	RW23_3      	0	0
 BIGBRIK2    		64	128
@@ -1512,14 +1503,7 @@ WOOD8       		64	128
 *	RW9_3       	0	0
 WOOD9       		64	128
 *	RW9_4       	0	0
-WOODMET1    		64	128
-*	RW26_1      	0	0
-WOODMET2    		64	128
-*	RW26_2      	0	0
-WOODMET3    		64	128
-*	RW26_3      	0	0
-WOODMET4    		64	128
-*	RW26_4      	0	0
+
 ZDOORB1     		128	128
 *	WOLF18      	0	0
 ZDOORF1     		128	128
@@ -1590,7 +1574,24 @@ ZZZFACE9    		256	128
 #ifndef SHAREWARE
 
 ; these textures are not in shareware
-
+BFALL      		64	128
+*	BFALL1      	0	0
+BFALL1      		64	128
+*	BFALL1      	0	0
+BFALL2      		64	128
+*	BFALL2      	0	0
+BFALL3      		64	128
+*	BFALL3      	0	0
+BFALL4      		64	128
+*	BFALL4      	0	0
+WOODMET1    		64	128
+*	RW26_1      	0	0
+WOODMET2    		64	128
+*	RW26_2      	0	0
+WOODMET3    		64	128
+*	RW26_3      	0	0
+WOODMET4    		64	128
+*	RW26_4      	0	0
 BIGDOOR5    		128	128
 *	WALL40_1		0	0
 *	WALL42_3		0	0
