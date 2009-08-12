@@ -1,45 +1,43 @@
-# This is the doom1 assigned levels list.
-# The freedoom goal is for a complete doom2 iwad, if you want to
-# contribute please consider doing a doom2 level.
+# This is the Ultimate Freedoom assigned levels list.
 #
 # map	name			status		author
 #
 E1M1	-			done		jond 2005-12-25
-E1M2	-
+E1M2	-			done		acc 2008
 E1M3	-			in dev		fraggle 2002-08-01
 E1M4	-			done		geekmarine 2002-08-04
 E1M5	-
-E1M6	-			in dev		geekmarine 2003-05-25
+E1M6	-			abandoned	geekmarine 2003-05-25
 E1M7	-			done		archvile64
 E1M8	-			in dev		godcells 2003-12-15
 E1M9	-			in dev		ajapted 2002-07-07
 #
 E2M1	-			done		shadowrunner
 E2M2	-
-E2M3	-	
-E2M4	-	
-E2M5	-	
+E2M3	-
+E2M4	-			in dev		catoptromancy
+E2M5	-
 E2M6	-
-E2M7	-	
+E2M7	-			in dev		lareman
 E2M8	-
-E2M9	-	
+E2M9	-
 #
 E3M1	-			done		sargebaldy
-E3M2	-
-E3M3	-	
-E3M4	-	
-E3M5	-	
+E3M2	-			idle 		catoptromancy
+E3M3	-
+E3M4	-
+E3M5	-
 E3M6	-
-E3M7	-	
+E3M7	-
 E3M8	-			done		torn
-E3M9	-	
+E3M9	-
 #
 E4M1	-			in dev		nb_nmare 2002-06-27
-E4M2	-	
-E4M3	-	
-E4M4	-	
-E4M5	-	
-E4M6	-	
-E4M7	-	
+E4M2	-			in dev		ghostlydeath
+E4M3	-
+E4M4	-			in dev 		ghostlydeath
+E4M5	-
+E4M6	-			in dev		ghostlydeath
+E4M7	-
 E4M8	-
-E4M9	-	
+E4M9	-

@@ -2,42 +2,45 @@
 #	assigned    - 	A level is assigned to someone to work on
 #	in dev	    -	A beta version (not yet finished) of the level has
 #			been submitted and is in the build
+#	idle	    -	unfinished level is not currently being worked on by anyone,
 #	(abandoned) -	A development version of the level was submitted,
 #			but appears to have been abandoned.
 #	done	    -	Completed level in the build
 #	none	    -	Level has not yet been assigned to anyone
 #
+#	author	    -	maps with multiple names have been edited or fixed
+#
 # map	name			status		author
 #
 MAP01 	entryway		done		jond
-MAP02	underhalls		assigned	jond 2006-12-27
+MAP02	underhalls		done		siggi
 MAP03	the gantlet		done 		sgtcrispy
 MAP04	the focus		done		Macro11_1
 MAP05	the waste tunnels	done		amarande
 MAP06	the crusher		done		mystic
 MAP07	dead simple		done		tarin
 MAP08	tricks and traps	done		tarin
-MAP09	the pit			assigned	godcells 2005-12-04
-MAP10	refueling base		(abandoned)	Archvile64 2002-04-14
+MAP09	the pit			done		godcells 2005-12-04
+MAP10	refueling base		in dev		xerent
 MAP11	'o' of destruction!	done		kaiser
-MAP12 	the factory		(abandoned)	rickclark 2002-01-24
+MAP12 	the factory		idle		Archvile64 2002-04-14, hawkwind, catoptromancy
 MAP13	downtown		in dev		lurker 2002-10-06
-MAP14	the inmost dens		assigned	geekmarine 2005-03-14
-MAP15	industrial zone		assigned	replica30 2008-01-03
+MAP14	the inmost dens		done		jond
+MAP15	industrial zone		done		zok
 MAP16	suburbs			done		hyena
 MAP17	tenements		assigned	kaiser 2005-03-27
 MAP18	the courtyard		done		zigmund
-MAP19	the citadel
+MAP19	the citadel		in dev		dabski
 MAP20	gotcha!			done		lazer
 MAP21	nirvana			done		amarande
 MAP22	the catacombs		done		tarin
-MAP23	barrels o' fun		(abandoned)	submerge 2002-11-09
-MAP24	the chasm		assigned	Slayer 2006-08-29
+MAP23	barrels o' fun		idle		submerge 2002-11-09
+MAP24	the chasm		in dev		catoptromancy
 MAP25	bloodfalls		done		cyb
 MAP26	the abandoned mines	done		torn
-MAP27	monster condo		(abandoned)	bastet 2002-09-15
-MAP28	the spirit world	assigned	jond 2005-03-12
+MAP27	monster condo		in dev		amarande
+MAP28	the spirit world	in dev		zok
 MAP29	the living end		done		amarande
 MAP30	icon of sin		done		Cacodemon_Leader
-MAP31	wolfenstein		(abandoned)	oblivion 2002-08-04
-MAP32	grosse			done		ajapted
+MAP31	wolfenstein		in dev		oblivion 2002-08-04, catoptromancy
+MAP32	grosse			done		siggi
