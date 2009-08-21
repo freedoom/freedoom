@@ -16,7 +16,7 @@ ifog	respawn fog		done		ajapted
 play	player			done		saint_of_killers/fredrik
 poss	human			done		saint_of_killers
 spos	shotgun guy		done		saint_of_killers
-vile	archvile		assigned 	infurnus
+vile	archvile
 fire	fire(archvile)		done		espi
 fatb	revenant rocket
 fbxp	revenant rocket xp
@@ -88,10 +88,10 @@ pol4	skull on a pole		done		airraid
 pol3	pile of skulls		done		ajapted
 pol1	impaled victim		done		geekmarine
 pol6	impaled victim		done		geekmarine
-gor2	hanging victim
-gor3	hanging victim
-gor4	hanging legs
-gor5	hanging leg
+gor2	hanging victim		done		delano
+gor3	hanging victim		done		delano
+gor4	hanging legs		done		delano
+gor5	hanging leg		done 		delano
 smit	stalagmite		done		kurt
 col1	tall green pillar	done		ajapted
 col2	short green pillar	done		ajapted
