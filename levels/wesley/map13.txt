@@ -1,0 +1,21 @@
+MAP13 for FreeDoom
+aug20_2009
+Wesley D. Johnson
+johnson2412@usgo.net
+
+Initial upload
+Not finished
+TO DO:
+  Fix building view obstruction and clipping.
+  Texture alignment around doors
+  Wrong textures in doors
+  Play testing, and tweaking.
+  
+HAS BEEN DONE:
+  Play tested at 2, finished OK
+  Play tested at 4, finished OK
+  
+WARNING:
+  Watch your back. I have got shot in the back so
+  many times I am getting paranoid.
+
