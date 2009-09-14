@@ -1,21 +1,36 @@
 MAP13 for FreeDoom
-aug20_2009
 Wesley D. Johnson
-johnson2412@usgo.net
+john <obfuscate> son 24 12 @ usgo <dot> net
 
-Initial upload
-Not finished
-TO DO:
-  Fix building view obstruction and clipping.
-  Texture alignment around doors
-  Wrong textures in doors
-  Play testing, and tweaking.
-  
+
+Release Revision 1.1.   Sept, 9, 2009
+
+Change:
+  Fixed Boom Deep-water colormap usage
+
+
 HAS BEEN DONE:
-  Play tested at 2, finished OK
-  Play tested at 4, finished OK
-  
-WARNING:
+  Play tested at 1,2,3,4.
+  Finished at level 4.
+  Play tested on Legacy, prboom.
+  Not all combinations.
+
+Level is large,
+  1030 sectors, 6000+ sidedefs.
+  I have spent a week cutting anything I could.
+  If it has to get smaller then I would have to cut
+  the elevator, or the curved stairs.
+
+  There are still some places where the corner of a
+  building gets clipped, but they have been reduced to
+  the point where it is not worth it any more. 
+
+
+Play:
+  Non-linear, freestyle.
+  Can attack in at least 3 different ways,
+  by different routes,
+  by running wild, sneaking around, or carefully planed.
   Watch your back. I have got shot in the back so
   many times I am getting paranoid.
 
