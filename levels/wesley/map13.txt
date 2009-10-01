@@ -3,20 +3,25 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 1.1.   Sept, 9, 2009
+Release Revision 1.2   Sept 18, 2009
 
 Change:
+  Made some bars impassable.
+  Adjusted some textures.
+  Moved some ammo.
+Previously:
   Fixed Boom Deep-water colormap usage
-
+  Adjusted crusher.
+  Adjusted weapons, ammo.
 
 HAS BEEN DONE:
   Play tested at 1,2,3,4.
   Finished at level 4.
   Play tested on Legacy, prboom.
-  Not all combinations.
+  Not all combinations tested.
 
 Level is large,
-  1030 sectors, 6000+ sidedefs.
+  1028 sectors, 6000+ sidedefs.
   I have spent a week cutting anything I could.
   If it has to get smaller then I would have to cut
   the elevator, or the curved stairs.
