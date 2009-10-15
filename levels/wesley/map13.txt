@@ -3,26 +3,31 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 1.2   Sept 18, 2009
+Release Revision 1.3   Oct 6, 2009
 
 Change:
-  Made some bars impassable.
-  Adjusted some textures.
-  Moved some ammo.
-Previously:
-  Fixed Boom Deep-water colormap usage
-  Adjusted crusher.
-  Adjusted weapons, ammo.
+  Changed the nukeage crossing to use a dry bridge, which was the
+  original intention.
+  Added a Cacodemon across the street, moved another to a dark corner.
+  Added some imps to guard the yellow key room.
+  Adjusted some texture alignment over wall screens.
+  Fixed the curved stairs so monsters will now ascend.
+  Fixed some guard sectors to not block sight lines.
+  Changed the starting height of a lift so it is at a floor.
+  Raised the ceiling height of some yard sectors.
+  Many lighting fixes, darkened outside and made more consistent.
+  Adjusted sound blocking.
+
 
 HAS BEEN DONE:
   Play tested at 1,2,3,4.
   Finished at level 4.
+  Verified that can win at level 4 without using the crusher.
   Play tested on Legacy, prboom.
   Not all combinations tested.
 
 Level is large,
-  1028 sectors, 6000+ sidedefs.
-  I have spent a week cutting anything I could.
+  1014 sectors, 6000+ sidedefs.
   If it has to get smaller then I would have to cut
   the elevator, or the curved stairs.
 
@@ -30,6 +35,8 @@ Level is large,
   building gets clipped, but they have been reduced to
   the point where it is not worth it any more. 
 
+  Some monsters still will not wake up.  It seems that doors act as if
+  they are sound blocking, even when not marked.
 
 Play:
   Non-linear, freestyle.
