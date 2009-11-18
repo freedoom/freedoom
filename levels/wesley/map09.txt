@@ -1,0 +1,27 @@
+MAP09 for FreeDoom
+Wesley D. Johnson
+john <obfuscate> son 24 12 @ usgo <dot> net
+
+
+Release Revision 1.   Nov 5, 2009
+  
+HAS BEEN DONE:
+  Play tested at levels 4,3,2,1.
+  Finished at level 4.
+  Play tested on Legacy, prboom.
+
+Level is medium small.
+  325 sectors
+
+Play:
+  Non-linear, 3 keys.
+  Keys are not necessary to reach exit, but help with
+  ammo and weapons.
+
+Features:
+  An abandoned mining area, stripped of most valuables.
+  Large swampy mud pit, with many monsters stuck in it.
+  Tunnels through the area have been cut by the mining
+  drainage, and now must navigate the "pit" to get through.
+  
+  
