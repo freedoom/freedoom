@@ -1,27 +1,62 @@
-MAP09 for FreeDoom
+MAP09 for FreeDoom  "The Pit"
 Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 1.   Nov 5, 2009
+Release Revision 5.1.   March 12, 2010
+
+CHANGES Rev2:
+  Added water treatment plant as exit.
+  Added some rewards and obstacles there.
+  Removed some swamp and simplified.
+  Removed trees and plants.
+CHANGES Rev3:
+  Changed missing passageway to missing bridge.
+  Altered layout of entryways.
+  Marked doors with skull.
+  Waterfall as source of flooding.
+  Additional traps and difficulties in water treatment area.
+  Added two secret areas.
+CHANGES Rev4:
+  Added support pillars in mine area, for visual effect.
+  Mine area passageways extended for more interest.
+  Modified the monster lair shapes.
+  Fixed problem of imps not coming out of their lair.
+  Yellow door now blocks access to all of office.
+  Moved storage room to hallway outside of office.
+  There is now more variation on how the monsters attack, as they do
+  not get stuck in one area so much.
+CHANGES Rev5:
+  Moved supershotgun for medium and hard.
+  Has benches and boxes to stand upon in waterlogged rooms, so
+  conceptually player does not drown, and player can get a look around.
+  Changed layout of mine shafts to prevent being met at top of
+  elevator by smart revenants, as this elevator is only access to top level.
+  Added vertical shaft to cut passageway, with narrow path for the brave.
+  Moved mine weapons room (red door) to be harder to get to.
+  Modified particular mine shaft doorways so monsters get stuck less.
+  Connected mine shaft to cave as alternative entrance.
+  Improved caves, with alternative passages, connection to pit cave, and a
+  tight secret passage.
   
 HAS BEEN DONE:
-  Play tested at levels 4,3,2,1.
-  Finished at level 4.
+  Play tested at levels 4,3.
+  Finished at level 4,3.
   Play tested on Legacy, prboom.
 
-Level is medium small.
-  325 sectors
+Level is medium size.
+  523 sectors
 
 Play:
-  Non-linear, 3 keys.
-  Keys are not necessary to reach exit, but help with
-  ammo and weapons.
+  Non-linear, 5 keys.
+  1 key is necessary to reach exit.
+  Other keys help with ammo and weapons.
 
 Features:
   An abandoned mining area, stripped of most valuables.
-  Large swampy mud pit, with many monsters stuck in it.
-  Tunnels through the area have been cut by the mining
-  drainage, and now must navigate the "pit" to get through.
+  Tunnels through the area have been cut by the mining.
+  Some areas have degraded into a mud pit.
+  The pit and buildings are flooded, and some battles are in and under muddy water.
+  Exit area is in flooded water treatment plant.
   
   

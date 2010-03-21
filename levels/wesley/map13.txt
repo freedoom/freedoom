@@ -3,31 +3,25 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 1.3   Oct 6, 2009
+Release Revision 2   Feb 17, 2010
 
 Change:
-  Changed the nukeage crossing to use a dry bridge, which was the
-  original intention.
-  Added a Cacodemon across the street, moved another to a dark corner.
-  Added some imps to guard the yellow key room.
-  Adjusted some texture alignment over wall screens.
-  Fixed the curved stairs so monsters will now ascend.
-  Fixed some guard sectors to not block sight lines.
-  Changed the starting height of a lift so it is at a floor.
-  Raised the ceiling height of some yard sectors.
-  Many lighting fixes, darkened outside and made more consistent.
-  Adjusted sound blocking.
-
+  Adjusted some window and door textures.
+  Changed lock coding of some doors (blue key only, not blue skull).
+  Moved some ammo and weapons.
+  Finished interior of final room.
+  Added an area in pump room so more difficult to get to ammo room.
+  Increased difficulty of Hard level by adding a few more monsters in
+  early play.
 
 HAS BEEN DONE:
   Play tested at 1,2,3,4.
   Finished at level 4.
-  Verified that can win at level 4 without using the crusher.
   Play tested on Legacy, prboom.
   Not all combinations tested.
 
 Level is large,
-  1014 sectors, 6000+ sidedefs.
+  1031 sectors, 6000+ sidedefs.
   If it has to get smaller then I would have to cut
   the elevator, or the curved stairs.
 
@@ -35,14 +29,12 @@ Level is large,
   building gets clipped, but they have been reduced to
   the point where it is not worth it any more. 
 
-  Some monsters still will not wake up.  It seems that doors act as if
-  they are sound blocking, even when not marked.
 
 Play:
   Non-linear, freestyle.
-  Can attack in at least 3 different ways,
-  by different routes,
-  by running wild, sneaking around, or carefully planed.
+  Can attack in at least 3 different ways, by different routes,
+  by running wild, sneaking around, or careful planning.
+  Many monsters roam free and will be encountered unexpectedly.
   Watch your back. I have got shot in the back so
   many times I am getting paranoid.
 
