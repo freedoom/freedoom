@@ -3,16 +3,12 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 2   Feb 17, 2010
+Release Revision 2.01   June 6, 2010
 
 Change:
-  Adjusted some window and door textures.
-  Changed lock coding of some doors (blue key only, not blue skull).
-  Moved some ammo and weapons.
-  Finished interior of final room.
-  Added an area in pump room so more difficult to get to ammo room.
-  Increased difficulty of Hard level by adding a few more monsters in
-  early play.
+  Fixed a small HOM at the spillway on the big nukage pool.
+  Fixed a sight line by raising the height of the building at the exit.
+  Now the chimney stack is not cut-off looking over that building.
 
 HAS BEEN DONE:
   Play tested at 1,2,3,4.
@@ -21,7 +17,7 @@ HAS BEEN DONE:
   Not all combinations tested.
 
 Level is large,
-  1031 sectors, 6000+ sidedefs.
+  1035 sectors, 6000+ sidedefs.
   If it has to get smaller then I would have to cut
   the elevator, or the curved stairs.
 
