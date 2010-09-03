@@ -14,7 +14,7 @@ TARGETS   = $(notdir $(ALLSRC))
 
 DUMMY     =../../dummy.gif
 # TODO: if dst's width is < src's, src is clipped. Try to prevent this.
-ARGS=-compose src-over -gravity center
+ARGS=-compose Over -gravity center
 
 foo: $(VILEDEST) $(TARGETS)
 
