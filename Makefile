@@ -178,7 +178,8 @@ clean:
 		./wadinfo.txt ./wadinfo_sw.txt \
 		./wadinfo_freedm.txt ./wadinfo_iwad.txt \
 		./wadinfo_ult.txt \
-		 ./lumps/freedoom.lmp \
+		./lumps/freedoom.lmp \
+		./lumps/freedm.lmp \
 		./textures/doom/pnames.txt \
 		./textures/doom/texture1.txt \
 		./textures/doom2/pnames.txt \
