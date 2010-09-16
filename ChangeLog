@@ -1,3 +1,177 @@
+09/15/2010
+Benjamin Debski (1):
+      levels: New map19, replacing the old one
+
+Blackjar72 (1):
+      music: add a new d_victor song
+
+Catoptromancy (60):
+      patches: Add many patches for Plutonia support
+      patches: fix sky[23][abcd] dimensions
+      patches: delete camo[23], add brick1, brown2, mosrok2
+      patches: New tile that fits in Plutonia-style better
+      levels: Improved MAP10 and MAP31
+      levels: map05 and map07 fixes
+      buildcfg.txt: fix boom 2.02 compatibility
+      textures/combined.txt: fix Boom 2.02 compatibility
+      map11: Change hangning body in sector 24 to non-blocking type
+      map31: Tons of bug fixes
+      map10: move the switch people keep complaining about
+      sounds: new circular saw sounds, weapon is no longer silent
+      sounds: new DSRADIO effect
+      levels: new e2m4
+      lumps: New demo1 demonstrating how to open a door
+      textures: combined.txt complete Plutonia support
+      map18: switch in outhouse is now a slow remote door
+      e1m7: fix player starts
+      map29: fix duplicate player 5 start
+      patches: All TNT: Evilution patches
+      patches: Fix patches that crash the game
+      patches: more fixes and a new buildcfg.txt
+      patches: rename dogpanl to doglpanl
+      combined.txt: Complete TNT: Evilution support
+      combined.txt: Alphabetize and label TNT section
+      levels: brand new map19, first level to utilize Plutonia textures
+      map23: Make the level beatable and not a trap
+      levels: Brand new e3m2 level.
+      sounds: bunch of new sounds
+      e3m2: Add a version with nodes
+      sounds: fixed sounds
+      levels: bunches of fixes
+      map24: make it a bit more sane
+      combined.txt: three tex1 fixes
+      combined.txt: Fix a switch alignment
+      lumps: New demo1, 2, and 3 lmps for both Doom 2 and Ultimate Doom
+      levels: new map31 build
+      Fixed music in boom202
+      levels: Updated E2M4
+      UltFreedoom music is boom202-compatible now
+      Fixed music in UFD for boom202
+      graphics: UFD endpics
+      textures: Sorted scripts, fixed missing textures
+      sprites: scaled SSG larger
+      status: updated status lists
+      sprites: new archvile placeholder
+      levels: updated e2m4
+      status: more updated status pages
+      status: music status updated
+      levels: New map13 by wesley
+      musics: lots of music by Jute
+      levels: finished map13 by Wesley
+      musics: Music by jute
+      levels: updated wesley map13
+      musics: wastedjamacan music and more links
+      musics: The rest of Jute's music
+      levels: New map09 by Wesley
+      patches: FreeDM a few small patches from Ralphis
+      levels: update map12
+      levels: updated map24
+
+Claude A. Freeman (2):
+      sounds: new imp fireball effect
+      sounds: add imp fireball hit sound
+
+Colin Kelly (1):
+      sounds: new dscybsit
+
+Delano Cuzucoli (1):
+      sprites: new hanging body sprites
+
+Eric Baker (1):
+      sounds: new SS death and alert sound effects
+
+G. Wessner (1):
+      sounds: New dscacsit; move old one to dspesit
+
+GhostlyDeath (1):
+      Musics: New music
+
+Jon Dowland (1):
+      use Over as compose argument for dummy sprites
+
+Mark McGill-Smith (1):
+      musics: new tracks by TheMisterCat, pending final placement
+
+Miguel Suarez Gomez (7):
+      levels: new map15
+      levels: map15 fix
+      levels: map15 fixes
+      levels: Brand new map28 level.
+      levels: new map28 build
+      levels: map28 update
+      levels: map15 and map28 updates
+
+Mike Swanson (26):
+      graphics: Add raw font files back to the tree
+      map25: various fixes; thanks anonymous bug reporter
+      map10: various fixes; thanks anonymous bug reporter
+      map13: fix exiting the level; thanks anonymous bug reporter
+      textures: fix wall texs for consistency; thanks anonymous bug reporter
+      patches: swap sw2s[01] and rw48_[24]; thanks hawkwind for the tip!
+      Replace reasoning of `git commit -s` in the README
+      various: remove files with unnnecessary executable bits
+      musics: DANGER WILL ROBINSON, COPYRIGHTED MUSIC
+      Merge branch 'v0.6.4'
+      COPYING: Turned my calendar, found out it's 2009 already
+      titlepic: Make the ultimate target have its own title
+      patches: Remove placeholder.gif symlink
+      CREDITS: Update for GhostlyDeath
+      CREDITS: Add RottKing
+      CREDITS: Add Bank
+      sounds: remove catoptromancy/dscybsit.wav
+      buildcfg: put a Cyberdemon sound into the doom.wad target
+      Makefile: add doc target to make pretty HTML-ized versions of documents
+      doc/graphics:  Change to shorter URL.
+      levels: remove MAP32, it will be built with the dummy level instead
+      levels: fix map09 symlink
+      remove a backup file that got included by mistake
+      levels: remove map19, many errors with boom
+      FreeDM: add a FREEDM lump for source port detection
+      Tag v0.7-rc1 and add lumps/freedm.lmp to .gitignore
+
+Patrick Kalinauskas (3):
+      map29: Change things and rebuilt nodes
+      map05: some fixes
+      levels: newer map27 almost done except for difficulty levels
+
+RjY (8):
+      e3m8: restore symlink, remove corrupted version
+      e3m8: Fix three solid hanging bodies in tall sectors
+      buildcfg.txt: add E2M4 intermission screen title
+      patches: remove patches whose names clash with flats
+      titlepic: update .gitignore
+      levels: build REJECT lumps for several maps
+      sprites: fix hellknight rotation frames
+      sprites: remove unused hellknight frame BOS2C2C8
+
+Siggi (1):
+      map02: Completely new map02!
+
+Simon Howard (4):
+      textures: Fix up some switch textures (thanks Gez)     Signed-off-by: Simon Howard <fraggle@gmail.com>
+      Update CREDITS, remove unused txt file.     Signed-off-by: Simon Howard <fraggle@gmail.com>
+      BUILD-SYSTEM: rewritten document.
+      sprites: Add death frames for lost soul.
+
+Svante Ekholm (3):
+      levels: New map10, move old map10 over the map12 slot
+      levels: newer map10 build
+      levels: updated map10
+
+Torn (1):
+      levels: E3M8 recovered!
+
+Ulises "Urric Hammersong" Lozano (1):
+      sprites: new cyberdemon
+
+Wesley D. Johnson (3):
+      levels: updated map09 and map13
+      levels: new map13 build
+      sprites: new spider demon
+
+cato (1):
+      levels: Updated map13 by Wesley
+
 06/15/2009
 
 Freedoom 0.6.4.  Removing illegally copied music from the repository.
