@@ -6,6 +6,7 @@ graphics/titlepic/ultdoom.gif
 lumps/cph/misc-lumps/colormap.lmp
 lumps/cph/misc-lumps/playpal.lmp
 lumps/freedoom.lmp
+lumps/freedm.lmp
 sprites/jond/placeholder/*.gif
 textures/doom/pnames.txt
 textures/doom/texture1.txt
