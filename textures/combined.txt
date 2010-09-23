@@ -1236,25 +1236,6 @@ CRACKLE4    		64	128
 *	RW44_4      	0	0
 DBRAIN1     		64	32
 *	RWDM11A     	0	0
-*	MC1		0	0
-*	MC2		0	0
-*	MC3		0	0
-*	MC4		0	0
-*	MC5		0	0
-*	MC6		0	0
-*	MC7		0	0
-*	MC8		0	0
-*	MC10		0	0
-*	MC11		0	0
-*	MC12		0	0
-*	MC13		0	0
-*	MC14		0	0
-*	MC15		0	0
-*	MC16		0	0
-*	MC17		0	0
-*	MC18		0	0
-*	MC19		0	0
-*	MC20		0	0
 DBRAIN2     		64	32
 *	RWDM11B     	0	0
 DBRAIN3     		64	32
@@ -1451,7 +1432,7 @@ SW2WDMET    		64	128
 *	   EXIT2		32	64
 *	   EXIT2		24	64
 *	   EXIT2		16	64
-*	  W108_2		24	52
+*	  W108_3		24	52
 SW2ZIM      		64	128
 *	  RW20_1		0	0
 *	   SW2_8		16	65
@@ -1853,7 +1834,7 @@ SW1BLUE     		64	128
 *	   SW2_7		14	66
 SW1CMT      		64	128
 *	WALL54_1		-42	0
-*	   SW3S1		16	72
+*	   SW3S0		16	72
 SW1GSTON    		64	128
 *	WALL48_2		0	0
 *	   SW2_7		14	67
@@ -1882,7 +1863,7 @@ SW2BLUE     		64	128
 *	   SW2_8		14	66
 SW2CMT      		64	128
 *	WALL54_1		-42	0
-*	   SW3S0		16	72
+*	   SW3S1		16	72
 SW2GSTON    		64	128
 *	WALL48_2		0	0
 *	   SW2_8		14	67
@@ -1891,10 +1872,10 @@ SW2HOT      		64	128
 *	   SW2_8		13	66
 SW2LION     		64	128
 *	WALL47_2		0	0
-*	WALL42_5		12	62
+*	WALL47_4		12	62
 SW2SATYR    		64	128
 *	WALL47_2		0	0
-*	WALL42_1		12	60
+*	WALL47_3		12	60
 SW2SKIN     		64	128
 *	 HELL6_3		0	0
 *	   SW2_6		0	59
@@ -2512,7 +2493,7 @@ SW1BRNGN    		64	128
 *	   SW4S0		20	80
 SW1BROWN    		128	128
 *	WALL62_1		0	0
-*	   SW3S1		48	72
+*	   SW3S0		48	72
 SW1COMM     		64	72
 *	   W13_1		0	0
 *	   SW1S0		15	18
@@ -2593,7 +2574,7 @@ SW2BRNGN    		64	128
 *	   SW4S1		20	80
 SW2BROWN    		128	128
 *	WALL62_1		0	0
-*	   SW3S0		48	72
+*	   SW3S1		48	72
 SW2COMM     		64	72
 *	   W13_1		0	0
 *	   SW1S1		15	18
@@ -2715,7 +2696,7 @@ SW1GARG     		64	128
 *	WALL42_6		12	62
 SW2GARG     		64	128
 *	WALL47_2		0	0
-*	WALL42_6		12	62
+*	WALL47_5		12	62
 FIREMAG1    		128	128
 *	W74A_1      	0	0
 FIREMAG2    		128	128
