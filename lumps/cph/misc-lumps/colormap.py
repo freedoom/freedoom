@@ -24,19 +24,22 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+import os
 import sys
+import struct
 
 # Return palette read from named file
 
 def read_palette(filename):
-	f = file(filename)
+	f = open(filename, "rb")
 
 	colors = []
 
 	for i in range(256):
-		color = f.read(3)
+		data = f.read(3)
 
-		colors.append((ord(color[0]), ord(color[1]), ord(color[2])))
+		color = struct.unpack("BBB", data)
+		colors.append(color)
 
 	return colors
 
@@ -82,7 +85,8 @@ def generate_darkened_colormap(colors, factor):
 
 def output_colormap(colormap):
 	for c in colormap:
-		sys.stdout.write(chr(c))
+		x = struct.pack("B", c)
+		os.write(sys.stdout.fileno(), x)
 
 def inverse_color(color):
 	average = (color[0] + color[1] + color[2]) / 3
@@ -95,12 +99,12 @@ def print_palette(colors):
 		for x in range(16):
 			color = colors[y * 16 + x]
 
-			print "#%02x%02x%02x" % color,
+			print("#%02x%02x%02x" % color)
 
-		print
+		print()
 
 if len(sys.argv) < 2:
-	print "Usage: %s <base filename> > output-file.lmp"
+	print("Usage: %s <base filename> > output-file.lmp" % sys.argv[0])
 	sys.exit(1)
 
 colors = read_palette(sys.argv[1])

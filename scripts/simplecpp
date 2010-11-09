@@ -84,7 +84,7 @@ def parse_stream(stream):
 		raise Exception("Mismatched #if in '%s'" % stream.name)
 
 def parse_file(filename):
-	f = file(filename)
+	f = open(filename)
 
 	try:
 		parse_stream(f)
@@ -209,7 +209,7 @@ def read_block(stream, ignore):
 				func(arg)
 		else:
 			if not ignore:
-				print line
+				print(line)
 
 parse_cmdline()
 parse_stream(sys.stdin)

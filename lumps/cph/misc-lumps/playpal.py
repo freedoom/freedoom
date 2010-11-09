@@ -24,7 +24,9 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+import os
 import sys
+import struct
 
 # IHS (Intensity Hue Saturation) to RGB conversion, utility function
 #
@@ -81,14 +83,15 @@ def make_palette_new():
 # Return palette read from named file
 
 def read_palette(filename):
-	f = file(filename)
+	f = open(filename, "rb")
 
 	colors = []
 
 	for i in range(256):
-		color = f.read(3)
+		data = f.read(3)
+		color = struct.unpack("BBB", data)
 
-		colors.append((ord(color[0]), ord(color[1]), ord(color[2])))
+		colors.append(color)
 
 	f.close()
 
@@ -155,24 +158,21 @@ def clamp_pixval(v):
 	elif v > 255:
 		return 255
 	else:
-		return v
+		return int(v)
 
-def encode_palette(pal):
+def output_palette(pal):
 
-	def color_byte(element):
-		return chr(int(clamp_pixval(element)))
-
-	def encode_color(color):
-		return "".join(map(color_byte, color))
-
-	encoded = map(encode_color, pal)
-
-	return "".join(encoded)
+	for color in palette:
+		color = tuple(map(clamp_pixval, color))
+		
+		encoded = struct.pack("BBB", *color)
+		os.write(sys.stdout.fileno(), encoded)
 
 # Main program - make a base palette, then do the biased versions
 
 if len(sys.argv) < 2:
-	print "Usage: %s <base filename> > playpal.lmp" % sys.argv[0]
+	print("Usage: %s <base filename> > playpal.lmp" % sys.argv[0])
+	sys.exit(1)
 
 base_pal = read_palette(sys.argv[1])
 
@@ -207,7 +207,6 @@ for i in range(4):
 
 palettes.append(bias_palette_towards(base_pal, (0, 255, 0), 0.2))
 
-result = "".join(map(encode_palette, palettes))
-
-sys.stdout.write(result)
+for palette in palettes:
+	output_palette(palette)
 
