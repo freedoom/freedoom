@@ -1,3 +1,41 @@
+01/22/2011
+Andrew Rehberger (1):
+      levels: new e2m2 map
+
+Catoptromancy (9):
+      levels: Updated map27
+      fixed texture1, thanks hawkwind
+      levels: fix various issues in maps
+      map29: more health and ammo
+      patches: fix mc* textures
+      levels: fixes to map04 and map06
+      levels: map11 and map20 fixes
+      levels: fixed map21 and map22
+      lumps: Recorded new demos
+
+Matthew Cibulas (2):
+      sounds: change oof and death sounds
+      sounds: new dspo*, dspunch, dsslop
+
+Miguel Suarez Gomez (1):
+      levels: map15 and map28 updates
+
+Mike Swanson (7):
+      Change example commit in README and fix formatting in asciidoc.
+      buildcfg.txt: Make M_EPISOD appear in doom2.wad
+      levels: forgot to ZenNode the previous commit
+      sounds: convert fdoof.wav to proper format
+      COPYING: add 2010 to the years
+      levels: updated map09, new e4m2 from GhostlyDeath, replaced map24
+
+RjY (2):
+      levels: fix missing texture on map09
+      buildcfg: include correct demos for each iwad
+
+Simon Howard (1):
+      build: Update Python scripts to work with Python 3.
+
+
 09/15/2010
 Benjamin Debski (1):
       levels: New map19, replacing the old one
