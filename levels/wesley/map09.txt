@@ -3,7 +3,7 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 5.1.   March 12, 2010
+Release Revision 6.   Jan 2, 2011
 
 CHANGES Rev2:
   Added water treatment plant as exit.
@@ -38,7 +38,19 @@ CHANGES Rev5:
   Connected mine shaft to cave as alternative entrance.
   Improved caves, with alternative passages, connection to pit cave, and a
   tight secret passage.
-  
+CHANGES Rev6:
+  Fixed texture items discussed in Forum.
+  Roof on some of mine pit with pillars to hold it up.
+  Removed monster caves in mine area and redistributed the contents.
+  Redid all of river and its relation to the caves and mine.
+  Removed half of river, added fallen bridge section to block river.
+  Rotated and reversed right half of map to move entrance across from mine.
+  Added mining machine that monsters used to cut into corridor.
+  Added mining equipment.
+  Added desks, tool chests, etc..
+  Moved some ammo and weapons.
+
+
 HAS BEEN DONE:
   Play tested at levels 4,3.
   Finished at level 4,3.
