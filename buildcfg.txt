@@ -196,23 +196,19 @@ DEMO1 = demo1_d2
 DEMO2 = demo2_d2
 DEMO3 = demo3_d2
 
-#else
+#else /* not DOOM2 */
 
-DEMO1
-
-#endif /* #ifdef DOOM2 */
-
-DEMO2
-DEMO3
+DEMO1 = demo1_ud
 
 #ifdef ULTDOOM
 
-DEMO1 = demo1_ud
 DEMO2 = demo2_ud
 DEMO3 = demo3_ud
 DEMO4 = demo4_ud
 
 #endif /* #ifdef ULTDOOM */
+
+#endif /* #ifdef DOOM2 */
 
 #ifdef FREEDM
 
