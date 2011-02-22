@@ -3,7 +3,7 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 6.   Jan 2, 2011
+Release Revision 7.   Feb 3, 2011
 
 CHANGES Rev2:
   Added water treatment plant as exit.
@@ -49,6 +49,18 @@ CHANGES Rev6:
   Added mining equipment.
   Added desks, tool chests, etc..
   Moved some ammo and weapons.
+CHANGES Rev7:
+  Added closet in office.
+  Modified one mine machine.
+  Put some kinks in some long corridors.
+  Increased the outdoor light level.
+  Added a conference table.
+  Moved one weapons room from work shop to a storage room.
+  Adjusted missile weapons room shape, added crates, multiplayer ammo.
+  Moved deathmatch starts (9) to be evenly spaced, gave them shotguns.
+  Moved some monsters away from deathmatch starts so that deathmatch
+  with monsters is playable.
+  Added weapons and armor for multiplayer, coop and deathmatch.
 
 
 HAS BEEN DONE:
