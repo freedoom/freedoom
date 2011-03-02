@@ -3,9 +3,24 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 2.01   June 6, 2010
+Release Revision 2.2   Feb 6, 2011
 
-Change:
+CHANGES Rev 2.2
+  Fixed things per FreeDoom forum review.
+  Added some trees.
+  Added crate to step-up on dumpster.
+  Adjusted pump-room service way.
+  Added shelf and niche in utility room.
+  Moved set of switches in control room.
+  Added crate in secure dock.
+  Added door in secure service way.
+  Kinked sewer to hide view of dead-end.
+  Added platform and stored stuff in furnace room.
+  Adjusted weapons.
+  Moved deathmatch starts.
+  Added multiplayer weapons and ammo.
+
+CHANGES Rev 2.01:
   Fixed a small HOM at the spillway on the big nukage pool.
   Fixed a sight line by raising the height of the building at the exit.
   Now the chimney stack is not cut-off looking over that building.
