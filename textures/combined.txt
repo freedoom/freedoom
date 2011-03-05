@@ -1806,9 +1806,17 @@ SKSPINE2    		256	96
 *	SPINE3_1		0	0
 *	SPINE3_2		128	0
 SKY2        		256	128
+#ifdef DOOM2
 *	RSKY2       	0	0
+#else
+*	SKY2       	0	0
+#endif
 SKY3        		256	128
+#ifdef DOOM2
 *	RSKY3       	0	0
+#else
+*	SKY3       	0	0
+#endif
 SLADSKUL    		64	128
 *	WLA128_1		0	0
 *	   SW2_2		21	65
@@ -2384,7 +2392,11 @@ SFALL3      		64	128
 SFALL4      		64	128
 *	SFALL4      	0	0
 SKY1        		256	128
+#ifdef DOOM2
 *	RSKY1       	0	0
+#else
+*	SKY1       	0	0
+#endif
 SLADPOIS    		64	128
 *	WLA128_1		0	0
 *	  PS20A0		1	49
