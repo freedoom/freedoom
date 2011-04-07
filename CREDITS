@@ -530,18 +530,18 @@ F: rjy
 S: RjY
 D: Levels
 
-F: CSonicGo
+F: csonicgo
 N: Claude A Freeman
 S: CSonicGo
 D: sounds
 
-F: The Green Herring
+F: thegreenherring
 N: Eric Baker
 E: eabaker@san.rr.com
 S: The Green Herring
 D: Levels
 
-F: Hawkwind
+F: hawkwind
 E: hawkwinds_messages@hotmail.com
 H: Hawkwind
 D: Levels
@@ -554,27 +554,27 @@ F: siggi
 S: Siggi
 D: Levels
 
-F: Zok
+F: zok
 N: Miguel Suarez Gomez
 E: thewadsfactorystaff@hotmail.com
 S: Zok
 D: Levels
 
-F: GhostlyDeath
+F: ghostlydeath
 E: ghostlydeath@gmail.com
-S: ghostlydeath
+S: GhostlyDeath
 D: Musics
 
-F: TheMisterCat
+F: themistercat
 N: Mark McGill-Smith
 E: isbetterthanyou@hotmail.com
-S: themistercat
+S: TheMisterCat
 D: Musics
 
-F: RottKing
+F: rottking
 N: Matthew Cibulas
 E: rottking@sbcglobal.net
-S: rottking
+S: RottKing
 D: Sounds
 
 F: Bank
@@ -583,10 +583,10 @@ E: bankthemighty@gmail.com
 S: bank
 D: Sounds
 
-F: Delano
+F: delano
 N: Delano Cuzzucoli
 E: delano501@gmail.com
-S: delano
+S: Delano
 D: sprites
 
 F: xerent
@@ -601,18 +601,18 @@ E: benjamin.debski@gmail.com
 S: dabski
 D: levels
 
-F: Stilgar
+F: stilgar
 N: G. Wessner
 E: masterstilgar@yahoo.com
-S: stilgar
+S: Stilgar
 D: sounds
 
-F: Jute
+F: jute
+S: Jute
 E: jutemail@gmail.com
 D: music
 
 F: wastedjamacan
-E:
 D: music
 
 F: wesley
@@ -626,15 +626,14 @@ S: Urric Hammersong
 E: calators@hotmail.com
 D: sprites
 
-F: Malinku
+F: malinku
 N: Andrew Rehberger
 E: malinku@live.com
-S: malinku
+S: Malinku
 D: levels
 
-F: Archfile
-E:
-S: archfile
+F: archfile
+S: Archfile
 D: levels
 
 F: sodaholic
