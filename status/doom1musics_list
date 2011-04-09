@@ -38,6 +38,7 @@ e4m6		e4m6		placeholder	picklehammer/d_the_da.mus
 e4m7		e4m7		placeholder	ralphis/d_e1m5.mus
 e4m8		e4m8		placeholder 	picklehammer/d_ddtblu.mus
 e4m9		e4m9		placeholder	mellow/d_ultima.mid
-bunny		end of game	placeholder	nb_nmare/n_messag.mus
+inter		intermission	placeholder	nb_nmare/n_ampie.mus
+bunny		end of game	placeholder	nb_nmare/n_ampie.mus
 victor		victory music	placeholder	nb_nmare/n_messag.mus
 
