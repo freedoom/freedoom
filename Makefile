@@ -38,7 +38,6 @@ OBJS = \
 	$(WADS)/freedoom_sprites.wad  \
 	$(WADS)/freedoom_sounds.wad   \
 	$(WADS)/freedoom_textures.wad \
-	$(WADS)/doom1.wad	          \
 	$(WADS)/doom2.wad             \
 	$(WADS)/doom.wad	      \
 	$(WADS)/freedm.wad
@@ -62,11 +61,7 @@ textures/doom/texture1.txt: textures/combined.txt
 	$(CPP) -DDOOM1 -DULTDOOM < $< > $@
 textures/freedm/texture1.txt: textures/combined.txt
 	$(CPP) -DFREEDM < $< > $@
-textures/shareware/texture1.txt: textures/combined.txt
-	$(CPP) -DSHAREWARE < $< > $@
 
-textures/shareware/pnames.txt: textures/shareware/texture1.txt
-	scripts/extract-pnames.py < $< > $@
 textures/doom/pnames.txt: textures/doom/texture1.txt
 	scripts/extract-pnames.py -a > $@
 textures/doom2/pnames.txt: textures/doom2/texture1.txt 
@@ -78,8 +73,6 @@ textures/freedm/pnames.txt: textures/freedm/texture1.txt
 
 wadinfo.txt: buildcfg.txt force textures/doom2/pnames.txt
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py > $@
-wadinfo_sw.txt: buildcfg.txt force textures/shareware/pnames.txt
-	$(CPP) -P -DSHAREWARE < $< | scripts/wadinfo-builder.py -dummy > $@
 wadinfo_iwad.txt: buildcfg.txt force textures/doom2/pnames.txt
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py -dummy > $@
 wadinfo_ult.txt: buildcfg.txt force textures/doom/pnames.txt
@@ -92,6 +85,10 @@ wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 	chmod o-r $<
 	md5sum $<.gz > $<.md5sum
 	rm -f $<
+
+# deutex doesnt allow redirects for the filenames in the texture
+# entries, so we have to change the texture1 symlink to point
+# to whichever wad we are working on
 
 #---------------------------------------------------------
 # build wad
@@ -154,17 +151,7 @@ $(WADS)/freedoom_sounds.wad : wadinfo.txt force
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -sounds -musics -build wadinfo.txt $@
 
-#---------------------------------------------------------
-# shareware iwad
-# 
-# deutex doesnt allow redirects for the filenames in the texture
-# entries, so we have to change the texture1 symlink to point
-# to the shareware wad
 
-$(WADS)/doom1.wad : wadinfo_sw.txt force
-	ln -sf shareware/texture1.txt textures/texture1.txt
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_sw.txt $@
 
 dist : $(OBJS)
 	scripts/makepkgs $(OBJS)
@@ -186,8 +173,6 @@ clean:
 		./textures/doom2/texture1.txt \
 		./textures/freedm/pnames.txt \
 		./textures/freedm/texture1.txt \
-		./textures/shareware/pnames.txt \
-		./textures/shareware/texture1.txt \
 		./textures/texture1.txt
 
 	make -C lumps clean

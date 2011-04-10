@@ -43,16 +43,10 @@
 
 #ifdef DOOM2
 #define ULTDOOM_OR_DOOM2
-#undef SHAREWARE
 #undef ULTDOOM
 #endif
 
-#ifdef SHAREWARE
-#define DOOM1
-#endif
-
 #ifdef ULTDOOM
-#undef SHAREWARE
 #define ULTDOOM_OR_DOOM2
 #endif
 
@@ -69,8 +63,6 @@ E1M6
 E1M7
 E1M8
 E1M9
-
-#ifndef SHAREWARE
 E2M1
 E2M2
 E2M3
@@ -101,8 +93,6 @@ E4M7
 E4M8
 E4M9
 #endif /* #ifdef ULTDOOM */
-
-#endif /* #ifndef SHAREWARE */
 
 #else /* #ifndef DOOM2 */
 
@@ -288,8 +278,6 @@ DSBDOPN
 DSBDCLS
 DSITMBK
 DSGETPOW
-
-#ifndef SHAREWARE
 DSPLASMA
 DSBFG
 DSCACSIT
@@ -302,7 +290,6 @@ DSCYBDTH
 DSSPIDTH
 DSHOOF
 DSMETAL
-#endif /* #ifndef SHAREWARE */
 
 #ifdef DOOM2
 DSDSHTGN
@@ -404,8 +391,6 @@ DPBDOPN
 DPBDCLS
 DPITMBK
 DPGETPOW
-
-#ifndef SHAREWARE
 DPPLASMA
 DPBFG
 DPCACSIT
@@ -416,7 +401,6 @@ DPCACDTH
 DPSKLDTH
 DPCYBDTH
 DPSPIDTH
-#endif /* #ifndef SHAREWARE */
 
 #ifdef DOOM2
 DPHOOF
@@ -484,7 +468,6 @@ D_INTRO
 D_VICTOR
 D_INTROA
 
-#ifndef SHAREWARE 
 D_E2M1
 D_E2M2
 D_E2M3
@@ -506,8 +489,6 @@ D_E3M8
 D_E3M9
 
 D_BUNNY
-
-#endif /* #ifndef SHAREWARE */
 
 #else	/* #ifndef DOOM2 */
 
@@ -569,9 +550,6 @@ HELP	0	0
 #endif
 #ifndef DOOM2
 HELP1	0	0
-#ifdef SHAREWARE
-HELP2	0	0
-#endif
 #endif
 
 CREDIT	0	0
@@ -847,8 +825,6 @@ WILV05  0       0
 WILV06  0       0
 WILV07  0       0
 WILV08  0       0
-
-#ifndef SHAREWARE
 WILV10	0	0
 WILV11  0       0
 WILV12  0       0
@@ -883,8 +859,6 @@ PFUB1	0	0
 PFUB2	0	0
 ENDPIC	0	0
 #endif
-
-#endif /* #ifndef SHAREWARE */
 
 ; inter level map
 
@@ -924,7 +898,6 @@ WIA00000        0       0
 WIA00001        0       0
 WIA00002        0       0
 
-#ifndef SHAREWARE 
 WIMAP1		0	0
 WIA10000        0       0
 WIA10100        0       0
@@ -956,7 +929,6 @@ WIA20402        0       0
 WIA20500        0       0
 WIA20501        0       0
 WIA20502        0       0
-#endif /* #ifndef SHAREWARE */
 
 #else /* #ifndef DOOM2 */
 
@@ -2176,11 +2148,6 @@ TROOR0	32	32
 TROOS0	32	32
 TROOT0	32	32
 TROOU0	32	32
-
-#ifndef SHAREWARE
-
-; These monsters are not in shareware 
-
 CYBRA1	58	117	; cyberdemon
 CYBRA2	58	117
 CYBRA3	58	117
@@ -2403,8 +2370,6 @@ SPIDQ0	128	100
 SPIDR0	128	100
 SPIDS0	128	100
 
-#endif        /* #ifndef SHAREWARE */
-
 #endif        /* #ifdef FREEDM */
 
 ; These are normal items that appear in both Freedoom and FreeDM.
@@ -2607,8 +2572,6 @@ TREDD0	14	93
 YKEYA0	8	19
 YKEYB0	8	19
 
-; extra: these were not in original shareware but are now
-
 SMITA0	22	62
 TRE1A0	25	65
 TRE2A0	76	120
@@ -2650,10 +2613,6 @@ POB1A0
 POB2A0
 
 #endif
-
-#ifndef SHAREWARE 
-
-; These items do not appear in shareware builds
 
 APBXA0	12	11
 APBXB0	19	18
@@ -2761,13 +2720,9 @@ TGRND0	14	93
 YSKUA0	7	18
 YSKUB0	7	18
 
-#endif /* #ifndef SHAREWARE */
+
 
 [patches]
-
-#ifdef SHAREWARE
-#include "textures/shareware/pnames.txt"
-#endif
 
 #ifdef ULTDOOM
 #include "textures/doom/pnames.txt"
@@ -2794,10 +2749,6 @@ DUMMY2
 DUMMY3
 
 #endif
-
-#ifndef SHAREWARE
-
-; these flats are not in shareware
 
 GRIDBLUE
 GRIDGRN
@@ -2891,11 +2842,6 @@ SLIME13
 SLIME14
 SLIME15
 SLIME16
-
-#endif /* #ifndef SHAREWARE */
-
-; shareware flats
-
 CEIL3_1 
 CEIL3_2 
 CEIL3_5 
@@ -2951,10 +2897,6 @@ TLITE6_1
 TLITE6_4
 TLITE6_5
 TLITE6_6
-
-; extra flats
-; these are not in the original shareware wad
-
 CEIL1_1
 CEIL3_3
 CEIL4_1

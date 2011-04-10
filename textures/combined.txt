@@ -29,16 +29,7 @@
 #endif
 
 #ifdef DOOM2
-#undef SHAREWARE
 #undef ULTDOOM
-#endif
-
-#ifdef SHAREWARE
-#define DOOM1
-#endif
-
-#ifdef ULTDOOM
-#undef SHAREWARE
 #endif
 
 ;Format of textures:
@@ -78,10 +69,6 @@ GLASS1                  64      96
 
 
 
-
-#ifndef SHAREWARE
-
-; these textures are in doom1 but not in the shareware build
 
 BLODGR1     		32	128
 *	TP5_1       	0	0
@@ -163,8 +150,6 @@ SKULWAL3    		128	128
 SKULWALL    		128	128
 *	WALL79_1		-4	0
 *	WALL79_1		124	0
-
-#endif
 
 ASHWALL     		64	128
 *	W104_1      	0	0
@@ -1572,9 +1557,9 @@ ZZZFACE9    		256	128
 
 #endif
 
-#ifndef SHAREWARE
 
-; these textures are not in shareware
+
+
 BFALL      		64	128
 *	BFALL1      	0	0
 BFALL1      		64	128
@@ -1944,7 +1929,6 @@ WFALL3			64	128
 WFALL4			64	128
 *	WFALL4		0	0
 
-#endif
 
 
 #ifdef ULTDOOM
