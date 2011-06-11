@@ -1,0 +1,278 @@
+[STRINGS]
+GOTARMOR = picked up the green armor vest.
+GOTMEGA = picked up the blue armor vest.
+GOTHTHBONUS = got a 1% health bonus.
+GOTARMBONUS = got a 1% armor bonus.
+GOTSTIM = picked up a small health pack.
+GOTMEDINEED = found a large health pack, just in time!
+GOTMEDIKIT = picked up a large health pack.
+GOTSUPER = you got the overdrive sphere!
+GOTBLUECARD = picked up a blue passcard.
+GOTYELWCARD = picked up a yellow passcard.
+GOTREDCARD = picked up a red passcard.
+GOTBLUESKUL = picked up a blue skeleton key.
+GOTYELWSKUL = picked up a yellow skeleton key.
+GOTREDSKULL = picked up a red skeleton key.
+GOTINVUL = temporary invulnerability!
+GOTBERSERK = you got the steroid pack!
+GOTINVIS = you got the stealth sphere!
+GOTSUIT = picked up a hazard suit.
+GOTMAP = got the tactical survey map.
+GOTVISOR = got the night vision goggles.
+GOTMSPHERE = you got the ultra-overdrive sphere!
+GOTCLIP = picked up an ammo clip.
+GOTCLIPBOX = picked up a box of ammo.
+GOTROCKET = picked up a missile.
+GOTROCKBOX = picked up a crate of missiles.
+GOTCELL = picked up a small energy recharge.
+GOTCELLBOX = picked up a large energy recharge.
+GOTSHELLS = picked up some shotgun shells.
+GOTSHELLBOX = picked up a box of shotgun shells.
+GOTBACKPACK = second backpack!
+GOTBFG9000 = the SKAG 1337 ... time to kick some ass!
+GOTCHAINGUN = you got the mini-gun!
+GOTCHAINSAW = you got the angle grinder!
+GOTLAUNCHER = you got the missile launcher!
+GOTPLASMA = you got the polaric energy cannon!
+GOTSHOTGUN = you got the pump-action shotgun!
+GOTSHOTGUN2 = you got the double-barrelled shotgun!
+PD_BLUEO = this object requires a blue key.
+PD_REDO = this object requires a red key.
+PD_YELLOWO = this object requires a yellow key.
+PD_BLUEK = this door requires a blue key.
+PD_REDK = this door requires a red key.
+PD_YELLOWK = this door requires a yellow key.
+PD_BLUEC = this door requires the blue passcard.
+PD_REDC = this door requires the red passcard.
+PD_YELLOWC = this door requires the yellow passcard.
+PD_BLUES = this door requires the blue skeleton key.
+PD_REDS = this door requires the red skeleton key.
+PD_YELLOWS = this door requires the yellow skeleton key.
+PD_ANY = this door requires any key.
+PD_ALL3 = this door requires all three keys.
+PD_ALL6 = this door requires all six keys and passcards!
+HUSTR_E1M1 = e1m1
+HUSTR_E1M2 = e1m2
+HUSTR_E1M3 = e1m3
+HUSTR_E1M4 = e1m4
+HUSTR_E1M5 = e1m5
+HUSTR_E1M6 = e1m6
+HUSTR_E1M7 = e1m7
+HUSTR_E1M8 = e1m8
+HUSTR_E1M9 = e1m9
+HUSTR_E2M1 = e2m1
+HUSTR_E2M2 = e2m2
+HUSTR_E2M3 = e2m3
+HUSTR_E2M4 = e2m4
+HUSTR_E2M5 = e2m5
+HUSTR_E2M6 = e2m6
+HUSTR_E2M7 = e2m7
+HUSTR_E2M8 = e2m8
+HUSTR_E2M9 = e2m9
+HUSTR_E3M1 = e3m1
+HUSTR_E3M2 = e3m2
+HUSTR_E3M3 = e3m3
+HUSTR_E3M4 = e3m4
+HUSTR_E3M5 = e3m5
+HUSTR_E3M6 = e3m6
+HUSTR_E3M7 = e3m7
+HUSTR_E3M8 = e3m8
+HUSTR_E3M9 = e3m9
+HUSTR_E4M1 = e4m1
+HUSTR_E4M2 = e4m2
+HUSTR_E4M3 = e4m3
+HUSTR_E4M4 = e4m4
+HUSTR_E4M5 = e4m5
+HUSTR_E4M6 = e4m6
+HUSTR_E4M7 = e4m7
+HUSTR_E4M8 = e4m8
+HUSTR_E4M9 = e4m9
+CC_ZOMBIE = zombie
+CC_SHOTGUN = shotgun zombie
+CC_HEAVY = mini-gun zombie
+CC_IMP = footsoldier
+CC_DEMON = slither-beast
+CC_LOST = skull flare
+CC_CACO = orb monster
+CC_HELL = pain bringer
+CC_BARON = pain lord
+CC_ARACH = small technospider
+CC_PAIN = globe fiend
+CC_REVEN = undead servant
+CC_MANCU = hellslug
+CC_ARCH = flamebringer
+CC_SPIDER = large technospider
+CC_CYBER = mechabomination
+CC_HERO = savior of us all
+HUSTR_1 = map01
+HUSTR_2 = map02
+HUSTR_3 = map03
+HUSTR_4 = map04
+HUSTR_5 = map05
+HUSTR_6 = map06
+HUSTR_7 = map07
+HUSTR_8 = map08
+HUSTR_9 = map09
+HUSTR_10 = map10
+HUSTR_11 = map11
+HUSTR_12 = map12
+HUSTR_13 = map13
+HUSTR_14 = map14
+HUSTR_15 = map15
+HUSTR_16 = map16
+HUSTR_17 = map17
+HUSTR_18 = map18
+HUSTR_19 = map19
+HUSTR_20 = map20
+HUSTR_21 = map21
+HUSTR_22 = map22
+HUSTR_23 = map23
+HUSTR_24 = map24
+HUSTR_25 = map25
+HUSTR_26 = map26
+HUSTR_27 = map27
+HUSTR_28 = map28
+HUSTR_29 = map29
+HUSTR_30 = map30
+HUSTR_31 = map31
+HUSTR_32 = map32
+PHUSTR_1 = map01
+PHUSTR_2 = map02
+PHUSTR_3 = map03
+PHUSTR_4 = map04
+PHUSTR_5 = map05
+PHUSTR_6 = map06
+PHUSTR_7 = map07
+PHUSTR_8 = map08
+PHUSTR_9 = map09
+PHUSTR_10 = map10
+PHUSTR_11 = map11
+PHUSTR_12 = map12
+PHUSTR_13 = map13
+PHUSTR_14 = map14
+PHUSTR_15 = map15
+PHUSTR_16 = map16
+PHUSTR_17 = map17
+PHUSTR_18 = map18
+PHUSTR_19 = map19
+PHUSTR_20 = map20
+PHUSTR_21 = map21
+PHUSTR_22 = map22
+PHUSTR_23 = map23
+PHUSTR_24 = map24
+PHUSTR_25 = map25
+PHUSTR_26 = map26
+PHUSTR_27 = map27
+PHUSTR_28 = map28
+PHUSTR_29 = map29
+PHUSTR_30 = map30
+PHUSTR_31 = map31
+PHUSTR_32 = map32
+THUSTR_1 = map01
+THUSTR_2 = map02
+THUSTR_3 = map03
+THUSTR_4 = map04
+THUSTR_5 = map05
+THUSTR_6 = map06
+THUSTR_7 = map07
+THUSTR_8 = map08
+THUSTR_9 = map09
+THUSTR_10 = map10
+THUSTR_11 = map11
+THUSTR_12 = map12
+THUSTR_13 = map13
+THUSTR_14 = map14
+THUSTR_15 = map15
+THUSTR_16 = map16
+THUSTR_17 = map17
+THUSTR_18 = map18
+THUSTR_19 = map19
+THUSTR_20 = map20
+THUSTR_21 = map21
+THUSTR_22 = map22
+THUSTR_23 = map23
+THUSTR_24 = map24
+THUSTR_25 = map25
+THUSTR_26 = map26
+THUSTR_27 = map27
+THUSTR_28 = map28
+THUSTR_29 = map29
+THUSTR_30 = map30
+THUSTR_31 = map31
+THUSTR_32 = map32
+HUSTR_PLRGREEN = g:
+HUSTR_PLRINDIGO = i:
+HUSTR_PLRBROWN = b:
+HUSTR_PLRRED = r:
+AMSTR_FOLLOWON = map following player
+AMSTR_FOLLOWOFF = map no longer following player
+AMSTR_GRIDON = map grid on
+AMSTR_GRIDOFF = map grid off
+AMSTR_MARKEDSPOT = added map bookmark
+AMSTR_MARKSCLEARED = all map bookmarks cleared.
+STSTR_MUS = music changed
+STSTR_NOMUS = unknown music track?
+STSTR_DQDON = god mode on
+STSTR_DQDOFF = god mode off
+STSTR_KFAADDED = keys, weapons and ammo added.
+STSTR_FAADDED = weapons and ammo added.
+STSTR_NCON = noclip on
+STSTR_NCOFF = noclip off
+STSTR_CHOPPERS = vroom!
+STSTR_BEHOLD = v=invuln, s=steroids, i=invis, r=hazard, a=map, l=night vision
+NIGHTMARE = this is the highest skill level.\nnot recommended unless you're experienced.\n\n(press y to confirm)
+#HUSTR_CHATMACRO1
+#HUSTR_CHATMACRO2
+#HUSTR_CHATMACRO3
+#HUSTR_CHATMACRO4
+#HUSTR_CHATMACRO5
+#HUSTR_CHATMACRO6
+#HUSTR_CHATMACRO7
+#HUSTR_CHATMACRO8
+#HUSTR_CHATMACRO9
+#HUSTR_CHATMACRO0
+#HUSTR_TALKTOSELF1
+#HUSTR_TALKTOSELF2
+#HUSTR_TALKTOSELF3
+#HUSTR_TALKTOSELF4
+#HUSTR_TALKTOSELF5
+#HUSTR_MESSAGESENT
+#E1TEXT
+#E2TEXT
+#E3TEXT
+#E4TEXT
+#C1TEXT
+#C2TEXT
+#C3TEXT
+#C4TEXT
+#C5TEXT
+#C6TEXT
+#P1TEXT
+#P2TEXT
+#P3TEXT
+#P4TEXT
+#P5TEXT
+#P6TEXT
+#T1TEXT
+#T2TEXT
+#T3TEXT
+#T4TEXT
+#T5TEXT
+#T6TEXT
+#BGFLATE1
+#BGFLATE2
+#BGFLATE3
+#BGFLATE4
+#BGFLAT06
+#BGFLAT11
+#BGFLAT20
+#BGFLAT30
+#BGFLAT15
+#BGFLAT31
+#BGCASTCALL
+#STARTUP1
+#STARTUP2
+#STARTUP3
+#STARTUP4
+#STARTUP5
+#SAVEGAMENAME
