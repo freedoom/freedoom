@@ -13,7 +13,7 @@ build system is more complicated than a "normal" deutex build would
 otherwise be.
 
 A top-level +Makefile+ controls the build system and executes the
-appopriate commands to generate the output WAD files.  Various
+appropriate commands to generate the output WAD files.  Various
 intermediate files are generated in the process by scripts.  The
 following diagram illustrates the process:
 
@@ -232,7 +232,7 @@ directories to generate the WAD:
  * +levels+ : The levels.  Files are named eg. map01.wad or e1m1.wad
    for Doom II and Doom I levels, with FreeDM levels named eg.
    dm01.wad.
- * +lumps+ : Miscellaenous lumps.
+ * +lumps+ : Miscellaneous lumps.
  * +musics+ : Music files, in MUS or MIDI format.
  * +patches+ : Patch graphics that are used to compose wall textures.
  * +sounds+ : Sound effects, in WAV format.
@@ -240,7 +240,7 @@ directories to generate the WAD:
    weapons, decorations, etc.)
  * +textures+ : Texture definitions.
 
-=== Idiosynchrosies
+=== Idiosyncrasies
 
 deutex is an old tool and has various quirks that must be worked
 around.  Some of them are listed here.

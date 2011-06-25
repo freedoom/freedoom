@@ -96,9 +96,9 @@ It is sensible to also heed the following guidelines:
     like a mess).  They cannot use the Doom font.
   * Textures should be the same dimensions as the originals.  They
     should be similar but not identical (to avoid IP infringement) --
-    in fact, they shuold be as different as possible while keeping to
+    in fact, they should be as different as possible while keeping to
     the general theme of the texture.  As mentioned above, try to make
-    a concious effort to make the textures visibly different from the
+    a conscious effort to make the textures visibly different from the
     originals.  Critically, the textures should tile in the same way as
     the originals.
   * Some textures contain the letters UAC or references to UAC; this is
@@ -147,7 +147,7 @@ example, explaining what part of the map was broken).  See commit
 49dc6ca861d4b85ca16b219941ecb86d3e172ac1 for an example.  Sign your
 comments with +git commit -s+, these leaves a trail of whose hands a
 commit went through and could be useful for some purposes; git alone can
-give an indication of up to two people, however the AUTHOR/COMMITER
+give an indication of up to two people, however the AUTHOR/COMMITTER
 fields are not quite reliable or flexible enough for the same
 information.
 
