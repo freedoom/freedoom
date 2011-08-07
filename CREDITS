@@ -667,3 +667,7 @@ D: levels
 F: mithran_denizen
 S: Mithran Denizen
 D: sprites
+
+F: z86
+S: Z86
+D: sprites
