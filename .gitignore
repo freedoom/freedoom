@@ -17,3 +17,4 @@ textures/freedm/texture1.txt
 textures/texture1.txt
 wads/*.wad
 wad*.txt
+*.bak
