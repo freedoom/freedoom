@@ -2413,6 +2413,7 @@ STARTAN2    		128	128
 STARTAN3    		128	128
 *	  SW19_2		0	0
 *	  SW19_1		64	0
+#ifdef DOOM2
 STEP1       		32	16
 *	  STEP04		0	0
 *	  STEP05		0	8
@@ -2422,6 +2423,14 @@ STEP2       		32	16
 STEP3       		32	16
 *	  STEP05		0	8
 *	  STEP05		0	0
+#else
+STEP1       		32	8
+*	  STEP04		0	0
+STEP2       		32	8
+*	  STEP03		0	0
+STEP3       		32	8
+*	  STEP05		0	0
+#endif
 STEP4       		32	16
 *	  STEP06		0	8
 *	  STEP06		0	0
