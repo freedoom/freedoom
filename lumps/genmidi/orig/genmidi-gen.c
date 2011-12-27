@@ -83,6 +83,19 @@ static void write_sbi_data(FILE *fstream, unsigned char *data)
         fputc(0, fstream);
 }
 
+static int is_null_instr(struct opl_operators *instrument)
+{
+	int i;
+
+	for (i = 0; i < 10; ++i) {
+		if (instrument->ops[i] != 0x00) {
+			return 0;
+		}
+	}
+
+	return 1;
+}
+
 static void write_instrument(FILE *fstream, 
                              struct opl_operators *instrument,
                              int percussion)
@@ -101,7 +114,12 @@ static void write_instrument(FILE *fstream,
 
         fputc(0x00, fstream);
         fputc(0x80, fstream);           // finetune
-        fputc(0x00, fstream);           // fixed note
+
+	if (is_null_instr(instrument)) { // fixed note
+		fputc(0x00, fstream);
+	} else {
+		fputc(0x10, fstream);
+	}
 
         write_sbi_data(fstream, instrument->ops);
         write_sbi_data(fstream, instrument->ops + 11);
@@ -143,7 +161,7 @@ static void output_genmidi(char *filename)
 
         write_header(fstream);
 
-        write_instrument_data(fstream, opl3_instrs);
+        write_instrument_data(fstream, opl2_instrs);
         write_instrument_names(fstream, genmidi_instr_names);
 
         fclose(fstream);
