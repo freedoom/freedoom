@@ -17,3 +17,5 @@ force:
 
 clean:
 	make -C cph/misc-lumps clean
+	make -C genmidi clean
+
