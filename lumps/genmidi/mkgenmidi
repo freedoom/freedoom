@@ -1,0 +1,104 @@
+
+from instrument import NullInstrument
+import struct
+import sys
+
+GENMIDI_HEADER = "#OPL_II#"
+
+FLAG_FIXED_PITCH = 0x0001
+FLAG_TWO_VOICE   = 0x0004
+
+KSL_MASK = 0xc0
+VOLUME_MASK = 0x3f
+
+# Order of fields in GENMIDI data structures.
+
+GENMIDI_FIELDS = [
+        "m_am_vibrato_eg",
+        "m_attack_decay",
+        "m_sustain_release",
+        "m_waveform",
+        "m_ksl",
+	"m_volume",
+        "feedback_fm",
+        "c_am_vibrato_eg",
+        "c_attack_decay",
+        "c_sustain_release",
+        "c_waveform",
+        "c_ksl",
+	"c_volume",
+	"null",
+	"note_offset"
+]
+
+# Encode a single voice of an instrument to binary.
+
+def encode_voice(data, offset):
+	result = dict(data)
+
+	result["m_ksl"] = data["m_ksl_volume"] & KSL_MASK
+	result["m_volume"] = data["m_ksl_volume"] & VOLUME_MASK
+	result["c_ksl"] = data["c_ksl_volume"] & KSL_MASK
+	result["c_volume"] = data["c_ksl_volume"] & VOLUME_MASK
+
+	result["null"] = 0
+	result["note_offset"] = offset
+
+	return struct.pack("<BBBBBBBBBBBBBBh",
+	                   *map(lambda key: result[key], GENMIDI_FIELDS))
+
+# Encode an instrument to binary.
+
+def encode_instrument(instrument):
+	flags = 0
+
+	instr1_data = encode_voice(instrument.voice1, instrument.offset1)
+
+	if instrument.voice2 is not None:
+		flags |= FLAG_TWO_VOICE
+		instr2_data = encode_voice(instrument.voice2,
+		                           instrument.offset2)
+	else:
+		instr2_data = encode_voice(NullInstrument.voice1, 0)
+
+	if instrument.fixed_note is not None:
+		flags |= FLAG_FIXED_PITCH
+		fixed_note = instrument.fixed_note
+	else:
+		fixed_note = 0
+
+	header = struct.pack("<hBB", flags, 128, fixed_note)
+
+	return header + instr1_data + instr2_data
+
+def encode_instruments():
+	result = []
+
+	for instrument in INSTRUMENTS + PERCUSSION:
+		result.append(encode_instrument(instrument))
+
+	return b"".join(result)
+
+def encode_instrument_names():
+	result = []
+
+	for instrument in INSTRUMENTS + PERCUSSION:
+		result.append(struct.pack("32s", instrument.voice1["name"]))
+
+	return b"".join(result)
+
+def encode_genmidi():
+	header = struct.pack("%is" % len(GENMIDI_HEADER), GENMIDI_HEADER)
+
+	return header + encode_instruments() + encode_instrument_names()
+
+if len(sys.argv) != 2:
+	print >> sys.stderr, "Usage: %s <filename>" % sys.argv[0]
+	sys.exit(-1)
+
+from config import INSTRUMENTS, PERCUSSION
+
+f = open(sys.argv[1], "w")
+f.write(encode_genmidi())
+f.close()
+

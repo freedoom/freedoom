@@ -73,12 +73,12 @@ def load_instrument(filename):
 
 class Instrument:
 	def __init__(self, file1, file2=None, off1=0, off2=0, note=None):
-		self.instr1 = load_instrument(file1)
+		self.voice1 = load_instrument(file1)
 
 		if file2 is not None:
-			self.instr2 = load_instrument(file2)
+			self.voice2 = load_instrument(file2)
 		else:
-			self.instr2 = None
+			self.voice2 = None
 
 		self.fixed_note = note
 		self.offset1 = off1
