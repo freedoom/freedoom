@@ -1,0 +1,4 @@
+
+genmidi.lmp:
+	./mkgenmidi $@
+
