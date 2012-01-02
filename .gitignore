@@ -18,3 +18,4 @@ textures/texture1.txt
 wads/*.wad
 wad*.txt
 *.bak
+*.pyc
