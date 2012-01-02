@@ -45,6 +45,15 @@
 #
 #   Instrument("file1.sbi", "file2.sbi")
 #
+# To tune the instruments, it's possible to apply an offset to the notes
+# that are played. For example, to force all notes down by one octave:
+#
+#   Instrument("file1.sbi", off1=-12)
+#
+# This can be controlled individually for double-voice instruments, eg.
+#
+#   Instrument("file1.sbi", "file2.sbi", off1=-12, off2=+6)
+#
 # When an instrument is played, the note usually comes from the MIDI
 # event. Some instruments (especially percussion) always play the same
 # note. To specify a fixed note, do this:
