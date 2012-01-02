@@ -17,11 +17,12 @@
 # event. Some instruments (especially percussion) always play the same
 # note. To specify a fixed note, do this:
 #
-#   Instrument("filename.sbi", note=16)
+#   Instrument("filename.sbi", note=On5.B)
 #
-# (Where the value is the MIDI note number)
+# Value is a MIDI note number; see midi.py for constant definitions.
 
 from instrument import Instrument, NullInstrument
+from midi import *
 
 # General MIDI instruments:
 
@@ -197,17 +198,17 @@ PERCUSSION = [
 	NullInstrument,                         # TODO - #67 High Agogo
 	NullInstrument,                         # TODO - #68 Low Agogo
 	NullInstrument,                         # TODO - #69 Cabasa
-	Instrument("perc70.sbi", note=16),      # #70 Maracas
-	Instrument("perc71.sbi", note=16),      # #71 Short Whistle
-	Instrument("perc72.sbi", note=16),      # #72 Long Whistle
-	Instrument("perc73.sbi", note=16),      # #73 Short Guiro
-	Instrument("perc74.sbi", note=16),      # #74 Long Guiro
-	Instrument("perc75.sbi", note=16),      # #75 Claves
-	Instrument("perc76.sbi", note=16),      # #76 Hi Wood Block
-	Instrument("perc77.sbi", note=16),      # #77 Low Wood Block
-	Instrument("perc78.sbi", note=16),      # #78 Mute Cuica
-	Instrument("perc79.sbi", note=16),      # #79 Open Cuica
-	Instrument("perc80.sbi", note=16),      # #80 Mute Triangle
-	Instrument("perc81.sbi", note=16),      # #81 Open Triangle
+	Instrument("perc70.sbi", note=On5.E),   # #70 Maracas
+	Instrument("perc71.sbi", note=On5.E),   # #71 Short Whistle
+	Instrument("perc72.sbi", note=On5.E),   # #72 Long Whistle
+	Instrument("perc73.sbi", note=On5.E),   # #73 Short Guiro
+	Instrument("perc74.sbi", note=On5.E),   # #74 Long Guiro
+	Instrument("perc75.sbi", note=On5.E),   # #75 Claves
+	Instrument("perc76.sbi", note=On5.E),   # #76 Hi Wood Block
+	Instrument("perc77.sbi", note=On5.E),   # #77 Low Wood Block
+	Instrument("perc78.sbi", note=On5.E),   # #78 Mute Cuica
+	Instrument("perc79.sbi", note=On5.E),   # #79 Open Cuica
+	Instrument("perc80.sbi", note=On5.E),   # #80 Mute Triangle
+	Instrument("perc81.sbi", note=On5.E),   # #81 Open Triangle
 ]
 
