@@ -1,0 +1,144 @@
+= The dark and forgotten art of GENMIDI
+
+Doom's music consists (effectively) of MIDI music files. MIDI is an odd
+beast. The standard defines a set of 128 common instruments that must
+be supported by MIDI playback systems. For example, instrument #10 is
+``Glockenspiel''. You can think of them like the instrument presets on
+an electronic keyboard. You can find a full list of instruments
+https://secure.wikimedia.org/wikipedia/en/wiki/General_MIDI[on Wikipedia].
+
+Modern synthesizers, keyboards and operating systems with MIDI playback
+capability use recorded samples of real musical instruments, so when
+the MIDI file specifies ``Glockenspiel'' as the instrument, you hear
+notes from a real glockenspiel playing the song. But Doom is from an
+older, more primitive age.
+
+Computers in the early '90s (at least, the ones that had sound cards)
+often had a SoundBlaster-compatible sound card. As well as the digital
+playback functionality that provides the sound effects in Doom, these
+cards also had a YM3812 (OPL2) or YMF262 (OPL3) chip that was used for
+music playback. These are FM synthesis chips designed and made by Yamaha
+for their range of electronic keyboards.
+
+Back then, music playback with samples was difficult (or at least
+expensive / CPU intensive), so FM synthesis provided a more primitive
+alternative. By generating two waves and modulating one with the other,
+it's possible to create noises that at least vaguely resemble real
+musical instruments.
+
+The OPL2 could generate 9 simultaneous voices simultaneously. You can
+think of each of these voices as being like a noise-making box with a
+bunch of knobs on the front to control the sound. Turn the knobs to
+one set of settings and the noise that comes out sounds like a
+Glockenspiel, change the settings and it sounds like a bass guitar or
+a snare drum instead.
+
+These ``knob settings'' are commonly stored in .sbi instrument files.
+Looking online you can find huge collections of .sbi files created back
+when people still actually used them.
+
+To play back MIDI music using an OPL chip, you need a bank of instrument
+data - effectively, instrument data for each instrument in the General
+MIDI set. Doom uses an IWAD lump named GENMIDI that contains exactly
+this - effectively 175 SBI files merged together (128 main instruments
++ 47 percussion effects).
+
+It turns out that Doom's instrument data is a particularly good set.
+Freedoom is using a set of instruments that comes from OpenBSD's kernel,
+which isn't so good. So this directory has a script that builds a
+GENMIDI lump out of individual SBI files, the idea being that they can
+individually be replaced with better ones to improve it.
+
+== Editing instruments
+
+First of all, make sure you follow the same rules as any other Freedoom
+submissions. DO NOT USE SBI FILES OFF WEBSITES. Everything has to be
+completely original content.
+
+Lots of editors exist for OPL instrument data. Probably the most powerful
+one out there is http://www.adlibtracker.net/[AdlibTracker2].
+AT2 is actually a tracker for making songs, but it has an instrument
+editor built-in. I'll give some instructions for how to use this.
+
+First of all, modern computers don't have an OPL chip, so you'll need to
+use http://www.dosbox.com/[DOSbox], which can emulate one. You need to do
+this even if you're using Windows. Download a copy of AT2 off the website
+and a copy of DOSbox, and get the one running in the other.
+
+Once you've opened up AT2, press Ctrl-I to bring up the instrument
+control panel. You should see a list of instruments, which will
+currently be empty. It's probably best to start by loading an existing
+instrument file and editing it, so press Ctrl-L to load an instrument
+into the first slot. Find one of the existing SBI files that you want
+to improve and press enter to select it; you should see the instrument
+appear next to ``iNS_01'' in the first slot.
+
+To hear what the instrument currently sounds like, you can use the keys
+on your keyboard like a piano:
+
+   S D   G H J    2 3   5 6 7
+  Z X C V B N M  Q W E R T Y U
+
+To improve the current instrument settings, press tab to bring up the
+instrument editor. You'll get a panel with a wide range of different
+settings to play with, and you can still use the ``piano keys'' to hear
+what effect your changes are having. Press enter to switch between
+editing the carrier and the modulator - they both affect the sound in
+different ways.
+
+One thing to be aware of when editing instruments is that you should
+only use the first four waveform types (Sine, Half-Sine, Abs-Sine,
+Pulse-Sine). Do NOT use the last four waveform types (Sine (EPO),
+Abs-Sine (EPO), Square, Derived square). The reason is that the full
+eight are only supported by the OPL3 chip - the OPL2 only suported
+the first four. You will get a warning message later if you use these.
+
+When it comes to saving your changes, press Ctrl-S and type a filename
+for your new file. There's a slight catch here in that although AT2 can
+load SBI format instrument files, it can only save in its own ``a2i''
+instrument format. Fortunately we can convert back into SBI format
+later.
+
+== Generating a new GENMIDI
+
+Now you've made your snazzy new instrument, you'll want to hook it into
+the GENMIDI lump and try it out in-game. Put your .a2i file into the
+lumps/genmidi/instruments directory, then open up config.py in your
+favorite text editor.
+
+You'll see two lists of instrument definitions, for the main instruments
+and for percussion. There are some instructions at the top of the file
+for how to write these definitions, so I won't repeat them here. But if
+your file is named eg. snazzy.a2i, you'll want to write something like:
+
+  Instrument("snazzy.a2i"),
+
+If you're editing a percussion instrument, make sure that you remember
+to specify a note you want to play. For example, for 'C#' in Octave -3:
+
+  Instrument("snazzy.a2i", note=On3.Cs)
+
+Once you're done, save your changes and type this to build a new GENMIDI
+for testing:
+
+  python mkgenmidi genmidi.lmp
+
+To try it out, get a source port with OPL emulation support (eg. Chocolate
+Doom) and add genmidi.lmp on the command line, eg.
+
+  chocolate-doom -file genmidi.lmp
+
+== Converting back to SBI
+
+Once you have your finished instrument, it's probably best if you convert
+from the rather ugly .a2i format into the more common .sbi format. More
+tools support .sbi and some people might prefer to use other instrument
+editors instead of AT2. There's a useful script included that will do
+exactly this. Specify the name of the a2i file and the name of the
+desired output file, as follows:
+
+  python a2i-to-sbi snazzy.a2i snazzy.sbi
+
+Don't forget to update config.py to use the .sbi version of the file
+instead of the .a2i version!
+
