@@ -28,62 +28,16 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# ----------------------------------------------------------------------
-#
-# Module to load Creative SBI OPL instrument files.
-#
 
-import struct
+import a2i_file
+import sbi_file
 import sys
 
-HEADER_VALUE = "SBI\x1a"
+if len(sys.argv) != 3:
+	print >> sys.stderr, "Usage: %s <input filename> <output filename>" \
+	                     % sys.argv[0]
+	sys.exit(-1)
 
-FIELDS = [
-	"m_am_vibrato_eg",
-	"c_am_vibrato_eg",
-	"m_ksl_volume",
-	"c_ksl_volume",
-	"m_attack_decay",
-	"c_attack_decay",
-	"m_sustain_release",
-	"c_sustain_release",
-	"m_waveform",
-	"c_waveform",
-	"feedback_fm"
-]
-
-def read(filename):
-	f = open(filename)
-	data = f.read()
-	f.close()
-
-	header, name = struct.unpack("4s32s", data[0:36])
-
-	if header != HEADER_VALUE:
-		raise Exception("Invalid header for SBI file!")
-
-	instr_data = data[36:]
-	result = { "name": name.rstrip("\0") }
-
-	for i in range(len(FIELDS)):
-		result[FIELDS[i]], = struct.unpack("B", instr_data[i:i+1])
-
-	return result
-
-def write(filename, data):
-	f = open(filename, 'w')
-
-	f.write(struct.pack("4s32s", HEADER_VALUE, data["name"]))
-
-	for field in FIELDS:
-		f.write(struct.pack("B", data[field]))
-	for x in range(16 - len(FIELDS)):
-		f.write(struct.pack("B", 0))
-
-	f.close()
-
-if __name__ == "__main__":
-	for filename in sys.argv[1:]:
-		print filename
-		print read(filename)
+data = a2i_file.read(sys.argv[1])
+sbi_file.write(sys.argv[2], data)
 
