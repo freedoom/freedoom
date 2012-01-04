@@ -1,8 +1,8 @@
 = The dark and forgotten art of GENMIDI
 
 Doom's music consists (effectively) of MIDI music files. MIDI is an odd
-beast. The standard defines a set of 128 common instruments that must
-be supported by MIDI playback systems. For example, instrument #10 is
+beast. The General MIDI standard defines a set of 128 common instruments
+supported by MIDI playback systems. For example, instrument #10 is
 ``Glockenspiel''. You can think of them like the instrument presets on
 an electronic keyboard. You can find a full list of instruments
 https://secure.wikimedia.org/wikipedia/en/wiki/General_MIDI[on Wikipedia].
