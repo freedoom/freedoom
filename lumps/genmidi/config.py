@@ -71,8 +71,10 @@ INSTRUMENTS = [
 	Instrument("instr001.sbi"),             # #001 - Acoustic Grand Piano
 	Instrument("instr002.sbi"),             # #002 - Bright Acoustic Piano
 	Instrument("instr003.sbi"),             # #003 - Electric Grand Piano
-	Instrument("instr004.sbi"),             # #004 - Honky-tonk Piano
-	Instrument("instr005.sbi"),             # #005 - Electric Piano 1
+	Instrument("instr004.sbi",              # #004 - Honky-tonk Piano
+	           "instr004-2.sbi"),
+	Instrument("instr005.sbi",              # #005 - Electric Piano 1
+	           "instr005-2.sbi"),
 	Instrument("instr006.sbi"),             # #006 - Electric Piano 2
 	Instrument("instr007.sbi"),             # #007 - Harpsichord
 	Instrument("instr008.sbi"),             # #008 - Clavi
