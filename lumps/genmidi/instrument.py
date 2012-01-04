@@ -58,6 +58,13 @@ def check_opl2(filename, data):
 		             data["c_waveform"])
 
 def load_instrument(filename):
+
+	# As a hack, a literal dictionary of the values can be specified
+	# in place of a filename.
+
+	if isinstance(filename, dict):
+		return filename
+
 	filename = os.path.join("instruments", filename)
 
 	if filename.endswith(".a2i"):
