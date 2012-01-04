@@ -135,7 +135,7 @@ def write(filename, instruments):
 
 	f.close()
 
-def decode_voice(data):
+def decode_voice(data, name):
 
 	fields = struct.unpack("<BBBBBBBBBBBBBBh", data)
 
@@ -145,19 +145,20 @@ def decode_voice(data):
 
 	result["m_ksl_volume"] = result["m_ksl"] | result["m_volume"]
 	result["c_ksl_volume"] = result["c_ksl"] | result["c_volume"]
+	result["name"] = name.rstrip("\0")
 
 	return result
 
 def decode_instrument(data, name):
 	flags, finetune, fixed_note = struct.unpack("<hBB", data[0:4])
 
-	voice1 = decode_voice(data[4:20])
+	voice1 = decode_voice(data[4:20], name)
 	offset1 = voice1["note_offset"]
 
 	# Second voice?
 
 	if (flags & FLAG_TWO_VOICE) != 0:
-		voice2 = decode_voice(data[20:])
+		voice2 = decode_voice(data[20:], name)
 		offset2 = voice2["note_offset"]
 	else:
 		voice2 = None
