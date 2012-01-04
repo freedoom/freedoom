@@ -671,3 +671,9 @@ D: sprites
 F: z86
 S: Z86
 D: sprites
+
+F: horncomposer
+N: Matt Cadirao
+S: horncomposer
+D: genmidi instruments
+

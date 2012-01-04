@@ -204,31 +204,31 @@ INSTRUMENTS = [
 # specified.
 
 PERCUSSION = [
-	NullInstrument,                         # TODO - #35 Acoustic Bass Drum
-	NullInstrument,                         # TODO - #36 Bass Drum 1
-	NullInstrument,                         # TODO - #37 Side Stick
-	NullInstrument,                         # TODO - #38 Acoustic Snare
-	NullInstrument,                         # TODO - #39 Hand Clap
-	NullInstrument,                         # TODO - #40 Electric Snare
-	NullInstrument,                         # TODO - #41 Low Floor Tom
-	NullInstrument,                         # TODO - #42 Closed Hi Hat
-	NullInstrument,                         # TODO - #43 High Floor Tom
-	NullInstrument,                         # TODO - #44 Pedal Hi-Hat
-	NullInstrument,                         # TODO - #45 Low Tom
-	NullInstrument,                         # TODO - #46 Open Hi-Hat
-	NullInstrument,                         # TODO - #47 Low-Mid Tom
-	NullInstrument,                         # TODO - #48 Hi-Mid Tom
-	NullInstrument,                         # TODO - #49 Crash Cymbal 1
-	NullInstrument,                         # TODO - #50 High Tom
-	NullInstrument,                         # TODO - #51 Ride Cymbal 1
-	NullInstrument,                         # TODO - #52 Chinese Cymbal
-	NullInstrument,                         # TODO - #53 Ride Bell
-	NullInstrument,                         # TODO - #54 Tambourine
+	Instrument("perc35.sbi", note=On4.A),   # #35 Acoustic Bass Drum
+	Instrument("perc36.sbi", note=On4.A),   # #36 Bass Drum 1
+	Instrument("perc37.sbi", note=On1.C),   # #37 Side Stick
+	Instrument("perc38.sbi", note=On3.Gs),  # #38 Acoustic Snare
+	Instrument("perc39.sbi", note=O3.C),    # #39 Hand Clap
+	Instrument("perc40.sbi", note=On1.Cs),  # #40 Electric Snare
+	Instrument("perc41.sbi", note=On3.D),   # #41 Low Floor Tom
+	Instrument("perc42.sbi", note=O1.Gs),   # #42 Closed Hi Hat
+	Instrument("perc43.sbi", note=On3.Gs),  # #43 High Floor Tom
+	Instrument("perc44.sbi", note=O1.Gs),   # #44 Pedal Hi-Hat
+	Instrument("perc45.sbi", note=On2.C),   # #45 Low Tom
+	Instrument("perc46.sbi", note=O1.Gs),   # #46 Open Hi-Hat
+	Instrument("perc47.sbi", note=On2.Fs),  # #47 Low-Mid Tom
+	Instrument("perc48.sbi", note=On2.A),   # #48 Hi-Mid Tom
+	Instrument("perc49.sbi", note=On1.C),   # #49 Crash Cymbal 1
+	Instrument("perc50.sbi", note=On1.Cs),  # #50 High Tom
+	Instrument("perc51.sbi", note=On1.B),   # #51 Ride Cymbal 1
+	Instrument("perc52.sbi", note=On1.C),   # #52 Chinese Cymbal
+	Instrument("perc53.sbi", note=O1.E),    # #53 Ride Bell
+	Instrument("perc54.sbi", note=O0.E),    # #54 Tambourine
 	NullInstrument,                         # TODO - #55 Splash Cymbal
 	NullInstrument,                         # TODO - #56 Cowbell
-	NullInstrument,                         # TODO - #57 Crash Cymbal 2
+	Instrument("perc57.sbi", note=On1.As),  # #57 Crash Cymbal 2
 	NullInstrument,                         # TODO - #58 Vibraslap
-	NullInstrument,                         # TODO - #59 Ride Cymbal 2
+	Instrument("perc59.sbi", note=O0.E),    # #59 Ride Cymbal 2
 	NullInstrument,                         # TODO - #60 Hi Bongo
 	NullInstrument,                         # TODO - #61 Low Bongo
 	NullInstrument,                         # TODO - #62 Mute Hi Conga
