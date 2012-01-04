@@ -37,6 +37,7 @@
 import genmidi
 import sbi_file
 import sys
+import midi
 
 def print_instr_def(filename, filename2, instr):
 	result = "Instrument(\"%s\"" % filename
@@ -45,7 +46,7 @@ def print_instr_def(filename, filename2, instr):
 		result += (", \"%s\"" % filename2)
 
 	if instr.fixed_note is not None:
-		result += (", note=%i" % instr.fixed_note)
+		result += (", note=%s" % midi.def_for_note(instr.fixed_note))
 	if instr.offset1 != 0:
 		result += (", off1=%i" % instr.offset1)
 	if instr.offset2 != 0:

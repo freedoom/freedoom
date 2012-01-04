@@ -71,3 +71,14 @@ O3  = Octave(96)     # Octave 3
 O4  = Octave(108)    # Octave 4
 O5  = Octave(120)    # Octave 5
 
+# Given a MIDI note number, return a note definition in terms of the
+# constants above.
+
+def def_for_note(note):
+	OCTAVES = [ "On5", "On4", "On3", "On2", "On1",
+	            "O0", "O1", "O2", "O3", "O4", "O5" ]
+	NOTES = [ "C", "Cs", "D", "Ds", "E", "F", "Fs",
+	          "G", "Gs", "A", "As", "B" ]
+
+	return "%s.%s" % (OCTAVES[note / 12], NOTES[note % 12])
+
