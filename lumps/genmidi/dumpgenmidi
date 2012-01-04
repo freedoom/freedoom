@@ -34,33 +34,52 @@
 # and output a config to stdout.
 #
 
+import os
+import sys
+
 import genmidi
 import sbi_file
-import sys
 import midi
+import sbi_file
 
-def print_instr_def(filename, filename2, instr):
-	result = "Instrument(\"%s\"" % filename
+def is_null_voice(voice_data):
+	for f in sbi_file.FIELDS:
+		if voice_data[f] != 0:
+			return False
+
+	return True
+
+def instr_to_str_def(filename, filename2, instr):
+	if is_null_voice(instr.voice1):
+		return "NullInstrument"
+
+	args = [ "\"%s\"" % filename ]
 
 	if instr.voice2 is not None:
-		result += (", \"%s\"" % filename2)
+		args.append("\"%s\"" % filename2)
 
 	if instr.fixed_note is not None:
-		result += (", note=%s" % midi.def_for_note(instr.fixed_note))
+		args.append("note=%s" % midi.def_for_note(instr.fixed_note))
 	if instr.offset1 != 0:
-		result += (", off1=%i" % instr.offset1)
+		args.append("off1=%i" % instr.offset1)
 	if instr.offset2 != 0:
-		result += (", off2=%i" % instr.offset2)
+		args.append("off2=%i" % instr.offset2)
 
-	result += ")"
+	return "Instrument(%s)" % (", ".join(args))
 
-	print "\t%s," % result
+def print_instr_def(filename, filename2, instr):
+	print "\t%s," % instr_to_str_def(filename, filename2, instr)
 
 def dump_instrument(filename, filename2, instr):
-	sbi_file.write(filename, instr.voice1)
+
+	if is_null_voice(instr.voice1):
+		return
+
+	sbi_file.write(os.path.join("instruments", filename), instr.voice1)
 
 	if instr.voice2 is not None:
-		sbi_file.write(filename2, instr.voice2)
+		sbi_file.write(os.path.join("instruments", filename2),
+		               instr.voice2)
 
 if len(sys.argv) != 2:
 	print >> sys.stderr, "Usage: %s <filename>" % sys.argv[0]
@@ -75,8 +94,8 @@ print "INSTRUMENTS = ["
 
 for i in range(len(main_instrs)):
 	instr = main_instrs[i]
-	filename = "instruments/instr%03i.sbi" % (i+1)
-	filename2 = "instruments/instr%03i-2.sbi" % (i+1)
+	filename = "instr%03i.sbi" % (i+1)
+	filename2 = "instr%03i-2.sbi" % (i+1)
 	dump_instrument(filename, filename2, instr)
 	print_instr_def(filename, filename2, instr)
 
@@ -86,8 +105,8 @@ print "PERCUSSION = ["
 
 for i in range(len(percussion)):
 	instr = percussion[i]
-	filename = "instruments/perc%02i.sbi" % (i+35)
-	filename2 = "instruments/perc%02i-2.sbi" % (i+35)
+	filename = "perc%02i.sbi" % (i+35)
+	filename2 = "perc%02i-2.sbi" % (i+35)
 	dump_instrument(filename, filename2, instr)
 	print_instr_def(filename, filename2, instr)
 
