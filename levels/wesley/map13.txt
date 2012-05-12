@@ -3,6 +3,81 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
+INFO:
+Level is large,
+  secrets: 4
+  sectors: 1099
+  linedefs: 4017
+  wad size: 695K
+
+  If it has to get smaller then I would have to cut
+  the elevator, or the curved stairs.
+
+  There are still some places where the corner of a
+  building gets clipped, but they have been reduced to
+  the point where it is not worth it any more.
+
+
+PLAY:
+  Non-linear, freestyle.
+  Can attack in at least 3 different ways (5 for experts), by different routes,
+  by running wild, sneaking around, or careful planning.
+  Many monsters roam free and will be encountered unexpectedly.
+  Watch your back. I have got shot in the back so
+  many times I am getting paranoid.
+
+
+Play hints for map13:
+They are not asleep and will come when they hear you.
+Avoid shooting in open areas until you are prepared for the big fight.
+Locate the ammo and health reserves, and be prepared to retreat to them.
+Use the machinery, you do not have to shoot them all.  But you have to get
+to it while you can.
+Choose your attack route and if it proves difficult switch to another.
+There is more than one way into any area, use them all.
+Choose several areas that can be defended, you will need them.
+Too many flaming heads to fight in the open, they will be everywhere.
+Monsters wander about, areas do not stay cleared.
+More will arrive, usually from behind you.
+Watch your back, frequently.
+There are three ways to get out of secret lab, 1) be quick,
+2) hot-wire the door, 3) climb to alternate exit.
+Understanding the war-game theory of interior lines of communication
+will be your advantage.
+
+
+HAS BEEN DONE:
+  Play tested at 1,2,3,4.
+  Finished at level 4.
+  Play tested on Legacy, prboom.
+  Not all combinations tested.
+
+
+HISTORY:
+
+Release Revision 2.6   May 11, 2012
+CHANGES Rev 2.6
+  Fixed crate texture alignment in secure lab.
+  Rebuilt teleport monster pen, so it works in all cases.  Monsters
+  are now allowed to hear sound so they move immediately.  Still
+  provides alternate teleport destinations.
+  Moved some of the monster teleport destinations.  Provided a door
+  from which they could be entering in upper warehouse, and front gate.
+  Lowered height of services building (telephone, power, teleport),
+  and gave it a window.
+  Adjusted lumber pile.
+  Added posts near railroad tracks
+  Made path around building playable as an initial attack path, by
+  moving cacodemons much farther away.
+  Reduced number of cacodemons (12 at skill 4)
+  and pain elementals (4 at skill 4).
+  Improved locker-room secret area.  Infra-glasses are now only
+  available at skill-1, as higher skills can find alternatives.
+  Added support pillars, lab equipment, and details to shallow-pool room (red area),
+  and made it possible to bring fight into the room (reckless but possible).
+  Fixed some ceiling and floor textures in switch niches.
+  Fixed some hidden lines.
+
 Release Revision 2.5   Mar 18, 2012
 CHANGES Rev 2.5
   Added more complexity and details to secure lab.
@@ -81,47 +156,4 @@ CHANGES 1.1:
   Adjusted weapons, ammo.
 
 
-Upload of Aug 24, 2009
-
-HAS BEEN DONE:
-  Play tested at 1,2,3,4.
-  Finished at level 4.
-  Play tested on Legacy, prboom.
-  Not all combinations tested.
-
-
-Level is large,
-  secrets: 4
-  sectors: 1094
-  linedefs: 4830
-
-  If it has to get smaller then I would have to cut
-  the elevator, or the curved stairs.
-
-  There are still some places where the corner of a
-  building gets clipped, but they have been reduced to
-  the point where it is not worth it any more. 
-
-
-Play:
-  Non-linear, freestyle.
-  Can attack in at least 3 different ways, by different routes,
-  by running wild, sneaking around, or careful planning.
-  Many monsters roam free and will be encountered unexpectedly.
-  Watch your back. I have got shot in the back so
-  many times I am getting paranoid.
-
-
-Play hints for map13:
-They are not asleep and will come when they hear you.
-Avoid shooting in open areas until you are prepared for the big fight.
-Locate the ammo and health reserves, and be prepared to retreat to them.
-Use the machinery, you do not have to shoot them all.  But you have to get
-to it while you can.
-Choose your attack route and if it proves difficult switch to another.
-There is more than one way into any area, use them all.
-Choose several areas that can be defended, you will need them.
-Too many flaming heads to fight in the open, they will be everywhere.
-They wander about, areas do not stay cleared.
-More will arrive, usually from behind you.
-Watch your back, frequently.
+Release Revision 0.9.    Aug 24, 2009
