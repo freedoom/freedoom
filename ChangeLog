@@ -1,3 +1,148 @@
+05/12/2012:
+Archfile (3):
+      levels: new e3m6 from Archfile
+      levels: new E2M8 from Archfile
+      sprites: TROO[N-U] imp gib frames from Archfile
+
+Brett "Mechadon" Harrell (1):
+      levels: two new FreeDM maps from Mechadon
+
+Catoptromancy (8):
+      levels: map24 update, reset symlink
+      patches: improved camo4 / camo5 / dirbri1 (plutonia)
+      levels: new FreeDM maps: 21-23
+      levels: fixes for dm{07,10,11,15} from Catoptromancy
+      levels: fixes for dm{{01..06},08,09,12} from Catoptromancy
+      levels: fixes for dm{12,13,14,16,17} from Catoptromancy
+      levels: map12: co-op fix: red door is now D1 stay
+      sprites: reduce height of cyberdemon corpse
+
+Fredrik Johansson (2):
+      sprites: green cross medikit from Fredrik
+      sprites: green cross stimpak from Fredrik
+
+Miguel Suarez Gomez (1):
+      levels: new E1M5 from Z0k
+
+Mike Swanson (2):
+      Merge branch 'master', remote branch 'rjy/pu'
+      levels: replace map24 with e2m2
+
+Mithran Denizen (1):
+      sprites: new plasma gun pickup from Mithran Denizen
+
+Protox (5):
+      levels: new dm27 from Protox
+      levels: updated dm02 from Protox
+      levels: updated E1M9 from Protox
+      levels: completed E1M9 from Protox
+      levels: E2M4: fix lift behind red door
+
+RjY (31):
+      map02: use floor light transfer under exit sign (BondEar)
+      Revert "levels: remove map19, many errors with boom"
+      levels: e3m6: fixes
+      CREDITS: add Archfile
+      textures: fix Doom1 skies
+      levels: e2m8 fixes
+      CREDITS: Wesley Johnson and Ulises "Urric Hammersong" Lozano
+      CREDITS: field consistency fixes
+      sprites: move the berserk box up out of the floor (Catoptromancy)
+      musics: relink d_inter, d_bunny (Catoptromancy)
+      musics: remove unknown links
+      buildcfg: remove a huge block of dead code
+      Sharewarendectomy
+      flats: buildcfg: remove many duplicate entries (Sodaholic)
+      levels: remove spurious D_E3M4 lump from e4m1.wad
+      buildcfg: remove some unnecessary #ifdef ULTDOOMs
+      buildcfg: use real sprites in FreeDM iwad
+      levels: un-coop-dm-ify dm{02,03,09,13,14}
+      Revert "patches: FreeDM a few small patches from Ralphis"
+      levels: map03: trivial fixes
+      levels: map03: trivial fixes (again)
+      CREDITS: update Fredrik's info (from http://fredrikj.net/)
+      Makefile: omit building monster placeholder sprites
+      E2M1: improve METAL1 alignment around sector 108 (BondEar)
+      levels: E1M2: change flat around ceiling computers (Protox)
+      levels: E1M2: fix texture alignment on window opposite blue door
+      patches: apply x offset to M_GD{HIGH,LOW} (shadow1013)
+      .gitignore: ignore Yadex backup files (*.bak)
+      levels: dm02: stop using GRAY4 as a two-sided middle texture
+      levels: e1m1: fix texture alignment on exit switch
+      sprites: tidy up unused revenant sprites and symlinks
+
+SgtCrispy (2):
+      levels: reworked map03 from SgtCrispy
+      levels: map03: update from SgtCrispy
+
+Simon Howard (27):
+      levels: dm{02,03,09,14,15} updated for vanilla compatibility
+      lumps: DEHACKED
+      docs: Minor spelling fixes.
+      textures: Fix STEP1-3 textures in Doom 1.
+      genmidi: Add Python code for reading OPL instruments.
+      genmidi: Move GENMIDI C code to subdirectory.
+      genmidi: Add dumped instrument patches.
+      genmidi: Add config file for GENMIDI builder.
+      genmidi: Add constants for MIDI notes.
+      genmidi: Add copyright headers to Python files.
+      genmidi: Add .pyc files to .gitignore.
+      genmidi: Add option for note offset.
+      genmidi: Add script to make GENMIDI lump.
+      genmidi: Hook GENMIDI script into build.
+      genmidi: Improve GENMIDI Makefile build.
+      genmidi: Add a2i-sbi conversion script.
+      genmidi: Add README for instrument editing.
+      genmidi: Add .gitignore file.
+      genmidi: Split off GENMIDI code into separate file.
+      genmidi: Add GENMIDI dump script.
+      genmidi: Output fixed_note as constant value.
+      genmidi: Add some missing percussion instruments.
+      genmidi: Detect null instruments when dumping.
+      genmidi: Import remaining horncomposer changes.
+      genmidi: Pedantic fix to README
+      genmidi: Fix waveform warnings for some instruments.
+      dmxgus: Add first attempt at GUS config.
+
+Sodaholic (18):
+      sprites: new pool of blood from Sodaholic
+      sprites: updated berserk/medikit/stimpack from Sodaholic
+      sounds: new dspunch from Sodaholic
+      sprites: updated medikit, new stimpack/berserk from Sodaholic
+      sprites: red version of berserk box from Sodaholic
+      sprites: dark red berserk box from Sodaholic
+      sprites: updated green medikit/stimpack from Sodaholic
+      graphics: new skill level strings from Sodaholic
+      sprites: fix TROO* alignment when flipped (Sodaholic)
+      sprites: new Keen cat replacement from Sodaholic
+      sounds: those accompanying Keen replacement, from Sodaholic
+      sprites: imp/caco fireballs from Sodaholic
+      graphics: STBAR: updated ammo counter labels from Sodaholic
+      flats: FLAT10: remove spurious red pixels (Sodaholic)
+      sounds: speed up blazing door sounds (Sodaholic)
+      sounds: new imp claw sound from Sodaholic
+      sounds: new demon sounds from Sodaholic
+      sounds: new chainsaw sounds from Sodaholic
+
+Wesley D. Johnson (7):
+      levels: map09 revision 7 (Feb 3, 2011)
+      levels: map13 revision 2.2 (Feb 6, 2011)
+      sprites: resized revenant from Wesley Johnson
+      levels: map09 revision 10 (Jan 4, 2012)
+      levels: map13 revision 2.5 (Mar 18, 2012)
+      sprites: new pain elemental from Wesley Johnson
+      levels: map13 revision 2.6 (May 11, 2012)
+
+Z86 (2):
+      sprites: new weapon pickups from Z86
+      sprites: edited 4-shells pickup from Z86
+
+nivha & hex11 (1):
+      levels: new dm28.wad by nivha and hex11
+
+skib (1):
+      levels: FreeDM map from skib
+
 01/22/2011
 Andrew Rehberger (1):
       levels: new e2m2 map
