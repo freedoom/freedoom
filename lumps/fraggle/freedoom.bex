@@ -1,6 +1,6 @@
 [STRINGS]
-GOTARMOR = picked up the green armor vest.
-GOTMEGA = picked up the blue armor vest.
+GOTARMOR = picked up a light armor vest.
+GOTMEGA = picked up a heavy armor vest.
 GOTHTHBONUS = got a 1% health bonus.
 GOTARMBONUS = got a 1% armor bonus.
 GOTSTIM = picked up a small health pack.
