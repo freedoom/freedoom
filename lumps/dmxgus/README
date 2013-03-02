@@ -1,0 +1,36 @@
+The script in this directory generates the GUS config file
+(ultramid.ini) which is included in the IWAD as a lump named DMXGUS or
+DMXGUSC.
+
+The GUS config is mostly obsolete nowadays but it's still nice to
+include anyway. The challenge is that each GUS card has a limited
+amount of memory (256, 512, 768 or 1024KB). The GUS drivers come with
+a complete set of patch files for all the General MIDI instruments,
+but there is never enough RAM to fit all of them into the card's
+memory. Patches must therefore be reused for multiple similar-sounding
+instruments.
+
+The config file looks like this (short extract):
+
+    31, 24, 31, 31, 31, gtrharm
+    32, 39, 32, 32, 32, acbass
+    33, 39, 33, 33, 33, fngrbass
+    34, 39, 34, 34, 34, pickbass
+
+The second to fifth columns are the configurations for different
+memory sizes.  In this example, instrument 31 reuses instrument 24's
+patch for the 256KB configuration, but in the 512KB configuration
+there is enough space to load it properly.
+
+The DMXGUS lumps used in the original Doom IWADs did not have a great
+deal of attention paid to them, which lead some people to develop
+optimized config files (see eg. GUS1M.WAD in idgames). The approach
+taken here is to generate the configuration programatically:
+statistics have been gathered about the use of different instruments
+by analyzing the music found in various well-known WAD files. This is
+used to prioritize which patches to load.
+
+The generated config is still not great and could do with some
+improvement. To improve the config, the best thing to tweak is the
+similarity groups in config.py.
+
