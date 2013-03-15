@@ -3,8 +3,27 @@ Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
-Release Revision 10.   Jan 4, 2012
+Release Revision 11.   Mar 6, 2013
 
+CHANGES Rev11:
+  Created entrance area with connecting tunnels.
+  Converted odd rooms to electrical rooms near entrance and exit.
+  River gorge reworked, lengthened, with added dam.
+  Added posts near waste water pipe.
+  Missing bridge is now rubble in river.
+  Cave area reworked extensively.
+  Some of cave area converted to former mining, now tailing dumping.
+  Added dirt pushing machine.
+  Clarified areas of ore rock, and waste rock, and bedrock.
+  Improved lifts and added tracks.
+  Fixed textures in mine chief office.
+  Moved blue weapons storage room.
+  Added toolbox, parts washer, machinery, in maintenance.
+  Added some trashbins.
+  Added a few more zombies in mine.
+  Added two vending machines in waterworks office.
+  Moved lair to conference room, converting former lair
+  to an electrical room.
 CHANGES Rev10:
   Added lights in mine passages and mine floor.
   Adjusted lighting levels in all mine areas.
@@ -98,14 +117,14 @@ CHANGES Rev2:
   Removed trees and plants.
 
 HAS BEEN DONE:
-  Play tested at levels 4,3.
+  Play tested at levels 4,3,2,1.
   Finished at level 4,3.
   Play tested on Legacy, prboom.
 
 Level is medium size.
   secrets: 4
-  sectors: 663
-  linedefs: 3740
+  sectors: 766
+  linedefs: 4259
   single, 4 coop, 9 deathmatch starts
 
 Play:
@@ -114,8 +133,9 @@ Play:
   Other keys help with ammo and weapons.
 
 Features:
-  A mining area.
+  A multi-level mine.
   Tunnels through the area have been cut by the mining.
+  River gorge.
   The pit and buildings are flooded, and some battles are in and under muddy water.
   Exit area is in flooded water treatment plant.
 
