@@ -6,9 +6,9 @@ john <obfuscate> son 24 12 @ usgo <dot> net
 INFO:
 Level is large,
   secrets: 4
-  sectors: 1099
-  linedefs: 4017
-  wad size: 695K
+  sectors: 1103
+  linedefs: 4833
+  wad size: 697K
 
   If it has to get smaller then I would have to cut
   the elevator, or the curved stairs.
@@ -43,17 +43,30 @@ Watch your back, frequently.
 There are three ways to get out of secret lab, 1) be quick,
 2) hot-wire the door, 3) climb to alternate exit.
 Understanding the war-game theory of interior lines of communication
-will be your advantage.
+will be to your advantage.
 
 
 HAS BEEN DONE:
   Play tested at 1,2,3,4.
-  Finished at level 4.
+  Finished at level 1,2,3,4.
   Play tested on Legacy, prboom.
-  Not all combinations tested.
-
 
 HISTORY:
+
+Release Revision 2.7   Mar 11, 2013
+CHANGES Rev 2.7
+  Move controls for upper conveyor to upper platform.
+  Pit ramp removed, use raise pit control to escape.
+  Narrow covered ramp to warehouse, and randomize riser texture alignment.
+  Align textures in barred guard window.
+  Fix flat textures under doors.
+  Adjust light and sectors in lower lab.
+  Move treatment control panel to wall, and make higher so do not climb on it.
+  Added a desk and some boxes to back rooms.
+  Added a couple trashbins.
+  Moved a monster teleport point to put monster in player path.
+  Make some pillars visible in map.
+  Added few more zombies.
 
 Release Revision 2.6   May 11, 2012
 CHANGES Rev 2.6
