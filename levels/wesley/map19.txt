@@ -1,0 +1,51 @@
+MAP19 for FreeDoom
+
+Original Author: ???
+Was left unfinished, fixed to make playable for release by Wesley D. Johnson
+john <obfuscate> son 24 12 @ usgo <dot> net
+
+
+Release Revision 8.   Mar 6, 2013
+
+CHANGES Rev8, by Wesley Johnson:
+Fixed secret floor on lower level so trigger and floor move together.
+Added switch behind secret floor to raise secret wall.
+Added block behind secret wall to aid in escape, in case get in past wall
+without lowering floor.
+Raised top level of middle tower, and added steps.  Crenelated the
+outer wall of this tower.
+Resized secret door to riverside tower passage, and changed to
+a paneled texture.  Added a bookcase to match.
+Removed floating covers over outdoor teleports because of the drawing errors
+when viewing taller towers over them.
+
+CHANGES Rev6, by Wesley Johnson:
+Fixed doors to operate using the Boom skull keys.
+Many switches were missing tag numbers.  Had to implement something.
+Some switch operations would not work and had to devise something else.
+Made all switches operate something.
+Made all areas reachable.
+Gave the castle a proper entrance, which was complicated to implement, as it
+required two silent teleports to pass the player under the occupied
+wall and tower defenses.  However, it came out rather nice.
+It required an annoying door that appears to snap open when player
+teleports, but have to hide the missing passageway from view.  Requires more work.
+Provided a road to give rationale to the extra wall and tower, as such
+were built to control road and river trade routes.
+Provided underground secret passage where existing passage was
+passing through a collapsed part of wall.  Gave the secret a keyed
+door because play testing showed it was too easy to go to first thing.
+Gave the area a river to keep player away from sky texture,  and a hill to hide
+bottom of sky texture (which was showing).  Not totally fixed in non-play areas.
+Fixed texture alignments throughout castle area.
+Moved some special items around for playability.
+This is enough to make it playable in the FreeDoom release without
+appearing half-done.
+
+
+
+Features:
+  Castle theme.
+  Multiple layers implemented using silent teleport.
+
+
