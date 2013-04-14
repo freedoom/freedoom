@@ -53,7 +53,23 @@ HAS BEEN DONE:
 
 HISTORY:
 
-Release Revision 2.7   Mar 11, 2013
+Release Revision 2.8   April 13, 2013
+CHANGES Rev 2.8
+  Fixed HOM on pit motor box.
+  Changed lift side textures from black to bronze textures.
+  Added another location for teleport monsters, so they don't get stuck.
+  Raised service door in back of secret lab.  Smaller but easier to use.
+  Finished pipe connection in tunnels.  Added pipe that crosses tunnel.
+  Added crate and boxes in second railroad dock.
+  Added cabinet in front entrance.
+  Enlarged restroom, and added cabinet.
+  Moved health from restroom serviceway to office.  Narrowed serviceway.
+  Made desk and couch larger. Prevent monsters from climbing on them.
+  Added easy barrels in front dock.
+  Moved suits farther apart in tech. pillar room.
+  Fixed texture alignments in front porch, tunnels, and warehouse ramp.
+
+Release Revision 2.7   March 11, 2013
 CHANGES Rev 2.7
   Move controls for upper conveyor to upper platform.
   Pit ramp removed, use raise pit control to escape.
