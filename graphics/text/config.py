@@ -121,7 +121,7 @@ red_graphics = {
 	'm_setup': 'Setup',
 	'm_keybnd': 'Key Bindings',
 	'm_weap': 'Weapons',
-	'm_stat': 'Status Bar - HUD',
+	'm_stat': 'Status Bar/HUD',
 	'm_auto': 'Automap',
 	'm_enem': 'Enemies',
 	'm_mess': 'Messages',
@@ -143,7 +143,7 @@ red_graphics = {
 	'm_gset': 'game settings',
 	'm_hud': 'heads up display',
 	'm_joyset': 'joysticks',
-	'm_ldsv': 'Load and Save',  # TODO: Font needs a / character
+	'm_ldsv': 'Load/Save',
 	'm_menus': 'Menu Options',
 	'm_mouse': 'mouse options',
 	'm_multi': 'multiplayer',
