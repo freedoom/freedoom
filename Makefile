@@ -176,4 +176,5 @@ clean:
 		./textures/texture1.txt
 
 	make -C lumps clean
+	make -C graphics/text clean
 	make -C graphics/titlepic clean

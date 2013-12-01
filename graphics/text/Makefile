@@ -6,6 +6,14 @@ GRAPHICS = \
   m_newg.gif   m_ngame.gif  m_nmare.gif  m_option.gif m_optttl.gif \
   m_pause.gif  m_quitg.gif  m_rdthis.gif m_rough.gif  m_saveg.gif  \
   m_scrnsz.gif m_sfxvol.gif m_sgttl.gif  m_skill.gif  m_svol.gif   \
+  m_about.gif  m_accel.gif  m_auto.gif   m_chat.gif   m_chatm.gif  \
+  m_compat.gif m_demos.gif  m_dmflag.gif m_enem.gif   m_etcopt.gif \
+  m_feat.gif   m_generl.gif m_gset.gif   m_horsen.gif m_hud.gif    \
+  m_joyset.gif m_keybnd.gif m_ldsv.gif   m_loksen.gif m_menus.gif  \
+  m_mess.gif   m_mouse.gif  m_multi.gif  m_player.gif m_serial.gif \
+  m_setup.gif  m_sound.gif  m_stat.gif   m_status.gif m_tcpip.gif  \
+  m_versen.gif m_video.gif  m_wad.gif    m_wadopt.gif m_weap.gif   \
+  prboom.gif                                                       \
   m_ultra.gif  wibp1.gif    wibp2.gif    wibp3.gif    wibp4.gif    \
   wicolon.gif  wienter.gif  wif.gif      wifrgs.gif   wipcnt.gif   \
   wiminus.gif  wimstar.gif  wimstt.gif   wiostf.gif   wiosti.gif   \
@@ -33,4 +41,7 @@ all: $(GRAPHICS)
 
 $(GRAPHICS): config.py fontchars
 	./textgen
+
+clean:
+	rm -f $(GRAPHICS)
 
