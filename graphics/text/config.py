@@ -113,5 +113,47 @@ red_graphics = {
 	'wienter': 'ENTERING',
 
 	'm_pause': 'pause',
+
+	# Extra graphics used in PrBoom's menus. Generate these as well
+	# so that when we play in PrBoom the menus look consistent.
+	'prboom': 'PrBoom',
+	'm_generl': 'General',
+	'm_setup': 'Setup',
+	'm_keybnd': 'Key Bindings',
+	'm_weap': 'Weapons',
+	'm_stat': 'Status Bar - HUD',
+	'm_auto': 'Automap',
+	'm_enem': 'Enemies',
+	'm_mess': 'Messages',
+	'm_chat': 'Chat Strings',
+
+	'm_horsen': 'horizontal',
+	'm_versen': 'vertical',
+	'm_loksen': 'mouse look',
+	'm_accel': 'acceleration',
+
+	# Extra graphics from SMMU/Eternity Engine:
+	'm_about': 'about',
+	'm_chatm': 'Chat Strings',
+	'm_compat': 'Compatibility',
+	'm_demos': 'demos',
+	'm_dmflag': 'deathmatch flags',
+	'm_etcopt': 'eternity options',
+	'm_feat': 'Features',
+	'm_gset': 'game settings',
+	'm_hud': 'heads up display',
+	'm_joyset': 'joysticks',
+	'm_ldsv': 'Load and Save',  # TODO: Font needs a / character
+	'm_menus': 'Menu Options',
+	'm_mouse': 'mouse options',
+	'm_multi': 'multiplayer',
+	'm_player': 'player setup',
+	'm_serial': 'serial connection',
+	'm_sound': 'sound options',
+	'm_status': 'status bar',
+	'm_tcpip': 'tcp/ip connection',
+	'm_video': 'video options',
+	'm_wad': 'load wad',
+	'm_wadopt': 'wad options',
 }
 
