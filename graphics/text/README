@@ -1,0 +1,10 @@
+This is a script that generates the big font graphics used in the menus and
+intermission screens. The font used to generate the graphics is in the
+subdirectory 'fontchars'. This is based on the original font graphics
+(found in 'font') which have been split up into individual files each
+containing a single character.
+
+The script generates the image by invoking ImageMagick to composite the
+character graphics together. ImageMagick is therefore a dependency,
+although the Python wrapper for ImageMagick is not used.
+

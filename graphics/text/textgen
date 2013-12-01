@@ -1,0 +1,173 @@
+#!/usr/bin/env python
+
+from glob import glob
+from os import remove
+from tempfile import mktemp
+import subprocess
+import re
+
+from config import *
+
+# ImageMagick commands used by this script:
+CONVERT_COMMAND = 'convert'
+IDENTIFY_COMMAND = 'identify'
+
+# ImageMagick -colorize parameters for colorizing text:
+COLOR_BLUE = (100, 100, 0)
+COLOR_RED = (0, 100, 100)
+COLOR_WHITE = (0, 0, 0)
+
+# Background color for output files.
+BACKGROUND_COLOR = '#00ffff'
+
+# Height of font in pixels.
+FONT_HEIGHT = 16
+
+# Width of a space character in pixels.
+SPACE_WIDTH = 14
+
+# Output from 'identify' looks like this:
+#  fontchars/font033.gif GIF 9x16 9x16+0+0 8-bit sRGB 32c 194B 0.000u 0:00.000
+IDENTIFY_OUTPUT_RE = re.compile(r'(\S+)\s(\S+)\s(\d+)x(\d+)\s')
+
+def get_image_dimensions(filename):
+	proc = subprocess.Popen([IDENTIFY_COMMAND, filename],
+	                        stdout=subprocess.PIPE)
+	proc.wait()
+
+	line = proc.stdout.readline()
+	match = IDENTIFY_OUTPUT_RE.match(line)
+	assert match is not None
+	return (int(match.group(3)), int(match.group(4)))
+
+def invoke_command(command):
+	"""Invoke a command, printing the command to stdout.
+
+	Args:
+	  command: Command and arguments as a list.
+	"""
+	for arg in command:
+		if arg.startswith('-'):
+			print '\\'
+			print '    ',
+
+		if ' ' in arg:
+			print "'%s'" % arg,
+		else:
+			print arg,
+
+	print
+	return subprocess.call(command)
+
+class Font(object):
+	def __init__(self, fontdir):
+		self.fontdir = fontdir
+		self.get_font_widths()
+
+	def get_font_widths(self):
+		charfiles = glob('%s/font*.gif' % self.fontdir)
+		self.char_widths = {}
+		for c in range(128):
+			filename = self.char_filename(chr(c))
+			if filename not in charfiles:
+				continue
+			w, _ = get_image_dimensions(filename)
+			self.char_widths[chr(c)] = w
+
+	def __contains__(self, c):
+		return c in self.char_widths
+
+	def char_width(self, c):
+		return self.char_widths[c]
+
+	def char_filename(self, c):
+		return '%s/font%03d.gif' % (self.fontdir, ord(c))
+
+	def iterate_char_positions(self, text):
+		"""Iterate over characters in string, yielding character with
+		   position it should be placed at in the output file.
+		"""
+		x = 0
+		for c in text:
+			if c == ' ':
+				x += SPACE_WIDTH
+			if c not in self:
+				continue
+			yield c, x
+
+			# Characters overlap by one pixel.
+			x += self.char_width(c) - 1
+
+		# We need to add back the missing pixel from the right side
+		# of the last char.
+		x += 1
+		yield None, x
+
+	def text_width(self, text):
+		"""Given a string of text, get text width in pixels."""
+		for c, x in self.iterate_char_positions(text):
+			if c is None:
+				return x
+
+	def render_transparent_text(self, text, output_filename, color):
+		"""Render the given text to the given output file.
+
+		The rendered text is generated with a transparent background.
+		"""
+		width = self.text_width(text)
+
+		command_line = [
+			CONVERT_COMMAND,
+			'-size', '%ix%i' % (width, FONT_HEIGHT),
+			'xc:none',
+		]
+
+		for c, x in self.iterate_char_positions(text):
+			if c is None:
+				break
+
+			filename = self.char_filename(c)
+			command_line.extend([
+				'-draw',
+				'image over %i,0 0,0 %s' % (x, filename)
+			])
+
+		command_line.extend([
+			'-colorize', '%i,%i,%i' % color,
+			output_filename
+		])
+
+		invoke_command(command_line)
+
+	def render_text(self, text, output_filename,
+	                color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
+		"""Render text to a file with the given background color."""
+
+		tmp = mktemp('.gif')
+
+		self.render_transparent_text(text, tmp, color)
+
+		try:
+			command_line = [
+				CONVERT_COMMAND,
+				'-background', bgcolor,
+				tmp,
+				'-flatten',
+				output_filename
+			]
+
+			invoke_command(command_line)
+		finally:
+			remove(tmp)
+
+def generate_graphics(graphics, color=COLOR_WHITE):
+	for name, text in sorted(graphics.items()):
+		print "# %s.gif: '%s'" % (name, text)
+		font.render_text(text, '%s.gif' % name, color=color)
+
+font = Font('fontchars')
+
+generate_graphics(red_graphics, COLOR_RED)
+generate_graphics(blue_graphics, COLOR_BLUE)
+generate_graphics(white_graphics, COLOR_WHITE)
+

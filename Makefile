@@ -45,6 +45,7 @@ OBJS = \
 all : $(OBJS)
 
 subdirs:
+	make -C graphics/text
 	make -C graphics/titlepic
 	make -C lumps
 
