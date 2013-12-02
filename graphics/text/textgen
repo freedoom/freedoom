@@ -1,4 +1,38 @@
 #!/usr/bin/env python
+#
+# Copyright (c) 2013
+# Contributors to the Freedoom project.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#  * Neither the name of the freedoom project nor the names of its
+#    contributors may be used to endorse or promote products derived from
+#    this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+# OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# ----------------------------------------------------------------------
+#
+# Script to generate menu and intermission screen 'text' graphics for
+# Freedoom, by compositing individual font character graphics together.
+#
 
 from glob import glob
 from os import remove
@@ -35,7 +69,7 @@ def get_image_dimensions(filename):
 	                        stdout=subprocess.PIPE)
 	proc.wait()
 
-	line = proc.stdout.readline()
+	line = proc.stdout.readline().decode('utf-8')
 	match = IDENTIFY_OUTPUT_RE.match(line)
 	assert match is not None
 	return (int(match.group(3)), int(match.group(4)))
@@ -48,15 +82,14 @@ def invoke_command(command):
 	"""
 	for arg in command:
 		if arg.startswith('-'):
-			print '\\'
-			print '    ',
+			print("\\\n    ", end='')
 
 		if ' ' in arg:
-			print "'%s'" % arg,
+			print("'%s'" % arg, end=' ')
 		else:
-			print arg,
+			print(arg, end=' ')
 
-	print
+	print()
 	return subprocess.call(command)
 
 class Font(object):
@@ -162,7 +195,7 @@ class Font(object):
 
 def generate_graphics(graphics, color=COLOR_WHITE):
 	for name, text in sorted(graphics.items()):
-		print "# %s.gif: '%s'" % (name, text)
+		print("# %s.gif: '%s'" % (name, text))
 		font.render_text(text, '%s.gif' % name, color=color)
 
 font = Font('fontchars')
