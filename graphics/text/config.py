@@ -33,6 +33,41 @@
 # that are generated, and the text to show in each one.
 #
 
+# Adjustments for character position based on character pairs. Some
+# pairs of characters can fit more snugly together, which looks more
+# visually appealing. This is highly dependent on the font graphics,
+# and if the font is changed this probably needs to be redone.
+
+FONT_KERNING_RULES = {
+	# Right character fits under left character:
+	r'p[aj\.]': -3,
+	r'P[a\.]': -4,
+	r'[PVW][AJj\.]': -4,
+	r't[ajJ\.]': -4,
+	r'f[aj\.]': -2,
+
+	# Some capital letters have overhangs that the 'lower case'
+	# characters can fit under:
+	r'C[Ja-z\.]': -2,
+	r'F[Ja-z\.]': -3,
+	r'T[Ja-z\.]': -5,
+	r'W[Ja-z\.]': -2,
+	r'S[Ja-z\.]': -1,
+	r'V[a-z\.]': -3,
+
+	# Left character fits under right character:
+	r'[alAL][ty479]': -3,
+	r'a[vwVW]': -2,
+	r'A[VW]': -3,
+	r'A[vw]': -2,
+	r'r[ty479]': -2,
+	r'[vwVW][Aa]': -2,
+	r'[Yypv][jJ]': -2,
+
+	# Extra space needed:
+	r'[OUu][Pp]': +1,
+}
+
 white_graphics = {
 	'wibp1': 'P1',
 	'wibp2': 'P2',
