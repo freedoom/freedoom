@@ -36,6 +36,7 @@
 
 from glob import glob
 from os import remove
+from sys import stdout
 from tempfile import mktemp
 import subprocess
 import re
@@ -82,14 +83,16 @@ def invoke_command(command):
 	"""
 	for arg in command:
 		if arg.startswith('-'):
-			print("\\\n    ", end='')
+			stdout.write("\\\n    ")
 
-		if ' ' in arg:
-			print("'%s'" % arg, end=' ')
+		if ' ' in arg or '#' in arg:
+			stdout.write(repr(arg))
 		else:
-			print(arg, end=' ')
+			stdout.write(arg)
 
-	print()
+		stdout.write(' ')
+
+	stdout.write('\n')
 	return subprocess.call(command)
 
 class Font(object):
