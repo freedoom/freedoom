@@ -107,9 +107,15 @@ white_graphics = {
 	'wilv24': 'E3M5', 'wilv25': 'E3M6', 'wilv26': 'E3M7', 'wilv27': 'E3M8',
 	'wilv28': 'E3M9',
 
-	'wilv30': 'E4M1', 'wilv31': 'E4M2', 'wilv32': 'E4M3', 'wilv33': 'E4M4',
-	'wilv34': 'E4M5', 'wilv35': 'E4M6', 'wilv36': 'E4M7', 'wilv37': 'E4M8',
-	'wilv38': 'E4M9',
+	'wilv30': 'Maintenance Area',
+	'wilv31': 'Research Complex',
+	'wilv32': 'Central Computing',
+	'wilv33': 'Hydroponic Facility',
+	'wilv34': 'Engineering Station',
+	'wilv35': 'Command Center',
+	'wilv36': 'Waste Treatment',
+	'wilv37': 'Launch Bay',
+	'wilv38': 'Operations',
 }
 
 blue_graphics = {
@@ -131,7 +137,7 @@ red_graphics = {
 	'm_epi1': 'First Episode',
 	'm_epi2': 'Second Episode',
 	'm_epi3': 'Third Episode',
-	'm_epi4': 'Fourth Episode',
+	'm_epi4': 'Double Impact',
 
 	'm_jkill': 'Please don\'t kill me!',
 	'm_rough': 'Will this hurt?',
