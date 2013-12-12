@@ -35,9 +35,7 @@
 #
 
 from glob import glob
-from os import remove
 from sys import stdout
-from tempfile import mktemp
 import subprocess
 import re
 
@@ -171,11 +169,8 @@ class Font(object):
 			if c is None:
 				return x
 
-	def render_transparent_text(self, text, output_filename, color):
-		"""Render the given text to the given output file.
-
-		The rendered text is generated with a transparent background.
-		"""
+	def _make_command_line(self, text, color):
+		"""Command line construction helper, used in render functions"""
 		width = self.text_width(text)
 
 		command_line = [
@@ -196,8 +191,19 @@ class Font(object):
 
 		command_line.extend([
 			'-colorize', '%i,%i,%i' % color,
-			output_filename
 		])
+
+		return command_line
+
+	def render_transparent_text(self, text, output_filename, color):
+		"""Render the given text to the given output file.
+
+		The rendered text is generated with a transparent background.
+		"""
+
+		command_line = self._make_command_line(text, color)
+
+		command_line.append(output_filename)
 
 		invoke_command(command_line)
 
@@ -205,22 +211,13 @@ class Font(object):
 	                color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
 		"""Render text to a file with the given background color."""
 
-		tmp = mktemp('.gif')
+		command_line = self._make_command_line(text, color)
 
-		self.render_transparent_text(text, tmp, color)
+		command_line.extend([
+			'-background', bgcolor, '-flatten',
+			output_filename])
 
-		try:
-			command_line = [
-				CONVERT_COMMAND,
-				'-background', bgcolor,
-				tmp,
-				'-flatten',
-				output_filename
-			]
-
-			invoke_command(command_line)
-		finally:
-			remove(tmp)
+		invoke_command(command_line)
 
 def generate_graphics(graphics, color=COLOR_WHITE):
 	for name, text in sorted(graphics.items()):
