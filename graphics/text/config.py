@@ -76,40 +76,9 @@ white_graphics = {
 	'wicolon': ':',
 	'wiminus': '-',
 
-	# TODO: Generate WILV graphics based on level names from DEHACKED lump.
-
-	'cwilv00': 'MAP01', 'cwilv01': 'MAP02', 'cwilv02': 'MAP03',
-	'cwilv03': 'MAP04', 'cwilv04': 'MAP05', 'cwilv05': 'MAP06',
-	'cwilv06': 'MAP07', 'cwilv07': 'MAP08', 'cwilv08': 'MAP09',
-	'cwilv09': 'MAP10',
-
-	'cwilv10': 'MAP11', 'cwilv11': 'MAP12', 'cwilv12': 'MAP13',
-	'cwilv13': 'MAP14', 'cwilv14': 'MAP15', 'cwilv15': 'MAP16',
-	'cwilv16': 'MAP17', 'cwilv17': 'MAP18', 'cwilv18': 'MAP19',
-	'cwilv19': 'MAP20',
-
-	'cwilv20': 'MAP21', 'cwilv21': 'MAP22', 'cwilv22': 'MAP23',
-	'cwilv23': 'MAP24', 'cwilv24': 'MAP25', 'cwilv25': 'MAP26',
-	'cwilv26': 'MAP27', 'cwilv27': 'MAP28', 'cwilv28': 'MAP29',
-	'cwilv29': 'MAP30',
-
-	'cwilv30': 'MAP31', 'cwilv31': 'MAP32',
-
-	'wilv00': 'E1M1', 'wilv01': 'E1M2', 'wilv02': 'E1M3', 'wilv03': 'E1M4',
-	'wilv04': 'E1M5', 'wilv05': 'E1M6', 'wilv06': 'E1M7', 'wilv07': 'E1M8',
-	'wilv08': 'E1M9',
-
-	'wilv10': 'E2M1', 'wilv11': 'E2M2', 'wilv12': 'E2M3', 'wilv13': 'E2M4',
-	'wilv14': 'E2M5', 'wilv15': 'E2M6', 'wilv16': 'E2M7', 'wilv17': 'E2M8',
-	'wilv18': 'E2M9',
-
-	'wilv20': 'E3M1', 'wilv21': 'E3M2', 'wilv22': 'E3M3', 'wilv23': 'E3M4',
-	'wilv24': 'E3M5', 'wilv25': 'E3M6', 'wilv26': 'E3M7', 'wilv27': 'E3M8',
-	'wilv28': 'E3M9',
-
-	'wilv30': 'E4M1', 'wilv31': 'E4M2', 'wilv32': 'E4M3', 'wilv33': 'E4M4',
-	'wilv34': 'E4M5', 'wilv35': 'E4M6', 'wilv36': 'E4M7', 'wilv37': 'E4M8',
-	'wilv38': 'E4M9',
+	# Note: level names are also included in this dictionary, with
+	# the data added programatically from the DEHACKED lump, see
+	# code below.
 }
 
 blue_graphics = {
@@ -222,4 +191,54 @@ red_graphics = {
 	'm_wad': 'load wad',
 	'm_wadopt': 'wad options',
 }
+
+def read_bex_lump(filename):
+	"""Read the BEX (Dehacked) lump from the given filename.
+
+	Returns:
+	    Dictionary mapping from name to value.
+	"""
+	result = {}
+	with open(filename) as f:
+		for line in f:
+			# Ignore comments:
+			line = line.strip()
+			if len(line) == 0 or line[0] in '#;':
+				continue
+			# Just split on '=' and interpret that as an
+			# assignment. This is primitive and doesn't read
+			# like a full BEX parser should, but it's good
+			# enough for our purposes here.
+			assign = line.split('=', 2)
+			if len(assign) != 2:
+				continue
+			result[assign[0].strip()] = assign[1].strip()
+	return result
+
+def update_from_bex(config, bexdata):
+	"""Update the given config dictionary with data from a BEX lump.
+
+	Args:
+	    config: Dictionary of lumps, mapping from lump name to
+	        text string to contain in it.
+	    bexdata: Dictionary of data read from BEX lump.
+	"""
+	def update_lump(lumpname, bexname):
+		if bexname not in bexdata:
+			raise Exception('Level name %s not defined in '
+			                'DEHACKED lump!' % bexname)
+		config[lumpname] = bexdata[bexname]
+
+	for e in range(4):
+		for m in range(9):
+			# HUSTR_E1M1 from BEX => wilv00
+			update_lump('wilv%i%i' % (e, m),
+			            'HUSTR_E%iM%i' % (e + 1, m + 1))
+
+	for m in range(32):
+		# HUSTR_1 => cwilv00
+		update_lump('cwilv%02i' % m,
+		            'HUSTR_%i' % (m + 1))
+
+update_from_bex(white_graphics, read_bex_lump('../../lumps/dehacked.lmp'))
 
