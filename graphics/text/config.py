@@ -33,6 +33,8 @@
 # that are generated, and the text to show in each one.
 #
 
+import re
+
 # Adjustments for character position based on character pairs. Some
 # pairs of characters can fit more snugly together, which looks more
 # visually appealing. This is highly dependent on the font graphics,
@@ -227,7 +229,9 @@ def update_from_bex(config, bexdata):
 		if bexname not in bexdata:
 			raise Exception('Level name %s not defined in '
 			                'DEHACKED lump!' % bexname)
-		config[lumpname] = bexdata[bexname]
+		# Strip "MAP01: " or "E1M2: " etc. from start, if present:
+		levelname = re.sub('^\w*\d:\s*', '', bexdata[bexname])
+		config[lumpname] = levelname
 
 	for e in range(4):
 		for m in range(9):
