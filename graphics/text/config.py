@@ -102,7 +102,7 @@ red_graphics = {
 	'm_epi1': 'First Episode',
 	'm_epi2': 'Second Episode',
 	'm_epi3': 'Third Episode',
-	'm_epi4': 'Fourth Episode',
+	'm_epi4': 'Double Impact',
 
 	'm_jkill': 'Please don\'t kill me!',
 	'm_rough': 'Will this hurt?',

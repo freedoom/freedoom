@@ -1,9 +1,0 @@
-name   : The Catacombs
-map #  : 22
-author : Nick Baker
-
-This is a work-in-progress level, strongly inspired by the Ultimate Doom Episode 4 and the Talosian Incident.
-
-The level originally started life as one of the three L.I.N.K. levels, and was started buy Chris Hansen, with some work also done by C. Celizic.
-
-Chris has allowed me to complete the level due to lack of interest in the L.I.N.K. project.

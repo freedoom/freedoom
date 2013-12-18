@@ -1,0 +1,73 @@
+Title                   : Double Impact
+Filename                : DBIMPACT.WAD
+Release date            : 03/30/2011
+Author                  : RottKing & Ralphis
+Email Address           : ralphis@unidoom.org rottking@sbcglobal.net
+
+Other Files By Author   : Unidoom Deathmatch 1, Unidoom Deathmatch 2, Unidoom Deathmatch 3, Unidoom Deathmatch X, Odamex CTF 1
+
+Misc. Author Info       : Visit us at http://www.unidoom.org and #unidoom on irc.quakenet.org!
+
+Description             : A nine map episode 1 replacement.
+
+Additional Credits to   : infurnus for the sky texture, esselfortium for the titlepic, and dewww, st.alfonzo, NaturalTvventy, Xenaero, glortho, joshsmith, and whiteboy567 for helping out with play testing.
+
+===========================================================================
+
+* What is included *
+
+===========================================================================
+
+New levels              : 9
+Sounds                  : No
+Music                   : Yes
+Graphics                : Yes
+Dehacked/BEX Patch      : Yes
+Demos                   : Yes
+Other                   : Yes
+Other files required    : No
+
+* Play Information *
+
+Game                    : Ultimate DOOM
+Single Player           : Yes
+Cooperative 2-4 Player  : Yes
+Deathmatch 2-4 Player   : Yes
+Other game styles       : None
+Difficulty Settings     : Yes
+
+* Construction *
+
+Build Time              : About a year and a half.
+Editor(s) used          : Doombuilder, Wintex, XWE, Slumped
+Known Bugs              : None
+May Not Run With...     : doom.exe. Requires at least a limit removing engine. 
+
+===========================================================================
+
+* Level Information *
+
+===========================================================================
+
+----------
+
+* Copyright / Permissions *
+
+Authors MAY use the contents of this file as a base for
+modification or reuse. 
+
+You MAY distribute this file, provided you include this text file with
+no modifications.  You may distribute this file in any electronic
+format (BBS, diskette, CD, etc.) as long as you include this file 
+intact. 
+
+You MAY edit and release any maps contained in the WAD as you wish under the conditions that the original authors and Unidoom are credited.
+
+
+* Where to get the file that this text file describes *
+
+The Usual: ftp://archives.3dgamers.com/pub/idgames/ and mirrors
+Web sites: http://www.unidoom.org
+
+
+

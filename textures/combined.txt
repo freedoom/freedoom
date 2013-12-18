@@ -1935,8 +1935,11 @@ WFALL4			64	128
 
 ; These textures are only in Ultimate Doom
 
-SKY4        		256	128
-*	SKY4       	0	0
+SKY4        		1024	128
+*	SKY4A       	0	0
+*	SKY4A       	256	0
+*	SKY4B       	512	0
+*	SKY4A       	768	0
 
 #endif
 
