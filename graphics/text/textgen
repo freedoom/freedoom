@@ -190,7 +190,7 @@ class Font(object):
 			])
 
 		command_line.extend([
-			'-colorize', '%i,%i,%i' % color,
+			'-colorize', '%i,%i,%i,0' % color,
 		])
 
 		return command_line
