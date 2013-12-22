@@ -1,8 +1,0 @@
-fogmap.lmp - a colormap that fades to grey, should be placed between C_START and C_END then invoked using linedef #242, meh.
-
-created by oblivion (thats me) on july 29 2002 using my own short little C program.
-
-copyrights: public domain, cuz i said so.
-
-i am uzi666@juno.com
-
