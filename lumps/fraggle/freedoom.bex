@@ -237,16 +237,23 @@ NIGHTMARE = this is the highest skill level.\nnot recommended unless you're expe
 #HUSTR_TALKTOSELF4
 #HUSTR_TALKTOSELF5
 #HUSTR_MESSAGESENT
-#E1TEXT
-#E2TEXT
-#E3TEXT
-#E4TEXT
-#C1TEXT
-#C2TEXT
-#C3TEXT
-#C4TEXT
-#C5TEXT
-#C6TEXT
+# Temporary end-of-episode texts. Please replace them.
+E1TEXT = You've completed Freedoom episode 1!\nBut your work isn't done yet.\n\nThere are more monsters still to kill.\n\nPlay Freedoom episode 2 to continue\nthe madness.
+E2TEXT = You've defeated Freedoom episode 2!\nHordes of monsters lie dead by your\nhand. But there are still more waiting.\nYour work is not yet done.\n\nOnward to episode 3 - if you dare!
+E3TEXT = Hundreds of monsters couldn't stop you.\nSo much for Freedoom episode 3.\nBut there's a whole other game to play!\n\nDownload Freedoom 2 and continue the\ncarnage!\n\n-or play Freedoom episode 4:\nDouble Impact!
+E4TEXT = Despite having an entire army against\nyou, you manage to reach the\nspacecraft by the skin of your teeth.\n"Can I go back to fixing things yet?"\nYou mutter to yourself and let out an\nexasperated sigh.\nYou initiate navigation systems and\npower-up thrusters, time to get the\nhell outta dodge. Destination: anywhere\nbut this suck-hole. As you lift off to the\nsafety of outerspace, you wonder if you're\ngoing to be paid overtime.
+# After MAP06, before MAP07:
+C1TEXT = You've found your way to the complex's\nouter storage warehouse. A whole\nsquadron of the elite guard were\ndispatched here, but after 2 hours they\nwere never heard from again. What can have\nhappened to them? You feel a knot in\nyour stomach and try to put the question\nout of your mind.\n\nGuess you'll find out soon.
+# After MAP11, before MAP12:
+C2TEXT = You make your way to the outskirts of\nthe city. This was once the planet's\nmost important economic powerhouse,\nand headquarters of the AGM conglomerate.\n\nNow it's a wreck.\n\nEvery entrance has been heavily fortified,\nbut you find one small forgotten doorway,\nit must be an industrial loading bay\nof some kind. Guess this is your way in.
+# After MAP20, before MAP21:
+C3TEXT = You never thought you'd see a literal\nriver of blood. These bastards have a\nlot to answer for. But it just makes you\nmore determined to make them pay for\nwhat they've done.\n\nStepping through the portal you pause to\ncatch your breath, but there's no time\nto waste.
+# After MAP30 (endgame text):
+C4TEXT = Explosions erupt from all around the\nskull. You've done it. It's finally\nover. These monsters won't bother you\nany more.\n\nThe saying goes, live free or\ndie trying. Guess that doesn't always\nmean the latter.
+# Before MAP31 (secret level #1):
+C5TEXT = You step onto the teleport and after a\nstrange flash you find yourself in an\nold castle. What is this place? Before\nyou can wonder further, you hear\nnoises coming towards you.
+# Before MAP32 (secret level #2):
+C6TEXT = As you stumble through the door, you\nget the feeling that you might have\ngone the wrong way. This place looks\nweird, the walls look like they're...\nfrom some other time?\n\nSomething seems fishy here.
 #P1TEXT
 #P2TEXT
 #P3TEXT
