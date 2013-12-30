@@ -39,7 +39,7 @@ GRAPHICS = \
 
 all: $(GRAPHICS)
 
-$(GRAPHICS): config.py fontchars
+$(GRAPHICS): config.py fontchars ../../lumps/fraggle/freedoom.bex
 	./textgen
 
 clean:
