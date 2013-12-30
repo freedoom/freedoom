@@ -187,6 +187,7 @@ DMXGUS
 DEMO1 = demo1_d2
 DEMO2 = demo2_d2
 DEMO3 = demo3_d2
+DEMO4 = demo4_d2
 
 #else /* not DOOM2 */
 
