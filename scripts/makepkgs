@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
+# Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2013
 # Contributors to the Freedoom project.  All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,76 +34,72 @@ import sys
 # Documentation files included with distributions.
 
 DIST_DOCS = [
-	"NEWS",
-	"ChangeLog",
-	"COPYING",
-	"CREDITS",
-	"README"
+    "COPYING",
+    "CREDITS",
+    "README.html"
 ]
 
 # Most WADs are given a ZIP equal to their name, but some have different
 # names:
 
 DIR_NAMES = {
-	'doom2'    : 'freedoom-iwad',
-	'doom1'    : 'freedoom-demo',
-	'doom'     : 'freedoom-episodes',
-	'freedoom' : 'freedoom-resource-wad',
+    'doom2'    : 'freedoom-iwad',
+    'doom'     : 'freedoom-ultimate',
+    'freedoom' : 'freedoom-resource-wad',
 }
 
 # Run a command, displaying it before executing it.
 
 def run_command(command):
-	print "> " + command
-	os.system(command)
+    print("> " + command)
+    os.system(command)
 
 # Find the version to build:
 
 version = os.getenv("VERSION")
 
 if version is None:
-	raise Exception("Version not specified for release!")
+    raise Exception("Version not specified for release!")
 
 # Build all of the packages
 
 for filename in sys.argv[1:]:
 
-	path = os.path.dirname(filename)
-	basename = os.path.basename(filename)
+    path = os.path.dirname(filename)
+    basename = os.path.basename(filename)
 
-	# Cut off the extension, and build the directory name
+    # Cut off the extension, and build the directory name
 
-	pkgname = basename[0:-4]
+    pkgname = basename[0:-4]
 
-	if pkgname in DIR_NAMES:
-		base_dir = DIR_NAMES[pkgname]
-	else:
-		base_dir = pkgname
+    if pkgname in DIR_NAMES:
+        base_dir = DIR_NAMES[pkgname]
+    else:
+        base_dir = pkgname
 
-	# Append the version:
+    # Append the version:
 
-	base_dir += "-" + version
+    base_dir += "-" + version
 
-	# Replace underscores with hyphens:
+    # Replace underscores with hyphens:
 
-	base_dir = base_dir.replace("_", "-")
+    base_dir = base_dir.replace("_", "-")
 
-	full_path = path + "/" + base_dir
+    full_path = path + "/" + base_dir
 
-	# Create directory, and add files.
+    # Create directory, and add files.
 
-	run_command("mkdir %s" % full_path)
+    run_command("mkdir %s" % full_path)
 
-	for doc in DIST_DOCS + [ filename ]:
-		run_command("cp %s %s" % (doc, full_path))
+    for doc in DIST_DOCS + [ filename ]:
+        run_command("cp %s %s" % (doc, full_path))
 
-	# Change to the parent directory, and build the zip
+    # Change to the parent directory, and build the zip
 
-	orig_dir = os.getcwd()
+    orig_dir = os.getcwd()
 
-	os.chdir(path)
-	run_command("rm -f %s.zip" % base_dir)
-	run_command("zip -r %s.zip %s" % (base_dir, base_dir))
-	run_command("rm -rf %s" % base_dir)
-	os.chdir(orig_dir)
-
+    os.chdir(path)
+    run_command("rm -f %s.zip" % base_dir)
+    run_command("zip -r %s.zip %s" % (base_dir, base_dir))
+    run_command("rm -rf %s" % base_dir)
+    os.chdir(orig_dir)

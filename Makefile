@@ -26,6 +26,7 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+VERSION != git describe
 WADS=wads
 CPP=scripts/simplecpp
 DEUTEX=deutex
@@ -151,14 +152,12 @@ $(WADS)/freedoom_sounds.wad : wadinfo.txt force
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -sounds -musics -build wadinfo.txt $@
 
-
-
-dist : $(OBJS)
-	scripts/makepkgs $(OBJS)
-
-doc:
+doc: BUILD-SYSTEM.asc README.asc
 	asciidoc BUILD-SYSTEM.asc
 	asciidoc README.asc
+
+dist: $(OBJS) doc
+	VERSION=$(VERSION) scripts/makepkgs $(OBJS)
 
 clean:
 	rm -f	*.html deutex.log $(OBJS) \
