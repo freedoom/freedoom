@@ -157,8 +157,8 @@ dist : $(OBJS)
 	scripts/makepkgs $(OBJS)
 
 doc:
-	asciidoc BUILD-SYSTEM
-	asciidoc README
+	asciidoc BUILD-SYSTEM.asc
+	asciidoc README.asc
 
 clean:
 	rm -f	*.html deutex.log $(OBJS) \
