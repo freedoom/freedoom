@@ -1,3 +1,41 @@
+[PARS]
+# Par times. The BEX format requires these to be specified in number
+# of seconds, but for convenience we include the min:sec value in a
+# comment. Comment also indicates when the run was done - ideally
+# this should be re-done for every new release. Times are rounded
+# to nearest half-minute.
+par  1   60  # 01:00  - Catoptromancy for v0.8 - 2013/12
+par  2  240  # 04:00  - Catoptromancy for v0.8 - 2013/12
+par  3  390  # 06:30  - Catoptromancy for v0.8 - 2013/12
+par  4  360  # 06:00  - Catoptromancy for v0.8 - 2013/12
+par  5  420  # 07:00  - Catoptromancy for v0.8 - 2013/12
+par  6  360  # 06:00  - Catoptromancy for v0.8 - 2013/12
+par  7  210  # 03:30  - Catoptromancy for v0.8 - 2013/12
+par  8  570  # 09:30  - Catoptromancy for v0.8 - 2013/12
+par  9  690  # 11:30  - Catoptromancy OLD run for v0.7
+par 10   30  # 00:30  - Catoptromancy for v0.8 - 2013/12
+par 11  930  # 15:30  - Catoptromancy for v0.8 - 2013/12
+par 12 1650  # 27:30  - Catoptromancy OLD run for v0.7
+par 13 1740  # 29:00  - Catoptromancy OLD run for v0.7
+par 14  450  # 07:30  - Catoptromancy for v0.8 - 2013/12
+par 15 1200  # 20:00  - Catoptromancy OLD run for v0.7
+par 16  480  # 08:00  - Catoptromancy for v0.8 - 2013/12
+par 17  420  # 07:00  - Catoptromancy for v0.8 - 2013/12
+par 18  420  # 07:00  - Catoptromancy for v0.8 - 2013/12
+par 19    0  # 00:00  - Catoptromancy OLD run for v0.7
+par 20  720  # 12:00  - Catoptromancy for v0.8 - 2013/12
+par 21  750  # 12:30  - Catoptromancy OLD run for v0.7
+par 22 1620  # 27:00  - Catoptromancy for v0.8 - 2013/12
+par 23  120  # 02:00  - Catoptromancy for v0.8 - 2013/12
+par 24  420  # 07:00  - Catoptromancy OLD run for v0.7
+par 25 1440  # 24:00  - Catoptromancy for v0.8 - 2013/12
+par 26  690  # 11:30  - Catoptromancy for v0.8 - 2013/12
+par 27 2910  # 48:30  - Catoptromancy OLD run for v0.7
+par 28 1350  # 22:30  - Catoptromancy OLD run for v0.7
+par 29  600  # 10:00  - Catoptromancy OLD run for v0.7
+par 30  510  # 08:30  - Catoptromancy for v0.8 - 2013/12
+par 31  450  # 07:30  - Catoptromancy for v0.8 - 2013/12
+par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
 [STRINGS]
 GOTARMOR = picked up a light armor vest.
 GOTMEGA = picked up a heavy armor vest.
