@@ -36,6 +36,7 @@ par 29  600  # 10:00  - Catoptromancy OLD run for v0.7
 par 30  510  # 08:30  - Catoptromancy for v0.8 - 2013/12
 par 31  450  # 07:30  - Catoptromancy for v0.8 - 2013/12
 par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
+
 [STRINGS]
 GOTARMOR = picked up a light armor vest.
 GOTMEGA = picked up a heavy armor vest.
