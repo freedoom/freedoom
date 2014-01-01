@@ -9,7 +9,7 @@ convert -fill white -font Helvetica-Bold                               \
       -draw "text 0,30 $1"                                             \
   -pointsize 11                                                        \
     -gravity southwest                                                 \
-      -draw "text 5,5 'http://freedoom.nongnu.org/'"                   \
+      -draw "text 5,5 'http://freedoom.github.io/'"                    \
     -gravity southeast                                                 \
       -draw "text 10,25 'Version: $VERSION'"                           \
       -draw "text 10,5 '$DATE'"                                        \
