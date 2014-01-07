@@ -16,6 +16,7 @@ textures/freedm/pnames.txt
 textures/freedm/texture1.txt
 textures/texture1.txt
 wads/*.wad
+wads/*.zip
 wad*.txt
 *.bak
 *.pyc

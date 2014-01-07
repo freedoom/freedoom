@@ -34,17 +34,12 @@ DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-v0 -fullsnd -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
-OBJS = \
-	$(WADS)/freedoom.wad          \
-	$(WADS)/freedoom_levels.wad   \
-	$(WADS)/freedoom_sprites.wad  \
-	$(WADS)/freedoom_sounds.wad   \
-	$(WADS)/freedoom_textures.wad \
+OBJS= \
 	$(WADS)/doom2.wad             \
 	$(WADS)/doom.wad	      \
 	$(WADS)/freedm.wad
 
-all : $(OBJS)
+all: $(OBJS)
 
 subdirs:
 	make -C graphics/text
@@ -96,15 +91,6 @@ wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 # to whichever wad we are working on
 
 #---------------------------------------------------------
-# build wad
-
-$(WADS)/freedoom.wad: wadinfo.txt subdirs force
-	@mkdir -p $(WADS)
-	ln -sf doom2/texture1.txt textures/texture1.txt
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -textures -lumps -patch -flats -sounds -musics -graphics -sprites -build wadinfo.txt $@
-
-#---------------------------------------------------------
 # freedm iwad
 
 $(WADS)/freedm.wad: wadinfo_freedm.txt subdirs force
@@ -114,7 +100,7 @@ $(WADS)/freedm.wad: wadinfo_freedm.txt subdirs force
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
 
 #---------------------------------------------------------
-# iwad
+# doom2 iwad
 
 $(WADS)/doom2.wad: wadinfo_iwad.txt subdirs force
 	@mkdir -p $(WADS)
@@ -130,39 +116,6 @@ $(WADS)/doom.wad: wadinfo_ult.txt subdirs force
 	ln -sf doom/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_ult.txt $@
-
-#---------------------------------------------------------
-# build levels wad
-
-$(WADS)/freedoom_levels.wad : wadinfo.txt force
-	@mkdir -p $(WADS)
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -levels -build wadinfo.txt $@
-
-#---------------------------------------------------------
-# build texture wad
-
-$(WADS)/freedoom_textures.wad : wadinfo.txt force
-	@mkdir -p $(WADS)
-	ln -sf doom2/texture1.txt textures/texture1.txt
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -textures -patch -flats -build wadinfo.txt $@
-
-#---------------------------------------------------------
-# build sprites wad
-
-$(WADS)/freedoom_sprites.wad : wadinfo.txt force
-	@mkdir -p $(WADS)
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -sprites -build wadinfo.txt $@
-
-#---------------------------------------------------------
-# build sounds wad
-
-$(WADS)/freedoom_sounds.wad : wadinfo.txt force
-	@mkdir -p $(WADS)
-	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -sounds -musics -build wadinfo.txt $@
 
 doc: BUILD-SYSTEM.asc README.asc
 	asciidoc BUILD-SYSTEM.asc
