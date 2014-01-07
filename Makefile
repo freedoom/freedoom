@@ -138,7 +138,7 @@ clean:
 		./textures/freedm/pnames.txt \
 		./textures/freedm/texture1.txt \
 		./textures/texture1.txt
-	rmdir $(WADS) textures/doom textures/doom2 textures/freedm
+	-rmdir $(WADS) textures/doom textures/doom2 textures/freedm
 
 	make -C lumps clean
 	make -C graphics/text clean
