@@ -488,9 +488,14 @@ D_E3M9
 
 D_BUNNY
 
-#else	/* #ifndef DOOM2 */
+#else  /* #ifndef DOOM2 */
 
 ; doom 2 music
+D_READ_M
+D_DM2TTL
+D_DM2INT
+
+#ifndef FREEDM
 
 D_RUNNIN
 D_STALKS
@@ -526,8 +531,45 @@ D_EVIL
 D_ULTIMA
 D_READ_M
 D_DM2TTL
-D_DM2INT
 
+#else /* FREEDM */
+
+; FreeDM has different music:
+
+D_RUNNIN = D_DM01
+D_STALKS = D_DM02
+D_COUNTD = D_DM03
+D_BETWEE = D_DM04
+D_DOOM   = D_DM05
+D_THE_DA = D_DM06
+D_SHAWN  = D_DM07
+D_DDTBLU = D_DM08
+D_IN_CIT = D_DM09
+D_DEAD   = D_DM10
+D_STLKS2 = D_DM11
+D_THEDA2 = D_DM12
+D_DOOM2  = D_DM13
+D_DDTBL2 = D_DM14
+D_RUNNI2 = D_DM15
+D_DEAD2  = D_DM16
+D_STLKS3 = D_DM17
+D_ROMERO = D_DM18
+D_SHAWN2 = D_DM19
+D_MESSAG = D_DM20
+D_COUNT2 = D_DM21
+D_DDTBL3 = D_DM22
+D_AMPIE  = D_DM23
+D_THEDA3 = D_DM24
+D_ADRIAN = D_DM25
+D_MESSG2 = D_DM26
+D_ROMER2 = D_DM27
+D_TENSE  = D_DM28
+D_SHAWN3 = D_DM29
+D_OPENIN = D_DM30
+D_EVIL   = D_DM31
+D_ULTIMA = D_DM32
+
+#endif /* #ifdef FREEDM */
 #endif /* #ifndef DOOM2 */
 
 ; List of Pictures (with insertion point)
