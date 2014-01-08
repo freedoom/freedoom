@@ -34,10 +34,11 @@ DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-v0 -fullsnd -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
-OBJS= \
-	$(WADS)/doom2.wad             \
-	$(WADS)/doom.wad	      \
-	$(WADS)/freedm.wad
+FREEDOOM1=$(WADS)/doom.wad
+FREEDOOM2=$(WADS)/doom2.wad
+FREEDM=$(WADS)/freedm.wad
+
+OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 
 all: $(OBJS)
 
@@ -93,7 +94,7 @@ wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 #---------------------------------------------------------
 # freedm iwad
 
-$(WADS)/freedm.wad: wadinfo_freedm.txt subdirs force
+$(FREEDM): wadinfo_freedm.txt subdirs force
 	@mkdir -p $(WADS)
 	ln -sf freedm/texture1.txt textures/texture1.txt
 	rm -f $@
@@ -102,7 +103,7 @@ $(WADS)/freedm.wad: wadinfo_freedm.txt subdirs force
 #---------------------------------------------------------
 # doom2 iwad
 
-$(WADS)/doom2.wad: wadinfo_iwad.txt subdirs force
+$(FREEDOOM2): wadinfo_iwad.txt subdirs force
 	@mkdir -p $(WADS)
 	ln -sf doom2/texture1.txt textures/texture1.txt
 	rm -f $@
@@ -111,7 +112,7 @@ $(WADS)/doom2.wad: wadinfo_iwad.txt subdirs force
 #---------------------------------------------------------
 # udoom iwad
 
-$(WADS)/doom.wad: wadinfo_ult.txt subdirs force
+$(FREEDOOM1): wadinfo_ult.txt subdirs force
 	@mkdir -p $(WADS)
 	ln -sf doom/texture1.txt textures/texture1.txt
 	rm -f $@
@@ -121,8 +122,12 @@ doc: BUILD-SYSTEM.asc README.asc
 	asciidoc BUILD-SYSTEM.asc
 	asciidoc README.asc
 
+DISTDOCS=COPYING CREDITS README.html
+
+# Due to convoluted reasons, the WADs must directly proceed the game name.
 dist: $(OBJS) doc
-	VERSION=$(VERSION) scripts/makepkgs $(OBJS)
+	VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
+	VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
 
 clean:
 	rm -f	*.html deutex.log $(OBJS) \

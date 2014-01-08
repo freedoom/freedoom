@@ -32,13 +32,8 @@ import sys
 
 # Documentation files included with distributions.
 
-DIST_DOCS = [
-    "COPYING",
-    "CREDITS",
-    "README.html"
-]
-
-DIR_NAME='freedoom'
+GAME_NAME=sys.argv[1]
+FILES=sys.argv[2:]
 
 # Run a command, displaying it before executing it.
 
@@ -57,17 +52,17 @@ if version[0] is 'v':
     # Strip the leading 'v' from versioning
     version = version[1:]
 
-path = os.path.dirname(sys.argv[1])
-basename = os.path.basename(sys.argv[1])
+path = os.path.dirname(FILES[0])
+basename = os.path.basename(FILES[0])
 
-base_dir = DIR_NAME + "-" + version
+base_dir = GAME_NAME + "-" + version
 full_path = path + "/" + base_dir
 
 # Create directory and add files
 
 run_command("mkdir %s" % full_path)
-for files in DIST_DOCS + sys.argv[1:]:
-    run_command("cp %s %s" % (files, full_path))
+for file in FILES:
+    run_command("cp %s %s" % (file, full_path))
 
 orig_dir = os.getcwd()
 
