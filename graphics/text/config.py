@@ -81,6 +81,19 @@ white_graphics = {
 	# Note: level names are also included in this dictionary, with
 	# the data added programatically from the DEHACKED lump, see
 	# code below.
+
+	# TODO: Generate FreeDM level name graphics from DEHACKED lump.
+	'dmwilv00': 'DM01', 'dmwilv01': 'DM02', 'dmwilv02': 'DM03',
+	'dmwilv03': 'DM04', 'dmwilv04': 'DM05', 'dmwilv05': 'DM06',
+	'dmwilv06': 'DM07', 'dmwilv07': 'DM08', 'dmwilv08': 'DM09',
+	'dmwilv09': 'DM10', 'dmwilv10': 'DM11', 'dmwilv11': 'DM12',
+	'dmwilv12': 'DM13', 'dmwilv13': 'DM14', 'dmwilv14': 'DM15',
+	'dmwilv15': 'DM16', 'dmwilv16': 'DM17', 'dmwilv17': 'DM18',
+	'dmwilv18': 'DM19', 'dmwilv19': 'DM20', 'dmwilv20': 'DM21',
+	'dmwilv21': 'DM22', 'dmwilv22': 'DM23', 'dmwilv23': 'DM24',
+	'dmwilv24': 'DM25', 'dmwilv25': 'DM26', 'dmwilv26': 'DM27',
+	'dmwilv27': 'DM28', 'dmwilv28': 'DM29', 'dmwilv29': 'DM30',
+	'dmwilv30': 'DM31', 'dmwilv31': 'DM32',
 }
 
 blue_graphics = {
