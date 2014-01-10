@@ -174,7 +174,11 @@ COLORMAP
 ENDOOM
 GENMIDI
 FREEDOOM
+#ifdef FREEDM
+DEHACKED = fdm_deh
+#else
 DEHACKED
+#endif
 
 #ifdef DOOM2
 DMXGUSC = dmxgus

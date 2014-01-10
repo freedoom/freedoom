@@ -81,19 +81,6 @@ white_graphics = {
 	# Note: level names are also included in this dictionary, with
 	# the data added programatically from the DEHACKED lump, see
 	# code below.
-
-	# TODO: Generate FreeDM level name graphics from DEHACKED lump.
-	'dmwilv00': 'DM01', 'dmwilv01': 'DM02', 'dmwilv02': 'DM03',
-	'dmwilv03': 'DM04', 'dmwilv04': 'DM05', 'dmwilv05': 'DM06',
-	'dmwilv06': 'DM07', 'dmwilv07': 'DM08', 'dmwilv08': 'DM09',
-	'dmwilv09': 'DM10', 'dmwilv10': 'DM11', 'dmwilv11': 'DM12',
-	'dmwilv12': 'DM13', 'dmwilv13': 'DM14', 'dmwilv14': 'DM15',
-	'dmwilv15': 'DM16', 'dmwilv16': 'DM17', 'dmwilv17': 'DM18',
-	'dmwilv18': 'DM19', 'dmwilv19': 'DM20', 'dmwilv20': 'DM21',
-	'dmwilv21': 'DM22', 'dmwilv22': 'DM23', 'dmwilv23': 'DM24',
-	'dmwilv24': 'DM25', 'dmwilv25': 'DM26', 'dmwilv26': 'DM27',
-	'dmwilv27': 'DM28', 'dmwilv28': 'DM29', 'dmwilv29': 'DM30',
-	'dmwilv30': 'DM31', 'dmwilv31': 'DM32',
 }
 
 blue_graphics = {
@@ -230,32 +217,33 @@ def read_bex_lump(filename):
 			result[assign[0].strip()] = assign[1].strip()
 	return result
 
-def update_from_bex(config, bexdata):
-	"""Update the given config dictionary with data from a BEX lump.
+def update_level_name(lumpname, bexdata, bexname):
+	"""Set the level name for the given graphic from BEX file.
 
 	Args:
-	    config: Dictionary of lumps, mapping from lump name to
-	        text string to contain in it.
-	    bexdata: Dictionary of data read from BEX lump.
+	  lumpname: Name of output graphic file.
+	  bexdata: Dictionary of data read from BEX file.
+	  bexname: Name of entry in BEX file to use.
 	"""
-	def update_lump(lumpname, bexname):
-		if bexname not in bexdata:
-			raise Exception('Level name %s not defined in '
-			                'DEHACKED lump!' % bexname)
-		# Strip "MAP01: " or "E1M2: " etc. from start, if present:
-		levelname = re.sub('^\w*\d:\s*', '', bexdata[bexname])
-		config[lumpname] = levelname
+	if bexname not in bexdata:
+		raise Exception('Level name %s not defined in '
+				'DEHACKED lump!' % bexname)
+	# Strip "MAP01: " or "E1M2: " etc. from start, if present:
+	levelname = re.sub('^\w*\d:\s*', '', bexdata[bexname])
+	white_graphics[lumpname] = levelname
 
-	for e in range(4):
-		for m in range(9):
-			# HUSTR_E1M1 from BEX => wilv00
-			update_lump('wilv%i%i' % (e, m),
-			            'HUSTR_E%iM%i' % (e + 1, m + 1))
+freedoom_bex = read_bex_lump('../../lumps/freedoom.bex')
+freedm_bex = read_bex_lump('../../lumps/freedm.bex')
 
-	for m in range(32):
-		# HUSTR_1 => cwilv00
-		update_lump('cwilv%02i' % m,
-		            'HUSTR_%i' % (m + 1))
+for e in range(4):
+	for m in range(9):
+		# HUSTR_E1M1 from BEX => wilv00
+		update_level_name('wilv%i%i' % (e, m), freedoom_bex,
+		                  'HUSTR_E%iM%i' % (e + 1, m + 1))
 
-update_from_bex(white_graphics, read_bex_lump('../../lumps/dehacked.lmp'))
+for m in range(32):
+	# HUSTR_1 => cwilv00
+	update_level_name('cwilv%02i' % m, freedoom_bex, 'HUSTR_%i' % (m + 1))
+	# HUSTR_1 => dmwilv00 (from freedm.bex)
+	update_level_name('dmwilv%02i' % m, freedm_bex, 'HUSTR_%i' % (m + 1))
 
