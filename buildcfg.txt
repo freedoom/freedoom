@@ -944,69 +944,71 @@ WIURH0
 WIURH1
 WISPLAT
 
-WIMAP0		0	0
-WIA00900        0       0
-WIA00901        0       0
-WIA00902        0       0
-WIA00800        0       0
-WIA00801        0       0
-WIA00802        0       0
-WIA00700        0       0
-WIA00701        0       0
-WIA00702        0       0
-WIA00600        0       0
-WIA00601        0       0
-WIA00602        0       0
-WIA00500        0       0
-WIA00501        0       0
-WIA00502        0       0
-WIA00400        0       0
-WIA00401        0       0
-WIA00402        0       0
-WIA00300        0       0
-WIA00301        0       0
-WIA00302        0       0
-WIA00200        0       0
-WIA00201        0       0
-WIA00202        0       0
-WIA00100        0       0
-WIA00101        0       0
-WIA00102        0       0
-WIA00000        0       0
-WIA00001        0       0
-WIA00002        0       0
+; We don't have "map" graphics for the E1-3 intermission screens.
+; Just use the normal interpic instead.
+WIMAP0   = interpic
+WIA00900
+WIA00901
+WIA00902
+WIA00800
+WIA00801
+WIA00802
+WIA00700
+WIA00701
+WIA00702
+WIA00600
+WIA00601
+WIA00602
+WIA00500
+WIA00501
+WIA00502
+WIA00400
+WIA00401
+WIA00402
+WIA00300
+WIA00301
+WIA00302
+WIA00200
+WIA00201
+WIA00202
+WIA00100
+WIA00101
+WIA00102
+WIA00000
+WIA00001
+WIA00002
 
-WIMAP1		0	0
-WIA10000        0       0
-WIA10100        0       0
-WIA10200        0       0
-WIA10300        0       0
-WIA10400        0       0
-WIA10500        0       0
-WIA10600        0       0
-WIA10700        0       0
-WIA10701        0       0
-WIA10702        0       0
-WIA20000        0       0
+WIMAP1   = interpic
+WIA10000
+WIA10100
+WIA10200
+WIA10300
+WIA10400
+WIA10500
+WIA10600
+WIA10700
+WIA10701
+WIA10702
+WIA20000
 
-WIMAP2		0	0
-WIA20001        0       0
-WIA20002        0       0
-WIA20100        0       0
-WIA20101        0       0
-WIA20102        0       0
-WIA20200        0       0
-WIA20201        0       0
-WIA20202        0       0
-WIA20300        0       0
-WIA20301        0       0
-WIA20302        0       0
-WIA20400        0       0
-WIA20401        0       0
-WIA20402        0       0
-WIA20500        0       0
-WIA20501        0       0
-WIA20502        0       0
+WIMAP2   = interpic
+WIA20001
+WIA20002
+WIA20100
+WIA20101
+WIA20102
+WIA20200
+WIA20201
+WIA20202
+WIA20300
+WIA20301
+WIA20302
+WIA20400
+WIA20401
+WIA20402
+WIA20500
+WIA20501
+WIA20502
 
 #else /* #ifndef DOOM2 */
 
