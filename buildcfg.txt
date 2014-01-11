@@ -580,12 +580,15 @@ D_ULTIMA = D_DM32
 [graphics]
 
 #ifdef ULTDOOM
-TITLEPIC 0 0          = doomuttl
+TITLEPIC 0 0          = fd1title
+M_DOOM
 #else
 #ifdef FREEDM
-TITLEPIC 0 0          = dmttl
+TITLEPIC 0 0          = fdmtitle
+M_DOOM                = m_dm
 #else
-TITLEPIC 0 0          = doomttl
+TITLEPIC 0 0          = fd2title
+M_DOOM
 #endif
 #endif
 
@@ -765,7 +768,6 @@ STFKILL4	-5	-2
 STFGOD0	-5	-2
 STFDEAD0	-5	-1
 M_EPISOD	0	0
-M_DOOM	-1	-1
 M_RDTHIS	0	0
 M_OPTION	0	0
 M_QUITG	0	0

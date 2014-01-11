@@ -1,8 +1,7 @@
 *.html
 deutex.log
-graphics/titlepic/freedm.gif
-graphics/titlepic/freedoom.gif
-graphics/titlepic/ultdoom.gif
+graphics/titlepic/fd?title.gif
+graphics/titlepic/m_*.gif
 lumps/cph/misc-lumps/*map.lmp
 lumps/cph/misc-lumps/playpal.lmp
 lumps/freedoom.lmp

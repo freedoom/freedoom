@@ -3,15 +3,17 @@
 DATE=`date +%Y/%m/%d`
 VERSION=`git describe` || VERSION=`cat ../../VERSION`
 
-convert -fill white -font Helvetica-Bold                               \
-  -pointsize 30                                                        \
+convert titlepic.gif -fill white -font Helvetica-Bold                  \
+  -draw "image over 94,2 0,0 '$1'"                                     \
+  -pointsize 20                                                        \
     -gravity north                                                     \
-      -draw "text 0,30 $1"                                             \
+      -draw "fill black stroke-width 4 stroke black text -5,65 '$2'"   \
+      -draw "text -4.5,65 '$2'"                                        \
   -pointsize 11                                                        \
     -gravity southwest                                                 \
       -draw "text 5,5 'http://freedoom.github.io/'"                    \
     -gravity southeast                                                 \
       -draw "text 10,25 'Version: $VERSION'"                           \
       -draw "text 10,5 '$DATE'"                                        \
-    titlepic.gif $2
+    $3
 
