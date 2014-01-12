@@ -2528,7 +2528,7 @@ YSKUB0	7	18
 [patches]
 
 #ifdef ULTDOOM
-#include "textures/doom/pnames.txt"
+#include "textures/phase1/pnames.txt"
 #endif
 
 #ifdef DOOM2
@@ -2536,7 +2536,7 @@ YSKUB0	7	18
 #ifdef FREEDM
 #include "textures/freedm/pnames.txt"
 #else
-#include "textures/doom2/pnames.txt"
+#include "textures/phase2/pnames.txt"
 #endif
 
 #endif
