@@ -1,0 +1,17 @@
+These are stopgap endgame screens created from screenshots of the last
+levels of each episode.
+
+VICTORY2: screenshot from E2M8 showing killed boss monster. I took this
+screenshot with the full brightness cheat on and "artificially"
+darkened it afterwards.
+
+PFUB1/2: screenshot from E3M8 showing killed boss monster. I took this
+in PrBoom+ at 640x480, then cropped it down into two 320x200 images
+that seamlessly scroll together. The marine sprite was added in
+afterwards.
+
+ENDPIC: screenshot from E4M8 showing killed boss monsters.
+
+All screenshots were taken with the game running in 640x480, and were
+resized to 640x400 to take into account Doom's aspect ratio issues.
+
