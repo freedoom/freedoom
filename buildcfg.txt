@@ -941,13 +941,13 @@ PFUB2
 ENDPIC
 
 ; "The End" animation from E3 endgame screen:
-END0
-END1
-END2
-END3
-END4
-END5
-END6
+END0	-20	-52
+END1	-20	-52
+END2	-20	-52
+END3	-20	-52
+END4	-20	-52
+END5	-20	-52
+END6	-20	-52
 
 ; inter level map
 
