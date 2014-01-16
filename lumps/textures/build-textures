@@ -1,0 +1,352 @@
+#!/usr/bin/env python
+#
+# Copyright (c) 2014
+# Contributors to the Freedoom project.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#  * Neither the name of the freedoom project nor the names of its
+#    contributors may be used to endorse or promote products derived from
+#    this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+# OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+# Texture lump builder for Freedoom
+#
+# This script builds the TEXTURE1, TEXTURE2 and PNAMES lumps for
+# Freedoom - the lumps containing the texture definitions.
+#
+# Freedoom does not use deutex's built-in texture builder for several
+# reasons:
+#
+# Firstly, Freedoom's texture lumps need to be compatible with those
+# of the original Doom WADs. There are several examples of PWADs that
+# replace only PNAMES, or only TEXTURE1. Because the TEXTURE1 format
+# is tightly coupled to the ordering of the PNAMES lump, this means
+# that these WADs will fail in Freedoom unless the ordering is
+# strictly maintained. For example, if entry #3 in PNAMES is DOOR2_4,
+# it must also be the same in Freedoom's version of PNAMES.
+#
+# Freedoom has a single configuration file where all its textures are
+# defined, but doom.wad contains two separate lumps: TEXTURE1/TEXTURE2.
+# Similarly to the first problem, it's important that the compatible
+# lumps are built with the same textures in each: some WADs replace
+# TEXTURE1 but not TEXTURE2, with the result that many textures end
+# up missing.
+#
+# Finally, deutex does not allow a filename to be specified for
+# TEXTURE entries. That is to say, you can't do this:
+#
+#     [textures]
+#     TEXTURE1   = fdtxtr1.txt
+#
+# This is an annoying limitation that means that the different
+# Freedoom IWADs cannot be built in parallel by make.
+
+import collections
+import re
+import sys
+import struct
+
+COMMENT_RE = re.compile(r"\s*;.*")
+TEXTURE_NAME_RE = re.compile(r"\s*([\w-]+)\s+(-?\d+)\s+(-?\d+)")
+PATCH_NAME_RE = re.compile(r"\s*\*\s+([\w-]+)\s+(-?\d+)\s+(-?\d+)")
+
+Texture = collections.namedtuple("Texture", ["w", "h", "patches"])
+TexturePatch = collections.namedtuple("TexturePatch", ["pname", "x", "y"])
+
+class TextureSet(collections.OrderedDict):
+	def __init__(self, pnames):
+		"""Initialize a new set of textures.
+
+		Args:
+		  pnames: List of PNAMES to use for the textures. New
+		      patches will be added to this list as the texture
+		      set is extended.
+		"""
+		super(TextureSet, self).__init__()
+		self.pnames = pnames
+
+	def pname_index(self, pname):
+		"""Get the index into the PNAMES list for the given patch.
+
+		If the patch is not in the list, it will be added to the
+		list.
+
+		Args:
+		  pname: Name of the patch to look up.
+		Returns:
+		  Index into the PNAMES list where this patch can be found.
+		"""
+		try:
+			return self.pnames.index(pname)
+		except ValueError:
+			self.pnames.append(pname.upper())
+			return len(self.pnames) - 1
+
+	def add_texture(self, name, width=0, height=0):
+		"""Add a new texture to the set.
+
+		If a texture is already defined with the given name, the
+		current definition is erased (though the ordering of
+		textures is maintained).
+
+		Args:
+		  name: Name of the texture.
+		  width: Width of the texture in pixels.
+		  height: Height of the texture in pixels.
+		"""
+		self[name] = Texture(width, height, [])
+
+	def add_texture_patch(self, txname, patch, x, y):
+		"""Add a patch to the given texture.
+
+		Args:
+		  txname: Name of the texture.
+		  patch: Name of the patch to add.
+		  x: X offset for the patch in pixels.
+		  y: Y offset for the patch in pixels.
+		"""
+		texture = self[txname]
+		tp = TexturePatch(self.pname_index(patch), x, y)
+		texture.patches.append(tp)
+
+	def write_texture_lump(self, filename):
+		"""Build the texture lump and output to a file.
+
+		Args:
+		  filename: Path to file in which to store the resulting
+		      lump.
+		"""
+		with open(filename, "w") as out:
+			# Header indicating number of textures:
+			out.write(struct.pack("<l", len(self)))
+
+			# Offsets:
+			offset = 4 + 4 * len(self)
+			for _, texture in self.items():
+				out.write(struct.pack("<l", offset))
+				offset += 22 + 10 * len(texture.patches)
+
+			# Write actual texture data:
+			for name, texture in self.items():
+				maptexture = struct.pack("<8slhhlh",
+				    name, 0, texture.w, texture.h,
+				    0, len(texture.patches))
+				out.write(maptexture)
+
+				# Patches:
+				for patch in texture.patches:
+					mappatch = struct.pack("<hhhhh",
+					    patch.x, patch.y, patch.pname,
+					    0, 0)
+					out.write(mappatch)
+
+
+
+class NamesFileError(Exception):
+	pass
+
+def read_names_file(filename):
+	"""Read a list of names from a text file.
+
+	The names are a maximum of 8 characters long.
+	Args:
+	  filename: Name of the file from which to read names.
+	Returns:
+	  List of name strings, all in upper case.
+	"""
+	with open(filename) as f:
+		result = []
+		for line in f:
+			line = COMMENT_RE.sub('', line).strip()
+			if len(line) > 8:
+				raise NamesFileError(
+				    'Invalid name in %s: %s' % (filename, line))
+			if line != '':
+				result.append(line.upper())
+		return result
+
+def load_compat_textures(textures, compat_file):
+	"""Pre-populate a texture set from a compatibility file.
+
+	Args:
+	  textures: TextureSet to populate.
+	  compat_file: Path to text file containing list of textures. If
+	      None, do not do anything.
+	"""
+	if compat_file is None:
+		return
+
+	for texture in read_names_file(compat_file):
+		textures.add_texture(texture)
+
+class TextureConfigError(Exception):
+	pass
+
+def parse_textures(stream):
+	"""Parse texture config from the given input stream.
+
+	Args:
+	  stream: Input stream from which to read lines of input.
+	Yields:
+	  A tuple for each parsed texture, containing:
+	    Texture name
+	    Width
+	    Height
+	    List of tuples representing each patch, where each contains:
+	      Patch name
+	      X offset
+	      Y offset
+	"""
+	current_texture = None
+	current_patches = []
+	linenum = 0
+	for line in sys.stdin:
+		line = COMMENT_RE.sub('', line).strip()
+		linenum += 1
+
+		match = TEXTURE_NAME_RE.match(line)
+		if match:
+			if current_texture is not None:
+				yield current_texture
+
+			current_patches = []
+			current_texture = (
+				match.group(1),        # Texture name
+				int(match.group(2)),   # Width
+				int(match.group(3)),   # Height
+				current_patches,       # List of patches
+			)
+			continue
+
+		match = PATCH_NAME_RE.match(line)
+		if match and current_texture:
+			current_patches.append((
+				match.group(1),        # Patch name
+				int(match.group(2)),   # X offset
+				int(match.group(3)),   # Y offset
+			))
+			continue
+
+		if line != '':
+			raise TextureConfigError(
+			    'input:%i:Invalid config line: %s' %
+			    (linenum, line))
+
+	# Last texture:
+	if current_texture is not None:
+		yield current_texture
+
+def write_pnames_lump(pnames, filename):
+	"""Write a PNAMES list to a file.
+
+	Args:
+	  pnames: List of strings containing patch names.
+	  filename: Output filename.
+	"""
+	with open(filename, "w") as out:
+		out.write(struct.pack("<l", len(pnames)))
+		for pname in pnames:
+			out.write(struct.pack("8s", pname))
+
+def usage():
+	print """
+Usage: %s -output_texture1=texture1.lmp -output_pnames=pnames.lmp < config.txt
+
+Full list of arguments:
+  -output_texture1: Path to the TEXTURE1 lump to generate (required).
+  -output_texture2: Path to the TEXTURE2 lump to generate.
+  -output_pnames: Path to the PNAMES lump to generate (required).
+  -compat_texture1: File containing compatibility list of TEXTURE1 textures
+  -compat_texture2: File containing compatibility list of TEXTURE2 textures
+  -compat_pnames: File containing compatibility list of PNAMES
+"""
+	sys.exit(1)
+
+def parse_command_line(args):
+	"""Parse command line arguments.
+
+	Args:
+	  args: List of command line arguments to parse.
+	Returns:
+	  Dictionary mapping from arg name to value.
+	"""
+
+	# Parse command line:
+	valid_args = ("compat_texture1", "compat_texture2", "compat_pnames",
+		      "output_texture1", "output_texture2", "output_pnames")
+	result = {arg: None for arg in valid_args}
+
+	for arg in args:
+		if not arg.startswith("-") or "=" not in arg:
+			usage()
+		name, value = arg[1:].split("=", 2)
+		if name not in valid_args:
+			usage()
+		result[name] = value
+
+	# Required args:
+	if not result["output_texture1"] or not result["output_pnames"]:
+		usage()
+
+	return result
+
+args = parse_command_line(sys.argv[1:])
+
+# If we have a compatibility PNAMES list, populate it. Otherwise PNAMES
+# just starts from an empty list.
+if args["compat_pnames"]:
+	pnames = read_names_file(args["compat_pnames"])
+else:
+	pnames = []
+
+# Generate basic data structures. The two texture lumps share a list
+# of PNAMES.
+texture1 = TextureSet(pnames)
+texture2 = TextureSet(pnames)
+
+# If we have compatibility lists for TEXTURE1/TEXTURE2, we need to
+# populate the texture sets with them before we start parsing any real
+# configuration.
+load_compat_textures(texture1, args["compat_texture1"])
+load_compat_textures(texture2, args["compat_texture2"])
+
+# Parse the config file and store the texture data.
+for texture, width, height, patches in parse_textures(sys.stdin):
+
+	# If this texture was predefined for TEXTURE2, put it in that lump;
+	# otherwise, one way or another it's going in TEXTURE1:
+	if texture in texture2:
+		textures = texture2
+	else:
+		textures = texture1
+
+	textures.add_texture(texture, width, height)
+	for patch, x, y in patches:
+		textures.add_texture_patch(texture, patch, x, y)
+
+# Write lumps to output files:
+texture1.write_texture_lump(args["output_texture1"])
+if args["output_texture2"]:
+	texture2.write_texture_lump(args["output_texture2"])
+write_pnames_lump(pnames, args["output_pnames"])
+

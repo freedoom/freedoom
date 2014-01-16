@@ -219,9 +219,28 @@ FOGMAP
 MFADEMAP
 C_END
 
-; List of definitions for TEXTURE1
-[texture1]
-TEXTURE1
+; Textures:
+
+#ifndef DOOM2
+
+TEXTURE1 = fd1txtr1
+TEXTURE2 = fd1txtr2
+PNAMES   = fd1pname
+
+#else
+#ifdef FREEDM
+
+TEXTURE1 = fdmtxtr1
+PNAMES   = fdmpname
+
+#else
+
+TEXTURE1 = fd2txtr1
+PNAMES   = fd2pname
+
+#endif
+#endif
+
 
 ; List of Sounds
 [sounds]
@@ -2538,19 +2557,7 @@ YSKUB0	7	18
 
 [patches]
 
-#ifdef ULTDOOM
-#include "textures/phase1/pnames.txt"
-#endif
-
-#ifdef DOOM2
-
-#ifdef FREEDM
-#include "textures/freedm/pnames.txt"
-#else
-#include "textures/phase2/pnames.txt"
-#endif
-
-#endif
+#include "pnames.txt"
 
 [flats]
 

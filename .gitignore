@@ -7,15 +7,9 @@ lumps/cph/misc-lumps/playpal.lmp
 lumps/freedoom.lmp
 lumps/freedm.lmp
 sprites/jond/placeholder/*.gif
-textures/phase1/pnames.txt
-textures/phase1/texture1.txt
-textures/phase2/pnames.txt
-textures/phase2/texture1.txt
-textures/freedm/pnames.txt
-textures/freedm/texture1.txt
-textures/texture1.txt
 wads/*.wad
 wads/*.zip
+pnames.txt
 wad*.txt
 *.bak
 *.pyc

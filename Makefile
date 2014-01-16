@@ -51,34 +51,18 @@ subdirs:
 
 force:
 
-# build texture1.txt for different builds
-
-textures/phase1/texture1.txt: textures/combined.txt
-	@mkdir -p textures/phase1
-	$(CPP) -DDOOM1 -DULTDOOM < $< > $@
-textures/phase2/texture1.txt: textures/combined.txt
-	@mkdir -p textures/phase2
-	$(CPP) -DDOOM1 -DDOOM2 < $< > $@
-textures/freedm/texture1.txt: textures/combined.txt
-	@mkdir -p textures/freedm
-	$(CPP) -DFREEDM < $< > $@
-
-textures/phase1/pnames.txt: textures/phase1/texture1.txt
-	scripts/extract-pnames.py -a > $@
-textures/phase2/pnames.txt: textures/phase2/texture1.txt
-	scripts/extract-pnames.py -a > $@
-textures/freedm/pnames.txt: textures/freedm/texture1.txt
+pnames.txt:
 	scripts/extract-pnames.py -a > $@
 
 # update wadinfo.txt
 
-wadinfo.txt: buildcfg.txt force textures/phase2/pnames.txt
+wadinfo.txt: buildcfg.txt force pnames.txt
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py > $@
-wadinfo_phase1.txt: buildcfg.txt force textures/phase1/pnames.txt
+wadinfo_phase1.txt: buildcfg.txt force pnames.txt
 	$(CPP) -P -DDOOM1 -DULTDOOM < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_phase2.txt: buildcfg.txt force textures/phase2/pnames.txt
+wadinfo_phase2.txt: buildcfg.txt force pnames.txt
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
+wadinfo_freedm.txt : buildcfg.txt force pnames.txt
 	$(CPP) -P -DFREEDM < $< | scripts/wadinfo-builder.py -dummy > $@
 
 %.wad.gz: %.wad
@@ -96,7 +80,6 @@ wadinfo_freedm.txt : buildcfg.txt force textures/freedm/pnames.txt
 
 $(FREEDM): wadinfo_freedm.txt subdirs force
 	@mkdir -p $(WADS)
-	ln -sf freedm/texture1.txt textures/texture1.txt
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
 
@@ -105,18 +88,16 @@ $(FREEDM): wadinfo_freedm.txt subdirs force
 
 $(FREEDOOM1): wadinfo_phase1.txt subdirs force
 	@mkdir -p $(WADS)
-	ln -sf phase1/texture1.txt textures/texture1.txt
 	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase1.txt $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase1.txt $@
 
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
 
 $(FREEDOOM2): wadinfo_phase2.txt subdirs force
 	@mkdir -p $(WADS)
-	ln -sf phase2/texture1.txt textures/texture1.txt
 	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -textures -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
 
 doc: BUILD-SYSTEM.asc README.asc
 	asciidoc BUILD-SYSTEM.asc
@@ -135,14 +116,8 @@ clean:
 		./wadinfo_phase2.txt ./wadinfo_freedm.txt \
 		./lumps/freedoom.lmp \
 		./lumps/freedm.lmp \
-		./textures/phase1/pnames.txt \
-		./textures/phase1/texture1.txt \
-		./textures/phase2/pnames.txt \
-		./textures/phase2/texture1.txt \
-		./textures/freedm/pnames.txt \
-		./textures/freedm/texture1.txt \
-		./textures/texture1.txt
-	-rmdir $(WADS) textures/phase1 textures/phase2 textures/freedm
+		pnames.txt
+	-rmdir $(WADS)
 
 	make -C lumps clean
 	make -C graphics/text clean
