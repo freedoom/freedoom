@@ -27,7 +27,7 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-VERSION!=git describe
+VERSION=$(shell git describe)
 WADS=wads
 CPP=scripts/simplecpp
 DEUTEX=deutex
@@ -43,13 +43,20 @@ OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 all: $(OBJS)
 
 subdirs:
-	make -C graphics/text
-	make -C graphics/titlepic
-	make -C lumps
+	$(MAKE) -C graphics/text
+	$(MAKE) -C graphics/titlepic
+	$(MAKE) -C lumps/cph/misc-lumps
+	$(MAKE) -C lumps/genmidi
+	$(MAKE) -C lumps/dmxgus
+	$(MAKE) -C lumps/textures
+
 
 # this is a useless dependency to force builds
 
 force:
+
+lumps/freedoom.lmp lumps/freedm.lmp: force
+	echo $(VERSION) > $@
 
 pnames.txt:
 	scripts/extract-pnames.py -a > $@
@@ -78,7 +85,7 @@ wadinfo_freedm.txt : buildcfg.txt force pnames.txt
 #---------------------------------------------------------
 # freedm iwad
 
-$(FREEDM): wadinfo_freedm.txt subdirs force
+$(FREEDM): wadinfo_freedm.txt subdirs lumps/freedm.lmp
 	@mkdir -p $(WADS)
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
@@ -86,7 +93,7 @@ $(FREEDM): wadinfo_freedm.txt subdirs force
 #---------------------------------------------------------
 # phase 1 (udoom) iwad
 
-$(FREEDOOM1): wadinfo_phase1.txt subdirs force
+$(FREEDOOM1): wadinfo_phase1.txt subdirs lumps/freedoom.lmp
 	@mkdir -p $(WADS)
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase1.txt $@
@@ -94,7 +101,7 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs force
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
 
-$(FREEDOOM2): wadinfo_phase2.txt subdirs force
+$(FREEDOOM2): wadinfo_phase2.txt subdirs lumps/freedoom.lmp
 	@mkdir -p $(WADS)
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
@@ -119,6 +126,11 @@ clean:
 		pnames.txt
 	-rmdir $(WADS)
 
-	make -C lumps clean
-	make -C graphics/text clean
-	make -C graphics/titlepic clean
+	$(MAKE) -C lumps clean
+	$(MAKE) -C graphics/text clean
+	$(MAKE) -C graphics/titlepic clean
+	$(MAKE) -C lumps/cph/misc-lumps clean
+	$(MAKE) -C lumps/genmidi clean
+	$(MAKE) -C lumps/dmxgus clean
+	$(MAKE) -C lumps/textures clean
+

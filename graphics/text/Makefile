@@ -39,9 +39,22 @@ GRAPHICS = \
 
 all: $(GRAPHICS)
 
-$(GRAPHICS): config.py fontchars ../../lumps/fraggle/freedoom.bex
+# textgen creates multiple outputs, which is awkward to express in
+# make. Use a witness file (graphics.stamp) as suggested in the
+# automake manual: "Handling Tools that Produce Many Outputs"
+
+$(GRAPHICS): graphics.stamp
+	@if test -f $@; then :; else \
+	  rm -f graphics.stamp; \
+	  $(MAKE) data.stamp; \
+	fi
+
+graphics.stamp: config.py fontchars ../../lumps/fraggle/freedoom.bex
+	@rm -f graphics.tmp
+	@touch graphics.tmp
 	./textgen
+	@mv graphics.tmp $@
 
 clean:
-	rm -f $(GRAPHICS)
+	rm -f $(GRAPHICS) graphics.stamp
 
