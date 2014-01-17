@@ -60,13 +60,13 @@ lumps/freedoom.lmp lumps/freedm.lmp: force
 
 # update wadinfo.txt
 
-wadinfo.txt: buildcfg.txt force
+wadinfo.txt: buildcfg.txt subdirs force
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py > $@
-wadinfo_phase1.txt: buildcfg.txt force
+wadinfo_phase1.txt: buildcfg.txt subdirs force
 	$(CPP) -P -DDOOM1 -DULTDOOM < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_phase2.txt: buildcfg.txt force
+wadinfo_phase2.txt: buildcfg.txt subdirs force
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_freedm.txt : buildcfg.txt force
+wadinfo_freedm.txt : buildcfg.txt subdirs force
 	$(CPP) -P -DFREEDM < $< | scripts/wadinfo-builder.py -dummy > $@
 
 %.wad.gz: %.wad
