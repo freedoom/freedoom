@@ -58,18 +58,15 @@ force:
 lumps/freedoom.lmp lumps/freedm.lmp: force
 	echo $(VERSION) > $@
 
-pnames.txt:
-	scripts/extract-pnames.py -a > $@
-
 # update wadinfo.txt
 
-wadinfo.txt: buildcfg.txt force pnames.txt
+wadinfo.txt: buildcfg.txt force
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py > $@
-wadinfo_phase1.txt: buildcfg.txt force pnames.txt
+wadinfo_phase1.txt: buildcfg.txt force
 	$(CPP) -P -DDOOM1 -DULTDOOM < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_phase2.txt: buildcfg.txt force pnames.txt
+wadinfo_phase2.txt: buildcfg.txt force
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_freedm.txt : buildcfg.txt force pnames.txt
+wadinfo_freedm.txt : buildcfg.txt force
 	$(CPP) -P -DFREEDM < $< | scripts/wadinfo-builder.py -dummy > $@
 
 %.wad.gz: %.wad
@@ -122,8 +119,7 @@ clean:
 		./wadinfo.txt ./wadinfo_phase1.txt \
 		./wadinfo_phase2.txt ./wadinfo_freedm.txt \
 		./lumps/freedoom.lmp \
-		./lumps/freedm.lmp \
-		pnames.txt
+		./lumps/freedm.lmp
 	-rmdir $(WADS)
 
 	$(MAKE) -C graphics/text clean

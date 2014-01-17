@@ -96,10 +96,11 @@ class TextureSet(collections.OrderedDict):
 		Returns:
 		  Index into the PNAMES list where this patch can be found.
 		"""
+		pname = pname.upper()
 		try:
 			return self.pnames.index(pname)
 		except ValueError:
-			self.pnames.append(pname.upper())
+			self.pnames.append(pname)
 			return len(self.pnames) - 1
 
 	def add_texture(self, name, width=0, height=0):
@@ -114,6 +115,7 @@ class TextureSet(collections.OrderedDict):
 		  width: Width of the texture in pixels.
 		  height: Height of the texture in pixels.
 		"""
+		name = name.upper()
 		self[name] = Texture(width, height, [])
 
 	def add_texture_patch(self, txname, patch, x, y):
@@ -125,6 +127,7 @@ class TextureSet(collections.OrderedDict):
 		  x: X offset for the patch in pixels.
 		  y: Y offset for the patch in pixels.
 		"""
+		txname = txname.upper()
 		texture = self[txname]
 		tp = TexturePatch(self.pname_index(patch), x, y)
 		texture.patches.append(tp)
@@ -184,6 +187,17 @@ def read_names_file(filename):
 			if line != '':
 				result.append(line.upper())
 		return result
+
+def write_names_file(names, filename):
+	"""Write a list of names to a file.
+
+	Args:
+	  names: List of names to write.
+	  filename: Filename to write them to.
+	"""
+	with open(filename, "w") as f:
+		for name in names:
+			f.write("%s\n" % name)
 
 def load_compat_textures(textures, compat_file):
 	"""Pre-populate a texture set from a compatibility file.
@@ -276,6 +290,7 @@ Full list of arguments:
   -output_texture1: Path to the TEXTURE1 lump to generate (required).
   -output_texture2: Path to the TEXTURE2 lump to generate.
   -output_pnames: Path to the PNAMES lump to generate (required).
+  -output_pnames_txt: Path to a text file to save a list of PNAMES.
   -compat_texture1: File containing compatibility list of TEXTURE1 textures
   -compat_texture2: File containing compatibility list of TEXTURE2 textures
   -compat_pnames: File containing compatibility list of PNAMES
@@ -293,7 +308,8 @@ def parse_command_line(args):
 
 	# Parse command line:
 	valid_args = ("compat_texture1", "compat_texture2", "compat_pnames",
-		      "output_texture1", "output_texture2", "output_pnames")
+	              "output_texture1", "output_texture2", "output_pnames",
+	              "output_pnames_txt")
 	result = {arg: None for arg in valid_args}
 
 	for arg in args:
@@ -349,4 +365,6 @@ texture1.write_texture_lump(args["output_texture1"])
 if args["output_texture2"]:
 	texture2.write_texture_lump(args["output_texture2"])
 write_pnames_lump(pnames, args["output_pnames"])
+if args["output_pnames_txt"]:
+	write_names_file(sorted(pnames), args["output_pnames_txt"])
 

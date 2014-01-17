@@ -2557,7 +2557,15 @@ YSKUB0	7	18
 
 [patches]
 
-#include "pnames.txt"
+#ifdef DOOM1
+#include "lumps/textures/phase1/pnames.txt"
+#else
+#ifdef FREEDM
+#include "lumps/textures/freedm/pnames.txt"
+#else
+#include "lumps/textures/phase2/pnames.txt"
+#endif
+#endif
 
 [flats]
 

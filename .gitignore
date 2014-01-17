@@ -9,7 +9,6 @@ lumps/freedm.lmp
 sprites/jond/placeholder/*.gif
 wads/*.wad
 wads/*.zip
-pnames.txt
 wad*.txt
 *.bak
 *.pyc
