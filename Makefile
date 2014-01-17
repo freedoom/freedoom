@@ -126,7 +126,6 @@ clean:
 		pnames.txt
 	-rmdir $(WADS)
 
-	$(MAKE) -C lumps clean
 	$(MAKE) -C graphics/text clean
 	$(MAKE) -C graphics/titlepic clean
 	$(MAKE) -C lumps/cph/misc-lumps clean
