@@ -43,5 +43,5 @@ $(GRAPHICS): config.py fontchars ../../lumps/fraggle/freedoom.bex
 	./textgen
 
 clean:
-	rm -f $(GRAPHICS)
+	rm -f $(GRAPHICS) *.pyc
 
