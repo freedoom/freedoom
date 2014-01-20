@@ -56,5 +56,5 @@ graphics.stamp: config.py fontchars ../../lumps/fraggle/freedoom.bex
 	@mv graphics.tmp $@
 
 clean:
-	rm -f $(GRAPHICS) graphics.stamp
-
+	rm -f $(GRAPHICS) graphics.stamp *.pyc
+	rm -f $(GRAPHICS) *.pyc
