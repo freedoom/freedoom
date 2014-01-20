@@ -90,11 +90,21 @@ def remove_comments(text):
 # Get the name of a dummy lump to use as a stand-in for the 
 # given resource.
 
-def get_dummy_name(resource):
+def get_dummy_name(section, resource):
+
+	# As a special case: some patches used in the TEXTURE1 lump
+	# are actually sprites that are used in textures. This means
+	# that they will not appear in patches/. But we don't want
+	# to include a dummy lump for these - they can just be removed.
+	# Detect this case and don't use a dummy.
+	if section == 'patches':
+		if os.path.exists('sprites/%s.gif' % resource):
+			return None
+
 	if resource.lower().startswith("demo"):
 		return "fakedemo"
 	else:
-		return  "dummy"
+		return "dummy"
 
 # Parse an assignment statement.
 
@@ -118,9 +128,12 @@ def parse_assignment(section, line, match):
 		# depending on configuration.
 
 		if dummy:
-			dummy_name = get_dummy_name(resource)
+			dummy_name = get_dummy_name(section, resource)
 
-			result = "%s = %s" % (resource, dummy_name)
+			if dummy_name:
+				result = "%s = %s" % (resource, dummy_name)
+			else:
+				result = "; %s - no dummy" % resource
 		else:
 			result = "; " + line
 	else:
