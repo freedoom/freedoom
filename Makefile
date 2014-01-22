@@ -60,13 +60,13 @@ lumps/freedoom.lmp lumps/freedm.lmp: force
 
 # update wadinfo.txt
 
-wadinfo.txt: buildcfg.txt subdirs force
+wadinfo.txt: buildcfg.txt subdirs lumps/freedoom.lmp
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py > $@
-wadinfo_phase1.txt: buildcfg.txt subdirs force
+wadinfo_phase1.txt: buildcfg.txt subdirs lumps/freedoom.lmp
 	$(CPP) -P -DDOOM1 -DULTDOOM < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_phase2.txt: buildcfg.txt subdirs force
+wadinfo_phase2.txt: buildcfg.txt subdirs lumps/freedoom.lmp
 	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py -dummy > $@
-wadinfo_freedm.txt : buildcfg.txt subdirs force
+wadinfo_freedm.txt : buildcfg.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
 	$(CPP) -P -DFREEDM < $< | scripts/wadinfo-builder.py -dummy > $@
 
 %.wad.gz: %.wad
@@ -82,7 +82,7 @@ wadinfo_freedm.txt : buildcfg.txt subdirs force
 #---------------------------------------------------------
 # freedm iwad
 
-$(FREEDM): wadinfo_freedm.txt subdirs lumps/freedm.lmp
+$(FREEDM): wadinfo_freedm.txt subdirs
 	@mkdir -p $(WADS)
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
@@ -90,7 +90,7 @@ $(FREEDM): wadinfo_freedm.txt subdirs lumps/freedm.lmp
 #---------------------------------------------------------
 # phase 1 (udoom) iwad
 
-$(FREEDOOM1): wadinfo_phase1.txt subdirs lumps/freedoom.lmp
+$(FREEDOOM1): wadinfo_phase1.txt subdirs
 	@mkdir -p $(WADS)
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase1.txt $@
@@ -98,7 +98,7 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs lumps/freedoom.lmp
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
 
-$(FREEDOOM2): wadinfo_phase2.txt subdirs lumps/freedoom.lmp
+$(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
