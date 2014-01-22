@@ -1,0 +1,13 @@
+Egypt textures.
+
+These are remakes of the textures that tnt.wad included these for its
+Egyptian-themed MAP31 secret level. The base is nb_nmare's rw23_3
+patch, recolored to a brighter shade of yellow - this can be seen in
+STWALL. This was then altered into a "plain" (no bricks) version for the
+murals.
+
+The mural images come from "EGYPTIAN IDEAS OF THE FUTURE LIFE" by
+E.A. Wallis Budge, pubished 1908 and found on Project Gutenberg. Due
+to its age its copyright has expired; the original murals are ancient
+so no copyright on those, either. Two of the larger images from the
+book were cut up to make the various images found here.
