@@ -1,6 +1,5 @@
 #!/bin/sh
 
-DATE=`date +%Y/%m/%d`
 VERSION=`git describe` || VERSION=`cat ../../VERSION`
 
 convert titlepic.gif -fill white -font Helvetica-Bold                  \
@@ -13,7 +12,5 @@ convert titlepic.gif -fill white -font Helvetica-Bold                  \
     -gravity southwest                                                 \
       -draw "text 5,5 'http://freedoom.github.io/'"                    \
     -gravity southeast                                                 \
-      -draw "text 10,25 'Version: $VERSION'"                           \
-      -draw "text 10,5 '$DATE'"                                        \
+      -draw "text 10,5 'Version: $VERSION'"                            \
     $3
-
