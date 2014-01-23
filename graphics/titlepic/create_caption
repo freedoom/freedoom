@@ -1,7 +1,5 @@
 #!/bin/sh
 
-VERSION=`git describe` || VERSION=`cat ../../VERSION`
-
 convert titlepic.gif -fill white -font Helvetica-Bold                  \
   -draw "image over 94,2 0,0 '$1'"                                     \
   -pointsize 20                                                        \

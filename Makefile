@@ -27,7 +27,7 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-VERSION=$(shell git describe)
+VERSION=$(shell git describe 2>/dev/null || cat VERSION)
 WADS=wads
 CPP=scripts/simplecpp
 DEUTEX=deutex
@@ -44,7 +44,7 @@ all: $(OBJS)
 
 subdirs:
 	$(MAKE) -C graphics/text
-	$(MAKE) -C graphics/titlepic
+	$(MAKE) VERSION=$(VERSION) -C graphics/titlepic
 	$(MAKE) -C lumps/cph/misc-lumps
 	$(MAKE) -C lumps/genmidi
 	$(MAKE) -C lumps/dmxgus
