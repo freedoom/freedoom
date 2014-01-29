@@ -165,53 +165,53 @@ GUS_INSTR_PATCHES = {
 	126: "applause",   # #127 - Applause
 	127: "pistol",     # #128 - Gunshot
 	128: "blank",
-	162: "kick1",      # #35 Acoustic Bass Drum
-	163: "kick2",      # #36 Bass Drum 1
-	164: "stickrim",   # #37 Side Stick
-	165: "snare1",     # #38 Acoustic Snare
-	166: "claps",      # #39 Hand Clap
-	167: "snare2",     # #40 Electric Snare
-	168: "tomlo2",     # #41 Low Floor Tom
-	169: "hihatcl",    # #42 Closed Hi Hat
-	170: "tomlo1",     # #43 High Floor Tom
-	171: "hihatpd",    # #44 Pedal Hi-Hat
-	172: "tommid2",    # #45 Low Tom
-	173: "hihatop",    # #46 Open Hi-Hat
-	174: "tommid1",    # #47 Low-Mid Tom
-	175: "tomhi2",     # #48 Hi-Mid Tom
-	176: "cymcrsh1",   # #49 Crash Cymbal 1
-	177: "tomhi1",     # #50 High Tom
-	178: "cymride1",   # #51 Ride Cymbal 1
-	179: "cymchina",   # #52 Chinese Cymbal
-	180: "cymbell",    # #53 Ride Bell
-	181: "tamborin",   # #54 Tambourine
-	182: "cymsplsh",   # #55 Splash Cymbal
-	183: "cowbell",    # #56 Cowbell
-	184: "cymcrsh2",   # #57 Crash Cymbal 2
-	185: "vibslap",    # #58 Vibraslap
-	186: "cymride2",   # #59 Ride Cymbal 2
-	187: "bongohi",    # #60 Hi Bongo
-	188: "bongolo",    # #61 Low Bongo
-	189: "congahi1",   # #62 Mute Hi Conga
-	190: "congahi2",   # #63 Open Hi Conga
-	191: "congalo",    # #64 Low Conga
-	192: "timbaleh",   # #65 High Timbale
-	193: "timbalel",   # #66 Low Timbale
-	194: "agogohi",    # #67 High Agogo
-	195: "agogolo",    # #68 Low Agogo
-	196: "cabasa",     # #69 Cabasa
-	197: "maracas",    # #70 Maracas
-	198: "whistle1",   # #71 Short Whistle
-	199: "whistle2",   # #72 Long Whistle
-	200: "guiro1",     # #73 Short Guiro
-	201: "guiro2",     # #74 Long Guiro
-	202: "clave",      # #75 Claves
-	203: "woodblk1",   # #76 Hi Wood Block
-	204: "woodblk2",   # #77 Low Wood Block
-	205: "cuica1",     # #78 Mute Cuica
-	206: "cuica2",     # #79 Open Cuica
-	207: "triangl1",   # #80 Mute Triangle
-	208: "triangl2",   # #81 Open Triangle
+	163: "kick1",      # #35 Acoustic Bass Drum
+	164: "kick2",      # #36 Bass Drum 1
+	165: "stickrim",   # #37 Side Stick
+	166: "snare1",     # #38 Acoustic Snare
+	167: "claps",      # #39 Hand Clap
+	168: "snare2",     # #40 Electric Snare
+	169: "tomlo2",     # #41 Low Floor Tom
+	170: "hihatcl",    # #42 Closed Hi Hat
+	171: "tomlo1",     # #43 High Floor Tom
+	172: "hihatpd",    # #44 Pedal Hi-Hat
+	173: "tommid2",    # #45 Low Tom
+	174: "hihatop",    # #46 Open Hi-Hat
+	175: "tommid1",    # #47 Low-Mid Tom
+	176: "tomhi2",     # #48 Hi-Mid Tom
+	177: "cymcrsh1",   # #49 Crash Cymbal 1
+	178: "tomhi1",     # #50 High Tom
+	179: "cymride1",   # #51 Ride Cymbal 1
+	180: "cymchina",   # #52 Chinese Cymbal
+	181: "cymbell",    # #53 Ride Bell
+	182: "tamborin",   # #54 Tambourine
+	183: "cymsplsh",   # #55 Splash Cymbal
+	184: "cowbell",    # #56 Cowbell
+	185: "cymcrsh2",   # #57 Crash Cymbal 2
+	186: "vibslap",    # #58 Vibraslap
+	187: "cymride2",   # #59 Ride Cymbal 2
+	188: "bongohi",    # #60 Hi Bongo
+	189: "bongolo",    # #61 Low Bongo
+	190: "congahi1",   # #62 Mute Hi Conga
+	191: "congahi2",   # #63 Open Hi Conga
+	192: "congalo",    # #64 Low Conga
+	193: "timbaleh",   # #65 High Timbale
+	194: "timbalel",   # #66 Low Timbale
+	195: "agogohi",    # #67 High Agogo
+	196: "agogolo",    # #68 Low Agogo
+	197: "cabasa",     # #69 Cabasa
+	198: "maracas",    # #70 Maracas
+	199: "whistle1",   # #71 Short Whistle
+	200: "whistle2",   # #72 Long Whistle
+	201: "guiro1",     # #73 Short Guiro
+	202: "guiro2",     # #74 Long Guiro
+	203: "clave",      # #75 Claves
+	204: "woodblk1",   # #76 Hi Wood Block
+	205: "woodblk2",   # #77 Low Wood Block
+	206: "cuica1",     # #78 Mute Cuica
+	207: "cuica2",     # #79 Open Cuica
+	208: "triangl1",   # #80 Mute Triangle
+	209: "triangl2",   # #81 Open Triangle
 }
 
 # These are the data sizes of the patch files distributed with the
