@@ -313,7 +313,7 @@ SIMILAR_GROUPS = [
 	('violin', 'viola', 'cello', 'contraba', 'tremstr', 'pizzcato', 'harp',
 	 'timpani'),
 	# Other stringed (?)
-	('marcato', 'slowstr', 'synstr1', 'synstr2', 'choir', 'doo', 'voices',
+	('slowstr', 'marcato', 'synstr1', 'synstr2', 'choir', 'doo', 'voices',
 	 'orchhit'),
 	# Trumpet and other brass.
 	('trumpet', 'trombone', 'tuba', 'mutetrum', 'frenchrn', 'hitbrass',
@@ -334,25 +334,32 @@ SIMILAR_GROUPS = [
 	 'fx-blow', 'seashore', 'jungle', 'telephon', 'helicptr', 'applause',
 	 'pistol'),
 
-	# -- Percussion effects. This is probably where the current config is
-	#    worst and in dire need of improvement.
+	# Percussion sounds. These have been grouped based on listening to
+	# the standard GUS patches, and appropriate "leader" instruments
+	# chosen for each group that sound good.
 
-	# Conga/kick
-	('kick1', 'steeldrm', 'taiko', 'kick2', 'congahi1', 'congahi2',
-	 'congalo', 'clave'),
-	# Snare drums
-	('snare1', 'stickrim', 'claps', 'snare2', 'tamborin', 'vibslap',
-	 'bongohi', 'bongolo', 'timbaleh', 'timbalel', 'maracas', 'woodblk1',
-	 'woodblk2'),
-	# Hi-hat
-	('hihatpd', 'carillon', 'agogo', 'woodblk', 'hihatcl', 'hihatop',
-	 'cowbell', 'agogohi', 'agogolo', 'cabasa', 'whistle1', 'whistle2',
-	 'guiro1', 'guiro2', 'cuica1', 'cuica2', 'triangl1', 'triangl2'),
-	# Toms
-	('tommid1', 'toms', 'syntom', 'tomlo2', 'tomlo1', 'tommid2', 'tomhi2',
+	# Kick:
+	('kick2', 'steeldrm', 'taiko', 'kick1'),
+	# Conga:
+	('congahi2', 'congahi1', 'congalo'),
+	# Snare drums:
+	('snare2', 'claps', 'snare1'),
+	# Toms:
+	('tomlo1', 'toms', 'syntom', 'tomlo2', 'tommid1', 'tommid2', 'tomhi2',
 	 'tomhi1'),
-	# Cymbals.
-	('cymcrsh1', 'revcym', 'cymride1', 'cymchina', 'cymbell', 'cymsplsh',
-	 'cymcrsh2', 'cymride2'),
+	# Cymbal crash:
+	('cymsplsh', 'cymcrsh2', 'cymcrsh1', 'revcym', 'cymchina'),
+	# Cymbal ride:
+	('cymride1', 'cymride2', 'cymbell'),
+	# Hi-hat:
+	('hihatpd', 'hihatcl', 'hihatop'),
+	# Metallic sounding:
+	('bongohi', 'bongolo', 'timbaleh', 'timbalel', 'cowbell',
+	 'agogohi', 'agogolo', 'agogo', 'triangl1', 'triangl2'),
+	# Click:
+	('stickrim', 'woodblk1', 'woodblk2','woodblk', 'tamborin', 'clave'),
+	# Random things.
+	('carillon', 'cabasa', 'whistle1', 'whistle2', 'vibslap', 'maracas',
+	 'guiro1', 'guiro2', 'cuica1', 'cuica2'),
 ]
 

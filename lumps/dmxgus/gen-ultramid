@@ -131,7 +131,8 @@ def mapping_for_size(size):
 	# patches that will fit.
 	curr_size = patchset_size(result)
 	assert curr_size < size, \
-	       "Minimal config for %s will not fit in RAM!" % size
+	       "Minimal config for %s will not fit in RAM! (%i)" % \
+	       (size, curr_size)
 
 	for patch in patches:
 		patch_index = midi_instr_for_name(patch)
