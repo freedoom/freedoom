@@ -1,0 +1,7 @@
+These are replacements for w103_1 and w103_2, based on Fredrik's
+w98_1 and w98_2 textures. The symbols are public domain artwork
+that come from the following book:
+
+"Fictitious & Symbolic Creatures in Art With Special Reference
+to Their Use in British Heraldry" by John Vinycomb, p. 1906
+
