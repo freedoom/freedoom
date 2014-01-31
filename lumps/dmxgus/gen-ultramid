@@ -97,6 +97,15 @@ def patchset_size(mapping):
 			result += config.PATCH_FILE_SIZES[name]
 	return result
 
+def patchset_to_string(mapping):
+	result = []
+	for i1, i2 in mapping.items():
+		if i1 == i2:
+			name = config.GUS_INSTR_PATCHES[i1]
+			result.append("%s (%i bytes)" % (
+			    name, config.PATCH_FILE_SIZES[name]))
+	return "\n".join(result)
+
 def mapping_for_size(size):
 	"""Select a set of patches for the given RAM size.
 
@@ -131,8 +140,8 @@ def mapping_for_size(size):
 	# patches that will fit.
 	curr_size = patchset_size(result)
 	assert curr_size < size, \
-	       "Minimal config for %s will not fit in RAM! (%i)" % \
-	       (size, curr_size)
+	       "Minimal config for %s will not fit in RAM! (%i):\n%s" % \
+	       (size, curr_size, patchset_to_string(result))
 
 	for patch in patches:
 		patch_index = midi_instr_for_name(patch)

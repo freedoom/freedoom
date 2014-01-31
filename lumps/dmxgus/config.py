@@ -289,54 +289,66 @@ PATCH_FILE_SIZES = {
 # Groups of "similar sounding" instruments. The first instrument in each
 # group is the "leader" and will be used as the fallback for other
 # instruments in the group if they are not popular enough to be included.
-
-# These groups are based on inaccurate stereotypes about musical instruments.
-# If you're looking to improve the config, here's where to start.
+#
+# These groups are based on having listened to the instruments in the
+# GUS patch set using the generated comparison mid (see comparison.py),
+# with similar sounding instruments being grouped together.
+#
+# If you want to improve the generated config, here's where to start.
+# Separating out into more, smaller groups helps, but the 256KB
+# config's limited size is quite restrictive. In particular, it's
+# important that the "leader" instrument for each group is small
+# (see table above of patch sizes).
 
 SIMILAR_GROUPS = [
 	# Pianos.
-	('acpiano', 'britepno', 'synpiano', 'honky', 'epiano1', 'epiano2',
-	 'hrpschrd', 'clavinet', 'celeste', 'glocken'),
+	('synpiano', 'acpiano', 'britepno', 'honky', 'epiano1', 'epiano2',
+	 'celeste', 'glocken'),
+	# Harpsichord sounds noticeably different to pianos:
+	('hrpschrd', 'clavinet'),
 	# Xylophone etc.
-	('marimba', 'musicbox', 'vibes', 'xylophon', 'tubebell', 'santur',
-	 'kalimba'),
+	('marimba', 'musicbox', 'vibes', 'xylophon', 'tubebell', 'carillon',
+	 'santur', 'kalimba'),
 	# Organs.
-	('homeorg', 'percorg', 'rockorg', 'church', 'reedorg', 'accordn',
-	 'harmonca', 'concrtna'),
+	('homeorg', 'percorg', 'rockorg', 'church', 'reedorg'),
+	# Accordion/Harmonica:
+	('accordn', 'harmonca', 'concrtna'),
 	# Guitars.
-	('nyguitar', 'acguitar', 'jazzgtr', 'cleangtr', 'mutegtr', 'odguitar',
-	 'distgtr', 'gtrharm'),
+	('nyguitar', 'acguitar', 'jazzgtr', 'cleangtr', 'mutegtr'),
+	# Overdriven/distortion guitars sound different. Besides, we
+	# definitely want at least one of these.
+	('odguitar', 'distgtr', 'gtrharm'),
 	# Basses.
 	('synbass2', 'acbass', 'fngrbass', 'pickbass', 'fretless', 'slapbas1',
-	 'slapbas2', 'synbass1'),
+	 'slapbas2', 'synbass1', 'basslead'),
 	# Violin and similar string instruments.
-	('violin', 'viola', 'cello', 'contraba', 'tremstr', 'pizzcato', 'harp',
-	 'timpani'),
+	('violin', 'viola', 'cello', 'contraba', 'tremstr', 'pizzcato',
+	 'harp'),
 	# Other stringed (?)
-	('slowstr', 'marcato', 'synstr1', 'synstr2', 'choir', 'doo', 'voices',
-	 'orchhit'),
+	('synstr2', 'slowstr', 'marcato', 'synstr1', 'choir', 'doo', 'voices',
+	 'orchhit', 'polysyn', 'bowglass'),
 	# Trumpet and other brass.
 	('trumpet', 'trombone', 'tuba', 'mutetrum', 'frenchrn', 'hitbrass',
 	 'synbras1', 'synbras2'),
 	# Reed instruments.
-	('sprnosax', 'altosax', 'tenorsax', 'barisax', 'oboe', 'englhorn',
+	('altosax', 'sprnosax', 'tenorsax', 'barisax', 'oboe', 'englhorn',
 	 'bassoon', 'clarinet'),
 	# Pipe instruments.
-	('flute', 'piccolo', 'recorder', 'woodflut', 'bottle', 'shakazul',
-	 'whistle', 'ocarina', 'bagpipes', 'fiddle', 'shannai'),
-	# Leads.
-	('sqrwave', 'sawwave', 'calliope', 'chiflead', 'charang', 'voxlead',
-	 'lead5th', 'basslead', 'sitar', 'banjo', 'shamisen', 'koto'),
+	('recorder', 'flute', 'piccolo', 'woodflut', 'bottle', 'shakazul',
+	 'whistle', 'ocarina', 'bagpipes', 'fiddle', 'shannai',
+	 'calliope', 'chiflead', 'charang'),
+	# Leads:
+	('sqrwave', 'sawwave', 'voxlead', 'lead5th'),
+	# Odd stringed instruments.
+	('sitar', 'banjo', 'shamisen', 'koto'),
 	# Special effects. Blank unless popular enough to appear.
-	('blank','fantasia', 'warmpad', 'polysyn', 'ghostie', 'bowglass',
+	('blank', 'fantasia', 'warmpad', 'ghostie',
 	 'metalpad', 'halopad', 'sweeper', 'aurora', 'soundtrk', 'crystal',
 	 'atmosphr', 'freshair', 'unicorn', 'echovox', 'startrak', 'fx-fret',
 	 'fx-blow', 'seashore', 'jungle', 'telephon', 'helicptr', 'applause',
 	 'pistol'),
 
-	# Percussion sounds. These have been grouped based on listening to
-	# the standard GUS patches, and appropriate "leader" instruments
-	# chosen for each group that sound good.
+	# Percussion sounds.
 
 	# Kick:
 	('kick2', 'steeldrm', 'taiko', 'kick1'),
@@ -346,7 +358,7 @@ SIMILAR_GROUPS = [
 	('snare2', 'claps', 'snare1'),
 	# Toms:
 	('tomlo1', 'toms', 'syntom', 'tomlo2', 'tommid1', 'tommid2', 'tomhi2',
-	 'tomhi1'),
+	 'tomhi1', 'timpani'),
 	# Cymbal crash:
 	('cymsplsh', 'cymcrsh2', 'cymcrsh1', 'revcym', 'cymchina'),
 	# Cymbal ride:
@@ -357,9 +369,9 @@ SIMILAR_GROUPS = [
 	('bongohi', 'bongolo', 'timbaleh', 'timbalel', 'cowbell',
 	 'agogohi', 'agogolo', 'agogo', 'triangl1', 'triangl2'),
 	# Click:
-	('stickrim', 'woodblk1', 'woodblk2','woodblk', 'tamborin', 'clave'),
+	('stickrim', 'woodblk1', 'woodblk2', 'woodblk', 'tamborin', 'clave'),
 	# Random things.
-	('carillon', 'cabasa', 'whistle1', 'whistle2', 'vibslap', 'maracas',
+	('cabasa', 'whistle1', 'whistle2', 'vibslap', 'maracas',
 	 'guiro1', 'guiro2', 'cuica1', 'cuica2'),
 ]
 

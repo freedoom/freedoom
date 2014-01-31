@@ -30,7 +30,7 @@ statistics have been gathered about the use of different instruments
 by analyzing the music found in various well-known WAD files. This is
 used to prioritize which patches to load.
 
-The generated config is still not great and could do with some
-improvement. To improve the config, the best thing to tweak is the
-similarity groups in config.py.
+The generated config is now pretty good, though it might still be
+possible to improve it. To improve the config, the best thing to
+tweak is the similarity groups in config.py.
 
