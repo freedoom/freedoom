@@ -84,6 +84,6 @@ def write(filename, data):
 
 if __name__ == "__main__":
 	for filename in sys.argv[1:]:
-		print filename
-		print read(filename)
+		print(filename)
+		print(read(filename))
 

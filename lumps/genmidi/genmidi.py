@@ -205,11 +205,11 @@ if __name__ == "__main__":
 			fixed_note = instrument.fixed_note
 
 			if fixed_note is not None:
-				print "%i (fixed note: %i):" % (i, fixed_note)
+				print("%i (fixed note: %i):" % (i, fixed_note))
 			else:
-				print "%i:" % i
+				print("%i:" % i)
 
-			print "\tVoice 1: %s" % instrument.voice1
+			print("\tVoice 1: %s" % instrument.voice1)
 			if instrument.voice2 is not None:
-				print "\tVoice 2: %s" % instrument.voice2
+				print("\tVoice 2: %s" % instrument.voice2)
 

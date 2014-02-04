@@ -155,7 +155,7 @@ def mapping_for_size(size):
 	return result
 
 if len(sys.argv) != 2:
-	print "Usage: %s <filename>" % sys.argv[0]
+	print("Usage: %s <filename>" % sys.argv[0])
 	sys.exit(1)
 
 mappings = (
