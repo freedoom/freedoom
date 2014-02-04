@@ -127,6 +127,7 @@ MAP29   = dm29
 MAP30   = dm30
 MAP31   = dm31
 MAP32   = dm32
+MAP33   = dm33
 
 #else   /* #ifdef FREEDM */
 
