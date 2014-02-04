@@ -235,3 +235,9 @@ for i in range(32):
 inverse_colors = invert_colors(palette)
 output_colormap(generate_colormap(inverse_colors, palette))
 
+# Last colormap is all black, and is actually unused in Vanilla Doom
+# (it was mistakenly included by the dcolors.c utility). It's
+# strictly unneeded, though some utilities (SLADE) do not detect a
+# lump as a COLORMAP unless it is the right length.
+output_colormap(generate_colormap(dark, palette))
+
