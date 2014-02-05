@@ -76,7 +76,6 @@ white_graphics = {
 	'wibp3': 'P3',
 	'wibp4': 'P4',
 	'wicolon': ':',
-	'wiminus': '-',
 
 	# Note: level names are also included in this dictionary, with
 	# the data added programatically from the DEHACKED lump, see
@@ -147,6 +146,7 @@ red_graphics = {
 	'winum4': '4', 'winum5': '5', 'winum6': '6', 'winum7': '7',
 	'winum8': '8', 'winum9': '9',
 	'wipcnt': '%',
+	'wiminus': '-',
 	'wienter': 'ENTERING',
 
 	'm_pause': 'pause',
