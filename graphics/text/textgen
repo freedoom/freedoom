@@ -55,6 +55,7 @@ BACKGROUND_COLOR = '#00ffff'
 
 # Height of font in pixels.
 FONT_HEIGHT = 16
+FONT_LC_HEIGHT = 12
 
 # Width of a space character in pixels.
 SPACE_WIDTH = 10
@@ -62,6 +63,9 @@ SPACE_WIDTH = 10
 # Output from 'identify' looks like this:
 #  fontchars/font033.gif GIF 9x16 9x16+0+0 8-bit sRGB 32c 194B 0.000u 0:00.000
 IDENTIFY_OUTPUT_RE = re.compile(r'(\S+)\s(\S+)\s(\d+)x(\d+)\s')
+
+# Regexp to identify strings that are all lowercase (can use shorter height)
+LOWERCASE_RE = re.compile(r'^[a-z\!\. ]*$')
 
 def get_image_dimensions(filename):
 	proc = subprocess.Popen([IDENTIFY_COMMAND, filename],
@@ -173,9 +177,14 @@ class Font(object):
 		"""Command line construction helper, used in render functions"""
 		width = self.text_width(text)
 
+		if LOWERCASE_RE.match(text):
+			height = FONT_LC_HEIGHT
+		else:
+			height = FONT_HEIGHT
+
 		command_line = [
 			CONVERT_COMMAND,
-			'-size', '%ix%i' % (width, FONT_HEIGHT),
+			'-size', '%ix%i' % (width, height),
 			'xc:none',
 		]
 
@@ -186,7 +195,8 @@ class Font(object):
 			filename = self.char_filename(c)
 			command_line.extend([
 				'-draw',
-				'image over %i,0 0,0 %s' % (x, filename)
+				'image over %i,%i 0,0 %s' %
+				    (x, height - FONT_HEIGHT, filename)
 			])
 
 		command_line.extend([
