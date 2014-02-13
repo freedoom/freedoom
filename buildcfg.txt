@@ -174,13 +174,16 @@ MAP32
 [lumps]
 PLAYPAL
 COLORMAP
-ENDOOM
 GENMIDI
 FREEDOOM
+
 #ifdef FREEDM
 DEHACKED = fdm_deh
+ENDOOM = endoomdm
+FREEDM
 #else
 DEHACKED
+ENDOOM
 #endif
 
 #ifdef DOOM2
@@ -211,12 +214,6 @@ DEMO3 = demo3_ud
 DEMO4 = demo4_ud
 
 #endif /* #ifdef DOOM2 */
-
-#ifdef FREEDM
-
-FREEDM
-
-#endif /* #ifdef FREEDM */
 
 ; boom colormaps
 
