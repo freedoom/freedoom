@@ -191,10 +191,17 @@ DMXGUS
 
 #ifdef DOOM2
 
+#ifdef FREEDM
+DEMO1 = demo1_dm
+DEMO2 = demo2_dm
+DEMO3 = demo3_dm
+DEMO4 = demo4_dm
+#else
 DEMO1 = demo1_d2
 DEMO2 = demo2_d2
 DEMO3 = demo3_d2
 DEMO4 = demo4_d2
+#endif
 
 #else /* not DOOM2 */
 
