@@ -362,9 +362,9 @@ OB_MPCHAINGUN=%o was perforated by %k's minigun.
 OB_MPROCKET=%o was mutilated by %k's missile.
 OB_MPR_SPLASH=%o couldn't dodge %k's missile.
 OB_MPPLASMARIFLE=%o swallowed too much of %k's polaric energy.
-OB_MPBFG_BOOM=%o was splintered by %k's SKAG.
+OB_MPBFG_BOOM=%o had %p ass kicked by %k's SKAG!
 OB_MPBFG_SPLASH=%o couldn't hide from %k's SKAG.
 OB_MPTELEFRAG=%o stood where %k was teleporting.
 OB_RAILGUN=%o was railed by %k.
-OB_MPBFG_MBF=%o was burned by %k's SKAG.
+OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
 
