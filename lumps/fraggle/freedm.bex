@@ -34,6 +34,9 @@ par 31 0
 par 32 0
 
 [STRINGS]
+# Text shown on startup in Boom-compatible ports. This is all in
+# STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+STARTUP5============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    http://freedoom.github.io/\n============================================================================
 GOTARMOR = picked up a light armor vest.
 GOTMEGA = picked up a heavy armor vest.
 GOTHTHBONUS = got a 1% health bonus.
