@@ -1,5 +1,5 @@
 [PARS]
-; Par times don't matter so much for FreeDM, just set all to zero.
+# Par times don't matter so much for FreeDM, just set all to zero.
 par  1 0
 par  2 0
 par  3 0
