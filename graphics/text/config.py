@@ -183,7 +183,6 @@ red_graphics = {
 	'm_ldsv': 'Load/Save',
 	'm_menus': 'Menu Options',
 	'm_mouse': 'mouse options',
-	'm_multi': 'multiplayer',
 	'm_player': 'player setup',
 	'm_serial': 'serial connection',
 	'm_sound': 'sound options',
@@ -192,6 +191,12 @@ red_graphics = {
 	'm_video': 'video options',
 	'm_wad': 'load wad',
 	'm_wadopt': 'wad options',
+	# This is from SMMU too, and if we follow things to the letter,
+	# ought to be all lower-case. However, same lump name is used
+	# by other ports (Zandronum) which expect a taller graphic to
+	# match the other main menu graphics. Eternity Engine doesn't
+	# use it any more, and on SMMU there's enough space for it.
+	'm_multi': 'Multiplayer',
 }
 
 def read_bex_lump(filename):
