@@ -5,6 +5,76 @@ Was left unfinished, fixed to make playable for release by Wesley D. Johnson
 john <obfuscate> son 24 12 @ usgo <dot> net
 
 
+Release Revision 10.   Mar 7, 2014
+
+CHANGES Rev10, by Wesley Johnson:
+Made some bars impassible, and adjusted the texture height.
+Widen stairs on wooden platform.
+Added portcullis to main gate passage, and moved a port to protect it.
+Adjusted texture alignment in main gate rooms, and several other rooms.
+Adjusted some light levels.
+Added ceiling light transfers for main gate rooms.
+Added some boxes in the tower store room.
+Moved some special objects to better locations, changed others.
+Adjusted the monsters for balance, some were missing.
+Filled in the lower chamber of the riverside rampart.
+More ammo, adjusted health.
+Raised the passage under the front walk.
+Adjusted the distant hills and added more height.
+Fixed one area where prboom has texture leakage.
+
+
+Release Revision 9.   Feb 28, 2014
+
+CHANGES Rev9, by Wesley Johnson:
+Extensive changes to lower levels.
+Gave each tower a foundation and lower levels, and used those to replace
+many of the underground rooms.  Established relationships between underground
+tunnels and the foundations, with exposures and shared elements.
+Kept the central monster lair and only one ring of the surrounding corridors.
+Integrated most of the tricks and traps into the one remaining ring
+corridor, removing the lift and putting everything on one level.
+Combined several secrets into one secret area.
+Moved the library to the new main tower lower level.
+Moved the dungeon to be adjacent the main gate lower levels.
+Moved the secret switches to a sub-hallway off the remaining ring
+corridor.
+Moved the switch to lower the courtyard water prize, to a lower level
+room under the courtyard.  Gave it a visible mechanism so the player
+can deduce they need a return visit to the couryard.
+Removed the rising staircase that went through the same 3d space as lower rooms.
+Along with the ring corridors, it lacked interest and was just a place to
+run through quickly.
+Provided two authentic castle style staircases.  One from the main
+tower mid room to the lower tower room, and another from the red tower
+lower room to the sub-levels.
+Distributed the color barriers to the new stairs and a lower corridor.
+Expanded the lava theme at the exit, with it showing on the earth surface.
+Moved the exit area to an unused area to facilitate this.
+It is visible from the south castle wall.
+Removed the maze near the exit and moved the item to a water-drainage
+channel behind a secret.  Added several water-drainage tunnels that are
+similar to a maze.
+The riverside tower was changed to a low rampart with a moat because
+of the sight lines down the river from it.  The nearby wall was lowered to
+be just adequate to block the pathway, again to reduce the view of the
+joins of sky and river.  The riverside rampart and wall now has a
+progressive defense that can be explored, with several level changes,
+that adds interest to the castle design.
+Cacodemons were added nearby so the player can defend this rampart.
+The fallen wall structure at the path was simplified to just a
+fallen archway over the path.
+Raised hills around the outside of the castle to block views of the lower
+edges of the city sky.  The high vantage points on the castle required many
+high hills and sight control constructions.
+Needed to reduce the size, so removed the duplicate map18 area.  It was
+only seen if the player looked back at the start.  A tie-in to map18 now is
+the bridge over the water.  This is easier to maintain.
+Added many monsters to fill the spaces,
+with more ammo and health to survive it all.
+Removed the extraneous Keen.
+
+
 Release Revision 8.   Mar 6, 2013
 
 CHANGES Rev8, by Wesley Johnson:
