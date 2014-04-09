@@ -48,6 +48,7 @@ subdirs:
 	$(MAKE) -C lumps/genmidi
 	$(MAKE) -C lumps/dmxgus
 	$(MAKE) -C lumps/textures
+	$(MAKE) -C bootstrap
 
 
 # this is a useless dependency to force builds
@@ -133,6 +134,7 @@ clean:
 	$(MAKE) -C lumps/genmidi clean
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
+	$(MAKE) -C bootstrap clean
 
 prefix?=/usr/local
 bindir?=/bin
