@@ -54,11 +54,14 @@ COLOR_WHITE = (0, 0, 0)
 BACKGROUND_COLOR = '#00ffff'
 
 # Height of font in pixels.
-FONT_HEIGHT = 16
+FONT_HEIGHT = 15
 FONT_LC_HEIGHT = 12
 
+# If true, the font only has uppercase characters.
+UPPERCASE_FONT = True
+
 # Width of a space character in pixels.
-SPACE_WIDTH = 10
+SPACE_WIDTH = 7
 
 # Output from 'identify' looks like this:
 #  fontchars/font033.gif GIF 9x16 9x16+0+0 8-bit sRGB 32c 194B 0.000u 0:00.000
@@ -211,6 +214,8 @@ class Font(object):
 		The rendered text is generated with a transparent background.
 		"""
 
+		if UPPERCASE_FONT:
+			text = text.upper()
 		command_line = self._make_command_line(text, color)
 
 		command_line.append(output_filename)
@@ -221,6 +226,8 @@ class Font(object):
 	                color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
 		"""Render text to a file with the given background color."""
 
+		if UPPERCASE_FONT:
+			text = text.upper()
 		command_line = self._make_command_line(text, color)
 
 		command_line.extend([
