@@ -177,6 +177,9 @@ COLORMAP
 GENMIDI
 FREEDOOM
 
+; Big font used by ZDoom-based ports for menu text.
+DBIGFONT
+
 #ifdef FREEDM
 DEHACKED = fdm_deh
 ENDOOM = endoomdm
