@@ -241,7 +241,21 @@ def generate_graphics(graphics, color=COLOR_WHITE):
 		print("# %s.gif: '%s'" % (name, text))
 		font.render_text(text, '%s.gif' % name, color=color)
 
+def generate_kerning_test():
+	pairs = []
+	for c1 in sorted(font.char_widths):
+		char1 = "%c" % c1
+		for c2 in sorted(font.char_widths):
+			char2 = "%c" % c2
+			if font.kerning_adjust(char1, char2) != 0:
+				pairs.append(char1 + char2)
+
+	font.render_text(" ".join(pairs), "kerning.gif")
+
 font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
+
+# Enable to generate test image file for tweaking kerning values:
+#generate_kerning_test()
 
 generate_graphics(red_graphics, COLOR_RED)
 generate_graphics(blue_graphics, COLOR_BLUE)

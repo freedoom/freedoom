@@ -41,35 +41,44 @@ import re
 # and if the font is changed this probably needs to be redone.
 
 FONT_KERNING_RULES = {
-# TODO: Devise some new rules for the new font.
+	# Right character fits under left character:
+	r'[TY][07ACOSZ]': -2,
+	r'P[A]': -3,
+	r'P[7]': -2,
+	r'P[Z]': -1,
+	r'7[Z]': -1,
+	r'[0OQ]A': -1,
+	r'S[A]': -1,
+	r'V[0OC]': -2,
 
-#	# Right character fits under left character:
-#	r'p[aj\.]': -3,
-#	r'P[a\.]': -4,
-#	r'[PVW][AJj\.]': -4,
-#	r't[ajJ\.]': -4,
-#	r'f[aj\.]': -2,
-#	
-#	# Some capital letters have overhangs that the 'lower case'
-#	# characters can fit under:
-#	r'C[Ja-z\.]': -2,
-#	r'F[Ja-z\.]': -3,
-#	r'T[Ja-z\.]': -5,
-#	r'W[Ja-z\.]': -2,
-#	r'S[Ja-z\.]': -1,
-#	r'V[a-z\.]': -3,
-#	
-#	# Left character fits under right character:
-#	r'[alAL][ty479]': -3,
-#	r'a[vwVW]': -2,
-#	r'A[VW]': -3,
-#	r'A[vw]': -2,
-#	r'r[ty479]': -2,
-#	r'[vwVW][Aa]': -2,
-#	r'[Yypv][jJ]': -2,
-#	
-#	# Extra space needed:
-#	r'[OUu][Pp]': +1,
+	# Left character fits under right character:
+	r'L[TY]': -4,
+	r'L[014COQV]': -3,
+	r'L[O09]': -2,
+	r'[0O][4TY]': -2,
+	r'[0O][1]': -1,
+	r'Q[1T]': -2,
+	r'Q[Y]': -1,
+	r'A[TYV]': -2,
+	r'A[GC]': -1,
+
+	# Fits into "hole" in left character:
+	r'[BCX8][0CGOQ]': -2,
+	r'Z[0CO]': -2,
+	r'Z[GQ]': -1,
+	r'I[0COQ]': -1,
+	r'K[0CO]': -4,
+	r'K[GQ]': -3,
+	r'K[E]': -1,
+	r'[PR][0COQ]': -1,
+
+	# Fits into "hole" in right character:
+	r'[O0Q][X]': -3,
+	r'[O0Q][28]': -2,
+	r'[O0Q][9IK]': -1,
+
+	# Just because.
+	r'[O0][O0]': -1,
 }
 
 white_graphics = {
