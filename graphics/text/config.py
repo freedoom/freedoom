@@ -210,6 +210,12 @@ red_graphics = {
 	'm_multi': 'Multiplayer',
 }
 
+# Rendered with transparent background:
+transparent_graphics = {
+	# Title for the HELP/HELP1 screen:
+	'helpttl': 'Help',
+}
+
 def read_bex_lump(filename):
 	"""Read the BEX (Dehacked) lump from the given filename.
 

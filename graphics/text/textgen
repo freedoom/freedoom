@@ -208,20 +208,6 @@ class Font(object):
 
 		return command_line
 
-	def render_transparent_text(self, text, output_filename, color):
-		"""Render the given text to the given output file.
-
-		The rendered text is generated with a transparent background.
-		"""
-
-		if UPPERCASE_FONT:
-			text = text.upper()
-		command_line = self._make_command_line(text, color)
-
-		command_line.append(output_filename)
-
-		invoke_command(command_line)
-
 	def render_text(self, text, output_filename,
 	                color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
 		"""Render text to a file with the given background color."""
@@ -230,16 +216,19 @@ class Font(object):
 			text = text.upper()
 		command_line = self._make_command_line(text, color)
 
-		command_line.extend([
-			'-background', bgcolor, '-flatten',
-			output_filename])
+		if bgcolor is not None:
+			command_line.extend([
+				'-background', bgcolor, '-flatten'])
+
+		command_line.append(output_filename)
 
 		invoke_command(command_line)
 
-def generate_graphics(graphics, color=COLOR_WHITE):
+def generate_graphics(graphics, color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
 	for name, text in sorted(graphics.items()):
 		print("# %s.gif: '%s'" % (name, text))
-		font.render_text(text, '%s.gif' % name, color=color)
+		font.render_text(text, '%s.gif' % name,
+		                 color=color, bgcolor=bgcolor)
 
 def generate_kerning_test():
 	pairs = []
@@ -257,7 +246,8 @@ font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
 # Enable to generate test image file for tweaking kerning values:
 #generate_kerning_test()
 
-generate_graphics(red_graphics, COLOR_RED)
-generate_graphics(blue_graphics, COLOR_BLUE)
-generate_graphics(white_graphics, COLOR_WHITE)
+generate_graphics(red_graphics, color=COLOR_RED)
+generate_graphics(blue_graphics, color=COLOR_BLUE)
+generate_graphics(white_graphics, color=COLOR_WHITE)
+generate_graphics(transparent_graphics, color=COLOR_RED, bgcolor=None)
 

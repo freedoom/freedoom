@@ -1,4 +1,4 @@
-GRAPHICS = \
+TEXTGEN_GRAPHICS = \
   m_detail.gif m_disopt.gif m_disp.gif   m_endgam.gif m_epi1.gif   \
   m_epi2.gif   m_epi3.gif   m_epi4.gif   m_episod.gif m_gdhigh.gif \
   m_gdlow.gif  m_hurt.gif   m_jkill.gif  m_lgttl.gif  m_loadg.gif  \
@@ -13,7 +13,7 @@ GRAPHICS = \
   m_mess.gif   m_mouse.gif  m_multi.gif  m_player.gif m_serial.gif \
   m_setup.gif  m_sound.gif  m_stat.gif   m_status.gif m_tcpip.gif  \
   m_versen.gif m_video.gif  m_wad.gif    m_wadopt.gif m_weap.gif   \
-  prboom.gif                                                       \
+  prboom.gif   helpttl.gif                                         \
   m_ultra.gif  wibp1.gif    wibp2.gif    wibp3.gif    wibp4.gif    \
   wicolon.gif  wienter.gif  wif.gif      wifrgs.gif   wipcnt.gif   \
   wiminus.gif  wimstar.gif  wimstt.gif   wiostf.gif   wiosti.gif   \
@@ -37,13 +37,13 @@ GRAPHICS = \
   wilv33.gif   wilv34.gif   wilv35.gif   wilv36.gif   wilv37.gif   \
   wilv38.gif
 
-all: $(GRAPHICS)
+all: $(TEXTGEN_GRAPHICS) help.gif
 
 # textgen creates multiple outputs, which is awkward to express in
 # make. Use a witness file (graphics.stamp) as suggested in the
 # automake manual: "Handling Tools that Produce Many Outputs"
 
-$(GRAPHICS): graphics.stamp
+$(TEXTGEN_GRAPHICS): graphics.stamp
 	@if test -f $@; then :; else \
 	  rm -f graphics.stamp; \
 	  $(MAKE) data.stamp; \
@@ -55,5 +55,14 @@ graphics.stamp: config.py fontchars ../../lumps/fraggle/freedoom.bex
 	./textgen
 	@mv graphics.tmp $@
 
+help.gif: helpbg.gif helptext.gif helpttl.gif
+	convert helpbg.gif                                 \
+	    -draw 'image over 0,0 0,0 helptext.gif'        \
+	    -draw 'image over 140,5 0,0 helpttl.gif'       \
+	    help.gif
+
+helpbg.gif: ../interpic.gif
+	convert ../interpic.gif -fill '#0077ff' -tint 50 helpbg.gif
+
 clean:
-	rm -f $(GRAPHICS) graphics.stamp *.pyc
+	rm -f $(TEXTGEN_GRAPHICS) helpbg.gif help.gif graphics.stamp *.pyc
