@@ -55,10 +55,10 @@ BACKGROUND_COLOR = '#00ffff'
 
 # Height of font in pixels.
 FONT_HEIGHT = 15
-FONT_LC_HEIGHT = 12
+FONT_LC_HEIGHT = 15  #12
 
 # If true, the font only has uppercase characters.
-UPPERCASE_FONT = True
+UPPERCASE_FONT = False
 
 # Width of a space character in pixels.
 SPACE_WIDTH = 7

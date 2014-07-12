@@ -40,9 +40,12 @@ import re
 # visually appealing. This is highly dependent on the font graphics,
 # and if the font is changed this probably needs to be redone.
 
+# TODO: Add more rule for lower-case characters.
+
 FONT_KERNING_RULES = {
 	# Right character fits under left character:
 	r'[TY][07ACOSZ]': -2,
+	r'[TYty][a]': -2,
 	r'P[A]': -3,
 	r'P[7]': -2,
 	r'P[Z]': -1,
@@ -61,6 +64,9 @@ FONT_KERNING_RULES = {
 	r'Q[Y]': -1,
 	r'A[TYV]': -2,
 	r'A[GC]': -1,
+	r'a[TYty]': -2,
+	r'a[vV]': -2,
+	r'a[g]': -1,
 
 	# Fits into "hole" in left character:
 	r'[BCX8][0CGOQ]': -2,
