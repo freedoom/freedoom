@@ -1,0 +1,203 @@
+#!/usr/bin/env python
+#
+# Copyright (c) 2014
+# Contributors to the Freedoom project.  All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#  * Neither the name of the freedoom project nor the names of its
+#    contributors may be used to endorse or promote products derived from
+#    this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+# OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# ----------------------------------------------------------------------
+#
+# Script to generate text graphics using the "small" (HUD) font.
+#
+
+from glob import glob
+import sys
+import subprocess
+import re
+
+# ImageMagick commands used by this script:
+CONVERT_COMMAND = 'convert'
+IDENTIFY_COMMAND = 'identify'
+
+# Background color for output files.
+BACKGROUND_COLOR = '#00ffff'
+
+# Width of a space character in pixels.
+SPACE_WIDTH = 4
+
+# Height of the font.
+FONT_HEIGHT = 7
+
+# Regexp to match dimensions/x,y coordinate pair.
+DIMENSION_MATCH_RE = re.compile(r'(\d+)[x,](\d+)')
+
+# Output from 'identify' looks like this:
+#  fontchars/font033.gif GIF 9x16 9x16+0+0 8-bit sRGB 32c 194B 0.000u 0:00.000
+IDENTIFY_OUTPUT_RE = re.compile(r'(\S+)\s(\S+)\s(\d+)x(\d+)\s')
+
+def get_image_dimensions(filename):
+	proc = subprocess.Popen([IDENTIFY_COMMAND, filename],
+	                        stdout=subprocess.PIPE)
+	proc.wait()
+
+	line = proc.stdout.readline().decode('utf-8')
+	match = IDENTIFY_OUTPUT_RE.match(line)
+	assert match is not None
+	return (int(match.group(3)), int(match.group(4)))
+
+def invoke_command(command):
+	"""Invoke a command, printing the command to stdout.
+
+	Args:
+	  command: Command and arguments as a list.
+	"""
+	for arg in command:
+		if arg.startswith('-'):
+			sys.stdout.write("\\\n    ")
+
+		if ' ' in arg or '#' in arg:
+			sys.stdout.write(repr(arg))
+		else:
+			sys.stdout.write(arg)
+
+		sys.stdout.write(' ')
+
+	sys.stdout.write('\n')
+	return subprocess.call(command)
+
+class Font(object):
+	def __init__(self):
+		self.get_font_widths()
+
+	def compile_kerning_table(self, kerning_table):
+		"""Given a dictionary of kerning patterns, compile Regexps."""
+
+		result = {}
+		for pattern, adjust in kerning_table.items():
+			result[re.compile(pattern)] = adjust
+		return result
+
+	def get_font_widths(self):
+		charfiles = glob('../stcfn*.gif')
+		self.char_widths = {}
+		for c in range(128):
+			filename = self.char_filename(chr(c))
+			if filename not in charfiles:
+				continue
+			w, _ = get_image_dimensions(filename)
+			self.char_widths[chr(c)] = w
+
+	def __contains__(self, c):
+		return c in self.char_widths
+
+	def char_width(self, c):
+		return self.char_widths[c]
+
+	def char_filename(self, c):
+		return '../stcfn%03d.gif' % (ord(c))
+
+	def draw_commands_for_text(self, text, x, y):
+		text = text.upper()
+		result = []
+
+		x1, y1 = x, y
+
+		for c in text:
+			if c == '\n':
+				y1 += FONT_HEIGHT
+				x1 = x
+			elif c == ' ':
+				x1 += SPACE_WIDTH
+
+			if c not in self:
+				continue
+
+			filename = self.char_filename(c)
+			result.extend([
+				'-draw',
+				'image over %i,%i 0,0 "%s"' %
+				    (x1, y1, filename)
+			])
+			x1 += self.char_width(c)
+
+		return result
+
+
+def parse_command_line(args):
+	if len(args) < 4 or (len(args) % 2) != 0:
+		return None
+
+	result = {
+		'filename': args[0],
+		'strings': [],
+	}
+
+	m = DIMENSION_MATCH_RE.match(args[1])
+	if not m:
+		return None
+	result['dimensions'] = (int(m.group(1)), int(m.group(2)))
+
+	i = 2
+	while i < len(args):
+		m = DIMENSION_MATCH_RE.match(args[i])
+		if not m:
+			return None
+
+		xy = (int(m.group(1)), int(m.group(2)))
+
+		result['strings'].append((xy, args[i + 1]))
+		i += 2
+
+	return result
+
+
+args = parse_command_line(sys.argv[1:])
+
+if not args:
+	print "Usage: smtextgen <filename> <size> [...text commands...]"
+	print "Where each text command looks like:"
+	print "  [x,y] [text]"
+	sys.exit(0)
+
+smallfont = Font()
+
+command_line = [
+	CONVERT_COMMAND,
+	'-size', '%ix%i' % args['dimensions'],
+	'xc:none',
+]
+
+for xy, string in args['strings']:
+	command_line.extend(smallfont.draw_commands_for_text(
+	    string, xy[0], xy[1]))
+
+command_line.extend((
+	'-background', BACKGROUND_COLOR,
+	'-flatten', args['filename'],
+))
+
+invoke_command(command_line)
+

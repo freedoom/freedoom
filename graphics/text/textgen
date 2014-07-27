@@ -249,5 +249,4 @@ font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
 generate_graphics(red_graphics, color=COLOR_RED)
 generate_graphics(blue_graphics, color=COLOR_BLUE)
 generate_graphics(white_graphics, color=COLOR_WHITE)
-generate_graphics(transparent_graphics, color=COLOR_RED, bgcolor=None)
 

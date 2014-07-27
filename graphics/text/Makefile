@@ -55,14 +55,79 @@ graphics.stamp: config.py fontchars ../../lumps/fraggle/freedoom.bex
 	./textgen
 	@mv graphics.tmp $@
 
-help.gif: helpbg.gif helptext.gif helpttl.gif
-	convert helpbg.gif                                 \
-	    -draw 'image over 0,0 0,0 helptext.gif'        \
-	    -draw 'image over 140,5 0,0 helpttl.gif'       \
+# Generate transparent image containing text for the HELP screen:
+helptext.png:
+	python smtextgen helptext.png 320x200 \
+	   10,25   "Weapons" \
+	   10,67   "Ammo" \
+	   110,67  "Shells" \
+	   220,67  "Backpack" \
+	   10,90   "Missiles" \
+	   170,90  "Energy" \
+	   10,115  "Health" \
+	   170,115 "Armor" \
+	   145,140 "Map" \
+	   10,140  "Overdrive" \
+	   10,163  "Night vis" \
+	   10,182  "Invisibility" \
+	   135,182 "Invuln" \
+	   255,182 "Keys"  \
+	   130,163 "Hazard suit"
+
+# Build on helptext.png by adding the title and sprites:
+helpoverlay.png : helptext.png helpttl.gif
+	convert helptext.png \
+	    -draw 'image over 150,5   0,0 "helpttl.gif"' \
+	    -draw 'image over 80,25   0,0 "../../sprites/shota0.gif"' \
+	    -draw 'image over 150,25  0,0 "../../sprites/sgn2a0.gif"' \
+	    -draw 'image over 210,20  0,0 "../../sprites/mguna0.gif"' \
+	    -draw 'image over 10,40   0,0 "../../sprites/launa0.gif"' \
+	    -draw 'image over 80,40   0,0 "../../sprites/plasa0.gif"' \
+	    -draw 'image over 150,40  0,0 "../../sprites/bfuga0.gif"' \
+	    -draw 'image over 240,40  0,0 "../../sprites/csawa0.gif"' \
+	    -draw 'image over 53,67   0,0 "../../sprites/clipa0.gif"' \
+	    -draw 'image over 68,62   0,0 "../../sprites/ammoa0.gif"' \
+	    -draw 'image over 160,67  0,0 "../../sprites/shela0.gif"' \
+	    -draw 'image over 180,62  0,0 "../../sprites/sboxa0.gif"' \
+	    -draw 'image over 76,78   0,0 "../../sprites/rocka0.gif"' \
+	    -draw 'image over 95,82   0,0 "../../sprites/broka0.gif"' \
+	    -draw 'image over 220,90  0,0 "../../sprites/cella0.gif"' \
+	    -draw 'image over 240,81  0,0 "../../sprites/celpa0.gif"' \
+	    -draw 'image over 290,55  0,0 "../../sprites/bpaka0.gif"' \
+	    -draw 'image over 63,113  0,0 "../../sprites/bon1a0.gif"' \
+	    -draw 'image over 78,112  0,0 "../../sprites/stima0.gif"' \
+	    -draw 'image over 96,107  0,0 "../../sprites/media0.gif"' \
+	    -draw 'image over 128,107 0,0 "../../sprites/pstra0.gif"' \
+	    -draw 'image over 220,113 0,0 "../../sprites/bon2a0.gif"' \
+	    -draw 'image over 240,105 0,0 "../../sprites/arm1b0.gif"' \
+	    -draw 'image over 280,105 0,0 "../../sprites/arm2b0.gif"' \
+	    -draw 'image over 175,130 0,0 "../../sprites/pmapa0.gif"' \
+	    -draw 'image over 84,132  0,0 "../../sprites/soula0.gif"' \
+	    -draw 'image over 110,132 0,0 "../../sprites/megaa0.gif"' \
+	    -draw 'image over 80,160  0,0 "../../sprites/pvisa0.gif"' \
+	    -draw 'image over 100,172 0,0 "../../sprites/pinsa0.gif"' \
+	    -draw 'image over 185,174 0,0 "../../sprites/pinva0.gif"' \
+	    -draw 'image over 246,142 0,0 "../../sprites/rkeya0.gif"' \
+	    -draw 'image over 261,142 0,0 "../../sprites/ykeya0.gif"' \
+	    -draw 'image over 276,142 0,0 "../../sprites/bkeya0.gif"' \
+	    -draw 'image over 246,162 0,0 "../../sprites/rskua0.gif"' \
+	    -draw 'image over 261,162 0,0 "../../sprites/yskua0.gif"' \
+	    -draw 'image over 276,162 0,0 "../../sprites/bskua0.gif"' \
+	    -draw 'image over 215,142 0,0 "../../sprites/suita0.gif"' \
+	    -transparent '#00ffff' \
+	    helpoverlay.png
+
+# Background for the help screen is a color shifted version of INTERPIC:
+helpbg.png: ../interpic.gif
+	convert ../interpic.gif -fill '#5599ff' -tint 100 helpbg.png
+
+# Draw the overlay with text and sprites onto the background to get the
+# HELP screen:
+help.gif: helpbg.png helpoverlay.png
+	convert helpbg.png                                 \
+	    -draw 'image over 0,0 0,0 helpoverlay.png'     \
 	    help.gif
 
-helpbg.gif: ../interpic.gif
-	convert ../interpic.gif -fill '#0077ff' -tint 50 helpbg.gif
-
 clean:
-	rm -f $(TEXTGEN_GRAPHICS) helpbg.gif help.gif graphics.stamp *.pyc
+	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif \
+	    helpoverlay.png helptext.png graphics.stamp *.pyc

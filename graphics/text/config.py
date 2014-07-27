@@ -107,6 +107,9 @@ blue_graphics = {
 }
 
 red_graphics = {
+	# Title for the HELP/HELP1 screen:
+	'helpttl': 'Help',
+
 	'm_ngame': 'New Game',
 	'm_option': 'Options',
 	'm_loadg': 'Load Game',
@@ -214,12 +217,6 @@ red_graphics = {
 	# match the other main menu graphics. Eternity Engine doesn't
 	# use it any more, and on SMMU there's enough space for it.
 	'm_multi': 'Multiplayer',
-}
-
-# Rendered with transparent background:
-transparent_graphics = {
-	# Title for the HELP/HELP1 screen:
-	'helpttl': 'Help',
 }
 
 def read_bex_lump(filename):
