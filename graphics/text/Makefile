@@ -68,9 +68,9 @@ helptext.png:
 	   170,115 "Armor" \
 	   145,140 "Map" \
 	   10,140  "Overdrive" \
-	   10,163  "Night vis" \
-	   10,182  "Invisibility" \
-	   135,182 "Invuln" \
+	   10,163  "Night vis." \
+	   10,182  "Stealth" \
+	   115,182 "Invuln." \
 	   255,182 "Keys"  \
 	   130,163 "Hazard suit"
 
@@ -105,8 +105,8 @@ helpoverlay.png : helptext.png helpttl.gif
 	    -draw 'image over 84,132  0,0 "../../sprites/soula0.gif"' \
 	    -draw 'image over 110,132 0,0 "../../sprites/megaa0.gif"' \
 	    -draw 'image over 80,160  0,0 "../../sprites/pvisa0.gif"' \
-	    -draw 'image over 100,172 0,0 "../../sprites/pinsa0.gif"' \
-	    -draw 'image over 185,174 0,0 "../../sprites/pinva0.gif"' \
+	    -draw 'image over 67,172 0,0  "../../sprites/pinsa0.gif"' \
+	    -draw 'image over 170,174 0,0 "../../sprites/pinva0.gif"' \
 	    -draw 'image over 246,142 0,0 "../../sprites/rkeya0.gif"' \
 	    -draw 'image over 261,142 0,0 "../../sprites/ykeya0.gif"' \
 	    -draw 'image over 276,142 0,0 "../../sprites/bkeya0.gif"' \
