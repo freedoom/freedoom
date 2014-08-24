@@ -1,6 +1,0 @@
-'Fragglicution' MAP02.
-
-This is a deathmatch level that I made for Execution DM and subsequently
-released (in an updated form) as fcution.wad. I've replaced the textures
-with ones that are included in FreeDM.
-
