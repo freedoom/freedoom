@@ -109,6 +109,8 @@ blue_graphics = {
 red_graphics = {
 	# Title for the HELP/HELP1 screen:
 	'helpttl': 'Help',
+	# Title for CREDIT
+	'freettl': 'Freedoom',
 
 	'm_ngame': 'New Game',
 	'm_option': 'Options',

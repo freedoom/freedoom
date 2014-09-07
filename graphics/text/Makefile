@@ -13,7 +13,7 @@ TEXTGEN_GRAPHICS = \
   m_mess.gif   m_mouse.gif  m_multi.gif  m_player.gif m_serial.gif \
   m_setup.gif  m_sound.gif  m_stat.gif   m_status.gif m_tcpip.gif  \
   m_versen.gif m_video.gif  m_wad.gif    m_wadopt.gif m_weap.gif   \
-  prboom.gif   helpttl.gif                                         \
+  prboom.gif   helpttl.gif  freettl.gif                            \
   m_ultra.gif  wibp1.gif    wibp2.gif    wibp3.gif    wibp4.gif    \
   wicolon.gif  wienter.gif  wif.gif      wifrgs.gif   wipcnt.gif   \
   wiminus.gif  wimstar.gif  wimstt.gif   wiostf.gif   wiosti.gif   \
@@ -37,7 +37,7 @@ TEXTGEN_GRAPHICS = \
   wilv33.gif   wilv34.gif   wilv35.gif   wilv36.gif   wilv37.gif   \
   wilv38.gif
 
-all: $(TEXTGEN_GRAPHICS) help.gif
+all: $(TEXTGEN_GRAPHICS) help.gif credit.gif
 
 # textgen creates multiple outputs, which is awkward to express in
 # make. Use a witness file (graphics.stamp) as suggested in the
@@ -125,6 +125,19 @@ help.gif: helpbg.png helptext2.png
 	convert helpbg.png                              \
 	    -draw 'image over 0,0 0,0 helptext2.png'     \
 	    help.gif
+
+credtext.png: freettl.gif credit.txt
+	python smtextgen credtext.png 320x200        \
+	   120,5  "file:freettl.gif"                \
+	   10,30  "include:credit.txt"
+
+credtext2.png: credtext.png
+	convert credtext.png -transparent '#00ffff' credtext2.png
+
+credit.gif: helpbg.png credtext2.png
+	convert helpbg.png                             \
+	    -draw 'image over 0,0 0,0 credtext2.png'   \
+	    credit.gif
 
 clean:
 	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif \

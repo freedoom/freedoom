@@ -154,6 +154,11 @@ command_line = [
 ]
 
 for xy, string in args['strings']:
+	# Allow contents of a file to be included with special prefix:
+	if string.startswith('include:'):
+		with open(string[8:]) as f:
+			string = f.read()
+
 	# Allow special notation to indicate an image file to just draw
 	# rather than rendering a string.
 	if string.startswith('file:'):
