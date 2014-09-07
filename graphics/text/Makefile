@@ -56,66 +56,64 @@ graphics.stamp: config.py fontchars ../../lumps/fraggle/freedoom.bex
 	@mv graphics.tmp $@
 
 # Generate transparent image containing text for the HELP screen:
-helptext.png:
-	python smtextgen helptext.png 320x200 \
-	   10,25   "Weapons" \
-	   10,67   "Ammo" \
-	   110,67  "Shells" \
-	   220,67  "Backpack" \
-	   10,90   "Missiles" \
-	   170,90  "Energy" \
-	   10,115  "Health" \
-	   170,115 "Armor" \
-	   145,140 "Map" \
-	   10,140  "Overdrive" \
-	   10,163  "Night vis." \
-	   10,182  "Stealth" \
-	   115,182 "Invuln." \
-	   255,182 "Keys"  \
-	   130,163 "Hazard suit"
+helptext.png: helpttl.gif
+	python smtextgen helptext.png 320x200        \
+	   150,5   "file:helpttl.gif"                \
+	   10,25   "Weapons"                         \
+	   80,25   "file:../../sprites/shota0.gif"   \
+	   150,25  "file:../../sprites/sgn2a0.gif"   \
+	   210,20  "file:../../sprites/mguna0.gif"   \
+	   10,40   "file:../../sprites/launa0.gif"   \
+	   80,40   "file:../../sprites/plasa0.gif"   \
+	   150,40  "file:../../sprites/bfuga0.gif"   \
+	   240,40  "file:../../sprites/csawa0.gif"   \
+	   10,67   "Ammo"                            \
+	   53,67   "file:../../sprites/clipa0.gif"   \
+	   68,62   "file:../../sprites/ammoa0.gif"   \
+	   110,67  "Shells"                          \
+	   160,67  "file:../../sprites/shela0.gif"   \
+	   180,62  "file:../../sprites/sboxa0.gif"   \
+	   220,67  "Backpack"                        \
+	   290,55  "file:../../sprites/bpaka0.gif"   \
+	   10,90   "Missiles"                        \
+	   76,78   "file:../../sprites/rocka0.gif"   \
+	   95,82   "file:../../sprites/broka0.gif"   \
+	   170,90  "Energy"                          \
+	   220,90  "file:../../sprites/cella0.gif"   \
+	   240,81  "file:../../sprites/celpa0.gif"   \
+	   10,115  "Health"                          \
+	   63,113  "file:../../sprites/bon1a0.gif"   \
+	   78,112  "file:../../sprites/stima0.gif"   \
+	   96,107  "file:../../sprites/media0.gif"   \
+	   128,107 "file:../../sprites/pstra0.gif"   \
+	   170,115 "Armor"                           \
+	   220,113 "file:../../sprites/bon2a0.gif"   \
+	   240,105 "file:../../sprites/arm1b0.gif"   \
+	   280,105 "file:../../sprites/arm2b0.gif"   \
+	   145,140 "Map"                             \
+	   175,130 "file:../../sprites/pmapa0.gif"   \
+	   10,140  "Overdrive"                       \
+	   84,132  "file:../../sprites/soula0.gif"   \
+	   110,132 "file:../../sprites/megaa0.gif"   \
+	   10,163  "Night vis."                      \
+	   80,160  "file:../../sprites/pvisa0.gif"   \
+	   10,182  "Stealth"                         \
+	   67,172  "file:../../sprites/pinsa0.gif"   \
+	   115,182 "Invuln."                         \
+	   170,174 "file:../../sprites/pinva0.gif"   \
+	   255,182 "Keys"                            \
+	   246,142 "file:../../sprites/rkeya0.gif"   \
+	   261,142 "file:../../sprites/ykeya0.gif"   \
+	   276,142 "file:../../sprites/bkeya0.gif"   \
+	   246,162 "file:../../sprites/rskua0.gif"   \
+	   261,162 "file:../../sprites/yskua0.gif"   \
+	   276,162 "file:../../sprites/bskua0.gif"   \
+	   130,163 "Hazard suit"                     \
+	   215,142 "file:../../sprites/suita0.gif"
 
-# Build on helptext.png by adding the title and sprites:
-helpoverlay.png : helptext.png helpttl.gif
-	convert helptext.png \
-	    -draw 'image over 150,5   0,0 "helpttl.gif"' \
-	    -draw 'image over 80,25   0,0 "../../sprites/shota0.gif"' \
-	    -draw 'image over 150,25  0,0 "../../sprites/sgn2a0.gif"' \
-	    -draw 'image over 210,20  0,0 "../../sprites/mguna0.gif"' \
-	    -draw 'image over 10,40   0,0 "../../sprites/launa0.gif"' \
-	    -draw 'image over 80,40   0,0 "../../sprites/plasa0.gif"' \
-	    -draw 'image over 150,40  0,0 "../../sprites/bfuga0.gif"' \
-	    -draw 'image over 240,40  0,0 "../../sprites/csawa0.gif"' \
-	    -draw 'image over 53,67   0,0 "../../sprites/clipa0.gif"' \
-	    -draw 'image over 68,62   0,0 "../../sprites/ammoa0.gif"' \
-	    -draw 'image over 160,67  0,0 "../../sprites/shela0.gif"' \
-	    -draw 'image over 180,62  0,0 "../../sprites/sboxa0.gif"' \
-	    -draw 'image over 76,78   0,0 "../../sprites/rocka0.gif"' \
-	    -draw 'image over 95,82   0,0 "../../sprites/broka0.gif"' \
-	    -draw 'image over 220,90  0,0 "../../sprites/cella0.gif"' \
-	    -draw 'image over 240,81  0,0 "../../sprites/celpa0.gif"' \
-	    -draw 'image over 290,55  0,0 "../../sprites/bpaka0.gif"' \
-	    -draw 'image over 63,113  0,0 "../../sprites/bon1a0.gif"' \
-	    -draw 'image over 78,112  0,0 "../../sprites/stima0.gif"' \
-	    -draw 'image over 96,107  0,0 "../../sprites/media0.gif"' \
-	    -draw 'image over 128,107 0,0 "../../sprites/pstra0.gif"' \
-	    -draw 'image over 220,113 0,0 "../../sprites/bon2a0.gif"' \
-	    -draw 'image over 240,105 0,0 "../../sprites/arm1b0.gif"' \
-	    -draw 'image over 280,105 0,0 "../../sprites/arm2b0.gif"' \
-	    -draw 'image over 175,130 0,0 "../../sprites/pmapa0.gif"' \
-	    -draw 'image over 84,132  0,0 "../../sprites/soula0.gif"' \
-	    -draw 'image over 110,132 0,0 "../../sprites/megaa0.gif"' \
-	    -draw 'image over 80,160  0,0 "../../sprites/pvisa0.gif"' \
-	    -draw 'image over 67,172 0,0  "../../sprites/pinsa0.gif"' \
-	    -draw 'image over 170,174 0,0 "../../sprites/pinva0.gif"' \
-	    -draw 'image over 246,142 0,0 "../../sprites/rkeya0.gif"' \
-	    -draw 'image over 261,142 0,0 "../../sprites/ykeya0.gif"' \
-	    -draw 'image over 276,142 0,0 "../../sprites/bkeya0.gif"' \
-	    -draw 'image over 246,162 0,0 "../../sprites/rskua0.gif"' \
-	    -draw 'image over 261,162 0,0 "../../sprites/yskua0.gif"' \
-	    -draw 'image over 276,162 0,0 "../../sprites/bskua0.gif"' \
-	    -draw 'image over 215,142 0,0 "../../sprites/suita0.gif"' \
-	    -transparent '#00ffff' \
-	    helpoverlay.png
+# Make background transparent so it can be overlayed.
+helptext2.png : helptext.png
+	convert helptext.png -transparent '#00ffff' helptext2.png
 
 # Background for the help screen is a color shifted version of INTERPIC:
 helpbg.png: ../interpic.gif
@@ -123,11 +121,11 @@ helpbg.png: ../interpic.gif
 
 # Draw the overlay with text and sprites onto the background to get the
 # HELP screen:
-help.gif: helpbg.png helpoverlay.png
-	convert helpbg.png                                 \
-	    -draw 'image over 0,0 0,0 helpoverlay.png'     \
+help.gif: helpbg.png helptext2.png
+	convert helpbg.png                              \
+	    -draw 'image over 0,0 0,0 helptext2.png'     \
 	    help.gif
 
 clean:
 	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif \
-	    helpoverlay.png helptext.png graphics.stamp *.pyc
+	    helptext.png helptext2.png graphics.stamp *.pyc

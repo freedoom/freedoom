@@ -154,8 +154,17 @@ command_line = [
 ]
 
 for xy, string in args['strings']:
-	command_line.extend(smallfont.draw_commands_for_text(
-	    string, xy[0], xy[1]))
+	# Allow special notation to indicate an image file to just draw
+	# rather than rendering a string.
+	if string.startswith('file:'):
+		command_line.extend((
+			'-draw',
+			'image over %i,%i 0,0 "%s"' % (
+				xy[0], xy[1], string[5:]),
+		))
+	else:
+		command_line.extend(smallfont.draw_commands_for_text(
+		    string, xy[0], xy[1]))
 
 command_line.extend((
 	'-background', BACKGROUND_COLOR,
