@@ -1,3 +1,10 @@
+Patch File for DeHackEd v3.0
+
+# This is a magic comment recognized by Chocolate Doom, so that the
+# BEX [STRINGS] section below will be parsed:
+#
+#   *allow-extended-strings*
+
 [PARS]
 # Par times don't matter so much for FreeDM, just set all to zero.
 par  1 0

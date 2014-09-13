@@ -1,3 +1,10 @@
+Patch File for DeHackEd v3.0
+
+# This is a magic comment recognized by Chocolate Doom, so that the
+# BEX [STRINGS] section below will be parsed:
+#
+#   *allow-extended-strings*
+
 [PARS]
 # Par times. The BEX format requires these to be specified in number
 # of seconds, but for convenience we include the min:sec value in a
