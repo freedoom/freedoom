@@ -292,7 +292,9 @@ STSTR_NCON = noclip on
 STSTR_NCOFF = noclip off
 STSTR_CHOPPERS = vroom!
 STSTR_BEHOLD = v=invuln, s=steroids, i=invis, r=hazard, a=map, l=night vision
-NIGHTMARE = this is the highest skill level.\nnot recommended unless you're experienced.\n\n(press y to confirm)
+NIGHTMARE = this is the highest skill level.\n\
+            not recommended unless you're experienced.\n\n\
+            (press y to confirm)
 #HUSTR_CHATMACRO1
 #HUSTR_CHATMACRO2
 #HUSTR_CHATMACRO3
@@ -315,17 +317,36 @@ E2TEXT = You've finished episode 2!
 E3TEXT = You've finished episode 3!
 E4TEXT = You've finished episode 4!
 # After MAP06, before MAP07:
-C1TEXT = You're playing FreeDM, the Freedoom\ndeathmatch spinoff project.\n\nFor more information about Freedoom\nand FreeDM, see:\n\nhttp://freedoom.github.io/
+C1TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         http://freedoom.github.io/
 # After MAP11, before MAP12:
-C2TEXT = You're playing FreeDM, the Freedoom\ndeathmatch spinoff project.\n\nFor more information about Freedoom\nand FreeDM, see:\n\nhttp://freedoom.github.io/
+C2TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         http://freedoom.github.io/
 # After MAP20, before MAP21:
-C3TEXT = You're playing FreeDM, the Freedoom\ndeathmatch spinoff project.\n\nFor more information about Freedoom\nand FreeDM, see:\n\nhttp://freedoom.github.io/
+C3TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         http://freedoom.github.io/
 # After MAP30 (endgame text):
-C4TEXT = You're playing FreeDM, the Freedoom\ndeathmatch spinoff project.\n\nFor more information about Freedoom\nand FreeDM, see:\n\nhttp://freedoom.github.io/
+C4TEXT = Thank you for playing FreeDM, the\n\
+         Freedoom deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         http://freedoom.github.io/
 # Before MAP31 (secret level #1):
-C5TEXT = You've found the FreeDM secret level.\n\nHope you aren't too attached to\nyour double barreled shotgun!
+C5TEXT = You've found the FreeDM secret level.\n\n\
+         Hope you aren't too attached to\n\
+         your double-barreled shotgun!
 # Before MAP32 (secret level #2):
-C6TEXT = You've found the second secret level.\n\nHope you like green.
+C6TEXT = You've found the second secret level.\n\n\
+         Hope you like green.
 #P1TEXT
 #P2TEXT
 #P3TEXT
