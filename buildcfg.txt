@@ -624,6 +624,7 @@ HELP	0	0
 #endif
 #ifndef DOOM2
 HELP1	0	0
+HELP2	0	0
 #endif
 
 CREDIT	0	0
