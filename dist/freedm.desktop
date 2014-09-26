@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=FreeDM
+Comment=Fight friends and enemies in competitive deathmatch
+GenericName=First Person Shooter Game
+Type=Application
+Icon=freedoom
+Keywords=first;person;shooter;doom;freedoom;
+Categories=Game;ActionGame;
+Path=/usr/share/games/doom
+Exec=doom -iwad freedm.wad

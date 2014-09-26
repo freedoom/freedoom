@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Freedoom: Phase 1
+Comment=Battle monsters in four 9-level chapters
+GenericName=First Person Shooter Game
+Type=Application
+Icon=freedoom
+Keywords=first;person;shooter;doom;
+Categories=Game;ActionGame;
+Path=/usr/share/games/doom
+Exec=boom -iwad freedoom1.wad
