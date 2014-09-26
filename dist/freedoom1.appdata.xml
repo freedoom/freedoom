@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+<!-- Copyright 2014 Contributors to the Freedoom project -->
+
+<application>
+  <id type="desktop">freedoom1.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>BSD-3-Clause</project_license>
+  <description>
+    <p>
+      Freedoom: Phase 1 contains four chapters, nine levels each, to
+      provide a smoothly-paced first person action game.  In it is a
+      wide variety of mazes and enemies to fight and challenge your
+      reflexes.
+    </p>
+    <p>
+      The Freedoom project aims to produce three base-game data files
+      (IWADs) for Doom-compatible engines.  With it comes the
+      capability to also play the wide range of mods created for Doom
+      by a vibrant community.  Freedoom: Phase 1 is fully compatible
+      with The Ultimate Doom mods.
+    </p>
+  </description>
+  <url type="homepage">http://freedoom.github.io/</url>
+  <screenshots>
+    <screenshot type="default">http://freedoom.github.io/img/screenshots/th_0.6.3_02.jpg</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_01.jpg</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_03.jpg</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_04.jpg</screenshot>
+  </screenshots>
+</application>
