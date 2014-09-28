@@ -1,0 +1,9 @@
+These zombie sprites were originally made by saint_of_killers, but
+raymoohawk remastered and improved them so extensively that I decided
+to move them to a separate directory to credit him instead.
+
+Some discussion of his reworking of these sprites can be found in this
+thread:
+
+http://www.doomworld.com/vb/freedoom/70095-raymoohawks-sprite-edits/
+
