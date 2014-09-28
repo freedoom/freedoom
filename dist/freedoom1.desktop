@@ -7,4 +7,4 @@ Icon=freedoom
 Keywords=first;person;shooter;doom;
 Categories=Game;ActionGame;
 Path=/usr/share/games/doom
-Exec=boom -iwad freedoom1.wad
+Exec=freedoom1
