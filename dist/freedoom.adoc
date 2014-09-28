@@ -1,0 +1,44 @@
+freedoom(6)
+===========
+:doctype: manpage
+
+NAME
+----
+freedoom - Automatically launch Freedoom with an engine
+
+SYNOPSIS
+--------
+*freedoom* ['-p' 'PORT'|'--'] ['ARGS']
+
+DESCRIPTION
+-----------
+Freedoom is a project to create a complete free-content game based on
+the 'Doom' engine (often called ``source ports'' or simply ``ports''),
+which itself is free software.  In addition, it maintains
+compatibility with 'Doom' itself and is capable of playing the wide
+variety of modifications (``mods'') that have been released by an
+active community since 1993.
+
+This command is a simple shell script to assist in running Freedoom,
+which is not a game engine itself nor part of any engine project, but
+playing Freedoom should remain simple.  Only accepted as the first
+argument, you may pass '-p PORT', which will run Freedoom using the
+'PORT' specified.  As an alternative, you may make a symbolic link
+named +$HOME/.doomport+ to your preferred port.  A port specified on
+the command line explicitly overrides +$HOME/.doomport+, whereas the
+existence of the symbolic link will override the detection of port
+based on a hard-coded list.
+
+Additional arguments passed to the program, or after specifying '--'
+as the first option, will be passed to the engine being called.  This
+can allow you to use options such as '-file' to load mods or anything
+else available with the engine of choice.
+
+COPYRIGHT
+---------
+Freedoom is licensed under a permissive three-clause BSD license.  For
+details, see the source tree or any +COPYING+/+COPYRIGHT+ file that
+may have been installed by distribution packaging.
+
+This manual page and the launcher script are both placed under the
+public domain.

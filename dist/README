@@ -1,0 +1,7 @@
+This directory contains some files that should be useful for system
+installations on Unix-like operating systems, including desktop
+entries, AppData XML files, and a shell script to run Freedoom in a
+simple manner.
+
+Unless otherwise noted, these files should be considered public domain
+material and not subject to the usual Freedoom license terms.
