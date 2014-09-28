@@ -19,15 +19,17 @@ if [ $# -gt 0 ]; then
     fi
 fi
 
-if [ "$(basename "$0")" = "freedm" ]; then
-    IWAD=freedm.wad
-elif [ "$(basename "$0")" = "freedoom1" ]; then
-    IWAD=freedoom1.wad
-elif [ "$(basename "$0")" = "freedoom2" ]; then
-    IWAD=freedoom2.wad
-else
-    IWAD=freedoom2.wad
-fi
+case "$(basename "$0")" in
+    freedm)
+        IWAD=freedm.wad
+        ;;
+    freedoom1)
+        IWAD=freedoom1.wad
+        ;;
+    freedoom2 | *)
+        IWAD=freedoom2.wad
+        ;;
+esac
 
 if [ -z "$PORT" ] && [ -h "$HOME"/.doomport ]; then
     if [ -f "$(readlink -f "$HOME"/.doomport)" ] \
