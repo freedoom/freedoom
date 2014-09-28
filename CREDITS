@@ -477,9 +477,9 @@ D: Sprites
 F: fraggle
 N: Simon Howard
 S: fraggle
-E: fraggle@alkali.org
-W: http://www.soulsphere.org/
-D: Chief Administrator, textures, sprites
+E: idgames@soulsphere.org
+W: https://soulsphere.org
+D: project admin, scripting and build system, textures, sprites
 
 F: joed
 N: Joe Dowland
