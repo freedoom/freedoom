@@ -128,3 +128,50 @@ clean:
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
 
+prefix?=/usr/local
+bindir?=/bin
+mandir?=/share/man
+waddir?=/share/games/doom
+target=$(DESTDIR)$(prefix)
+
+%.6:
+	sed -e s/freedoom/$*/ dist/freedoom.adoc > dist/$*.adoc
+	a2x -f manpage dist/$*.adoc
+
+install-freedm: $(FREEDM) freedm.6
+	install -d "$(target)$(bindir)"
+	install -m 755 dist/freedoom "$(target)$(bindir)/freedm"
+	install -d "$(target)$(mandir)/man6"
+	install -m 644 dist/freedm.6 "$(target)$(mandir)/man6"
+	install -d "$(target)$(waddir)"
+	install -m 644 $(FREEDM) "$(target)$(waddir)"
+	install -d "$(target)/share/applications"
+	install -m 644 dist/freedm.desktop "$(target)/share/applications"
+	install -d "$(target)/share/appdata"
+	install -m 644 dist/freedm.appdata.xml "$(target)/share/appdata"
+
+install-freedoom1: $(FREEDOOM1) freedoom1.6
+	install -d "$(target)$(bindir)"
+	install -m 755 dist/freedoom "$(target)$(bindir)/freedoom1"
+	install -d "$(target)$(mandir)/man6"
+	install -m 644 dist/freedoom1.6 "$(target)$(mandir)/man6"
+	install -d "$(target)$(waddir)"
+	install -m 644 $(FREEDOOM1) "$(target)$(waddir)"
+	install -d "$(target)/share/applications"
+	install -m 644 dist/freedoom1.desktop "$(target)/share/applications"
+	install -d "$(target)/share/appdata"
+	install -m 644 dist/freedoom1.appdata.xml "$(target)/share/appdata"
+
+install-freedoom2: $(FREEDOOM2) freedoom2.6
+	install -d "$(target)$(bindir)"
+	install -m 755 dist/freedoom "$(target)$(bindir)/freedoom2"
+	install -d "$(target)$(mandir)/man6"
+	install -m 644 dist/freedoom2.6 "$(target)$(mandir)/man6"
+	install -d "$(target)$(waddir)"
+	install -m 644 $(FREEDOOM2) "$(target)$(waddir)"
+	install -d "$(target)/share/applications"
+	install -m 644 dist/freedoom2.desktop "$(target)/share/applications"
+	install -d "$(target)/share/appdata"
+	install -m 644 dist/freedoom2.appdata.xml "$(target)/share/appdata"
+
+install: install-freedm install-freedoom1 install-freedoom2
