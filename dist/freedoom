@@ -39,8 +39,7 @@ if [ -z "$PORT" ] && [ -h "$HOME"/.doomport ]; then
 fi
 
 if [ "$PORT" ]; then
-    "$PORT" -iwad $IWAD "$@"
-    exit 0
+    exec "$PORT" -iwad "$IWAD" "$@"
 fi
 
 dirpath=$(eval echo "\${PATH}" 2>/dev/null | tr : ' ')
@@ -49,8 +48,7 @@ for port in $PORTS; do
     for dir in $dirpath; do
         for file in "$dir"/"$port"; do
             if [ -f "$file" ] && [ -x "$file" ]; then
-                "$file" -iwad $IWAD "$@"
-                exit 0
+                exec "$file" -iwad "$IWAD" "$@"
             fi
         done
     done
