@@ -128,8 +128,6 @@ MAP30   = dm30
 MAP31   = dm31
 MAP32   = dm32
 MAP33   = dm33
-MAP34   = dm34
-MAP35   = dm35
 
 #else   /* #ifdef FREEDM */
 
@@ -599,6 +597,7 @@ D_SHAWN3 = D_DM29
 D_OPENIN = D_DM30
 D_EVIL   = D_DM31
 D_ULTIMA = D_DM32
+D_DM33
 
 #endif /* #ifdef FREEDM */
 #endif /* #ifndef DOOM2 */
