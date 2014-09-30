@@ -138,40 +138,21 @@ target=$(DESTDIR)$(prefix)
 	sed -e s/freedoom/$*/ dist/freedoom.adoc > dist/$*.adoc
 	a2x -f manpage dist/$*.adoc
 
-install-freedm: $(FREEDM) freedm.6
-	install -d "$(target)$(bindir)"
-	install -m 755 dist/freedoom "$(target)$(bindir)/freedm"
-	install -d "$(target)$(mandir)/man6"
-	install -m 644 dist/freedm.6 "$(target)$(mandir)/man6"
-	install -d "$(target)$(waddir)"
-	install -m 644 $(FREEDM) "$(target)$(waddir)"
-	install -d "$(target)/share/applications"
-	install -m 644 dist/freedm.desktop "$(target)/share/applications"
-	install -d "$(target)/share/appdata"
-	install -m 644 dist/freedm.appdata.xml "$(target)/share/appdata"
+# This is bad because it assumes the IWADs will always be defined like
+# this.  I just can't see another way to do it.  Fix later if possible.
 
-install-freedoom1: $(FREEDOOM1) freedoom1.6
+install-%: $(WADS)/%.wad %.6
 	install -d "$(target)$(bindir)"
-	install -m 755 dist/freedoom "$(target)$(bindir)/freedoom1"
+	install -m 755 dist/freedoom "$(target)$(bindir)/$*"
 	install -d "$(target)$(mandir)/man6"
-	install -m 644 dist/freedoom1.6 "$(target)$(mandir)/man6"
+	install -m 644 dist/$*.6 "$(target)$(mandir)/man6"
 	install -d "$(target)$(waddir)"
-	install -m 644 $(FREEDOOM1) "$(target)$(waddir)"
+	install -m 644 $(WADS)/$*.wad "$(target)$(waddir)"
 	install -d "$(target)/share/applications"
-	install -m 644 dist/freedoom1.desktop "$(target)/share/applications"
+	install -m 644 dist/$*.desktop "$(target)/share/applications"
 	install -d "$(target)/share/appdata"
-	install -m 644 dist/freedoom1.appdata.xml "$(target)/share/appdata"
-
-install-freedoom2: $(FREEDOOM2) freedoom2.6
-	install -d "$(target)$(bindir)"
-	install -m 755 dist/freedoom "$(target)$(bindir)/freedoom2"
-	install -d "$(target)$(mandir)/man6"
-	install -m 644 dist/freedoom2.6 "$(target)$(mandir)/man6"
-	install -d "$(target)$(waddir)"
-	install -m 644 $(FREEDOOM2) "$(target)$(waddir)"
-	install -d "$(target)/share/applications"
-	install -m 644 dist/freedoom2.desktop "$(target)/share/applications"
-	install -d "$(target)/share/appdata"
-	install -m 644 dist/freedoom2.appdata.xml "$(target)/share/appdata"
+	install -m 644 dist/$*.appdata.xml "$(target)/share/appdata"
+	install -d "$(target)/share/icons"
+	install -m 644 dist/freedoom.png "$(target)/share/icons/$*.png"
 
 install: install-freedm install-freedoom1 install-freedoom2
