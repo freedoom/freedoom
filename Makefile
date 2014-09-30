@@ -155,4 +155,20 @@ install-%: $(WADS)/%.wad %.6
 	install -d "$(target)/share/icons"
 	install -m 644 dist/freedoom.png "$(target)/share/icons/$*.png"
 
+uninstall-%:
+	rm "$(target)$(bindir)/$*"
+	rm "$(target)$(mandir)/man6/$*.6"
+	rm "$(target)$(waddir)/$*.wad"
+	rm "$(target)/share/applications/$*.desktop"
+	rm "$(target)/share/appdata/$*.appdata.xml"
+	rm "$(target)/share/icons/$*.png"
+	-rmdir -p "$(target)$(bindir)"
+	-rmdir -p "$(target)$(mandir)/man6"
+	-rmdir -p "$(target)$(waddir)"
+	-rmdir -p "$(target)/share/applications"
+	-rmdir -p "$(target)/share/appdata"
+	-rmdir -p "$(target)/share/icons"
+
 install: install-freedm install-freedoom1 install-freedoom2
+
+uninstall: uninstall-freedm uninstall-freedoom1 uninstall-freedoom2
