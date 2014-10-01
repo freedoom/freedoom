@@ -135,13 +135,15 @@ waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
 
 %.6:
-	sed -e s/freedoom/$*/ dist/freedoom.adoc > dist/$*.adoc
-	a2x -f manpage dist/$*.adoc
+	$(MAKE) -C dist man-$*
+
+%.png:
+	$(MAKE) -C dist icon-$*
 
 # This is bad because it assumes the IWADs will always be defined like
 # this.  I just can't see another way to do it.  Fix later if possible.
 
-install-%: $(WADS)/%.wad %.6
+install-%: $(WADS)/%.wad %.6 %.png
 	install -d "$(target)$(bindir)"
 	install -m 755 dist/freedoom "$(target)$(bindir)/$*"
 	install -d "$(target)$(mandir)/man6"
@@ -153,7 +155,7 @@ install-%: $(WADS)/%.wad %.6
 	install -d "$(target)/share/appdata"
 	install -m 644 dist/$*.appdata.xml "$(target)/share/appdata"
 	install -d "$(target)/share/icons"
-	install -m 644 dist/freedoom.png "$(target)/share/icons/$*.png"
+	install -m 644 dist/$*.png "$(target)/share/icons/$*.png"
 
 uninstall-%:
 	rm "$(target)$(bindir)/$*"
