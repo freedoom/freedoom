@@ -1,4 +1,0 @@
-Nick: Zigmund
-e-mail: z_ozwell@hotmail.com
-Level 18  for FreeDoom 
-replaced WolfenDoom pic with a window + "windowbox" (Thanks Tarin!)

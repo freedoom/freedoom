@@ -1,9 +1,0 @@
-========================================================================
-
-Grosse.wad is a replacement MAP32 level for FreeDOOM.
-
-Created from scratch by Andrew Apted <ajapted@users.sourceforge.net>
-
-Made on April 21st 2002 in about 7 hours.
-
-========================================================================

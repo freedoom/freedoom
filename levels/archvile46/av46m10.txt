@@ -1,7 +1,0 @@
-Freedoom Doom2 Map 10 beta 3
-
-Archvile46 (pudge@att.net)
-
-This map has come a long way since the last beta. Gameplay is implemented up until the blue door, then there are no more items and monsters after that but feel free to look around and check stuff out. The TEKGREN area after the underground monorail type thing is a mess, so don't bother with that.
-
-Let me know what you think, comments would be greatly appreciated.
