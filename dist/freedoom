@@ -53,3 +53,18 @@ for port in $PORTS; do
         done
     done
 done
+
+# If we've reached this far, no engine was successfully executed.
+# print message to stderr and exit with a status of 1.
+
+cat <<EOF >&2
+$(basename "$0") could not locate nor launch a Doom engine.  Most
+likely, you simply need to install one, check your distribution
+package repositories for names such as "prboom" or "odamex" or seek
+out one and install it manually.
+
+If you believe you already have one, you may just need to modify your
+PATH environment variable to include it, or set up the $HOME/.doomport
+symbolic link to point directly to the engine of your choice.
+EOF
+exit 1
