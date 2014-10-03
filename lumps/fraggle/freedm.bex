@@ -323,32 +323,37 @@ C1TEXT = You're playing FreeDM, the Freedoom\n\
          deathmatch spinoff project.\n\n\
          For more information about Freedoom\n\
          and FreeDM, see:\n\n\
-         http://freedoom.github.io/
+         https://freedoom.github.io/
 # After MAP11, before MAP12:
 C2TEXT = You're playing FreeDM, the Freedoom\n\
          deathmatch spinoff project.\n\n\
          For more information about Freedoom\n\
          and FreeDM, see:\n\n\
-         http://freedoom.github.io/
+         https://freedoom.github.io/
 # After MAP20, before MAP21:
 C3TEXT = You're playing FreeDM, the Freedoom\n\
          deathmatch spinoff project.\n\n\
          For more information about Freedoom\n\
          and FreeDM, see:\n\n\
-         http://freedoom.github.io/
+         https://freedoom.github.io/
 # After MAP30 (endgame text):
 C4TEXT = Thank you for playing FreeDM, the\n\
          Freedoom deathmatch spinoff project.\n\n\
          For more information about Freedoom\n\
          and FreeDM, see:\n\n\
-         http://freedoom.github.io/
+         https://freedoom.github.io/
 # Before MAP31 (secret level #1):
-C5TEXT = You've found the FreeDM secret level.\n\n\
-         Hope you aren't too attached to\n\
-         your double-barreled shotgun!
+C5TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
 # Before MAP32 (secret level #2):
-C6TEXT = You've found the second secret level.\n\n\
-         Hope you like green.
+C6TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
 #P1TEXT
 #P2TEXT
 #P3TEXT
