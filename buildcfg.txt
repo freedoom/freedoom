@@ -613,7 +613,7 @@ M_DOOM
 #else
 #ifdef FREEDM
 TITLEPIC 0 0          = fdmtitle
-M_DOOM                = m_dm
+M_DOOM   40 -5        = m_dm
 #else
 TITLEPIC 0 0          = fd2title
 M_DOOM

@@ -1,14 +1,28 @@
 #!/bin/sh
 
-convert titlepic.gif -fill white -font Helvetica-Bold                  \
-  -draw "image over 94,2 0,0 '$1'"                                     \
-  -pointsize 20                                                        \
-    -gravity north                                                     \
-      -draw "fill black stroke-width 4 stroke black text -5,65 '$2'"   \
-      -draw "text -4.5,65 '$2'"                                        \
-  -pointsize 11                                                        \
-    -gravity southwest                                                 \
-      -draw "text 5,5 'http://freedoom.github.io/'"                    \
-    -gravity southeast                                                 \
-      -draw "text 10,5 'Version: $VERSION'"                            \
-    $3
+draw_with_footer() {
+	input_file=$1;
+	output_file=$2;
+	shift; shift
+
+	convert $input_file -fill white -font Helvetica-Bold      \
+	  -pointsize 11                                           \
+	    -gravity southwest                                    \
+	      -draw "text 5,5 'https://freedoom.github.io/'"      \
+	    -gravity southeast                                    \
+	      -draw "text 10,5 'Version: $VERSION'"               \
+	    "$@"                                                  \
+	    $output_file
+}
+
+if [ $# = 4 ]; then
+	draw_with_footer "$1" "$4"                                         \
+	  -gravity north                                                   \
+	  -draw "image over -6,2 0,0 '$2'"                                 \
+	  -pointsize 20                                                    \
+	    -draw "fill black stroke-width 4 stroke black text -5,65 '$3'" \
+	    -draw "text -4.5,65 '$3'"
+else
+	draw_with_footer "$1" "$2"
+fi
+
