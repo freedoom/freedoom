@@ -76,7 +76,7 @@ par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
 [STRINGS]
 # Text shown on startup in Boom-compatible ports. This is all in
 # STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
-STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    http://freedoom.github.io/\n============================================================================
+STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 GOTARMOR = picked up a light armor vest.
 GOTMEGA = picked up a heavy armor vest.
 GOTHTHBONUS = got a 1% health bonus.

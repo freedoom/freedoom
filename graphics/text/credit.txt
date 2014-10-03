@@ -14,7 +14,7 @@ improvement. If you like the project and
 want to help make it better, visit the
 Freedoom website:
 
-        http://freedoom.github.io/
+        https://freedoom.github.io/
 
 Thanks for playing.
 
