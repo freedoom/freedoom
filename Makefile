@@ -108,6 +108,8 @@ doc: BUILD-SYSTEM.adoc README.adoc
 
 DISTDOCS=COPYING CREDITS README.html
 
+.PHONY: dist
+
 # Due to convoluted reasons, the WADs must directly proceed the game name.
 dist: $(OBJS) doc
 	VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
