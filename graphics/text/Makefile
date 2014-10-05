@@ -143,4 +143,4 @@ clean:
 	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif \
 	    helptext.png helptext2.png graphics.stamp *.pyc \
 	    credtext.png credtext2.png credit.gif \
-	    dmdmwilv*.gif
+	    dmwilv*.gif
