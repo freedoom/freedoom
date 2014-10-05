@@ -110,6 +110,14 @@ dist: $(OBJS) README.html
 	VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
 	VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
 
+json: $(OBJS)
+ifndef JSON
+	@echo "Define JSON as the file to output." >&2
+	@exit 1
+else
+	JSON=$(JSON) VERSION=$(VERSION) scripts/makejson
+endif
+
 clean:
 	rm -f	*.html deutex.log $(OBJS) \
 		./wadinfo.txt ./wadinfo_phase1.txt \
