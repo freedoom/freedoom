@@ -68,12 +68,6 @@ wadinfo_phase2.txt: buildcfg.txt subdirs lumps/freedoom.lmp
 wadinfo_freedm.txt : buildcfg.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
 	$(CPP) -P -DFREEDM < $< | scripts/wadinfo-builder.py -dummy > $@
 
-%.wad.gz: %.wad
-	gzip < $< > $@
-	chmod o-r $<
-	md5sum $<.gz > $<.md5sum
-	rm -f $<
-
 # deutex doesnt allow redirects for the filenames in the texture
 # entries, so we have to change the texture1 symlink to point
 # to whichever wad we are working on
