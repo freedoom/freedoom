@@ -46,7 +46,7 @@ def run_command(command):
 version = os.getenv("VERSION")
 
 if version is None:
-    sys.stderr.write("Version not specific for release\n")
+    sys.stderr.write("Version not specified for release\n")
     sys.exit(1)
 if version[0] is 'v':
     # Strip the leading 'v' from versioning
