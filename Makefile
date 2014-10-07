@@ -96,17 +96,17 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
 
-doc: BUILD-SYSTEM.adoc COMPILING.adoc README.adoc
-	asciidoc BUILD-SYSTEM.adoc
-	asciidoc COMPILING.adoc
-	asciidoc README.adoc
+%.html: %.adoc
+	asciidoc $<
+
+doc: $(patsubst %.adoc,%.html,$(wildcard *.adoc))
 
 DISTDOCS=COPYING CREDITS README.html
 
 .PHONY: dist
 
 # Due to convoluted reasons, the WADs must directly proceed the game name.
-dist: $(OBJS) doc
+dist: $(OBJS) README.html
 	VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
 	VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
 
