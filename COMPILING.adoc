@@ -1,0 +1,99 @@
+Compiling Freedoom
+==================
+
+This document is a general overview of Freedoom's dependencies
+required to build it.  See `README` for a description of what Freedoom
+'is', and `BUILD-SYSTEM` for the technical details on 'how' Freedoom
+is built.
+
+Required software
+-----------------
+
+Building the Freedoom IWADs pretty much simply requires the following:
+
+  * 'make': While there is some attempt to keep our Makefiles
+    portable, testing does not really happen on anything but
+    https://www.gnu.org/software/make/[GNU Make] (patches to fix
+    portability are most welcome!).  On non-GNU systems, it might be
+    available in a package and binary named as 'gmake'.
+  * 'ImageMagick': This is required for generating some of the
+    graphics in Freedoom, including constructing text strings for
+    certain cases (such as the big font in level titles).  Some newer
+    versions of ImageMagick are known to produce
+    https://github.com/freedoom/freedoom/issues/41[strange results] on
+    certain operations, most notably the title screen graphic having
+    funny colors, but nothing major should be wrong.
+  * 'Python' 2.7: Presently, there are known issues when building with
+    Python 3.x.  If your operating system provides Python 3.x as the
+    default interpreter, you will have to create a virtualenv for
+    Python 2.7 before building Freedoom.  We plan to support both 2.7
+    and 3.x in the future.
+  * 'DeuTex' 4.4.902: Freedoom depends on some features not present in
+    the last official release, 4.4.0.  Development of DeuTex,
+    unfortunately, appears to have ceased and is presently abandoned.
+    Debian includes 4.4.902 in its software repository, while Fedora
+    has only 4.4.0.  If your distribution does not provide 4.4.902, it
+    is recommended to use Mike Swanson's unofficial
+    https://github.com/chungy/deutex[repository], the master branch of
+    which includes 4.4.902 and some additional patches.
+
+All or most of this software should already be available in your
+operating system's software repository, with the likely exception of
+DeuTex, which should be easy enough to build.  Instructions on
+building DeuTex, or any other required program, is out of scope of
+this document.
+
+Building Freedoom
+-----------------
+
+Significant work has been put into making this step easy.  At the top
+of the Freedoom source tree, you should be able to simply type `make`
+and wait for it to eventually produce the IWAD files in the `wads`
+sub-directory.  Parallel make builds are safe too, such as with `make
+-j`.
+
+If only interested in a specific IWAD, you can also run `make
+wads/freedm.wad`, `make wads/freedoom1.wad`, `make/freedoom2.wad`.
+
+As mentioned in the prior section, the Makefile only recieves testing
+with the GNU version of Make.  If the primary version of your Make is
+not GNU and it fails, try `gmake` instead.
+
+Building on Microsoft Windows
+-----------------------------
+
+Freedoom has normally seen all of its development on Unix-like
+systems, nevertheless some people like to compile Freedoom on Windows.
+This is possible, although complicated by our use of symbolic links in
+the repository.  While it may be possible to build software for
+Windows Vista and newer utilizing native NTFS symbolic links, none of
+the required software in the Freedoom build process supports them in a
+``native'' Win32-API-only manner.
+
+https://cygwin.com/[Cygwin] will thus be required to build Freedoom on
+Windows, it should contain all the needed software except for DeuTex.
+The previously-mentioned https://github.com/chungy/deutex[repository]
+contains some needed fixes for building and installing DeuTex on
+Cygwin.
+
+It is important that you install the Cygwin-specific versions of all
+the required software.  Native versions of Make, Python, ImageMagick,
+and DeuTex will not understand the Cygwin-specific symbolic links,
+which itself is *not* identical to the native method provided by
+Windows Vista and newer.
+
+Cygwin provides a GNU userland and Unix-like interfaces on top of
+Windows, its command line is (by default) Bash and not `cmd.exe`.
+Instructions on how to use Unix systems and Bash are out of scope of
+this document.
+
+Optional software
+-----------------
+
+  * 'Git': Freedoom is developed using the Git version control system,
+    the latest developments can be tracked with it.
+  * 'AsciiDoc': The `*.adoc` files are all written in AsciiDoc markup,
+    and it can be used to generate HTML versions of all these
+    documents.  This is used as part of the `make dist` target, to
+    generate the `README.html` file for inclusion with official Zip
+    files.

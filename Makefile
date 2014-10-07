@@ -96,8 +96,9 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	rm -f $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
 
-doc: BUILD-SYSTEM.adoc README.adoc
+doc: BUILD-SYSTEM.adoc COMPILING.adoc README.adoc
 	asciidoc BUILD-SYSTEM.adoc
+	asciidoc COMPILING.adoc
 	asciidoc README.adoc
 
 DISTDOCS=COPYING CREDITS README.html
