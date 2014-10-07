@@ -53,7 +53,7 @@ sub-directory.  Parallel make builds are safe too, such as with `make
 -j`.
 
 If only interested in a specific IWAD, you can also run `make
-wads/freedm.wad`, `make wads/freedoom1.wad`, `make/freedoom2.wad`.
+wads/freedm.wad`, `make wads/freedoom1.wad`, `make wads/freedoom2.wad`.
 
 As mentioned in the prior section, the Makefile only recieves testing
 with the GNU version of Make.  If the primary version of your Make is
