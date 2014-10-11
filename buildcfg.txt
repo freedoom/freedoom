@@ -200,18 +200,18 @@ DEMO2 = demo2_dm
 DEMO3 = demo3_dm
 DEMO4 = demo4_dm
 #else
-DEMO1 = demo1_d2
-DEMO2 = demo2_d2
-DEMO3 = demo3_d2
-DEMO4 = demo4_d2
+DEMO1 = demo1_p2
+DEMO2 = demo2_p2
+DEMO3 = demo3_p2
+DEMO4 = demo4_p2
 #endif
 
 #else /* not DOOM2 */
 
-DEMO1 = demo1_ud
-DEMO2 = demo2_ud
-DEMO3 = demo3_ud
-DEMO4 = demo4_ud
+DEMO1 = demo1_p1
+DEMO2 = demo2_p1
+DEMO3 = demo3_p1
+DEMO4 = demo4_p1
 
 #endif /* #ifdef DOOM2 */
 
