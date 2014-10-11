@@ -179,6 +179,7 @@ DBIGFONT
 
 #ifdef FREEDM
 DEHACKED = fdm_deh
+ZMAPINFO = fdmmpinf
 ENDOOM = endoomdm
 FREEDM
 #else

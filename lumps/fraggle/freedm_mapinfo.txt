@@ -1,0 +1,46 @@
+
+// MAPINFO lump for FreeDM. This doesn't do much, except strip out
+// most of the normal Doom II story for ZDoom-based ports.
+
+// After finishing MAP30, loop back to MAP01 and start again.
+map MAP30 lookup "HUSTR_30"
+{
+	next = "MAP01"
+        titlepatch = "CWILV29"
+        sky1 = "SKY3"
+        cluster = 8
+        allowmonstertelefrags
+        music = "$MUSIC_OPENIN"
+}
+
+// Show no intermissions text between levels.
+cluster 5
+{
+	exittext = ""
+}
+
+cluster 6
+{
+	exittext = ""
+}
+
+cluster 7
+{
+	exittext = ""
+}
+
+cluster 8
+{
+	exittext = ""
+}
+
+cluster 9
+{
+	exittext = ""
+}
+
+cluster 10
+{
+	exittext = ""
+}
+
