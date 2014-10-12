@@ -23,9 +23,9 @@
   </description>
   <url type="homepage">http://freedoom.github.io/</url>
   <screenshots>
-    <screenshot type="default">http://freedoom.github.io/img/screenshots/th_0.6.3_02.jpg</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_01.jpg</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_03.jpg</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_04.jpg</screenshot>
+    <screenshot type="default">http://freedoom.github.io/img/screenshots/freedm-0.9_01.png</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/freedm-0.9_02.png</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/freedm-0.9_03.png</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/freedm-0.9_04.png</screenshot>
   </screenshots>
 </application>
