@@ -82,10 +82,9 @@ and DeuTex will not understand the Cygwin-specific symbolic links,
 which itself is *not* identical to the native method provided by
 Windows Vista and newer.
 
-Cygwin provides a GNU userland and Unix-like interfaces on top of
-Windows, its command line is (by default) Bash and not `cmd.exe`.
-Instructions on how to use Unix systems and Bash are out of scope of
-this document.
+As Cygwin provides a GNU system and interface on top of Windows, its
+command line is (by default) Bash and not `cmd.exe`.  Instructions on
+how to use GNU systems and Bash are out of scope of this document.
 
 Optional software
 -----------------
