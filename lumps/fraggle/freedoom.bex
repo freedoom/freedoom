@@ -318,22 +318,23 @@ NIGHTMARE = this is the highest skill level.\n\
 #HUSTR_TALKTOSELF5
 #HUSTR_MESSAGESENT
 # Temporary end-of-episode texts. Please replace them.
-E1TEXT = You've completed episode 1!\n\n\
+E1TEXT = You've completed chapter 1!!\n\n\
          But your work isn't done yet.\n\n\
          There are more monsters still to kill.\n\n\
-         Play Freedoom episode 2 to continue\n\
-         the madness.
-E2TEXT = You've defeated episode 2!\n\n\
+         Play Chapter 2: Military Labs to\n\
+         continue the madness.
+E2TEXT = You've defeated Chapter 2!\n\n\
          Hordes of monsters lie dead by your\n\
          hand. But there are still more waiting.\n\
          Your work is not yet done.\n\n\
-         Onward to episode 3 - if you dare!
+         Onward to Chapter 3: Event Horizon\n\
+          - if you dare!
 E3TEXT = Hundreds of monsters couldn't stop you.\n\
-         So much for episode 3.\n\n\
+         So much for Chapter 3.\n\n\
          But there's a whole other game to play!\n\n\
          Play Freedoom: Phase 2 and continue the\n\
          carnage!\n\n\
-         -or play episode 4: Double Impact!
+         -or play Chapter 4: Double Impact!
 E4TEXT = Despite having an entire army against\n\
          you, you manage to reach the\n\
          spacecraft by the skin of your teeth.\n\n\
