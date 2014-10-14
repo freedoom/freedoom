@@ -54,42 +54,42 @@
 [levels]
 
 #ifndef DOOM2
-E1M1
-E1M2
-E1M3
-E1M4
-E1M5
-E1M6
-E1M7
-E1M8
-E1M9
-E2M1
-E2M2
-E2M3
-E2M4
-E2M5
-E2M6
-E2M7
-E2M8
-E2M9
-E3M1
-E3M2
-E3M3
-E3M4
-E3M5
-E3M6
-E3M7
-E3M8
-E3M9
-E4M1
-E4M2
-E4M3
-E4M4
-E4M5
-E4M6
-E4M7
-E4M8
-E4M9
+E1M1 = c1m1
+E1M2 = c1m2
+E1M3 = c1m3
+E1M4 = c1m4
+E1M5 = c1m5
+E1M6 = c1m6
+E1M7 = c1m7
+E1M8 = c1m8
+E1M9 = c1m9
+E2M1 = c2m1
+E2M2 = c2m2
+E2M3 = c2m3
+E2M4 = c2m4
+E2M5 = c2m5
+E2M6 = c2m6
+E2M7 = c2m7
+E2M8 = c2m8
+E2M9 = c2m9
+E3M1 = c3m1
+E3M2 = c3m2
+E3M3 = c3m3
+E3M4 = c3m4
+E3M5 = c3m5
+E3M6 = c3m6
+E3M7 = c3m7
+E3M8 = c3m8
+E3M9 = c3m9
+E4M1 = c4m1
+E4M2 = c4m2
+E4M3 = c4m3
+E4M4 = c4m4
+E4M5 = c4m5
+E4M6 = c4m6
+E4M7 = c4m7
+E4M8 = c4m8
+E4M9 = c4m9
 
 #else /* #ifndef DOOM2 */
 

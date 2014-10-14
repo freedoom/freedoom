@@ -314,10 +314,10 @@ NIGHTMARE = this is the highest skill level.\n\
 #HUSTR_TALKTOSELF5
 #HUSTR_MESSAGESENT
 # For FreeDM we shouldn't be seeing these...
-E1TEXT = You've finished episode 1!
-E2TEXT = You've finished episode 2!
-E3TEXT = You've finished episode 3!
-E4TEXT = You've finished episode 4!
+E1TEXT = You've finished chapter 1!
+E2TEXT = You've finished chapter 2!
+E3TEXT = You've finished chapter 3!
+E4TEXT = You've finished chapter 4!
 # After MAP06, before MAP07:
 C1TEXT = You're playing FreeDM, the Freedoom\n\
          deathmatch spinoff project.\n\n\
