@@ -140,9 +140,9 @@ def parse_command_line(args):
 args = parse_command_line(sys.argv[1:])
 
 if not args:
-	print "Usage: smtextgen <filename> <size> [...text commands...]"
-	print "Where each text command looks like:"
-	print "  [x,y] [text]"
+	print("Usage: smtextgen <filename> <size> [...text commands...]")
+	print("Where each text command looks like:")
+	print("  [x,y] [text]")
 	sys.exit(0)
 
 smallfont = Font()

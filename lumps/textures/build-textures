@@ -139,7 +139,7 @@ class TextureSet(collections.OrderedDict):
 		  filename: Path to file in which to store the resulting
 		      lump.
 		"""
-		with open(filename, "w") as out:
+		with open(filename, "wb") as out:
 			# Header indicating number of textures:
 			out.write(struct.pack("<l", len(self)))
 
@@ -152,7 +152,8 @@ class TextureSet(collections.OrderedDict):
 			# Write actual texture data:
 			for name, texture in self.items():
 				maptexture = struct.pack("<8slhhlh",
-				    name, 0, texture.w, texture.h,
+				    name.encode("ascii"), 0,
+				    texture.w, texture.h,
 				    0, len(texture.patches))
 				out.write(maptexture)
 
@@ -277,13 +278,13 @@ def write_pnames_lump(pnames, filename):
 	  pnames: List of strings containing patch names.
 	  filename: Output filename.
 	"""
-	with open(filename, "w") as out:
+	with open(filename, "wb") as out:
 		out.write(struct.pack("<l", len(pnames)))
 		for pname in pnames:
-			out.write(struct.pack("8s", pname))
+			out.write(struct.pack("8s", pname.encode("ascii")))
 
 def usage():
-	print """
+	print("""
 Usage: %s -output_texture1=texture1.lmp -output_pnames=pnames.lmp < config.txt
 
 Full list of arguments:
@@ -294,7 +295,7 @@ Full list of arguments:
   -compat_texture1: File containing compatibility list of TEXTURE1 textures
   -compat_texture2: File containing compatibility list of TEXTURE2 textures
   -compat_pnames: File containing compatibility list of PNAMES
-"""
+""")
 	sys.exit(1)
 
 def parse_command_line(args):
