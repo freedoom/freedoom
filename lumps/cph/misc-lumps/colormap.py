@@ -146,7 +146,7 @@ def invert_colors(colors):
 	result = []
 
 	for color in colors:
-		average = (color[0] + color[1] + color[2]) / 3
+		average = (color[0] + color[1] + color[2]) // 3
 		inverse = 255 - average
 
 		result.append((inverse, inverse, inverse))
