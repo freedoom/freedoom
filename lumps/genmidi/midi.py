@@ -80,5 +80,5 @@ def def_for_note(note):
 	NOTES = [ "C", "Cs", "D", "Ds", "E", "F", "Fs",
 	          "G", "Gs", "A", "As", "B" ]
 
-	return "%s.%s" % (OCTAVES[note / 12], NOTES[note % 12])
+	return "%s.%s" % (OCTAVES[note // 12], NOTES[note % 12])
 

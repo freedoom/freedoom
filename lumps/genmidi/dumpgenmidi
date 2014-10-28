@@ -68,7 +68,7 @@ def instr_to_str_def(filename, filename2, instr):
 	return "Instrument(%s)" % (", ".join(args))
 
 def print_instr_def(filename, filename2, instr):
-	print "\t%s," % instr_to_str_def(filename, filename2, instr)
+	print("\t%s," % instr_to_str_def(filename, filename2, instr))
 
 def dump_instrument(filename, filename2, instr):
 
@@ -82,7 +82,7 @@ def dump_instrument(filename, filename2, instr):
 		               instr.voice2)
 
 if len(sys.argv) != 2:
-	print >> sys.stderr, "Usage: %s <filename>" % sys.argv[0]
+	sys.stderr.write("Usage: %s <filename>\n" % sys.argv[0])
 	sys.exit(-1)
 
 instruments = genmidi.read(sys.argv[1])
@@ -90,7 +90,7 @@ instruments = genmidi.read(sys.argv[1])
 main_instrs = instruments[0:128]
 percussion = instruments[128:]
 
-print "INSTRUMENTS = ["
+print("INSTRUMENTS = [")
 
 for i in range(len(main_instrs)):
 	instr = main_instrs[i]
@@ -99,9 +99,9 @@ for i in range(len(main_instrs)):
 	dump_instrument(filename, filename2, instr)
 	print_instr_def(filename, filename2, instr)
 
-print "]"
-print
-print "PERCUSSION = ["
+print("]")
+print("")
+print("PERCUSSION = [")
 
 for i in range(len(percussion)):
 	instr = percussion[i]
@@ -110,5 +110,5 @@ for i in range(len(percussion)):
 	dump_instrument(filename, filename2, instr)
 	print_instr_def(filename, filename2, instr)
 
-print "]"
+print("]")
 

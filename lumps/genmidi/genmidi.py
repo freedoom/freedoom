@@ -120,20 +120,19 @@ def encode_instrument_names(instruments):
 	result = []
 
 	for instrument in instruments:
-		result.append(struct.pack("32s", instrument.voice1["name"]))
+		instr_name = instrument.voice1["name"].encode("ascii")
+		result.append(struct.pack("32s", instr_name))
 
 	return b"".join(result)
 
 def write(filename, instruments):
-	header = struct.pack("%is" % len(GENMIDI_HEADER), GENMIDI_HEADER)
+	header = struct.pack("%is" % len(GENMIDI_HEADER),
+	                     GENMIDI_HEADER.encode("ascii"))
 
-	f = open(filename, 'w')
-
-	f.write(header)
-	f.write(encode_instruments(instruments))
-	f.write(encode_instrument_names(instruments))
-
-	f.close()
+	with open(filename, "wb") as f:
+		f.write(header)
+		f.write(encode_instruments(instruments))
+		f.write(encode_instrument_names(instruments))
 
 def decode_voice(data, name):
 
@@ -145,7 +144,7 @@ def decode_voice(data, name):
 
 	result["m_ksl_volume"] = result["m_ksl"] | result["m_volume"]
 	result["c_ksl_volume"] = result["c_ksl"] | result["c_volume"]
-	result["name"] = name.rstrip("\0")
+	result["name"] = name.decode("ascii").rstrip("\0")
 
 	return result
 
@@ -174,14 +173,13 @@ def decode_instrument(data, name):
 	                  note=fixed_note)
 
 def read(filename):
-	f = open(filename)
-	data = f.read()
-	f.close()
+	with open(filename, "rb") as f:
+		data = f.read()
 
 	# Check header:
 
 	header = data[0:len(GENMIDI_HEADER)]
-	if header != GENMIDI_HEADER:
+	if header.decode("ascii") != GENMIDI_HEADER:
 		raise Exception("Incorrect header for GENMIDI lump")
 
 	body = data[len(GENMIDI_HEADER):]

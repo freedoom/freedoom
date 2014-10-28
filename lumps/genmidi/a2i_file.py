@@ -215,16 +215,18 @@ def decode_type_9(data):
 	# Decode instrument name
 
 	ps = decompressed_data[14:]
-	instr_data["name"], = struct.unpack("%ip" % len(ps), ps)
+	instr_name, = struct.unpack("%ip" % len(ps), ps)
+	instr_data["name"] = instr_name.decode("ascii")
 
 	return instr_data
 
 def read(filename):
-	f = open(filename)
-	data = f.read()
-	f.close()
+	with open(filename, "rb") as f:
+		data = f.read()
 
 	hdrstr, crc, filever = struct.unpack("<7sHB", data[0:10])
+
+	hdrstr = hdrstr.decode("ascii")
 
 	if hdrstr.lower() != HEADER_STRING.lower():
 		raise Exception("Wrong file header ID string")

@@ -53,17 +53,17 @@ FIELDS = [
 ]
 
 def read(filename):
-	f = open(filename)
-	data = f.read()
-	f.close()
+	with open(filename, "rb") as f:
+		data = f.read()
 
 	header, name = struct.unpack("4s32s", data[0:36])
+	header = header.decode("ascii")
 
 	if header != HEADER_VALUE:
 		raise Exception("Invalid header for SBI file!")
 
 	instr_data = data[36:]
-	result = { "name": name.rstrip("\0") }
+	result = { "name": name.decode("ascii").rstrip("\0") }
 
 	for i in range(len(FIELDS)):
 		result[FIELDS[i]], = struct.unpack("B", instr_data[i:i+1])
@@ -71,16 +71,14 @@ def read(filename):
 	return result
 
 def write(filename, data):
-	f = open(filename, 'w')
+	with open(filename, "wb") as f:
+		f.write(struct.pack("4s", HEADER_VALUE.encode("ascii")))
+		f.write(struct.pack("32s", data["name"].encode("ascii")))
 
-	f.write(struct.pack("4s32s", HEADER_VALUE, data["name"]))
-
-	for field in FIELDS:
-		f.write(struct.pack("B", data[field]))
-	for x in range(16 - len(FIELDS)):
-		f.write(struct.pack("B", 0))
-
-	f.close()
+		for field in FIELDS:
+			f.write(struct.pack("B", data[field]))
+		for x in range(16 - len(FIELDS)):
+			f.write(struct.pack("B", 0))
 
 if __name__ == "__main__":
 	for filename in sys.argv[1:]:
