@@ -3,4 +3,4 @@ ultramid.ini : gen-ultramid config.py stats.py
 
 clean:
 	rm -f ultramid.ini *.pyc
-
+	rm -fr __pycache__

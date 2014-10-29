@@ -144,3 +144,4 @@ clean:
 	    helptext.png helptext2.png graphics.stamp *.pyc \
 	    credtext.png credtext2.png credit.gif \
 	    dmwilv*.gif
+	rm -fr __pycache__
