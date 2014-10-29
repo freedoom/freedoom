@@ -23,11 +23,9 @@ Building the Freedoom IWADs pretty much simply requires the following:
     https://github.com/freedoom/freedoom/issues/41[strange results] on
     certain operations, most notably the title screen graphic having
     funny colors, but nothing major should be wrong.
-  * 'Python' 2.7: Presently, there are known issues when building with
-    Python 3.x.  If your operating system provides Python 3.x as the
-    default interpreter, you will have to create a virtualenv for
-    Python 2.7 before building Freedoom.  We plan to support both 2.7
-    and 3.x in the future.
+  * 'Python': Freedoom uses several Python programs in its tree to
+    assist with building the IWADs.  Both Python 2.7 and 3.x are fully
+    supported.
   * 'DeuTex' 4.4.902: Freedoom depends on some features not present in
     the last official release, 4.4.0.  Development of DeuTex,
     unfortunately, appears to have ceased and is presently abandoned.
