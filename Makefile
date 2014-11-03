@@ -126,6 +126,7 @@ clean:
 		./lumps/freedm.lmp
 	-rmdir $(WADS)
 
+	$(MAKE) -C dist clean
 	$(MAKE) -C graphics/text clean
 	$(MAKE) -C graphics/titlepic clean
 	$(MAKE) -C lumps/cph/misc-lumps clean

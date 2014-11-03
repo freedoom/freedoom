@@ -15,3 +15,6 @@ icon-freedoom2:
 	convert -trim +repage -extent 64x64 -gravity center \
 	    -transparent \#00ffff -background \#00ffff \
 	    ../sprites/heada1.gif freedoom2.png
+
+clean:
+	rm -f *.6 *.png freedm.adoc freedoom1.adoc freedoom2.adoc
