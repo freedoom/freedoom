@@ -179,17 +179,59 @@ patches, but keep in mind:
 
 === Submitting your work
 
-TODO: Figure out the best method of doing this.  This mainly requires
-time to see what works best.
+The most common, and a fairly simple method, to submit your work is by
+posting it on the http://www.doomworld.com/vb/freedoom/[Freedoom
+forum] on Doomworld Forums.  This allows a great number of people to
+review the contribution and provide feedback, although the
+registration process is known to be cumbersome.
 
-If you use git, make sure your commit messages start with a single
-line, under 72 characters, which provides an adequate summary of your
-changes. You should prefix this line with the component you are commit
-(for example, ``map17: fixed unbeatable map''). This should be
-followed by a blank line and more explanation if it's needed (for
-example, explaining what part of the map was broken). The commit
-`2013-12-20T16:06:55Z!rjy@users.sourceforge.net` shows a good example
-of a well-structured commit message.
+An alternative to using the forum, is to post your submission on the
+https://github.com/freedoom/freedoom/issues[issue tracker], which may
+also be peer-reviewed and provide a feedback cycle.
+
+Lastly, it is possible to get work submitted by joining the official
+irc://irc.oftc.net/freedoom[#freedoom] IRC channel, although this
+poses the greatest risk of being lost in the scrollback history and
+forgotten.
+
+Unfortunately, the Freedoom project cannot provide hosting space in
+the form of a web page nor FTP, however there are many free file hosts
+to use when you need a location to upload files.  Sites and services
+such as https://www.dropbox.com/[Dropbox] and
+https://mega.co.nz/[Mega], as well as others, are common and should be
+simple to use.
+
+==== Using Git
+
+You can also use commit directly off of a clone of the Freedoom
+repository, although this tends to be a highly technical task and it
+is okay to allow other Freedoom maintainers to do it instead: that is
+our normal mode of operation!  Pull requests may come from anywhere,
+you need not use GitHub if you wish not to, however GitHub usually
+makes this sort of thing very simple.
+
+Freedoom uses the commit message format commonly seen in distributed
+version control systems, and adopted by high-profile projects such as
+Linux and Git.  The first line of a message needs to be a short
+summary, preferably at a 72-character limit.  The summary usually
+begins with a short component name followed by a colon, this can be a
+directory name (eg, `musics:`), a resource name (eg, `map17:`), or a
+more generic component (eg, `build system:`).  The summary line should
+never bleed into a second line, and should never be the start of a
+lengthy explanation.  If the commit needs further explanation (and
+they often do), use extra paragraphs and write in plain-English what
+the commit is about.  The commit
+`2014-08-24T22:42:37Z!fraggle@gmail.com` is a good example.
+
+Additionally, use either simple pointers to other commits, such as
+``my previous commit'', or use http://esr.ibiblio.org/?p=3872[action
+stamps], which can improve the meaningfulness of commit identifiers if
+the repository is rewritten at an early point in, or if the repository
+is ever converted to another DVCS.  At the time of writing (November
+2014), core Git does not yet have a mechanism to output this format,
+but you may use a
+https://gist.github.com/chungy/195f53bfb9253584e596[shell script] and
+place it in your `$PATH` to achieve some ease in doing them.
 
 You should commit often; each important change should get its own
 commit, but minor changes need not.  Take advantage of git's ability to
