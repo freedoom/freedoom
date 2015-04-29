@@ -1,4 +1,4 @@
-# Copyright (c) 2001-2014
+# Copyright (c) 2001-2015
 # Contributors to the Freedoom project.  All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
