@@ -76,11 +76,11 @@ with open("wads/freedoom2.wad", "rb") as f:
 with open("wads/freedm.wad", "rb") as f:
     iwads["freedm.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
 
-iwads["freedoom1.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/downloads/v" + version + "/freedoom-" + version + ".zip"
+iwads["freedoom1.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/download/v" + version + "/freedoom-" + version + ".zip"
 iwads["freedoom1.wad"]["version"] = version
-iwads["freedoom2.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/downloads/v" + version + "/freedoom-" + version + ".zip"
+iwads["freedoom2.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/download/v" + version + "/freedoom-" + version + ".zip"
 iwads["freedoom2.wad"]["version"] = version
-iwads["freedm.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/downloads/v" + version + "/freedm-" + version + ".zip"
+iwads["freedm.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/download/v" + version + "/freedm-" + version + ".zip"
 iwads["freedm.wad"]["version"] = version
 
 with open(json_file, "w") as f:
