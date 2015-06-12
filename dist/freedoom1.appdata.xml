@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014-2015 Contributors to the Freedoom project -->
 <!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
-<!-- Copyright 2014 Contributors to the Freedoom project -->
 
-<application>
-  <id type="desktop">freedoom1.desktop</id>
+<component type="desktop">
+  <id>freedoom1.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-3-Clause</project_license>
+  <developer_name>Freedoom Project</developer_name>
+  <url type="homepage">https://freedoom.github.io/</url>
+  <url type="bugtracker">https://github.com/freedoom/freedoom/issues</url>
   <description>
     <p>
       Freedoom: Phase 1 contains four chapters, nine levels each, to
@@ -21,11 +24,22 @@
       with The Ultimate Doom mods.
     </p>
   </description>
-  <url type="homepage">http://freedoom.github.io/</url>
   <screenshots>
-    <screenshot type="default">http://freedoom.github.io/img/screenshots/phase1-0.9_01.png</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/phase1-0.9_02.png</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/phase1-0.9_03.png</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/phase1-0.9_04.png</screenshot>
+    <screenshot type="default">
+      <image>https://freedoom.github.io/img/screenshots/phase1-0.9_01.png</image>
+      <caption>C3M6: Igneous Intrusion</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/phase1-0.9_02.png</image>
+      <caption>C2M5: Fortress 31</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/phase1-0.9_03.png</image>
+      <caption>C1M6: Training Center</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/phase1-0.9_04.png</image>
+      <caption>C4M3: Central Computing</caption>
+    </screenshot>
   </screenshots>
-</application>
+</component>

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014-2015 Contributors to the Freedoom project -->
 <!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
-<!-- Copyright 2014 Contributors to the Freedoom project -->
 
-<application>
-  <id type="desktop">freedm.desktop</id>
+<component type="desktop">
+  <id>freedm.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-3-Clause</project_license>
+  <developer_name>Freedoom Project</developer_name>
+  <url type="homepage">https://freedoom.github.io/</url>
+  <url type="bugtracker">https://github.com/freedoom/freedoom/issues</url>
   <description>
     <p>
       FreeDM is a fast-paced set of levels designed for multiplayer
@@ -21,11 +24,22 @@
       mods.
     </p>
   </description>
-  <url type="homepage">http://freedoom.github.io/</url>
   <screenshots>
-    <screenshot type="default">http://freedoom.github.io/img/screenshots/freedm-0.9_01.png</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/freedm-0.9_02.png</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/freedm-0.9_03.png</screenshot>
-    <screenshot>http://freedoom.github.io/img/screenshots/freedm-0.9_04.png</screenshot>
+    <screenshot type="default">
+      <image>https://freedoom.github.io/img/screenshots/freedm-0.9_01.png</image>
+      <caption>DM15: AGM Ammo Depot</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/freedm-0.9_02.png</image>
+      <caption>DM04: Metal</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/freedm-0.9_03.png</image>
+      <caption>DM02: Natural Station</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/freedm-0.9_04.png</image>
+      <caption>DM17: Punk Tech</caption>
+    </screenshot>
   </screenshots>
-</application>
+</component>
