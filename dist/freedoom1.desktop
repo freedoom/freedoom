@@ -6,5 +6,4 @@ Type=Application
 Icon=freedoom1
 Keywords=first;person;shooter;doom;
 Categories=Game;ActionGame;
-Path=/usr/share/games/doom
 Exec=freedoom1
