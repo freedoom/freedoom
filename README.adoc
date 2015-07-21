@@ -236,6 +236,12 @@ such as https://www.dropbox.com/[Dropbox] and
 https://mega.co.nz/[Mega], as well as others, are common and should be
 simple to use.
 
+==== Crediting information
+
+_Freedoom_ is made up of submissions from many people all over the
+globe.  All of them, and you, deserve credit!  Please do not forget to
+provide your name and email when submitting resources.
+
 ==== Using Git
 
 You can also commit on a clone of the _Freedoom_ repository, although
