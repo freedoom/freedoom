@@ -47,6 +47,13 @@ One in particular that is highly recommended by the Freedoom project
 is http://odamex.net/[Odamex].  This engine offers good support for
 both single-player and multiplayer games.
 
+On Windows, you should place _Freedoom_'s data files (those ending
+with +.wad+) alongside the engine (eg, +odamex.exe+).  On Unix-like
+systems, these data files should go in either +/usr/share/games/doom+
+or your home directory.  If _Freedoom_ comes packaged as part of your
+operating system distribution, it should already be installed into the
+proper location.
+
 If you wish to venture outside of Odamex, beware that _Phase 1_ and
 _Phase 2_ require a Boom-compatible engine, which is thankfully the
 majority of them, but without compatibility, some aspects of the game
