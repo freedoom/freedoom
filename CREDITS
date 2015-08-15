@@ -614,8 +614,9 @@ F: archfile
 S: Archfile
 D: levels
 
-F: sodaholic
-S: Sodaholic
+F: Sodaholic
+S: sodaholic
+E: soliver486@gmail.com
 D: graphics, sprites, sounds
 
 F: mechadon
