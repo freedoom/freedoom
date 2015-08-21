@@ -32,7 +32,7 @@ Building the Freedoom IWADs pretty much simply requires the following:
     Debian includes 4.4.902 in its software repository, while Fedora
     has only 4.4.0.  If your distribution does not provide 4.4.902, it
     is recommended to use Mike Swanson's unofficial
-    https://github.com/chungy/deutex[repository], the master branch of
+    https://github.com/Doom-Utils/deutex[repository], the master branch of
     which includes 4.4.902 and some additional patches.
 
 All or most of this software should already be available in your
@@ -70,7 +70,7 @@ the required software in the Freedoom build process supports them in a
 
 https://cygwin.com/[Cygwin] will thus be required to build Freedoom on
 Windows, it should contain all the needed software except for DeuTex.
-The previously-mentioned https://github.com/chungy/deutex[repository]
+The previously-mentioned https://github.com/Doom-Utils/deutex[repository]
 contains some needed fixes for building and installing DeuTex on
 Cygwin.
 
