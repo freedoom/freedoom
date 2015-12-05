@@ -34,8 +34,8 @@ if [ $# = 4 ]; then
 	  -gravity north                                                   \
 	  -draw "image over -6,2 0,0 '$2'"                                 \
 	  -pointsize 20                                                    \
-	    -draw "fill black stroke-width 4 stroke black text -5,65 '$3'" \
-	    -draw "text -4.5,65 '$3'"
+	    -draw "fill black stroke-width 4 stroke black text -5,160 '$3'" \
+	    -draw "text -4.5,160 '$3'"
 else
 	draw_with_footer "$1" "$2"
 fi
