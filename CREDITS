@@ -801,3 +801,11 @@ N: Kracov Bolkonski
 E: kracov.wolf@gmail.com
 W: http://kracov.org/
 D: graphics
+
+F: robotdog1
+S: robotdog1
+D: sprites, patches
+
+F: CWolfRu
+S: cwolfru
+D: levels
