@@ -4,6 +4,8 @@
 
 <component type="desktop">
   <id>freedm.desktop</id>
+  <name>FreeDM</name>
+  <summary>Deathmatch game based on the Doom engine</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-3-Clause</project_license>
   <developer_name>Freedoom Project</developer_name>
