@@ -37,7 +37,7 @@ TEXTGEN_GRAPHICS = \
   wilv33.gif   wilv34.gif   wilv35.gif   wilv36.gif   wilv37.gif   \
   wilv38.gif
 
-all: $(TEXTGEN_GRAPHICS) help.gif credit.gif
+all: $(TEXTGEN_GRAPHICS) help.gif credit.gif wikilrs.gif wivctms.gif
 
 # textgen creates multiple outputs, which is awkward to express in
 # make. Use a witness file (graphics.stamp) as suggested in the
@@ -139,9 +139,19 @@ credit.gif: helpbg.png credtext2.png
 	    -draw 'image over 0,0 0,0 credtext2.png'   \
 	    credit.gif
 
+wikilrs.gif:
+	python smtextgen wikilrs.png 49x7	\
+	    0,0  killers
+	convert wikilrs.png -rotate 270 wikilrs.gif
+	rm -f wikilrs.png
+
+wivctms.gif:
+	python smtextgen wivctms.gif 54x7	\
+	    0,0  victims
+
 clean:
 	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif \
 	    helptext.png helptext2.png graphics.stamp *.pyc \
 	    credtext.png credtext2.png credit.gif \
-	    dmwilv*.gif
+	    dmwilv*.gif  wikilrs.gif   wivctms.gif
 	rm -fr __pycache__
