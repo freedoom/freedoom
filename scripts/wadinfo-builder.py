@@ -117,7 +117,7 @@ def parse_assignment(section, line, match):
 	if override is not None:
 		filename = find_file(section, override.lower())
 	else:
-		filename = find_file(section, resource)
+		filename = find_file(section, resource.replace('[', '$').replace(']', '#').replace('\\', '@'))
 
 	# File not found?
 
