@@ -27,20 +27,20 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.9_01.png</image>
-      <caption>MAP21: The Under-Realm</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.10_01.png</image>
+      <caption>MAP08</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.9_02.png</image>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.10_03.png</image>
+      <caption>MAP25</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.10_05.png</image>
       <caption>MAP14: The Acid Trip</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.9_03.png</image>
-      <caption>MAP17: Abandoned Monastery</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.9_04.png</image>
-      <caption>MAP22</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.10_07.png</image>
+      <caption>MAP11</caption>
     </screenshot>
   </screenshots>
 </component>
