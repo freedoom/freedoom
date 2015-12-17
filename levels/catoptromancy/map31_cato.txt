@@ -1,6 +1,0 @@
-Added a temporary secret exit.
-Fixed exploits archvile jump and source port jumping to get out of castle.
-
-Once secret area is done, will readd the way to get there.
-
-Catoptromancy

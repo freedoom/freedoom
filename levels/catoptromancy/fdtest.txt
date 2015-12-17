@@ -1,2 +1,0 @@
-Test WAD for viewing Freedoom's monsters and items, and also contains
-a gallery of the (incomplete) TNT textures.
