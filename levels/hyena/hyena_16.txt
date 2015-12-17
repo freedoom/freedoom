@@ -1,9 +1,0 @@
-Map16 is done!
-There!
-Now I've done a level, a texture, a sound, some music, and sprites.
-What's left? Graphics and Flats? Let me take a look.
-Oh yeah, and what about recorded demos?
-(I have too much time on my hands, don't I?)
-
-Tom "Hyena" White
-<trwhite@fgbc.org>
