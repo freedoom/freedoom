@@ -1,8 +1,0 @@
-MAP29 - Patrick Kalinauskas (Amarande) (avarvae@concentric.net)
-
-Updated version. ZDoom testers reported that the originally uploaded
-version of MAP29 had an excessively difficult jump to the teleporter
-pad on the green torch platform (out the window from the backpack lift);
-also, this version contains deathmatch starts, which were omitted in the
-initial upload.
-
