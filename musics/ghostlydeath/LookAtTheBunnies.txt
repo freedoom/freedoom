@@ -1,8 +1,0 @@
-This is a MIDI file. I made it myself with a real keyboard and rosegarden.
-
-If you are wondering about the guitar, I created the notes with my keyboard then smashed them together in a timely sequence.
-
-This is for Freedoom. Probably for/replaces D_BUNNY.
-
-e-mail: ghostlydeath@gmail.com
-
