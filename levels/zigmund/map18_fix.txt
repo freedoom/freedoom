@@ -1,8 +1,0 @@
-Freedoom svn 446 
-
-map18 - sector  211  had floor and ceiling hieght of 0, would block player 
-fixed - raised cieling hieght 
-
-tested in prboom+, map is nicely playable and beatable now. A bit easy, but fun. 
-
-- Catoptromancy
