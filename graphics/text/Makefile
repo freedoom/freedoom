@@ -49,7 +49,7 @@ $(TEXTGEN_GRAPHICS): graphics.stamp
 	  $(MAKE) data.stamp; \
 	fi
 
-graphics.stamp: config.py fontchars ../../lumps/fraggle/freedoom.bex
+graphics.stamp: config.py fontchars ../../lumps/dehacked.lmp
 	@rm -f graphics.tmp
 	@touch graphics.tmp
 	./textgen

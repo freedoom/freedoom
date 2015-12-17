@@ -1,1 +1,435 @@
-fraggle/freedm.bex
+Patch File for DeHackEd v3.0
+Doom version = 19
+Patch format = 6
+
+# Copyright (c) Contributors to the Freedoom project. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+#   * Redistributions of source code must retain the above copyright
+#     notice, this list of conditions and the following disclaimer.
+#   * Redistributions in binary form must reproduce the above copyright
+#     notice, this list of conditions and the following disclaimer in the
+#     documentation and/or other materials provided with the distribution.
+#   * Neither the name of the freedoom project nor the names of its
+#     contributors may be used to endorse or promote products derived from
+#     this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+# OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# This is a magic comment recognized by Chocolate Doom, so that the
+# BEX [STRINGS] section below will be parsed:
+#
+#   *allow-extended-strings*
+
+[PARS]
+# Par times don't matter so much for FreeDM, just set all to zero.
+par  1 0
+par  2 0
+par  3 0
+par  4 0
+par  5 0
+par  6 0
+par  7 0
+par  8 0
+par  9 0
+par 10 0
+par 11 0
+par 12 0
+par 13 0
+par 14 0
+par 15 0
+par 16 0
+par 17 0
+par 18 0
+par 19 0
+par 20 0
+par 21 0
+par 22 0
+par 23 0
+par 24 0
+par 25 0
+par 26 0
+par 27 0
+par 28 0
+par 29 0
+par 30 0
+par 31 0
+par 32 0
+
+[STRINGS]
+# Text shown on startup in Boom-compatible ports. This is all in
+# STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+STARTUP5============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
+GOTARMOR = picked up a light armor vest.
+GOTMEGA = picked up a heavy armor vest.
+GOTHTHBONUS = got a 1% health bonus.
+GOTARMBONUS = got a 1% armor bonus.
+GOTSTIM = picked up a small health pack.
+GOTMEDINEED = found a large health pack, just in time!
+GOTMEDIKIT = picked up a large health pack.
+GOTSUPER = you got the overdrive sphere!
+GOTBLUECARD = picked up a blue passcard.
+GOTYELWCARD = picked up a yellow passcard.
+GOTREDCARD = picked up a red passcard.
+GOTBLUESKUL = picked up a blue skeleton key.
+GOTYELWSKUL = picked up a yellow skeleton key.
+GOTREDSKULL = picked up a red skeleton key.
+GOTINVUL = temporary invulnerability!
+GOTBERSERK = you got the steroid pack!
+GOTINVIS = you got the stealth sphere!
+GOTSUIT = picked up a hazard suit.
+GOTMAP = got the tactical survey map.
+GOTVISOR = got the night vision goggles.
+GOTMSPHERE = you got the ultra-overdrive sphere!
+GOTCLIP = picked up an ammo clip.
+GOTCLIPBOX = picked up a box of ammo.
+GOTROCKET = picked up a missile.
+GOTROCKBOX = picked up a crate of missiles.
+GOTCELL = picked up a small energy recharge.
+GOTCELLBOX = picked up a large energy recharge.
+GOTSHELLS = picked up some shotgun shells.
+GOTSHELLBOX = picked up a box of shotgun shells.
+GOTBACKPACK = second backpack!
+GOTBFG9000 = the SKAG 1337 ... time to kick some ass!
+GOTCHAINGUN = you got the minigun!
+GOTCHAINSAW = you got the angle grinder!
+GOTLAUNCHER = you got the missile launcher!
+GOTPLASMA = you got the polaric energy cannon!
+GOTSHOTGUN = you got the pump-action shotgun!
+GOTSHOTGUN2 = you got the double-barrelled shotgun!
+PD_BLUEO = this object requires a blue key.
+PD_REDO = this object requires a red key.
+PD_YELLOWO = this object requires a yellow key.
+PD_BLUEK = this door requires a blue key.
+PD_REDK = this door requires a red key.
+PD_YELLOWK = this door requires a yellow key.
+PD_BLUEC = this door requires the blue passcard.
+PD_REDC = this door requires the red passcard.
+PD_YELLOWC = this door requires the yellow passcard.
+PD_BLUES = this door requires the blue skeleton key.
+PD_REDS = this door requires the red skeleton key.
+PD_YELLOWS = this door requires the yellow skeleton key.
+PD_ANY = this door requires any key.
+PD_ALL3 = this door requires all three keys.
+PD_ALL6 = this door requires all six keys and passcards!
+HUSTR_E1M1 = E1M1
+HUSTR_E1M2 = E1M2
+HUSTR_E1M3 = E1M3
+HUSTR_E1M4 = E1M4
+HUSTR_E1M5 = E1M5
+HUSTR_E1M6 = E1M6
+HUSTR_E1M7 = E1M7
+HUSTR_E1M8 = E1M8
+HUSTR_E1M9 = E1M9
+HUSTR_E2M1 = E2M1
+HUSTR_E2M2 = E2M2
+HUSTR_E2M3 = E2M3
+HUSTR_E2M4 = E2M4
+HUSTR_E2M5 = E2M5
+HUSTR_E2M6 = E2M6
+HUSTR_E2M7 = E2M7
+HUSTR_E2M8 = E2M8
+HUSTR_E2M9 = E2M9
+HUSTR_E3M1 = E3M1
+HUSTR_E3M2 = E3M2
+HUSTR_E3M3 = E3M3
+HUSTR_E3M4 = E3M4
+HUSTR_E3M5 = E3M5
+HUSTR_E3M6 = E3M6
+HUSTR_E3M7 = E3M7
+HUSTR_E3M8 = E3M8
+HUSTR_E3M9 = E3M9
+HUSTR_E4M1 = E4M1
+HUSTR_E4M2 = E4M2
+HUSTR_E4M3 = E4M3
+HUSTR_E4M4 = E4M4
+HUSTR_E4M5 = E4M5
+HUSTR_E4M6 = E4M6
+HUSTR_E4M7 = E4M7
+HUSTR_E4M8 = E4M8
+HUSTR_E4M9 = E4M9
+CC_ZOMBIE = zombie
+CC_SHOTGUN = shotgun zombie
+CC_HEAVY = minigun zombie
+CC_IMP = serpent
+CC_DEMON = worm
+CC_LOST = deadflare
+CC_CACO = orb monster
+CC_HELL = pain bringer
+CC_BARON = pain lord
+CC_ARACH = small technospider
+CC_PAIN = deadflare ball
+CC_REVEN = dark soldier
+CC_MANCU = combat slug
+CC_ARCH = flame bringer
+CC_SPIDER = large technospider
+CC_CYBER = assault tripod
+CC_HERO = savior of humanity
+HUSTR_1 = DM01: Tech Test
+HUSTR_2 = DM02: Natural Station
+HUSTR_3 = DM03: Issues of Claveria
+HUSTR_4 = DM04: Metal
+HUSTR_5 = DM05: Protox Hideout
+HUSTR_6 = DM06: Tomb of Ledemir
+HUSTR_7 = DM07: Main Stronghold
+HUSTR_8 = DM08: Artifact Base
+HUSTR_9 = DM09: Forgotten Ruins
+HUSTR_10 = DM10: Substation 45
+HUSTR_11 = DM11: Gate for Hell
+HUSTR_12 = DM12: Up 'n Down Canyon
+HUSTR_13 = DM13: Sacred Dead
+HUSTR_14 = DM14: Hazard Store
+HUSTR_15 = DM15: AGM Ammo Depot
+HUSTR_16 = DM16: Single Barreled
+HUSTR_17 = DM17: Punk Tech
+HUSTR_18 = DM18: Energy Facility
+HUSTR_19 = DM19: Tech Isle
+HUSTR_20 = DM20: Warehouse
+HUSTR_21 = DM21: Water Recycling
+HUSTR_22 = DM22: Fourplay
+HUSTR_23 = DM23: Confrontation
+HUSTR_24 = DM24: Flooded Base
+HUSTR_25 = DM25: Mansion Yard
+HUSTR_26 = DM26: All Green
+HUSTR_27 = DM27: The Exile
+HUSTR_28 = DM28: Weapons Factory
+HUSTR_29 = DM29: Tag Deathmatch
+HUSTR_30 = DM30: Last Man Standing
+HUSTR_31 = DM31
+HUSTR_32 = DM32
+PHUSTR_1 = DM01
+PHUSTR_2 = DM02
+PHUSTR_3 = DM03
+PHUSTR_4 = DM04
+PHUSTR_5 = DM05
+PHUSTR_6 = DM06
+PHUSTR_7 = DM07
+PHUSTR_8 = DM08
+PHUSTR_9 = DM09
+PHUSTR_10 = DM10
+PHUSTR_11 = DM11
+PHUSTR_12 = DM12
+PHUSTR_13 = DM13
+PHUSTR_14 = DM14
+PHUSTR_15 = DM15
+PHUSTR_16 = DM16
+PHUSTR_17 = DM17
+PHUSTR_18 = DM18
+PHUSTR_19 = DM19
+PHUSTR_20 = DM20
+PHUSTR_21 = DM21
+PHUSTR_22 = DM22
+PHUSTR_23 = DM23
+PHUSTR_24 = DM24
+PHUSTR_25 = DM25
+PHUSTR_26 = DM26
+PHUSTR_27 = DM27
+PHUSTR_28 = DM28
+PHUSTR_29 = DM29
+PHUSTR_30 = DM30
+PHUSTR_31 = DM31
+PHUSTR_32 = DM32
+THUSTR_1 = DM01
+THUSTR_2 = DM02
+THUSTR_3 = DM03
+THUSTR_4 = DM04
+THUSTR_5 = DM05
+THUSTR_6 = DM06
+THUSTR_7 = DM07
+THUSTR_8 = DM08
+THUSTR_9 = DM09
+THUSTR_10 = DM10
+THUSTR_11 = DM11
+THUSTR_12 = DM12
+THUSTR_13 = DM13
+THUSTR_14 = DM14
+THUSTR_15 = DM15
+THUSTR_16 = DM16
+THUSTR_17 = DM17
+THUSTR_18 = DM18
+THUSTR_19 = DM19
+THUSTR_20 = DM20
+THUSTR_21 = DM21
+THUSTR_22 = DM22
+THUSTR_23 = DM23
+THUSTR_24 = DM24
+THUSTR_25 = DM25
+THUSTR_26 = DM26
+THUSTR_27 = DM27
+THUSTR_28 = DM28
+THUSTR_29 = DM29
+THUSTR_30 = DM30
+THUSTR_31 = DM31
+THUSTR_32 = DM32
+HUSTR_PLRGREEN = g:
+HUSTR_PLRINDIGO = i:
+HUSTR_PLRBROWN = b:
+HUSTR_PLRRED = r:
+AMSTR_FOLLOWON = map following player
+AMSTR_FOLLOWOFF = map no longer following player
+AMSTR_GRIDON = map grid on
+AMSTR_GRIDOFF = map grid off
+AMSTR_MARKEDSPOT = added map bookmark
+AMSTR_MARKSCLEARED = all map bookmarks cleared.
+STSTR_MUS = music changed
+STSTR_NOMUS = unknown music track?
+STSTR_DQDON = god mode on
+STSTR_DQDOFF = god mode off
+STSTR_KFAADDED = keys, weapons and ammo added.
+STSTR_FAADDED = weapons and ammo added.
+STSTR_NCON = noclip on
+STSTR_NCOFF = noclip off
+STSTR_CHOPPERS = vroom!
+STSTR_BEHOLD = v=invuln, s=steroids, i=invis, r=hazard, a=map, l=night vision
+NIGHTMARE = this is the highest skill level.\n\
+            not recommended unless you're experienced.\n\n\
+            (press y to confirm)
+#HUSTR_CHATMACRO1
+#HUSTR_CHATMACRO2
+#HUSTR_CHATMACRO3
+#HUSTR_CHATMACRO4
+#HUSTR_CHATMACRO5
+#HUSTR_CHATMACRO6
+#HUSTR_CHATMACRO7
+#HUSTR_CHATMACRO8
+#HUSTR_CHATMACRO9
+#HUSTR_CHATMACRO0
+#HUSTR_TALKTOSELF1
+#HUSTR_TALKTOSELF2
+#HUSTR_TALKTOSELF3
+#HUSTR_TALKTOSELF4
+#HUSTR_TALKTOSELF5
+#HUSTR_MESSAGESENT
+# For FreeDM we shouldn't be seeing these...
+E1TEXT = You've finished chapter 1!
+E2TEXT = You've finished chapter 2!
+E3TEXT = You've finished chapter 3!
+E4TEXT = You've finished chapter 4!
+# After MAP06, before MAP07:
+C1TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP11, before MAP12:
+C2TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP20, before MAP21:
+C3TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP30 (endgame text):
+C4TEXT = Thank you for playing FreeDM, the\n\
+         Freedoom deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP31 (secret level #1):
+C5TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP32 (secret level #2):
+C6TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+#P1TEXT
+#P2TEXT
+#P3TEXT
+#P4TEXT
+#P5TEXT
+#P6TEXT
+#T1TEXT
+#T2TEXT
+#T3TEXT
+#T4TEXT
+#T5TEXT
+#T6TEXT
+#BGFLATE1
+#BGFLATE2
+#BGFLATE3
+#BGFLATE4
+#BGFLAT06
+#BGFLAT11
+#BGFLAT20
+#BGFLAT30
+#BGFLAT15
+#BGFLAT31
+#BGCASTCALL
+#STARTUP1
+#STARTUP2
+#STARTUP3
+#STARTUP4
+#STARTUP5
+#SAVEGAMENAME
+# Obituary texts, for ZDoom-based ports.
+OB_STEALTHBABY=%o thought %g saw a Small Technospider.
+OB_STEALTHVILE=%o thought %g saw an Flame Bringer.
+OB_STEALTHBARON=%o thought %g saw a Pain Lord.
+OB_STEALTHCACO=%o thought %g saw an Orb Monster.
+OB_STEALTHCHAINGUY=%o thought %g saw a Minigun Zombie.
+OB_STEALTHDEMON=%o thought %g saw a Worm.
+OB_STEALTHKNIGHT=%o thought %g saw a Pain Bringer.
+OB_STEALTHIMP=%o thought %g saw an Serpent.
+OB_STEALTHFATSO=%o thought %g saw a Combat Slug.
+OB_STEALTHUNDEAD=%o thought %g saw a Dark Soldier.
+OB_STEALTHSHOTGUY=%o thought %g saw a Shotgun Zombie.
+OB_STEALTHZOMBIE=%o thought %g saw a Zombie.
+OB_UNDEADHIT=%o was punched by a Dark Soldier.
+OB_IMPHIT=%o was slashed by a Serpent.
+OB_CACOHIT=%o got too close to an Orb Monster.
+OB_DEMONHIT=%o was bitten by a Worm.
+OB_SPECTREHIT=%o was eaten by a Stealth Worm.
+OB_BARONHIT=%o was torn open by a Pain Lord.
+OB_KNIGHTHIT=%o was gutted by a Pain Bringer.
+OB_ZOMBIE=%o was killed by a Zombie.
+OB_SHOTGUY=%o was gunned down by a Shotgun Zombie.
+OB_VILE=%o was incinerated by a Flame Bringer.
+OB_UNDEAD=%o couldn't evade the Dark Soldier's fireball.
+OB_FATSO=%o was blasted by a Combat Slug.
+OB_CHAINGUY=%o was perforated by a Minigun Zombie.
+OB_SKULL=%o was slammed by a Deadflare.
+OB_IMP=%o was burned by an Serpent.
+OB_CACO=%o was smitten by an Orb Monster.
+OB_BARON=%o was bruised by a Pain Lord.
+OB_KNIGHT=%o was splayed by a Pain Bringer.
+OB_SPIDER=%o stood in awe of the Large Technospider.
+OB_BABY=%o let a Small Technospider get %h.
+OB_CYBORG=%o was splattered by an Assault Tripod.
+OB_WOLFSS=%o met a Sailor.
+OB_MPFIST=%k punched %o to death.
+OB_MPCHAINSAW=%o was shredded by %k's angle grinder.
+OB_MPPISTOL=%o was tickled by %k's handgun.
+OB_MPSHOTGUN=%o chewed on %k's boomstick.
+OB_MPSSHOTGUN=%k swapped two barrels upside %o's head.
+OB_MPCHAINGUN=%o was perforated by %k's minigun.
+OB_MPROCKET=%o was mutilated by %k's missile.
+OB_MPR_SPLASH=%o couldn't dodge %k's missile.
+OB_MPPLASMARIFLE=%o swallowed too much of %k's polaric energy.
+OB_MPBFG_BOOM=%o had %p ass kicked by %k's SKAG!
+OB_MPBFG_SPLASH=%o couldn't hide from %k's SKAG.
+OB_MPTELEFRAG=%o stood where %k was teleporting.
+OB_RAILGUN=%o was railed by %k.
+OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
+
