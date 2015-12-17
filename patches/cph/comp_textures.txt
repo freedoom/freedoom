@@ -1,3 +1,0 @@
-Contributed by Colin "cph" Phipps <cphipps@doomworld.com>
-COMP{01_[156],1b_4,1c_6} - parts derived from STEP07, W33_7 (espi) and
- COMP02_* (fredrik)

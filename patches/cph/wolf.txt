@@ -1,6 +1,0 @@
-Contributed by Colin "cph" Phipps <cphipps@doomworld.com>
-
-License: BSD
-
-Inspired by a good article in Linux Format on creating metal effects with
-gimp. BTW you can put me down for wolf11 too.
