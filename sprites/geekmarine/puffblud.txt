@@ -1,5 +1,0 @@
-I've created a new blood spurt based VERY loosely on the original which was
-submitted, and also, I modified the bullet puff sprites somewhat to make them
-(in my opinion) more cosmetically appealing, from the original sprites which
-were submitted and already included in the Freedoom wad.
-- geekmarine, weirdguy@zeldaclassic.com

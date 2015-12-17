@@ -1,8 +1,0 @@
-I've taken the liberty to edit the imp sounds and the lost soul attack sound
-in order to increase their volume so that they are actually hearable during
-normal play.  I noticed that they are nearly impossible to hear while playing,
-due to the fact that they are so soft that other noises such as the guns and
-monsters completely cover the imp and lost soul sounds.  Of course, I did not
-create the original sounds, and so do not take credit for them, I just altered
-them so that they could be heard better.
--geekmarine, weirdguy@zeldaclassic.com

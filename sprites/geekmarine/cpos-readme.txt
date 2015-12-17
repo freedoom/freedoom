@@ -1,1 +1,0 @@
-Heh, just a little recoloring job I did to create a chaingunner sprite.  Really nothing special, I was just tired of being shot at by signs.  Would have done more, but I'm incredibly and my sprite talents suck.
