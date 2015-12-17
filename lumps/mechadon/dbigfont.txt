@@ -1,4 +1,0 @@
-This DBIGFONT lump matches the images used in graphics/text/fontchars/
-used to build the menu graphics. It is used by ZDoom-based source
-ports to render menu text.
-
