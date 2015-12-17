@@ -1,6 +1,0 @@
-[sprites]
-PUNGA0  -48     -52
-PUNGB0  -18     3
-PUNGC0  -103    -33
-PUNGD0  -116    -39
-
