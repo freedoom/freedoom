@@ -1,5 +1,0 @@
-Here's a set of eight sound effects to be donated to the FreeDoom
-project. I recorded all of these sounds myself using Windows
-Sound Recorder.
-
-- Draconio
