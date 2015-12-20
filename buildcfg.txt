@@ -605,14 +605,14 @@ D_ULTIMA = D_DM32
 [graphics]
 
 #ifdef ULTDOOM
-TITLEPIC 0 0          = fd1title
+TITLEPIC 20 -16          = fd1title
 M_DOOM
 #else
 #ifdef FREEDM
 TITLEPIC 0 0          = fdmtitle
 M_DOOM   40 -5        = m_dm
 #else
-TITLEPIC 0 0          = fd2title
+TITLEPIC 20 -16          = fd2title
 M_DOOM
 #endif
 #endif
@@ -2311,12 +2311,12 @@ PINSA0	12	32
 PINSB0	12	32
 PINSC0	12	32
 PINSD0	12	32
-PISFA0  -148    -65
-PISGA0  -128    -100
-PISGB0  -109    -83
-PISGC0  -123    -88
-PISGD0	-122	-88
-PISGE0  -128    -100
+PISFA0  -148    -67
+PISGA0  -138    -103
+PISGB0  -138    -85
+PISGC0  -139    -88
+PISGD0	-138	-85
+PISGE0  -138    -103
 PLAYA1	22	52
 PLAYA2A8	16	52
 PLAYA3A7	21	50
