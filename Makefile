@@ -44,7 +44,8 @@ all: $(OBJS)
 subdirs:
 	$(MAKE) -C graphics/text
 	$(MAKE) VERSION=$(VERSION) -C graphics/titlepic
-	$(MAKE) -C lumps/cph/misc-lumps
+	$(MAKE) -C lumps/playpal
+	$(MAKE) -C lumps/colormap
 	$(MAKE) -C lumps/genmidi
 	$(MAKE) -C lumps/dmxgus
 	$(MAKE) -C lumps/textures
@@ -130,7 +131,8 @@ clean:
 	$(MAKE) -C dist clean
 	$(MAKE) -C graphics/text clean
 	$(MAKE) -C graphics/titlepic clean
-	$(MAKE) -C lumps/cph/misc-lumps clean
+	$(MAKE) -C lumps/playpal clean
+	$(MAKE) -C lumps/colormap clean
 	$(MAKE) -C lumps/genmidi clean
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
