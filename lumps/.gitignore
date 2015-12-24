@@ -6,3 +6,7 @@ playpal.lmp
 dmxgus.lmp
 # Copied from genmidi/ -
 genmidi.lmp
+# Copied from textures/ -
+???pname.lmp
+???txtr1.lmp
+???txtr2.lmp
