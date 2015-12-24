@@ -2,7 +2,7 @@
 
 IWAD=./doom2.wad
 
-$(IWAD): ../lumps/cph/misc-lumps/playpal-base.lmp
+$(IWAD): ../lumps/playpal/playpal-base.lmp
 	./bootstrap.py < $< > $@
 
 clean:
