@@ -1,0 +1,21 @@
+This directory contains the background music heard during play. The
+files are in General MIDI (.mid) format, but are renamed to .mus because
+of the limitations of the deutex tool.
+
+In general, most files are per-level music files:
+
+  * d_eXmY.mus    - Freedoom: Phase 1 music for cXmY.
+  * d_mapXY.mus   - Freedoom: Phase 2 music for mapXY.
+  * d_dmXY.mus    - FreeDM music for level XY.
+
+There are a few other MIDI files:
+
+  * d_intro.mus / d_introa.mus - Freedoom: Phase 1 title music
+  * d_inter.mus  - Freedoom: Phase 1 intermission music
+  * d_bunny.mus  - Freedoom: Phase 1 Chapter 3 end music
+  * d_victor.mus - Freedoom: Phase 1 victory screen music
+
+  * d_dm2ttl.mus - Freedoom: Phase 2 / FreeDM title music
+  * d_dm2int.mus - Freedoom: Phase 2 / FreeDM intermission music
+  * d_read_m.mus - Freedoom: Phase 2 / FreeDM text screen music
+

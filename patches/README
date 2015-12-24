@@ -1,0 +1,12 @@
+This directory contains patch textures. These are composited together to
+make up the in-game wall textures. More information can be found in the
+Doom wiki:
+
+    <http://doomwiki.org/wiki/Patch>
+
+Placing a GIF file in this directory will not cause it to be included in
+the built IWADs; the name of the new patch must be used in at least one
+texture in the configuration file `lumps/textures/textures.cfg'. Patches
+are automatically included in the IWADs based on the texture lump
+configuration.
+

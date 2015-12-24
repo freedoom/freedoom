@@ -1,0 +1,12 @@
+This is the bootstrap WAD builder.
+
+Deutex requires an IWAD to build wads and will refuse to build a WAD if
+an IWAD is not provided. The script here creates a minimal IWAD file that
+contains all the lumps deutex needs: PLAYPAL (the freedoom PLAYPAL),
+an empty TEXTURE1 lump and a PNAMES lump with one lump in (deutex needs
+PNAMES lumps to have at least one entry)
+
+Because deutex includes all textures from the parent iwad when building
+WADs, it is important that the bootstrap wad has as few textures as
+possible.
+

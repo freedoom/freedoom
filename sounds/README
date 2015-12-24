@@ -1,0 +1,16 @@
+This directory contains the in-game sound effects. There are two types
+of sound effect found here:
+
+ * ds*.wav files are digital (PCM) sound effects, the sound effects
+   usually heard when playing the game.
+
+ * dp*.txt files are PC speaker sound effects, heard when playing with a
+   source port that support PC speaker effects and configured to do so.
+
+Because of the limitations of deutex it is important that sound effects
+should be in 8-bit PCM format and not anything more elaborate. Some more
+information about Doom's sound effect support can be found on the Doom
+wiki:
+
+    <http://doomwiki.org/wiki/Sound>
+

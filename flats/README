@@ -1,0 +1,9 @@
+This directory contains the flats (floor and ceiling textures). More
+information about flats can be found on the Doom wiki:
+
+    <http://doomwiki.org/wiki/Flat>
+
+GIF files placed in this directory will not be automatically included
+in the build; the lump name must also be added into buildcfg.txt in
+the top-level directory in the section named [flats].
+
