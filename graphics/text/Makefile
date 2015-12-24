@@ -23,6 +23,13 @@ TEXTGEN_GRAPHIC_LUMPS = \
   wip1.gif     wip2.gif     wip3.gif     wip4.gif     wipar.gif    \
   winum0.gif   winum1.gif   winum2.gif   winum3.gif   winum4.gif   \
   winum5.gif   winum6.gif   winum7.gif   winum8.gif   winum9.gif   \
+  dmwilv00.gif dmwilv01.gif dmwilv02.gif dmwilv03.gif dmwilv04.gif \
+  dmwilv05.gif dmwilv06.gif dmwilv07.gif dmwilv08.gif dmwilv09.gif \
+  dmwilv10.gif dmwilv11.gif dmwilv12.gif dmwilv13.gif dmwilv14.gif \
+  dmwilv15.gif dmwilv16.gif dmwilv17.gif dmwilv18.gif dmwilv19.gif \
+  dmwilv20.gif dmwilv21.gif dmwilv22.gif dmwilv23.gif dmwilv24.gif \
+  dmwilv25.gif dmwilv26.gif dmwilv27.gif dmwilv28.gif dmwilv29.gif \
+  dmwilv30.gif dmwilv31.gif                                        \
   cwilv00.gif  cwilv01.gif  cwilv02.gif  cwilv03.gif  cwilv04.gif  \
   cwilv05.gif  cwilv06.gif  cwilv07.gif  cwilv08.gif  cwilv09.gif  \
   cwilv10.gif  cwilv11.gif  cwilv12.gif  cwilv13.gif  cwilv14.gif  \
