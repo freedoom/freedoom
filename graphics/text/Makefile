@@ -1,4 +1,6 @@
-TEXTGEN_GRAPHICS = \
+# textgen outputs these files which are included in the built WADs
+# as lumps.
+TEXTGEN_GRAPHIC_LUMPS = \
   m_detail.gif m_disopt.gif m_disp.gif   m_endgam.gif m_epi1.gif   \
   m_epi2.gif   m_epi3.gif   m_epi4.gif   m_episod.gif m_gdhigh.gif \
   m_gdlow.gif  m_hurt.gif   m_jkill.gif  m_lgttl.gif  m_loadg.gif  \
@@ -13,7 +15,7 @@ TEXTGEN_GRAPHICS = \
   m_mess.gif   m_mouse.gif  m_multi.gif  m_player.gif m_serial.gif \
   m_setup.gif  m_sound.gif  m_stat.gif   m_status.gif m_tcpip.gif  \
   m_versen.gif m_video.gif  m_wad.gif    m_wadopt.gif m_weap.gif   \
-  prboom.gif   helpttl.gif  freettl.gif                            \
+  prboom.gif                                                       \
   m_ultra.gif  wibp1.gif    wibp2.gif    wibp3.gif    wibp4.gif    \
   wicolon.gif  wienter.gif  wif.gif      wifrgs.gif   wipcnt.gif   \
   wiminus.gif  wimstar.gif  wimstt.gif   wiostf.gif   wiosti.gif   \
@@ -37,6 +39,12 @@ TEXTGEN_GRAPHICS = \
   wilv33.gif   wilv34.gif   wilv35.gif   wilv36.gif   wilv37.gif   \
   wilv38.gif
 
+# The full set of graphics outputted by textgen includes a couple of
+# extra files that are just intermediates, and are not lumps to be
+# incuded in the WADs:
+TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
+  helpttl.gif  freettl.gif
+
 all: $(TEXTGEN_GRAPHICS) help.gif credit.gif wikilrs.gif wivctms.gif
 
 # textgen creates multiple outputs, which is awkward to express in
@@ -48,6 +56,7 @@ $(TEXTGEN_GRAPHICS): graphics.stamp
 	  rm -f graphics.stamp; \
 	  $(MAKE) data.stamp; \
 	fi
+	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
 
 graphics.stamp: config.py fontchars ../../lumps/dehacked.lmp
 	@rm -f graphics.tmp
@@ -125,6 +134,7 @@ help.gif: helpbg.png helptext2.png
 	convert helpbg.png                              \
 	    -draw 'image over 0,0 0,0 helptext2.png'     \
 	    help.gif
+	cp $@ ../
 
 credtext.png: freettl.gif credit.txt
 	python smtextgen credtext.png 320x200        \
@@ -138,20 +148,24 @@ credit.gif: helpbg.png credtext2.png
 	convert helpbg.png                             \
 	    -draw 'image over 0,0 0,0 credtext2.png'   \
 	    credit.gif
+	cp $@ ../
 
-wikilrs.gif:
-	python smtextgen wikilrs.png 49x7	\
+wikilrs_horiz.png:
+	python smtextgen $@ 49x7 \
 	    0,0  killers
-	convert wikilrs.png -rotate 270 wikilrs.gif
-	rm -f wikilrs.png
+
+wikilrs.gif: wikilrs_horiz.png
+	convert wikilrs_horiz.png -rotate 270 $@
+	cp $@ ../
 
 wivctms.gif:
-	python smtextgen wivctms.gif 54x7	\
+	python smtextgen $@ 54x7 \
 	    0,0  victims
+	cp $@ ../
 
 clean:
 	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif \
 	    helptext.png helptext2.png graphics.stamp *.pyc \
 	    credtext.png credtext2.png credit.gif \
-	    dmwilv*.gif  wikilrs.gif   wivctms.gif
+	    dmwilv*.gif  wikilrs.gif   wivctms.gif wikilrs_horiz.png
 	rm -fr __pycache__
