@@ -2,3 +2,7 @@
 playpal.lmp
 # Copied from colormap/ -
 *map.lmp
+# Copied from dmxgus/ -
+dmxgus.lmp
+# Copied from genmidi/ -
+genmidi.lmp
