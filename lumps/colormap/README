@@ -1,0 +1,10 @@
+This directory contains the generator script for the COLORMAP lump. The
+COLORMAP lump is used to calculate Doom's lighting; it translates normal
+colors into darkened versions in 32 different levels of light. Some more
+details can be found on the Doom wiki:
+
+   <http://doomwiki.org/wiki/COLORMAP>
+
+Boom extends the COLORMAP to allow the addition of extra colormap lumps;
+these can be used to apply colored lighting and other effects.
+

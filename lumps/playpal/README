@@ -1,0 +1,15 @@
+This directory contains the palette generation script. The output of the
+script is the PLAYPAL lump.
+
+The Doom engine operates in a palettized screen mode where only 256
+different colors can be shown on screen at a given time. By applying
+alternate palettes, special effects can be generated (eg. the red tint
+when taking damage, or the green tint when wearing the radsuit). More
+information can be found on the Doom wiki:
+
+    <http://doomwiki.org/wiki/PLAYPAL>
+
+The input for the script is playpal-base.lmp which contains the default
+palette seen during normal gameplay. The script translates this palette
+into the various other forms which are shown in different situations.
+

@@ -1,0 +1,12 @@
+This directory contains the texture lump generation script. This is used
+to generate the TEXTURE1, TEXTURE2 and PNAMES lumps. The Doom engine uses
+these lumps on startup to build the game's wall textures from individual
+patch textures. More information can be found on the Doom wiki:
+
+    <http://doomwiki.org/wiki/TEXTURE1_and_TEXTURE2>
+
+The deutex tool contains its own texture builder. However, due to the
+specific requirements of the Freedoom project, we have implemented our
+own texture lump builder. See the header comments in the build-textures
+script for more information.
+
