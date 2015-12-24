@@ -1,9 +1,0 @@
-
-This is the "original" code previously used to generate a GENMIDI
-lump, and the original set of patches.
-
-This code generates a functional GENMIDI lump using the free patch data
-from the OpenBSD OPL MIDI driver. The result doesn't sound quite as
-good as the original Doom lump; however, most source ports don't use
-GENMIDI anyway nowadays, so this should be good enough.
-
