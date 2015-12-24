@@ -1,0 +1,10 @@
+# Auto detect text files and perform LF normalization
+* text eol=lf
+
+*.png -text
+*.gif -text
+*.wad -text
+*.wav -text
+*.mus -text
+*.mid -text
+*.midi -text
