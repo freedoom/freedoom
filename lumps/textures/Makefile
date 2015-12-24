@@ -4,7 +4,8 @@ CPP=../../scripts/simplecpp
 all: phase1/texture1.lmp phase2/texture1.lmp freedm/texture1.lmp
 
 phase1/texture1.lmp: textures.cfg
-	$(CPP) -DDOOM1 -DULTDOOM < textures.cfg |                \
+	$(CPP) -DDOOM1 -DULTDOOM -DDOOM1_VERSIONS                \
+	       < textures.cfg |                                  \
 	./build-textures -compat_texture1=doom1/texture1.txt     \
 	                 -compat_texture2=doom1/texture2.txt     \
 	                 -compat_pnames=doom1/pnames.txt         \
