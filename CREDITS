@@ -1,4 +1,4 @@
-F: cph
+﻿F: cph
 N: Colin Phipps
 S: cph
 E: cph@cph.demon.co.uk
@@ -685,7 +685,8 @@ N: Adrian Cabrera
 E: cancer_kaoru@live.com
 S: raymoohawk
 W: http://raymoohawk.deviantart.com/
-D: sprites
+D: sprites F: agaures S: agaures D: sprites
+
 
 F: nub_hat
 N: Mikael Haladyn
@@ -825,4 +826,4 @@ D: levels
 F: luckypunk
 S: LuckyPunk
 E: luckypunk322@gmail.com
-D: sprites
+D: sprites 
