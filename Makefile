@@ -99,7 +99,7 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
 
 %.html: %.adoc
-	asciidoc $<
+	TZ=UTC asciidoc $<
 
 doc: $(patsubst %.adoc,%.html,$(wildcard *.adoc))
 
