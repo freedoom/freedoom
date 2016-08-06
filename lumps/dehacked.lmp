@@ -133,27 +133,27 @@ HUSTR_E1M1 = C1M1: Starport
 HUSTR_E1M2 = C1M2: Communications Center
 HUSTR_E1M3 = C1M3: Waste Disposal
 HUSTR_E1M4 = C1M4: Supply Depot
-HUSTR_E1M5 = C1M5: Control Center
-HUSTR_E1M6 = C1M6: Training Center
-HUSTR_E1M7 = C1M7: Research Labs
+HUSTR_E1M5 = C1M5: Main Control
+HUSTR_E1M6 = C1M6: Training Facility
+HUSTR_E1M7 = C1M7: Genetics Experimentation
 HUSTR_E1M8 = C1M8: Quarry
 HUSTR_E1M9 = C1M9: Armory
 HUSTR_E2M1 = C2M1: Ruins
 HUSTR_E2M2 = C2M2: Power Plant
-HUSTR_E2M3 = C2M3
-HUSTR_E2M4 = C2M4: Sample Holding Center
+HUSTR_E2M3 = C2M3: Archaelogy Site
+HUSTR_E2M4 = C2M4: Sample Holding Site
 HUSTR_E2M5 = C2M5: Fortress 31
-HUSTR_E2M6 = C2M6
-HUSTR_E2M7 = C2M7
-HUSTR_E2M8 = C2M8: Containment Center
-HUSTR_E2M9 = C2M9
+HUSTR_E2M6 = C2M6: Field Work
+HUSTR_E2M7 = C2M7: Quarantine Vessel
+HUSTR_E2M8 = C2M8: Containment Cell
+HUSTR_E2M9 = C2M9: Corruption of Man
 HUSTR_E3M1 = C3M1: Land of the Lost
 HUSTR_E3M2 = C3M2: Infernal Caverns
-HUSTR_E3M3 = C3M3
-HUSTR_E3M4 = C3M4
+HUSTR_E3M3 = C3M3: Heated Tunnels
+HUSTR_E3M4 = C3M4: Sacrificial Bastion
 HUSTR_E3M5 = C3M5
 HUSTR_E3M6 = C3M6: Igneous Intrusion
-HUSTR_E3M7 = C3M7
+HUSTR_E3M7 = C3M7: No Regrets
 HUSTR_E3M8 = C3M8: The Lair
 HUSTR_E3M9 = C3M9: Acquainted With Grief
 HUSTR_E4M1 = C4M1: Maintenance Area
@@ -187,13 +187,13 @@ HUSTR_2 = MAP02: Filtration Tunnels
 HUSTR_3 = MAP03: Crude Processing Center
 HUSTR_4 = MAP04: Containment Bay
 HUSTR_5 = MAP05: Waste Water Basin
-HUSTR_6 = MAP06
+HUSTR_6 = MAP06: Gamma Labs
 HUSTR_7 = MAP07: Outer Storage Warehouse
-HUSTR_8 = MAP08
-HUSTR_9 = MAP09: Mine HM09
-HUSTR_10 = MAP10
-HUSTR_11 = MAP11
-HUSTR_12 = MAP12
+HUSTR_8 = MAP08: Astronomy Complex
+HUSTR_9 = MAP09: Datacenter
+HUSTR_10 = MAP10: Deadly Outlands
+HUSTR_11 = MAP11: Infinite Plain
+HUSTR_12 = MAP12: Railroads
 HUSTR_13 = MAP13: Return to Earth
 HUSTR_14 = MAP14: The Acid Trip
 HUSTR_15 = MAP15: Hostile Takeover
@@ -203,14 +203,14 @@ HUSTR_18 = MAP18: Abandoned Monastery
 HUSTR_19 = MAP19: Castle
 HUSTR_20 = MAP20: The Blood Ember Fortress
 HUSTR_21 = MAP21: The Under-Realm
-HUSTR_22 = MAP22
-HUSTR_23 = MAP23
+HUSTR_22 = MAP22: Lava Canyon
+HUSTR_23 = MAP23: Underground Facility
 HUSTR_24 = MAP24: Tertiary Loading Bay
-HUSTR_25 = MAP25
-HUSTR_26 = MAP26
-HUSTR_27 = MAP27
+HUSTR_25 = MAP25: Blood Church
+HUSTR_26 = MAP26: The Depths
+HUSTR_27 = MAP27: Warped Elementality
 HUSTR_28 = MAP28: Grim Redoubt
-HUSTR_29 = MAP29
+HUSTR_29 = MAP29: Last Stand
 HUSTR_30 = MAP30: Jaws of Defeat
 HUSTR_31 = MAP31: Safety in Numbers
 HUSTR_32 = MAP32: Summer Residence
@@ -318,41 +318,47 @@ NIGHTMARE = this is the highest skill level.\n\
 #HUSTR_TALKTOSELF5
 #HUSTR_MESSAGESENT
 # Temporary end-of-chapter texts. Please replace them.
-E1TEXT = You've completed chapter 1!!\n\n\
-         But your work isn't done yet.\n\n\
-         There are more monsters still to kill.\n\n\
-         Play Chapter 2: Military Labs to\n\
-         continue the madness.
-E2TEXT = You've defeated Chapter 2!\n\n\
-         Hordes of monsters lie dead by your\n\
-         hand. But there are still more waiting.\n\
-         Your work is not yet done.\n\n\
-         Onward to Chapter 3: Event Horizon\n\
-          - if you dare!
-E3TEXT = Hundreds of monsters couldn't stop you.\n\
-         So much for Chapter 3.\n\n\
-         But there's a whole other game to play!\n\n\
-         Play Freedoom: Phase 2 and continue the\n\
-         carnage!\n\n\
-         -or play Chapter 4: Double Impact!
+E1TEXT = The monsters are dead. But what\n\
+         about the other sites? There are many\n\
+         more still out there. And more keep coming.\n\
+         The roars echo into your ears.\n\
+         They're hungry for your blood.\n\n\
+         Continue the destruction in Chapter 2:\n\n\
+         Military Labs.
+E2TEXT = The gigantic brutes lay dead on the soft\n\
+         ground. Nothing can match your skills.\n\n\
+         But something in you says they are mere\n\
+         pawns in this whole things. A hidden path\n\ 
+         opens up... And there's hundreds of monsters\n\
+         up ahead... Guarding something...\n\n\
+         End this genocide, once and for all\n\n\
+         in Chapter 3: Event Horizon!        
+E3TEXT = The brains behind the massacre\n\
+         explodes into oblivion. Not a single\n\ 
+         piece of scrap left of the machine.\n\
+         It's over... Or is it?\n\n\
+         Go on one more adventure in Chapter 4:\n\
+         Double Impact!\n\n\
+         And take on the final gutwrenching\n\
+         journey in Phase 2, and defeat\n\n\
+         the leader of them all!   
 E4TEXT = Despite having an entire army against\n\
          you, you manage to reach the\n\
          spacecraft by the skin of your teeth.\n\n\
-         "Can I go back to fixing things yet?"\n\
-         You mutter to yourself and let out an\n\
-         exasperated sigh.\n\n\
-         You initiate navigation systems and\n\
-         power-up thrusters, time to get the\n\
-         hell outta dodge. Destination: anywhere\n\
-         but this suck-hole. As you lift off to the\n\
-         safety of outerspace, you wonder if you're\n\
-         going to be paid overtime.
+         "What did I even do to deserve this?"\n\
+         You ask yourself and let out a\n\
+         sigh.\n\n\
+         The ship rumbles as she wakes up,\n\
+         thrusters warmed up.!\n\
+         Destination: anywhere but here.\n\
+         As you lift off, something bugs you.\n\n\
+         "Is everything back home alright?"
 # After MAP06, before MAP07:
 C1TEXT = You've found your way to the complex's\n\
          outer storage warehouse. A whole\n\
          squadron of soldiers were\n\
          dispatched here, but after 2 hours they\n\
-         were never heard from again. What can have\n\
+         were never heard from again. What\n\
          happened to them? You feel a knot in\n\
          your stomach and try to put the question\n\
          out of your mind.\n\n\
@@ -364,42 +370,41 @@ C2TEXT = You make your way to the outskirts of\n\
          and headquarters of the AGM conglomerate.\n\n\
          Now it's a wreck.\n\n\
          Every entrance has been heavily fortified,\n\
-         but you find one small forgotten doorway,\n\
-         it must be an industrial loading bay\n\
-         of some kind. Guess this is your way in.
+         but you find one small forgotten doorway.\n\
+         It must be an industrial loading bay.\n\
+         "What's behind it?"\n\n\ 
+         Only one way to find out.
 # After MAP20, before MAP21:
 C3TEXT = You never thought you'd see a literal\n\
          river of blood. These bastards have a\n\
          lot to answer for. But it just makes you\n\
          more determined to make them pay for\n\
          what they've done.\n\n\
-         Stepping through the portal you pause to\n\
+         Stepping through the portal, you pause to\n\
          catch your breath, but there's no time\n\
          to waste.
 # After MAP30 (endgame text):
 C4TEXT = Explosions erupt from all around the\n\
          skull. You've done it. It's finally\n\
-         over. These monsters won't bother you\n\
-         any more.\n\n\
+         over. These monsters won't bother\n\
+         mankind anymore.\n\n\
          The saying goes, live free or die.\n\
          Guess that doesn't always mean the\n\
          latter.
 # Before MAP31 (secret level #1):
-C5TEXT = You step onto the teleport and after a\n\
-         strange flash you find yourself in an\n\
+C5TEXT = You step onto the teleporter and after\n\
+         a strange flash you find yourself in an\n\
          old castle. What is this place? Before\n\
-         you can wonder further, you hear\n\
+         you can wander further, you hear\n\
          noises coming towards you.
 # Before MAP32 (secret level #2):
 C6TEXT = You place your hand on the strange\n\
-         yellow column, and quickly remember\n\
-         how your mother always warned you\n\
-         to not touch things that don't belong\n\
-         to you.\n\n\
-         As the glow of the alien teleport\n\
+         yellow column, and hope for the best.\n\n\
+         Only, things got worse\n\
+         for you.\n\n\
+         As the glow of the teleporter\n\
          subsides, it looks like you may have\n\
-         made a wrong turn.\n\n\
-         Again.
+         made a wrong turn.
 #P1TEXT
 #P2TEXT
 #P3TEXT
