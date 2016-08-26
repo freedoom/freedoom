@@ -169,17 +169,17 @@ CC_ZOMBIE = zombie
 CC_SHOTGUN = shotgun zombie
 CC_HEAVY = minigun zombie
 CC_IMP = serpent
-CC_DEMON = worm
+CC_DEMON = flesh worm
 CC_LOST = deadflare
 CC_CACO = orb monster
 CC_HELL = pain bringer
 CC_BARON = pain lord
-CC_ARACH = small technospider
-CC_PAIN = deadflare ball
+CC_ARACH = technospider
+CC_PAIN = flare holder
 CC_REVEN = dark soldier
 CC_MANCU = combat slug
 CC_ARCH = flame bringer
-CC_SPIDER = large technospider
+CC_SPIDER = large technospider 
 CC_CYBER = assault tripod
 CC_HERO = savior of humanity
 HUSTR_1 = MAP01: Hydroelectric Plant
@@ -318,82 +318,106 @@ NIGHTMARE = this is the highest skill level.\n\
 #HUSTR_TALKTOSELF5
 #HUSTR_MESSAGESENT
 # Temporary end-of-chapter texts. Please replace them.
-E1TEXT = The monsters are dead. But what\n\
-         about the other sites? There are many\n\
-         more still out there. And more keep coming.\n\
-         The roars echo into your ears.\n\
-         They're hungry for your blood.\n\n\
-         Continue the destruction in Chapter 2:\n\n\
-         Military Labs.
-E2TEXT = The gigantic brutes lay dead on the soft\n\
-         ground. Nothing can match your skills.\n\n\
-         But something in you says they are mere\n\
-         pawns in this whole things. A hidden path\n\ 
-         opens up... And there's hundreds of monsters\n\
-         up ahead... Guarding something...\n\n\
-         End this genocide, once and for all\n\n\
-         in Chapter 3: Event Horizon!        
-E3TEXT = The brains behind the massacre\n\
-         explodes into oblivion. Not a single\n\ 
-         piece of scrap left of the machine.\n\
-         It's over... Or is it?\n\n\
-         Go on one more adventure in Chapter 4:\n\
-         Double Impact!\n\n\
-         And take on the final gutwrenching\n\
-         journey in Phase 2, and defeat\n\n\
-         the leader of them all!   
-E4TEXT = Despite having an entire army against\n\
-         you, you manage to reach the\n\
+E1TEXT = This Site is safe now.\n\
+        Sure, everyone's dead, but so are they.\n\
+        The monsters that infested this place\n\
+        no longer exist in this reality. But it\n\
+        feels wrong. Too simple. They never stopped\n\
+        you only slowed you down. Why?\n\n\
+        What were they hiding from you so\n\
+        desperately anyway?\n\n\        
+        You step on the teleporter hoping to find\n\
+        out right now.
+E2TEXT = The brutes rip themselves apart\n\
+        as they fall on the soft ground\n\
+        blood leaking.\n\
+        metal burning.\n\
+        They're dead. But is it over? No.\n\n\
+        The soil beneath your feet start to quake.\n\
+        It opens up, swallowing you down into\n\
+        the darkness below.\n\n\
+        Another portal lies down there.\n\
+        And you fall right through it.\n\n\
+        No, it's only the beginning.        
+E3TEXT = The spider explodes into oblivion.\n\
+        The monsters look confused.\n\
+        But fuck them. As you kill off the rest of\n\
+        the creatures, you see a hidden door.\n\
+        And behind it, lies an AGM teleporter\n\n\
+       Set for Earth.\n\n\
+       Well, at least it's better than here.\n\
+       You step on the teleporter, waiting for that\n\ 
+      strange feeling of speed and pain.\n\
+      Nothing happens. Too much weight.\n\
+      You drop all your weapons on the ground\n\
+      and step on the platform one more time.\n\
+      You feel your body break down\n\
+      then reassemble back on Earth...
+E4TEXT = Despite fighting an army of monsters\n\
+         you manage to reach the\n\ 
          spacecraft by the skin of your teeth.\n\n\
-         "What did I even do to deserve this?"\n\
-         You ask yourself and let out a\n\
-         sigh.\n\n\
+         "Time to get out of here."\n\
+         You tell yourself and plump down\n\
+         on the comfortable chair.\n\n\
          The ship rumbles as she wakes up,\n\
-         thrusters warmed up.\n\
-         Destination: anywhere but here.\n\
-         As you lift off, something bugs you.\n\n\
-         "Is everything back home alright?"
+         thrusters warmed up,\n\
+         As you lift off, something comes up.\n\n\
+         "What's happening back on Earth?"\n\n\
+         A part of you says you don't want to know.\n\
+        But you're no backstabbing coward.\n\
+        Destination: Earth
 # After MAP06, before MAP07:
 C1TEXT = You've found your way to the complex's\n\
-         outer storage warehouse. A whole\n\
-         squadron of soldiers were\n\
-         dispatched here, but after 2 hours they\n\
-         were never heard from again. What\n\
-         happened to them? You feel a knot in\n\
-         your stomach and try to put the question\n\
-         out of your mind.\n\n\
-         Guess you'll find out soon.
+         outer storage warehouse. You hear growls.\n\
+         A squadron was sent here, judging from the\n\
+         two 4x4 vehicles parked near the gates.\n\n\
+         So where are they?\n\n\
+         Most likely dead. Or turned into monsters.\n\
+         Best to end their misery now than later.\n\
+         You loot the vehicles and open the gates.\n\
+         The lift hums as you enter, rising down.\n\
+         Planted your feet and checked your weapon.\n\n\
+         Time to go up.
 # After MAP11, before MAP12:
-C2TEXT = You make your way to the outskirts of\n\
-         the city. This was once the planet's\n\
-         most important economic powerhouse,\n\
-         and headquarters of the AGM conglomerate.\n\n\
-         Now it's a wreck.\n\n\
-         Every entrance has been heavily fortified,\n\
-         but you find one small forgotten doorway.\n\
-         It must be an industrial loading bay.\n\
-         "What's behind it?"\n\n\ 
-         Only one way to find out.
+C2TEXT = You stand on ledge, looking down\n\
+          into the void below. It pulls you inch by\n\
+          inch. But you fight back against the\n\
+         force. Looking back at the city, you\n\
+         know that it's hopeless to save it now.\n\
+         The whole place is yielding to the void.\n\n\
+         As you get near the teleporter, one of\n\
+         the steel bars holding it in place flys off\n\
+        right into the abyss. You don't have much\n\
+        time until the teleporter goes in too.\n\n\
+        You quickly hop on the platform, and feel\n\
+        that tingling sensation of movement.\n\n\
+        But you're not going somewhere\n\
+        familiar. You're going to the source.
 # After MAP20, before MAP21:
-C3TEXT = You never thought you'd see a literal\n\
-         river of blood. These bastards have a\n\
-         lot to answer for. But it just makes you\n\
-         more determined to make them pay for\n\
-         what they've done.\n\n\
-         Stepping through the portal, you pause to\n\
-         catch your breath, but there's no time\n\
-         to waste.
+C3TEXT = There is no AGM here. no humans.\n\
+         Just monsters and monsters. And you.\n\
+         This could be the beginning of the end.\n\n\
+         The end of this massacre of mankind.\n\n\
+         No man has ever entered this wasteland.\n\n\
+         This path to the very core of the slaughter.\n\n\
+         Filled with toxicity.\n\n\
+         Fueled with agony.\n\n\
+         And you're going to take it.
 # After MAP30 (endgame text):
-C4TEXT = Explosions erupt from all around the\n\
-         skull. You've done it. It's finally\n\
-         over. These monsters won't bother\n\
-         mankind anymore.\n\n\
-         The saying goes, live free or die.\n\
-         Guess that doesn't always mean the\n\
-         latter.
+C4TEXT = The gigantic beast becomes unstable.\n\
+        Its final roar echoes throughout the room\n\
+        till it crumples in a billow of smoke and a\n\
+        pool of blood and molten metal.\n\n\
+        A portal opens up, and in it, you see a small\n\
+        town. You went in, forgetting the past.\n\
+        Humanity learned its lesson this time.\n\n\
+        Hopefully.\n\n\
+        No one will know know who saved them.\n\n\
+        No one will know what happened here.\n\n\
+        No one will ever find you again.
 # Before MAP31 (secret level #1):
-C5TEXT = You step onto the teleporter and after\n\
-         a strange flash you find yourself in an\n\
+C5TEXT = You step onto the machine and after a\n\
+         strange flash you find yourself in an\n\
          old castle. What is this place? Before\n\
          you can wander further, you hear\n\
          noises coming towards you.
