@@ -379,7 +379,7 @@ C1TEXT = You've found your way to the complex's\n\
          Planted your feet and checked your weapon.\n\n\
          Time to go up.
 # After MAP11, before MAP12:
-C2TEXT = On the ledge, looking down\n\
+C2TEXT = You're on the ledge, looking down\n\
           into the void below. It pulls you inch by\n\
           inch. But you fight back against the\n\
          force. Looking back at the city, you\n\
