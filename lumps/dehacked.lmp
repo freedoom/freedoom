@@ -322,8 +322,8 @@ E1TEXT = This Site is safe now.\n\
         Sure, everyone's dead, but so are they.\n\
         The monsters that infested this place\n\
         no longer exist in this reality. But it\n\
-        feels wrong. Too simple. They never stopped\n\
-        you only slowed you down. Why?\n\n\
+        feels wrong. Too simple. They never stopped,\n\
+        only slowed you down. Why?\n\n\
         What were they hiding from you so\n\
         desperately anyway?\n\n\        
         You step on the teleporter hoping to find\n\
@@ -333,7 +333,7 @@ E2TEXT = The brutes rip themselves apart\n\
         blood leaking.\n\
         metal burning.\n\
         They're dead. But is it over? No.\n\n\
-        The soil beneath your feet start to quake.\n\
+        The soil beneath your feet starts to quake.\n\
         It opens up, swallowing you down into\n\
         the darkness below.\n\n\
         Another portal lies down there.\n\
@@ -375,11 +375,11 @@ C1TEXT = You've found your way to the complex's\n\
          Most likely dead. Or turned into monsters.\n\
          Best to end their misery now than later.\n\
          You loot the vehicles and open the gates.\n\
-         The lift hums as you enter, rising down.\n\
+         The lift hums as you enter, lowering down.\n\
          Planted your feet and checked your weapon.\n\n\
          Time to go up.
 # After MAP11, before MAP12:
-C2TEXT = You stand on ledge, looking down\n\
+C2TEXT = On the ledge, looking down\n\
           into the void below. It pulls you inch by\n\
           inch. But you fight back against the\n\
          force. Looking back at the city, you\n\
@@ -409,7 +409,7 @@ C4TEXT = The gigantic beast becomes unstable.\n\
         till it crumples in a billow of smoke and a\n\
         pool of blood and molten metal.\n\n\
         A portal opens up, and in it, you see a small\n\
-        town. You went in, forgetting the past.\n\
+        town. You jump in, forgetting the past.\n\
         Humanity learned its lesson this time.\n\n\
         Hopefully.\n\n\
         No one will know know who saved them.\n\n\
