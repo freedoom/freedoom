@@ -77,33 +77,33 @@ par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
 # Text shown on startup in Boom-compatible ports. This is all in
 # STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
-GOTARMOR = picked up a light armor vest.
-GOTMEGA = picked up a heavy armor vest.
-GOTHTHBONUS = got a 1% health bonus.
-GOTARMBONUS = got a 1% armor bonus.
+GOTARMOR = picked up a lite energy vest.
+GOTMEGA = picked up a full shield vest.
+GOTHTHBONUS = found a vitality bonus.
+GOTARMBONUS = used a shield charge.
 GOTSTIM = picked up a small health pack.
 GOTMEDINEED = found a large health pack, just in time!
 GOTMEDIKIT = picked up a large health pack.
-GOTSUPER = you got the overdrive sphere!
+GOTSUPER = you got the vitality drive!
 GOTBLUECARD = picked up a blue passcard.
 GOTYELWCARD = picked up a yellow passcard.
 GOTREDCARD = picked up a red passcard.
 GOTBLUESKUL = picked up a blue skeleton key.
 GOTYELWSKUL = picked up a yellow skeleton key.
 GOTREDSKULL = picked up a red skeleton key.
-GOTINVUL = temporary invulnerability!
-GOTBERSERK = you got the steroid pack!
-GOTINVIS = you got the stealth sphere!
+GOTINVUL = you are untouchable!
+GOTBERSERK = punch 'em to death!
+GOTINVIS = you got the stealth drive!
 GOTSUIT = picked up a hazard suit.
-GOTMAP = got the tactical survey map.
+GOTMAP = got the architecture device.
 GOTVISOR = got the night vision goggles.
-GOTMSPHERE = you got the ultra-overdrive sphere!
+GOTMSPHERE = you got the ultimate drive!
 GOTCLIP = picked up an ammo clip.
 GOTCLIPBOX = picked up a box of ammo.
 GOTROCKET = picked up a missile.
 GOTROCKBOX = picked up a crate of missiles.
-GOTCELL = picked up a small energy recharge.
-GOTCELLBOX = picked up a large energy recharge.
+GOTCELL = picked up a small polaric recharge.
+GOTCELLBOX = picked up a large polaric recharge.
 GOTSHELLS = picked up some shotgun shells.
 GOTSHELLBOX = picked up a box of shotgun shells.
 GOTBACKPACK = second backpack!
