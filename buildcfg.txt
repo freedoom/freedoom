@@ -606,14 +606,14 @@ D_ULTIMA = D_DM32
 
 #ifdef ULTDOOM
 TITLEPIC 0 0          = fd1title
-M_DOOM  -24 20
+M_DOOM   24 -24
 #else
 #ifdef FREEDM
 TITLEPIC 0 0          = fdmtitle
 M_DOOM   40 -5        = m_dm
 #else
 TITLEPIC 0 0          = fd2title
-M_DOOM  -24 20
+M_DOOM   24 -24
 #endif
 #endif
 
