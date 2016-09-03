@@ -272,7 +272,7 @@ is about.  The commit `2014-08-24T22:42:37Z!fraggle@gmail.com` is a
 good example.
 
 Additionally, do not use commit hashes to refer to other commits.  Use
-other kinds of pointers, simple ones like ``my previous commit'' might
+other kinds of pointers, simple ones like "my previous commit" might
 suffice, or use http://esr.ibiblio.org/?p=3872[action stamps], which
 can improve the meaningfulness of commit identifiers if the repository
 history is rewritten (this has happened at least twice!), or if the
@@ -284,7 +284,7 @@ place it in your `$PATH` to achieve some ease in generating them.
 
 You should commit at each logical step.  Do not bundle up many
 unrelated changes into the same commit, and definitely do not write a
-commit message like ``changed some stuff.''  Best judgment should be
+commit message like "changed some stuff."  Best judgment should be
 used for what constitutes a logical step.  It may be just a single
 file, or it may be a group of files representing a monster in the
 game.  If you are finding yourself needing to repair previous commits'
