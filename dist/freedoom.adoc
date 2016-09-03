@@ -13,10 +13,10 @@ SYNOPSIS
 DESCRIPTION
 -----------
 Freedoom is a project to create a complete free-content game based on
-the 'Doom' engine (often called ``source ports'' or simply ``ports''),
+the 'Doom' engine (often called “source ports” or simply “ports”),
 which itself is free software.  In addition, it maintains
 compatibility with 'Doom' itself and is capable of playing the wide
-variety of modifications (``mods'') that have been released by an
+variety of modifications (“mods”) that have been released by an
 active community since 1993.
 
 This command is a simple shell script to assist in running Freedoom,

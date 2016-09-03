@@ -7,7 +7,7 @@ played.
 
 There is a massive http://doomwiki.org/wiki/Idgames_archive[back
 catalog], spanning over two decades, containing thousands of _Doom_
-levels and other modifications (``mods'') made by fans of the game.
+levels and other modifications (“mods”) made by fans of the game.
 _Freedoom_ aims to be compatible with these and allows most to be
 played without the need to use non-free software.
 
@@ -26,7 +26,7 @@ compatibility with _Doom II_ and _Final Doom_.
 
 The engine uses a single file, such as +freedoom2.wad+, that contains
 all the game data such as graphics, sound effects, music, and so on.
-This file is often called an ``IWAD'' by those in the _Doom_ and
+This file is often called an “IWAD” by those in the _Doom_ and
 _Freedoom_ communities.  While the _Doom_ engine source code is free,
 you would normally still need one of the proprietary data files from
 http://www.idsoftware.com/[id Software] to play _Doom_.  _Freedoom_
@@ -38,8 +38,8 @@ For more information, see http://freedoom.github.io/.
 == How to play
 
 Since _Freedoom_ is only the game data, you will still need to
-download an engine separately.  These are also often termed ``source
-ports'' by the community.  There are an overwhelming number of choices
+download an engine separately.  These are also often termed “source
+ports” by the community.  There are an overwhelming number of choices
 available, a lengthy list of which is available on the
 http://doomwiki.org/wiki/Source_port[Doom Wiki].
 
@@ -91,7 +91,7 @@ engine for proper play.  Desktop files may also be installed so that
 you can start the game using a graphical interface and avoid the
 command line altogether.
 
-== What ``free'' means
+== What “free” means
 
 When we speak of free content or software, we refer to the movement in
 which your freedoms to use, copy, modify, and study a work is not
@@ -99,7 +99,7 @@ infringed.  For example, you may freely use _Freedoom_ for any purpose
 you see fit, you may redistribute it to anyone without needing to ask
 for permission, you may modify it (provided you keep the license
 intact, see `COPYING`), and you may study it--for example, to see how
-an ``IWAD'' is built.  To facilitate this, you can get the full source
+an “IWAD” is built.  To facilitate this, you can get the full source
 code for Freedoom, in this case, in the form of a DeuTex tree.
 
 You may read more about free software at the http://www.gnu.org/[GNU]
@@ -134,9 +134,9 @@ The general rules go as follows:
     put effort to make new versions look visibly different from
     _Doom_.  This is a tough call, because our compatibility with
     _Doom_ mods limits how far we can deviate, but it is feasible.
-  * Be especially careful of ``free textures'' (or ``free sounds'' or
-    ``free graphics'') sites.  Although these would appear at first to
-    be okay to use, many are free for ``non-commercial use only.''
+  * Be especially careful of “free textures” (or “free sounds” or
+    “free graphics”) sites.  Although these would appear at first to
+    be okay to use, many are free for “non-commercial use only.”
     One of the things we want to be able to do is put this in
     GNU/Linux distributions (which can be sold or developed
     commercially).
@@ -150,7 +150,7 @@ engines which are not descended from Boom.  This means that you may
 exceed the limits of the original _Doom_ and use features introduced
 in Boom.  Do not use features that are not supported by Boom 2.02 and
 compatible engines.  Levels should be in _Doom_'s original format, not
-in ``Hexen''-format.
+in “Hexen”-format.
 
 Levels for _FreeDM_ must strictly be vanilla-compatible, that is, they
 must run in the original +doom2.exe+ engine for DOS and not cause any
@@ -170,7 +170,7 @@ It is sensible to also heed the following guidelines:
   * Do not use tricks that exploit _Doom_'s software renderer; some
     engines, especially those that use hardware accelerated rendering,
     may not render it properly.  Examples of tricks to avoid include
-    those used to simulate 3D bridges and ``deep water'' effects.
+    those used to simulate 3D bridges and “deep water” effects.
   * Boom removes almost all of the limits on rendering; however, do
     not make excessively complicated scenes.  It is desirable that
     Freedoom levels should be playable on low-powered hardware, such
@@ -198,9 +198,9 @@ _Doom_ graphics, as to remain compatible with mods.  Otherwise, levels
 may end up looking like a nightmare in design.  They may be
 thematically different as long as it doesn't clash.
 
-_Doom_ uses a fictional corporation abbreviated as ``UAC:'' this is
+_Doom_ uses a fictional corporation abbreviated as “UAC:” this is
 trademarked by id Software and cannot be used in _Freedoom_.  Instead,
-use the initials ``AGM'' for _Freedoom_.
+use the initials “AGM” for _Freedoom_.
 
 === Documentation
 
@@ -272,7 +272,7 @@ is about.  The commit `2014-08-24T22:42:37Z!fraggle@gmail.com` is a
 good example.
 
 Additionally, do not use commit hashes to refer to other commits.  Use
-other kinds of pointers, simple ones like "my previous commit" might
+other kinds of pointers, simple ones like “my previous commit” might
 suffice, or use http://esr.ibiblio.org/?p=3872[action stamps], which
 can improve the meaningfulness of commit identifiers if the repository
 history is rewritten (this has happened at least twice!), or if the
@@ -284,7 +284,7 @@ place it in your `$PATH` to achieve some ease in generating them.
 
 You should commit at each logical step.  Do not bundle up many
 unrelated changes into the same commit, and definitely do not write a
-commit message like "changed some stuff."  Best judgment should be
+commit message like “changed some stuff.”  Best judgment should be
 used for what constitutes a logical step.  It may be just a single
 file, or it may be a group of files representing a monster in the
 game.  If you are finding yourself needing to repair previous commits'

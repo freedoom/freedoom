@@ -3,13 +3,13 @@
 Doom's music consists (effectively) of MIDI music files. MIDI is an odd
 beast. The General MIDI standard defines a set of 128 common instruments
 supported by MIDI playback systems. For example, instrument #10 is
-``Glockenspiel''. You can think of them like the instrument presets on
+“Glockenspiel”. You can think of them like the instrument presets on
 an electronic keyboard. You can find a full list of instruments
 https://secure.wikimedia.org/wikipedia/en/wiki/General_MIDI[on Wikipedia].
 
 Modern synthesizers, keyboards and operating systems with MIDI playback
 capability use recorded samples of real musical instruments, so when
-the MIDI file specifies ``Glockenspiel'' as the instrument, you hear
+the MIDI file specifies “Glockenspiel” as the instrument, you hear
 notes from a real glockenspiel playing the song. But Doom is from an
 older, more primitive age.
 
@@ -33,7 +33,7 @@ one set of settings and the noise that comes out sounds like a
 Glockenspiel, change the settings and it sounds like a bass guitar or
 a snare drum instead.
 
-These ``knob settings'' are commonly stored in .sbi instrument files.
+These “knob settings” are commonly stored in .sbi instrument files.
 Looking online you can find huge collections of .sbi files created back
 when people still actually used them.
 
@@ -71,7 +71,7 @@ currently be empty. It's probably best to start by loading an existing
 instrument file and editing it, so press Ctrl-L to load an instrument
 into the first slot. Find one of the existing SBI files that you want
 to improve and press enter to select it; you should see the instrument
-appear next to ``iNS_01'' in the first slot.
+appear next to “iNS_01” in the first slot.
 
 To hear what the instrument currently sounds like, you can use the keys
 on your keyboard like a piano:
@@ -81,7 +81,7 @@ on your keyboard like a piano:
 
 To improve the current instrument settings, press tab to bring up the
 instrument editor. You'll get a panel with a wide range of different
-settings to play with, and you can still use the ``piano keys'' to hear
+settings to play with, and you can still use the “piano keys” to hear
 what effect your changes are having. Press enter to switch between
 editing the carrier and the modulator - they both affect the sound in
 different ways.
@@ -95,7 +95,7 @@ the first four. You will get a warning message later if you use these.
 
 When it comes to saving your changes, press Ctrl-S and type a filename
 for your new file. There's a slight catch here in that although AT2 can
-load SBI format instrument files, it can only save in its own ``a2i''
+load SBI format instrument files, it can only save in its own “a2i”
 instrument format. Fortunately we can convert back into SBI format
 later.
 
