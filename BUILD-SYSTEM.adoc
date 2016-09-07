@@ -8,7 +8,7 @@ system.
 Freedoom is built using 'deutex', which is a command-line tool for
 automated building of Doom WAD files.  However, multiple different WAD
 files are built from the Freedoom material.  Therefore, the Freedoom
-build system is more complicated than a ``normal'' deutex build would
+build system is more complicated than a “normal” deutex build would
 otherwise be.
 
 A top-level +Makefile+ controls the build system and executes the
@@ -204,7 +204,7 @@ It reads level names from the dehacked lumps.
 
 Found in +lumps/cph/misc-lumps+, this script builds the +PLAYPAL+
 lump which contains the 256-color palettes used for special
-effects (injured "red" flash, the green "radiation suit" effect,
+effects (injured “red” flash, the green “radiation suit” effect,
 etc.)
 
 === +colormap.py+
@@ -214,7 +214,7 @@ lump that is used for the diminished lighting within the game.
 This script is also reused to generate additional colormaps that
 can be used for special effects. It has a number of command line
 options that allow it to do various different colorizing and
-"fog" effects.
+“fog” effects.
 
 === +mkgenmidi+
 
@@ -259,7 +259,7 @@ deutex is an old tool and has various quirks that must be worked
 around.  Some of them are listed here.
 
  * The default background color for sprites is magenta.  The
-   ``standard'' background color of cyan is used instead by providing
+   “standard” background color of cyan is used instead by providing
    the +-rgb 0 255 255+ command line parameter.
 
  * By default, deutex attempts to convert sound effects to 11,025Hz
@@ -274,6 +274,6 @@ around.  Some of them are listed here.
 
  * deutex requires an existing IWAD file in order to build WAD files,
    and includes the contents of the +TEXTURE1+ lump from the IWAD in
-   any +TEXTURE1+ lumps it generates.  To work around this, a ``dummy''
+   any +TEXTURE1+ lumps it generates.  To work around this, a “dummy”
    IWAD file containing an empty +TEXTURE1+ lump is contained inside
    the +dummy+ directory.

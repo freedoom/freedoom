@@ -1,0 +1,15 @@
+# Freedoom isn't really C, but we need to specify a language:
+language: c
+compiler: gcc
+
+# These are the build-deps from the Debian Freedoom package:
+addons:
+    apt:
+        packages:
+        - deutex
+        - gsfonts
+        - imagemagick
+        - python
+
+script: make
+
