@@ -77,14 +77,14 @@ par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
 # Text shown on startup in Boom-compatible ports. This is all in
 # STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
-GOTARMOR = picked up a lite energy vest.
-GOTMEGA = picked up a full shield vest.
+GOTARMOR = picked up a light armor vest.
+GOTMEGA = picked up a heavy armor vest.
 GOTHTHBONUS = found a vitality boost.
 GOTARMBONUS = used a shield charge.
 GOTSTIM = picked up a small health pack.
 GOTMEDINEED = found a large health pack, just in time!
 GOTMEDIKIT = picked up a large health pack.
-GOTSUPER = you got the vitality drive!
+GOTSUPER = you got the vitality totem!
 GOTBLUECARD = picked up a blue passcard.
 GOTYELWCARD = picked up a yellow passcard.
 GOTREDCARD = picked up a red passcard.
@@ -93,11 +93,11 @@ GOTYELWSKUL = picked up a yellow skeleton key.
 GOTREDSKULL = picked up a red skeleton key.
 GOTINVUL = you are untouchable!
 GOTBERSERK = punch 'em to death!
-GOTINVIS = you got the stealth drive!
+GOTINVIS = you got the stealth totem!
 GOTSUIT = picked up a hazard suit.
-GOTMAP = got the architecture device.
+GOTMAP = got the tactical survey map.
 GOTVISOR = got the night vision goggles.
-GOTMSPHERE = you got the ultimate drive!
+GOTMSPHERE = you got the ultimate totem!
 GOTCLIP = picked up an ammo clip.
 GOTCLIPBOX = picked up a box of ammo.
 GOTROCKET = picked up a missile.
