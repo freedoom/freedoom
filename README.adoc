@@ -162,7 +162,7 @@ features.
 It is sensible to also heed the following guidelines:
 
   * Make sure that skill levels are implemented, and that all
-    multiplayer start points, both coöperative and deathmatch, are
+    multiplayer start points, both cooperative and deathmatch, are
     present.
   * Try to make levels appropriately difficult for their position
     within the progression of the game.  Also bear in mind that not
