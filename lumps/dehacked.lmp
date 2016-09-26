@@ -77,14 +77,14 @@ par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
 # Text shown on startup in Boom-compatible ports. This is all in
 # STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
-GOTARMOR = picked up a lite energy vest.
-GOTMEGA = picked up a full shield vest.
-GOTHTHBONUS = found a vitality boost.
-GOTARMBONUS = used a shield charge.
+GOTARMOR = picked up a light armor vest.
+GOTMEGA = picked up a heavy armor vest.
+GOTHTHBONUS = got a health boost.
+GOTARMBONUS = got an armor charge.
 GOTSTIM = picked up a small health pack.
 GOTMEDINEED = found a large health pack, just in time!
 GOTMEDIKIT = picked up a large health pack.
-GOTSUPER = you got the vitality drive!
+GOTSUPER = you got the vitality core!
 GOTBLUECARD = picked up a blue passcard.
 GOTYELWCARD = picked up a yellow passcard.
 GOTREDCARD = picked up a red passcard.
@@ -93,11 +93,11 @@ GOTYELWSKUL = picked up a yellow skeleton key.
 GOTREDSKULL = picked up a red skeleton key.
 GOTINVUL = you are untouchable!
 GOTBERSERK = punch 'em to death!
-GOTINVIS = you got the stealth drive!
+GOTINVIS = you got the stealth core!
 GOTSUIT = picked up a hazard suit.
-GOTMAP = got the architecture device.
+GOTMAP = got the tactical survey map.
 GOTVISOR = got the night vision goggles.
-GOTMSPHERE = you got the ultimate drive!
+GOTMSPHERE = you got the ultimate core!
 GOTCLIP = picked up an ammo clip.
 GOTCLIPBOX = picked up a box of ammo.
 GOTROCKET = picked up a missile.
@@ -496,7 +496,7 @@ OB_WOLFSS=%o met a Sailor.
 OB_MPFIST=%k punched %o to death.
 OB_MPCHAINSAW=%o was shredded by %k's angle grinder.
 OB_MPPISTOL=%o was tickled by %k's handgun.
-OB_MPSHOTGUN=%o chewed on %k's boomstick.
+OB_MPSHOTGUN=%o tried to escape %k's shotgun.
 OB_MPSSHOTGUN=%k swapped two barrels upside %o's head.
 OB_MPCHAINGUN=%o was perforated by %k's minigun.
 OB_MPROCKET=%o was mutilated by %k's missile.
