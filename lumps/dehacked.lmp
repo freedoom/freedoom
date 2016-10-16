@@ -77,14 +77,14 @@ par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
 # Text shown on startup in Boom-compatible ports. This is all in
 # STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
-GOTARMOR = picked up a lite energy vest.
-GOTMEGA = picked up a full shield vest.
-GOTHTHBONUS = found a vitality boost.
-GOTARMBONUS = used a shield charge.
+GOTARMOR = picked up a light armor vest.
+GOTMEGA = picked up a heavy armor vest.
+GOTHTHBONUS = got a 1% health bonus.
+GOTARMBONUS = got a 1% armor bonus.
 GOTSTIM = picked up a small health pack.
 GOTMEDINEED = found a large health pack, just in time!
 GOTMEDIKIT = picked up a large health pack.
-GOTSUPER = you got the vitality drive!
+GOTSUPER = you got the overdrive sphere!
 GOTBLUECARD = picked up a blue passcard.
 GOTYELWCARD = picked up a yellow passcard.
 GOTREDCARD = picked up a red passcard.
@@ -97,7 +97,7 @@ GOTINVIS = you got the stealth drive!
 GOTSUIT = picked up a hazard suit.
 GOTMAP = got the architecture device.
 GOTVISOR = got the night vision goggles.
-GOTMSPHERE = you got the ultimate drive!
+GOTMSPHERE = you got the ultra-overdrive sphere!
 GOTCLIP = picked up an ammo clip.
 GOTCLIPBOX = picked up a box of ammo.
 GOTROCKET = picked up a missile.
@@ -173,13 +173,13 @@ CC_DEMON = flesh worm
 CC_LOST = deadflare
 CC_CACO = orb monster
 CC_HELL = pain bringer
-CC_BARON = pain lord 
+CC_BARON = pain lord
 CC_ARACH = technospider
 CC_PAIN = deadflare ball
 CC_REVEN = dark soldier
 CC_MANCU = combat slug
 CC_ARCH = flame bringer
-CC_SPIDER = large technospider 
+CC_SPIDER = large technospider
 CC_CYBER = assault tripod
 CC_HERO = savior of humanity
 HUSTR_1 = MAP01: Hydroelectric Plant
@@ -325,7 +325,7 @@ E1TEXT = This Site is safe now.\n\
         feels wrong. Too simple. They never stopped\n\
         you, only slowed you down. Why?\n\n\
         What were they hiding from you so\n\
-        desperately anyway?\n\n\        
+        desperately anyway?\n\n\
         You step on the teleporter hoping to find\n\
         out right now.
 E2TEXT = The brutes rip themselves apart\n\
@@ -338,7 +338,7 @@ E2TEXT = The brutes rip themselves apart\n\
         the darkness below.\n\n\
         Another portal lies down there.\n\
         And you fall right through it.\n\n\
-        No, it's only the beginning.        
+        No, it's only the beginning.
 E3TEXT = The spider explodes into oblivion.\n\
         The monsters look confused.\n\
         But fuck them. As you kill off the rest of\n\
@@ -346,7 +346,7 @@ E3TEXT = The spider explodes into oblivion.\n\
         And behind it, lies an AGM teleporter\n\n\
        Set for Earth.\n\n\
        Well, at least it's better than here.\n\
-       You step on the teleporter, waiting for that\n\ 
+       You step on the teleporter, waiting for that\n\
       strange feeling of speed and pain.\n\
       Nothing happens. Too much weight.\n\
       You drop all your weapons on the ground\n\
@@ -354,7 +354,7 @@ E3TEXT = The spider explodes into oblivion.\n\
       You feel your body break down\n\
       then reassemble back on Earth...
 E4TEXT = Despite fighting an army of monsters\n\
-         you manage to reach the\n\ 
+         you manage to reach the\n\
          spacecraft by the skin of your teeth.\n\n\
          "Time to get out of here."\n\
          You tell yourself and plump down\n\
@@ -507,4 +507,3 @@ OB_MPBFG_SPLASH=%o couldn't hide from %k's SKAG.
 OB_MPTELEFRAG=%o stood where %k was teleporting.
 OB_RAILGUN=%o was railed by %k.
 OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
-
