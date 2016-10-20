@@ -808,8 +808,8 @@ M_SKULL2	0	-1
 #endif
 #endif
 #ifdef FREEDM
-M_SKULL1 = m_rokt1
-M_SKULL2 = m_rokt2        
+M_SKULL1 = m_rokt1    16     -4
+M_SKULL2 = m_rokt2    16     -4 
 #endif
 M_THERMO	-2	-1
 M_THERMR	0	0
