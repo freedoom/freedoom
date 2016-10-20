@@ -801,15 +801,12 @@ M_RDTHIS	0	0
 M_OPTION	0	0
 M_QUITG	0	0
 M_NGAME	0	0
-#ifdef ULTDOOM
-#ifdef DOOM2
-M_SKULL1	0	-1
-M_SKULL2	0	-1
-#endif
-#endif
 #ifdef FREEDM
 M_SKULL1 = m_rokt1    16     -4
 M_SKULL2 = m_rokt2    16     -4 
+#else 
+M_SKULL1	0	-1
+M_SKULL2	0	-1
 #endif
 M_THERMO	-2	-1
 M_THERMR	0	0
@@ -2828,5 +2825,4 @@ AQF073
 AQF074
 AQF075
 AQF076
-
 
