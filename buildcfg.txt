@@ -177,6 +177,9 @@ FREEDOOM
 ; Big font used by ZDoom-based ports for menu text.
 DBIGFONT
 
+; Widescreen statusbar for ZDoom-based ports
+SBARINFO
+
 #ifdef FREEDM
 DEHACKED = fdm_deh
 ZMAPINFO = fdmmpinf
@@ -638,6 +641,8 @@ AMMNUM7	-1	0
 AMMNUM8	-1	0
 AMMNUM9	-1	0
 STBAR	0	0
+STBARR 0 0
+STBARL 0 0
 STGNUM0	0	0
 STGNUM1	0	0
 STGNUM2	0	0
