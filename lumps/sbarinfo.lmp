@@ -1,3 +1,5 @@
+//This file is used to add widescreen 
+//support to Freedoom's status bar.
 height 32;
 monospacefonts true, "0";
 
@@ -59,8 +61,8 @@ statusbar fullscreen, fullscreenoffsets // ZDoom HUD
 statusbar normal // Freedoom status bar with widescreen enhancements
 {
     drawimage "STBAR", 0, 168;
-	drawimage "STBARL", -120, 168;
-	drawimage "STBARR", 320, 168;
+    drawimage "STBARL", -120, 168;
+    drawimage "STBARR", 320, 168;
     drawimage "STTPRCNT", 90, 171;
     drawimage "STTPRCNT", 221, 171;
     drawnumber 3, HUDFONT_DOOM, untranslated, ammo1, 44, 171;
