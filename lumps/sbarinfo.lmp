@@ -1,4 +1,4 @@
-//This file is used to add widescreen 
+//This file is used to add widescreen
 //support to Freedoom's status bar.
 height 32;
 monospacefonts true, "0";
@@ -38,7 +38,7 @@ statusbar fullscreen, fullscreenoffsets // ZDoom HUD
             }
         }
     }
-    
+
     // no ammo but inventory
     usesammo not
     {
@@ -90,7 +90,7 @@ statusbar normal // Freedoom status bar with widescreen enhancements
     gamemode cooperative, singleplayer
     {
         drawimage "STARMS", 104, 168;
-        drawswitchableimage weaponslot 2, "STGNUM2", "STYSNUM2", 111, 172; 
+        drawswitchableimage weaponslot 2, "STGNUM2", "STYSNUM2", 111, 172;
         drawswitchableimage weaponslot 3, "STGNUM3", "STYSNUM3", 123, 172;
         drawswitchableimage weaponslot 4, "STGNUM4", "STYSNUM4", 135, 172;
         drawswitchableimage weaponslot 5, "STGNUM5", "STYSNUM5", 111, 182;
