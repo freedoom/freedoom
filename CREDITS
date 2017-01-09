@@ -409,9 +409,9 @@ S: dolorous
 E: pooka109@cox.net
 D: sounds
 
-S: catoptromancy
+S: Catoptromancy
 E: catoptromancy@yahoo.com
-D: Levels
+D: levels, playtesting, bugfixes, textures
 
 S: muffins.exe
 D: sounds
@@ -698,8 +698,3 @@ N: Angel C.F.
 E: hexereticdoom@gmail.com
 W: http://www.moddb.com/members/hexereticdoom
 D: sprites
-
-S: Catoptromancy
-E: catoptromancy@yahoo.com
-D: levels, playtesting, bugfixes, textures
-
