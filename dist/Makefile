@@ -7,14 +7,12 @@ icon-freedm:
 	    freedm.png
 
 icon-freedoom1:
-	convert -trim +repage -extent 48x48 -gravity center \
-	    -transparent \#00ffff -background \#00ffff \
-	    ../sprites/playa2a8.gif freedoom1.png
+	convert -resize 64x64 ../graphics/dist/phase1.png \
+	    freedoom1.png
 
 icon-freedoom2:
-	convert -trim +repage -extent 64x64 -gravity center \
-	    -transparent \#00ffff -background \#00ffff \
-	    ../sprites/heada1.gif freedoom2.png
+	convert -resize 64x64 ../graphics/dist/phase2.png \
+	    freedoom2.png
 
 clean:
 	rm -f *.6 *.png freedm.adoc freedoom1.adoc freedoom2.adoc
