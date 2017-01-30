@@ -676,7 +676,7 @@ D: levels
 
 S: LuckyPunk
 E: luckypunk322@gmail.com
-D: sprites 
+D: sprites
 
 S: Blueworrior
 N: Lewis Harvey
@@ -693,8 +693,13 @@ N: Ayub Ahmed
 E: ayubahmed2240@gmail.com
 D: level names/intermission screens/messages
 
-S: Hexereticdoom 
+S: Hexereticdoom
 N: Angel C.F.
 E: hexereticdoom@gmail.com
 W: http://www.moddb.com/members/hexereticdoom
 D: sprites
+
+F: SeventhSentinel
+N: James Hall
+W: http://seventhsentinel.net23.net
+D: player death sounds
