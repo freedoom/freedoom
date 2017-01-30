@@ -2,40 +2,40 @@ N: Colin Phipps
 S: cph
 E: cph@cph.demon.co.uk
 W: http://www.cph.demon.co.uk/
-D: Binary lumps (playpal, colormap etc)
+D: binary lumps (playpal, colormap etc)
 
 N: Julian Aubourg
 S: Julian
 E: julian@doomworld.com
-D: Sprites, Stories, Textures
+D: sprites, stories, textures
 
 S: Captain Mellow
 E: captainmellow@yahoo.com
-D: Textures, Music
+D: textures, music
 
 N: Nick Baker
 S: NightMare
 E: nick@frad.org
-D: Textures
+D: textures
 
 S: Tarin
 E: tarin@paci-fist.net
-D: Textures, Sprites, Website design
+D: textures, sprites, website design, levels
 
 N: Andrew Stine
 S: Linguica
 E: linguica@doomworld.com
-D: Textures
+D: textures
 
 N: Emmanuel Rousseau
 S: GodCells
 E: Emmanuel_Rousseau@uqac.ca
-D: Levels, Sprites
+D: levels, sprites
 
 N: Andrew Bassett
 S: andrewb
 E: orangejuices@icqmail.com
-D: Music
+D: music
 
 S: ravage
 E: dragon_69283@yahoo.com
@@ -55,11 +55,9 @@ D: levels
 
 S: CheapAlert
 S: gargoylol
-E: cheapalert@gmail.com
-D: graphics
-
 S: leileilol
-D: sounds, flats, sprites
+E: cheapalert@gmail.com
+D: graphics, sounds, flats, sprites
 
 N: Michael T. Cole
 S: ShadowRunner
@@ -72,33 +70,33 @@ D: sprites
 
 S: Isle
 E: isle_bot@hotmail.com
-D: Textures
+D: textures
 
 N: Ola Bjorling
 S: Citrus
 E: ukiro@ukiro.com
-D: Textures
+D: textures
 
 S: ZarcyB
 E: korgon_iii@hotmail.com
-D: Textures
+D: textures
 
 S: diluted
 E: shaggs2dope_00@hotmail.com
-D: Textures
+D: textures
 
 S: Espi
 E: esa.repo@phnet.fi
-D: (a lot of) Textures
+D: (a lot of) textures
 
 N: Ralph Vickers
 S: Ralphis
 E: ralphis@slipgate.org
-D: Music
+D: music
 
 S: Sir Fragsalot
 E: bssrpantella@hotmail.com
-D: Stories, Sprites
+D: stories, sprites
 
 N: Jeremy Stepp
 E: jeremystepp@hotmail.com
@@ -122,22 +120,22 @@ S: Amtiskaw
 S: Jon_R
 E: jonr@frad.org
 W: http://destruct.alkali.org/
-D: Textures
+D: textures
 
 N: Richard M. Stallman
 E: rms@gnu.org
 W: http://www.gnu.org/
-D: Thanks go to RMS for letting us use his image for the boss brain :)
+D: for being the final boss!
 
 N: Vincent Fong
 S: Vicious
 E: vincentfong@freecall-uk.co.uk
-D: Musics
+D: musics
 
 N: Toby Collins Jr.
 S: tobester
 E: tobester666@yahoo.com
-D: Music
+D: music
 
 N: Andrew Francis
 S: locust
@@ -146,15 +144,15 @@ D: textures
 
 S: AirRaid
 E: airraid666@yahoo.com
-D: Sprites, Levels, Textures
+D: sprites, levels, textures
 
 S: Jayextee
 E: Jxt@Misery.co.uk
-D: Graphics
+D: graphics, levels
 
 S: Enjay
 E: Enjay001@hotmail.com
-D: Sounds
+D: sounds
 
 N: Jonathan Dowland
 E: jon+Chiew6ye@alcopop.org
@@ -163,16 +161,16 @@ D: Former admin, website, FTP host and nightlies; textures; scripts; levels; hir
 
 S: Malice Rancor
 E: malicerancor@hotmail.com
-D: Sprites
+D: sprites
 
 N: Dale Sells
 S: mmnpsrsoskl
 E: mmnpsrsoskl@hotmail.com
-D: Textures, graphics
+D: textures, graphics
 
 S: Meat_Head
 E: Forbidden_Planet@prodigy.net
-D: Textures
+D: textures
 
 S: kaiser
 E: kaiser@newdoom.com
@@ -180,73 +178,73 @@ D: levels
 
 S: Slayer226
 E: slayer226@hotmail.com
-D: Textures
+D: textures
 
 S: Ebola
 E: ebola_kaell@home.se
-D: Textures, Sprites
+D: textures, sprites
 
 S: Zeurkous
 E: de_zeurkous@zonnet.nl
-D: Sprites, Textures
+D: sprites, textures
 
 N: Fredrik Johansson
 E: fredrik.johansson@gmail.com
 W: http://fredrikj.net/
-D: Textures, Sprites
+D: textures, sprites
 
 S: Lazer
 E: dafshin@mediaone.net
-D: Textures, Levels
+D: textures, levels
 
 N: Steve Dudzik
 S: Lut
 E: toruonda@home.com
-D: Sprites, Levels
+D: sprites, levels
 
 N: Joseph Chang
 E: jchang@optusnet.com.au
-D: Sprites
+D: sprites
 
 S: Csabo
 E: wadedit@marchmail.com
-D: Music
+D: music
 
 S: Draconio
 E: draconio2001@yahoo.com
-D: Sounds
+D: sounds
 
 N: Dave Kiddell
 S: Mewse
 E: umkiddel@cc.umanitoba.ca
 W: http://mewse.alkali.org/
-D: Graphics, Mewse!
+D: graphics, Mewse!
 
 S: Deathmaster213
 E: deathmaster213@hotmail.com
-D: Art/Textures
+D: art/textures
 
 S: Hyena
 E: trwhite@fgbc.org
-D: Sounds, Musics, Sprites, Levels
+D: sounds, musics, sprites, levels
 
 S: Nrkn
 E: nrkn@ihug.co.nz
-D: Textures
+D: textures
 
 N: Tyler Pantella
 S: Pickle Hammer
 E: pickle_hammer@hotmail.com
-D: Musics
+D: musics
 
 N: Alberto Bonis
 S: Saint of Killers
 E: alberto.bonis@libero.it
-D: Sprites/Art
+D: sprites/art
 
 S: GeekMarine
 E: cooljohn@birdmail.com
-D: Sprites, Sounds
+D: sprites, sounds
 
 N: Tom Robinson
 E: tom@alkali.org
@@ -256,115 +254,115 @@ D: A chunk of perl code
 N: Patrick "Amarande" Kalinauskas
 S: Amarande
 E: amarande@gmail.com
-D: Levels
+D: levels
 
 N: Sean Gauthier
 S: Cacodemon Leader
 E: gauthier.home@sympatico.ca
-D: Levels
+D: levels
 
 N: Luke Cama
 S: Spike
 E: spikeycool@hotmail.com
-D: Sounds
+D: sounds
 
 S: Shaviro
 E: maonth@nautrup.com
-D: Textures
+D: textures
 
 S: Nightfang
 E: nightfang@truelights.com
-D: Sprites
+D: sprites
 
 S: MDenham
 E: tathetriam@aol.com
-D: Levels
+D: levels
 
 S: SpinSpyder
 E: blcrowley@hotmail.com
-D: Sprites
+D: sprites
 
 N: Jeremy Elder
 S: SgtCrispy
 E: sha_nigtha@yahoo.com
-D: Sounds, levels
+D: sounds, levels
 
 S: Submerge
 E: submerge_527@hotmail.com
-D: Sounds, Sprites
+D: sounds, sprites
 
 S: Adamizer
 E: adamizer9000@yahoo.com
-D: Sprites
+D: aprites
 
 N: Andrew Apted
 E: ajapted@netspace.net.au
-D: Graphics, Levels, Patches, Sprites
+D: graphics, levels, patches, sprites
 
 S: Zigmund
 E: z_ozwell@hotmail.com
-D: Levels
+D: levels
 
 S: kinkyfriend
 N: Patrick Westermark
 E: kinkyfriend85@hotmail.com
-D: Graphics
+D: graphics
 
 S: Railgunner
 E: pcclassix@the-any-key.com
-D: Sprites, Levels
+D: sprites, levels
 
 S: bastetfurry
 E: bastetfurry@nachtkatzen.de
-D: Levels
+D: levels
 
 S: Lurker
 E: ssjtrunks37@hotmail.com
-D: Levels, Sprites, Sounds
+D: levels, sprites, sounds
 
 S: DarkStalker
 E: darkstalker81@hotmail.com
-D: Textures
+D: textures
 
 S: Scuba Steve
 E: ray_stantz@hotmail.com
-D: Sprites, graphics
+D: sprites, graphics
 
 N: Kim Bach
 S: Torn
 E: Tornthedark@hotmail.com
-D: Levels
+D: levels
 
 N: Mike Watson
 S: Cyb
 E: cyb@frad.org
 W: http://cyb.alkali.org/
-D: Levels, Sprites, Lumps
+D: levels, sprites, lumps
 
 N: Wouter van Oortmerssen
 S: Aardappel
 E: aardappel@planetquake.com
-D: Conceptual Work and realisation
+D: conceptual work and realisation
 
 N: Alex Mao
 S: Arioch
 E: arioch@despayre.org
-D: Long term server hosting
+D: long term server hosting
 
 N: Bill Koch
 S: Bloodshedder
 E: bloodshedder@doomcenter.com
-D: sound effects
+D: sounds
 
 N: Corwin Brence
 S: WildWeasel
 E: wildweasel_lemon@hotmail.com
-D: sound effects
+D: sounds
 
 S: WildMan
 N: Rick Clark
 E: rickclark58@yahoo.com
-D: Levels
+D: levels
 
 S: sargebaldy
 N: Owen Lloyd
@@ -373,16 +371,16 @@ D: levels
 
 N: David Aramant
 E: david_a00@excite.com
-D: Sprites
+D: sprites
 
 S: Silverwyvern
 E: cindymcc@nbnet.nb.ca
-D: Graphics (skies)
+D: graphics (skies)
 
 S: mouse
 S: lilwhitemouse
 E: lilwhitemo@midmaine.com
-D: Sprites
+D: sprites
 
 N: Simon Howard
 S: fraggle
@@ -397,7 +395,7 @@ D: sounds
 N: Jim McDougald
 S: rellik
 E: rellik_jmd@yahoo.com
-D: FreeDM levels + graphics
+D: FreeDM levels, graphics
 
 N: Jason Root
 S: hellbent
@@ -417,7 +415,7 @@ S: muffins.exe
 D: sounds
 
 S: RjY
-D: Levels
+D: levels
 
 N: Claude A Freeman
 S: CSonicGo
@@ -426,41 +424,41 @@ D: sounds
 N: Eric Baker
 E: eabaker@san.rr.com
 S: The Green Herring
-D: Levels
+D: levels
 
 E: hawkwinds_messages@hotmail.com
 H: Hawkwind
-D: Levels
+D: levels
 
 S: acc
-D: Levels
+D: levels
 
 S: Siggi
-D: Levels
+D: levels
 
 N: Miguel Suarez Gomez
 E: thewadsfactorystaff@hotmail.com
 S: Zok
-D: Levels
+D: levels
 
 E: ghostlydeath@gmail.com
 S: GhostlyDeath
-D: Musics, PC Speaker sounds
+D: musics, PC speaker sounds
 
 N: Mark McGill-Smith
 E: isbetterthanyou@hotmail.com
 S: TheMisterCat
-D: Musics
+D: musics
 
 N: Matthew Cibulas
 E: rottking@sbcglobal.net
 S: RottKing
-D: Sounds
+D: sounds
 
 N: Colin Kelly
 E: bankthemighty@gmail.com
 S: bank
-D: Sounds
+D: sounds
 
 N: Delano Cuzzucoli
 E: delano501@gmail.com
@@ -484,8 +482,6 @@ D: sounds
 
 S: Jute
 E: jutemail@gmail.com
-D: music
-
 D: music
 
 N: Wesley D. Johnson
@@ -562,8 +558,10 @@ N: Adrian Cabrera
 E: cancer_kaoru@live.com
 S: raymoohawk
 W: http://raymoohawk.deviantart.com/
-D: sprites F: agaures S: agaures D: sprites
+D: sprites 
 
+S: agaures 
+D: sprites
 
 N: Mikael Haladyn
 E: mikaelhhome@yahoo.dk
@@ -691,7 +689,7 @@ D: level
 
 N: Ayub Ahmed
 E: ayubahmed2240@gmail.com
-D: level names/intermission screens/messages
+D: textures, lumps
 
 S: Hexereticdoom
 N: Angel C.F.
@@ -699,7 +697,37 @@ E: hexereticdoom@gmail.com
 W: http://www.moddb.com/members/hexereticdoom
 D: sprites
 
-F: SeventhSentinel
+S: SeventhSentinel
 N: James Hall
 W: http://seventhsentinel.net23.net
-D: player death sounds
+D: sounds
+
+S: Viscra Maelstrom
+E: doomhunter_175@hotmail.com
+D: musics
+
+S: bytebeats
+E: bytebytebeats@gmail.com
+D: musics
+
+S: KevinHEZ
+N: Kevin Martinez
+E: kevinmss14@gmail.com
+D: musics
+
+S: agenten
+E: wagnerc27@gmail.com
+W: https://twitch.tv/gajmegenten/profile
+D: textures
+
+S: uhbooh
+E: Uhbooh2@hotmail.com
+D: textures
+
+S: pan-te
+D: levels
+
+S: YukiHerz
+N: Gabriel Antonio
+E: gabriel.reinoso.1996@gmail.com
+D: levels
