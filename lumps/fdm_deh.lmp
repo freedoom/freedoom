@@ -75,8 +75,8 @@ par 32 0
 STARTUP5============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 GOTARMOR = picked up a light armor vest.
 GOTMEGA = picked up a heavy armor vest.
-GOTHTHBONUS = got an 1% health bonus.
-GOTARMBONUS = got an 1% armor bonus.
+GOTHTHBONUS = got a 1% health bonus.
+GOTARMBONUS = got a 1% armor bonus.
 GOTSTIM = picked up a small health pack.
 GOTMEDINEED = found a large health pack, just in time!
 GOTMEDIKIT = picked up a large health pack.
@@ -103,7 +103,7 @@ GOTCELLBOX = picked up a large polaric recharge.
 GOTSHELLS = picked up some shotgun shells.
 GOTSHELLBOX = picked up a box of shotgun shells.
 GOTBACKPACK = second backpack!
-GOTBFG9000 = the SKAG 1337 ... time to kick some butt!
+GOTBFG9000 = the SKAG 1337 ... time to kick some ass!
 GOTCHAINGUN = you got the minigun!
 GOTCHAINSAW = you got the angle grinder!
 GOTLAUNCHER = you got the missile launcher!
