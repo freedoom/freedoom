@@ -79,8 +79,8 @@ par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 GOTARMOR = picked up a light armor vest.
 GOTMEGA = picked up a heavy armor vest.
-GOTHTHBONUS = got a 1% health bonus.
-GOTARMBONUS = got a 1% armor bonus.
+GOTHTHBONUS = got an 1% health bonus.
+GOTARMBONUS = got an 1% armor bonus.
 GOTSTIM = picked up a small health pack.
 GOTMEDINEED = found a large health pack, just in time!
 GOTMEDIKIT = picked up a large health pack.
@@ -93,9 +93,9 @@ GOTYELWSKUL = picked up a yellow skeleton key.
 GOTREDSKULL = picked up a red skeleton key.
 GOTINVUL = you are untouchable!
 GOTBERSERK = punch 'em to death!
-GOTINVIS = you got the stealth drive!
+GOTINVIS = you got the stealth sphere!
 GOTSUIT = picked up a hazard suit.
-GOTMAP = got the architecture device.
+GOTMAP = got the tactical survey map.
 GOTVISOR = got the night vision goggles.
 GOTMSPHERE = you got the ultra-overdrive sphere!
 GOTCLIP = picked up an ammo clip.
@@ -107,7 +107,7 @@ GOTCELLBOX = picked up a large polaric recharge.
 GOTSHELLS = picked up some shotgun shells.
 GOTSHELLBOX = picked up a box of shotgun shells.
 GOTBACKPACK = second backpack!
-GOTBFG9000 = the SKAG 1337 ... time to kick some ass!
+GOTBFG9000 = the SKAG 1337 ... time to kick some butt!
 GOTCHAINGUN = you got the minigun!
 GOTCHAINSAW = you got the angle grinder!
 GOTLAUNCHER = you got the missile launcher!
@@ -128,14 +128,14 @@ PD_REDS = this door requires the red skeleton key.
 PD_YELLOWS = this door requires the yellow skeleton key.
 PD_ANY = this door requires any key.
 PD_ALL3 = this door requires all three keys.
-PD_ALL6 = this door requires all six keys and passcards!
-HUSTR_E1M1 = C1M1: Starport
+PD_ALL6 = this door requires all six keys!
+HUSTR_E1M1 = C1M1: Outer Prison
 HUSTR_E1M2 = C1M2: Communications Center
 HUSTR_E1M3 = C1M3: Waste Disposal
 HUSTR_E1M4 = C1M4: Supply Depot
 HUSTR_E1M5 = C1M5: Main Control
 HUSTR_E1M6 = C1M6: Training Facility
-HUSTR_E1M7 = C1M7: Genetics Experimentation
+HUSTR_E1M7 = C1M7: Viral Research
 HUSTR_E1M8 = C1M8: Quarry
 HUSTR_E1M9 = C1M9: Armory
 HUSTR_E2M1 = C2M1: Ruins
@@ -154,7 +154,7 @@ HUSTR_E3M4 = C3M4: Sacrificial Bastion
 HUSTR_E3M5 = C3M5
 HUSTR_E3M6 = C3M6: Igneous Intrusion
 HUSTR_E3M7 = C3M7: No Regrets
-HUSTR_E3M8 = C3M8: The Lair
+HUSTR_E3M8 = C3M8: Ancient Lair
 HUSTR_E3M9 = C3M9: Acquainted With Grief
 HUSTR_E4M1 = C4M1: Maintenance Area
 HUSTR_E4M2 = C4M2: Research Complex
@@ -168,14 +168,14 @@ HUSTR_E4M9 = C4M9: Operations
 CC_ZOMBIE = zombie
 CC_SHOTGUN = shotgun zombie
 CC_HEAVY = minigun zombie
-CC_IMP = serpentide
+CC_IMP = serpentipede
 CC_DEMON = flesh worm
 CC_LOST = deadflare
-CC_CACO = orb monster
+CC_CACO = trilobite
 CC_HELL = pain bringer
 CC_BARON = pain lord
 CC_ARACH = technospider
-CC_PAIN = deadflare ball
+CC_PAIN = summoner
 CC_REVEN = dark soldier
 CC_MANCU = combat slug
 CC_ARCH = flame bringer
@@ -186,7 +186,7 @@ HUSTR_1 = MAP01: Hydroelectric Plant
 HUSTR_2 = MAP02: Filtration Tunnels
 HUSTR_3 = MAP03: Crude Processing Center
 HUSTR_4 = MAP04: Containment Bay
-HUSTR_5 = MAP05: Waste Water Basin
+HUSTR_5 = MAP05: Sludge Burrow
 HUSTR_6 = MAP06: Gamma Labs
 HUSTR_7 = MAP07: Outer Storage Warehouse
 HUSTR_8 = MAP08: Astronomy Complex
@@ -194,26 +194,26 @@ HUSTR_9 = MAP09: Datacenter
 HUSTR_10 = MAP10: Deadly Outlands
 HUSTR_11 = MAP11: Infinite Plain
 HUSTR_12 = MAP12: Railroads
-HUSTR_13 = MAP13: Return to Earth
-HUSTR_14 = MAP14: The Acid Trip
+HUSTR_13 = MAP13: Station Earth
+HUSTR_14 = MAP14: Nuclear Zone
 HUSTR_15 = MAP15: Hostile Takeover
 HUSTR_16 = MAP16: Urban Jungle
-HUSTR_17 = MAP17: The Capitol
+HUSTR_17 = MAP17: City Capitol
 HUSTR_18 = MAP18: Abandoned Monastery
-HUSTR_19 = MAP19: Castle
-HUSTR_20 = MAP20: The Blood Ember Fortress
-HUSTR_21 = MAP21: The Under-Realm
-HUSTR_22 = MAP22: Lava Canyon
+HUSTR_19 = MAP19: Sewage Control
+HUSTR_20 = MAP20: Blood Ember Fortress
+HUSTR_21 = MAP21: Under Realm
+HUSTR_22 = MAP22: Remanasu
 HUSTR_23 = MAP23: Underground Facility
 HUSTR_24 = MAP24: Tertiary Loading Bay
-HUSTR_25 = MAP25: Blood Church
-HUSTR_26 = MAP26: The Depths
+HUSTR_25 = MAP25: Red Works
+HUSTR_26 = MAP26: Dark Depths
 HUSTR_27 = MAP27: Warped Elementality
 HUSTR_28 = MAP28: Grim Redoubt
 HUSTR_29 = MAP29: Last Stand
 HUSTR_30 = MAP30: Jaws of Defeat
-HUSTR_31 = MAP31: Safety in Numbers
-HUSTR_32 = MAP32: Summer Residence
+HUSTR_31 = MAP31: Be Quiet
+HUSTR_32 = MAP32: Not Sure
 PHUSTR_1 = MAP01
 PHUSTR_2 = MAP02
 PHUSTR_3 = MAP03
@@ -317,42 +317,47 @@ NIGHTMARE = this is the highest skill level.\n\
 #HUSTR_TALKTOSELF4
 #HUSTR_TALKTOSELF5
 #HUSTR_MESSAGESENT
-# Temporary end-of-chapter texts. Please replace them.
-E1TEXT = This Site is safe now.\n\
+# End-of-chapter texts. Feel free to improve them.
+E1TEXT = You made it out, alive.\n\
         Sure, everyone's dead, but so are they.\n\
         The monsters that infested this place\n\
-        no longer exist in this reality. But it\n\
-        feels wrong. Too simple. They never stopped\n\
-        you, only slowed you down. Why?\n\n\
-        What were they hiding from you so\n\
-        desperately anyway?\n\n\
-        You step on the teleporter hoping to find\n\
-        out right now.
+        no longer exist in the outpost. But it\n\
+        feels wrong. Too simple. They never\n\
+        stopped you, only slowed you down.\n\
+        Or maybe you're better than what\n\
+        AGM expected from you.\n\
+        Speaking of AGM, you wonder what\n\
+        they did to cause this.\n\n\
+        "What happened here anyway?"\n\
+        With nothing in your way, you jump on\n\
+        the teleporter leading to Military Labs\n\n\
+        hoping to find out.
 E2TEXT = The brutes rip themselves apart\n\
-        as they fall on the soft ground\n\
-        blood leaking.\n\
-        metal burning.\n\
+        as they fall on the soft ground.\n\
+        Blood leaking.\n\
+        Metal burning.\n\
         They're dead. But is it over? No.\n\n\
-        The soil beneath your feet starts to quake.\n\
-        It opens up, swallowing you down into\n\
-        the darkness below.\n\n\
+        The soil beneath your feet starts\n\
+        to quake. It opens up, swallowing\n\
+        you down into the darkness below.\n\n\
         Another portal lies down there.\n\
         And you fall right through it.\n\n\
         No, it's only the beginning.
-E3TEXT = The spider explodes into oblivion.\n\
-        The monsters look confused.\n\
-        But fuck them. As you kill off the rest of\n\
-        the creatures, you see a hidden door.\n\
-        And behind it, lies an AGM teleporter\n\n\
-       Set for Earth.\n\n\
-       Well, at least it's better than here.\n\
-       You step on the teleporter, waiting for that\n\
-      strange feeling of speed and pain.\n\
+E3TEXT = The abomination explodes into\n\
+        oblivion. The monsters lose focus\n\
+        as their leader's corpse degenerates\n\
+        into a pile of nuts and bolts.\n\
+        As you kill them off, you see a\n\
+        hidden door, behind it lies a\n\
+       teleporter set for another facility:\n\n\
+       Double Impact\n\n\
+       "At least it's better than here."\n\
+       You step on the teleporter, waiting for\n\
+      that feeling of disintegration.\n\
       Nothing happens. Too much weight.\n\
-      You drop all your weapons on the ground\n\
-      and step on the platform one more time.\n\
-      You feel your body break down\n\
-      then reassemble back on Earth...
+      You drop all your weapons on\n\
+      the ground and step on the platform\n\
+      one more time.
 E4TEXT = Despite fighting an army of monsters\n\
          you manage to reach the\n\
          spacecraft by the skin of your teeth.\n\n\
@@ -362,73 +367,86 @@ E4TEXT = Despite fighting an army of monsters\n\
          The ship rumbles as she wakes up,\n\
          thrusters warmed up,\n\
          As you lift off, something comes up.\n\n\
-         "What's happening back on Earth?"\n\n\
-         A part of you says you don't want to know.\n\
-        But you're no backstabbing coward.\n\
+         "What's happening back on Earth?"\n\
+         A part of you says you don't want\n\
+        to know, but you're no coward.\n\
         Destination: Earth
 # After MAP06, before MAP07:
-C1TEXT = You've found your way to the complex's\n\
-         outer storage warehouse. You hear growls.\n\
-         A squadron was sent here, judging from the\n\
-         two 4x4 vehicles parked near the gates.\n\n\
-         So where are they?\n\n\
-         Most likely dead. Or turned into monsters.\n\
-         Best to end their misery now than later.\n\
-         You loot the vehicles and open the gates.\n\
-         The lift hums as you enter, lowering down.\n\
-         Planted your feet and checked your weapon.\n\n\
-         Time to go up.
+C1TEXT = You've found your way to the\n\
+         complex's outer storage warehouse.\n\
+         A squadron was sent here, judging\n\
+         from the bodies and guns littered\n\
+         everywhere.\n\n\
+         "Where are they?"\n\
+        Most likely dead. Or turned into\n\
+        monsters. Best to end their misery\n\
+        now than later. The lift lowers down.\n\
+        Planted your feet.\n\n\
+        Checked your weapons.\n\n\
+        Time to go up.
 # After MAP11, before MAP12:
 C2TEXT = You're on the ledge, looking down\n\
-          into the void below. It pulls you inch by\n\
-          inch. But you fight back against the\n\
-         force. Looking back at the city, you\n\
-         know that it's hopeless to save it now.\n\
-         The whole place is yielding to the void.\n\n\
-         As you get near the teleporter, one of\n\
-         the steel bars holding it in place flys off\n\
-        right into the abyss. You don't have much\n\
-        time until the teleporter goes in too.\n\n\
-        You quickly hop on the platform, and feel\n\
-        that tingling sensation of movement.\n\n\
-        But you're not going somewhere\n\
-        familiar. You're going to the source.
+          into the void below. It pulls you\n\
+          inch by inch. Glancing back at\n\
+         the site, you know that it's\n\
+         hopeless to save it now. As\n\
+         you get near the teleporter, one of\n\
+         the steel bars holding it in place\n\
+         flies off right into the abyss.\n\
+        There's no time.\n\n\
+         You quickly hop on the platform\n\
+        and reintegrate at the city.\n\
+        It's been destroyed to the ground.\n\n\
+        Thing's are about to get personal.
 # After MAP20, before MAP21:
 C3TEXT = There is no AGM here. no humans.\n\
-         Just monsters and monsters. And you.\n\
-         This could be the beginning of the end.\n\n\
-         The end of this massacre of mankind.\n\n\
-         No man has ever entered this wasteland.\n\n\
-         This path to the very core of the slaughter.\n\n\
-         Filled with toxicity.\n\n\
+         Just monsters and monsters.\n\
+         And you.\n\
+         This could be the beginning of\n\
+         the end.\n\
+         The end of this massacre of\n\
+         mankind.\n\
+         No man has ever entered this\n\
+         wasteland.\n\
+         This path to the very core of\n\
+         the slaughter.\n\
+         Filled with toxicity.\n\
          Fueled with agony.\n\n\
          And you're going to take it.
 # After MAP30 (endgame text):
-C4TEXT = The gigantic beast becomes unstable.\n\
-        Its final roar echoes throughout the room\n\
-        till it crumples in a billow of smoke and a\n\
-        pool of blood and molten metal.\n\n\
-        A portal opens up, and in it, you see a small\n\
-        town. You jump in, forgetting the past.\n\
+C4TEXT = The evil thing becomes unstable.\n\n\
+        Its final roars echoes throughout the\n\
+        room till it crumples into scrap metal.\n\
+        A portal opens up, and in it, you see a\n\ 
+        small town. You jump in quickly.\n\
         Humanity learned its lesson this time.\n\n\
         Hopefully.\n\n\
         No one will know know who saved them.\n\n\
         No one will know what happened here.\n\n\
         No one will ever find you again.
 # Before MAP31 (secret level #1):
-C5TEXT = You step onto the machine and after a\n\
-         strange flash you find yourself in an\n\
-         old castle. What is this place? Before\n\
-         you can wander further, you hear\n\
-         noises coming towards you.
+C5TEXT = You step onto the machine and\n\
+         after a strange flash you find\n\
+         yourself in a rusty cage.\n\n\
+         "What is this place?"\n\n\
+         Before you can wonder further\n\ 
+         you hear noises behind you.\n\
+         Noises you know you've heard\n\
+         before. You silently bring out\n\
+         your gun, ready to kill.
 # Before MAP32 (secret level #2):
-C6TEXT = You place your hand on the strange\n\
-         yellow column, and hope for the best.\n\n\
-         Only, things got worse\n\
-         for you.\n\n\
+C6TEXT = The world dissipitates around\n\
+         you. You got out of that trap. Only\n\
+         to find yourself inside another.\n\
          As the glow of the teleporter\n\
-         subsides, it looks like you may have\n\
-         made a wrong turn.
+         subsides, it looks like you may\n\
+         have made a wrong turn. Again.\n\
+         "What the - "\n\n\
+         The world comes back to you.\n\
+         The monsters you sought out\n\
+         to kill, raise their weapons,\n\
+         aiming for your head.\n\n\     
+
 #P1TEXT
 #P2TEXT
 #P3TEXT
@@ -462,18 +480,18 @@ C6TEXT = You place your hand on the strange\n\
 OB_STEALTHBABY=%o thought %g saw a Technospider.
 OB_STEALTHVILE=%o thought %g saw a Flame Bringer.
 OB_STEALTHBARON=%o thought %g saw a Pain Lord.
-OB_STEALTHCACO=%o thought %g saw an Orb Monster.
+OB_STEALTHCACO=%o thought %g saw a Trilobite
 OB_STEALTHCHAINGUY=%o thought %g saw a Minigun Zombie.
 OB_STEALTHDEMON=%o thought %g saw a Flesh Worm.
 OB_STEALTHKNIGHT=%o thought %g saw a Pain Bringer.
-OB_STEALTHIMP=%o thought %g saw a Serpentide.
+OB_STEALTHIMP=%o thought %g saw a Serpentipede.
 OB_STEALTHFATSO=%o thought %g saw a Combat Slug.
 OB_STEALTHUNDEAD=%o thought %g saw a Dark Soldier.
 OB_STEALTHSHOTGUY=%o thought %g saw a Shotgun Zombie.
 OB_STEALTHZOMBIE=%o thought %g saw a Zombie.
 OB_UNDEADHIT=%o was punched by a Dark Soldier.
-OB_IMPHIT=%o was slashed by a Serpentide.
-OB_CACOHIT=%o got too close to an Orb Monster.
+OB_IMPHIT=%o was slashed by a Serpentipede.
+OB_CACOHIT=%o got too close to a Trilobite.
 OB_DEMONHIT=%o was bitten by a Flesh Worm.
 OB_SPECTREHIT=%o was eaten by a Stealth Worm.
 OB_BARONHIT=%o was torn open by a Pain Lord.
@@ -486,7 +504,7 @@ OB_FATSO=%o was blasted by a Combat Slug.
 OB_CHAINGUY=%o was perforated by a Minigun Zombie.
 OB_SKULL=%o was slammed by a Deadflare.
 OB_IMP=%o was burned by a Serpentide.
-OB_CACO=%o was smitten by an Orb Monster.
+OB_CACO=%o was smitten by a Trilobite.
 OB_BARON=%o was bruised by a Pain Lord.
 OB_KNIGHT=%o was splayed by a Pain Bringer.
 OB_SPIDER=%o stood in awe of the Large Technospider.
