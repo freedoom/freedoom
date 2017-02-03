@@ -152,7 +152,7 @@ It is a goal that future versions of _Freedoom_ will be entirely
 vanilla-compatible, not even allowing expanded limits.  Keeping this
 in mind while mapping may make it easier for your level to be
 preserved.  Levels requiring large amounts of modification to fit into
-vanilla limits may be discarded entirely in favor of a simple map.
+vanilla limits may be discarded entirely in favor of a less complex map.
 
 Levels for _FreeDM_ must strictly be vanilla-compatible, that is, they
 must run in the original +doom2.exe+ engine for DOS and not cause any
