@@ -55,16 +55,16 @@ operating system distribution, it should already be installed into the
 proper location.
 
 If you wish to venture outside of Odamex, beware that _Phase 1_ and
-_Phase 2_ require a Boom-compatible engine, which is thankfully the
-majority of them, but without compatibility, some aspects of the game
-may not run properly.  _FreeDM_, on the other hand, is intended to be
-playable by all variants of the _Doom_ engine.
+_Phase 2_ require a https://doomwiki.org/wiki/Limit_removing[limit
+removing] engine, which is thankfully the majority of them, but
+not all.  _FreeDM_, on the other hand, is intended to be playable by
+all variants of the _Doom_ engine.
 
 Hopefully, your engine of choice should already be capable of running
 _Freedoom_ without extra configuration.  This may not be the case,
 however, if the engine does not recognize any of the filenames for
-Freedoom, and might require manual intervention to make it so.  One of
-the following options should solve it:
+_Freedoom_, and might require manual intervention to make it so.  One
+of the following options should solve it:
 
   * Use the +-iwad+ command line parameter.  For example, to play
     Phase 2, you can enter +-iwad freedoom2.wad+ either at a command
@@ -100,15 +100,15 @@ you see fit, you may redistribute it to anyone without needing to ask
 for permission, you may modify it (provided you keep the license
 intact, see `COPYING`), and you may study it--for example, to see how
 an “IWAD” is built.  To facilitate this, you can get the full source
-code for Freedoom, in this case, in the form of a DeuTex tree.
+code for _Freedoom_, in this case, in the form of a DeuTex tree.
 
 You may read more about free software at the http://www.gnu.org/[GNU]
 and http://www.fsf.org/[Free Software Foundation] websites.
 
 == Contributing to Freedoom
 
-Contributions to Freedoom are always welcome, however there are a few
-guidelines that should be followed:
+Contributions to _Freedoom_ are always welcome, however there are a
+few guidelines that should be followed:
 
 === Intellectual property
 
@@ -143,21 +143,22 @@ The general rules go as follows:
 
 === Levels
 
-Levels for _Phase 1_ and _Phase 2_ should be compatible with Boom
-2.02: a _Doom_-derived engine which is a common ancestor for many
-engines today.  Its extensions are even commonly reimplemented by
-engines which are not descended from Boom.  This means that you may
-exceed the limits of the original _Doom_ and use features introduced
-in Boom.  Do not use features that are not supported by Boom 2.02 and
-compatible engines.  Levels should be in _Doom_'s original format, not
-in “Hexen”-format.
+Levels for _Phase 1_ and _Phase 2_ must be compatible with any limit
+removing engine.  This means that you may exceed the limits of the
+original _Doom_, but do not depend on any additional mapping features.
+Levels should be in _Doom_'s original format, not in “Hexen”-format.
+
+It is a goal that future versions of _Freedoom_ will be entirely
+vanilla-compatible, not even allowing expanded limits.  Keeping this
+in mind while mapping may make it easier for your level to be
+preserved.  Levels requiring large amounts of modification to fit into
+vanilla limits may be discarded entirely in favor of a less complex map.
 
 Levels for _FreeDM_ must strictly be vanilla-compatible, that is, they
 must run in the original +doom2.exe+ engine for DOS and not cause any
 visplane overflows and other such problems in the vanilla engine.
 This ensures the maximum compatibility with all _Doom_-derived
-engines, including those that do not descend from nor support Boom
-features.
+engines.
 
 It is sensible to also heed the following guidelines:
 
@@ -171,24 +172,19 @@ It is sensible to also heed the following guidelines:
     engines, especially those that use hardware accelerated rendering,
     may not render it properly.  Examples of tricks to avoid include
     those used to simulate 3D bridges and “deep water” effects.
-  * Boom removes almost all of the limits on rendering; however, do
-    not make excessively complicated scenes.  It is desirable that
-    Freedoom levels should be playable on low-powered hardware, such
-    as phones and old computers.
-  * For _Phase 1_ and _Phase 2_, try to test in
-    http://www.teamtnt.com/boompubl/boom2.htm[Boom] towards the end of
-    your level creation process, before submission.  Incompatibilities
-    will usually be discovered before a release, but it will help to
-    be sure yourself.  Since using a DOS-compatible operating system
-    is uncommon these days, you may need to use
-    http://www.dosbox.com/[DOSBox] or similar virtual machine software
-    to run Boom.
+  * While unrestricted by limits, do not make excessively complicated
+    scenes.  It is desirable that _Freedoom_ levels should be playable
+    on low-powered hardware, such as phones and old computers.
+  * For _Phase 1_ and _Phase 2_, try to test your levels in
+    http://fabiangreffrath.github.io/crispy-doom[Crispy Doom], which
+    is an engine that is limit removing but does not introduce mapping
+    features to accidentally exploit.
   * For _FreeDM_, while you can test in the original +doom2.exe+
     engine with DOS or an emulator, this original engine is not free
     software and not legally obtainable without _Doom_, in addition to
     the hassle of merely running it.
     http://www.chocolate-doom.org/[Chocolate Doom] is a free software,
-    highly-portable, and strictly-vanilla-compatible engine without
+    highly-portable, and strictly vanilla-compatible engine without
     any extra features for levels, suitable for testing FreeDM.
 
 === Graphics
