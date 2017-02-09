@@ -26,7 +26,7 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-VERSION=$(shell git describe 2>/dev/null || cat VERSION)
+VERSION=$(shell git describe --dirty 2>/dev/null || cat VERSION)
 WADS=wads
 CPP=scripts/simplecpp
 DEUTEX=deutex
