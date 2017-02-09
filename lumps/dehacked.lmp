@@ -348,9 +348,9 @@ E3TEXT = The abomination explodes into\n\
         as their leader's corpse degenerates\n\
         into a pile of nuts and bolts.\n\
         As you kill them off, you see a\n\
-        hidden door, behind it lies a\n\
-       teleporter set for another facility:\n\n\
-       Double Impact\n\n\
+        hidden door. Behind it lies a\n\
+       teleporter set for another facility.\n\
+       It's even worse than this place.\n\n\
        "At least it's better than here."\n\
        You step on the teleporter, waiting for\n\
       that feeling of disintegration.\n\
@@ -440,13 +440,12 @@ C6TEXT = The world dissipitates around\n\
          to find yourself inside another.\n\
          As the glow of the teleporter\n\
          subsides, it looks like you may\n\
-         have made a wrong turn. Again.\n\
+         have made a wrong turn. Again.\n\n\
          "What the - "\n\n\
          The world comes back to you.\n\
          The monsters you sought out\n\
          to kill, raise their weapons,\n\
-         aiming for your head.\n\n\
-
+         aiming for your head.
 #P1TEXT
 #P2TEXT
 #P3TEXT
