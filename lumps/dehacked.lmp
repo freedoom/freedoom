@@ -397,7 +397,7 @@ C2TEXT = You're on the ledge, looking down\n\
          You quickly hop on the platform\n\
         and reintegrate at the city.\n\
         It's been destroyed to the ground.\n\n\
-        Thing's are about to get personal.
+        Things are about to get personal.
 # After MAP20, before MAP21:
 C3TEXT = There is no AGM here. no humans.\n\
          Just monsters and monsters.\n\
@@ -446,7 +446,6 @@ C6TEXT = The world dissipitates around\n\
          The monsters you sought out\n\
          to kill, raise their weapons,\n\
          aiming for your head.\n\n\
-
 #P1TEXT
 #P2TEXT
 #P3TEXT
