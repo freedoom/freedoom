@@ -124,9 +124,6 @@ target=$(DESTDIR)$(prefix)
 %.png:
 	$(MAKE) -C dist icon-$*
 
-# This is bad because it assumes the IWADs will always be defined like
-# this.  I just can't see another way to do it.  Fix later if possible.
-
 install-%: $(WADS)/%.wad %.6 %.png
 	install -d "$(target)$(bindir)"
 	install -m 755 dist/freedoom "$(target)$(bindir)/$*"
