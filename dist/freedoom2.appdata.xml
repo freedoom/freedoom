@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014-2015 Contributors to the Freedoom project -->
-<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+<!-- SPDX-License-Identifier: BSD-3-Clause -->
 
 <component type="desktop">
   <id>freedoom2.desktop</id>

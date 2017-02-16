@@ -2,32 +2,7 @@ Patch File for DeHackEd v3.0
 Doom version = 19
 Patch format = 6
 
-# Copyright (c) Contributors to the Freedoom project. All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are
-# met:
-#
-#   * Redistributions of source code must retain the above copyright
-#     notice, this list of conditions and the following disclaimer.
-#   * Redistributions in binary form must reproduce the above copyright
-#     notice, this list of conditions and the following disclaimer in the
-#     documentation and/or other materials provided with the distribution.
-#   * Neither the name of the freedoom project nor the names of its
-#     contributors may be used to endorse or promote products derived from
-#     this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
-# IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
-# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-# PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
-# OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# SPDX-License-Identifier: BSD-3-Clause
 
 # This is a magic comment recognized by Chocolate Doom, so that the
 # BEX [STRINGS] section below will be parsed:
@@ -40,38 +15,38 @@ Patch format = 6
 # comment. Comment also indicates when the run was done - ideally
 # this should be re-done for every new release. Times are rounded
 # to nearest half-minute.
-par  1   60  # 01:00  - Catoptromancy for v0.8 - 2013/12
-par  2  240  # 04:00  - Catoptromancy for v0.8 - 2013/12
-par  3  390  # 06:30  - Catoptromancy for v0.8 - 2013/12
-par  4  360  # 06:00  - Catoptromancy for v0.8 - 2013/12
-par  5  420  # 07:00  - Catoptromancy for v0.8 - 2013/12
-par  6  360  # 06:00  - Catoptromancy for v0.8 - 2013/12
-par  7  210  # 03:30  - Catoptromancy for v0.8 - 2013/12
-par  8  570  # 09:30  - Catoptromancy for v0.8 - 2013/12
-par  9  690  # 11:30  - Catoptromancy OLD run for v0.7
-par 10   30  # 00:30  - Catoptromancy for v0.8 - 2013/12
-par 11  930  # 15:30  - Catoptromancy for v0.8 - 2013/12
-par 12 1650  # 27:30  - Catoptromancy OLD run for v0.7
-par 13 1740  # 29:00  - Catoptromancy OLD run for v0.7
-par 14  450  # 07:30  - Catoptromancy for v0.8 - 2013/12
-par 15 1200  # 20:00  - Catoptromancy OLD run for v0.7
-par 16  480  # 08:00  - Catoptromancy for v0.8 - 2013/12
-par 17  420  # 07:00  - Catoptromancy for v0.8 - 2013/12
-par 18  420  # 07:00  - Catoptromancy for v0.8 - 2013/12
-par 19  660  # 11:00  - Catoptromancy for v0.8 - 2013/12
-par 20  720  # 12:00  - Catoptromancy for v0.8 - 2013/12
-par 21  750  # 12:30  - Catoptromancy OLD run for v0.7
-par 22 1620  # 27:00  - Catoptromancy for v0.8 - 2013/12
-par 23  120  # 02:00  - Catoptromancy for v0.8 - 2013/12
+par  1   30  # 00:30  - Voros for v0.11 - 2017/02
+par  2   90  # 01:30  - Voros for v0.11 - 2017/02
+par  3  120  # 02:00  - Voros for v0.11 - 2017/02
+par  4  120  # 02:00  - Voros for v0.11 - 2017/02
+par  5  150  # 02:30  - Voros for v0.11 - 2017/02
+par  6  90   # 01:30  - Voros for v0.11 - 2017/02
+par  7  150  # 02:30  - Voros for v0.11 - 2017/02
+par  8  330  # 05:30  - Voros for v0.11 - 2017/02
+par  9  150  # 02:30  - Voros for v0.11 - 2017/02
+par 10  120  # 02:00  - Voros for v0.11 - 2017/02
+par 11  420  # 07:00  - Voros for v0.11 - 2017/02
+par 12  630  # 10:30  - Voros for v0.11 - 2017/02
+par 13  180  # 03:00  - Voros for v0.11 - 2017/02
+par 14  150  # 02:30  - Voros for v0.11 - 2017/02
+par 15  510  # 08:30  - Voros for v0.11 - 2017/02
+par 16  120  # 02:00  - Voros for v0.11 - 2017/02
+par 17  120  # 02:00  - Voros for v0.11 - 2017/02
+par 18  180  # 03:00  - Voros for v0.11 - 2017/02
+par 19  210  # 03:30  - Voros for v0.11 - 2017/02
+par 20  420  # 07:00  - Voros for v0.11 - 2017/02
+par 21  330  # 05:30  - Voros for v0.11 - 2017/02
+par 22  420  # 07:00  - Voros for v0.11 - 2017/02
+par 23  240  # 04:00  - Voros for v0.11 - 2017/02
 par 24  420  # 07:00  - Catoptromancy OLD run for v0.7
-par 25 1440  # 24:00  - Catoptromancy for v0.8 - 2013/12
+par 25  600  # 10:00  - Voros for v0.11 - 2017/02
 par 26  690  # 11:30  - Catoptromancy for v0.8 - 2013/12
-par 27 2910  # 48:30  - Catoptromancy OLD run for v0.7
-par 28 1350  # 22:30  - Catoptromancy OLD run for v0.7
-par 29  600  # 10:00  - Catoptromancy OLD run for v0.7
-par 30  510  # 08:30  - Catoptromancy for v0.8 - 2013/12
-par 31  450  # 07:30  - Catoptromancy for v0.8 - 2013/12
-par 32    0  # 00:00  - Catoptromancy OLD run for v0.7
+par 27  690  # 11:30  - Voros for v0.11 - 2017/02
+par 28  450  # 07:30  - Voros for v0.11 - 2017/02
+par 29  300  # 05:00  - Voros for v0.11 - 2017/02
+par 30   60  # 01:00  - Voros for v0.11 - 2017/02
+par 31   60  # 01:00  - Voros for v0.11 - 2017/02
+par 32  210  # 03:30  - Voros for v0.11 - 2017/02
 
 [STRINGS]
 # Text shown on startup in Boom-compatible ports. This is all in
@@ -397,7 +372,7 @@ C2TEXT = You're on the ledge, looking down\n\
          You quickly hop on the platform\n\
         and reintegrate at the city.\n\
         It's been destroyed to the ground.\n\n\
-        Thing's are about to get personal.
+        Things are about to get personal.
 # After MAP20, before MAP21:
 C3TEXT = There is no AGM here. no humans.\n\
          Just monsters and monsters.\n\
@@ -446,7 +421,6 @@ C6TEXT = The world dissipitates around\n\
          The monsters you sought out\n\
          to kill, raise their weapons,\n\
          aiming for your head.\n\n\
-
 #P1TEXT
 #P2TEXT
 #P3TEXT

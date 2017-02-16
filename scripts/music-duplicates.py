@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# SPDX-License-Identifier: BSD-3-Clause
 #
 # Find duplicated music tracks and create a summary report of music
 # that the project needs.
