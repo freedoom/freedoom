@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: BSD-3-Clause
+#
 # Generate comparison MIDI file.
 #
 # The comparison MIDI is used for testing and tweaking the similarity

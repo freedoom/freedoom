@@ -37,8 +37,8 @@ else available with the engine of choice.
 COPYRIGHT
 ---------
 Freedoom is licensed under a permissive three-clause BSD license.  For
-details, see the source tree or any +COPYING+/+COPYRIGHT+ file that
-may have been installed by distribution packaging.
+details, see the source tree or the +COPYING+/+COPYRIGHT+ file that
+was installed by distribution packaging.
 
 This manual page and the launcher script are both placed under the
 public domain.

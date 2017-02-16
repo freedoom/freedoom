@@ -7,4 +7,3 @@ containing a single character.
 The script generates the image by invoking ImageMagick to composite the
 character graphics together. ImageMagick is therefore a dependency,
 although the Python wrapper for ImageMagick is not used.
-
