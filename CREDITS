@@ -415,6 +415,8 @@ S: muffins.exe
 D: sounds
 
 S: RjY
+E: rjy@users.sourceforge.net
+W: http://rjy.org.uk/
 D: levels
 
 N: Claude A Freeman
@@ -427,7 +429,7 @@ S: The Green Herring
 D: levels
 
 E: hawkwinds_messages@hotmail.com
-H: Hawkwind
+S: Hawkwind
 D: levels
 
 S: acc
@@ -532,6 +534,7 @@ S: horncomposer
 D: genmidi instruments
 
 S: BaronOfStuff
+W: https://www.youtube.com/user/BaronOfStuff
 D: sprites
 
 N: Josef Šustek
@@ -560,7 +563,8 @@ S: raymoohawk
 W: http://raymoohawk.deviantart.com/
 D: sprites 
 
-S: agaures 
+S: agaures  
+E: zalsorarakia@gmail.com
 D: sprites
 
 N: Mikael Haladyn
@@ -687,6 +691,7 @@ E: sajber@sajber.info
 W: http://sajber.info
 D: level
 
+S: Voros
 N: Ayub Ahmed
 E: ayubahmed2240@gmail.com
 D: textures, lumps
@@ -729,6 +734,7 @@ E: gabriel.reinoso.1996@gmail.com
 D: levels
 
 S: JudgeDeadd
+E: korodzik@lavabit.com
 D: level names
 
 S: DragonMorpheus
