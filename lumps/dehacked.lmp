@@ -40,7 +40,7 @@ par 22  420  # 07:00  - Voros for v0.11 - 2017/02
 par 23  240  # 04:00  - Voros for v0.11 - 2017/02
 par 24  420  # 07:00  - Catoptromancy OLD run for v0.7
 par 25  600  # 10:00  - Voros for v0.11 - 2017/02
-par 26  690  # 11:30  - Catoptromancy for v0.8 - 2013/12
+par 26  270  # 04:30  - Voros for v0.11 - 2017/02
 par 27  690  # 11:30  - Voros for v0.11 - 2017/02
 par 28  450  # 07:30  - Voros for v0.11 - 2017/02
 par 29  300  # 05:00  - Voros for v0.11 - 2017/02
@@ -415,12 +415,12 @@ C6TEXT = The world dissipitates around\n\
          to find yourself inside another.\n\
          As the glow of the teleporter\n\
          subsides, it looks like you may\n\
-         have made a wrong turn. Again.\n\
-         "What the - "\n\n\
+         have made a wrong turn. Again.\n\n\
+         "What the - "\n\
          The world comes back to you.\n\
          The monsters you sought out\n\
          to kill, raise their weapons,\n\
-         aiming for your head.\n\n\
+         aiming for your head.
 #P1TEXT
 #P2TEXT
 #P3TEXT
