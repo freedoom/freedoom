@@ -3,5 +3,5 @@ ultramid.ini : gen-ultramid config.py stats.py
 	cp $@ ../dmxgus.lmp
 
 clean:
-	rm -f ultramid.ini *.pyc
+	rm -f ultramid.ini ../dmxgus.lmp *.pyc
 	rm -fr __pycache__

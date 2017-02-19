@@ -3,7 +3,6 @@ playpal.lmp: playpal-base.lmp playpal.py
 	cp playpal.lmp ../
 
 clean:
-	rm -f playpal.lmp
+	rm -f playpal.lmp ../playpal.lmp
 
 .PHONY: clean
-
