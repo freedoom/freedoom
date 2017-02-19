@@ -77,12 +77,18 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 
 doc: $(patsubst %.adoc,%.html,$(wildcard *.adoc))
 
-DISTDOCS=COPYING CREDITS README.html
+COPYING.txt: COPYING.adoc
+	unix2dos --add-bom --newfile $< $@
+
+CREDITS.txt: CREDITS
+	unix2dos --add-bom --newfile $< $@
+
+DISTDOCS=COPYING.txt CREDITS.txt README.html
 
 .PHONY: dist
 
 # Due to convoluted reasons, the WADs must directly proceed the game name.
-dist: $(OBJS) README.html
+dist: $(OBJS) COPYING.txt CREDITS.txt README.html
 	VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
 	VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
 
@@ -96,6 +102,7 @@ endif
 
 clean:
 	rm -f	*.html deutex.log $(OBJS) \
+		./COPYING.txt ./CREDITS.txt \
 		./wadinfo.txt ./wadinfo_phase1.txt \
 		./wadinfo_phase2.txt ./wadinfo_freedm.txt \
 		./lumps/freedoom.lmp \

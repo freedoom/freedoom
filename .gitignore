@@ -1,4 +1,6 @@
 *.html
+/COPYING.txt
+/CREDITS.txt
 deutex.log
 graphics/titlepic/fd?title.gif
 graphics/titlepic/m_*.gif
