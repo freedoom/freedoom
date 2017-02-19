@@ -19,6 +19,7 @@ fdmtitle.gif: ../captainw/fdmtitle.gif
 	cp $@ ../
 
 clean:
-	rm -f m_dm.gif m_doom.gif fd1title.gif fd2title.gif fdmtitle.gif
+	rm -f m_dm.gif m_doom.gif fd1title.gif fd2title.gif fdmtitle.gif \
+	      ../fd1title.gif ../fd2title.gif ../fdmtitle.gif
 
 .PHONY: clean
