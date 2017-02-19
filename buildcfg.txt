@@ -190,17 +190,6 @@ DEMO4 = demo4_p1
 
 #endif /* #ifdef DOOM2 */
 
-; boom colormaps
-
-C_START
-BLOODMAP
-BLUEMAP
-LAVAMAP
-NUKEMAP
-FOGMAP
-MFADEMAP
-C_END
-
 ; Textures:
 
 #ifndef DOOM2
