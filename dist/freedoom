@@ -4,7 +4,7 @@
 # advanced users with many ports installed will invoke their preferred
 # one directly rather than depend on this script...
 
-PORTS="boom doom odamex prboom-plus prboom eternity gzdoom zdoom chocolate-doom"
+PORTS="doom odamex crispy-doom prboom-plus eternity gzdoom chocolate-doom"
 
 # Just a single argument starting the command is allowed, -p, in order
 # to explicitly set a port on the command line. -- is also supported
