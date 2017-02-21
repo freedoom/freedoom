@@ -171,8 +171,10 @@ wivctms.gif:
 	cp $@ ../
 
 clean:
-	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif \
-	    helptext.png helptext2.png graphics.stamp *.pyc \
-	    credtext.png credtext2.png credit.gif \
-	    dmwilv*.gif  wikilrs.gif   wivctms.gif wikilrs_horiz.png
+	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif helptext.png	\
+	    helptext2.png graphics.stamp *.pyc credtext.png		\
+	    credtext2.png credit.gif dmwilv*.gif wikilrs.gif		\
+	    wivctms.gif wikilrs_horiz.png ../credit.gif ../help.gif	\
+	    ../wikilrs.gif ../wivctms.gif
+	for graphic in $(TEXTGEN_GRAPHICS); do rm -f ../$$graphic; done
 	rm -fr __pycache__

@@ -77,12 +77,18 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 
 doc: $(patsubst %.adoc,%.html,$(wildcard *.adoc))
 
-DISTDOCS=COPYING CREDITS README.html
+COPYING.txt: COPYING.adoc
+	unix2dos --add-bom --newfile $< $@
+
+CREDITS.txt: CREDITS
+	unix2dos --add-bom --newfile $< $@
+
+DISTDOCS=COPYING.txt CREDITS.txt README.html
 
 .PHONY: dist
 
 # Due to convoluted reasons, the WADs must directly proceed the game name.
-dist: $(OBJS) README.html
+dist: $(OBJS) COPYING.txt CREDITS.txt README.html
 	VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
 	VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
 
@@ -96,6 +102,7 @@ endif
 
 clean:
 	rm -f	*.html deutex.log $(OBJS) \
+		./COPYING.txt ./CREDITS.txt \
 		./wadinfo.txt ./wadinfo_phase1.txt \
 		./wadinfo_phase2.txt ./wadinfo_freedm.txt \
 		./lumps/freedoom.lmp \
@@ -125,18 +132,12 @@ target=$(DESTDIR)$(prefix)
 	$(MAKE) -C dist icon-$*
 
 install-%: $(WADS)/%.wad %.6 %.png
-	install -d "$(target)$(bindir)"
-	install -m 755 dist/freedoom "$(target)$(bindir)/$*"
-	install -d "$(target)$(mandir)/man6"
-	install -m 644 dist/$*.6 "$(target)$(mandir)/man6"
-	install -d "$(target)$(waddir)"
-	install -m 644 $(WADS)/$*.wad "$(target)$(waddir)"
-	install -d "$(target)/share/applications"
-	install -m 644 dist/$*.desktop "$(target)/share/applications"
-	install -d "$(target)/share/appdata"
-	install -m 644 dist/$*.appdata.xml "$(target)/share/appdata"
-	install -d "$(target)/share/icons"
-	install -m 644 dist/$*.png "$(target)/share/icons/$*.png"
+	install -Dm 755 dist/freedoom "$(target)$(bindir)/$*"
+	install -Dm 644 dist/$*.6 -t "$(target)$(mandir)/man6"
+	install -Dm 644 $(WADS)/$*.wad -t "$(target)$(waddir)"
+	install -Dm 644 dist/$*.desktop -t "$(target)/share/applications"
+	install -Dm 644 dist/$*.appdata.xml -t "$(target)/share/appdata"
+	install -Dm 644 dist/$*.png -t "$(target)/share/icons"
 
 uninstall-%:
 	rm "$(target)$(bindir)/$*"

@@ -42,4 +42,6 @@ clean:
 	      phase1/texture2.lmp                                         \
 	      phase1/pnames.lmp   phase2/pnames.lmp   freedm/pnames.lmp   \
 	      phase1/pnames.txt   phase2/pnames.txt   freedm/pnames.txt
-
+	rm -f ../fd1txtr1.lmp ../fd1txtr2.lmp ../fd1pname.lmp \
+	      ../fd2txtr1.lmp ../fd2pname.lmp                 \
+	      ../fdmtxtr1.lmp ../fdmpname.lmp

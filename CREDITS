@@ -524,6 +524,7 @@ E: xindage@gmail.com
 D: levels, textures
 
 S: Mithran Denizen
+E: jlebl755@mtroyal.ca
 D: sprites
 
 S: Z86
@@ -629,7 +630,6 @@ D: sprites
 S: mazmon
 N: Maz Hades
 E: mazhades@yahoo.com
-W: http://mazmon7734.deviantart.com/
 D: sprites
 
 S: jaws_in_space
@@ -746,3 +746,8 @@ D: level names
 N: Edgar Muniz Berlinck
 E: edgar.vv@gmail.com
 D: Appstream XML files
+
+S: Gentlepoke
+E: doom@gpoke.com
+W: http://gpoke.com/
+D: level names
