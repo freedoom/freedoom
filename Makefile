@@ -89,8 +89,8 @@ DISTDOCS=COPYING.txt CREDITS.txt README.html
 
 # Due to convoluted reasons, the WADs must directly proceed the game name.
 dist: $(OBJS) COPYING.txt CREDITS.txt README.html
-	VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
-	VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
+	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
+	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
 
 json: $(OBJS)
 ifndef JSON
