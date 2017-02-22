@@ -132,18 +132,12 @@ target=$(DESTDIR)$(prefix)
 	$(MAKE) -C dist icon-$*
 
 install-%: $(WADS)/%.wad %.6 %.png
-	install -d "$(target)$(bindir)"
-	install -m 755 dist/freedoom "$(target)$(bindir)/$*"
-	install -d "$(target)$(mandir)/man6"
-	install -m 644 dist/$*.6 "$(target)$(mandir)/man6"
-	install -d "$(target)$(waddir)"
-	install -m 644 $(WADS)/$*.wad "$(target)$(waddir)"
-	install -d "$(target)/share/applications"
-	install -m 644 dist/$*.desktop "$(target)/share/applications"
-	install -d "$(target)/share/appdata"
-	install -m 644 dist/$*.appdata.xml "$(target)/share/appdata"
-	install -d "$(target)/share/icons"
-	install -m 644 dist/$*.png "$(target)/share/icons/$*.png"
+	install -Dm 755 dist/freedoom "$(target)$(bindir)/$*"
+	install -Dm 644 dist/$*.6 -t "$(target)$(mandir)/man6"
+	install -Dm 644 $(WADS)/$*.wad -t "$(target)$(waddir)"
+	install -Dm 644 dist/$*.desktop -t "$(target)/share/applications"
+	install -Dm 644 dist/$*.appdata.xml -t "$(target)/share/appdata"
+	install -Dm 644 dist/$*.png -t "$(target)/share/icons"
 
 uninstall-%:
 	rm "$(target)$(bindir)/$*"
