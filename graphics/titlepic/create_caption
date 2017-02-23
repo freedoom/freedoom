@@ -32,11 +32,10 @@ draw_with_footer() {
 if [ $# = 4 ]; then
 	draw_with_footer "$1" "$4"                                          \
 	  -gravity north                                                    \
-	  -draw "image over -6,2 0,0 '$2'"                                  \
+	  -draw "image over 0,18 0,0 '$2'"                                  \
 	  -pointsize 20                                                     \
 	    -draw "fill black stroke-width 4 stroke black text -5,160 '$3'" \
 	    -draw "text -5,160 '$3'"
 else
 	draw_with_footer "$1" "$2"
 fi
-
