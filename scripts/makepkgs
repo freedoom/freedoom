@@ -34,14 +34,14 @@ full_path = path + "/" + base_dir
 
 # Create directory and add files
 
-run_command("mkdir %s" % full_path)
+run_command("mkdir {}".format(full_path))
 for file in FILES:
-    run_command("cp %s %s" % (file, full_path))
+    run_command("cp {} {}".format(file, full_path))
 
 orig_dir = os.getcwd()
 
 os.chdir(path)
-run_command("rm -f %s.zip" % base_dir)
-run_command("zip -r %s.zip %s" % (base_dir, base_dir))
-run_command("rm -rf %s" % base_dir)
+run_command("rm -f {}.zip".format(base_dir))
+run_command("zip -X {0}.zip {0} {0}/*".format(base_dir))
+run_command("rm -rf {}".format(base_dir))
 os.chdir(orig_dir)

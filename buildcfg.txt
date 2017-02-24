@@ -9,7 +9,7 @@
 ; -DSHAREWARE to build for shareware doom
 ;
 
-; sanity checks: 
+; sanity checks:
 
 #ifdef FREEDM
 #define DOOM2
@@ -569,14 +569,14 @@ D_ULTIMA = D_DM32
 
 #ifdef ULTDOOM
 TITLEPIC 0 0          = fd1title
-M_DOOM   24 -18
+M_DOOM   13 -16
 #else
 #ifdef FREEDM
 TITLEPIC 0 0          = fdmtitle
 M_DOOM   40 -5        = m_dm
 #else
 TITLEPIC 0 0          = fd2title
-M_DOOM   24 -18
+M_DOOM   13 -16
 #endif
 #endif
 
@@ -766,8 +766,8 @@ M_QUITG	0	0
 M_NGAME	0	0
 #ifdef FREEDM
 M_SKULL1 = m_rokt1    16     -4
-M_SKULL2 = m_rokt2    16     -4 
-#else 
+M_SKULL2 = m_rokt2    16     -4
+#else
 M_SKULL1	0	-1
 M_SKULL2	0	-1
 #endif
@@ -1533,7 +1533,7 @@ SSWVH4H6 15 62
 SSWVH5   18 61
 SSWVI0   25 59
 SSWVJ0   28 53
-SSWVK0   26 43 
+SSWVK0   26 43
 SSWVL0   23 22
 SSWVM0   21  7
 SSWVN0   26 66
@@ -2094,12 +2094,12 @@ SKULC8C2        18      39
 SKULC7C3        19      43
 SKULC6C4        16      42
 SKULC5  20      43
-SKULD1  22      44      
+SKULD1  22      44
 SKULD8D2        18      39
 SKULD7D3        19      43
 SKULD6D4        16      42
 SKULD5  20      43
-SKULE1  22      44      
+SKULE1  22      44
 SKULE8E2        18      39
 SKULE7E3        19      43
 SKULE6E4        16      42
@@ -2229,8 +2229,8 @@ MANFB8B2	27	17
 ; These are normal items that appear in both Freedoom and FreeDM.
 
 AMMOA0	14	14
-ARM1A0	15	15
-ARM1B0	15	15
+ARM1A0	15	17
+ARM1B0	15	17
 ARM2A0	15	18
 ARM2B0	15	18
 BAL1A0	8	8
@@ -2592,10 +2592,10 @@ BLOOD2
 BLOOD3
 CEIL1_2
 CEIL1_3
-CEIL3_1 
-CEIL3_2 
+CEIL3_1
+CEIL3_2
 CEIL3_4
-CEIL3_5 
+CEIL3_5
 CEIL3_6
 CEIL4_3
 CEIL5_1
@@ -2735,8 +2735,8 @@ CRATOP1
 CRATOP2
 FLAT19
 MFLR8_2
-;These are Aquatex flats. 
-SWATER1                
+;These are Aquatex flats.
+SWATER1
 SWATER2
 SWATER3
 SWATER4
@@ -2816,4 +2816,3 @@ AQF073
 AQF074
 AQF075
 AQF076
-
