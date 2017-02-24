@@ -2229,8 +2229,8 @@ MANFB8B2	27	17
 ; These are normal items that appear in both Freedoom and FreeDM.
 
 AMMOA0	14	14
-ARM1A0	15	15
-ARM1B0	15	15
+ARM1A0	15	17
+ARM1B0	15	17
 ARM2A0	15	18
 ARM2B0	15	18
 BAL1A0	8	8
