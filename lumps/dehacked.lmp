@@ -77,8 +77,8 @@ GOTCLIP = picked up an ammo clip.
 GOTCLIPBOX = picked up a box of ammo.
 GOTROCKET = picked up a missile.
 GOTROCKBOX = picked up a crate of missiles.
-GOTCELL = picked up a small polaric recharge.
-GOTCELLBOX = picked up a large polaric recharge.
+GOTCELL = picked up a small energy recharge.
+GOTCELLBOX = picked up a large energy recharge.
 GOTSHELLS = picked up some shotgun shells.
 GOTSHELLBOX = picked up a box of shotgun shells.
 GOTBACKPACK = you found a backpack!
@@ -435,16 +435,16 @@ C6TEXT = The world dissipitates around\n\
 #T4TEXT
 #T5TEXT
 #T6TEXT
-#BGFLATE1
-#BGFLATE2
-#BGFLATE3
-#BGFLATE4
-#BGFLAT06
-#BGFLAT11
-#BGFLAT20
-#BGFLAT30
-#BGFLAT15
-#BGFLAT31
+BGFLATE1 = AQF051
+BGFLATE2 = AQF054
+BGFLATE3 = FLAT5_2
+BGFLATE4 = AQF075
+BGFLAT06 = AQF016
+BGFLAT11 = AQF001
+BGFLAT20 = FLAT5_6
+BGFLAT30 = SLIME13
+BGFLAT15 = AQF004
+BGFLAT31 = AQF021
 #BGCASTCALL
 #STARTUP1
 #STARTUP2

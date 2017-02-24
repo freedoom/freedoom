@@ -73,8 +73,8 @@ GOTCLIP = picked up an ammo clip.
 GOTCLIPBOX = picked up a box of ammo.
 GOTROCKET = picked up a missile.
 GOTROCKBOX = picked up a crate of missiles.
-GOTCELL = picked up a small polaric recharge.
-GOTCELLBOX = picked up a large polaric recharge.
+GOTCELL = picked up a small energy recharge.
+GOTCELLBOX = picked up a large energy recharge.
 GOTSHELLS = picked up some shotgun shells.
 GOTSHELLBOX = picked up a box of shotgun shells.
 GOTBACKPACK = you found a backpack!
@@ -345,12 +345,12 @@ C6TEXT = You're playing FreeDM, the Freedoom\n\
 #BGFLATE2
 #BGFLATE3
 #BGFLATE4
-#BGFLAT06
-#BGFLAT11
-#BGFLAT20
-#BGFLAT30
-#BGFLAT15
-#BGFLAT31
+BGFLAT06 = AQF057
+BGFLAT11 = AQF057
+BGFLAT20 = AQF057
+BGFLAT30 = AQF057
+BGFLAT15 = AQF057
+BGFLAT31 = AQF057
 #BGCASTCALL
 #STARTUP1
 #STARTUP2
