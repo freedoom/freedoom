@@ -15,6 +15,33 @@ Patch format = 6
 # comment. Comment also indicates when the run was done - ideally
 # this should be re-done for every new release. Times are rounded
 # to nearest half-minute.
+par  1 1   30  # 00:30 - Voros for v0.12 - 2017/03
+par  1 2  120  # 02:00 - Voros for v0.12 - 2017/03
+par  1 3  150  # 02:30 - Voros for v0.12 - 2017/03
+par  1 4  180  # 03:00 - Voros for v0.12 - 2017/03
+par  1 5  420  # 07:00 - Voros for v0.12 - 2017/03
+par  1 6  390  # 06:30 - Voros for v0.12 - 2017/03
+par  1 7  690  # 11:30 - Voros for v0.12 - 2017/03
+par  1 8   60  # 01:00 - Voros for v0.12 - 2017/03
+par  1 9   30  # 01:30 - Voros for v0.12 - 2017/03
+par  2 1  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 2  150  # 02:30 - Voros for v0.12 - 2017/03
+par  2 3  180  # 03:00 - Voros for v0.12 - 2017/03
+par  2 4  270  # 04:30 - Voros for v0.12 - 2017/03
+par  2 5  300  # 05:00 - Voros for v0.12 - 2017/03
+par  2 6  150  # 02:30 - Voros for v0.12 - 2017/03
+par  2 7  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 8  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 9  360  # 06:00 - Voros for v0.12 - 2017/03
+par  3 1   30  # 00:30 - Voros for v0.12 - 2017/03
+par  3 2  120  # 02:00 - Voros for v0.12 - 2017/03
+par  3 3  240  # 04:00 - Voros for v0.12 - 2017/03
+par  3 4  270  # 04:30 - Voros for v0.12 - 2017/03
+par  3 5    0  # 00:00
+par  3 6  180  # 03:00 - Voros for v0.12 - 2017/03
+par  3 7  300  # 05:00 - Voros for v0.12 - 2017/03
+par  3 8   60  # 01:00 - Voros for v0.12 - 2017/03
+par  3 9  570  # 09:30 - Voros for v0.12 - 2017/03
 par  1   30  # 00:30  - Voros for v0.11 - 2017/02
 par  2   90  # 01:30  - Voros for v0.11 - 2017/02
 par  3  120  # 02:00  - Voros for v0.11 - 2017/02
@@ -111,22 +138,22 @@ HUSTR_E1M4 = C1M4: Supply Depot
 HUSTR_E1M5 = C1M5: Main Control
 HUSTR_E1M6 = C1M6: Training Facility
 HUSTR_E1M7 = C1M7: Transportation Bay
-HUSTR_E1M8 = C1M8: Quarry
+HUSTR_E1M8 = C1M8: Outpost Quarry
 HUSTR_E1M9 = C1M9: Armory
 HUSTR_E2M1 = C2M1: Ruins
 HUSTR_E2M2 = C2M2: Power Plant
 HUSTR_E2M3 = C2M3: Archaelogy Site
 HUSTR_E2M4 = C2M4: Sample Holding Site
 HUSTR_E2M5 = C2M5: Fortress 31
-HUSTR_E2M6 = C2M6: Field Work
+HUSTR_E2M6 = C2M6: Trepidation Site
 HUSTR_E2M7 = C2M7: Quarantine Vessel
 HUSTR_E2M8 = C2M8: Containment Cell
 HUSTR_E2M9 = C2M9: Corruption of Man
 HUSTR_E3M1 = C3M1: Land of the Lost
 HUSTR_E3M2 = C3M2: Infernal Caverns
-HUSTR_E3M3 = C3M3: Forbidden Tunnels
+HUSTR_E3M3 = C3M3: Derelict Temple
 HUSTR_E3M4 = C3M4: Sacrificial Bastion
-HUSTR_E3M5 = C3M5
+HUSTR_E3M5 = C3M5: Oblation Temple
 HUSTR_E3M6 = C3M6: Igneous Intrusion
 HUSTR_E3M7 = C3M7: No Regrets
 HUSTR_E3M8 = C3M8: Ancient Lair
