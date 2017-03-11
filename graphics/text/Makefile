@@ -15,7 +15,7 @@ TEXTGEN_GRAPHIC_LUMPS = \
   m_mess.gif   m_mouse.gif  m_multi.gif  m_player.gif m_serial.gif \
   m_setup.gif  m_sound.gif  m_stat.gif   m_status.gif m_tcpip.gif  \
   m_versen.gif m_video.gif  m_wad.gif    m_wadopt.gif m_weap.gif   \
-  prboom.gif                                                       \
+  prboom.gif   t_phase1.gif t_phase2.gif                           \
   m_ultra.gif  wibp1.gif    wibp2.gif    wibp3.gif    wibp4.gif    \
   wicolon.gif  wienter.gif  wif.gif      wifrgs.gif   wipcnt.gif   \
   wiminus.gif  wimstar.gif  wimstt.gif   wiostf.gif   wiosti.gif   \
