@@ -27,6 +27,6 @@ fdmtitle.gif: ../captainw/fdmtitle.gif
 clean:
 	rm -f m_dm.gif m_doom.gif fd1title.gif fd2title.gif fdmtitle.gif      \
 	      ../fd1title.gif ../fd2title.gif ../fdmtitle.gif ../t_phase1.gif \
-	      t_phase1.gif ../t-phase2.gif t_phase2.gif	      
+	      t_phase1.gif ../t_phase2.gif t_phase2.gif	      
 
 .PHONY: clean
