@@ -75,6 +75,10 @@ blue_graphics = {
 	'm_episod': 'Choose Chapter:',
 	'm_optttl': 'OPTIONS',
 	'm_skill': 'Choose Skill Level:',
+	
+	# These files are for the title screens of Phase 1 and Phase 2
+	't_phase1': 'PHASE 1',
+	't_phase2': 'PHASE 2',
 }
 
 red_graphics = {
