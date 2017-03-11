@@ -34,7 +34,7 @@ if [ $# = 4 ]; then
 	  -gravity north                                                    \
 	  -draw "image over 0,18 0,0 '$2'"                                  \
 	  -gravity south                                                    \
-	    -draw "image over 0,-25 0,0 '$3'"
+	  -draw "image over 0,-25 0,0 '$3'"
 else
 	draw_with_footer "$1" "$2"
 fi
