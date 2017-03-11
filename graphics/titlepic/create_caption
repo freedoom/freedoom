@@ -19,13 +19,13 @@ draw_with_footer() {
 	output_file=$2;
 	shift; shift
 
-	convert $input_file -fill blue -font "$font" +dither -style oblique  \
-	  -pointsize 11                                                      \
-	    -gravity southwest                                               \
-	      -draw "text 5,5 'Freedoom, © 2001-2017'"                       \
-	    -gravity southeast                                               \
-	      -draw "text 10,5 '$VERSION'"                                   \
-	    "$@"                                                             \
+	convert $input_file -fill orange -font "$font" +dither -style oblique  \
+	  -pointsize 11                                                        \
+	    -gravity southwest                                                 \
+	      -draw "text 5,5 'Freedoom, © 2001-2017'"                         \
+	    -gravity southeast                                                 \
+	      -draw "text 10,5 '$VERSION'"                                     \
+	    "$@"                                                               \
 	    $output_file
 }
 
