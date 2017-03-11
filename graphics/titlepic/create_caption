@@ -19,7 +19,7 @@ draw_with_footer() {
 	output_file=$2;
 	shift; shift
 
-	convert $input_file -fill orange -font "$font" +dither -style oblique  \
+	convert $input_file -fill orange -font "$font" +dither                 \
 	  -pointsize 11                                                        \
 	    -gravity southwest                                                 \
 	      -draw "text 5,5 'Freedoom, © 2001-2017'"                         \
@@ -34,7 +34,7 @@ if [ $# = 4 ]; then
 	  -gravity north                                                    \
 	  -draw "image over 0,18 0,0 '$2'"                                  \
 	  -gravity south                                                    \
-	  -draw "image over 0,25 0,0 '$3'"
+	  -draw "image over 0,30 0,0 '$3'"
 else
 	draw_with_footer "$1" "$2"
 fi
