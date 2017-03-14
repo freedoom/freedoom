@@ -19,13 +19,13 @@ draw_with_footer() {
 	output_file=$2;
 	shift; shift
 
-	convert $input_file -fill white -font "$font" +dither     \
-	  -pointsize 11                                           \
-	    -gravity southwest                                    \
-	      -draw "text 5,5 'https://freedoom.github.io/'"      \
-	    -gravity southeast                                    \
-	      -draw "text 10,5 'Version: $VERSION'"               \
-	    "$@"                                                  \
+	convert $input_file -fill orange -font "$font" +dither                 \
+	  -pointsize 11                                                        \
+	    -gravity southwest                                                 \
+	      -draw "text 5,5 'Freedoom, © 2001-2017'"                         \
+	    -gravity southeast                                                 \
+	      -draw "text 10,5 '$VERSION'"                                     \
+	    "$@"                                                               \
 	    $output_file
 }
 
@@ -33,9 +33,8 @@ if [ $# = 4 ]; then
 	draw_with_footer "$1" "$4"                                          \
 	  -gravity north                                                    \
 	  -draw "image over 0,18 0,0 '$2'"                                  \
-	  -pointsize 20                                                     \
-	    -draw "fill black stroke-width 4 stroke black text -5,160 '$3'" \
-	    -draw "text -5,160 '$3'"
+	  -gravity south                                                    \
+	  -draw "image over 0,30 0,0 '$3'"
 else
 	draw_with_footer "$1" "$2"
 fi

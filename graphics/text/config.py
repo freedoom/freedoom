@@ -65,6 +65,10 @@ white_graphics = {
 	'wibp4': 'P4',
 	'wicolon': ':',
 
+	# These files are for the title screens of Phase 1 and Phase 2
+	't_phase1': 'PHASE 1',
+	't_phase2': 'PHASE 2',
+
 	# Note: level names are also included in this dictionary, with
 	# the data added programatically from the DEHACKED lump, see
 	# code below.
@@ -244,4 +248,3 @@ for m in range(32):
 	update_level_name('cwilv%02i' % m, freedoom_bex, 'HUSTR_%i' % (m + 1))
 	# HUSTR_1 => dmwilv00 (from freedm.bex)
 	update_level_name('dmwilv%02i' % m, freedm_bex, 'HUSTR_%i' % (m + 1))
-
