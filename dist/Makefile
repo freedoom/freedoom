@@ -3,7 +3,7 @@ man-%: freedoom.adoc
 	a2x -f manpage $*.adoc
 
 icon-freedm:
-	convert -resize 64x64 ../graphics/captainw/freedm_title2.png \
+	convert -resize 64x64 ../graphics/titlepic/freedm_title2.png \
 	    freedm.png
 
 icon-freedoom1:
