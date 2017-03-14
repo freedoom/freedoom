@@ -14,8 +14,8 @@ fd2title.gif: titlepic.gif m_doom.gif
 	./create_caption titlepic.gif m_doom.gif "Phase 2" $@
 	cp $@ ../
 
-fdmtitle.gif: ../captainw/fdmtitle.gif
-	./create_caption ../captainw/fdmtitle.gif $@
+fdmtitle.gif: freedm_titlepic.gif
+	./create_caption $< $@
 	cp $@ ../
 
 clean:
