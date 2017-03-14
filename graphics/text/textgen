@@ -140,7 +140,7 @@ class Font(object):
 
 	def get_command(self, text, output_filename,
 	                color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
-		"""Get command line to render text to a file
+		"""Get command to render text to a file
 		   with the given background color.
 		"""
 
@@ -159,9 +159,12 @@ class Font(object):
 def generate_graphics(graphics, color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
 	for name, text in sorted(graphics.items()):
 		print("# %s.gif: '%s'" % (name, text))
-		cmd = font.get_command(text, '%s.gif' % name,
+		# write a makefile fragment
+		target = '%s.gif' % name
+		cmd = font.get_command(text, target,
 		                       color=color, bgcolor=bgcolor)
-		invoke_command(cmd)
+		print("%s: %s" % (target, " ".join(sys.argv[1:])))
+		print("\t" + " ".join("'%s'" % i for i in cmd))
 
 def generate_kerning_test():
 	pairs = []
