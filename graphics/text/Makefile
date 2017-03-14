@@ -52,24 +52,27 @@ TEXTGEN_GRAPHIC_LUMPS = \
 TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
   helpttl.gif  freettl.gif
 
-all: $(TEXTGEN_GRAPHICS) help.gif credit.gif wikilrs.gif wivctms.gif
+all: graphics.stamp help.gif credit.gif wikilrs.gif wivctms.gif
 
 # textgen creates multiple outputs, which is awkward to express in
 # make. Use a witness file (graphics.stamp) as suggested in the
 # automake manual: "Handling Tools that Produce Many Outputs"
 
-$(TEXTGEN_GRAPHICS): graphics.stamp
-	@if test -f $@; then :; else \
-	  rm -f graphics.stamp; \
-	  $(MAKE) data.stamp; \
-	fi
+graphics.stamp: textgen.mk $(TEXTGEN_GRAPHICS)
 	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
+	@touch $@
 
-graphics.stamp: config.py fontchars ../../lumps/dehacked.lmp
-	@rm -f graphics.tmp
-	@touch graphics.tmp
-	./textgen
-	@mv graphics.tmp $@
+# Construct a file of Make directives for each text graphic.
+# Each graphic depends on the directives file, so we tell textgen
+# what its name is, as a command line parameter. The directives
+# file depends on textgen's input (config, font, dehacked).
+
+textgen.mk: config.py fontchars ../../lumps/dehacked.lmp
+	./textgen $@ > $@
+
+# Then, include the file of Make directives constructed above.
+
+include textgen.mk
 
 # Generate transparent image containing text for the HELP screen:
 helptext.png: helpttl.gif
@@ -172,7 +175,7 @@ wivctms.gif:
 
 clean:
 	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.gif helptext.png	\
-	    helptext2.png graphics.stamp *.pyc credtext.png		\
+	    helptext2.png graphics.stamp textgen.mk *.pyc credtext.png	\
 	    credtext2.png credit.gif dmwilv*.gif wikilrs.gif		\
 	    wivctms.gif wikilrs_horiz.png ../credit.gif ../help.gif	\
 	    ../wikilrs.gif ../wivctms.gif
