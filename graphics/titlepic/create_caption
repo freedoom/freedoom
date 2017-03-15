@@ -22,7 +22,7 @@ draw_with_footer() {
 	convert $input_file -fill orange -font "$font" +dither                 \
 	  -pointsize 11                                                        \
 	    -gravity southwest                                                 \
-	      -draw "text 5,5 'Freedoom, © 2001-2017'"                         \
+	      -draw "text 5,5 '© 2001-2017'"                                   \
 	    -gravity southeast                                                 \
 	      -draw "text 10,5 '$VERSION'"                                     \
 	    "$@"                                                               \
