@@ -503,7 +503,7 @@ D: levels
 S: Archfile
 D: levels
 
-S: sodaholic
+S: Blastfrog
 E: soliver486@gmail.com
 D: graphics, sprites, sounds
 
@@ -516,6 +516,7 @@ S: nivha
 D: levels
 
 S: hex11
+E: hex11@mail.com
 D: levels
 
 N: Luiz Henrique Gasparin Jerônimo
@@ -755,3 +756,16 @@ D: level names
 S: Heng
 E: heng@deepthought.earth
 D: sprites
+
+S: uhbooh
+E: Uhbooh2@hotmail.com
+D: textures
+
+S: Litrivin
+D: textures
+
+S: jupiter_ex
+N: Matias M. Roldan
+E: ttrgrmmtn@yahoo.com.ar
+D: musics, sounds
+
