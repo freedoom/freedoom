@@ -14,33 +14,14 @@ map MAP30 lookup "HUSTR_30"
 }
 
 // Show no intermissions text between levels.
-cluster 5
-{
-	exittext = ""
-}
+cluster 5 {}
 
-cluster 6
-{
-	exittext = ""
-}
+cluster 6 {}
 
-cluster 7
-{
-	exittext = ""
-}
+cluster 7 {}
 
-cluster 8
-{
-	exittext = ""
-}
+cluster 8 {}
 
-cluster 9
-{
-	exittext = ""
-}
+cluster 9 {}
 
-cluster 10
-{
-	exittext = ""
-}
-
+cluster 10 {}
