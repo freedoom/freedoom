@@ -9,6 +9,7 @@ lumps/cph/misc-lumps/playpal.lmp
 lumps/freedoom.lmp
 lumps/freedm.lmp
 sprites/jond/placeholder/*.gif
+/wad-images/
 /wads/
 wad*.txt
 *.bak
