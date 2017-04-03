@@ -1,0 +1,81 @@
+#!/usr/bin/env python
+
+# image-diff - Generate a diff of two images.
+# by Steven Elliott <selliott512@gmail.com>
+#
+# The images being diff'd are first converted to grey scale. The pixels with
+# brightness above a certain threshold are considered to be on, and the rest
+# off. In the resulting diff image pixel color is based on the following table:
+#
+#   image-1     image-2     diff-out
+#   -------     -------     --------
+#   on          on          white
+#   on          off         red
+#   off         on          blue
+#   off         off         black
+#
+# So blue is added and red is removed.
+#
+# The diff image has smaller dimension of the two images being diffed. If those
+# images have the same dimensions the so will the diff image.
+
+import os
+import sys
+
+# Constants
+
+# Colors that can be adjusted.
+color_both = (255, 255, 255) # white
+color_1    = (255,   0,   0) # red
+color_2    = (0  ,   0, 255) # blue
+color_none = (0  ,   0,   0) # black
+
+# Above this is considered to be white / on / true.
+threshold = 30
+
+# Functions
+
+def open_bw_image(name):
+    image = Image.open(name)
+    return image.convert("L")
+
+def is_on(pixel):
+    return pixel >= threshold
+
+from PIL import Image
+
+if len(sys.argv) != 4:
+    print >> sys.stderr, "Usage: image-diff image-1 image-2 diff-out"
+    sys.exit(1)
+
+name_1 = sys.argv[1]
+name_2 = sys.argv[2]
+out = sys.argv[3]
+
+image_1 = open_bw_image(name_1)
+image_2 = open_bw_image(name_2)
+
+min_width  = min(image_1.size[0], image_2.size[0])
+min_height = min(image_1.size[1], image_2.size[1])
+
+image_out = Image.new("RGB", (min_width, min_height))
+
+pixels_1 = image_1.load()
+pixels_2 = image_2.load()
+pixels_out = image_out.load()
+
+for x in xrange(0, min_width):
+    for y in xrange(0, min_height):
+        p_1_on = is_on(pixels_1[x, y])
+        p_2_on = is_on(pixels_2[x, y])
+        if p_1_on and p_2_on:
+            color = color_both
+        elif p_1_on and (not p_2_on):
+            color = color_1
+        elif (not p_1_on) and p_2_on:
+            color = color_2
+        else:
+            color = color_none
+        pixels_out[x, y] = color
+
+image_out.save(out)

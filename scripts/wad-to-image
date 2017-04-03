@@ -1,0 +1,153 @@
+#!/bin/bash
+
+# wad-to-image - Convert a WAD file to an image file.
+# by Steven Elliott <selliott512@gmail.com>
+#
+# The WAD file is displayed in Yadex, which must be installed, and then
+# "import" is used to capture the image in the Yadex window.
+#
+# The "level-name" argument specifies the Freedoom name for the level, "c1m1",
+# etc. It should match a file in "levels", but without the ".wad" suffix.
+#
+# The "out-dir" argument is where the captured image is stored. It is created
+# if it does not exist.
+#
+# The "wad-path" optional argument is the patch to the WAD file, such as a
+# modified WAD file in the "levels" directory. By default levels in whatever
+# IWAD Yadex has been configured to use is displayed by Yadex.
+#
+# The "out-name" optional argument for the image file created. By default
+# it's the "level-name" argument.
+#
+# Additional arguments may be passed to Yadex via the YADEX_ARGS environment
+# variable. For example, the width and height can be set to 1024x768 by:
+#     YADEX_ARGS="-width 1024 -height 768" wad-to-image ...
+
+# Globals
+
+bname="${0##*/}"
+small_delay=0.1 # Just a bit to avoid spinning in loops.
+
+# Functions
+
+# Clean up anything that would otherwise be left.
+function cleanup()
+{
+    if [[ -n $yadex_pid ]]
+    then
+        kill $yadex_pid
+    fi
+}
+
+# Translate the level name into a traditional Doom name that Yadex understands.
+function translate_name()
+{
+    local level_name="$1"
+
+    local trans_name="${level_name/c/e}"
+    trans_name="${trans_name/dm/map}"
+
+    echo "$trans_name"
+}
+
+# Main
+
+if [[ ($# -lt 2) || ($# -gt 4) ]]
+then
+    echo "Usage: $bname level-name out-dir [wad-path [out-name]]"
+    exit 1
+fi
+level_name="${1,,}" # lower case
+out_dir="$2"
+if [[ $# -ge 3 ]]
+then
+    wad_path="$3"
+else
+    unset wad_path
+fi
+if [[ $# -ge 4 ]]
+then
+    out_name="$4"
+else
+    out_name="$level_name"
+fi
+
+if [[ $level_name =~ ^c ]]
+then
+    game="doom"
+else
+    game="doom2"
+fi
+
+trap cleanup EXIT
+
+if ! mkdir -p "$out_dir"
+then
+    echo "Unable to create directory out-dir \"$out_dir\"." 1>&2
+    exit 1
+fi
+
+trans_name=$(translate_name "$level_name")
+echo "e $trans_name" | yadex -g "$game" $YADEX_ARGS $wad_path > /dev/null &
+yadex_pid=$!
+if [[ -z $yadex_pid ]]
+then
+    echo "Could not get the PID of Yadex." 1>&2
+    exit 1
+fi
+
+unset yadex_win_id
+for ((i=1; i <= 50; i++))
+do
+    sleep $small_delay
+
+    # The "head" is to get the most recent one.
+    yadex_win_id=$(xwininfo -tree -root | grep -w Yadex | head -n 1 | \
+        awk '{print $1}')
+    if [[ -n $yadex_win_id ]]
+    then
+        break
+    fi
+    if ! ps -p $yadex_pid &> /dev/null
+    then    
+        echo "Yadex is not running. It may have failed with an error." 1>&2
+        exit 1
+    fi
+done
+
+if [[ -z $yadex_win_id ]]
+then
+    echo "Unable to find the window ID of Yadex." 1>&2
+    exit 1
+fi
+
+if [[ $yadex_win_id =~ " " ]]
+then
+    echo "The window ID \"$yadex_win_id\" has a space in it." 1>&2
+    exit 1
+fi
+
+out_png="$out_dir/$out_name.png"
+for ((i=1; i <= 50; i++))
+do
+    sleep $small_delay
+
+    if ! import -window "$yadex_win_id" "$out_png"
+    then
+        echo "\"import\" failed to capture \"$out_png\". Trying again." 1>&2
+        continue
+    fi
+
+    if identify "$out_png" | grep -qw 2c
+    then
+        # Only two colors. Probably all black.
+        echo "\"import\" captured a blank image for \"$out_png\". Trying \
+again." 1>&2
+    else
+        # Success. An image with more than two colors.
+        exit 0
+    fi
+done
+
+echo "Failed to capture \"$out_png\" after multiple attempts." 1>&2
+exit 1
