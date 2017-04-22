@@ -146,7 +146,12 @@ MAP32
 PLAYPAL
 COLORMAP
 GENMIDI
+#ifdef ULTDOOM
 FREEDOOM
+#endif
+#ifdef DOOM2
+FREEDOOM
+#endif
 
 ; Big font used by ZDoom-based ports for menu text.
 DBIGFONT
