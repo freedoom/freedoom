@@ -13,34 +13,27 @@ map MAP30 lookup "HUSTR_30"
         music = "$MUSIC_OPENIN"
 }
 
-// Show no intermissions text between levels.
+// Show no intermission between levels.
 cluster 5
 {
-	exittext = ""
 }
 
 cluster 6
 {
-	exittext = ""
 }
 
 cluster 7
 {
-	exittext = ""
 }
 
 cluster 8
 {
-	exittext = ""
 }
 
 cluster 9
 {
-	exittext = ""
 }
 
 cluster 10
 {
-	exittext = ""
 }
-
