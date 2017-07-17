@@ -5,6 +5,4 @@
 *.gif -text
 *.wad -text
 *.wav -text
-*.mus -text
 *.mid -text
-*.midi -text
