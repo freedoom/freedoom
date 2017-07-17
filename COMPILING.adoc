@@ -26,23 +26,16 @@ Building the Freedoom IWADs pretty much simply requires the following:
   * 'Python': Freedoom uses several Python programs in its tree to
     assist with building the IWADs.  Both Python 2.7 and 3.x are fully
     supported.
-  * 'DeuTex' 5.0.0: freedoom now requires Deutex 5.0.0.
-    This version is fairly new, and distributions have not yet had the
-    chance to update their packages.
-    If your distribution does not provide 5.0.0, it
-    is recommended to use Mike Swanson's 
-    https://github.com/Doom-Utils/deutex[repository], the master branch of
-    which includes 5.0.0. You may also make use of the Windows binaries provided
-    on the official release page 
-    https://github.com/Doom-Utils/deutex/releases[here],
-    or the Ubuntu PPA 
-    https://launchpad.net/~nzatkovich/+archive/ubuntu/deutex[here].
+  * 'DeuTex' 5.0: Freedoom depends on features developed in this
+    version of DeuTex and will not build on earlier versions.  It is
+    available at https://github.com/Doom-Utils/deutex in source,
+    Windows binary, and Ubuntu binary formats.  As of July 2017, this
+    version is very recent and may not be widely available in other
+    distribution repositories yet.
 
 All or most of this software should already be available in your
 operating system's software repository, with the likely exception of
-DeuTex, which should be easy enough to build.  Instructions on
-building DeuTex, or any other required program, is out of scope of
-this document.
+DeuTex, which is easy to build.
 
 Building Freedoom
 -----------------
