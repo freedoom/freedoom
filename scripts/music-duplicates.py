@@ -19,7 +19,7 @@ def get_music_tracks():
 	   to a list of game tracks that use that MIDI."""
 	result = {}
 	musics_path = os.path.join(os.path.dirname(sys.argv[0]), '../musics')
-	for mus in glob('%s/*.mus' % musics_path):
+	for mus in glob('%s/*.mid' % musics_path):
 		with open(mus) as f:
 			contents = f.read()
 			m = hashlib.sha1()
@@ -67,7 +67,7 @@ def print_report(title, tracks):
 		return
 	print(title)
 	for track in sorted(tracks):
-		print('\t%s' % track.replace('.mus', '').upper())
+		print('\t%s' % track.replace('.mid', '').upper())
 	print('')
 
 missing_tracks = set(find_missing_tracks(get_music_tracks()))
