@@ -262,11 +262,6 @@ around.  Some of them are listed here.
    “standard” background color of cyan is used instead by providing
    the +-rgb 0 255 255+ command line parameter.
 
- * By default, deutex attempts to convert sound effects to 11,025Hz
-   format.  To keep the existing sample rate of sound effects, the
-   following command line parameters are provided:
-   +-v0 -fullsnd -rate accept+
-
  * deutex does not allow the exact path to the +texture1.txt+ file to
    be specified in the configuration file; this used to be a problem
    but the Freedoom's texture lumps are now built using a custom
