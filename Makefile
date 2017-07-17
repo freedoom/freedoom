@@ -4,7 +4,7 @@ VERSION=$(shell git describe --dirty 2>/dev/null || cat VERSION)
 WADS=wads
 CPP=scripts/simplecpp
 DEUTEX=deutex
-DEUTEX_BASIC_ARGS=-v0 -fullsnd -rate accept -rgb 0 255 255
+DEUTEX_BASIC_ARGS=-v0 -rate accept -rgb 0 255 255
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
 FREEDOOM1=$(WADS)/freedoom1.wad
