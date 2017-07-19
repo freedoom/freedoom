@@ -10,9 +10,9 @@ textgen script (see the textgen/ subdirectory).
 In general, here's a simple guide to most of the contents of this
 directory, based on filename:
 
- * m_*.gif        - Elements of the main menu
- * stcfn*.gif     - Characters used for displaying on-screen messages
+ * m_*.png        - Elements of the main menu
+ * stcfn*.png     - Characters used for displaying on-screen messages
                     seen during gameplay
- * st*.gif        - Elements of the status bar
- * wi*.gif        - Elements of the intermission screens
+ * st*.png        - Elements of the status bar
+ * wi*.png        - Elements of the intermission screens
 

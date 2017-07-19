@@ -1,14 +1,8 @@
 *.html
 /COPYING.txt
 /CREDITS.txt
-deutex.log
-graphics/titlepic/fd?title.gif
-graphics/titlepic/m_*.gif
-lumps/cph/misc-lumps/*map.lmp
-lumps/cph/misc-lumps/playpal.lmp
 lumps/freedoom.lmp
 lumps/freedm.lmp
-sprites/jond/placeholder/*.gif
 /wads/
 wad*.txt
 *.bak

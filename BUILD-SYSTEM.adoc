@@ -258,10 +258,6 @@ directories to generate the WAD:
 deutex is an old tool and has various quirks that must be worked
 around.  Some of them are listed here.
 
- * The default background color for sprites is magenta.  The
-   “standard” background color of cyan is used instead by providing
-   the +-rgb 0 255 255+ command line parameter.
-
  * deutex does not allow the exact path to the +texture1.txt+ file to
    be specified in the configuration file; this used to be a problem
    but the Freedoom's texture lumps are now built using a custom

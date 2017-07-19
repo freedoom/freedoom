@@ -35,7 +35,7 @@ class Font(object):
 		return result
 
 	def get_font_widths(self):
-		charfiles = glob('../stcfn*.gif')
+		charfiles = glob('../stcfn*.png')
 		self.char_widths = {}
 		for c in range(128):
 			filename = self.char_filename(chr(c))
@@ -51,7 +51,7 @@ class Font(object):
 		return self.char_widths[c]
 
 	def char_filename(self, c):
-		return '../stcfn%03d.gif' % (ord(c))
+		return '../stcfn%03d.png' % (ord(c))
 
 	def draw_commands_for_text(self, text, x, y):
 		text = text.upper()

@@ -2,7 +2,6 @@
 * text eol=lf
 
 *.png -text
-*.gif -text
 *.wad -text
 *.wav -text
 *.mid -text

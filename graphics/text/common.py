@@ -9,7 +9,7 @@ CONVERT_COMMAND = 'convert'
 IDENTIFY_COMMAND = 'identify'
 
 # Output from 'identify' looks like this:
-#  fontchars/font033.gif GIF 9x16 9x16+0+0 8-bit sRGB 32c 194B 0.000u 0:00.000
+#  fontchars/font033.png GIF 9x16 9x16+0+0 8-bit sRGB 32c 194B 0.000u 0:00.000
 IDENTIFY_OUTPUT_RE = re.compile(r'(\S+)\s(\S+)\s(\d+)x(\d+)(\+\d+\+\d+)?\s')
 
 # Regexp to identify strings that are all lowercase (can use shorter height)

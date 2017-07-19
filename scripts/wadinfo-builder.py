@@ -72,7 +72,7 @@ def get_dummy_name(section, resource):
 	# to include a dummy lump for these - they can just be removed.
 	# Detect this case and don't use a dummy.
 	if section == 'patches':
-		if os.path.exists('sprites/%s.gif' % resource):
+		if os.path.exists('sprites/%s.png' % resource):
 			return None
 
 	if resource.lower().startswith("demo"):

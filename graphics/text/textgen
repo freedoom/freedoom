@@ -45,7 +45,7 @@ class Font(object):
 		return result
 
 	def get_font_widths(self):
-		charfiles = glob('%s/font*.gif' % self.fontdir)
+		charfiles = glob('%s/font*.png' % self.fontdir)
 		self.char_widths = {}
 		for c in range(128):
 			filename = self.char_filename(chr(c))
@@ -61,7 +61,7 @@ class Font(object):
 		return self.char_widths[c]
 
 	def char_filename(self, c):
-		return '%s/font%03d.gif' % (self.fontdir, ord(c))
+		return '%s/font%03d.png' % (self.fontdir, ord(c))
 
 	def kerning_adjust(self, char_1, char_2):
 		"""Get kerning adjustment for pair of characters.
@@ -158,9 +158,9 @@ class Font(object):
 
 def generate_graphics(graphics, color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
 	for name, text in sorted(graphics.items()):
-		print("# %s.gif: '%s'" % (name, text))
+		print("# %s.png: '%s'" % (name, text))
 		# write a makefile fragment
-		target = '%s.gif' % name
+		target = '%s.png' % name
 		cmd = font.get_command(text, target,
 		                       color=color, bgcolor=bgcolor)
 		print("%s: %s" % (target, " ".join(sys.argv[1:])))
@@ -175,7 +175,7 @@ def generate_kerning_test():
 			if font.kerning_adjust(char1, char2) != 0:
 				pairs.append(char1 + char2)
 
-	cmd = font.get_command(" ".join(pairs), "kerning.gif")
+	cmd = font.get_command(" ".join(pairs), "kerning.png")
 	invoke_command(cmd)
 
 font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
