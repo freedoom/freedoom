@@ -43,9 +43,9 @@ ports” by the community.  There are an overwhelming number of choices
 available, a lengthy list of which is available on the
 http://doomwiki.org/wiki/Source_port[Doom Wiki].
 
-One in particular that is highly recommended by the Freedoom project
-is http://odamex.net/[Odamex].  This engine offers good support for
-both single-player and multiplayer games.
+One in particular that is recommended by the Freedoom project
+is https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom].
+This engine offers good support for both single-player and multiplayer games.
 
 On Windows, you should place _Freedoom_'s data files (those ending
 with +.wad+) alongside the engine (eg, +odamex.exe+).  On Unix-like
@@ -54,7 +54,7 @@ or your home directory.  If _Freedoom_ comes packaged as part of your
 operating system distribution, it should already be installed into the
 proper location.
 
-If you wish to venture outside of Odamex, beware that _Phase 1_ and
+If you wish to venture outside of Crisy Doom, beware that _Phase 1_ and
 _Phase 2_ require a https://doomwiki.org/wiki/Limit_removing[limit
 removing] engine, which is thankfully the majority of them, but
 not all.  _FreeDM_, on the other hand, is intended to be playable by
@@ -176,9 +176,9 @@ It is sensible to also heed the following guidelines:
     scenes.  It is desirable that _Freedoom_ levels should be playable
     on low-powered hardware, such as phones and old computers.
   * For _Phase 1_ and _Phase 2_, try to test your levels in
-    http://fabiangreffrath.github.io/crispy-doom[Crispy Doom], which
-    is an engine that is limit removing but does not introduce mapping
-    features to accidentally exploit.
+    https://forum.drdteam.org/viewtopic.php?f=22&t=7463[ChocoRenderLimits]
+    which is an engine that will help you conform to the limitations
+    of the Doom engine.
   * For _FreeDM_, while you can test in the original +doom2.exe+
     engine with DOS or an emulator, this original engine is not free
     software and not legally obtainable without _Doom_, in addition to
@@ -194,7 +194,7 @@ _Doom_ graphics, as to remain compatible with mods.  Otherwise, levels
 may end up looking like a nightmare in design.  They may be
 thematically different as long as it doesn't clash.
 
-_Doom_ uses a fictional corporation abbreviated as “UAC:” this is
+_Doom_ uses a fictional corporation abbreviated as “UAC” this is
 trademarked by id Software and cannot be used in _Freedoom_.  Instead,
 use the initials “AGM” for _Freedoom_.
 
