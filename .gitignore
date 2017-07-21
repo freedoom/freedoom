@@ -7,3 +7,4 @@ lumps/freedm.lmp
 wad*.txt
 *.bak
 *.pyc
+.DS_Store
