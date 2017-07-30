@@ -18,7 +18,7 @@ COLOR_RED = (0, 100, 100)
 COLOR_WHITE = (0, 0, 0)
 
 # Background color for output files.
-BACKGROUND_COLOR = '#00ffff'
+BACKGROUND_COLOR = None
 
 # Height of font in pixels.
 FONT_HEIGHT = 15

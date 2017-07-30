@@ -4,7 +4,7 @@ VERSION=$(shell git describe --dirty 2>/dev/null || cat VERSION)
 WADS=wads
 CPP=scripts/simplecpp
 DEUTEX=deutex
-DEUTEX_BASIC_ARGS=-v0 -rate accept -rgb 0 255 255
+DEUTEX_BASIC_ARGS=-v0 -rate accept
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 
 FREEDOOM1=$(WADS)/freedoom1.wad
@@ -62,7 +62,7 @@ $(FREEDM): wadinfo_freedm.txt subdirs
 $(FREEDOOM1): wadinfo_phase1.txt subdirs
 	@mkdir -p $(WADS)
 	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase1.txt $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase1.txt $@
 
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
@@ -70,7 +70,7 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs
 $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
 	rm -f $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -lumps -patch -flats -sounds -musics -graphics -sprites -levels -build wadinfo_phase2.txt $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
 
 %.html: %.adoc
 	TZ=UTC asciidoc $<

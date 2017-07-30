@@ -11,7 +11,7 @@ import re
 from common import *
 
 # Background color for output files.
-BACKGROUND_COLOR = '#00ffff'
+BACKGROUND_COLOR = None
 
 # Width of a space character in pixels.
 SPACE_WIDTH = 4
@@ -142,10 +142,12 @@ for xy, string in args['strings']:
 		command_line.extend(smallfont.draw_commands_for_text(
 		    string, xy[0], xy[1]))
 
-command_line.extend((
-	'-background', BACKGROUND_COLOR,
-	'-flatten', args['filename'],
-))
+if BACKGROUND_COLOR is not None:
+	command_line.extend((
+		'-background', BACKGROUND_COLOR,
+		'-flatten'
+		))
 
+command_line.extend((args['filename'],))
 invoke_command(command_line)
 
