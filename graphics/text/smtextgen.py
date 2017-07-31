@@ -72,8 +72,15 @@ class Font(object):
 
 			filename = self.char_filename(c)
 			char_image = Image.open(filename)
-			image.paste(char_image, (x1, y1))
+			char_image.load()
+			self.paste_image(image, char_image, x1, y1)
 			x1 += self.char_width(c)
+
+	def paste_image(self, image, src, x, y):
+		int_image = Image.new("RGBA", image.size, (0, 0, 0, 0))
+		int_image.paste(src, (x, y))
+		image = Image.alpha_composite(image, int_image)
+
 
 def parse_command_line(args):
 	if len(args) < 4 or (len(args) % 2) != 0:
@@ -108,6 +115,7 @@ def parse_command_line(args):
 
 	return result
 
+
 if __name__ == '__main__':
 
 	args = parse_command_line(sys.argv[1:])
@@ -138,7 +146,7 @@ if __name__ == '__main__':
 		if string.startswith('file:'):
 			src_image = Image.open(string[5:])
 			src_image.load()
-			image.paste(src_image, (xy[0], xy[1]))
+			smallfont.paste_image(image, src_image, xy[0], xy[1])
 		else:
 			smallfont.draw_for_text(image, string, xy[0], xy[1])
 

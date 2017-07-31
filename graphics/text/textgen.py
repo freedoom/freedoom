@@ -133,7 +133,9 @@ class Font(object):
 			filename = self.char_filename(c)
 			char_image = Image.open(filename)
 			char_image.load()
-			txt_image.paste(char_image, (x, height - FONT_HEIGHT))
+			int_image = Image.new("RGBA", txt_image.size, (0, 0, 0, 0))
+			int_image.paste(char_image, (x, height - FONT_HEIGHT))
+			txt_image = Image.alpha_composite(txt_image, int_image)
 
 		txt_image = image_tint(txt_image, color)
 		return txt_image
