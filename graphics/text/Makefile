@@ -56,7 +56,7 @@ all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
 
 # Generate the menu and level strings
 text_strings: config.py fontchars ../../lumps/dehacked.lmp
-	python textgen.py
+	python textgen
 	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
 
 # Background for the help screen is a color shifted version of INTERPIC:
@@ -65,8 +65,8 @@ helpbg.png: ../interpic.png
 
 # Generate transparent image containing text for the HELP screen:
 help.png: text_strings helpbg.png
-	python smtextgen.py help.png 320x200        \
-	   -background "helpbg.png"					 \
+	python smtextgen help.png 320x200         \
+	   -background "helpbg.png"                  \
 	   150,5   "file:helpttl.png"                \
 	   10,25   "Weapons"                         \
 	   80,25   "file:../../sprites/shota0.png"   \
@@ -123,14 +123,14 @@ help.png: text_strings helpbg.png
 
 
 credit.png: text_strings helpbg.png credit.txt
-	python smtextgen.py credit.png 320x200        \
-	   -background "helpbg.png"					\
-	   120,5  "file:freettl.png"                \
+	python smtextgen credit.png 320x200        \
+	   -background "helpbg.png"                   \
+	   120,5  "file:freettl.png"                  \
 	   10,30  "include:credit.txt"
 	cp $@ ../
 
 wikilrs_horiz.png:
-	python smtextgen.py $@ 49x7 \
+	python smtextgen $@ 49x7 \
 	    0,0  killers
 
 wikilrs.png: wikilrs_horiz.png
@@ -138,7 +138,7 @@ wikilrs.png: wikilrs_horiz.png
 	cp $@ ../
 
 wivctms.png:
-	python smtextgen.py $@ 54x7 \
+	python smtextgen $@ 54x7 \
 	    0,0  victims
 	cp $@ ../
 
@@ -157,12 +157,12 @@ fdmtitle.png: ../titlepic/freedm_titlepic.png
 	cp $@ ../
 
 clean:
-	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png	\
-	    graphics.stamp *.pyc credtext.png	\
-	    credtext.png credit.png dmwilv*.png wikilrs.png		\
+	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
+	    graphics.stamp *.pyc credtext.png	                    \
+	    credtext.png credit.png dmwilv*.png wikilrs.png		    \
 	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
-	    ../wikilrs.png ../wivctms.png \
-		fd1title.png fd2title.png fdmtitle.png   \
+	    ../wikilrs.png ../wivctms.png                           \
+		fd1title.png fd2title.png fdmtitle.png                  \
 	    ../fd1title.png ../fd2title.png ../fdmtitle.png 
 	for graphic in $(TEXTGEN_GRAPHICS); do rm -f ../$$graphic; done
 	rm -fr __pycache__
