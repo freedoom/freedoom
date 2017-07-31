@@ -12,21 +12,16 @@ import re
 from image_dimensions import *
 from tint import image_tint
 
-# Background color for output files.
-BACKGROUND_COLOR = None
-
-# Width of a space character in pixels.
-SPACE_WIDTH = 4
-
-# Height of the font.
-FONT_HEIGHT = 8
-
-# Regexp to match dimensions/x,y coordinate pair.
 DIMENSION_MATCH_RE = re.compile(r'(\d+)[x,](\d+)')
 
-class Font(object):
+class SmallTextGenerator(object):
 	def __init__(self):
 		self.get_font_widths()
+	# Width of a space character in pixels.
+	SPACE_WIDTH = 4
+	# Height of the font.
+	FONT_HEIGHT = 8
+	# Regexp to match dimensions/x,y coordinate pair.
 
 	def compile_kerning_table(self, kerning_table):
 		"""Given a dictionary of kerning patterns, compile Regexps."""
@@ -57,15 +52,15 @@ class Font(object):
 
 	def draw_for_text(self, image, text, x, y):
 		text = text.upper()
-
+		new_image = image.copy()
 		x1, y1 = x, y
 
 		for c in text:
 			if c == '\n':
-				y1 += FONT_HEIGHT
+				y1 += self.FONT_HEIGHT
 				x1 = x
 			elif c == ' ':
-				x1 += SPACE_WIDTH
+				x1 += self.SPACE_WIDTH
 
 			if c not in self:
 				continue
@@ -73,13 +68,15 @@ class Font(object):
 			filename = self.char_filename(c)
 			char_image = Image.open(filename)
 			char_image.load()
-			self.paste_image(image, char_image, x1, y1)
+			new_image = self.paste_image(new_image, char_image, x1, y1)
 			x1 += self.char_width(c)
+		return new_image
 
 	def paste_image(self, image, src, x, y):
 		int_image = Image.new("RGBA", image.size, (0, 0, 0, 0))
 		int_image.paste(src, (x, y))
-		image = Image.alpha_composite(image, int_image)
+		new_image = Image.alpha_composite(image, int_image)
+		return new_image
 
 
 def parse_command_line(args):
@@ -126,7 +123,7 @@ if __name__ == '__main__':
 		print("  [x,y] [text]")
 		sys.exit(0)
 
-	smallfont = Font()
+	smallfont = SmallTextGenerator()
 
 	if args['background'] is not None:
 		background_image = Image.open(args['background'])
@@ -146,9 +143,9 @@ if __name__ == '__main__':
 		if string.startswith('file:'):
 			src_image = Image.open(string[5:])
 			src_image.load()
-			smallfont.paste_image(image, src_image, xy[0], xy[1])
+			image = smallfont.paste_image(image, src_image, xy[0], xy[1])
 		else:
-			smallfont.draw_for_text(image, string, xy[0], xy[1])
+			image = smallfont.draw_for_text(image, string, xy[0], xy[1])
 
 	if args['background'] is not None:
 		image = Image.alpha_composite(background_image, image)
