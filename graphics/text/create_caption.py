@@ -6,10 +6,10 @@ import os
 
 #create_caption.py <background_image> <title?> <phase?> <outfile>
 
-try:
-    font = ImageFont.truetype("DejaVuSansCondensed-Bold.ttf", 11)
-except IOError:
-    font = ImageFont.load_default()
+#try:
+#    font = ImageFont.truetype("DejaVuSansCondensed-Bold.ttf", 11)
+#except IOError:
+font = ImageFont.load_default()
 
 
 txt1= u"© 2001-2017"
