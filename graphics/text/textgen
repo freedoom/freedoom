@@ -5,30 +5,33 @@
 # Freedoom, by compositing individual font character graphics together.
 #
 
+from PIL import Image
 from glob import glob
 import re
 import sys
 
 from config import *
 from common import *
+from tint import image_tint
 
 # ImageMagick -colorize parameters for colorizing text:
-COLOR_BLUE = (100, 100, 0)
-COLOR_RED = (0, 100, 100)
-COLOR_WHITE = (0, 0, 0)
+COLOR_BLUE = "#000001"
+COLOR_RED = "#010000"
+COLOR_WHITE = None
 
 # Background color for output files.
 BACKGROUND_COLOR = None
 
 # Height of font in pixels.
 FONT_HEIGHT = 15
-FONT_LC_HEIGHT = 15  #12
+FONT_LC_HEIGHT = 15  # 12
 
 # If true, the font only has uppercase characters.
 UPPERCASE_FONT = False
 
 # Width of a space character in pixels.
 SPACE_WIDTH = 7
+
 
 class Font(object):
 	def __init__(self, fontdir, kerning_table={}):
@@ -106,7 +109,14 @@ class Font(object):
 			if c is None:
 				return x
 
-	def _make_command_line(self, text, color):
+	def generate_graphic(self, text, output_filename,
+                      color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
+		"""Get command to render text to a file
+		   with the given background color.
+		"""
+
+		if UPPERCASE_FONT:
+			text = text.upper()
 		"""Command line construction helper, used in render functions"""
 		width = self.text_width(text)
 
@@ -115,56 +125,27 @@ class Font(object):
 		else:
 			height = FONT_HEIGHT
 
-		command_line = [
-			CONVERT_COMMAND,
-			'-size', '%ix%i' % (width, height),
-			'xc:none',
-		]
-
+		txt_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
 		for c, x in self.iterate_char_positions(text):
 			if c is None:
 				break
 
 			filename = self.char_filename(c)
-			command_line.extend([
-				'-draw',
-				'image over %i,%i 0,0 %s' %
-				    (x, height - FONT_HEIGHT, filename)
-			])
+			char_image = Image.open(filename)
+			char_image.load()
+			txt_image.paste(char_image, (x, height - FONT_HEIGHT))
 
-		command_line.extend([
-			'-colorize', '%i,%i,%i,0' % color,
-		])
+		txt_image = image_tint(txt_image, color)
+		txt_image.save(output_filename)
 
-		return command_line
-
-	def get_command(self, text, output_filename,
-	                color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
-		"""Get command to render text to a file
-		   with the given background color.
-		"""
-
-		if UPPERCASE_FONT:
-			text = text.upper()
-		command_line = self._make_command_line(text, color)
-
-		if bgcolor is not None:
-			command_line.extend([
-				'-background', bgcolor, '-flatten'])
-
-		command_line.append(output_filename)
-
-		return command_line
 
 def generate_graphics(graphics, color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
 	for name, text in sorted(graphics.items()):
-		print("# %s.png: '%s'" % (name, text))
 		# write a makefile fragment
 		target = '%s.png' % name
-		cmd = font.get_command(text, target,
-		                       color=color, bgcolor=bgcolor)
-		print("%s: %s" % (target, " ".join(sys.argv[1:])))
-		print("\t" + " ".join("'%s'" % i for i in cmd))
+		font.generate_graphic(text, target,
+                              color=color, bgcolor=bgcolor)
+
 
 def generate_kerning_test():
 	pairs = []
@@ -175,8 +156,8 @@ def generate_kerning_test():
 			if font.kerning_adjust(char1, char2) != 0:
 				pairs.append(char1 + char2)
 
-	cmd = font.get_command(" ".join(pairs), "kerning.png")
-	invoke_command(cmd)
+	cmd = font.generate_graphic(" ".join(pairs), "kerning.png")
+
 
 font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
 
@@ -186,4 +167,3 @@ font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
 generate_graphics(red_graphics, color=COLOR_RED)
 generate_graphics(blue_graphics, color=COLOR_BLUE)
 generate_graphics(white_graphics, color=COLOR_WHITE)
-

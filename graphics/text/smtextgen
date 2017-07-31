@@ -4,11 +4,13 @@
 # Script to generate text graphics using the "small" (HUD) font.
 #
 
+from PIL import Image
 from glob import glob
 import sys
 import re
 
 from common import *
+from tint import image_tint
 
 # Background color for output files.
 BACKGROUND_COLOR = None
@@ -53,9 +55,8 @@ class Font(object):
 	def char_filename(self, c):
 		return '../stcfn%03d.png' % (ord(c))
 
-	def draw_commands_for_text(self, text, x, y):
+	def draw_for_text(self, image, text, x, y):
 		text = text.upper()
-		result = []
 
 		x1, y1 = x, y
 
@@ -70,15 +71,9 @@ class Font(object):
 				continue
 
 			filename = self.char_filename(c)
-			result.extend([
-				'-draw',
-				'image over %i,%i 0,0 "%s"' %
-				    (x1, y1, filename)
-			])
+			char_image = Image.open(filename)
+			image.paste(char_image, (x1, y1))
 			x1 += self.char_width(c)
-
-		return result
-
 
 def parse_command_line(args):
 	if len(args) < 4 or (len(args) % 2) != 0:
@@ -86,6 +81,7 @@ def parse_command_line(args):
 
 	result = {
 		'filename': args[0],
+		'background': None,
 		'strings': [],
 	}
 
@@ -96,6 +92,11 @@ def parse_command_line(args):
 
 	i = 2
 	while i < len(args):
+		if args[i] == '-background':
+			result['background'] = args[i+1]
+			i += 2
+			continue
+
 		m = DIMENSION_MATCH_RE.match(args[i])
 		if not m:
 			return None
@@ -118,36 +119,30 @@ if not args:
 
 smallfont = Font()
 
-command_line = [
-	CONVERT_COMMAND,
-	'-size', '%ix%i' % args['dimensions'],
-	'xc:none',
-]
+if args['background'] is not None:
+	background_image = Image.open(args['background'])
+	background_image.load()
+	background_image = background_image.convert("RGBA")
+
+image = Image.new("RGBA", args['dimensions'],(0,0,0,0))
 
 for xy, string in args['strings']:
 	# Allow contents of a file to be included with special prefix:
-	if string.startswith('include:'):
+	if string.startswith(':'):
 		with open(string[8:]) as f:
 			string = f.read()
 
 	# Allow special notation to indicate an image file to just draw
 	# rather than rendering a string.
 	if string.startswith('file:'):
-		command_line.extend((
-			'-draw',
-			'image over %i,%i 0,0 "%s"' % (
-				xy[0], xy[1], string[5:]),
-		))
+		src_image = Image.open(string[5:])
+		src_image.load()
+		image.paste(src_image, (xy[0], xy[1]))
 	else:
-		command_line.extend(smallfont.draw_commands_for_text(
-		    string, xy[0], xy[1]))
+		smallfont.draw_for_text(image, string, xy[0], xy[1])
 
-if BACKGROUND_COLOR is not None:
-	command_line.extend((
-		'-background', BACKGROUND_COLOR,
-		'-flatten'
-		))
+if args['background'] is not None:
+	image = Image.alpha_composite(background_image, image)
 
-command_line.extend((args['filename'],))
-invoke_command(command_line)
+image.save(args['filename'])
 

@@ -52,31 +52,21 @@ TEXTGEN_GRAPHIC_LUMPS = \
 TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
   helpttl.png  freettl.png
 
-all: graphics.stamp help.png credit.png wikilrs.png wivctms.png
+all: textgen.mk help.png credit.png wikilrs.png wivctms.png
 
-# textgen creates multiple outputs, which is awkward to express in
-# make. Use a witness file (graphics.stamp) as suggested in the
-# automake manual: "Handling Tools that Produce Many Outputs"
-
-graphics.stamp: textgen.mk $(TEXTGEN_GRAPHICS)
-	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
-	@touch $@
-
-# Construct a file of Make directives for each text graphic.
-# Each graphic depends on the directives file, so we tell textgen
-# what its name is, as a command line parameter. The directives
-# file depends on textgen's input (config, font, dehacked).
-
+# Generate the menu and level strings
 textgen.mk: config.py fontchars ../../lumps/dehacked.lmp
-	./textgen $@ > $@
+	./textgen $@
+	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
 
-# Then, include the file of Make directives constructed above.
-
-include textgen.mk
+# Background for the help screen is a color shifted version of INTERPIC:
+helpbg.png: ../interpic.png
+	python tint.py ../interpic.png '#5599ff' helpbg.png
 
 # Generate transparent image containing text for the HELP screen:
-helptext.png: helpttl.png
-	python smtextgen helptext.png 320x200        \
+help.png: helpttl.png helpbg.png
+	python smtextgen help.png 320x200        \
+	   -background "helpbg.png"					 \
 	   150,5   "file:helpttl.png"                \
 	   10,25   "Weapons"                         \
 	   80,25   "file:../../sprites/shota0.png"   \
@@ -129,43 +119,21 @@ helptext.png: helpttl.png
 	   276,162 "file:../../sprites/bskua0.png"   \
 	   130,163 "Hazard suit"                     \
 	   215,142 "file:../../sprites/suita0.png"
-
-# Make background transparent so it can be overlayed.
-helptext2.png : helptext.png
-	convert helptext.png -transparent '#00ffff' helptext2.png
-
-# Background for the help screen is a color shifted version of INTERPIC:
-helpbg.png: ../interpic.png
-	convert ../interpic.png -fill '#5599ff' -tint 100 helpbg.png
-
-# Draw the overlay with text and sprites onto the background to get the
-# HELP screen:
-help.png: helpbg.png helptext2.png
-	convert helpbg.png                              \
-	    -draw 'image over 0,0 0,0 helptext2.png'     \
-	    help.png
 	cp $@ ../
 
-credtext.png: freettl.png credit.txt
-	python smtextgen credtext.png 320x200        \
+
+credit.png: freettl.png helpbg.png credit.txt
+	python smtextgen credit.png 320x200        \
+	   -background "helpbg.png"					\
 	   120,5  "file:freettl.png"                \
 	   10,30  "include:credit.txt"
-
-credtext2.png: credtext.png
-	convert credtext.png -transparent '#00ffff' credtext2.png
-
-credit.png: helpbg.png credtext2.png
-	convert helpbg.png                             \
-	    -draw 'image over 0,0 0,0 credtext2.png'   \
-	    credit.png
-	cp $@ ../
 
 wikilrs_horiz.png:
 	python smtextgen $@ 49x7 \
 	    0,0  killers
 
 wikilrs.png: wikilrs_horiz.png
-	convert wikilrs_horiz.png -rotate 270 $@
+	python rotate.py wikilrs_horiz.png 90 $@
 	cp $@ ../
 
 wivctms.png:
@@ -175,8 +143,8 @@ wivctms.png:
 
 clean:
 	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png helptext.png	\
-	    helptext2.png graphics.stamp textgen.mk *.pyc credtext.png	\
-	    credtext2.png credit.png dmwilv*.png wikilrs.png		\
+	    helptext2.png graphics.stamp *.pyc credtext.png	\
+	    credtext.png credit.png dmwilv*.png wikilrs.png		\
 	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
 	    ../wikilrs.png ../wivctms.png
 	for graphic in $(TEXTGEN_GRAPHICS); do rm -f ../$$graphic; done
