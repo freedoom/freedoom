@@ -16,22 +16,18 @@ Building the Freedoom IWADs pretty much simply requires the following:
     https://www.gnu.org/software/make/[GNU Make] (patches to fix
     portability are most welcome!).  On non-GNU systems, it might be
     available in a package and binary named as 'gmake'.
-  * 'ImageMagick': This is required for generating some of the
-    graphics in Freedoom, including constructing text strings for
-    certain cases (such as the big font in level titles).  Some newer
-    versions of ImageMagick are known to produce
-    https://github.com/freedoom/freedoom/issues/41[strange results] on
-    certain operations, most notably the title screen graphic having
-    funny colors, but nothing major should be wrong.
   * 'Python': Freedoom uses several Python programs in its tree to
     assist with building the IWADs.  Both Python 2.7 and 3.x are fully
     supported.
+  * 'Pillow': A Python image manipulation module that provides the
+    features we need for scaling and composing various graphics of the
+    game.
   * 'DeuTex' 5.0: Freedoom depends on features developed in this
     version of DeuTex and will not build on earlier versions.  It is
-    available at https://github.com/Doom-Utils/deutex in source,
-    Windows binary, and Ubuntu binary formats.  As of July 2017, this
-    version is very recent and may not be widely available in other
-    distribution repositories yet.
+    available at https://github.com/Doom-Utils/deutex in source and
+    Windows binary formats.  As of July 2017, this version is very
+    recent and may not be widely available in Unix distribution
+    repositories yet.
 
 All or most of this software should already be available in your
 operating system's software repository, with the likely exception of
@@ -56,27 +52,19 @@ not GNU and it fails, try `gmake` instead.
 Building on Microsoft Windows
 -----------------------------
 
-Freedoom has normally seen all of its development on Unix-like
-systems, nevertheless some people like to compile Freedoom on Windows.
-This is possible, although complicated by our choice of tooling for
-the project.
+Freedoom has normally seen all of its development on Unix systems,
+nevertheless some people like to compile Freedoom on Windows.  This is
+possible, although complicated by our choice of tooling for the
+project.
 
-It may be possible to use regular Windows versions of all the required
-software, but https://cygwin.com/[Cygwin] is highly recommended to
-recreate the Unix environment on this operating system anyway.  It
-will simplify the process of building Freedoom greatly.  The
-previously-mentioned https://github.com/Doom-Utils/deutex[DeuTex
-repository] will require a C compiler (such as `gcc` or `clang`) to be
-installed in order to build.
+GNU environments for Windows such as https://cygwin.com/[Cygwin],
+http://www.msys2.org/[MSYS2], or
+https://blogs.msdn.microsoft.com/wsl/[WSL] provide sufficient shell
+capabilities to build Freedoom.  The dependencies listed previously
+for Freedoom apply just as well to a Windows environment.
 
-It is important that you install the Cygwin-specific versions of all
-the required software.  Native versions of Make, Python, ImageMagick,
-and DeuTex are not likely to interact well with Cygwin versions of the
-software.
-
-As Cygwin provides a GNU system and interface on top of Windows, its
-command line is (by default) Bash and not `cmd.exe`.  Instructions on
-how to use GNU systems and Bash are out of scope of this document.
+Instructions on how to use a GNU system and shell are out of scope of
+this document.
 
 Optional software
 -----------------
