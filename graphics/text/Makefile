@@ -134,7 +134,7 @@ wikilrs_horiz.png:
 	    0,0  killers
 
 wikilrs.png: wikilrs_horiz.png
-	python rotate.py wikilrs_horiz.png -90 $@
+	python rotate.py wikilrs_horiz.png 270 $@
 	cp $@ ../
 
 wivctms.png:
