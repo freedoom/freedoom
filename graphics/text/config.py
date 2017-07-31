@@ -28,7 +28,7 @@ FONT_KERNING_RULES = {
 	# Left character fits under right character:
 	r'L[TY]': -4,
 	r'L[014COQV]': -3,
-	r'L[O09]': -2,
+	r'L[9]': -2,
 	r'[0O][4TY]': -2,
 	r'[0O][1]': -1,
 	r'Q[1T]': -2,

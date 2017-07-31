@@ -52,31 +52,21 @@ TEXTGEN_GRAPHIC_LUMPS = \
 TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
   helpttl.png  freettl.png
 
-all: graphics.stamp help.png credit.png wikilrs.png wivctms.png
+all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
 
-# textgen creates multiple outputs, which is awkward to express in
-# make. Use a witness file (graphics.stamp) as suggested in the
-# automake manual: "Handling Tools that Produce Many Outputs"
-
-graphics.stamp: textgen.mk $(TEXTGEN_GRAPHICS)
+# Generate the menu and level strings
+text_strings: config.py fontchars ../../lumps/dehacked.lmp
+	python textgen
 	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
-	@touch $@
 
-# Construct a file of Make directives for each text graphic.
-# Each graphic depends on the directives file, so we tell textgen
-# what its name is, as a command line parameter. The directives
-# file depends on textgen's input (config, font, dehacked).
-
-textgen.mk: config.py fontchars ../../lumps/dehacked.lmp
-	./textgen $@ > $@
-
-# Then, include the file of Make directives constructed above.
-
-include textgen.mk
+# Background for the help screen is a color shifted version of INTERPIC:
+helpbg.png: ../interpic.png
+	python tint.py ../interpic.png '#57b9b0' helpbg.png
 
 # Generate transparent image containing text for the HELP screen:
-helptext.png: helpttl.png
-	python smtextgen helptext.png 320x200        \
+help.png: text_strings helpbg.png
+	python smtextgen help.png 320x200         \
+	   -background "helpbg.png"                  \
 	   150,5   "file:helpttl.png"                \
 	   10,25   "Weapons"                         \
 	   80,25   "file:../../sprites/shota0.png"   \
@@ -107,8 +97,8 @@ helptext.png: helpttl.png
 	   128,107 "file:../../sprites/pstra0.png"   \
 	   170,115 "Armor"                           \
 	   220,113 "file:../../sprites/bon2a0.png"   \
-	   240,105 "file:../../sprites/arm1b0.png"   \
-	   280,105 "file:../../sprites/arm2b0.png"   \
+	   240,113 "file:../../sprites/arm1b0.png"   \
+	   280,110 "file:../../sprites/arm2b0.png"   \
 	   145,140 "Map"                             \
 	   175,130 "file:../../sprites/pmapa0.png"   \
 	   10,140  "Overdrive"                       \
@@ -129,35 +119,14 @@ helptext.png: helpttl.png
 	   276,162 "file:../../sprites/bskua0.png"   \
 	   130,163 "Hazard suit"                     \
 	   215,142 "file:../../sprites/suita0.png"
-
-# Make background transparent so it can be overlayed.
-helptext2.png : helptext.png
-	convert helptext.png -transparent '#00ffff' helptext2.png
-
-# Background for the help screen is a color shifted version of INTERPIC:
-helpbg.png: ../interpic.png
-	convert ../interpic.png -fill '#5599ff' -tint 100 helpbg.png
-
-# Draw the overlay with text and sprites onto the background to get the
-# HELP screen:
-help.png: helpbg.png helptext2.png
-	convert helpbg.png                              \
-	    -draw 'image over 0,0 0,0 helptext2.png'     \
-	    help.png
 	cp $@ ../
 
-credtext.png: freettl.png credit.txt
-	python smtextgen credtext.png 320x200        \
-	   120,5  "file:freettl.png"                \
+
+credit.png: text_strings helpbg.png credit.txt
+	python smtextgen credit.png 320x200        \
+	   -background "helpbg.png"                   \
+	   120,5  "file:freettl.png"                  \
 	   10,30  "include:credit.txt"
-
-credtext2.png: credtext.png
-	convert credtext.png -transparent '#00ffff' credtext2.png
-
-credit.png: helpbg.png credtext2.png
-	convert helpbg.png                             \
-	    -draw 'image over 0,0 0,0 credtext2.png'   \
-	    credit.png
 	cp $@ ../
 
 wikilrs_horiz.png:
@@ -165,7 +134,7 @@ wikilrs_horiz.png:
 	    0,0  killers
 
 wikilrs.png: wikilrs_horiz.png
-	convert wikilrs_horiz.png -rotate 270 $@
+	python rotate.py wikilrs_horiz.png 270 $@
 	cp $@ ../
 
 wivctms.png:
@@ -173,11 +142,27 @@ wivctms.png:
 	    0,0  victims
 	cp $@ ../
 
+titlepic: fd1title.png fd2title.png fdmtitle.png
+
+fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png
+	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
+	cp $@ ../
+
+fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png 
+	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
+	cp $@ ../
+
+fdmtitle.png: ../titlepic/freedm_titlepic.png
+	python create_caption.py $< $@
+	cp $@ ../
+
 clean:
-	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png helptext.png	\
-	    helptext2.png graphics.stamp textgen.mk *.pyc credtext.png	\
-	    credtext2.png credit.png dmwilv*.png wikilrs.png		\
+	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
+	    graphics.stamp *.pyc credtext.png	                    \
+	    credtext.png credit.png dmwilv*.png wikilrs.png		    \
 	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
-	    ../wikilrs.png ../wivctms.png
+	    ../wikilrs.png ../wivctms.png                           \
+		fd1title.png fd2title.png fdmtitle.png                  \
+	    ../fd1title.png ../fd2title.png ../fdmtitle.png 
 	for graphic in $(TEXTGEN_GRAPHICS); do rm -f ../$$graphic; done
 	rm -fr __pycache__
