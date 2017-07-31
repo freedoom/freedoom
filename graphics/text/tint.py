@@ -22,9 +22,9 @@ def image_tint(image, tint=None):
 
 	# create look-up tables to map luminosity to adjusted tint
 	# (using floating-point math only to compute table)
-	luts = (map(lambda lr: int(lr * sr + 0.5), range(256)) +
-			map(lambda lg: int(lg * sg + 0.5), range(256)) +
-			map(lambda lb: int(lb * sb + 0.5), range(256)))
+	luts = (tuple(map(lambda lr: int(lr * sr + 0.5), range(256))) +
+			tuple(map(lambda lg: int(lg * sg + 0.5), range(256))) +
+			tuple(map(lambda lb: int(lb * sb + 0.5), range(256))))
 	l = ImageOps.grayscale(image)  # 8-bit luminosity version of whole image
 	if Image.getmodebands(image.mode) < 4:
 		merge_args = (image.mode, (l, l, l))  # for RGB verion of grayscale
@@ -32,7 +32,7 @@ def image_tint(image, tint=None):
 		a = Image.new("L", image.size)
 		a.putdata(image.getdata(3))
 		merge_args = (image.mode, (l, l, l, a))  # for RGBA verion of grayscale
-		luts += range(256)  # for 1:1 mapping of copied alpha values
+		luts += tuple(range(256))  # for 1:1 mapping of copied alpha values
 
 	return Image.merge(*merge_args).point(luts)
 
