@@ -1,18 +1,18 @@
 #!/usr/bin/env python
-# coding=utf-8
+# encoding: utf-8
+# SPDX-License-Identifier: BSD-3-Clause
+
+from __future__ import unicode_literals
 from PIL import Image, ImageFont, ImageDraw
 import sys
 import os
 
 #create_caption.py <background_image> <title?> <phase?> <outfile>
 
-#try:
-#    font = ImageFont.truetype("DejaVuSansCondensed-Bold.ttf", 11)
-#except IOError:
 font = ImageFont.load_default()
 
 
-txt1= u"© 2001-2017"
+txt1= "© 2001-2017"
 txt2= os.environ['VERSION']
 background_image = Image.open(sys.argv[1])
 background_image.load()
