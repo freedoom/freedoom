@@ -9,7 +9,7 @@ import os
 
 img = Image.open(sys.argv[1])
 img.load()
-img2 = img.rotate(int(sys.argv[2]), None, True)
+img2 = img.rotate(int(sys.argv[2]), 0, True)
 img2.crop() 
 if os.path.exists(sys.argv[3]):  # delete any previous result file
 	os.remove(sys.argv[3])
