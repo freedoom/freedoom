@@ -3,18 +3,13 @@ man-%: freedoom.adoc
 	a2x -f manpage $*.adoc
 
 icon-freedm:
-	convert -resize 64x64 ../graphics/titlepic/freedm_title2.png \
-	    freedm.png
+	./pillow-resize ../graphics/titlepic/freedm_title2.png freedm.png 64 64
 
 icon-freedoom1:
-	convert -trim +repage -extent 48x48 -gravity center \
-	    -transparent \#00ffff -background \#00ffff \
-	    ../sprites/playa2a8.png freedoom1.png
+	./pillow-compose ../sprites/playa2a8.png freedoom1.png 64 64
 
 icon-freedoom2:
-	convert -trim +repage -extent 64x64 -gravity center \
-	    -transparent \#00ffff -background \#00ffff \
-	    ../sprites/heada1.png freedoom2.png
+	./pillow-compose ../sprites/heada1.png freedoom2.png 64 64
 
 clean:
 	rm -f *.6 *.png freedm.adoc freedoom1.adoc freedoom2.adoc

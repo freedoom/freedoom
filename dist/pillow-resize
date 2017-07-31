@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+# Simple and dumb Pillow-based resizer
+# Usage: pillow-resize src-img.png dst-img.png WIDTH HEIGHT
+
+import sys
+from PIL import Image
+
+img = Image.open(sys.argv[1])
+img.thumbnail((int(sys.argv[3]), int(sys.argv[4])))
+img.save(sys.argv[2])
