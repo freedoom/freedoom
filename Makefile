@@ -16,8 +16,7 @@ OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 all: $(OBJS)
 
 subdirs:
-	$(MAKE) -C graphics/text
-	$(MAKE) VERSION=$(VERSION) -C graphics/titlepic
+	$(MAKE) VERSION=$(VERSION) -C graphics/text
 	$(MAKE) -C lumps/playpal
 	$(MAKE) -C lumps/colormap
 	$(MAKE) -C lumps/genmidi
@@ -111,7 +110,6 @@ clean:
 
 	$(MAKE) -C dist clean
 	$(MAKE) -C graphics/text clean
-	$(MAKE) -C graphics/titlepic clean
 	$(MAKE) -C lumps/playpal clean
 	$(MAKE) -C lumps/colormap clean
 	$(MAKE) -C lumps/genmidi clean

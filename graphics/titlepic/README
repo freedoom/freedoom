@@ -1,4 +1,2 @@
-This directory contains a shell script that uses ImageMagick to layer
-some text information about the build version onto the game's title
-screen. The same is performed for each of the three IWADs.
-
+This directory contains template images for generating the title screen
+for Freedoom Phase 1, Phase 2, and FreeDM

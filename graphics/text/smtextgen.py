@@ -9,7 +9,7 @@ from glob import glob
 import sys
 import re
 
-from common import *
+from image_dimensions import *
 from tint import image_tint
 
 # Background color for output files.
@@ -108,41 +108,42 @@ def parse_command_line(args):
 
 	return result
 
+if __name__ == '__main__':
 
-args = parse_command_line(sys.argv[1:])
+	args = parse_command_line(sys.argv[1:])
 
-if not args:
-	print("Usage: smtextgen <filename> <size> [...text commands...]")
-	print("Where each text command looks like:")
-	print("  [x,y] [text]")
-	sys.exit(0)
+	if not args:
+		print("Usage: smtextgen <filename> <size> [...text commands...]")
+		print("Where each text command looks like:")
+		print("  [x,y] [text]")
+		sys.exit(0)
 
-smallfont = Font()
+	smallfont = Font()
 
-if args['background'] is not None:
-	background_image = Image.open(args['background'])
-	background_image.load()
-	background_image = background_image.convert("RGBA")
+	if args['background'] is not None:
+		background_image = Image.open(args['background'])
+		background_image.load()
+		background_image = background_image.convert("RGBA")
 
-image = Image.new("RGBA", args['dimensions'],(0,0,0,0))
+	image = Image.new("RGBA", args['dimensions'],(0,0,0,0))
 
-for xy, string in args['strings']:
-	# Allow contents of a file to be included with special prefix:
-	if string.startswith(':'):
-		with open(string[8:]) as f:
-			string = f.read()
+	for xy, string in args['strings']:
+		# Allow contents of a file to be included with special prefix:
+		if string.startswith('include:'):
+			with open(string[8:]) as f:
+				string = f.read()
 
-	# Allow special notation to indicate an image file to just draw
-	# rather than rendering a string.
-	if string.startswith('file:'):
-		src_image = Image.open(string[5:])
-		src_image.load()
-		image.paste(src_image, (xy[0], xy[1]))
-	else:
-		smallfont.draw_for_text(image, string, xy[0], xy[1])
+		# Allow special notation to indicate an image file to just draw
+		# rather than rendering a string.
+		if string.startswith('file:'):
+			src_image = Image.open(string[5:])
+			src_image.load()
+			image.paste(src_image, (xy[0], xy[1]))
+		else:
+			smallfont.draw_for_text(image, string, xy[0], xy[1])
 
-if args['background'] is not None:
-	image = Image.alpha_composite(background_image, image)
+	if args['background'] is not None:
+		image = Image.alpha_composite(background_image, image)
 
-image.save(args['filename'])
+	image.save(args['filename'])
 

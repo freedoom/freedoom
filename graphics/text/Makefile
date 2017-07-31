@@ -52,20 +52,20 @@ TEXTGEN_GRAPHIC_LUMPS = \
 TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
   helpttl.png  freettl.png
 
-all: textgen.mk help.png credit.png wikilrs.png wivctms.png
+all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
 
 # Generate the menu and level strings
-textgen.mk: config.py fontchars ../../lumps/dehacked.lmp
-	./textgen $@
+text_strings: config.py fontchars ../../lumps/dehacked.lmp
+	python textgen.py
 	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
 
 # Background for the help screen is a color shifted version of INTERPIC:
 helpbg.png: ../interpic.png
-	python tint.py ../interpic.png '#5599ff' helpbg.png
+	python tint.py ../interpic.png '#57b9b0' helpbg.png
 
 # Generate transparent image containing text for the HELP screen:
-help.png: helpttl.png helpbg.png
-	python smtextgen help.png 320x200        \
+help.png: text_strings helpbg.png
+	python smtextgen.py help.png 320x200        \
 	   -background "helpbg.png"					 \
 	   150,5   "file:helpttl.png"                \
 	   10,25   "Weapons"                         \
@@ -97,8 +97,8 @@ help.png: helpttl.png helpbg.png
 	   128,107 "file:../../sprites/pstra0.png"   \
 	   170,115 "Armor"                           \
 	   220,113 "file:../../sprites/bon2a0.png"   \
-	   240,105 "file:../../sprites/arm1b0.png"   \
-	   280,105 "file:../../sprites/arm2b0.png"   \
+	   240,113 "file:../../sprites/arm1b0.png"   \
+	   280,110 "file:../../sprites/arm2b0.png"   \
 	   145,140 "Map"                             \
 	   175,130 "file:../../sprites/pmapa0.png"   \
 	   10,140  "Overdrive"                       \
@@ -122,30 +122,47 @@ help.png: helpttl.png helpbg.png
 	cp $@ ../
 
 
-credit.png: freettl.png helpbg.png credit.txt
-	python smtextgen credit.png 320x200        \
+credit.png: text_strings helpbg.png credit.txt
+	python smtextgen.py credit.png 320x200        \
 	   -background "helpbg.png"					\
 	   120,5  "file:freettl.png"                \
 	   10,30  "include:credit.txt"
+	cp $@ ../
 
 wikilrs_horiz.png:
-	python smtextgen $@ 49x7 \
+	python smtextgen.py $@ 49x7 \
 	    0,0  killers
 
 wikilrs.png: wikilrs_horiz.png
-	python rotate.py wikilrs_horiz.png 90 $@
+	python rotate.py wikilrs_horiz.png -90 $@
 	cp $@ ../
 
 wivctms.png:
-	python smtextgen $@ 54x7 \
+	python smtextgen.py $@ 54x7 \
 	    0,0  victims
 	cp $@ ../
 
+titlepic: fd1title.png fd2title.png fdmtitle.png
+
+fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png
+	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
+	cp $@ ../
+
+fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png 
+	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
+	cp $@ ../
+
+fdmtitle.png: ../titlepic/freedm_titlepic.png
+	python create_caption.py $< $@
+	cp $@ ../
+
 clean:
-	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png helptext.png	\
-	    helptext2.png graphics.stamp *.pyc credtext.png	\
+	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png	\
+	    graphics.stamp *.pyc credtext.png	\
 	    credtext.png credit.png dmwilv*.png wikilrs.png		\
 	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
-	    ../wikilrs.png ../wivctms.png
+	    ../wikilrs.png ../wivctms.png \
+		fd1title.png fd2title.png fdmtitle.png   \
+	    ../fd1title.png ../fd2title.png ../fdmtitle.png 
 	for graphic in $(TEXTGEN_GRAPHICS); do rm -f ../$$graphic; done
 	rm -fr __pycache__

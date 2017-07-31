@@ -11,10 +11,10 @@ import re
 import sys
 
 from config import *
-from common import *
+from image_dimensions import *
 from tint import image_tint
 
-# ImageMagick -colorize parameters for colorizing text:
+# Tinting parameters for colorizing text:
 COLOR_BLUE = "#000001"
 COLOR_RED = "#010000"
 COLOR_WHITE = None
@@ -31,6 +31,7 @@ UPPERCASE_FONT = False
 
 # Width of a space character in pixels.
 SPACE_WIDTH = 7
+LOWERCASE_RE = re.compile(r'^[a-z\!\. ]*$')
 
 
 class Font(object):
@@ -109,8 +110,7 @@ class Font(object):
 			if c is None:
 				return x
 
-	def generate_graphic(self, text, output_filename,
-                      color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
+	def generate_graphic(self, text, color=COLOR_WHITE):
 		"""Get command to render text to a file
 		   with the given background color.
 		"""
@@ -136,15 +136,15 @@ class Font(object):
 			txt_image.paste(char_image, (x, height - FONT_HEIGHT))
 
 		txt_image = image_tint(txt_image, color)
-		txt_image.save(output_filename)
+		return txt_image
 
 
-def generate_graphics(graphics, color=COLOR_WHITE, bgcolor=BACKGROUND_COLOR):
+def generate_graphics(graphics, color=COLOR_WHITE):
 	for name, text in sorted(graphics.items()):
 		# write a makefile fragment
 		target = '%s.png' % name
-		font.generate_graphic(text, target,
-                              color=color, bgcolor=bgcolor)
+		image = font.generate_graphic(text, color=color)
+		image.save(target)
 
 
 def generate_kerning_test():
@@ -158,12 +158,9 @@ def generate_kerning_test():
 
 	cmd = font.generate_graphic(" ".join(pairs), "kerning.png")
 
+if __name__ == '__main__':
 
-font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
-
-# Enable to generate test image file for tweaking kerning values:
-#generate_kerning_test()
-
-generate_graphics(red_graphics, color=COLOR_RED)
-generate_graphics(blue_graphics, color=COLOR_BLUE)
-generate_graphics(white_graphics, color=COLOR_WHITE)
+	font = Font('fontchars', kerning_table=FONT_KERNING_RULES)
+	generate_graphics(red_graphics, color=COLOR_RED)
+	generate_graphics(blue_graphics, color=COLOR_BLUE)
+	generate_graphics(white_graphics, color=COLOR_WHITE)
