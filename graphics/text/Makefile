@@ -144,11 +144,11 @@ wivctms.png:
 
 titlepic: fd1title.png fd2title.png fdmtitle.png
 
-fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png
+fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png 
 	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
 	cp $@ ../
 
-fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png 
+fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png
 	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
 	cp $@ ../
 
