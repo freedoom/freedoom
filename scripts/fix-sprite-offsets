@@ -24,25 +24,23 @@ class Graphic(object):
 
 def main():
     dirname = path.split(path.abspath(__file__))[0]
-    if len(sys.argv) < 2:
-        print("This script takes the offsets stored in the \"grAb\" chunk of " + 
-              "the specified PNGs and adjusts the sprite offsets in the build_cfg file.\n")
-        print("Usage:\n fix-sprite-offsets <names> [names] [...]\n")
-        print("names may have * wildcards, like \"vile* pisg*\" " )
-        exit()
     graphics = []
     files = []
-    for param in sys.argv[1:]:
-        if param == "*":
-            print("Cannot have generic wildcard *, you have to put something in front of it.")
-            print("e.g. vile*")
-            exit()
-        else:
-            files = files + glob.glob(dirname + "/../sprites/" + param)
-            files = files + glob.glob(dirname + "/../graphics/" + param)
+    if len(sys.argv) < 2:
+        print("This script takes the offsets stored in the \"grAb\" chunk of " + 
+              "the specified PNGs and adjusts the graphics offsets in the build_cfg file.\n")
+        print("Usage:\n\t fix-sprite-offsets <names> [names] [...]\n")
+        print("example: \n\tfix-sprite-offsets sprites/vilea1.png sprites/vileb1.png")
+        exit()
+    else:
+        for param in sys.argv[1:]:
+            files.append(dirname + "/../" + param)
 
     for filepath in files:
-        graphics.append(Graphic(filepath))
+        if not path.isfile(filepath):
+            print("Could not find" + filepath +", skipping...")
+        elif path.splitext(filepath)[1] == ".png":
+            graphics.append(Graphic(filepath))
 
     f = open(dirname + "/../buildcfg.txt", "r")
     lines = f.readlines()
