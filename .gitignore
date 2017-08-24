@@ -3,6 +3,7 @@
 /CREDITS.txt
 lumps/freedoom.lmp
 lumps/freedm.lmp
+/scripts/wad2image
 /wads/
 wad*.txt
 *.bak
