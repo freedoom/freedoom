@@ -4,6 +4,7 @@
 lumps/freedoom.lmp
 lumps/freedm.lmp
 /scripts/wad2image
+/wad-images/
 /wads/
 wad*.txt
 *.bak
