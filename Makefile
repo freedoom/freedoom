@@ -135,6 +135,18 @@ WI_ALL_OPTIONS := $(WI_OPTIONS) $(if $(WI_BW), --colors-images bw,) \
     $(if $(WI_IMAGES), --out-dir $(WI_IMAGES),) $(if $(WI_SHOW), -s,) \
     $(if $(WI_VERBOSE), -v,) $(if $(WI_WAD_SPATH), --wad-spath $(WI_WAD_SPATH),)
 wad-image-common:
+ifndef WI_IMAGES
+	$(error WI_IMAGES must be defined)
+endif
+ifndef WI_LEVELS
+	$(error WI_LEVELS must be defined)
+endif
+ifndef WI_SCRIPTS
+	$(error WI_SCRIPTS must be defined)
+endif
+ifndef WI_HOME
+	$(error WI_HOME must be defined)
+endif
 
 # Generating images for WADs in "levels" directory and show the result.
 WI_LATEST := $(shell ls -1t $(WI_LEVELS)/*.wad | head -n 1)
@@ -157,8 +169,12 @@ wad-image-diff: wad-image-common
 wad-image-help: wad-image-common
 	@echo "Help for wad-image* targets and WI_* variable which can be used to see"
 	@echo "differences between WAD revisions, or to simply view WADs. The following targets"
-	@echo "depend on wad2image being copied or symlinked to the \"scripts\" directory."
-	@echo "Images are created in \"$(WI_IMAGES)\". wad2image can be downloaded"
+	@echo "depend on wad2image being installed with bin/wad2image.py in it being in the"
+	@echo "path, or alteratively wad2image being copied or symlinked to the \"$(WI_SCRIPTS)\""
+	@echo "directory. Images are created in \"$(WI_IMAGES)\". Each variable's description"
+	@echo "ends with \"Value:\" followed by that variable's current value. If no variables"
+	@echo "have been specified on the make command line then the value shown is the"
+	@echo "default value. Some variables are unset by default. wad2image can be downloaded"
 	@echo "from http://selliott.org/utilities/wad2image."
 	@echo ""
 	@echo "  Targets:"
@@ -176,31 +192,36 @@ wad-image-help: wad-image-common
 	@echo ""
 	@echo "    WI_BW           Make diff images black or white (high contrast) instead of"
 	@echo "                    full color. This applies to wad-image-diff-only."
-	@echo "    WI_CMD          Command used to display images. \"display\" is used by"
-	@echo "                    default. \"animate\" works well for animated GIFs."
+	@echo "                    Value: $(WI_BW)"
+	@echo "    WI_CMD          Command used to display images. \"display\" is used if no"
+	@echo "                    value is specified. \"animate\" works well for animated"
+	@echo "                    GIFs. Value: $(WI_CMD)"
 	@echo "    WI_COMMIT       When the wad-image-diff target is invoked this variable"
 	@echo "                    specifies which revisions are compared. It's similar to"
-	@echo "                    git's \"commit\" argument."
+	@echo "                    git's \"commit\" argument. Value: $(WI_COMMIT)"
 	@echo "    WI_GIF          Create animated GIFs instead of color coded files for the"
-	@echo "                    diff."
+	@echo "                    diff. Value: $(WI_GIF)"
 	@echo "    WI_HOME         The location where wad2image is installed. By default PATH"
 	@echo "                    is searched for \"wad2image.py\". If it's found the"
 	@echo "                    enclosing installation directory is used. If it's not found"
-	@echo "                    $(WI_SCRIPTS)/wad2image is used."
+	@echo "                    $(WI_SCRIPTS)/wad2image is used. Value: $(WI_HOME)"
 	@echo "    WI_IMAGES       The output directory that will contain the images created."
-	@echo "                    By default images are created in \"wad-images\"."
-	@echo "    WI_LEVELS       Subdirectory with the level WADs."
+	@echo "                    Value: $(WI_IMAGES)"
+	@echo "    WI_LEVELS       Subdirectory with the level WADs. Value: $(WI_IMAGES)"
 	@echo "    WI_OPTIONS      Additional command line options for wad2image."
+	@echo "                    Value: $(WI_OPTIONS)"
 	@echo "    WI_SHOW         If set then show the images after creating them."
-	@echo "    WI_PATT         Files patterns that are applied to files in the \"levels\""
-	@echo "                    directory without the \".wad\" suffix. For example,"
-	@echo "                    \"map0*\" to get MAP01 - MAP09. This applies to wad-image"
-	@echo "                    only."
+	@echo "                    Value: $(WI_SHOW)"
+	@echo "    WI_PATT         Files patterns that are applied to files in the"
+	@echo "                    \"$(WI_LEVELS)\" directory without the \".wad\" suffix. For"
+	@echo "                    example, \"map0*\" to get MAP01 - MAP09. This applies to"
+	@echo "                    wad-image only. Value: $(WI_PATT)"
 	@echo "    WI_VERBOSE      If set then make wad2image more verbose."
+	@echo "                    Value: $(WI_VERBOSE)"
 	@echo "    WI_WAD_SPATH    The search path for WADs where a fully qualified path was"
 	@echo "                    not given. This is typically used for the IWAD. By default"
 	@echo "                    \"wads\" is searched first, so it helps to complete a build"
-	@echo "                    before generating images."
+	@echo "                    before generating images. Value: $(WI_WAD_SPATH)"
 	@echo ""
 	@echo "  Examples:"
 	@echo ""
