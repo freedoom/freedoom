@@ -127,7 +127,8 @@ target=$(DESTDIR)$(prefix)
 WI_LEVELS := levels
 WI_SCRIPTS := scripts
 WI_PATH := $(shell command -v wad2image.py)
-WI_HOME := $(if $(WI_PATH),$(dir $(WI_PATH))..,$(WI_SCRIPTS)/wad2image)
+WI_HOME := $(if $(WAD2IMAGE_HOME),$(WAD2IMAGE_HOME),$(if $(WI_PATH),$(shell $(WI_PATH) \
+    --get-top-dir),$(WI_SCRIPTS)/wad2image))
 WI_IMAGES := wad-images
 WI_WAD_SPATH := wads,{top-dir}/wads,.,/usr/share/doom,/usr/local/doom
 WI_ALL_OPTIONS := $(WI_OPTIONS) $(if $(WI_BW), --colors-images bw,) \
