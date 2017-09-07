@@ -34,6 +34,7 @@
 # Freedoom IWADs cannot be built in parallel by make.
 
 import collections
+import os.path
 import re
 import sys
 import struct
@@ -161,16 +162,22 @@ def read_names_file(filename):
 				result.append(line.upper())
 		return result
 
-def write_names_file(names, filename):
+def write_names_file(names, filename, sprites_dir):
 	"""Write a list of names to a file.
 
 	Args:
 	  names: List of names to write.
 	  filename: Filename to write them to.
+	  sprites_dir: Path to directory containing sprites. If a file is found
+	      in this directory matching a patch name, that patch will not be
+	      included in the outputted list.
 	"""
 	with open(filename, "w") as f:
 		for name in names:
-			f.write("%s\n" % name)
+			filename = "%s.png" % name.lower()
+			sprite_path = os.path.join(sprites_dir, filename)
+			if not os.path.exists(sprite_path):
+				f.write("%s\n" % name)
 
 def load_compat_textures(textures, compat_file):
 	"""Pre-populate a texture set from a compatibility file.
@@ -264,6 +271,9 @@ Full list of arguments:
   -output_texture2: Path to the TEXTURE2 lump to generate.
   -output_pnames: Path to the PNAMES lump to generate (required).
   -output_pnames_txt: Path to a text file to save a list of PNAMES.
+  -sprites_dir: Path to the sprites directory, used to identify patches which
+      are actually embedded sprites. These sprites will not be included in the
+      outputted pnames file.
   -compat_texture1: File containing compatibility list of TEXTURE1 textures
   -compat_texture2: File containing compatibility list of TEXTURE2 textures
   -compat_pnames: File containing compatibility list of PNAMES
@@ -282,7 +292,7 @@ def parse_command_line(args):
 	# Parse command line:
 	valid_args = ("compat_texture1", "compat_texture2", "compat_pnames",
 	              "output_texture1", "output_texture2", "output_pnames",
-	              "output_pnames_txt")
+	              "output_pnames_txt", "sprites_dir")
 	result = {arg: None for arg in valid_args}
 
 	for arg in args:
@@ -339,5 +349,6 @@ if args["output_texture2"]:
 	texture2.write_texture_lump(args["output_texture2"])
 write_pnames_lump(pnames, args["output_pnames"])
 if args["output_pnames_txt"]:
-	write_names_file(sorted(pnames), args["output_pnames_txt"])
+	write_names_file(sorted(pnames), args["output_pnames_txt"],
+	                 args["sprites_dir"])
 
