@@ -35,13 +35,13 @@ lumps/freedoom.lmp lumps/freedm.lmp: force
 # update wadinfo.txt
 
 wadinfo.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py > $@
+	$(CPP) -P -DDOOM2 < $< > $@
 wadinfo_phase1.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM1 -DULTDOOM < $< | scripts/wadinfo-builder.py -dummy > $@
+	$(CPP) -P -DDOOM1 -DULTDOOM < $< > $@
 wadinfo_phase2.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM2 < $< | scripts/wadinfo-builder.py -dummy > $@
+	$(CPP) -P -DDOOM2 < $< > $@
 wadinfo_freedm.txt : buildcfg.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
-	$(CPP) -P -DFREEDM < $< | scripts/wadinfo-builder.py -dummy > $@
+	$(CPP) -P -DFREEDM < $< > $@
 
 # deutex doesnt allow redirects for the filenames in the texture
 # entries, so we have to change the texture1 symlink to point

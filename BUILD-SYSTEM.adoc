@@ -34,10 +34,6 @@ following diagram illustrates the process:
          │  cpp   ├───────────┘            │
          └───┬────┘                        │
              │                             │
-   ┌─────────┴──────────┐                  │
-   │ wadinfo─builder.py │                  │
-   └─────────┬──────────┘                  │
-             │                             │
         wadinfo.txt                        │
              │                             │
          ┌───┴────┐                        │
@@ -145,9 +141,6 @@ WAD files that are built:
 | +wadinfo_freedm.txt+ | +freedm.wad+       | FREEDM
 |===============================================================
 
-+wadinfo.txt+ differs from the others in that the '-dummy' option is
-not passed to the +wadinfo-builder.py+ script.
-
 == Auxiliary scripts
 
 The build system uses a number of auxiliary scripts in order to
@@ -166,21 +159,6 @@ The +simplecpp+ script is used in preference to the actual +cpp+
 preprocessor, firstly so that it is not necessary to install +cpp+,
 and secondly because processing with +cpp+ can alter the layout of the
 output file.
-
-=== +wadinfo-builder.py+
-
-This script processes the +wadinfo.txt+ used to build the WAD file,
-and identifies resources specified in the file that do not yet exist.
-This is to deal with the fact that Freedoom is incomplete and not all
-of the material needed for a complete WAD has yet been submitted.
-
-Different strategies are used to cope with these missing resources
-depending on the WAD file being built.  For IWAD builds, dummy
-resources are substituted for the missing resources (this mode is
-activated using the +-dummy+ command line parameter).  For resource
-WAD builds, the missing resources are commented out in the output file
-so that they are missing from the WAD that is built.  This is the
-default behavior.
 
 === +build-textures+
 
