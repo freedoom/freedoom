@@ -194,6 +194,12 @@ red_graphics = {
 	# match the other main menu graphics. Eternity Engine doesn't
 	# use it any more, and on SMMU there's enough space for it.
 	'm_multi': 'Multiplayer',
+
+	# Doom 3: BFG Edition support
+	'm_acpt': 'accept',
+	'm_can': 'cancel',
+	'm_chg': 'change game',
+	'm_exito': 'are you sure?',
 }
 
 def read_bex_lump(filename):
