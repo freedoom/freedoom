@@ -101,6 +101,7 @@ MAP29   = dm29
 MAP30   = dm30
 MAP31   = dm31
 MAP32   = dm32
+MAP33   = dummy
 
 #else   /* #ifdef FREEDM */
 
@@ -136,6 +137,7 @@ MAP29
 MAP30
 MAP31
 MAP32
+MAP33 = dummy
 
 #endif /* #ifdef FREEDM */
 
@@ -853,6 +855,13 @@ M_CAN		0	1
 M_CHG		0	1
 M_EXITO		0	1
 
+#ifndef ULTDOOM
+; Episode titles don’t make much sense in Phase 2, but it allows
+; BFG Edition to not crash when starting a new game.
+M_EPI1		0	0 = M_EPI5
+M_EPI2		0	0 = M_EPI6
+#endif
+
 BRDR_TL	-5	-5
 BRDR_T	0	-5
 BRDR_TR	0	-5
@@ -1064,6 +1073,7 @@ CWILV29
 CWILV24
 CWILV30
 CWILV31
+CWILV32
 
 #else  /* #ifdef FREEDM */
 
@@ -1101,6 +1111,7 @@ CWILV29 = DMWILV29
 CWILV24 = DMWILV24
 CWILV30 = DMWILV30
 CWILV31 = DMWILV31
+CWILV32 = DMWILV32
 
 #endif
 

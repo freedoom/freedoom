@@ -15,7 +15,8 @@ TEXTGEN_GRAPHIC_LUMPS = \
   m_mess.png   m_mouse.png  m_multi.png  m_player.png m_serial.png \
   m_setup.png  m_sound.png  m_stat.png   m_status.png m_tcpip.png  \
   m_versen.png m_video.png  m_wad.png    m_wadopt.png m_weap.png   \
-  m_acpt.png   m_can.png    m_chg.png    m_exito.png               \
+  m_acpt.png   m_can.png    m_chg.png    m_exito.png  m_epi5.png   \
+  m_epi6.png                                                       \
   prboom.png   t_phase1.png t_phase2.png                           \
   m_ultra.png  wibp1.png    wibp2.png    wibp3.png    wibp4.png    \
   wicolon.png  wienter.png  wif.png      wifrgs.png   wipcnt.png   \
@@ -30,14 +31,14 @@ TEXTGEN_GRAPHIC_LUMPS = \
   dmwilv15.png dmwilv16.png dmwilv17.png dmwilv18.png dmwilv19.png \
   dmwilv20.png dmwilv21.png dmwilv22.png dmwilv23.png dmwilv24.png \
   dmwilv25.png dmwilv26.png dmwilv27.png dmwilv28.png dmwilv29.png \
-  dmwilv30.png dmwilv31.png                                        \
+  dmwilv30.png dmwilv31.png dmwilv32.png                           \
   cwilv00.png  cwilv01.png  cwilv02.png  cwilv03.png  cwilv04.png  \
   cwilv05.png  cwilv06.png  cwilv07.png  cwilv08.png  cwilv09.png  \
   cwilv10.png  cwilv11.png  cwilv12.png  cwilv13.png  cwilv14.png  \
   cwilv15.png  cwilv16.png  cwilv17.png  cwilv18.png  cwilv19.png  \
   cwilv20.png  cwilv21.png  cwilv22.png  cwilv23.png  cwilv24.png  \
   cwilv25.png  cwilv26.png  cwilv27.png  cwilv28.png  cwilv29.png  \
-  cwilv30.png  cwilv31.png                                         \
+  cwilv30.png  cwilv31.png  cwilv32.png                            \
   wilv00.png   wilv01.png   wilv02.png   wilv03.png   wilv04.png   \
   wilv05.png   wilv06.png   wilv07.png   wilv08.png   wilv10.png   \
   wilv11.png   wilv12.png   wilv13.png   wilv14.png   wilv15.png   \
