@@ -12,7 +12,7 @@ import os
 font = ImageFont.load_default()
 
 
-txt1= "© 2001-2017"
+txt1= "© 2001-2018"
 txt2= os.environ['VERSION']
 background_image = Image.open(sys.argv[1])
 background_image.load()
