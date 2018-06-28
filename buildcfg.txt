@@ -101,7 +101,7 @@ MAP29   = dm29
 MAP30   = dm30
 MAP31   = dm31
 MAP32   = dm32
-MAP33   = dummy
+MAP33   = test_map
 
 #else   /* #ifdef FREEDM */
 
@@ -137,7 +137,7 @@ MAP29
 MAP30
 MAP31
 MAP32
-MAP33 = dummy
+MAP33 = test_map
 
 #endif /* #ifdef FREEDM */
 
@@ -160,6 +160,7 @@ ENDOOM = endoomdm
 FREEDM
 #else
 DEHACKED
+ZMAPINFO
 ENDOOM
 #endif
 

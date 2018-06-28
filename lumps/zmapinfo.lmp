@@ -1,0 +1,14 @@
+
+// MAPINFO lump for Freedoom: Phase 2. This doesn't do much other
+// than to properly support MAP33 on ZDoom-based ports.
+
+// Prevents MAP33: Empty Facility from being named as "Unnamed" on
+// ZDoom-based ports. Exiting MAP33 returns the player to MAP03.
+map MAP33 lookup "HUSTR_33"
+{
+	next = "MAP03"
+        titlepatch = "CWILV32"
+        sky1 = "SKY3"
+        music = "$MUSIC_READ_M"
+}
+
