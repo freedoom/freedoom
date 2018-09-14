@@ -4,6 +4,25 @@ Patch format = 6
 
 # SPDX-License-Identifier: BSD-3-Clause
 
+# The following changes turn on full brightness for a few firing frames,
+# since these they show gun flashes and it looks weird if they aren't full
+# brightness. Doom itself has this problem too but it's more noticeable with
+# the Freedoom sprites.
+
+# Zombie
+Frame 185
+Sprite subnumber = 32773
+
+# Assault tripod
+Frame 685
+Sprite subnumber = 32773
+
+Frame 687
+Sprite subnumber = 32773
+
+Frame 689
+Sprite subnumber = 32773
+
 # This is a magic comment recognized by Chocolate Doom, so that the
 # BEX [STRINGS] section below will be parsed:
 #
