@@ -13,6 +13,10 @@ Patch format = 6
 Frame 185
 Sprite subnumber = 32773
 
+# Minigun zombie
+Frame 419
+Sprite subnumber = 32773
+
 # Assault tripod
 Frame 685
 Sprite subnumber = 32773
