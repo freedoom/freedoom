@@ -1,0 +1,73 @@
+#!/bin/bash
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# test-map-names - Test that maps have the expected names.
+#
+# This script tests that the map names (the name such as MAP05, E2M3, etc., as
+# indicated by the name of the first lump for the map) match the name of the
+# file they're in. It is expected that WAD files in the "levels" directory will
+# match in this way after certain translations (CxMy to ExMy, etc.).
+
+# Globals
+
+this_dir="${0%/*}"                 # Directory that contains this script.
+top_dir=$(realpath "$this_dir/..") # Top level directory.
+levels_dir="$top_dir/levels"       # The "levels" directory with WADs to check.
+boot_dir="$top_dir/bootstrap"      # The "bootstrap" directory.
+format="%-12s%-12s%-12s\n"
+
+if ! cd "$levels_dir"
+then
+    echo "Could not CD to levels directory \"$levels_dir\"." 1>&2
+    exit 1
+fi
+
+errors=0
+unset header_shown
+for wad in c*.wad dm*.wad map*.wad
+do
+    # What we expect the map name to be based on the filename.
+    expected_name=${wad%.wad}
+    expected_name=${expected_name^^}
+    expected_name=${expected_name/DM/MAP}
+    expected_name=${expected_name/C/E}
+    if [[ -z $expected_name ]]
+    then
+        echo "Could not determine the expected name for WAD \"$wad\"." 1>&2
+        exit 1
+    fi
+
+    # What the map name actually is as indicated by the name of the first lump
+    # for the map.
+    actual_name=$(deutex -doom2 "$boot_dir" -wadir "$wad" | \
+        grep -P '^(MAP\d\d|E\dM\d\s)' | awk '{print $1}' | head -n 1)
+    if [[ -z $actual_name ]]
+    then
+        echo "Could not determine the actual name for WAD \"$wad\"." 1>&2
+        exit 1
+    fi
+
+    # shellcheck disable=SC2059
+    if [[ "$expected_name" != "$actual_name" ]]
+    then
+        let errors++
+        if [[ -z $header_shown ]]
+        then
+            printf "$format" "Filename" "Expected" "Actual"
+            printf "$format" "--------" "--------" "------"
+            header_shown=t
+        fi
+        printf "$format" "$wad" "$expected_name" "$actual_name"
+    fi
+done
+
+if [[ $errors -gt 0 ]]
+then
+    echo
+    echo "$errors WAD files in levels directory \"$levels_dir\" have \
+unexpected map names." 1>&2
+    exit 1
+else
+    echo "All WAD files in levels directory \"$levels_dir\" have expected \
+map names."
+fi
