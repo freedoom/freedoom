@@ -253,6 +253,15 @@ wad-image-help: wad-image-common
 	@echo "      make wad-image-diff WI_VERBOSE=t WI_GIF=t WI_SHOW=t WI_CMD=animate \
 WI_COMMIT=\"0c004ce~..0c004ce\""
 
+# Test that WAD files have the expected map names.
+test-map-names:
+	tests/test-map-names
+
+# Run all tests. Add test-* targets here.
+test: test-map-names
+	@echo
+	@echo "All tests passed."
+
 %.6:
 	$(MAKE) -C dist man-$*
 
