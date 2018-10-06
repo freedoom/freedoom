@@ -71,13 +71,13 @@ help.png: text_strings helpbg.png
 	   -background "helpbg.png"                  \
 	   150,5   "file:helpttl.png"                \
 	   10,25   "Weapons"                         \
-	   80,25   "file:../../sprites/shota0.png"   \
-	   150,25  "file:../../sprites/sgn2a0.png"   \
-	   210,20  "file:../../sprites/mguna0.png"   \
-	   10,40   "file:../../sprites/launa0.png"   \
-	   80,40   "file:../../sprites/plasa0.png"   \
-	   150,40  "file:../../sprites/bfuga0.png"   \
-	   240,40  "file:../../sprites/csawa0.png"   \
+	   80,23   "file:../../sprites/shota0.png"   \
+	   150,23  "file:../../sprites/sgn2a0.png"   \
+	   210,18  "file:../../sprites/mguna0.png"   \
+	   10,38   "file:../../sprites/launa0.png"   \
+	   80,38   "file:../../sprites/plasa0.png"   \
+	   150,38  "file:../../sprites/bfuga0.png"   \
+	   240,38  "file:../../sprites/csawa0.png"   \
 	   10,67   "Ammo"                            \
 	   53,67   "file:../../sprites/clipa0.png"   \
 	   68,62   "file:../../sprites/ammoa0.png"   \
@@ -87,8 +87,8 @@ help.png: text_strings helpbg.png
 	   220,67  "Backpack"                        \
 	   290,55  "file:../../sprites/bpaka0.png"   \
 	   10,90   "Missiles"                        \
-	   76,78   "file:../../sprites/rocka0.png"   \
-	   95,82   "file:../../sprites/broka0.png"   \
+	   76,80   "file:../../sprites/rocka0.png"   \
+	   95,84   "file:../../sprites/broka0.png"   \
 	   170,90  "Energy"                          \
 	   220,90  "file:../../sprites/cella0.png"   \
 	   240,81  "file:../../sprites/celpa0.png"   \
