@@ -274,3 +274,21 @@ writing (February 2017), core Git does not yet have a mechanism to
 output this format, but you may use a
 https://gist.github.com/chungy/195f53bfb9253584e596[shell script] and
 place it in your `$PATH` to achieve some ease in generating them.
+
+By default for binary files `git diff` only notes differences instead
+of displaying them. In some cases, such as when a small part of a
+binary file has changed without otherwise shifting the bytes, it can
+be helpful to display differences in binary files using `hexdump`.
+To enable `hexdump` diffs for binary files:
+
+  * Make sure `hexdump` (Linux) or `hexdump.exe` (Windows) is in your
+    path. On Linux this may mean installing the `hexdump` or
+    `util-linux` package.
+  * Edit your `.gitconfig` file and add a `[diff "hexdump"]` section
+    that contains `textconv = hexdump -C`.
+  * Edit Freedoom's `.gitattributes` file and add `diff=hexdump` for
+    the binary file type that you want to see diffs for.
+
+Now `git diff` will display differences for that binary file type. To
+restore the default diffing behavior revert the changes made to
+Freedoom's `.gitattributes`.

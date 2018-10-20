@@ -1,6 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text eol=lf
 
+# Append "diff=hexdump" to one of the following to enable binary
+# diffs for that file type.
 *.png -text
 *.wad -text
 *.wav -text
