@@ -31,6 +31,8 @@ def main():
               "the specified PNGs and adjusts the graphics offsets in the build_cfg file.\n")
         print("Usage:\n\t fix-sprite-offsets <names> [names] [...]\n")
         print("example: \n\tfix-sprite-offsets sprites/vilea1.png sprites/vileb1.png")
+        print("You can also use wildcards:")
+        print("\t fix-sprite-offsets sprites/vile*.png")
         exit()
     else:
         for param in sys.argv[1:]:
@@ -41,7 +43,9 @@ def main():
             print("Could not find" + filepath +", skipping...")
         elif path.splitext(filepath)[1] == ".png":
             graphics.append(Graphic(filepath))
-
+    for graphic in graphics:
+        if graphic.has_offset == False:
+            graphics.remove(graphic)
     f = open(dirname + "/../buildcfg.txt", "r")
     lines = f.readlines()
     f.close()
