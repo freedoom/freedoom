@@ -55,6 +55,8 @@ or your home directory.  If _Freedoom_ comes packaged as part of your
 operating system distribution, it should already be installed into the
 proper location.
 
+On Android, Freedoom is included in the https://github.com/mkrupczak3/GZDoom-Android[Freedoom app] and https://play.google.com/store/apps/details?id=com.opentouchgaming.deltatouch&hl=en_US[Delta Touch]
+
 If you wish to venture outside of GZDoom, beware that _Phase 1_ and
 _Phase 2_ require a https://doomwiki.org/wiki/Limit_removing[limit
 removing] engine, which is thankfully the majority of them, but
