@@ -42,4 +42,10 @@
       <caption>MAP09: Datacenter</caption>
     </screenshot>
   </screenshots>
+  <releases>
+    <release version="0.11.3" date="2017-07-18"></release>
+  </releases>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-bloodshed">intense</content_attribute>
+  </content_rating>
 </component>
