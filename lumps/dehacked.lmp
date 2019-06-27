@@ -369,12 +369,12 @@ E1TEXT = You've made it out of the outpost.\n\
          There could be a way to escape in there.
 E2TEXT = The massive brutes collapse onto\n\
          the ground. They fall apart bit by bit.\n\
-         Unfortunately, there was a no ship\n\
+         Unfortunately, there was no ship\n\
          here either. The Labs have bizarre\n\
          technology though. Like this one.\n\n\
          A huge teleporter machine, set for...\n\
          A place called Horizon?\n\n\
-         You never heard of such thing before.\n\
+         You never heard of such a thing before.\n\
          Maybe it's another AGM facility.\n\
          Meaning there could be a ship on\n\
          the other side. Sounds like a good\n\
@@ -395,11 +395,11 @@ E3TEXT = The abomination explodes into\n\
          You drop all your weapons on\n\
          the ground and step on the platform,\n\
          reintegrating on Double Impact.
-E4TEXT = Despite fighting an army of monsters\n\
+E4TEXT = Despite fighting an army of monsters,\n\
          you managed to find a ship here.\n\
          Looks like freedom is yours.\n\n\
          "Time to get out of here."\n\
-         You tell yourself and plump down\n\
+         you tell yourself and plump down\n\
          on the comfortable chair.\n\n\
          The ship rumbles as she wakes up.\n\
          As you lift off, you think of Earth.\n\n\
@@ -429,13 +429,13 @@ C2TEXT = The facility is gone, no doubt there.\n\
          a city unknown to you. City means\n\
          people, right?\n\n\
          The bolts holding the platform\n\
-         flies off over the ledge. The place\n\
+         fly off over the ledge. The place\n\
          is falling apart. You quickly step on\n\
-         the platform and reappear at the city\n\
+         the platform and reappear at the city.\n\
          It's been destroyed to the ground.\n\n\
          You can't go back either.
 # After MAP20, before MAP21:
-C3TEXT = There is no AGM here. no humans.\n\
+C3TEXT = There is no AGM here. No humans.\n\
          Just monsters and monsters.\n\
          And you.\n\
          This could be the beginning of\n\
@@ -451,13 +451,13 @@ C3TEXT = There is no AGM here. no humans.\n\
          You're stuck here once again.
 # After MAP30 (endgame text):
 C4TEXT = The evil thing becomes unstable.\n\n\
-         Its final roars echoes throughout the\n\
-         room till it crumples into scrap metal.\n\
+         Its final roars echo throughout the\n\
+         room until it crumples into scrap metal.\n\
          A portal opens up, and in it, you see a\n\
          small town. You jump in quickly.\n\
          AGM learned its lesson this time.\n\n\
          Hopefully.\n\n\
-         No one will know know who saved them.\n\n\
+         No one will know who saved them.\n\n\
          No one will know what happened here.\n\n\
          No one will ever find you again.
 # Before MAP31 (secret level #1):
@@ -465,7 +465,7 @@ C5TEXT = You step onto the machine and\n\
          after a strange flash you find\n\
          yourself in a rusty cage.\n\n\
          "What is this place?"\n\n\
-         Before you can wonder further\n\
+         Before you can wonder further,\n\
          you see monsters all around\n\
          you. It's a trap.\n\n\
          You silently bring out\n\
