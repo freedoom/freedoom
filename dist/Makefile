@@ -1,3 +1,6 @@
+all: man-freedm man-freedoom1 man-freedoom2 \
+     icon-freedm icon-freedoom1 icon-freedoom2
+
 man-%: freedoom.adoc
 	sed -e s/freedoom/$*/ freedoom.adoc > $*.adoc
 	a2x -f manpage $*.adoc
