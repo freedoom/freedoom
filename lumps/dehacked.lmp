@@ -395,18 +395,18 @@ E3TEXT = The abomination explodes into\n\
          You drop all your weapons on\n\
          the ground and step on the platform,\n\
          reintegrating on Double Impact.
-E4TEXT = Despite fighting an army of monsters,\n\
-         you managed to find a ship here.\n\
+E4TEXT = After yet another army of monsters\n\
+         you manage to find a functioning ship.\n\
          Looks like freedom is yours.\n\n\
-         "Time to get out of here..."\n\
-         you tell yourself and plump down\n\
-         on the comfortable chair.\n\n\
-         The ship rumbles as she wakes up.\n\
-         As you lift off, you think of Earth.\n\n\
-         Hopefully, AGM won't find you there.\n\
-         They've got the outbreak to deal\n\
+         You practically melt into the soft\n\
+         pilot's seat, a luxurious welcome\n\
+         as you leave this wretched rock.\n\n\
+         The ship rumbles as she wakes up;\n\
+         you think of Earth as she lifts off.\n\
+         Hopefully, AGM won't find you there:\n\
+         they've got the outbreak to deal\n\
          with, so that'll give you some time.\n\n\
-         Destination: Earth
+         Destination: Earth!
 # After MAP06, before MAP07:
 C1TEXT = You've found your way to the\n\
          complex's outer storage warehouse.\n\
@@ -464,10 +464,10 @@ C4TEXT = The evil thing becomes unstable.\n\n\
 C5TEXT = You step onto the machine and\n\
          after a strange flash you find\n\
          yourself in a rusty cage.\n\n\
-         "What is this place?"\n\n\
-         Before you can wonder further,\n\
-         you see monsters all around\n\
-         you. It's a trap.\n\n\
+         What happened? Where is this?\n\n\
+         Before you can wonder further\n\
+         you notice that you are surrounded\n\
+         by monsters. It was a trap.\n\n\
          You silently bring out\n\
          your gun, ready to kill.
 # Before MAP32 (secret level #2):
@@ -476,8 +476,8 @@ C6TEXT = The world dissipitates around\n\
          to find yourself inside another.\n\
          As the glow of the teleporter\n\
          subsides, it looks like you may\n\
-         have made a wrong turn. Again.\n\n\
-         "Not again."\n\n\
+         have made a wrong turn.\n\n\
+         Again.\n\n\
          The world comes back to you.\n\
          The monsters you fought before\n\
          raise their weapons,\n\n\
