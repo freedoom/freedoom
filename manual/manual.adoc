@@ -133,90 +133,77 @@ TODO: Add table of armor powerups
 
 These are the monsters you'll encounter in the game:
 
-==== Zombie
-
+[frame="none",cols="1,4,3",valign="middle",grid="none"]
+|==========================
+| **Zombie** |
 These undead creatures are armed with a pistol and intent on your destruction.
-Drops a clip of bullets when killed.
-
-==== Shotgun Zombie
-
+Drops a clip of bullets when killed. |
+image:images/monster-zombie.png[Zombie,150,150]
+| **Shotgun Zombie** |
 These guys traded their pistol for a shotgun and pack far more of a punch.
-Drops a shotgun when killed.
-
-==== Minigun Zombie
-
+Drops a shotgun when killed. |
+image:images/monster-shotgun-zombie.png[Shotgun Zombie,150,150]
+| **Minigun Zombie** |
 As soon as you're in sight of one of these, he'll lock on with his minigun and
 keep on firing until you're dead. It's best to take cover quickly or take him
-out. Drops a minigun when killed.
-
-==== Serpentipede
-
+out. Drops a minigun when killed. |
+image:images/monster-minigun-zombie.png[Minigun Zombie,150,150]
+| **Serpentipede** |
 Serpent footsoldiers of the alien invasion. Let them get close and they'll
-tear you to shreds; at a distance they'll instead rain down fireballs.
-
-==== Flesh Worm
-
+tear you to shreds; at a distance they'll instead rain down fireballs. |
+image:images/monster-serpentipede.png[Serpentipede,150,150]
+| **Flesh Worm** |
 Tough and fast-moving, these worms attack at close range and take several
-shotgun blasts to take down. It's best to keep back.
-
-==== Stealth Worm
-
+shotgun blasts to take down. It's best to keep back. |
+image:images/monster-flesh-worm.png[Flesh Worm,150,150]
+| **Stealth Worm** |
 These flesh worm variants have been given stealth abilities which make them
-practically invisible.
-
-==== Deadflare
-
-Floating skulls which charge from a distance.
-
-==== Summoner
-
+practically invisible. |
+image:images/monster-stealth-worm.png[Stealth Worm,150,150]
+| **Deadflare** |
+Floating skulls which charge from a distance. |
+image:images/monster-deadflare.png[Deadflare,150,150]
+| **Summoner** |
 These mobile Deadflare production factories will ensure you always have more
-work to do.
-
-==== Trilobite
-
-These flying orb-like creatures spit fireballs and bite if you get too close.
-
-==== Pain Bringer
-
+work to do. |
+| **Trilobite** |
+These flying orb-like creatures spit fireballs and bite if you get too
+close. |
+image:images/monster-trilobite.png[Trilobite,150,150]
+| **Pain Bringer** |
 100% muscle, these guys take at least three rocket blasts to take down, and
-while you're trying they'll shower you with energy projectiles.
-
-==== Pain Lord
-
+while you're trying they'll shower you with energy projectiles. |
+image:images/monster-pain-bringer.png[Pain Bringer,150,150]
+| **Pain Lord** |
 If the Pain Bringer wasn't tough enough, this one will take five rocket
-blasts.
-
-==== Dark Soldier
-
+blasts. |
+image:images/monster-pain-lord.png[Pain Lord,150,150]
+| **Dark Soldier** |
 Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
-match with one of these guys.
-
-==== Flame Bringer
-
+match with one of these guys. |
+image:images/monster-dark-soldier.png[Dark Soldier,150,150]
+| **Flame Bringer** |
 If he's not setting you on fire, he's undoing all your hard work by bringing
-his friends back from the dead.
-
-==== Combat Slug
-
+his friends back from the dead. |
+image:images/monster-flame-bringer.png[Flame Bringer,150,150]
+| **Combat Slug** |
 These genetically-engineered super-slugs have been fitted with long distance
-flame throwers, practically making them into living, slithering tanks.
-
-==== Technospider
-
+flame throwers, practically making them into living, slithering tanks. |
+image:images/monster-combat-slug.png[Combat Slug,150,150]
+| **Technospider** |
 These spider creatures have been equipped with polaric energy cannons, making
-them a deadly challenge.
-
-==== Large Technospider
-
+them a deadly challenge. |
+image:images/monster-technospider.png[Technospider,150,150]
+| **Large Technospider** |
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
-of effort to bring down.
-
-==== Assault Tripod
-
+of effort to bring down. |
+image:images/monster-large-technospider.png[Large Technospider,150,150]
+| **Assault Tripod** |
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
-missile launcher that you'll want to avoid.
+missile launcher that you'll want to avoid. |
+image:images/monster-assault-tripod.png[Assault Tripod,150,150]
+|==========================
 
 === Environmental Hazards
 
