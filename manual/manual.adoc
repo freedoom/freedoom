@@ -87,30 +87,44 @@ ammunition, along with the maximum of each you can carry.
 
 You'll encounter a number of weapons within the game:
 
-[options="header",cols="2,1,5,1",valign="middle"]
+[options="header",cols="4,1,7,3,2",valign="middle"]
 |==========================
-| Weapon | Key | Description | Ammo
+| Weapon | Key | Description | | Ammo
 | **Fist** | 1 | If you have no ammunition, you can always fall back on punching the
-monsters with your bare hands. | None
+monsters with your bare hands. | | None
 | **Angle Grinder** | 1 | Designed for cutting through metal, the angle grinder
-also works well as a melee weapon for cutting through flesh. | None
+also works well as a melee weapon for cutting through flesh. | 
+image:../sprites/csawa0.png[Angle Grinder] |
+None
 | **Handgun** | 2 | Your starter weapon. A few shots will take down low-level
-monsters but it's best to upgrade before taking on any tougher opponents. | Bullets
+monsters but it's best to upgrade before taking on any tougher opponents. | | Bullets
 | **Pump-action Shotgun** | 3 | The main "workhorse" weapon; fires seven pellets
 in a tight cluster and is effective over both short and long ranges against
-low- and medium-level monsters. | Shells
+low- and medium-level monsters. |
+image:../sprites/shota0.png[Pump-action Shotgun] |
+Shells
 | **Double-barrelled Shotgun** | 3 | Twice as powerful as the pump-action shotgun
 but less effective at long ranges; good at short range against crowds of
-enemies. | Shells
+enemies. |
+image:../sprites/sgn2a0.png[Double-barrelled Shotgun] |
+Shells
 | **Minigun** | 4 | Conceptually like a faster version of the basic handgun, but
-eats ammo much more quickly. | Bullets
-| **Missile launcher** | 5 | Fires exploding missiles which are effective against
-higher-level monsters. Be careful not to get caught in the blast! | Missiles
+eats ammo much more quickly. |
+image:../sprites/mguna0.png[Minigun] |
+Bullets
+| **Missile Launcher** | 5 | Fires exploding missiles which are effective against
+higher-level monsters. Be careful not to get caught in the blast! |
+image:../sprites/launa0.png[Missile Launcher] |
+Missiles
 | **Polaric Energy Cannon** | 6 | Produces a continuous stream of polaric energy
-projectiles which are very effective against higher-level monsters. | Energy
+projectiles which are very effective against higher-level monsters. |
+image:../sprites/plasa0.png[Polaric Energy Cannon] |
+Energy
 | **SKAG 1337** | 7 | Experimental weapon that launches a energy ball that does a
 huge amount of damage, plus also damages other enemies in the vicinity.
-Slow to fire, but incredibly powerful. | Energy
+Slow to fire, but incredibly powerful. |
+image:../sprites/bfuga0.png[SKAG 1337] |
+Energy
 |==========================
 
 Pressing the numbered key on the keyboard switches to the given weapon (if it
