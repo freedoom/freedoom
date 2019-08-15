@@ -40,7 +40,7 @@ series of levels, in each one trying to find the way to the exit. An
 assortment of monsters will try to stop you, and you'll need to use weapons
 to defend yourself.
 Portions of the levels may be inaccessible until you find a particular key, or
-find a switch to open a locked door. This adds a puzzle element to the game in
+find a switch to open a locked door. This gives a puzzle element to the game in
 addition to the action.
 
 By default, the keyboard cursor keys will move forward and backward, and turn
@@ -68,6 +68,7 @@ right now (for example, a health power-up when you already have 100% health).
 At the bottom of the screen, you'll see the status bar, which is divided into
 the following sections:
 
+[cols="1,4",width="70%",align="center",valign="middle"]
 |==========================
 | **Ammo** | Number of units of ammunition remaining for the current weapon.
 | **Health** | If this reaches zero, you're dead! See the
@@ -86,7 +87,7 @@ ammunition, along with the maximum of each you can carry.
 
 You'll encounter a number of weapons within the game:
 
-[options="header",cols="2,1,5,1"]
+[options="header",cols="2,1,5,1",valign="middle"]
 |==========================
 | Weapon | Key | Description | Ammo
 | **Fist** | 1 | If you have no ammunition, you can always fall back on punching the
@@ -117,17 +118,108 @@ has been picked up!). Apart from the melee weapons, each weapon consumes a
 certain type of ammo, and you should be careful to look out for more ammo as
 you're exploring.
 
-TODO: Add table of ammo powerups
+[options="header",cols="2,1,1",width="50%",align="center",valign="middle"]
+|==========================
+| Ammo type | Small | Large
+| **Bullets** |
+image:../sprites/clipa0.png[Ammo Clip] |
+image:../sprites/ammoa0.png[Ammo Clip]
+| **Shells** |
+image:../sprites/cella0.png[Small Energy Recharge] |
+image:../sprites/celpa0.png[Large Energy Recharge]
+| **Missiles** |
+image:../sprites/rocka0.png[Missile] |
+image:../sprites/broka0.png[Crate of Missiles]
+| **Energy** |
+image:../sprites/cella0.png[Small Energy Recharge] |
+image:../sprites/celpa0.png[Large Energy Recharge]
+| **Backpack** |
+- |
+image:../sprites/bpaka0.png[Backpack]
+|==========================
+
+The backpack item is a special item that contains several of every ammo type
+and doubles the maximum amount of ammo you can carry.
 
 [[health]]
 === Health
 
-TODO: Add table of health powerups.
+You die if your health reaches 0%. You'll find health bonuses hidden around the
+levels which can restore you back to 100% health; 1% health bonuses can take
+you over 100% and up to 200% health.
+
+[options="header",cols="1,1,1,1",width="50%",align="center",halign="center"]
+|==========================
+| 1% | 10% | 25% | 100%
+| image:../sprites/bon1a0.png[1% Health Bonus] |
+image:../sprites/stima0.png[Small Health Pack] |
+image:../sprites/media0.png[Large Health Pack] |
+image:../sprites/soula0.png[Overdrive Sphere]
+|==========================
 
 [[armor]]
 === Armor
 
-TODO: Add table of armor powerups
+You start with 0% armor and can increase this up to 200% by collecting bonuses.
+
+[options="header",cols="1,1,1",width="50%",align="center",halign="center"]
+|==========================
+| 1% | 100% | 200%
+| image:../sprites/bon2a0.png[1% Armor Bonus] |
+image:../sprites/arm1a0.png[Light Armor Vest] |
+image:../sprites/arm2a0.png[Heavy Armor Vest]
+|==========================
+
+Normal armor absorbs one third of damage you receive. For example, suppose
+you're hit by a missile that reduces your health from 100% to 50%. If you're
+hit by the same missile while wearing 100% armor, your health will reduce to
+only 66%, but you'll lose 16% armor.
+
+The heavy armor vest has slightly different behavior: in addition to being
+worth 200% armor, it also absorbs half of all damage. For this reason, it's
+a very good idea to get your hands on a heavy armor vest if you can locate one.
+
+== Special Items
+
+You may also encounter any one of these special items while exploring:
+
+[cols="2,1,5",width="80%",align="center",valign="middle"]
+|==========================
+| **Keys** |
+image:../sprites/bkeya0.png[Blue Key]
+image:../sprites/bskua0.png[Blue Key]
+image:../sprites/rkeya0.png[Red Key]
+image:../sprites/rskua0.png[Red Key]
+image:../sprites/ykeya0.png[Yellow Key]
+image:../sprites/yskua0.png[Yellow Key] |
+Allow you to open certain locked doors and activate locked switches.
+Usually essential to be able to progress, although they sometimes allow
+access to secret areas.
+| **Night Vision Goggles** |
+image:../sprites/pvisa0.png[Night Vision Goggles] |
+Allow you to see in the dark for a limited time.
+| **Ultra-Overdrive Sphere** |
+image:../sprites/megaa0.png[Ultra-Overdrive Sphere] |
+Maxes you out to 200% health and armor.
+| **Tactical Survey Map** |
+image:../sprites/pmapa0.png[Tactical Survey Map] |
+Unlocks all areas of the map, including some secret areas that may not be
+immediately visible.
+| **Hazard Suit** |
+image:../sprites/suita0.png[Hazard Suit] |
+Protects you from the harmful radiation of damaging floors, for a limited
+time.
+| **Strength Power-Up** |
+image:../sprites/pstra0.png[Strength Power-Up] |
+Increases your health back to 100% and enhances your fists to 10x their
+normal damage, until the end of level.
+| **Stealth Sphere** |
+image:../sprites/pinsa0.png[Stealth Sphere] |
+Makes you almost invisible for a limited time.
+| **Invulnerability Sphere** |
+image:../sprites/pinva0.png[Invulnerability Sphere] |
+Makes you immune to all damage for a limited time.
+|==========================
 
 === Enemies
 
@@ -207,7 +299,29 @@ image:images/monster-assault-tripod.png[Assault Tripod,150,150]
 
 === Environmental Hazards
 
-Barrels, damaging floors, crushing ceilings.
+If the monsters weren't enough, the environment itself poses hazards which
+can hurt or even kill you!
+
+TODO: Add screenshots
+
+[frame="none",cols="1,3",valign="middle",grid="none"]
+|==========================
+| **Barrels** |
+These exploding barrels litter many of the levels. Several shots with a pistol
+are usually enough to make them detonate, damaging anything in their immediate
+vicinity. Make sure when engaged in combat to never stand too close, or a stray
+shot from an enemy may cause one to explode in your face! Be aware too of the
+potential for chain reactions when several barrels are clustered together.
+| **Damaging Floors** |
+Red-hot lava and radioactive sludge are just two of the types of damaging floor
+you can encounter in Freedoom's levels. If walking over it is necessary, try to
+find yourself a hazard suit, but be aware that they will only protect you for
+a limited time.
+| **Crushing Ceilings** |
+Many of the levels have been rigged with traps and this is just one of them. Be
+very careful not to get caught beneath one, or it will quickly crush you into a
+paste!
+|==========================
 
 === Tactical tips
 
@@ -249,4 +363,8 @@ suggestions:
 == Reusing portions of Freedoom ==
 
 TODO: Add some instructions.
+
+== Cheats ==
+
+TODO: Document cheats.
 
