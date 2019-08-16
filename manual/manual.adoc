@@ -406,25 +406,27 @@ TODO: Add section on using the map
 If the monsters weren't enough, the environment itself poses hazards which
 can hurt or even kill you!
 
-TODO: Add screenshots
-
-[frame="none",cols="1,3",valign="middle",grid="none"]
+[frame="none",cols="1,4,2",valign="middle",grid="none"]
 |==========================
 | **Barrels** |
 These exploding barrels litter many of the levels. Several shots with a pistol
 are usually enough to make them detonate, damaging anything in their immediate
 vicinity. Make sure when engaged in combat to never stand too close, or a stray
 shot from an enemy may cause one to explode in your face! Be aware too of the
-potential for chain reactions when several barrels are clustered together.
+potential for chain reactions when several barrels are clustered together. |
+image:images/hazard-barrels.png[Barrels,150,150]
 | **Damaging Floors** |
 Red-hot lava and radioactive sludge are just two of the types of damaging floor
 you can encounter in Freedoom's levels. If walking over it is necessary, try to
-find yourself a hazard suit, but be aware that they will only protect you for
-a limited time.
+find yourself a hazard suit, but be aware that it will only protect you for
+a limited time. |
+image:images/hazard-slime.png[Radioactive slime,150,150]
 | **Crushing Ceilings** |
-Many of the levels have been rigged with traps and this is just one of them. Be
-very careful not to get caught beneath one, or it will quickly crush you into a
-paste!
+Many of the levels have been rigged with traps and this is just one of them.
+These moving ceilings are often placed above tempting-looking items. Be very
+careful not to get caught beneath one, or it will quickly crush you into a
+paste! |
+image:images/hazard-crusher.png[Crushing Ceiling,150,150]
 |==========================
 
 === Tactical tips
