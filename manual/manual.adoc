@@ -114,6 +114,8 @@ messages shown when you collect an item.
 
 == How to Play
 
+image::images/c5m1-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
+
 Freedoom is a real-time first-person shooter (FPS). You'll be exploring a
 series of levels, in each one trying to find the way to the exit. An
 assortment of monsters will try to stop you, and you'll need to use weapons
@@ -149,6 +151,8 @@ right now (for example, you can't pick up a health pack when you already have
 
 At the bottom of the screen, you'll see the status bar, which is divided into
 the following sections:
+
+image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",align="center"]
 
 [cols="1,6",width="90%",align="center",valign="middle"]
 |==========================
