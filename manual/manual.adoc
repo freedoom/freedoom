@@ -31,7 +31,82 @@ following:
 
 == Using the Freedoom Menus
 
-TODO: How to use the menus.
+Freedoom's menus are fairly self-explanatory but here are some brief
+instructions. The main menu can be brought up at any time by pressing the
+_Esc_ key on your keyboard.
+
+image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]
+
+[cols="1,4",width="90%",align="center",valign="middle"]
+|==========================
+| **New game** | Start a new game, abandoning the current game (if you're
+already playing).
+| **Options** | Brings up the options menu. The appearance of this menu
+and the available options depend upon the source port you're using.
+| **Load Game** | Load a saved game.
+| **Save Game** | Save your current game, so that you can continue playing
+later.
+| **Read This!** | Brings up a help screen showing a description of the
+items you'll encounter in the game.
+| **Quit Game** | Finish playing and return to the operating system.
+|==========================
+
+When starting a new game, you may be prompted to choose which chapter to
+start playing.
+
+image::images/menu-chapter.png[Freedoom Chapter Menu,align="center",width=432,pdfwidth=50vw]
+
+If you're new to the game, start with _Outpost Outbreak_, the first
+chapter (and easiest). Once you finish one chapter, you can move on to
+the next. If you're bored with the chapter you're playing or stuck, you
+can always try playing a different chapter instead. There's no requirement
+to play chapters in order.
+
+After choosing a chapter, you need to pick a skill level. Skill level
+affects several factors in the game, most importantly the number of
+monsters you'll encounter.
+
+image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwidth=50vw]
+
+[cols="1,3,8",width="90%",align="center",valign="middle"]
+|==========================
+| 1 | **Please Don't Kill Me!** | The easiest skill level. This is
+effectively the same as _Will This Hurt?_, except that damage is halved.
+| 2 | **Will This Hurt?** | Easy skill level, a good choice if you're
+finding _Bring on the Pain_ too challenging.
+| 3 | **Bring on the Pain.** | The default skill level.
+| 4 | **Extreme Carnage** | A more challenging skill level, suited more
+for experienced players and people in search of a challenge.
+| 5 | **INSANITY!** | **Not Recommended**. This is equivalent to
+_Extreme Carnage_ except that monster attacks are up to twice as fast,
+and killed monsters come back to life after around 40 seconds.
+|==========================
+
+When you're finished playing Freedoom, press _Esc_ to bring up the main
+menu and select _Quit Game_ to exit. You may want to select _Save Game_
+first to save your progress so that you can return to where you left off
+next time you play.
+
+The following are some useful keyboard shortcuts that can save time
+accessing common menu functions.
+
+[cols="1,2,8",width="90%",align="center",valign="middle"]
+|==========================
+| **Esc** | Menu | Bring up the main menu.
+| **F1** | Help | Bring up the help screen that shows information about the
+in-game items.
+| **F2** | Save | Bring up the _Save Game_ menu.
+| **F3** | Load | Bring up the _Load Game_ menu.
+| **F4** | Volume | Bring up a menu to control volume levels.
+| **F6** | Quicksave | Save the game to your _quicksave_ slot, which saves
+time if you're repeatedly saving your progress while you play.
+| **F7** | End Game | End the current game and return to the title screen.
+| **F8** | Messages | Toggles between showing or hiding the on-screen
+messages shown when you collect an item.
+| **F9** | Quickload | Load the game from your _quicksave_ slot.
+| **F10** | Quit Game | Quit the game and return to the operating system.
+| **F11** | Brightness | Toggle the on-screen brightness level.
+|==========================
 
 == How to Play
 
@@ -68,7 +143,7 @@ right now (for example, a health power-up when you already have 100% health).
 At the bottom of the screen, you'll see the status bar, which is divided into
 the following sections:
 
-[cols="1,4",width="70%",align="center",valign="middle"]
+[cols="1,6",width="90%",align="center",valign="middle"]
 |==========================
 | **Ammo** | Number of units of ammunition remaining for the current weapon.
 | **Health** | If this reaches zero, you're dead! See the
