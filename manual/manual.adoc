@@ -279,7 +279,7 @@ The heavy armor vest has slightly different behavior: in addition to being
 worth 200% armor, it also absorbs half of all damage. For this reason, it's
 a very good idea to get your hands on a heavy armor vest if you can locate one.
 
-== Special Items
+=== Special Items
 
 You may also encounter any one of these special items while exploring:
 
