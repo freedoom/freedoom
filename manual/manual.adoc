@@ -323,9 +323,11 @@ Makes you immune to all damage for a limited time.
 
 === Enemies
 
-These are the monsters you'll encounter in the game:
+The levels are filled with monsters intent on stopping you from completing your
+mission. Here's a selection of some of these monsters you can expect to
+encounter.
 
-[frame="none",cols="1,4,3",valign="middle",grid="none"]
+[frame="none",cols="2,6,2",valign="middle",grid="none",align="center",width="90%"]
 |==========================
 | **Zombie** |
 These undead creatures are armed with a pistol and intent on your destruction.
@@ -448,14 +450,14 @@ suggestions:
   want to find walls, pillars and other forms of cover you can hide behind
   while your weapon reloads. This advice is particularly important when
   facing certain monsters which can "lock on" to you (Minigun Zombie; Flame
-  Bringer) and against whom hiding is a crucial skill.
+  Bringer); hiding from these is a crucial skill.
 
 * Many of the levels are littered with exploding barrels. While these can pose
-  a danger to you, they're equally dangerous to your opponents. Wait for an
-  enemies to walk too close to a barrel and a single shotgun blast to blow
-  up the barrel can take down several enemies at once. One barrel explosion
-  can trigger another, so it can sometimes set off a chain reaction that takes
-  down a whole crowd - but be careful that doesn't include you!
+  a danger to you, they're equally dangerous to your opponents. A single,
+  well-timed shotgun blast aimed at a barrel can take down several enemies at
+  once. One barrel explosion can trigger another, so it can sometimes set off
+  a chain reaction that takes down a whole crowd - but be careful that
+  doesn't include you!
 
 * If a monster gets injured by another monster, it'll retaliate against the
   one that injured it. If faced with a crowd of enemies, an effective strategy
