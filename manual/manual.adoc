@@ -29,6 +29,8 @@ following:
 * If launching from the command line, try
   eg. `my-favorite-port -iwad freedoom1.wad`.
 
+TODO: Add a section on `freedoom1.wad` vs `freedoom2.wad`
+
 == Using the Freedoom Menus
 
 Freedoom's menus are fairly self-explanatory but here are some brief
@@ -90,6 +92,8 @@ next time you play.
 The following are some useful keyboard shortcuts that can save time
 accessing common menu functions.
 
+TODO: Load/Save game menus?
+
 [cols="1,2,8",width="90%",align="center",valign="middle"]
 |==========================
 | **Esc** | Menu | Bring up the main menu.
@@ -122,21 +126,24 @@ By default, the keyboard cursor keys will move forward and backward, and turn
 left and right. The "control" key fires the current weapon, and the spacebar
 will open doors and activate switches. All source ports allow you to rebind
 these keys to a setup that you find more comfortable. You'll also want to look
-into using the strafe (sidestep) and run keys to better control movement.
+into using the strafe (sidestep) and run keys to better control over your
+movement.
 
-If you haven't played Freedoom before, take a few minutes to get familiar with
-the controls, and reconfigure controls as you find makes it more comfortable
-to play. Practice moving around and firing the weapon. You may encounter some
-low-level monsters, but those encountered in the first level do not present
-much of a challenge and they're a good opportunity to practice taking shots at.
+If you haven't played Freedoom before, take a few minutes when you start the
+game to get familiar with the controls, and reconfigure controls as you find
+makes it more comfortable to play. Practice moving around and firing the
+weapon. You may encounter some low-level monsters, but those encountered in
+the first level do not present much of a challenge and they're a good
+opportunity to practice taking shots at.
 
 Within the game you'll encounter various collectible items and power-ups.
-These will typically give you more ammunition for your weapons, or more health
-or armor. You can also find new weapons and some rarer power-ups which give
+These will typically give you more ammunition for your weapons, more health or
+more armor. You can also find new weapons and some rarer power-ups which give
 you special abilities. Picking something up is a simple matter of walking over
 it - an on-screen message and a brief flash of the screen indicate that you've
 done so successfully. If you don't pick it up, it's likely you don't need it
-right now (for example, a health power-up when you already have 100% health).
+right now (for example, you can't pick up a health pack when you already have
+100% health).
 
 === The Status Bar
 
@@ -386,6 +393,10 @@ missile launcher that you'll want to avoid. |
 image:images/monster-assault-tripod.png[Assault Tripod,150,150]
 |==========================
 
+=== Using the map
+
+TODO: Add section on using the map
+
 === Environmental Hazards
 
 If the monsters weren't enough, the environment itself poses hazards which
@@ -447,6 +458,9 @@ suggestions:
   other than fighting you, and the survivors will be significantly weakened.
   Be aware though, that a monster cannot be injured by a projectile launched
   by another of the same species.
+
+[[wads]]
+== Playing with fan-made WADs and mods ==
 
 [[reusing]]
 == Reusing portions of Freedoom ==
