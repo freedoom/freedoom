@@ -401,7 +401,43 @@ image:images/monster-assault-tripod.png[Assault Tripod,100,100]
 
 === Using the map
 
-TODO: Add section on using the map
+When exploring Freedoom's levels, it is sometimes possible to get lost,
+especially if the level is particularly large or complex. Fortunately, the
+map is available to help you find your way. Press the _Tab_ key during play to
+bring up the map.
+
+image::images/map.png[Map Screenshot,width="640",pdfwidth="70vw",align="center"]
+
+Your current position and orientation are shown by a white arrow.
+Areas of the map are usually color coded as follows:
+
+[frame="none",cols="1,4",valign="middle",align="center",width="60%"]
+|==========================
+| **Red** | Walls (or possibly secret doors)
+| **Yellow** | Changes in ceiling height, including doors.
+| **Brown** | Changes in floor height (eg. steps)
+| **Grey** | Undiscovered areas (not normally shown, but may be revealed
+if the _Tactical Survey Map_ item is discovered).
+|==========================
+
+While using the map, the game continues as normal, so it is wise to find a
+safe place before activating it, to avoid being ambushed by monsters. Normal
+controls continue to work as usual, but the following additional keys are
+available:
+
+[frame="none",cols="1,4",valign="middle",align="center",width="80%"]
+|==========================
+| **Tab** | Toggle Map
+| **-** | Zoom out
+| **+** | Zoom in
+| **0** | Maximum zoom out
+| **F** | Toggle whether the map follows the player. When disabled, the
+cursor keys can be used to pan the view of the map around independent of
+your current position.
+| **G** | Toggle map grid
+| **M** | Add a map bookmark at the current location.
+| **C** | Clear all bookmarks.
+|==========================
 
 === Environmental Hazards
 
