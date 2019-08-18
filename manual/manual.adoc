@@ -409,6 +409,7 @@ image:images/monster-deadflare.png[Deadflare,100,100]
 | **Summoner** |
 These mobile Deadflare production factories will ensure you always have more
 work to do. |
+image:images/monster-summoner.png[Summoner,100,100]
 | **Trilobite** |
 These flying orb-like creatures spit fireballs and bite if you get too
 close. |
