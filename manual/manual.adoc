@@ -5,15 +5,16 @@ Freedoom is made available under the modified BSD license, meaning that
 anyone is free to share it, modify it and reuse parts of it. For more
 details, see the <<reusing,reusing section>>.
 
+image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
+
 == Installing Freedoom
 
-Freedoom by itself only consists of artwork and levels; to play the game it
-needs to be paired with a source port. Fans of the original Doom games have
-created a number of such ports; a good place to look is the Doom Wiki:
-
-  <https://doomwiki.org/wiki/Source_port>
-
-The following are some good default suggestions:
+Freedoom is distributed as two files named `freedoom1.wad` and `freedoom2.wad`
+which contain the artwork, levels, music and sound effects that make up the game.
+To be played it needs to be paired with a source port. Fans of the original Doom
+games have created a number of these; the Doom Wiki's
+https://doomwiki.org/wiki/Source_port[source ports page] has a comprehensive
+list. The following are some good default suggestions:
 
 * https://zdoom.org[GZDoom] is a modern source port that includes various
   features such as a hardware renderer.
@@ -29,7 +30,11 @@ following:
 * If launching from the command line, try
   eg. `my-favorite-port -iwad freedoom1.wad`.
 
-TODO: Add a section on `freedoom1.wad` vs `freedoom2.wad`
+Freedoom is split into _Freedoom: Phase 1_ (`freedoom1.wad`) and
+_Freedoom: Phase 2_ (`freedoom2.wad`). _Phase 1_ is split into four separate
+chapters of eight levels each, while _Phase 2_ is a single, 30 level campaign.
+This gives 62 levels to play through, and there are also secret levels -- if
+you can discover how to reach them.
 
 [[menus]]
 == Using the Freedoom Menus
@@ -180,7 +185,7 @@ Within the game you'll encounter various collectible items and power-ups.
 These will typically give you more <<ammo,ammunition>> for your weapons, more
 <<health,health>> or more <<armor,armor>>. You can also find <<weapons,new
 weapons>> and some <<specialitems,rarer power-ups>> which give you special
-abilities. Picking something up is a simple matter of walking over it - an
+abilities. Picking something up is a simple matter of walking over it -- an
 on-screen message and a brief flash of the screen indicate that you've done so
 successfully. If you don't pick it up, it's likely you don't need it right
 now (for example, you can't pick up a health pack when you already have 100%
@@ -536,7 +541,7 @@ suggestions:
   a danger to you, they're equally dangerous to your opponents. A single,
   well-timed shotgun blast aimed at a barrel can take down several enemies at
   once. One barrel explosion can trigger another, so it can sometimes set off
-  a chain reaction that takes down a whole crowd - but be careful that
+  a chain reaction that takes down a whole crowd -- but be careful that
   doesn't include you!
 
 * If a monster gets injured by another monster, it'll retaliate against the
