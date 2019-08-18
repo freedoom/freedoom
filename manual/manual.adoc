@@ -31,6 +31,7 @@ following:
 
 TODO: Add a section on `freedoom1.wad` vs `freedoom2.wad`
 
+[[menus]]
 == Using the Freedoom Menus
 
 Freedoom's menus are fairly self-explanatory but here are some brief
@@ -41,18 +42,19 @@ image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfw
 
 [cols="1,4",width="90%",align="center",valign="middle"]
 |==========================
-| **New game** | Start a new game, abandoning the current game (if you're
+| <<newgame,**New game**>> | Start a new game, abandoning the current game (if you're
 already playing).
 | **Options** | Brings up the options menu. The appearance of this menu
 and the available options depend upon the source port you're using.
-| **Load Game** | Load a saved game.
-| **Save Game** | Save your current game, so that you can continue playing
+| <<savegame,**Load Game**>> | Load a saved game.
+| <<savegame,**Save Game**>> | Save your current game, so that you can continue playing
 later.
 | **Read This!** | Brings up a help screen showing a description of the
 items you'll encounter in the game.
 | **Quit Game** | Finish playing and return to the operating system.
 |==========================
 
+[[newgame]]
 === Starting a new game
 
 To start a new game, press _Esc_ to bring up the main menu, and choose
@@ -89,6 +91,7 @@ _Extreme Carnage_ except that monster attacks are up to twice as fast,
 and killed monsters come back to life after around 40 seconds.
 |==========================
 
+[[savegame]]
 === Loading and saving the game
 
 It is a good idea to save the game regularly -- for example, at the start
@@ -131,18 +134,18 @@ accessing common menu functions.
 
 [cols="1,2,8",width="90%",align="center",valign="middle"]
 |==========================
-| **Esc** | Menu | Bring up the main menu.
+| **Esc** | <<menus,Menu>> | Bring up the main menu.
 | **F1** | Help | Bring up the help screen that shows information about the
 in-game items.
-| **F2** | Save | Bring up the _Save Game_ menu.
-| **F3** | Load | Bring up the _Load Game_ menu.
+| **F2** | <<savegames,Save>> | Bring up the _Save Game_ menu.
+| **F3** | <<savegames,Load>> | Bring up the _Load Game_ menu.
 | **F4** | Volume | Bring up a menu to control volume levels.
-| **F6** | Quicksave | Save the game to your _quicksave_ slot, which saves
-time if you're repeatedly saving your progress while you play.
+| **F6** | <<savegames,Quicksave>> | Save the game to your _quicksave_ slot,
+which saves time if you're repeatedly saving your progress while you play.
 | **F7** | End Game | End the current game and return to the title screen.
 | **F8** | Messages | Toggles between showing or hiding the on-screen
 messages shown when you collect an item.
-| **F9** | Quickload | Load the game from your _quicksave_ slot.
+| **F9** | <<savegames,Quickload>> | Load the game from your _quicksave_ slot.
 | **F10** | Quit Game | Quit the game and return to the operating system.
 | **F11** | Brightness | Toggle the on-screen brightness level.
 |==========================
@@ -160,7 +163,7 @@ find a switch to open a locked door. This gives a puzzle element to the game in
 addition to the action.
 
 By default, the keyboard cursor keys will move forward and backward, and turn
-left and right. The "control" key fires the current weapon, and the spacebar
+left and right. The _Control_ key fires the current weapon, and the spacebar
 will open doors and activate switches. All source ports allow you to rebind
 these keys to a setup that you find more comfortable. You'll also want to look
 into using the strafe (sidestep) and run keys to better control over your
@@ -174,13 +177,14 @@ the first level do not present much of a challenge and they're a good
 opportunity to practice taking shots at.
 
 Within the game you'll encounter various collectible items and power-ups.
-These will typically give you more ammunition for your weapons, more health or
-more armor. You can also find new weapons and some rarer power-ups which give
-you special abilities. Picking something up is a simple matter of walking over
-it - an on-screen message and a brief flash of the screen indicate that you've
-done so successfully. If you don't pick it up, it's likely you don't need it
-right now (for example, you can't pick up a health pack when you already have
-100% health).
+These will typically give you more <<ammo,ammunition>> for your weapons, more
+<<health,health>> or more <<armor,armor>>. You can also find <<weapons,new
+weapons>> and some <<specialitems,rarer power-ups>> which give you special
+abilities. Picking something up is a simple matter of walking over it - an
+on-screen message and a brief flash of the screen indicate that you've done so
+successfully. If you don't pick it up, it's likely you don't need it right
+now (for example, you can't pick up a health pack when you already have 100%
+health).
 
 === The Status Bar
 
@@ -191,7 +195,8 @@ image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",ali
 
 [cols="1,6",width="90%",align="center",valign="middle"]
 |==========================
-| **Ammo** | Number of units of ammunition remaining for the current weapon.
+| **Ammo** | Number of units of <<ammo,ammunition>> remaining for the current
+weapon.
 | **Health** | If this reaches zero, you're dead! See the
 <<health,health section>> for power-ups you can find to replenish your health.
 | **Arms** | Which weapons you've found so far. Check out the
@@ -199,14 +204,16 @@ image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",ali
 | **Freedoomguy** | A quick visual indication of how your health is.
 | **Armor** | The more armor you have, the less your health will suffer if
 you're injured. See the <<armor,armor section>> for more information.
-| **Ammo counts** | How much you're carrying of each of the four types of
-ammunition, along with the maximum of each you can carry.
+| **Ammo counts** | How much you're carrying of each of the <<ammo,four types of
+ammunition>>, along with the maximum of each you can carry.
 |==========================
 
 [[weapons]]
 === Freedoom's Weapons
 
-You'll encounter a number of weapons within the game:
+You start the game with only a handgun, 50 bullets and your fists to fall back
+on once they run out. You'll want to find yourself some better weaponry as
+soon as possible.
 
 [options="header",cols="4,1,7,3,2",valign="middle"]
 |==========================
@@ -253,6 +260,7 @@ has been picked up!). Apart from the melee weapons, each weapon consumes a
 certain type of ammo, and you should be careful to look out for more ammo as
 you're exploring.
 
+[[ammo]]
 [options="header",cols="2,1,1",width="50%",align="center",valign="middle"]
 |==========================
 | Ammo type | Small | Large
@@ -279,7 +287,7 @@ and doubles the maximum amount of ammo you can carry.
 [[health]]
 === Health
 
-You die if your health reaches 0%. You'll find health bonuses hidden around the
+You die if your health reaches 0%. You'll find health bonuses around the
 levels which can restore you back to 100% health; 1% health bonuses can take
 you over 100% and up to 200% health.
 
@@ -314,6 +322,7 @@ The heavy armor vest has slightly different behavior: in addition to being
 worth 200% armor, it also absorbs half of all damage. For this reason, it's
 a very good idea to get your hands on a heavy armor vest if you can locate one.
 
+[[specialitems]]
 === Special Items
 
 You may also encounter any one of these special items while exploring:
@@ -358,9 +367,9 @@ Makes you immune to all damage for a limited time.
 
 === Enemies
 
-The levels are filled with monsters intent on stopping you from completing your
-mission. Here's a selection of some of these monsters you can expect to
-encounter.
+The levels are filled with monsters who have no other goal apart from stopping
+you from completing your mission. Here's a selection of some of these monsters
+who you can expect to encounter.
 
 [frame="none",cols="2,6,2",valign="middle",grid="none",align="center",width="90%"]
 |==========================
@@ -452,7 +461,7 @@ Areas of the map are usually color coded as follows:
 | **Yellow** | Changes in ceiling height, including doors.
 | **Brown** | Changes in floor height (eg. steps)
 | **Grey** | Undiscovered areas (not normally shown, but may be revealed
-if the _Tactical Survey Map_ item is discovered).
+if the <<specialitems,Tactical Survey Map>> item is discovered).
 |==========================
 
 While using the map, the game continues as normal, so it is wise to find a
@@ -491,8 +500,8 @@ image:images/hazard-barrels.png[Barrels,150,150]
 | **Damaging Floors** |
 Red-hot lava and radioactive sludge are just two of the types of damaging floor
 you can encounter in Freedoom's levels. If walking over it is necessary, try to
-find yourself a hazard suit, but be aware that it will only protect you for
-a limited time. |
+find yourself a <<specialitems,hazard suit>>, but be aware that it will only
+protect you for a limited time. |
 image:images/hazard-slime.png[Radioactive slime,150,150]
 | **Crushing Ceilings** |
 Many of the levels have been rigged with traps and this is just one of them.
@@ -541,14 +550,18 @@ suggestions:
 [[wads]]
 == Playing with fan-made WADs and mods ==
 
-TODO: Add this section.
+TODO: Write this section.
+
+== Contributing to Freedoom ==
+
+TODO: Write this section.
 
 [[reusing]]
 == Reusing portions of Freedoom ==
 
-TODO: Add some instructions.
+TODO: Write this section.
 
 == Cheats ==
 
-TODO: Document cheats.
+TODO: Write this section.
 
