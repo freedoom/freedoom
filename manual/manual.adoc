@@ -53,6 +53,11 @@ items you'll encounter in the game.
 | **Quit Game** | Finish playing and return to the operating system.
 |==========================
 
+=== Starting a new game
+
+To start a new game, press _Esc_ to bring up the main menu, and choose
+_New Game_.
+
 When starting a new game, you may be prompted to choose which chapter to
 start playing.
 
@@ -84,15 +89,45 @@ _Extreme Carnage_ except that monster attacks are up to twice as fast,
 and killed monsters come back to life after around 40 seconds.
 |==========================
 
+=== Loading and saving the game
+
+It is a good idea to save the game regularly -- for example, at the start
+of each new level. You may also want to save the game after completing a
+challenging section of a level so that you do not have to repeat it again
+if you die.
+
+image::images/menu-save-game.png[Save Game Menu,align="center",width=473,pdfwidth=50vw]
+
+To save the game, press _Esc_ to bring up the menu, select _Save Game_ and
+choose a slot to save in. Type a description for the save game and press
+_Enter_. Some source ports have a limited number of slots, in which case you
+will have to overwrite an existing saved game once there are no more slots
+available. For the same reason it's a good idea to write a good description
+for your saved game. Include the level number and something descriptive of
+where you've reached; for example, "C1M3 - Blue Key Door".
+
+The _Load Game_ menu usually looks largely identical to the _Save Game_
+menu. To restore your saved game, simply select _Load Game_ from the main
+menu and choose your saved game.
+
+If you find yourself saving the game often, you may want to use the
+_Quicksave_ feature. Press _F6_ during play to quicksave. The _Save Game_
+menu appears as usual; choosing a slot makes that your quicksave slot.
+Pressing _F6_ again in the future will overwrite your quicksave slot with
+just a couple of keystrokes. If you die you can also restore your
+quicksave slot by pressing _F9_.
+
+=== Quitting the game
+
 When you're finished playing Freedoom, press _Esc_ to bring up the main
 menu and select _Quit Game_ to exit. You may want to select _Save Game_
 first to save your progress so that you can return to where you left off
 next time you play.
 
+=== Keyboard shortcuts
+
 The following are some useful keyboard shortcuts that can save time
 accessing common menu functions.
-
-TODO: Load/Save game menus?
 
 [cols="1,2,8",width="90%",align="center",valign="middle"]
 |==========================
