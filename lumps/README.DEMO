@@ -1,0 +1,9 @@
+For Phase 1 and 2, do not have a multiplayer demo in the DEMO1 slot.
+Vanilla Doom (and some source ports) do not allow using the “load
+game” option while in a network game, and network game demos count as
+such.  The other three demo slots are fair game, since they do not
+near-immediately block out the load game functionality when starting
+Freedoom.
+
+FreeDM is exempted since it is not intended to be a single-player
+game.
