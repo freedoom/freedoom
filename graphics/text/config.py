@@ -105,8 +105,8 @@ red_graphics = {
 	'm_jkill': 'Please don\'t kill me!',
 	'm_rough': 'Will this hurt?',
 	'm_hurt': 'Bring on the pain.',
-	'm_ultra': 'Extreme Carnage',
-	'm_nmare': 'INSANITY!',
+	'm_ultra': 'Extreme Carnage.',
+	'm_nmare': 'MAYHEM!',
 
 	'm_lgttl': 'LOAD GAME',
 	'm_sgttl': 'SAVE GAME',
