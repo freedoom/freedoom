@@ -89,9 +89,9 @@ effectively the same as _Will This Hurt?_, except that damage is halved.
 | 2 | **Will This Hurt?** | Easy skill level, a good choice if you're
 finding _Bring on the Pain_ too challenging.
 | 3 | **Bring on the Pain.** | The default skill level.
-| 4 | **Extreme Carnage** | A more challenging skill level, suited more
+| 4 | **Extreme Carnage.** | A more challenging skill level, suited more
 for experienced players and people in search of a challenge.
-| 5 | **INSANITY!** | **Not Recommended**. This is equivalent to
+| 5 | **MAYHEM!** | **Not Recommended**. This is equivalent to
 _Extreme Carnage_ except that monster attacks are up to twice as fast,
 and killed monsters come back to life after around 40 seconds.
 |==========================
