@@ -142,15 +142,15 @@ accessing common menu functions.
 | **Esc** | <<menus,Menu>> | Bring up the main menu.
 | **F1** | Help | Bring up the help screen that shows information about the
 in-game items.
-| **F2** | <<savegames,Save>> | Bring up the _Save Game_ menu.
-| **F3** | <<savegames,Load>> | Bring up the _Load Game_ menu.
+| **F2** | <<savegame,Save>> | Bring up the _Save Game_ menu.
+| **F3** | <<savegame,Load>> | Bring up the _Load Game_ menu.
 | **F4** | Volume | Bring up a menu to control volume levels.
-| **F6** | <<savegames,Quicksave>> | Save the game to your _quicksave_ slot,
+| **F6** | <<savegame,Quicksave>> | Save the game to your _quicksave_ slot,
 which saves time if you're repeatedly saving your progress while you play.
 | **F7** | End Game | End the current game and return to the title screen.
 | **F8** | Messages | Toggles between showing or hiding the on-screen
 messages shown when you collect an item.
-| **F9** | <<savegames,Quickload>> | Load the game from your _quicksave_ slot.
+| **F9** | <<savegame,Quickload>> | Load the game from your _quicksave_ slot.
 | **F10** | Quit Game | Quit the game and return to the operating system.
 | **F11** | Brightness | Toggle the on-screen brightness level.
 |==========================
