@@ -426,10 +426,10 @@ image:images/monster-pain-lord.png[Pain Lord,100,100]
 Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
 match with one of these guys. |
 image:images/monster-dark-soldier.png[Dark Soldier,100,100]
-| **Flame Bringer** |
+| **Necromancer** |
 If he's not setting you on fire, he's undoing all your hard work by bringing
 his friends back from the dead. |
-image:images/monster-flame-bringer.png[Flame Bringer,100,100]
+image:images/monster-necromancer.png[Necromancer,100,100]
 | **Combat Slug** |
 These genetically-engineered super-slugs have been fitted with long distance
 flame throwers, practically making them into living, slithering tanks. |
@@ -535,8 +535,8 @@ suggestions:
 * Take cover! Monsters only attack when you're in their line of sight. You'll
   want to find walls, pillars and other forms of cover you can hide behind
   while your weapon reloads. This advice is particularly important when
-  facing certain monsters which can "lock on" to you (Minigun Zombie; Flame
-  Bringer); hiding from these is a crucial skill.
+  facing certain monsters which can "lock on" to you (Minigun Zombie;
+  Necromancer); hiding from these is a crucial skill.
 
 * Many of the levels are littered with exploding barrels. While these can pose
   a danger to you, they're equally dangerous to your opponents. A single,

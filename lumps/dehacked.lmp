@@ -211,7 +211,7 @@ CC_ARACH = Technospider
 CC_PAIN = Summoner
 CC_REVEN = Dark Soldier
 CC_MANCU = Combat Slug
-CC_ARCH = Flame Bringer
+CC_ARCH = Necromancer
 CC_SPIDER = Large Technospider
 CC_CYBER = Assault Tripod
 CC_HERO = Savior of Humanity
@@ -513,7 +513,7 @@ BGFLAT31 = AQF021
 #SAVEGAMENAME
 # Obituary texts, for ZDoom-based ports.
 OB_STEALTHBABY=%o thought %g saw a Technospider.
-OB_STEALTHVILE=%o thought %g saw a Flame Bringer.
+OB_STEALTHVILE=%o thought %g saw a Necromancer.
 OB_STEALTHBARON=%o thought %g saw a Pain Lord.
 OB_STEALTHCACO=%o thought %g saw a Trilobite
 OB_STEALTHCHAINGUY=%o thought %g saw a Minigun Zombie.
@@ -533,7 +533,7 @@ OB_BARONHIT=%o was torn open by a Pain Lord.
 OB_KNIGHTHIT=%o was gutted by a Pain Bringer.
 OB_ZOMBIE=%o was killed by a Zombie.
 OB_SHOTGUY=%o was gunned down by a Shotgun Zombie.
-OB_VILE=%o was incinerated by a Flame Bringer.
+OB_VILE=%o was incinerated by a Necromancer.
 OB_UNDEAD=%o couldn't evade the Dark Soldier's fireball.
 OB_FATSO=%o was blasted by a Combat Slug.
 OB_CHAINGUY=%o was perforated by a Minigun Zombie.
