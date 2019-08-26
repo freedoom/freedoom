@@ -8,7 +8,7 @@ PORTS="doom odamex crispy-doom prboom-plus eternity gzdoom chocolate-doom"
 
 # Just a single argument starting the command is allowed, -p, in order
 # to explicitly set a port on the command line. -- is also supported
-# so that -p can be instead sent directly to the port's argument list.
+# so that -p can be instead sent directly to the port’s argument list.
 
 if [ $# -gt 0 ]; then
     if [ "$1" = "-p" ]; then
@@ -54,7 +54,7 @@ for port in $PORTS; do
     done
 done
 
-# If we've reached this far, no engine was successfully executed.
+# If we’ve reached this far, no engine was successfully executed.
 # print message to stderr and exit with a status of 1.
 
 cat <<EOF >&2

@@ -5,7 +5,7 @@ system.
 
 == Overview
 
-Freedoom is built using 'deutex', which is a command-line tool for
+Freedoom is built using `deutex`, which is a command-line tool for
 automated building of Doom WAD files.  However, multiple different WAD
 files are built from the Freedoom material.  Therefore, the Freedoom
 build system is more complicated than a “normal” deutex build would
@@ -62,7 +62,7 @@ system:
 deutex is configured using a configuration file typically named
 +wadinfo.txt+.  In the case of Freedoom, multiple different WADs are
 built from the common material, with slightly different settings for
-each.  Therefore, a 'master configuration file' named +buildcfg.txt+
+each.  Therefore, a _master configuration file_ named +buildcfg.txt+
 is used to generate configuration files for each individual WAD to
 build.
 
@@ -80,7 +80,7 @@ based on the type of output target desired:
 The texture configuration file is used to generate the texture lumps.
 These are +texture1.lmp+ (texture directory), +pnames.lmp+ (list of
 patch names) and +texture2.lmp+ (Doom I only). They are generated
-by the +build-textures+ script; deutex's internal texture builder
+by the +build-textures+ script; deutex’s internal texture builder
 is deliberately not used for compatibility reasons.
 
 Similarly to the build configuration file, different textures are
@@ -208,13 +208,13 @@ the authentic retro feel.
 
 Found in +lumps/dmxgus+, this script builds the +DMXGUS+ lump used for
 GUS MIDI playback. The GUS (Gravis UltraSound) card was a gaming sound
-card popular in the '90s. As with the +GENMIDI+ lump, few people are
+card popular in the ’90s. As with the +GENMIDI+ lump, few people are
 still using a real GUS card nowadays, but several source ports emulate
 them and require this file.
 
 == deutex
 
-'deutex' is the tool used to generate the WAD files.  It processes a
+`deutex` is the tool used to generate the WAD files.  It processes a
 file typically named +wadinfo.txt+, reading files from the following
 directories to generate the WAD:
 
@@ -238,7 +238,7 @@ around.  Some of them are listed here.
 
  * deutex does not allow the exact path to the +texture1.txt+ file to
    be specified in the configuration file; this used to be a problem
-   but the Freedoom's texture lumps are now built using a custom
+   but the Freedoom’s texture lumps are now built using a custom
    script.
 
  * deutex requires an existing IWAD file in order to build WAD files,

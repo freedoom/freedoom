@@ -48,7 +48,7 @@ https://zdoom.org/[GZDoom].  This engine offers good support for
 single-player, multi-player, and the majority of mods created for both
 _Doom_ and _Freedoom_.
 
-On Windows, you should place _Freedoom_'s data files (those ending
+On Windows, you should place _Freedoom_’s data files (those ending
 with +.wad+) alongside the engine (eg, +odamex.exe+).  On Unix-like
 systems, these data files should go in either +/usr/share/games/doom+
 or your home directory.  If _Freedoom_ comes packaged as part of your
@@ -72,10 +72,10 @@ of the following options should solve it:
     line, or adding it to an application shortcut.
   * Use the +DOOMWADPATH+ environment variable.  Many engines support
     this variable to add directories and/or files to their search
-    path.  The exact syntax matches your operating system's normal
+    path.  The exact syntax matches your operating system’s normal
     +PATH+ environment variable.
   * Rename the game files.  This may be a bit crude, but you can
-    rename the files to match those of _Doom_'s.  This is often the
+    rename the files to match those of _Doom_’s.  This is often the
     easiest quick-fix, although it is normally desirable to use one of
     the above methods if possible.
 
@@ -147,7 +147,7 @@ The general rules go as follows:
 Levels for _Phase 1_ and _Phase 2_ must be compatible with any limit
 removing engine.  This means that you may exceed the limits of the
 original _Doom_, but do not depend on any additional mapping features.
-Levels should be in _Doom_'s original format, not in “Hexen”-format.
+Levels should be in _Doom_’s original format, not in “Hexen”-format.
 
 It is a goal that future versions of _Freedoom_ will be entirely
 vanilla-compatible, not even allowing expanded limits.  Keeping this
@@ -169,7 +169,7 @@ It is sensible to also heed the following guidelines:
   * Try to make levels appropriately difficult for their position
     within the progression of the game.  Also bear in mind that not
     all players may be as skilled a player as you.
-  * Do not use tricks that exploit _Doom_'s software renderer; some
+  * Do not use tricks that exploit _Doom_’s software renderer; some
     engines, especially those that use hardware accelerated rendering,
     may not render it properly.  Examples of tricks to avoid include
     those used to simulate 3D bridges and “deep water” effects.
@@ -193,7 +193,7 @@ It is sensible to also heed the following guidelines:
 Graphics should generally have the same color and size as the original
 _Doom_ graphics, as to remain compatible with mods.  Otherwise, levels
 may end up looking like a nightmare in design.  They may be
-thematically different as long as it doesn't clash.
+thematically different as long as it doesn’t clash.
 
 _Doom_ uses a fictional corporation abbreviated as “UAC:” this is
 trademarked by id Software and cannot be used in _Freedoom_.  Instead,
@@ -212,7 +212,7 @@ patches, but keep in mind:
     for Vim (perhaps other editors, too) to automatically re-format
     text.
   * Text is kept at 72 characters wide.  In Vim, you can set the
-    editor to automatically insert line breaks as you're typing by
+    editor to automatically insert line breaks as you’re typing by
     performing `set textwidth=72`.  Special exceptions to the width
     rule might be allowed when necessary (for example, inserting long
     URLs).
@@ -252,7 +252,7 @@ You can also commit on a clone of the _Freedoom_ repository, although
 this is a technical task and it is okay to let other _Freedoom_
 maintainers to do it instead: that is our normal mode of operation.
 However, pull requests are much appreciated and you may submit them in
-any manner you wish, with GitHub's direct pull requests being the
+any manner you wish, with GitHub’s direct pull requests being the
 simplest, but by far not the only means.
 
 Freedoom uses the commit message style commonly seen in distributed
