@@ -76,6 +76,7 @@ the next. If you're bored with the chapter you're playing or stuck, you
 can always try playing a different chapter instead. There's no requirement
 to play chapters in order.
 
+[[skill]]
 After choosing a chapter, you need to pick a skill level. Skill level
 affects several factors in the game, most importantly the number of
 monsters you'll encounter.
@@ -569,5 +570,26 @@ TODO: Write this section.
 
 == Cheats ==
 
-TODO: Write this section.
+If you're finding the game too difficult, you can always try playing at
+an <<skill,easier skill level>>. However, if that's not enough, or if you just
+want to have fun feeling like an unstoppable killing machine, there are a
+number of cheats that you can turn to:
+
+[cols="1,4",width="90%",align="center",valign="middle"]
+|==========================
+| **IDDQD** | God mode. Makes you invulnerable to all damage.
+| **IDFA** | Gives all weapons and ammo.
+| **IDKFA** | All weapons, ammo and keys.
+| **IDCLIP** | Turn on noclip mode, which lets you walk through walls.
+| **IDDT** | Reveals full map; type twice to reveal all enemies and items.
+| **IDCLEVxy** | Warp to CxMy (Phase 1) or MAPxy (Phase 2).
+| **IDMUSxy** | Change music to that of CxMy (Phase 1) or MAPxy (Phase 2).
+| **IDCHOPPERS** | Gives the angle grinder weapon.
+| **IDBEHOLDV** | Gives the invulnerability sphere powerup.
+| **IDBEHOLDS** | Gives the strength powerup.
+| **IDBEHOLDI** | Gives the stealth sphere powerup.
+| **IDBEHOLDR** | Gives the hazard suit powerup.
+| **IDBEHOLDM** | Gives the tactical survey map.
+| **IDBEHOLDL** | Gives the night vision goggles.
+|==========================
 
