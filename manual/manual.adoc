@@ -36,6 +36,8 @@ chapters of eight levels each, while _Phase 2_ is a single, 30 level campaign.
 This gives 62 levels to play through, and there are also secret levels -- if
 you can discover how to reach them.
 
+<<<
+
 [[menus]]
 == Using the Freedoom Menus
 
@@ -155,6 +157,8 @@ messages shown when you collect an item.
 | **F10** | Quit Game | Quit the game and return to the operating system.
 | **F11** | Brightness | Toggle the on-screen brightness level.
 |==========================
+
+<<<
 
 == How to Play
 
@@ -554,19 +558,27 @@ suggestions:
   Be aware though, that a monster cannot be injured by a projectile launched
   by another of the same species.
 
+<<<
+
 [[wads]]
 == Playing with fan-made WADs and mods ==
 
 TODO: Write this section.
 
+<<<
+
 == Contributing to Freedoom ==
 
 TODO: Write this section.
+
+<<<
 
 [[reusing]]
 == Reusing portions of Freedoom ==
 
 TODO: Write this section.
+
+<<<
 
 == Cheats ==
 
