@@ -563,7 +563,55 @@ suggestions:
 [[wads]]
 == Playing with fan-made WADs and mods ==
 
-TODO: Write this section.
+.Scythe MAP09 playing with Freedoom.
+image::images/scythe-map09.png[Scythe MAP09,width="640",pdfwidth="70vw",align="center"]
+
+One of the nicest features of Freedoom is its compatibility with the
+catalog of thousands of fan-made levels made for the classic _Doom_ games.
+With some exceptions, most popular mods and levels for _Doom_ and _Doom II_
+can also be played with Freedoom.
+The largest repository of _Doom_ mods is the idgames archive, and a
+browsing interface for the archive
+https://www.doomworld.com/idgames/[can be found on Doomworld].
+
+Playing a `.wad` file is usually fairly simple. For mods designed for the
+original _Doom_, use Freedoom: Phase 1 (`freedoom1.wad`); for others designed
+for _Doom 2_ or _Final Doom_, use Freedoom: Phase 2 (`freedoom2.wad`).
+If you're using the command line, use the `-file` parameter when you start the
+game. For example, to load the file `scythe.wad`:
+
+  my-favorite-port -iwad freedoom2.wad -file scythe.wad
+
+If you're not using the command line, you can try dragging and dropping the
+`.wad` file onto the source port icon in your file manager -- several
+source ports support this.
+
+=== Suggestions
+
+Over more than two decades, literally thousands of _Doom_ levels have been
+made, and there are so many that it may seem difficult to know where to
+start. The following are some suggestions for where to look for the best
+content:
+
+* Doomworld's https://www.doomworld.com/10years/bestwads/[Top 100 WADs Of All Time]
+was written in 2003 and aimed to list the best works from the first 10
+years of fan-made mods. It's still a great list of classic mods.
+
+* https://www.doomworld.com/cacowards/[The Cacowards] are Doomworld's
+annual award ceremony that recognizes the best releases from the _Doom_
+community over the past year. This is a great way to find out about more
+recent developments, including some of the more unusual mods that people
+are releasing.
+
+* The Doom Wiki's https://doomwiki.org/wiki/List_of_notable_WADs[List of
+notable WADs] contains a rather extensive list of fan-made WADs. The Doom
+Wiki includes extensive information about such mods including screenshots,
+maps and per-level statistics, so it's a useful entrypoint to discover
+interesting mods.
+
+* Doomworld's interface to the idgames archive includes the ability to
+list the https://www.doomworld.com/idgames/index.php?top[top levels] based
+on five star rankings by visitors to the site.
 
 <<<
 
