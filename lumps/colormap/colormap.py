@@ -132,8 +132,9 @@ def invert_colors(colors):
 	result = []
 
 	for color in colors:
-		average = (color[0] + color[1] + color[2]) // 3
-		inverse = 255 - average
+		# Formula comes from ITU-R recommendation BT.709
+		gray = round(color[0]*0.2126 + color[1]*0.7152 + color[2]*0.0722)
+		inverse = 255 - gray
 
 		result.append((inverse, inverse, inverse))
 

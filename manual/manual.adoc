@@ -92,9 +92,9 @@ effectively the same as _Will This Hurt?_, except that damage is halved.
 | 2 | **Will This Hurt?** | Easy skill level, a good choice if you're
 finding _Bring on the Pain_ too challenging.
 | 3 | **Bring on the Pain.** | The default skill level.
-| 4 | **Extreme Carnage** | A more challenging skill level, suited more
+| 4 | **Extreme Carnage.** | A more challenging skill level, suited more
 for experienced players and people in search of a challenge.
-| 5 | **INSANITY!** | **Not Recommended**. This is equivalent to
+| 5 | **MAYHEM!** | **Not Recommended**. This is equivalent to
 _Extreme Carnage_ except that monster attacks are up to twice as fast,
 and killed monsters come back to life after around 40 seconds.
 |==========================
@@ -145,15 +145,15 @@ accessing common menu functions.
 | **Esc** | <<menus,Menu>> | Bring up the main menu.
 | **F1** | Help | Bring up the help screen that shows information about the
 in-game items.
-| **F2** | <<savegames,Save>> | Bring up the _Save Game_ menu.
-| **F3** | <<savegames,Load>> | Bring up the _Load Game_ menu.
+| **F2** | <<savegame,Save>> | Bring up the _Save Game_ menu.
+| **F3** | <<savegame,Load>> | Bring up the _Load Game_ menu.
 | **F4** | Volume | Bring up a menu to control volume levels.
-| **F6** | <<savegames,Quicksave>> | Save the game to your _quicksave_ slot,
+| **F6** | <<savegame,Quicksave>> | Save the game to your _quicksave_ slot,
 which saves time if you're repeatedly saving your progress while you play.
 | **F7** | End Game | End the current game and return to the title screen.
 | **F8** | Messages | Toggles between showing or hiding the on-screen
 messages shown when you collect an item.
-| **F9** | <<savegames,Quickload>> | Load the game from your _quicksave_ slot.
+| **F9** | <<savegame,Quickload>> | Load the game from your _quicksave_ slot.
 | **F10** | Quit Game | Quit the game and return to the operating system.
 | **F11** | Brightness | Toggle the on-screen brightness level.
 |==========================
@@ -231,7 +231,7 @@ soon as possible.
 | **Fist** | 1 | If you have no ammunition, you can always fall back on punching the
 monsters with your bare hands. | | None
 | **Angle Grinder** | 1 | Designed for cutting through metal, the angle grinder
-also works well as a melee weapon for cutting through flesh. | 
+also works well as a melee weapon for cutting through flesh. |
 image:../sprites/csawa0.png[Angle Grinder] |
 None
 | **Handgun** | 2 | Your starter weapon. A few shots will take down low-level
@@ -278,8 +278,8 @@ you're exploring.
 image:../sprites/clipa0.png[Ammo Clip] |
 image:../sprites/ammoa0.png[Ammo Clip]
 | **Shells** |
-image:../sprites/cella0.png[Small Energy Recharge] |
-image:../sprites/celpa0.png[Large Energy Recharge]
+image:../sprites/shela0.png[Shotgun Shells] |
+image:../sprites/sboxa0.png[Box of Shotgun Shells]
 | **Missiles** |
 image:../sprites/rocka0.png[Missile] |
 image:../sprites/broka0.png[Crate of Missiles]
@@ -431,10 +431,10 @@ image:images/monster-pain-lord.png[Pain Lord,100,100]
 Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
 match with one of these guys. |
 image:images/monster-dark-soldier.png[Dark Soldier,100,100]
-| **Flame Bringer** |
+| **Necromancer** |
 If he's not setting you on fire, he's undoing all your hard work by bringing
 his friends back from the dead. |
-image:images/monster-flame-bringer.png[Flame Bringer,100,100]
+image:images/monster-necromancer.png[Necromancer,100,100]
 | **Combat Slug** |
 These genetically-engineered super-slugs have been fitted with long distance
 flame throwers, practically making them into living, slithering tanks. |
@@ -544,8 +544,8 @@ suggestions:
 * Take cover! Monsters only attack when you're in their line of sight. You'll
   want to find walls, pillars and other forms of cover you can hide behind
   while your weapon reloads. This advice is particularly important when
-  facing certain monsters which can "lock on" to you (Minigun Zombie; Flame
-  Bringer); hiding from these is a crucial skill.
+  facing certain monsters which can "lock on" to you (Minigun Zombie;
+  Necromancer); hiding from these is a crucial skill.
 
 * Many of the levels are littered with exploding barrels. While these can pose
   a danger to you, they're equally dangerous to your opponents. A single,
