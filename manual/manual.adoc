@@ -537,6 +537,10 @@ suggestions:
   skill when you can easily circle around an enemy and dodge its projectiles
   while simultaneously keeping your weapon trained on it.
 
+* Play with headphones. The game's stereo separation can give helpful audio
+  cues about the positions of enemies and alert you to incoming projectiles.
+  Headphones give you a more precise way to pick up on these cues.
+
 * Take cover! Monsters only attack when you're in their line of sight. You'll
   want to find walls, pillars and other forms of cover you can hide behind
   while your weapon reloads. This advice is particularly important when
@@ -551,12 +555,20 @@ suggestions:
   doesn't include you!
 
 * If a monster gets injured by another monster, it'll retaliate against the
-  one that injured it. If faced with a crowd of enemies, an effective strategy
-  can be to stand in just the right place so that those at the back shoot
-  those at the front. Do it right and they'll spend more time fighting each
-  other than fighting you, and the survivors will be significantly weakened.
-  Be aware though, that a monster cannot be injured by a projectile launched
-  by another of the same species.
+  one that injured it (this is called _monster in-fighting_). If faced with a
+  crowd of enemies, an effective strategy can be to stand in just the right
+  place so that those at the back shoot those at the front. Do it right and
+  they'll spend more time fighting each other than fighting you, and the
+  survivors will be significantly weakened.  Be aware though, that a monster
+  cannot be injured by a projectile launched by another of the same species.
+
+* Sometimes you'll face crowds of monsters, which can be overwhelming and also
+  drain your ammo supplies. Learn to master crowd control. The primary
+  instinct of all monsters is to move towards you. Circle around the crowd
+  continually -- this encourages them to cluster in a single spot that's
+  easier for you to target. It also encourages monster in-fighting; if done
+  effectively, they'll spend their energy killing each other and you'll save
+  on ammunition.
 
 <<<
 
