@@ -560,3 +560,8 @@ OB_MPBFG_SPLASH=%o couldn't hide from %k's SKAG.
 OB_MPTELEFRAG=%o stood where %k was teleporting.
 OB_RAILGUN=%o was railed by %k.
 OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
+
+# Redefine IDSPISPOPD to IDCLIP, so it works the same in Phase 1 and 2
+# Probably unnecessary for anything that’s not Chocolate Doom
+Cheat 0
+No Clipping 1 = idclip
