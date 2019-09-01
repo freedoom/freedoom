@@ -101,7 +101,6 @@ MAP29   = dm29
 MAP30   = dm30
 MAP31   = dm31
 MAP32   = dm32
-MAP33   = dummy
 
 #else   /* #ifdef FREEDM */
 
@@ -137,7 +136,6 @@ MAP29
 MAP30
 MAP31
 MAP32
-MAP33 = dummy
 
 #endif /* #ifdef FREEDM */
 
@@ -569,19 +567,15 @@ D_ULTIMA = D_DM32
 ; List of Pictures (with insertion point)
 [graphics]
 
-; DMENUPIC is for Doom 3: BFG Edition
 #ifdef ULTDOOM
 TITLEPIC 0 0          = fd1title
-DMENUPIC 0 0          = fd1title
 M_DOOM   13 -16
 #else
 #ifdef FREEDM
 TITLEPIC 0 0          = fdmtitle
-DMENUPIC 0 0          = fdmtitle
 M_DOOM   40 -5        = m_dm
 #else
 TITLEPIC 0 0          = fd2title
-DMENUPIC 0 0          = fd2title
 M_DOOM   13 -16
 #endif
 #endif
@@ -844,19 +838,6 @@ M_VIDEO		0	1
 M_WAD		0	1
 M_WADOPT	0	1
 
-; Doom 3: BFG Edition support
-M_ACPT		0	1
-M_CAN		0	1
-M_CHG		0	1
-M_EXITO		0	1
-
-#ifndef ULTDOOM
-; Episode titles don’t make much sense in Phase 2, but it allows
-; BFG Edition to not crash when starting a new game.
-M_EPI1		0	0 = M_EPI5
-M_EPI2		0	0 = M_EPI6
-#endif
-
 BRDR_TL	-5	-5
 BRDR_T	0	-5
 BRDR_TR	0	-5
@@ -1068,7 +1049,6 @@ CWILV29
 CWILV24
 CWILV30
 CWILV31
-CWILV32
 
 #else  /* #ifdef FREEDM */
 
@@ -1106,7 +1086,6 @@ CWILV29 = DMWILV29
 CWILV24 = DMWILV24
 CWILV30 = DMWILV30
 CWILV31 = DMWILV31
-CWILV32 = DMWILV32
 
 #endif
 

@@ -99,8 +99,6 @@ red_graphics = {
 	'm_epi2': 'Military Labs',
 	'm_epi3': 'Event Horizon',
 	'm_epi4': 'Double Impact',
-	'm_epi5': 'Phase 2',
-	'm_epi6': 'The Missing Levels',
 
 	'm_jkill': 'Please don\'t kill me!',
 	'm_rough': 'Will this hurt?',
@@ -196,12 +194,6 @@ red_graphics = {
 	# match the other main menu graphics. Eternity Engine doesn't
 	# use it any more, and on SMMU there's enough space for it.
 	'm_multi': 'Multiplayer',
-
-	# Doom 3: BFG Edition support
-	'm_acpt': 'accept',
-	'm_can': 'cancel',
-	'm_chg': 'change game',
-	'm_exito': 'are you sure?',
 }
 
 def read_bex_lump(filename):
@@ -251,7 +243,7 @@ for e in range(4):
 		update_level_name('wilv%i%i' % (e, m), freedoom_bex,
 		                  'HUSTR_E%iM%i' % (e + 1, m + 1))
 
-for m in range(33):
+for m in range(32):
 	# HUSTR_1 => cwilv00
 	update_level_name('cwilv%02i' % m, freedoom_bex, 'HUSTR_%i' % (m + 1))
 	# HUSTR_1 => dmwilv00 (from freedm.bex)
