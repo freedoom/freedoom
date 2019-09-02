@@ -33,23 +33,15 @@ force:
 lumps/freedoom.lmp lumps/freedm.lmp: force
 	echo $(VERSION) > $@
 
-# update wadinfo.txt
-
-wadinfo.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM2 < $< > $@
-wadinfo_phase1.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM1 -DULTDOOM < $< > $@
-wadinfo_phase2.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM2 < $< > $@
-wadinfo_freedm.txt : buildcfg.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
-	$(CPP) -P -DFREEDM < $< > $@
-
 # deutex doesnt allow redirects for the filenames in the texture
 # entries, so we have to change the texture1 symlink to point
 # to whichever wad we are working on
 
 #---------------------------------------------------------
 # freedm iwad
+
+wadinfo_freedm.txt : buildcfg.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
+	$(CPP) -P -DFREEDM < $< > $@
 
 $(FREEDM): wadinfo_freedm.txt subdirs
 	@mkdir -p $(WADS)
@@ -59,6 +51,9 @@ $(FREEDM): wadinfo_freedm.txt subdirs
 #---------------------------------------------------------
 # phase 1 (udoom) iwad
 
+wadinfo_phase1.txt: buildcfg.txt subdirs lumps/freedoom.lmp
+	$(CPP) -P -DDOOM1 -DULTDOOM < $< > $@
+
 $(FREEDOOM1): wadinfo_phase1.txt subdirs
 	@mkdir -p $(WADS)
 	rm -f $@
@@ -66,6 +61,9 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs
 
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
+
+wadinfo_phase2.txt: buildcfg.txt subdirs lumps/freedoom.lmp
+	$(CPP) -P -DDOOM2 < $< > $@
 
 $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
@@ -103,8 +101,9 @@ endif
 clean: wad-image-clean
 	rm -f	*.html deutex.log $(OBJS) \
 		./COPYING.txt ./CREDITS.txt \
-		./wadinfo.txt ./wadinfo_phase1.txt \
-		./wadinfo_phase2.txt ./wadinfo_freedm.txt \
+		./wadinfo_phase1.txt \
+		./wadinfo_phase2.txt \
+		./wadinfo_freedm.txt \
 		./lumps/freedoom.lmp \
 		./lumps/freedm.lmp
 	-rmdir $(WADS)
