@@ -16,7 +16,7 @@ OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 all: $(OBJS)
 
 subdirs:
-	$(MAKE) -C lumps
+	$(MAKE) -C lumps/dehacked # graphics/text depends on generated dehacked files
 	$(MAKE) VERSION=$(VERSION) -C graphics/text
 	$(MAKE) -C lumps/playpal
 	$(MAKE) -C lumps/colormap
@@ -111,6 +111,7 @@ clean: wad-image-clean
 
 	$(MAKE) -C dist clean
 	$(MAKE) -C graphics/text clean
+	$(MAKE) -C lumps/dehacked clean
 	$(MAKE) -C lumps/playpal clean
 	$(MAKE) -C lumps/colormap clean
 	$(MAKE) -C lumps/genmidi clean

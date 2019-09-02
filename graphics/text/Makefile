@@ -55,7 +55,7 @@ TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
 all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
 
 # Generate the menu and level strings
-text_strings: config.py fontchars ../../lumps/dehacked.lmp
+text_strings: config.py fontchars ../../lumps/dehacked/dehacked.txt
 	python textgen
 	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
 
