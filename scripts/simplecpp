@@ -16,7 +16,7 @@
 #
 # #if .. #endif / #ifdef .. #endif
 #
-# Specify a list of options set, eg #ifdef DOOM2 || ULTDOOM || SHAREWARE
+# Specify a list of options set, eg #ifdef PHASE1 || PHASE2
 # The block is only displayed if one of the options is set
 #
 # #ifn .. #endif / #ifndef .. #endif

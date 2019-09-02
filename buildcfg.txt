@@ -1,33 +1,33 @@
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; Freedoom wadinfo build file
-; This is parsed by cpp which allows configuring for doom1 shareware,
-; doom1, ultimate doom, and doom2
 ;
-; -DDOOM2 to build for DOOM 2
-; -DULTDOOM to build for ultimate doom
-; -DSHAREWARE to build for shareware doom
+; This is parsed by cpp which allows configuring for Phase 1, Phase 2,
+; and FreeDM
+;
+; -DPHASE2 to build for Phase 2
+; -DPHASE1 to build for Phase 1
 ;
 
 ; sanity checks:
 
 #ifdef FREEDM
-#define DOOM2
+#define PHASE2
 #endif
 
-#ifdef DOOM2
-#define ULTDOOM_OR_DOOM2
-#undef ULTDOOM
+#ifdef PHASE2
+#define PHASE1_OR_PHASE2
+#undef PHASE1
 #endif
 
-#ifdef ULTDOOM
-#define ULTDOOM_OR_DOOM2
+#ifdef PHASE1
+#define PHASE1_OR_PHASE2
 #endif
 
 ; List of levels
 [levels]
 
-#ifndef DOOM2
+#ifndef PHASE2
 E1M1 = c1m1
 E1M2 = c1m2
 E1M3 = c1m3
@@ -65,7 +65,7 @@ E4M7 = c4m7
 E4M8 = c4m8
 E4M9 = c4m9
 
-#else /* #ifndef DOOM2 */
+#else /* #ifndef PHASE2 */
 
 #ifdef FREEDM
 
@@ -139,7 +139,7 @@ MAP32
 
 #endif /* #ifdef FREEDM */
 
-#endif /* #ifndef DOOM2 */
+#endif /* #ifndef PHASE2 */
 
 ; List of data Lumps
 [lumps]
@@ -157,7 +157,7 @@ ZMAPINFO = fdmmpinf
 ENDOOM = endoomdm
 FREEDM
 #else
-#ifdef ULTDOOM
+#ifdef PHASE1
 DEHACKED = p1_deh
 #else
 DEHACKED = p2_deh
@@ -165,13 +165,13 @@ DEHACKED = p2_deh
 ENDOOM
 #endif
 
-#ifdef DOOM2
+#ifdef PHASE2
 DMXGUSC = dmxgus
 #else
 DMXGUS
 #endif
 
-#ifdef DOOM2
+#ifdef PHASE2
 
 #ifdef FREEDM
 DEMO1 = demo1_dm
@@ -185,18 +185,18 @@ DEMO3 = demo3_p2
 DEMO4 = demo4_p2
 #endif
 
-#else /* not DOOM2 */
+#else /* not PHASE2 */
 
 DEMO1 = demo1_p1
 DEMO2 = demo2_p1
 DEMO3 = demo3_p1
 DEMO4 = demo4_p1
 
-#endif /* #ifdef DOOM2 */
+#endif /* #ifdef PHASE2 */
 
 ; Textures:
 
-#ifndef DOOM2
+#ifndef PHASE2
 
 TEXTURE1 = fd1txtr1
 TEXTURE2 = fd1txtr2
@@ -287,7 +287,7 @@ DSSPIDTH
 DSHOOF
 DSMETAL
 
-#ifdef DOOM2
+#ifdef PHASE2
 DSDSHTGN
 DSDBOPN
 DSDBCLS
@@ -328,7 +328,7 @@ DSSKEACT
 DSSKESIT
 DSSKEATK
 DSRADIO
-#endif /* #ifdef DOOM2 */
+#endif /* #ifdef PHASE2 */
 
 ; pc speaker effects
 
@@ -400,7 +400,7 @@ DPSPIDTH
 DPHOOF
 DPMETAL
 
-#ifdef DOOM2
+#ifdef PHASE2
 DPDSHTGN
 DPDBOPN
 DPDBCLS
@@ -442,13 +442,13 @@ DPSKESIT
 DPSKEATK
 DPRADIO
 
-#endif /* #ifdef DOOM2 */
+#endif /* #ifdef PHASE2 */
 
 ; List of Musics
 
 [musics]
 
-#ifndef DOOM2
+#ifndef PHASE2
 
 D_E1M1 = D_C1M1
 D_E1M2 = D_C1M2
@@ -486,7 +486,7 @@ D_E3M9 = D_C3M9
 
 D_BUNNY
 
-#else  /* #ifndef DOOM2 */
+#else  /* #ifndef PHASE2 */
 
 ; doom 2 music
 D_READ_M
@@ -566,12 +566,12 @@ D_EVIL   = D_DM31
 D_ULTIMA = D_DM32
 
 #endif /* #ifdef FREEDM */
-#endif /* #ifndef DOOM2 */
+#endif /* #ifndef PHASE2 */
 
 ; List of Pictures (with insertion point)
 [graphics]
 
-#ifdef ULTDOOM
+#ifdef PHASE1
 TITLEPIC 0 0          = fd1title
 M_DOOM   13 -16
 #else
@@ -584,10 +584,10 @@ M_DOOM   13 -16
 #endif
 #endif
 
-#ifdef DOOM2
+#ifdef PHASE2
 HELP	0	0
 #endif
-#ifndef DOOM2
+#ifndef PHASE2
 HELP1	0	0     = help
 HELP2	0	0     = credit
 #endif
@@ -887,7 +887,7 @@ WIVCTMS	0	0
 WISCRT2	0	0
 WIENTER	0	0
 
-#ifndef DOOM2
+#ifndef PHASE2
 M_EPI1	0	0
 M_EPI2	0	0
 M_EPI3	0	0
@@ -1017,7 +1017,7 @@ WIA20500 = empty
 WIA20501 = empty
 WIA20502 = empty
 
-#else /* #ifndef DOOM2 */
+#else /* #ifndef PHASE2 */
 
 #ifndef FREEDM
 
@@ -1093,9 +1093,9 @@ CWILV31 = DMWILV31
 
 #endif
 
-#endif /* #ifdef DOOM2 */
+#endif /* #ifdef PHASE2 */
 
-#ifdef ULTDOOM_OR_DOOM2
+#ifdef PHASE1_OR_PHASE2
 ; interpic is used by ultimate doom and doom2
 INTERPIC	0	0
 #endif
@@ -1104,7 +1104,7 @@ INTERPIC	0	0
 
 [sprites]
 
-#ifdef DOOM2
+#ifdef PHASE2
 
 BBRNA0						; boss brain
 BBRNB0
@@ -1690,7 +1690,7 @@ VILE]6	44	109
 VILE]7	44	109
 VILE]8	44	109
 
-#endif /* #ifdef DOOM2 */
+#endif /* #ifdef PHASE2 */
 
 ; The following are normal Doom monsters:
 
@@ -2457,7 +2457,7 @@ SMITA0	31	67
 TRE1A0	25	65
 TRE2A0	76	120
 
-#ifdef DOOM2
+#ifdef PHASE2
 
 ; These items only appear in Doom 2
 
@@ -2599,7 +2599,7 @@ YSKUB0	6	17
 
 [patches]
 
-#ifdef DOOM1
+#ifdef PHASE1
 #include "lumps/textures/phase1/pnames.txt"
 #else
 #ifdef FREEDM

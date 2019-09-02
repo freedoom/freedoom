@@ -52,7 +52,7 @@ $(FREEDM): wadinfo_freedm.txt subdirs
 # phase 1 (udoom) iwad
 
 wadinfo_phase1.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM1 -DULTDOOM < $< > $@
+	$(CPP) -P -DPHASE1 < $< > $@
 
 $(FREEDOOM1): wadinfo_phase1.txt subdirs
 	@mkdir -p $(WADS)
@@ -63,7 +63,7 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs
 # phase 2 (doom2) iwad
 
 wadinfo_phase2.txt: buildcfg.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DDOOM2 < $< > $@
+	$(CPP) -P -DPHASE2 < $< > $@
 
 $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
