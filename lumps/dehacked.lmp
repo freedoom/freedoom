@@ -33,6 +33,7 @@ Sprite subnumber = 32773
 #   *allow-extended-strings*
 
 [PARS]
+#ifndef FREEDM
 # Par times. The BEX format requires these to be specified in number
 # of seconds, but for convenience we include the min:sec value in a
 # comment. Comment also indicates when the run was done - ideally
@@ -97,6 +98,41 @@ par 29  300  # 05:00  - Voros for v0.11 - 2017/02
 par 30   60  # 01:00  - Voros for v0.11 - 2017/02
 par 31   60  # 01:00  - Voros for v0.11 - 2017/02
 par 32  210  # 03:30  - Voros for v0.11 - 2017/02
+#else
+# Par times don't matter so much for FreeDM, just set all to zero.
+par  1 0
+par  2 0
+par  3 0
+par  4 0
+par  5 0
+par  6 0
+par  7 0
+par  8 0
+par  9 0
+par 10 0
+par 11 0
+par 12 0
+par 13 0
+par 14 0
+par 15 0
+par 16 0
+par 17 0
+par 18 0
+par 19 0
+par 20 0
+par 21 0
+par 22 0
+par 23 0
+par 24 0
+par 25 0
+par 26 0
+par 27 0
+par 28 0
+par 29 0
+par 30 0
+par 31 0
+par 32 0
+#endif
 
 [STRINGS]
 # Text shown on startup in Boom-compatible ports. This is all in
@@ -215,6 +251,40 @@ CC_ARCH = necromancer
 CC_SPIDER = large technospider
 CC_CYBER = assault tripod
 CC_HERO = savior of humanity
+#ifdef FREEDM
+HUSTR_1 = DM01: Tech Test
+HUSTR_2 = DM02: Natural Station
+HUSTR_3 = DM03: Issues of Claveria
+HUSTR_4 = DM04: Steel
+HUSTR_5 = DM05: Xindage Hideout
+HUSTR_6 = DM06: Tomb of Ledemir
+HUSTR_7 = DM07: Main Stronghold
+HUSTR_8 = DM08: Artifact Base
+HUSTR_9 = DM09: Forgotten Ruins
+HUSTR_10 = DM10: Substation 45
+HUSTR_11 = DM11: Gate for Hell
+HUSTR_12 = DM12: Up 'n Down Canyon
+HUSTR_13 = DM13: Sacred Dead
+HUSTR_14 = DM14: Hazard Store
+HUSTR_15 = DM15: AGM Ammo Depot
+HUSTR_16 = DM16: Single Barreled
+HUSTR_17 = DM17: Punk Tech
+HUSTR_18 = DM18: Energy Facility
+HUSTR_19 = DM19: Tech Isle
+HUSTR_20 = DM20: Warehouse
+HUSTR_21 = DM21: Water Recycling
+HUSTR_22 = DM22: Fourplay
+HUSTR_23 = DM23: Confrontation
+HUSTR_24 = DM24: Flooded Base
+HUSTR_25 = DM25: Mansion Yard
+HUSTR_26 = DM26: All Green
+HUSTR_27 = DM27: The Exile
+HUSTR_28 = DM28: Weapons Factory
+HUSTR_29 = DM29: Tag Deathmatch
+HUSTR_30 = DM30: Last Man Standing
+HUSTR_31 = DM31: Fort Macabre
+HUSTR_32 = DM32: Aberration
+#else
 HUSTR_1 = MAP01: Hydroelectric Plant
 HUSTR_2 = MAP02: Filtration Tunnels
 HUSTR_3 = MAP03: Crude Processing Center
@@ -247,6 +317,8 @@ HUSTR_29 = MAP29: Last Stand
 HUSTR_30 = MAP30: Jaws of Defeat
 HUSTR_31 = MAP31: Be Quiet
 HUSTR_32 = MAP32: Not Sure
+#endif
+# Final Doom level strings, left blank
 PHUSTR_1 = MAP01
 PHUSTR_2 = MAP02
 PHUSTR_3 = MAP03
@@ -334,22 +406,6 @@ STSTR_BEHOLD = v=invuln, s=steroids, i=invis, r=hazard, a=map, l=night vision
 NIGHTMARE = This is the highest skill level.\n\
             Not recommended unless you're experienced.\n\n\
             (Press Y to confirm)
-#HUSTR_CHATMACRO1
-#HUSTR_CHATMACRO2
-#HUSTR_CHATMACRO3
-#HUSTR_CHATMACRO4
-#HUSTR_CHATMACRO5
-#HUSTR_CHATMACRO6
-#HUSTR_CHATMACRO7
-#HUSTR_CHATMACRO8
-#HUSTR_CHATMACRO9
-#HUSTR_CHATMACRO0
-#HUSTR_TALKTOSELF1
-#HUSTR_TALKTOSELF2
-#HUSTR_TALKTOSELF3
-#HUSTR_TALKTOSELF4
-#HUSTR_TALKTOSELF5
-#HUSTR_MESSAGESENT
 # End-of-chapter texts, now with a consistent story. Feel free to edit them.
 E1TEXT = You've made it out of the outpost.\n\
          But you're still stuck on this rock.\n\
@@ -386,7 +442,7 @@ E3TEXT = The abomination explodes into\n\
          rotted away for years in. Meaning\n\
          you're still trapped.\n\n\
          An AGM teleporter is here somehow.\n\
-         They must have been here then.\n\
+         They must have been here, then.\n\
          The teleporter is set for a facility\n\
          called "Double Impact," which is a\n\
          ridiculous name. Who cares? All\n\
@@ -481,18 +537,6 @@ C6TEXT = The world dissipitates around\n\
          The monsters you fought before\n\
          raise their weapons,\n\n\
          aiming for your head.
-#P1TEXT
-#P2TEXT
-#P3TEXT
-#P4TEXT
-#P5TEXT
-#P6TEXT
-#T1TEXT
-#T2TEXT
-#T3TEXT
-#T4TEXT
-#T5TEXT
-#T6TEXT
 BGFLATE1 = AQF051
 BGFLATE2 = AQF054
 BGFLATE3 = FLAT5_2
@@ -503,13 +547,6 @@ BGFLAT20 = FLAT5_6
 BGFLAT30 = SLIME13
 BGFLAT15 = AQF004
 BGFLAT31 = AQF021
-#BGCASTCALL
-#STARTUP1
-#STARTUP2
-#STARTUP3
-#STARTUP4
-#STARTUP5
-#SAVEGAMENAME
 # Obituary texts, for ZDoom-based ports.
 OB_STEALTHBABY=%o thought %g saw a technospider.
 OB_STEALTHVILE=%o thought %g saw a necromancer.
@@ -560,7 +597,12 @@ OB_MPTELEFRAG=%o stood where %k was teleporting.
 OB_RAILGUN=%o was railed by %k.
 OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
 
-# Redefine IDSPISPOPD to IDCLIP, so it works the same in Phase 1 and 2
-# Probably unnecessary for anything that’s not Chocolate Doom
+#ifdef PHASE1
+# Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
+# IDSPISPOPD is swapped into the slot normally for Phase 2, in case of
+# engines that would otherwise try to apply the cheat twice.
+
 Cheat 0
 No Clipping 1 = idclip
+No Clipping 2 = idspispopd
+#endif

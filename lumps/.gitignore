@@ -10,3 +10,8 @@ genmidi.lmp
 ???pname.lmp
 ???txtr1.lmp
 ???txtr2.lmp
+
+# Generated dehacked files
+fdm_deh.lmp
+p1_deh.lmp
+p2_deh.lmp

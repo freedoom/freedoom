@@ -234,7 +234,7 @@ def update_level_name(lumpname, bexdata, bexname):
 	levelname = re.sub('^\w*\d:\s*', '', bexdata[bexname])
 	white_graphics[lumpname] = levelname
 
-freedoom_bex = read_bex_lump('../../lumps/dehacked.lmp')
+freedoom_bex = read_bex_lump('../../lumps/p2_deh.lmp')
 freedm_bex = read_bex_lump('../../lumps/fdm_deh.lmp')
 
 for e in range(4):

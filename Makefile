@@ -16,6 +16,7 @@ OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 all: $(OBJS)
 
 subdirs:
+	$(MAKE) -C lumps
 	$(MAKE) VERSION=$(VERSION) -C graphics/text
 	$(MAKE) -C lumps/playpal
 	$(MAKE) -C lumps/colormap

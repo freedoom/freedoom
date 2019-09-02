@@ -157,7 +157,11 @@ ZMAPINFO = fdmmpinf
 ENDOOM = endoomdm
 FREEDM
 #else
-DEHACKED
+#ifdef ULTDOOM
+DEHACKED = p1_deh
+#else
+DEHACKED = p2_deh
+#endif
 ENDOOM
 #endif
 
