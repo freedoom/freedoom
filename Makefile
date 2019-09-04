@@ -118,12 +118,6 @@ clean: wad-image-clean
 	$(MAKE) -C lumps/textures clean
 	$(MAKE) -C bootstrap clean
 
-prefix?=/usr/local
-bindir?=/bin
-mandir?=/share/man
-waddir?=/share/games/doom
-target=$(DESTDIR)$(prefix)
-
 # Variables that are common to wad-image* targets.
 WI_LEVELS := levels
 WI_SCRIPTS := scripts
@@ -272,10 +266,16 @@ fix-map-names:
 	scripts/fix-map-names levels
 
 %.6:
-	$(MAKE) -C dist man-$*
+	$(MAKE) -C dist $@
 
 %.png:
-	$(MAKE) -C dist icon-$*
+	$(MAKE) -C dist $@
+
+prefix?=/usr/local
+bindir?=/bin
+mandir?=/share/man
+waddir?=/share/games/doom
+target=$(DESTDIR)$(prefix)
 
 install-%: $(WADS)/%.wad %.6 %.png
 	install -Dm 755 dist/freedoom "$(target)$(bindir)/$*"
