@@ -9,6 +9,6 @@ colormap.lmp: $(PLAYPAL) colormap.py
 	./colormap.py $(PLAYPAL) > colormap.lmp
 
 clean:
-	rm -f $(COLORMAPS) ../$(COLORMAPS)
+	$(RM) $(COLORMAPS) ../$(COLORMAPS)
 
 .PHONY: clean

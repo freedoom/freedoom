@@ -6,6 +6,6 @@ $(IWAD): ../lumps/playpal/playpal-base.lmp
 	./bootstrap.py < $< > $@
 
 clean:
-	rm -f $(IWAD)
+	$(RM) $(IWAD)
 
 .PHONY: clean

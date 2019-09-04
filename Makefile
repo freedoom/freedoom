@@ -45,7 +45,7 @@ wadinfo_freedm.txt : buildcfg.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
 
 $(FREEDM): wadinfo_freedm.txt subdirs
 	@mkdir -p $(WADS)
-	rm -f $@
+	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
 
 #---------------------------------------------------------
@@ -56,7 +56,7 @@ wadinfo_phase1.txt: buildcfg.txt subdirs lumps/freedoom.lmp
 
 $(FREEDOOM1): wadinfo_phase1.txt subdirs
 	@mkdir -p $(WADS)
-	rm -f $@
+	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase1.txt $@
 
 #---------------------------------------------------------
@@ -67,7 +67,7 @@ wadinfo_phase2.txt: buildcfg.txt subdirs lumps/freedoom.lmp
 
 $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
-	rm -f $@
+	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
 
 %.html: %.adoc
@@ -99,13 +99,13 @@ else
 endif
 
 clean: wad-image-clean
-	rm -f	*.html deutex.log $(OBJS) \
-		./COPYING.txt ./CREDITS.txt \
-		./wadinfo_phase1.txt \
-		./wadinfo_phase2.txt \
-		./wadinfo_freedm.txt \
-		./lumps/freedoom.lmp \
-		./lumps/freedm.lmp
+	$(RM) *.html deutex.log $(OBJS) \
+	      ./COPYING.txt ./CREDITS.txt \
+	      ./wadinfo_phase1.txt \
+	      ./wadinfo_phase2.txt \
+	      ./wadinfo_freedm.txt \
+	      ./lumps/freedoom.lmp \
+	      ./lumps/freedm.lmp
 	-rmdir $(WADS)
 
 	$(MAKE) -C dist clean
@@ -153,7 +153,7 @@ wad-image: wad-image-common
 
 # Cleanup generated images. Structured this way for safety.
 wad-image-clean: wad-image-common
-	rm -f $(WI_IMAGES)/*.*
+	$(RM) $(WI_IMAGES)/*
 	-rmdir $(WI_IMAGES)
 
 # Diffing WADs in "levels" using git and show the diff."
@@ -286,12 +286,12 @@ install-%: $(WADS)/%.wad %.6 %.png
 	install -Dm 644 dist/$*.png -t "$(target)/share/icons"
 
 uninstall-%:
-	rm "$(target)$(bindir)/$*"
-	rm "$(target)$(mandir)/man6/$*.6"
-	rm "$(target)$(waddir)/$*.wad"
-	rm "$(target)/share/applications/$*.desktop"
-	rm "$(target)/share/appdata/$*.appdata.xml"
-	rm "$(target)/share/icons/$*.png"
+	$(RM) "$(target)$(bindir)/$*"
+	$(RM) "$(target)$(mandir)/man6/$*.6"
+	$(RM) "$(target)$(waddir)/$*.wad"
+	$(RM) "$(target)/share/applications/$*.desktop"
+	$(RM) "$(target)/share/appdata/$*.appdata.xml"
+	$(RM) "$(target)/share/icons/$*.png"
 	-rmdir -p "$(target)$(bindir)"
 	-rmdir -p "$(target)$(mandir)/man6"
 	-rmdir -p "$(target)$(waddir)"

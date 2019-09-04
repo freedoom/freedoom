@@ -3,5 +3,6 @@ genmidi.lmp: config.py instruments/*
 	cp $@ ../
 
 clean:
-	rm -f genmidi.lmp ../genmidi.lmp *.pyc
-	rm -fr __pycache__
+	$(RM) genmidi.lmp ../genmidi.lmp *.pyc
+	$(RM) __pycache__/*
+	-rmdir __pycache__

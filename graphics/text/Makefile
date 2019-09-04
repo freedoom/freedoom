@@ -157,12 +157,13 @@ fdmtitle.png: ../titlepic/freedm_titlepic.png
 	cp $@ ../
 
 clean:
-	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
+	$(RM) $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
 	    graphics.stamp *.pyc credtext.png	                    \
 	    credtext.png credit.png dmwilv*.png wikilrs.png		    \
 	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
 	    ../wikilrs.png ../wivctms.png                           \
 		fd1title.png fd2title.png fdmtitle.png                  \
 	    ../fd1title.png ../fd2title.png ../fdmtitle.png 
-	for graphic in $(TEXTGEN_GRAPHICS); do rm -f ../$$graphic; done
-	rm -fr __pycache__
+	for graphic in $(TEXTGEN_GRAPHICS); do $(RM) ../$$graphic; done
+	$(RM) __pycache__/*
+	-rmdir __pycache__
