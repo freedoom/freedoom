@@ -8,7 +8,7 @@ freedoom - Automatically launch Freedoom with an engine
 
 SYNOPSIS
 --------
-*freedoom* [_-p_ _PORT_|_--_] [_ARGS_]
+*freedoom* [_-p_ _DOOMPORT_|_--_] [_ARGS_]
 
 DESCRIPTION
 -----------
@@ -21,13 +21,15 @@ active community since 1993.
 
 This command is a simple shell script to assist in running Freedoom,
 which is not a game engine itself nor part of any engine project, but
-playing Freedoom should remain simple.  Only accepted as the first
-argument, you may pass _-p PORT_, which will run Freedoom using the
-_PORT_ specified.  As an alternative, you may make a symbolic link
-named +$HOME/.doomport+ to your preferred port.  A port specified on
-the command line explicitly overrides +$HOME/.doomport+, whereas the
-existence of the symbolic link will override the detection of port
-based on a hard-coded list.
+playing Freedoom should remain simple.  The script tries to
+automatically select an engine based on a hard-coded list, but three
+overrides are available, in order of precedence: command-line
+argument, environment variable, and a +$HOME/.doomport+ symbolic link.
+Passing _-p DOOMPORT_ runs Freedoom using the _DOOMPORT_ specified.
+Setting the _DOOMPORT_ environment variable is similar, running the
+engine specified in the variable.  An additional permanent setting is
+via the +$HOME/.doomport+ symbolic link, which may point to an
+executable to run.
 
 Additional arguments passed to the program, or after specifying _--_
 as the first option, will be passed to the engine being called.  This
