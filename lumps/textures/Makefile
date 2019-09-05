@@ -4,6 +4,7 @@ CPP=../../scripts/simplecpp
 all: phase1/texture1.lmp phase2/texture1.lmp freedm/texture1.lmp
 
 phase1/texture1.lmp: textures.cfg
+	@mkdir phase1
 	$(CPP) -DDOOM1_VERSIONS < textures.cfg |                 \
 	./build-textures -compat_texture1=doom1/texture1.txt     \
 	                 -compat_texture2=doom1/texture2.txt     \
@@ -18,6 +19,7 @@ phase1/texture1.lmp: textures.cfg
 	cp phase1/pnames.lmp   ../fd1pname.lmp
 
 phase2/texture1.lmp: textures.cfg
+	@mkdir phase2
 	$(CPP) < textures.cfg |                                  \
 	./build-textures -compat_texture1=doom2/texture1.txt     \
 	                 -compat_pnames=doom2/pnames.txt         \
@@ -29,6 +31,7 @@ phase2/texture1.lmp: textures.cfg
 	cp phase2/pnames.lmp   ../fd2pname.lmp
 
 freedm/texture1.lmp: textures.cfg
+	@mkdir freedm
 	$(CPP) -DFREEDM < textures.cfg |                         \
 	./build-textures -compat_texture1=doom2/texture1.txt     \
 	                 -compat_pnames=doom2/pnames.txt         \
@@ -47,4 +50,4 @@ clean:
 	$(RM) ../fd1txtr1.lmp ../fd1txtr2.lmp ../fd1pname.lmp \
 	      ../fd2txtr1.lmp ../fd2pname.lmp                 \
 	      ../fdmtxtr1.lmp ../fdmpname.lmp
-
+	-rmdir phase1 phase2 freedm
