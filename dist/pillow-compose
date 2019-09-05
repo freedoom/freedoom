@@ -7,7 +7,7 @@ import sys
 from PIL import Image
 
 src = Image.open(sys.argv[1])
-img = Image.new('RGBA', (int(sys.argv[3]), int(sys.argv[4])), (0, 0, 0, 0))
+img = Image.new("RGBA", (int(sys.argv[3]), int(sys.argv[4])), (0, 0, 0, 0))
 
 # Pillow's compositing won't accept negative values.  This can happen
 # if the destination image is smaller on at least on axis than the
@@ -22,5 +22,5 @@ if img.size[1] - src.size[1] < 0:
 else:
     off_y = (img.size[1] - src.size[1]) // 2
 
-img.alpha_composite(src.convert('RGBA'), (off_x, off_y))
+img.alpha_composite(src.convert("RGBA"), (off_x, off_y))
 img.save(sys.argv[2])

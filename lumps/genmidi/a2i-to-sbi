@@ -6,10 +6,11 @@ import sbi_file
 import sys
 
 if len(sys.argv) != 3:
-	print >> sys.stderr, "Usage: %s <input filename> <output filename>" \
-	                     % sys.argv[0]
-	sys.exit(-1)
+    print(
+        "Usage: %s <input filename> <output filename>" % sys.argv[0],
+        file=sys.stderr,
+    )
+    sys.exit(-1)
 
 data = a2i_file.read(sys.argv[1])
 sbi_file.write(sys.argv[2], data)
-

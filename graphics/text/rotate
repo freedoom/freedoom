@@ -23,5 +23,5 @@ else:
     img2 = img2.crop()
 
 if os.path.exists(sys.argv[3]):  # delete any previous result file
-	os.remove(sys.argv[3])
+    os.remove(sys.argv[3])
 img2.save(sys.argv[3])

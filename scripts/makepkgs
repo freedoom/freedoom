@@ -6,14 +6,16 @@ import sys
 
 # Documentation files included with distributions.
 
-GAME_NAME=sys.argv[1]
-FILES=sys.argv[2:]
+GAME_NAME = sys.argv[1]
+FILES = sys.argv[2:]
 
 # Run a command, displaying it before executing it.
+
 
 def run_command(command):
     print("> " + command)
     os.system(command)
+
 
 # Find the version to build:
 
@@ -22,7 +24,7 @@ version = os.getenv("VERSION")
 if version is None:
     sys.stderr.write("Version not specified for release\n")
     sys.exit(1)
-if version[0] is 'v':
+if version[0] is "v":
     # Strip the leading 'v' from versioning
     version = version[1:]
 
