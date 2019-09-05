@@ -12,16 +12,16 @@ image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",wid
 Freedoom is distributed as two files named `freedoom1.wad` and `freedoom2.wad`
 which contain the artwork, levels, music and sound effects that make up the game.
 To be played it needs to be paired with a source port. Fans of the original Doom
-games have created a number of these; the Doom Wiki's
+games have created a number of these; the Doom Wiki’s
 https://doomwiki.org/wiki/Source_port[source ports page] has a comprehensive
 list. The following are some good default suggestions:
 
 * https://zdoom.org[GZDoom] is a modern source port that includes various
   features such as a hardware renderer.
 * https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom]
-  is a more minimalist source port that retains an "old school" feel.
+  is a more minimalist source port that retains an “old school” feel.
 
-Setup depends on the source port you use, and it's best to refer to the
+Setup depends on the source port you use, and it’s best to refer to the
 instructions for that source port. Generally though, you can try one of the
 following:
 
@@ -41,7 +41,7 @@ you can discover how to reach them.
 [[menus]]
 == Using the Freedoom Menus
 
-Freedoom's menus are fairly self-explanatory but here are some brief
+Freedoom’s menus are fairly self-explanatory but here are some brief
 instructions. The main menu can be brought up at any time by pressing the
 _Esc_ key on your keyboard.
 
@@ -49,15 +49,15 @@ image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfw
 
 [cols="1,4",width="90%",align="center",valign="middle"]
 |==========================
-| <<newgame,**New game**>> | Start a new game, abandoning the current game (if you're
+| <<newgame,**New game**>> | Start a new game, abandoning the current game (if you’re
 already playing).
 | **Options** | Brings up the options menu. The appearance of this menu
-and the available options depend upon the source port you're using.
+and the available options depend upon the source port you’re using.
 | <<savegame,**Load Game**>> | Load a saved game.
 | <<savegame,**Save Game**>> | Save your current game, so that you can continue playing
 later.
 | **Read This!** | Brings up a help screen showing a description of the
-items you'll encounter in the game.
+items you’ll encounter in the game.
 | **Quit Game** | Finish playing and return to the operating system.
 |==========================
 
@@ -72,24 +72,24 @@ start playing.
 
 image::images/menu-chapter.png[Freedoom Chapter Menu,align="center",width=432,pdfwidth=50vw]
 
-If you're new to the game, start with _Outpost Outbreak_, the first
+If you’re new to the game, start with _Outpost Outbreak_, the first
 chapter (and easiest). Once you finish one chapter, you can move on to
-the next. If you're bored with the chapter you're playing or stuck, you
-can always try playing a different chapter instead. There's no requirement
+the next. If you’re bored with the chapter you’re playing or stuck, you
+can always try playing a different chapter instead. There’s no requirement
 to play chapters in order.
 
 [[skill]]
 After choosing a chapter, you need to pick a skill level. Skill level
 affects several factors in the game, most importantly the number of
-monsters you'll encounter.
+monsters you’ll encounter.
 
 image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwidth=50vw]
 
 [cols="1,3,8",width="90%",align="center",valign="middle"]
 |==========================
-| 1 | **Please Don't Kill Me!** | The easiest skill level. This is
+| 1 | **Please Don’t Kill Me!** | The easiest skill level. This is
 effectively the same as _Will This Hurt?_, except that damage is halved.
-| 2 | **Will This Hurt?** | Easy skill level, a good choice if you're
+| 2 | **Will This Hurt?** | Easy skill level, a good choice if you’re
 finding _Bring on the Pain_ too challenging.
 | 3 | **Bring on the Pain.** | The default skill level.
 | 4 | **Extreme Carnage.** | A more challenging skill level, suited more
@@ -113,9 +113,9 @@ To save the game, press _Esc_ to bring up the menu, select _Save Game_ and
 choose a slot to save in. Type a description for the save game and press
 _Enter_. Some source ports have a limited number of slots, in which case you
 will have to overwrite an existing saved game once there are no more slots
-available. For the same reason it's a good idea to write a good description
+available. For the same reason it’s a good idea to write a good description
 for your saved game. Include the level number and something descriptive of
-where you've reached; for example, "C1M3 - Blue Key Door".
+where you’ve reached; for example, “C1M3 - Blue Key Door.”
 
 The _Load Game_ menu usually looks largely identical to the _Save Game_
 menu. To restore your saved game, simply select _Load Game_ from the main
@@ -130,7 +130,7 @@ quicksave slot by pressing _F9_.
 
 === Quitting the game
 
-When you're finished playing Freedoom, press _Esc_ to bring up the main
+When you’re finished playing Freedoom, press _Esc_ to bring up the main
 menu and select _Quit Game_ to exit. You may want to select _Save Game_
 first to save your progress so that you can return to where you left off
 next time you play.
@@ -149,7 +149,7 @@ in-game items.
 | **F3** | <<savegame,Load>> | Bring up the _Load Game_ menu.
 | **F4** | Volume | Bring up a menu to control volume levels.
 | **F6** | <<savegame,Quicksave>> | Save the game to your _quicksave_ slot,
-which saves time if you're repeatedly saving your progress while you play.
+which saves time if you’re repeatedly saving your progress while you play.
 | **F7** | End Game | End the current game and return to the title screen.
 | **F8** | Messages | Toggles between showing or hiding the on-screen
 messages shown when you collect an item.
@@ -164,9 +164,9 @@ messages shown when you collect an item.
 
 image::images/c5m1-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
 
-Freedoom is a real-time first-person shooter (FPS). You'll be exploring a
+Freedoom is a real-time first-person shooter (FPS). You’ll be exploring a
 series of levels, in each one trying to find the way to the exit. An
-assortment of monsters will try to stop you, and you'll need to use weapons
+assortment of monsters will try to stop you, and you’ll need to use weapons
 to defend yourself.
 Portions of the levels may be inaccessible until you find a particular key, or
 find a switch to open a locked door. This gives a puzzle element to the game in
@@ -175,30 +175,30 @@ addition to the action.
 By default, the keyboard cursor keys will move forward and backward, and turn
 left and right. The _Control_ key fires the current weapon, and the spacebar
 will open doors and activate switches. All source ports allow you to rebind
-these keys to a setup that you find more comfortable. You'll also want to look
+these keys to a setup that you find more comfortable. You’ll also want to look
 into using the strafe (sidestep) and run keys to better control over your
 movement.
 
-If you haven't played Freedoom before, take a few minutes when you start the
+If you haven’t played Freedoom before, take a few minutes when you start the
 game to get familiar with the controls, and reconfigure controls as you find
 makes it more comfortable to play. Practice moving around and firing the
 weapon. You may encounter some low-level monsters, but those encountered in
-the first level do not present much of a challenge and they're a good
+the first level do not present much of a challenge and they’re a good
 opportunity to practice taking shots at.
 
-Within the game you'll encounter various collectible items and power-ups.
+Within the game you’ll encounter various collectible items and power-ups.
 These will typically give you more <<ammo,ammunition>> for your weapons, more
 <<health,health>> or more <<armor,armor>>. You can also find <<weapons,new
 weapons>> and some <<specialitems,rarer power-ups>> which give you special
 abilities. Picking something up is a simple matter of walking over it -- an
-on-screen message and a brief flash of the screen indicate that you've done so
-successfully. If you don't pick it up, it's likely you don't need it right
-now (for example, you can't pick up a health pack when you already have 100%
+on-screen message and a brief flash of the screen indicate that you’ve done so
+successfully. If you don’t pick it up, it’s likely you don’t need it right
+now (for example, you can’t pick up a health pack when you already have 100%
 health).
 
 === The Status Bar
 
-At the bottom of the screen, you'll see the status bar, which is divided into
+At the bottom of the screen, you’ll see the status bar, which is divided into
 the following sections:
 
 image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",align="center"]
@@ -207,22 +207,22 @@ image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",ali
 |==========================
 | **Ammo** | Number of units of <<ammo,ammunition>> remaining for the current
 weapon.
-| **Health** | If this reaches zero, you're dead! See the
+| **Health** | If this reaches zero, you’re dead! See the
 <<health,health section>> for power-ups you can find to replenish your health.
-| **Arms** | Which weapons you've found so far. Check out the
+| **Arms** | Which weapons you’ve found so far. Check out the
 <<weapons,weapons section>> for more information.
 | **Freedoomguy** | A quick visual indication of how your health is.
 | **Armor** | The more armor you have, the less your health will suffer if
-you're injured. See the <<armor,armor section>> for more information.
-| **Ammo counts** | How much you're carrying of each of the <<ammo,four types of
+you’re injured. See the <<armor,armor section>> for more information.
+| **Ammo counts** | How much you’re carrying of each of the <<ammo,four types of
 ammunition>>, along with the maximum of each you can carry.
 |==========================
 
 [[weapons]]
-=== Freedoom's Weapons
+=== Freedoom’s Weapons
 
 You start the game with only a handgun, 50 bullets and your fists to fall back
-on once they run out. You'll want to find yourself some better weaponry as
+on once they run out. You’ll want to find yourself some better weaponry as
 soon as possible.
 
 [options="header",cols="4,1,7,3,2",valign="middle"]
@@ -235,8 +235,8 @@ also works well as a melee weapon for cutting through flesh. |
 image:../sprites/csawa0.png[Angle Grinder] |
 None
 | **Handgun** | 2 | Your starter weapon. A few shots will take down low-level
-monsters but it's best to upgrade before taking on any tougher opponents. | | Bullets
-| **Pump-action Shotgun** | 3 | The main "workhorse" weapon; fires seven pellets
+monsters but it’s best to upgrade before taking on any tougher opponents. | | Bullets
+| **Pump-action Shotgun** | 3 | The main “workhorse” weapon; fires seven pellets
 in a tight cluster and is effective over both short and long ranges against
 low- and medium-level monsters. |
 image:../sprites/shota0.png[Pump-action Shotgun] |
@@ -268,7 +268,7 @@ Energy
 Pressing the numbered key on the keyboard switches to the given weapon (if it
 has been picked up!). Apart from the melee weapons, each weapon consumes a
 certain type of ammo, and you should be careful to look out for more ammo as
-you're exploring.
+you’re exploring.
 
 [[ammo]]
 [options="header",cols="2,1,1",width="50%",align="center",valign="middle"]
@@ -297,7 +297,7 @@ and doubles the maximum amount of ammo you can carry.
 [[health]]
 === Health
 
-You die if your health reaches 0%. You'll find health bonuses around the
+You die if your health reaches 0%. You’ll find health bonuses around the
 levels which can restore you back to 100% health; 1% health bonuses can take
 you over 100% and up to 200% health.
 
@@ -324,12 +324,12 @@ image:../sprites/arm2a0.png[Heavy Armor Vest]
 |==========================
 
 Normal armor absorbs one third of damage you receive. For example, suppose
-you're hit by a missile that reduces your health from 100% to 50%. If you're
+you’re hit by a missile that reduces your health from 100% to 50%. If you’re
 hit by the same missile while wearing 100% armor, your health will reduce to
-only 66%, but you'll lose 16% armor.
+only 66%, but you’ll lose 16% armor.
 
 The heavy armor vest has slightly different behavior: in addition to being
-worth 200% armor, it also absorbs half of all damage. For this reason, it's
+worth 200% armor, it also absorbs half of all damage. For this reason, it’s
 a very good idea to get your hands on a heavy armor vest if you can locate one.
 
 [[specialitems]]
@@ -378,7 +378,7 @@ Makes you immune to all damage for a limited time.
 === Enemies
 
 The levels are filled with monsters who have no other goal apart from stopping
-you from completing your mission. Here's a selection of some of these monsters
+you from completing your mission. Here’s a selection of some of these monsters
 who you can expect to encounter.
 
 [frame="none",cols="2,6,2",valign="middle",grid="none",align="center",width="90%"]
@@ -392,17 +392,17 @@ These guys traded their pistol for a shotgun and pack far more of a punch.
 Drops a shotgun when killed. |
 image:images/monster-shotgun-zombie.png[Shotgun Zombie,100,100]
 | **Minigun Zombie** |
-As soon as you're in sight of one of these, he'll lock on with his minigun and
-keep on firing until you're dead. It's best to take cover quickly or take him
+As soon as you’re in sight of one of these, he’ll lock on with his minigun and
+keep on firing until you’re dead. It’s best to take cover quickly or take him
 out. Drops a minigun when killed. |
 image:images/monster-minigun-zombie.png[Minigun Zombie,100,100]
 | **Serpentipede** |
-Serpent footsoldiers of the alien invasion. Let them get close and they'll
-tear you to shreds; at a distance they'll instead rain down fireballs. |
+Serpent footsoldiers of the alien invasion. Let them get close and they’ll
+tear you to shreds; at a distance they’ll instead rain down fireballs. |
 image:images/monster-serpentipede.png[Serpentipede,100,100]
 | **Flesh Worm** |
 Tough and fast-moving, these worms attack at close range and take several
-shotgun blasts to take down. It's best to keep back. |
+shotgun blasts to take down. It’s best to keep back. |
 image:images/monster-flesh-worm.png[Flesh Worm,100,100]
 | **Stealth Worm** |
 These flesh worm variants have been given stealth abilities which make them
@@ -421,10 +421,10 @@ close. |
 image:images/monster-trilobite.png[Trilobite,100,100]
 | **Pain Bringer** |
 100% muscle, these guys take at least three rocket blasts to take down, and
-while you're trying they'll shower you with energy projectiles. |
+while you’re trying they’ll shower you with energy projectiles. |
 image:images/monster-pain-bringer.png[Pain Bringer,100,100]
 | **Pain Lord** |
-If the Pain Bringer wasn't tough enough, this one will take five rocket
+If the Pain Bringer wasn’t tough enough, this one will take five rocket
 blasts. |
 image:images/monster-pain-lord.png[Pain Lord,100,100]
 | **Dark Soldier** |
@@ -432,7 +432,7 @@ Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
 match with one of these guys. |
 image:images/monster-dark-soldier.png[Dark Soldier,100,100]
 | **Necromancer** |
-If he's not setting you on fire, he's undoing all your hard work by bringing
+If he’s not setting you on fire, he’s undoing all your hard work by bringing
 his friends back from the dead. |
 image:images/monster-necromancer.png[Necromancer,100,100]
 | **Combat Slug** |
@@ -450,13 +450,13 @@ image:images/monster-large-technospider.png[Large Technospider,100,100]
 | **Assault Tripod** |
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
-missile launcher that you'll want to avoid. |
+missile launcher that you’ll want to avoid. |
 image:images/monster-assault-tripod.png[Assault Tripod,100,100]
 |==========================
 
 === Using the map
 
-When exploring Freedoom's levels, it is sometimes possible to get lost,
+When exploring Freedoom’s levels, it is sometimes possible to get lost,
 especially if the level is particularly large or complex. Fortunately, the
 map is available to help you find your way. Press the _Tab_ key during play to
 bring up the map.
@@ -496,7 +496,7 @@ your current position.
 
 === Environmental Hazards
 
-If the monsters weren't enough, the environment itself poses hazards which
+If the monsters weren’t enough, the environment itself poses hazards which
 can hurt or even kill you!
 
 [frame="none",cols="1,4,2",valign="middle",grid="none"]
@@ -510,7 +510,7 @@ potential for chain reactions when several barrels are clustered together. |
 image:images/hazard-barrels.png[Barrels,150,150]
 | **Damaging Floors** |
 Red-hot lava and radioactive sludge are just two of the types of damaging floor
-you can encounter in Freedoom's levels. If walking over it is necessary, try to
+you can encounter in Freedoom’s levels. If walking over it is necessary, try to
 find yourself a <<specialitems,hazard suit>>, but be aware that it will only
 protect you for a limited time. |
 image:images/hazard-slime.png[Radioactive slime,150,150]
@@ -524,7 +524,7 @@ image:images/hazard-crusher.png[Crushing Ceiling,150,150]
 
 === Tactical tips
 
-If you're struggling with the difficulty of the game, one option is to change
+If you’re struggling with the difficulty of the game, one option is to change
 to an easier skill level. Alternatively, you can try some of these tactical
 suggestions:
 
@@ -533,41 +533,41 @@ suggestions:
   used to turn while the keyboard is used to move around. In particular, make
   sure that you have set up strafe (sidestep) keys. Many of the enemies in
   the game launch projectiles which must be dodged. Sidestepping these
-  projectiles is an important skill to learn. You'll know you've mastered this
+  projectiles is an important skill to learn. You’ll know you’ve mastered this
   skill when you can easily circle around an enemy and dodge its projectiles
   while simultaneously keeping your weapon trained on it.
 
-* Play with headphones. The game's stereo separation can give helpful audio
+* Play with headphones. The game’s stereo separation can give helpful audio
   cues about the positions of enemies and alert you to incoming projectiles.
   Headphones give you a more precise way to pick up on these cues.
 
-* Take cover! Monsters only attack when you're in their line of sight. You'll
+* Take cover! Monsters only attack when you’re in their line of sight. You’ll
   want to find walls, pillars and other forms of cover you can hide behind
   while your weapon reloads. This advice is particularly important when
-  facing certain monsters which can "lock on" to you (Minigun Zombie;
+  facing certain monsters which can “lock on” to you (Minigun Zombie;
   Necromancer); hiding from these is a crucial skill.
 
 * Many of the levels are littered with exploding barrels. While these can pose
-  a danger to you, they're equally dangerous to your opponents. A single,
+  a danger to you, they’re equally dangerous to your opponents. A single,
   well-timed shotgun blast aimed at a barrel can take down several enemies at
   once. One barrel explosion can trigger another, so it can sometimes set off
   a chain reaction that takes down a whole crowd -- but be careful that
-  doesn't include you!
+  doesn’t include you!
 
-* If a monster gets injured by another monster, it'll retaliate against the
+* If a monster gets injured by another monster, it’ll retaliate against the
   one that injured it (this is called _monster in-fighting_). If faced with a
   crowd of enemies, an effective strategy can be to stand in just the right
   place so that those at the back shoot those at the front. Do it right and
-  they'll spend more time fighting each other than fighting you, and the
+  they’ll spend more time fighting each other than fighting you, and the
   survivors will be significantly weakened.  Be aware though, that a monster
   cannot be injured by a projectile launched by another of the same species.
 
-* Sometimes you'll face crowds of monsters, which can be overwhelming and also
+* Sometimes you’ll face crowds of monsters, which can be overwhelming and also
   drain your ammo supplies. Learn to master crowd control. The primary
   instinct of all monsters is to move towards you. Circle around the crowd
-  continually -- this encourages them to cluster in a single spot that's
+  continually -- this encourages them to cluster in a single spot that’s
   easier for you to target. It also encourages monster in-fighting; if done
-  effectively, they'll spend their energy killing each other and you'll save
+  effectively, they’ll spend their energy killing each other and you’ll save
   on ammunition.
 
 <<<
@@ -589,12 +589,12 @@ https://www.doomworld.com/idgames/[can be found on Doomworld].
 Playing a `.wad` file is usually fairly simple. For mods designed for the
 original _Doom_, use Freedoom: Phase 1 (`freedoom1.wad`); for others designed
 for _Doom 2_ or _Final Doom_, use Freedoom: Phase 2 (`freedoom2.wad`).
-If you're using the command line, use the `-file` parameter when you start the
+If you’re using the command line, use the `-file` parameter when you start the
 game. For example, to load the file `scythe.wad`:
 
   my-favorite-port -iwad freedoom2.wad -file scythe.wad
 
-If you're not using the command line, you can try dragging and dropping the
+If you’re not using the command line, you can try dragging and dropping the
 `.wad` file onto the source port icon in your file manager -- several
 source ports support this.
 
@@ -605,23 +605,23 @@ made, and there are so many that it may seem difficult to know where to
 start. The following are some suggestions for where to look for the best
 content:
 
-* Doomworld's https://www.doomworld.com/10years/bestwads/[Top 100 WADs Of All Time]
+* Doomworld’s https://www.doomworld.com/10years/bestwads/[Top 100 WADs Of All Time]
 was written in 2003 and aimed to list the best works from the first 10
-years of fan-made mods. It's still a great list of classic mods.
+years of fan-made mods. It’s still a great list of classic mods.
 
-* https://www.doomworld.com/cacowards/[The Cacowards] are Doomworld's
+* https://www.doomworld.com/cacowards/[The Cacowards] are Doomworld’s
 annual award ceremony that recognizes the best releases from the _Doom_
 community over the past year. This is a great way to find out about more
 recent developments, including some of the more unusual mods that people
 are releasing.
 
-* The Doom Wiki's https://doomwiki.org/wiki/List_of_notable_WADs[List of
+* The Doom Wiki’s https://doomwiki.org/wiki/List_of_notable_WADs[List of
 notable WADs] contains a rather extensive list of fan-made WADs. The Doom
 Wiki includes extensive information about such mods including screenshots,
-maps and per-level statistics, so it's a useful entrypoint to discover
+maps and per-level statistics, so it’s a useful entrypoint to discover
 interesting mods.
 
-* Doomworld's interface to the idgames archive includes the ability to
+* Doomworld’s interface to the idgames archive includes the ability to
 list the https://www.doomworld.com/idgames/index.php?top[top levels] based
 on five star rankings by visitors to the site.
 
@@ -642,8 +642,8 @@ TODO: Write this section.
 
 == Cheats ==
 
-If you're finding the game too difficult, you can always try playing at
-an <<skill,easier skill level>>. However, if that's not enough, or if you just
+If you’re finding the game too difficult, you can always try playing at
+an <<skill,easier skill level>>. However, if that’s not enough, or if you just
 want to have fun feeling like an unstoppable killing machine, there are a
 number of cheats that you can turn to:
 
@@ -664,4 +664,3 @@ number of cheats that you can turn to:
 | **IDBEHOLDM** | Gives the tactical survey map.
 | **IDBEHOLDL** | Gives the night vision goggles.
 |==========================
-
