@@ -5,8 +5,8 @@ COLORMAPS = colormap.lmp
 all: $(COLORMAPS)
 	cp $(COLORMAPS) ../
 
-colormap.lmp: $(PLAYPAL) colormap.py
-	./colormap.py $(PLAYPAL) > colormap.lmp
+colormap.lmp: $(PLAYPAL) colormap
+	./colormap $(PLAYPAL) > colormap.lmp
 
 clean:
 	$(RM) $(COLORMAPS) ../$(COLORMAPS)

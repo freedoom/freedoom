@@ -56,16 +56,16 @@ all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
 
 # Generate the menu and level strings
 text_strings: config.py fontchars ../../lumps/dehacked/dehacked.txt
-	python textgen
+	./textgen
 	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
 
 # Background for the help screen is a color shifted version of INTERPIC:
 helpbg.png: ../interpic.png
-	python tint.py ../interpic.png '#57b9b0' helpbg.png
+	./tint.py ../interpic.png '#57b9b0' helpbg.png
 
 # Generate transparent image containing text for the HELP screen:
 help.png: text_strings helpbg.png
-	python smtextgen help.png 320x200         \
+	./smtextgen help.png 320x200                 \
 	   -background "helpbg.png"                  \
 	   150,5   "file:helpttl.png"                \
 	   10,25   "Weapons"                         \
@@ -123,37 +123,37 @@ help.png: text_strings helpbg.png
 
 
 credit.png: text_strings helpbg.png credit.txt
-	python smtextgen credit.png 320x200        \
+	./smtextgen credit.png 320x200                \
 	   -background "helpbg.png"                   \
 	   120,5  "file:freettl.png"                  \
 	   10,30  "include:credit.txt"
 	cp $@ ../
 
 wikilrs_horiz.png:
-	python smtextgen $@ 49x7 \
+	./smtextgen $@ 49x7 \
 	    0,0  killers
 
 wikilrs.png: wikilrs_horiz.png
-	python rotate.py wikilrs_horiz.png 270 $@
+	./rotate wikilrs_horiz.png 270 $@
 	cp $@ ../
 
 wivctms.png:
-	python smtextgen $@ 54x7 \
+	./smtextgen $@ 54x7 \
 	    0,0  victims
 	cp $@ ../
 
 titlepic: fd1title.png fd2title.png fdmtitle.png
 
 fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png 
-	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
+	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
 	cp $@ ../
 
 fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png
-	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
+	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
 	cp $@ ../
 
 fdmtitle.png: ../titlepic/freedm_titlepic.png
-	python create_caption.py $< $@
+	./create_caption $< $@
 	cp $@ ../
 
 clean:

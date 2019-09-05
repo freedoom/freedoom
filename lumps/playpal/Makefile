@@ -1,5 +1,5 @@
-playpal.lmp: playpal-base.lmp playpal.py
-	./playpal.py playpal-base.lmp > playpal.lmp
+playpal.lmp: playpal-base.lmp playpal
+	./playpal playpal-base.lmp > playpal.lmp
 	cp playpal.lmp ../
 
 clean:
