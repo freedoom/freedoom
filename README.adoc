@@ -55,12 +55,6 @@ or your home directory.  If _Freedoom_ comes packaged as part of your
 operating system distribution, it should already be installed into the
 proper location.
 
-If you wish to venture outside of GZDoom, beware that _Phase 1_ and
-_Phase 2_ require a https://doomwiki.org/wiki/Limit_removing[limit
-removing] engine, which is thankfully the majority of them, but
-not all.  _FreeDM_, on the other hand, is intended to be playable by
-all variants of the _Doom_ engine.
-
 Hopefully, your engine of choice should already be capable of running
 _Freedoom_ without extra configuration.  This may not be the case,
 however, if the engine does not recognize any of the filenames for
