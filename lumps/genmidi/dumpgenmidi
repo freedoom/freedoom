@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # SPDX-License-Identifier: BSD-3-Clause
 #
 # Dump the contents of a GENMIDI lump into separate .sbi instrument files,

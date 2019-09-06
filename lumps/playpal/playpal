@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Script to generate the PLAYPAL lump used by the Doom engine, specifically the
 # which contains 14 alternative palettes which are used for various
 # environmental effects. The base palette from which these are derived is either

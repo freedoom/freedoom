@@ -17,8 +17,8 @@ Building the Freedoom IWADs pretty much simply requires the following:
     portability are most welcome!).  On non-GNU systems, it might be
     available in a package and binary named as _gmake_.
   * _Python_: Freedoom uses several Python programs in its tree to
-    assist with building the IWADs.  Both Python 2.7 and 3.x are fully
-    supported.
+    assist with building the IWADs.  Python 3.x is required, we no
+    longer support Python 2.
   * _Pillow_: A Python image manipulation module that provides the
     features we need for scaling and composing various graphics of the
     game.

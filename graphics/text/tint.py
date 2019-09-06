@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2017 Martin Miller, Nick Zatkovich

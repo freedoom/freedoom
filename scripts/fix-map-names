@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # SPDX-License-Identifier: BSD-3-Clause
 #
 # fix-map-names - Fix map names in WAD files
@@ -9,8 +9,6 @@
 # This script can be invoked with make target "fix-map-names" (no "-t" option)
 # or make target "test-map-names" ("-t" option). Make target "test"
 # ("-t" option) will run this and any other test.
-
-from __future__ import print_function
 
 # Imports
 

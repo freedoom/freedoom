@@ -1,8 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding: utf-8
 # SPDX-License-Identifier: BSD-3-Clause
 
-from __future__ import unicode_literals
 from PIL import Image, ImageFont, ImageDraw
 import sys
 import os
