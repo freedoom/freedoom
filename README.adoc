@@ -254,17 +254,3 @@ version control systems, adopted by projects such as Linux and Git.
 For an explanation of this style, see
 https://chris.beams.io/posts/git-commit/[How to Write a Git Commit
 Message].
-
-The commit `2017-02-20T01:52:35Z!mikeonthecomputer@gmail.com` is a
-good example of a properly-written commit.
-
-Do not use commit hashes to refer to other commits.  Use other kinds
-of pointers, simple ones like “my previous commit” might suffice, or
-use http://esr.ibiblio.org/?p=3872[action stamps], which can improve
-the meaningfulness of commit identifiers if the repository history is
-rewritten (this has happened at least twice!), or if the repository is
-converted to another VCS (this happened once before).  At the time of
-writing (February 2017), core Git does not yet have a mechanism to
-output this format, but you may use a
-https://gist.github.com/chungy/195f53bfb9253584e596[shell script] and
-place it in your `$PATH` to achieve some ease in generating them.
