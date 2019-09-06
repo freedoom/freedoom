@@ -31,6 +31,10 @@ case "$(basename "$0")" in
         ;;
 esac
 
+if [ -z "$DOOMWADPATH" ]; then
+    export DOOMWADPATH="/usr/share/doom:/usr/share/games/doom:/usr/local/share/doom:/usr/local/share/games/doom"
+fi
+
 if [ -z "$DOOMPORT" ] && [ -h "$HOME"/.doomport ]; then
     if [ -f "$(readlink -f "$HOME"/.doomport)" ] \
         && [ -x "$(readlink -f "$HOME"/.doomport)" ]; then
