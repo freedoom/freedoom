@@ -1,4 +1,4 @@
-#!/bin/sh -
+#!/bin/bash -
 
 # These ports should really be ordered by ease-of-use.  Most likely
 # advanced users with many ports installed will invoke their preferred
@@ -32,7 +32,25 @@ case "$(basename "$0")" in
 esac
 
 if [ -z "$DOOMWADPATH" ]; then
-    export DOOMWADPATH="/usr/share/doom:/usr/share/games/doom:/usr/local/share/doom:/usr/local/share/games/doom"
+    # Support installations of Freedoom to the home directory using
+    # the XDG spec.  Makes this complicated, but let’s do it right.
+    if [ -z "$XDG_DATA_HOME" ]; then
+        if [ -z "$HOME" ]; then
+            HOME=/
+        fi
+        XDG_PATH="$HOME"/.local/share/games/doom
+    else
+        XDG_PATH="$XDG_DATA_HOME"/games/doom
+    fi
+
+    PATHS=(
+        "$XDG_PATH"
+        /usr/local/share/games/doom
+        /usr/local/share/doom
+        /usr/share/games/doom
+        /usr/share/doom
+    )
+    export DOOMWADPATH="$(echo "${PATHS[@]}" | tr ' ' :)"
 fi
 
 if [ -z "$DOOMPORT" ] && [ -h "$HOME"/.doomport ]; then
