@@ -277,26 +277,50 @@ mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
 
-install-%: $(WADS)/%.wad %.6 %.png
+install_metadata_freedm:
+	install -Dm 644 dist/io.github.freedoom.FreeDM.desktop -t "$(target)/share/applications"
+	install -Dm 644 dist/io.github.freedoom.FreeDM.metainfo.xml -t "$(target)/share/metainfo"
+
+install_metadata_freedoom1:
+	install -Dm 644 dist/io.github.freedoom.Phase1.desktop -t "$(target)/share/applications"
+	install -Dm 644 dist/io.github.freedoom.Phase1.metainfo.xml -t "$(target)/share/metainfo"
+
+install_metadata_freedoom2:
+	install -Dm 644 dist/io.github.freedoom.Phase2.desktop -t "$(target)/share/applications"
+	install -Dm 644 dist/io.github.freedoom.Phase2.metainfo.xml -t "$(target)/share/metainfo"
+
+uninstall_metadata_freedm:
+	$(RM) "$(target)/share/applications/io.github.freedoom.FreeDM.desktop"
+	$(RM) "$(target)/share/metainfo/io.github.freedoom.FreeDM.metainfo.xml"
+	-rmdir -p "$(target)/share/applications"
+	-rmdir -p "$(target)/share/metainfo"
+
+uninstall_metadata_freedoom1:
+	$(RM) "$(target)/share/applications/io.github.freedoom.Phase1.desktop"
+	$(RM) "$(target)/share/metainfo/io.github.freedoom.Phase1.metainfo.xml"
+	-rmdir -p "$(target)/share/applications"
+	-rmdir -p "$(target)/share/metainfo"
+
+uninstall_metadata_freedoom2:
+	$(RM) "$(target)/share/applications/io.github.freedoom.Phase2.desktop"
+	$(RM) "$(target)/share/metainfo/io.github.freedoom.Phase2.metainfo.xml"
+	-rmdir -p "$(target)/share/applications"
+	-rmdir -p "$(target)/share/metainfo"
+
+install-%: $(WADS)/%.wad %.6 %.png install_metadata_%
 	install -Dm 755 dist/freedoom "$(target)$(bindir)/$*"
 	install -Dm 644 dist/$*.6 -t "$(target)$(mandir)/man6"
 	install -Dm 644 $(WADS)/$*.wad -t "$(target)$(waddir)"
-	install -Dm 644 dist/$*.desktop -t "$(target)/share/applications"
-	install -Dm 644 dist/$*.appdata.xml -t "$(target)/share/appdata"
 	install -Dm 644 dist/$*.png -t "$(target)/share/icons"
 
-uninstall-%:
+uninstall-%: uninstall_metadata_%
 	$(RM) "$(target)$(bindir)/$*"
 	$(RM) "$(target)$(mandir)/man6/$*.6"
 	$(RM) "$(target)$(waddir)/$*.wad"
-	$(RM) "$(target)/share/applications/$*.desktop"
-	$(RM) "$(target)/share/appdata/$*.appdata.xml"
 	$(RM) "$(target)/share/icons/$*.png"
 	-rmdir -p "$(target)$(bindir)"
 	-rmdir -p "$(target)$(mandir)/man6"
 	-rmdir -p "$(target)$(waddir)"
-	-rmdir -p "$(target)/share/applications"
-	-rmdir -p "$(target)/share/appdata"
 	-rmdir -p "$(target)/share/icons"
 
 install: install-freedm install-freedoom1 install-freedoom2
