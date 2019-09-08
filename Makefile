@@ -81,12 +81,11 @@ COPYING.txt: COPYING.adoc
 CREDITS.txt: CREDITS
 	unix2dos --add-bom --newfile $< $@
 
-DISTDOCS=COPYING.txt CREDITS.txt README.html
+DISTDOCS=COPYING.txt CREDITS.txt NEWS.html README.html
 
 .PHONY: dist
 
-# Due to convoluted reasons, the WADs must directly proceed the game name.
-dist: $(OBJS) COPYING.txt CREDITS.txt README.html
+dist: $(OBJS) $(DISTDOCS)
 	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
 	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedoom $(FREEDOOM1) $(FREEDOOM2) $(DISTDOCS)
 
