@@ -12,6 +12,8 @@
 *.zip
 *~
 .DS_Store
+.\#*
+\#*\#
 wad*.txt
 
 # Per directory patterns to ignore. These do not apply recursively to
