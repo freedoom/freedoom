@@ -2,6 +2,8 @@
 
 VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo 0.11.3)
 WADS=wads
+ASCIIDOC=asciidoc
+ASCIIDOC_MAN=a2x -f manpage
 CPP=scripts/simplecpp
 DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-v0 -rate accept
@@ -71,7 +73,7 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
 
 %.html: %.adoc
-	TZ=UTC asciidoc $<
+	TZ=UTC $(ASCIIDOC) $<
 
 doc: $(patsubst %.adoc,%.html,$(wildcard *.adoc))
 
@@ -265,7 +267,7 @@ fix-map-names:
 	scripts/fix-map-names levels
 
 %.6:
-	$(MAKE) -C dist $@
+	$(MAKE) ASCIIDOC_MAN="$(ASCIIDOC_MAN)" -C dist $@
 
 %.png:
 	$(MAKE) -C dist $@

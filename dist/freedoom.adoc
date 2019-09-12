@@ -1,17 +1,13 @@
-freedoom(6)
-===========
+= freedoom(6)
 :doctype: manpage
 
-NAME
-----
+== NAME
 freedoom - Automatically launch Freedoom with an engine
 
-SYNOPSIS
---------
+== SYNOPSIS
 *freedoom* [_-p_ _DOOMPORT_|_--_] [_ARGS_]
 
-DESCRIPTION
------------
+== DESCRIPTION
 Freedoom is a project to create a complete free-content game based on
 the _Doom_ engine (often called “source ports” or simply “ports”),
 which itself is free software.  In addition, it maintains
@@ -36,8 +32,7 @@ as the first option, will be passed to the engine being called.  This
 can allow you to use options such as _-file_ to load mods or anything
 else available with the engine of choice.
 
-COPYRIGHT
----------
+== COPYRIGHT
 Freedoom is licensed under a permissive three-clause BSD license.  For
 details, see the source tree or the +COPYING+/+COPYRIGHT+ file that
 was installed by distribution packaging.
