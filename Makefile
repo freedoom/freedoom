@@ -15,6 +15,8 @@ FREEDM=$(WADS)/freedm.wad
 
 OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 
+.PHONY: clean dist
+
 all: $(OBJS)
 
 subdirs:
@@ -83,9 +85,9 @@ COPYING.txt: COPYING.adoc
 CREDITS.txt: CREDITS
 	unix2dos --add-bom --newfile $< $@
 
-DISTDOCS=COPYING.txt CREDITS.txt NEWS.html README.html
-
-.PHONY: dist
+HTMLDOCS=NEWS.html README.html
+TEXTDOCS=COPYING.txt CREDITS.txt
+DISTDOCS=$(HTMLDOCS) $(TEXTDOCS)
 
 dist: $(OBJS) $(DISTDOCS)
 	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
@@ -274,6 +276,7 @@ fix-map-names:
 
 prefix?=/usr/local
 bindir?=/bin
+docdir?=/share/doc
 mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
@@ -308,21 +311,26 @@ uninstall_metadata_freedoom2:
 	-rmdir -p "$(target)/share/applications"
 	-rmdir -p "$(target)/share/metainfo"
 
-install-%: $(WADS)/%.wad %.6 %.png install_metadata_%
+install-%: $(HTMLDOCS) $(WADS)/%.wad %.6 %.png install_metadata_%
 	install -Dm 755 dist/freedoom "$(target)$(bindir)/$*"
 	install -Dm 644 dist/$*.6 -t "$(target)$(mandir)/man6"
 	install -Dm 644 $(WADS)/$*.wad -t "$(target)$(waddir)"
 	install -Dm 644 dist/$*.png -t "$(target)/share/icons"
+	install -Dm 644 CREDITS NEWS.html README.html -t "$(target)$(docdir)/$*"
+	install -Dm 644 COPYING.adoc "$(target)$(docdir)/$*/COPYING"
 
 uninstall-%: uninstall_metadata_%
 	$(RM) "$(target)$(bindir)/$*"
 	$(RM) "$(target)$(mandir)/man6/$*.6"
 	$(RM) "$(target)$(waddir)/$*.wad"
 	$(RM) "$(target)/share/icons/$*.png"
+	$(RM) "$(target)$(docdir)/$*/CREDITS" "$(target)$(docdir)/$*/COPYING"
+	$(RM) "$(target)$(docdir)/$*/NEWS.html" "$(target)$(docdir)/$*/README.html"
 	-rmdir -p "$(target)$(bindir)"
 	-rmdir -p "$(target)$(mandir)/man6"
 	-rmdir -p "$(target)$(waddir)"
 	-rmdir -p "$(target)/share/icons"
+	-rmdir -p "$(target)$(docdir)/$*"
 
 install: install-freedm install-freedoom1 install-freedoom2
 
