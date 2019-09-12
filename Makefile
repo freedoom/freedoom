@@ -77,8 +77,6 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 %.html: %.adoc
 	TZ=UTC $(ASCIIDOC) $<
 
-doc: $(patsubst %.adoc,%.html,$(wildcard *.adoc))
-
 COPYING.txt: COPYING.adoc
 	unix2dos --add-bom --newfile $< $@
 
