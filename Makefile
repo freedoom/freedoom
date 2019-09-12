@@ -100,7 +100,7 @@ else
 endif
 
 clean: wad-image-clean
-	$(RM) *.html deutex.log $(OBJS) \
+	$(RM) *.html $(OBJS) \
 	      ./COPYING.txt ./CREDITS.txt \
 	      ./wadinfo_phase1.txt \
 	      ./wadinfo_phase2.txt \
@@ -109,6 +109,7 @@ clean: wad-image-clean
 	      ./lumps/freedm.lmp
 	-rmdir $(WADS)
 
+	$(MAKE) -C bootstrap clean
 	$(MAKE) -C dist clean
 	$(MAKE) -C graphics/text clean
 	$(MAKE) -C lumps/dehacked clean
@@ -117,7 +118,6 @@ clean: wad-image-clean
 	$(MAKE) -C lumps/genmidi clean
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
-	$(MAKE) -C bootstrap clean
 
 # Variables that are common to wad-image* targets.
 WI_LEVELS := levels
