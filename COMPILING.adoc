@@ -71,9 +71,14 @@ Optional software
     the latest developments can be tracked with it.
   * _AsciiDoc_: The `*.adoc` files are all written in AsciiDoc markup,
     and it can be used to generate HTML versions of all these
-    documents.  This is used as part of the `make dist` target, to
-    generate the `README.html` file for inclusion with official Zip
-    files.
+    documents.  This is used as part of the `make dist` and `make
+    install` targets, to generate the `NEWS.html` and `README.html`
+    files for inclusion with official Zip files.  Different
+    implementations (eg, AsciiDoctor) may be selected by passing
+    `ASCIIDOC` and `ASCIIDOC_MAN` environment variables to `make`.
+  * _AsciiDoctor PDF_: Our manual, maintained in `manual/manual.adoc`,
+    has a hard dependency on this implementation of AsciiDoc for its
+    superior-looking PDF output.
   * _Zip_: The `make dist` target uses Zip to create release archives
     for FreeDM, Phase 1, and Phase 2.  This can also provide an easy
     way to automate generating in-development versions for other
