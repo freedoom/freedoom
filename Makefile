@@ -77,6 +77,9 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 %.html: %.adoc
 	TZ=UTC $(ASCIIDOC) $<
 
+manual/freedoom-manual.pdf: manual/manual.adoc
+	$(MAKE) -C manual
+
 COPYING.txt: COPYING.adoc
 	unix2dos --add-bom --newfile $< $@
 
@@ -85,7 +88,7 @@ CREDITS.txt: CREDITS
 
 HTMLDOCS=NEWS.html README.html
 TEXTDOCS=COPYING.txt CREDITS.txt
-DISTDOCS=$(HTMLDOCS) $(TEXTDOCS)
+DISTDOCS=$(HTMLDOCS) $(TEXTDOCS) manual/freedoom-manual.pdf
 
 dist: $(OBJS) $(DISTDOCS)
 	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
@@ -118,6 +121,7 @@ clean: wad-image-clean
 	$(MAKE) -C lumps/genmidi clean
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
+	$(MAKE) -C manual clean
 
 # Variables that are common to wad-image* targets.
 WI_LEVELS := levels
@@ -309,13 +313,16 @@ uninstall_metadata_freedoom2:
 	-rmdir -p "$(target)/share/applications"
 	-rmdir -p "$(target)/share/metainfo"
 
-install-%: $(HTMLDOCS) $(WADS)/%.wad %.6 %.png install_metadata_%
+install-%: $(WADS)/%.wad                          \
+           $(HTMLDOCS) manual/freedoom-manual.pdf \
+           %.6 %.png install_metadata_%
 	install -Dm 755 dist/freedoom "$(target)$(bindir)/$*"
 	install -Dm 644 dist/$*.6 -t "$(target)$(mandir)/man6"
 	install -Dm 644 $(WADS)/$*.wad -t "$(target)$(waddir)"
 	install -Dm 644 dist/$*.png -t "$(target)/share/icons"
 	install -Dm 644 CREDITS NEWS.html README.html -t "$(target)$(docdir)/$*"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/$*/COPYING"
+	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/$*"
 
 uninstall-%: uninstall_metadata_%
 	$(RM) "$(target)$(bindir)/$*"
@@ -324,6 +331,7 @@ uninstall-%: uninstall_metadata_%
 	$(RM) "$(target)/share/icons/$*.png"
 	$(RM) "$(target)$(docdir)/$*/CREDITS" "$(target)$(docdir)/$*/COPYING"
 	$(RM) "$(target)$(docdir)/$*/NEWS.html" "$(target)$(docdir)/$*/README.html"
+	$(RM) "$(target)$(docdir)/$*/freedoom-manual.pdf"
 	-rmdir -p "$(target)$(bindir)"
 	-rmdir -p "$(target)$(mandir)/man6"
 	-rmdir -p "$(target)$(waddir)"
