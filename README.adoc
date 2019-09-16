@@ -110,11 +110,11 @@ few guidelines that should be followed:
 We know people hate legalese, but this is important.  This applies to
 *everything* which is submitted.
 
-You must be incredibly careful when basing on existing graphics or
-sounds.  Most _Doom_ projects are incredibly lax on reusing
-intellectual property--there are many mods which contain modified
-_Doom_ sprites, for example.  However, due to the nature of this
-project, we do not have the same liberty to rip as we please.
+You must be careful when basing on existing graphics or sounds.  Most
+_Doom_ projects are lax on reusing intellectual property--there are
+many mods which contain modified _Doom_ sprites, for example.
+However, due to the nature of this project, we do not have the same
+liberty to rip as we please.
 
 The general rules go as follows:
 
