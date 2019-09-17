@@ -2,7 +2,7 @@
 <!-- SPDX-License-Identifier: BSD-3-Clause -->
 
 <component type="desktop">
-  <id>freedm.desktop</id>
+  <id>io.github.freedoom.FreeDM</id>
   <name>FreeDM</name>
   <summary>Deathmatch game based on the Doom engine</summary>
   <metadata_license>CC0-1.0</metadata_license>

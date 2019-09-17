@@ -2,7 +2,7 @@
 <!-- SPDX-License-Identifier: BSD-3-Clause -->
 
 <component type="desktop">
-  <id>freedoom1.desktop</id>
+  <id>io.github.freedoom.Phase1</id>
   <name>Freedoom: Phase 1</name>
   <summary>First-person shooter based on the Doom engine</summary>
   <metadata_license>CC0-1.0</metadata_license>
