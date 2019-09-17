@@ -39,3 +39,8 @@ was installed by distribution packaging.
 
 This manual page and the launcher script are both placed under the
 public domain.
+
+== SEE ALSO
+chocolate-doom(6), crispy-doom(6), prboom-plus(6)
+
+https://doomwiki.org/wiki/Parameter
