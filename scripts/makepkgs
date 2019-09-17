@@ -24,6 +24,9 @@ version = os.getenv("VERSION")
 if version is None:
     sys.stderr.write("Version not specified for release\n")
     sys.exit(1)
+if version[0] is "v":
+    # Strip the leading "v" from versioning
+    version = version[1:]
 
 path = os.path.dirname(FILES[0])
 basename = os.path.basename(FILES[0])

@@ -34,6 +34,9 @@ json_file = os.getenv("JSON")
 if version is None:
     sys.stderr.write("Version is not specified for release\n")
     sys.exit(1)
+if version[0] is "v":
+    # Strip the leading "v" from versioning
+    version = version[1:]
 
 if json_file is None:
     sys.stderr.write("JSON file not specified!\n")

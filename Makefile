@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
-VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo 0.11.3)
+VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo v0.11.3)
 WADS=wads
 ASCIIDOC=asciidoc
 ASCIIDOC_MAN=a2x -f manpage
