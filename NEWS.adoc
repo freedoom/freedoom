@@ -10,8 +10,6 @@
     conflicts with _Doom II_ mods or texture definitions, we prefer
     the _Doom II_ side of things.  _Final Doom_-specific maps and mods
     may never look completely right in _Freedoom_, as a result.
-  * Via the internal DeHackEd lump, IDCLIP is the cheat code for
-    no-clip mode in both _Phase 1_.
 
 === Graphics
   * New power-up (stealth, overdrive, and ultra-overdrive) sprites.
