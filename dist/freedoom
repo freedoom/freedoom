@@ -1,10 +1,11 @@
 #!/bin/bash -
 
-# These ports should really be ordered by ease-of-use.  Most likely
-# advanced users with many ports installed will invoke their preferred
-# one directly rather than depend on this script...
+# These ports should be ordered by ease-of-use, of which menu
+# simplicity and support for high-resolution take high priority.
 
-PORTS="doom odamex crispy-doom prboom-plus eternity gzdoom chocolate-doom"
+# "doom" is Debian’s generic name for their alternatives system.
+
+PORTS="doom odamex gzdoom crispy-doom chocolate-doom prboom-plus"
 
 # Just a single argument starting the command is allowed, -p, in order
 # to explicitly set a port on the command line. -- is also supported
@@ -82,8 +83,8 @@ done
 cat <<EOF >&2
 $(basename "$0") could not locate nor launch a Doom engine.  Most
 likely, you simply need to install one, check your distribution
-package repositories for names such as "prboom" or "odamex" or seek
-out one and install it manually.
+package repositories for names such as "odamex" or "chocolate-doom" or
+seek out one and install it manually.
 
 If you believe you already have one, you may just need to modify your
 PATH environment variable to include it, or set up the $HOME/.doomport
