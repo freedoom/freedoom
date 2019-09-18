@@ -78,3 +78,4 @@ iwads["freedm.wad"]["version"] = version
 
 with open(json_file, "w") as f:
     json.dump(iwads, f, indent=2, sort_keys=True)
+    f.write("\n")
