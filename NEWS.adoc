@@ -1,5 +1,70 @@
 = Freedoom project news
 
+== HEAD
+=== General
+  * We now have a manual rendered to beautiful PDF format.  Thanks to
+    Simon Howard, the project’s founder.
+  * A strong focus on vanilla compatibility has been sought for this
+    release.  We may not be perfect, but we are getting there.
+  * _Final Doom_ compatibility de-emphasized.  Where it creates
+    conflicts with _Doom II_ mods or texture definitions, we prefer
+    the _Doom II_ side of things.  _Final Doom_-specific maps and mods
+    may never look completely right in _Freedoom_, as a result.
+  * Via the internal DeHackEd lump, IDCLIP is the cheat code for
+    no-clip mode in both _Phase 1_.
+
+=== Graphics
+  * New power-up (stealth, overdrive, and ultra-overdrive) sprites.
+  * New necromancer (arch-vile) sprites by Urric.
+  * Some weapon and ammo sprites have been tweaked and improved.
+  * Completed and enhanced set of _Evilution_ and _Plutonia_ textures.
+  * New skull-switches by MissLav.
+  * New SKY4 based on an astronomy photograph.
+
+=== Music
+  * New tracks in C1M2, C2M3, C2M8, MAP03, MAP12, MAP22, MAP25, MAP26,
+    MAP27, DM03, DM06, DM09, DM17, DM24, DM31, and DM32.
+  * All files in-tree have been renamed from *.mus to *.mid.  The file
+    format must always be MIDI.  This makes it easy on music composers
+    to actually work with the files.
+
+=== Levels
+  * _Phase 1_ gets the bulk of mapping love in this round, fleshing
+    out the levels and tweaking difficulty levels so easy, normal, and
+    hard are all accounted for.  There is a new C3M5 by Mortrixs.
+  * _Phase 2_ MAP01 saw an overhaul, simplifying its design in
+    significant ways to improve the flow around the level.
+  * Two maps removed from _Phase 2_: MAP18 and MAP26, being very
+    strong recreations of _Doom II_ levels of the same numbers.
+  * Maps in _Phase 2_ in general have had some slight re-arrangement
+    based on difficulty levels and themes.  A new MAP06 by Jayexetee
+    is included, the old one taking the MAP18 slot.
+  * All levels are now guaranteed to have co-op and deathmatch starts.
+
+=== Unix script and metadata
+  * Metainfo (formerly appdata) and desktop files have been brought up
+    to the latest standard specifications and recommendations, using
+    reverse-DNS for the project identifier, and a self-evaluated
+    content rating.
+  * The launch shell-script changed the `PORT` environment variable to
+    `DOOMPORT` to avoid conflicts with the genericly-named `PORT`.  It
+    also builds a sensible default `DOOMWADPATH` environment variable
+    to assist ports that do not have a hard-coded fallback.
+  * The script no longer tries to look for `boom`, `zdoom`, nor
+    `prboom` by default, as these are ports no longer maintained.
+
+=== Build system
+  * Freedoom’s build system now has a hard dependency on Python 3, in
+    anticipation of Python 2’s end-of-life.
+  * We have moved from ImageMagick to Pillow, a Python library for
+    graphics manipulation.  It provides faster build times as well as
+    API stability.
+  * GIF files have been replaced with PNG files.  True PNG file format
+    transparency is used instead of a cyan background.
+  * `ASCIIDOC` and `ASCIIDOC_MAN` variables have been added to the
+    Makefile to control the AsciiDoc implementation used to generate
+    HTML and man page files.
+
 == 0.11.3 (2017-07-18)
   * Builds with DeuTex 5.0 and newer.
 
