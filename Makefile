@@ -102,8 +102,14 @@ else
 	JSON=$(JSON) VERSION=$(VERSION) scripts/makejson
 endif
 
+doom.gpl: lumps/playpal/playpal-base.lmp
+	$(MAKE) -C lumps/playpal $@
+	mv lumps/playpal/$@ .
+
+gimp-palette: doom.gpl
+
 clean: wad-image-clean
-	$(RM) *.html $(OBJS) \
+	$(RM) *.html doom.gpl $(OBJS) \
 	      ./COPYING.txt ./CREDITS.txt \
 	      ./wadinfo_phase1.txt \
 	      ./wadinfo_phase2.txt \

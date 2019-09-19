@@ -15,6 +15,7 @@
 .\#*
 \#*\#
 wad*.txt
+doom.gpl
 
 # Per directory patterns to ignore. These do not apply recursively to
 # subdirectories. Each line should begin with "[!]/". Please keep the
