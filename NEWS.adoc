@@ -32,8 +32,9 @@
     hard are all accounted for.  There is a new C3M5 by Mortrixs.
   * _Phase 2_ MAP01 saw an overhaul, simplifying its design in
     significant ways to improve the flow around the level.
-  * Two maps removed from _Phase 2_: MAP18 and MAP26, being very
-    strong recreations of _Doom II_ levels of the same numbers.
+  * Two maps in _Phase 2_ were replaced due to being recreations of
+    _Doom II_ maps.  Jayexetee and GooseJelly get credits for the new
+    ones, in MAP06 and MAP26.
   * Maps in _Phase 2_ in general have had some slight re-arrangement
     based on difficulty levels and themes.  A new MAP06 by Jayexetee
     is included, the old one taking the MAP18 slot.
