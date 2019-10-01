@@ -137,7 +137,11 @@ par 32 0
 [STRINGS]
 # Text shown on startup in Boom-compatible ports. This is all in
 # STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+#ifdef FREEDM
+STARTUP5============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
+#else
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
+#endif
 GOTARMOR = Picked up a light armor vest.
 GOTMEGA = Picked up a heavy armor vest.
 GOTHTHBONUS = Got a 1% health bonus.
@@ -462,6 +466,44 @@ E4TEXT = After yet another army of monsters\n\
          they've got the outbreak to deal\n\
          with, so that'll give you some time.\n\n\
          Destination: Earth!
+#ifdef FREEDM
+# After MAP06, before MAP07:
+C1TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP11, before MAP12:
+C2TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP20, before MAP21:
+C3TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP30 (endgame text):
+C4TEXT = Thank you for playing FreeDM, the\n\
+         Freedoom deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP31 (secret level #1):
+C5TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP32 (secret level #2):
+C6TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+#else
 # After MAP06, before MAP07:
 C1TEXT = You've found your way to the\n\
          complex's outer storage warehouse.\n\
@@ -537,6 +579,7 @@ C6TEXT = The world dissipitates around\n\
          The monsters you fought before\n\
          raise their weapons,\n\n\
          aiming for your head.
+#endif
 BGFLATE1 = AQF051
 BGFLATE2 = AQF054
 BGFLATE3 = FLAT5_2
