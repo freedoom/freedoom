@@ -639,6 +639,22 @@ OB_MPBFG_SPLASH=%o couldn't hide from %k's SKAG.
 OB_MPTELEFRAG=%o stood where %k was teleporting.
 OB_RAILGUN=%o was railed by %k.
 OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
+# Quit messages.
+QUITMSG = Don't forget:\nYou're here\nforever.
+QUITMSG1 = Why would you...
+QUITMSG2 = Are you a disappointment?
+QUITMSG3 = Press N to keep destroying aliens.\nPress Y to surrender.
+QUITMSG4 = Please press N. Thank you.
+QUITMSG5 = But why?
+QUITMSG6 = For every time somebody presses Y,\nGod kills a puppy.
+QUITMSG7 = Y\n\nN
+QUITMSG8 = What do you do with your life?
+QUITMSG9 = Don't press yes,\nthere's an army of zombies on your desktop!
+QUITMSG10 = All of your friends are dead.\nAre you sure you want to quit?
+QUITMSG11 = Press Y and a serpentipede\nwill tear your friggin' face off.
+QUITMSG12 = Richard says no.
+QUITMSG13 = You come across a minefield.\nThe sign reads,\n"Press Y to jump right in."
+QUITMSG14 = Having fun, are we?
 
 #ifdef PHASE1
 # Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
