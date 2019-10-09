@@ -38,20 +38,20 @@
   </content_rating>
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.11_01.png</image>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_01.webp</image>
+      <caption>MAP18: Aquatics Lab</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_04.webp</image>
       <caption>MAP10: Deadly Outlands</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.11_03.png</image>
-      <caption>MAP06: Gamma Labs</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_05.webp</image>
+      <caption>MAP02: Filtration Tunnels</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.11_05.png</image>
-      <caption>MAP22: Remanasu</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.11_07.png</image>
-      <caption>MAP09: Datacenter</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_07.webp</image>
+      <caption>MAP26: Dark Depths</caption>
     </screenshot>
   </screenshots>
   <releases>
