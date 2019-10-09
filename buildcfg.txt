@@ -2612,16 +2612,6 @@ YSKUB0	6	17
 
 [flats]
 
-#ifdef FREEDM
-
-; These flats are only in the FreeDM wad.
-
-DUMMY1
-DUMMY2
-DUMMY3
-
-#endif
-
 BLOOD1
 BLOOD2
 BLOOD3
@@ -2638,6 +2628,9 @@ CEIL5_2
 DEM1_3
 DEM1_5
 DEM1_6
+DUMMY1
+DUMMY2
+DUMMY3
 FLAT17
 FLAT1_1
 FLAT1_2
