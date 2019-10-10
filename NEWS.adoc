@@ -36,6 +36,7 @@
   * Completed and enhanced set of _Evilution_ and _Plutonia_ textures.
   * New skull-switches by MissLav.
   * New SKY4 based on an astronomy photograph.
+  * Tweaked player sprites and HUD face by Ferk.
 
 === Music
   * New tracks in C1M2, C2M3, C2M8, MAP03, MAP12, MAP22, MAP25, MAP26,
