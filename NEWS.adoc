@@ -1,11 +1,11 @@
 = Freedoom project news
 
-== HEAD
+== 0.12.0 (2019-10-10)
 === General
   * We now have a manual rendered to beautiful PDF format.  Thanks to
     Simon Howard, the project’s founder.
   * A strong focus on vanilla compatibility has been sought for this
-    release.  We may not be perfect, but we are getting there.
+    release.  Most, if not all, levels should work now.
   * _Final Doom_ compatibility de-emphasized.  Where it creates
     conflicts with _Doom II_ mods or texture definitions, we prefer
     the _Doom II_ side of things.  _Final Doom_-specific maps and mods
