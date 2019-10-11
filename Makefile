@@ -3,6 +3,7 @@
 VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo v0.12.0)
 WADS=wads
 ASCIIDOC=asciidoc
+ADOCOPTS=--backend=html5 --conf-file=.adoc-layout.conf
 ASCIIDOC_MAN=a2x -f manpage
 CPP=scripts/simplecpp
 DEUTEX=deutex
@@ -75,7 +76,7 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
 
 %.html: %.adoc
-	TZ=UTC $(ASCIIDOC) $<
+	$(ASCIIDOC) $(ADOCOPTS) $<
 
 manual/freedoom-manual.pdf: manual/manual.adoc
 	$(MAKE) -C manual
