@@ -16,12 +16,7 @@
 #endif
 
 #ifdef PHASE2
-#define PHASE1_OR_PHASE2
 #undef PHASE1
-#endif
-
-#ifdef PHASE1
-#define PHASE1_OR_PHASE2
 #endif
 
 ; List of levels
@@ -584,6 +579,9 @@ M_DOOM   13 -16
 #endif
 #endif
 
+; Used both in phase 2 and phase 1 (E4):
+INTERPIC	0	0
+
 #ifdef PHASE2
 HELP	0	0
 #endif
@@ -1095,11 +1093,6 @@ CWILV31 = DMWILV31
 #endif
 
 #endif /* #ifdef PHASE2 */
-
-#ifdef PHASE1_OR_PHASE2
-; interpic is used by ultimate doom and doom2
-INTERPIC	0	0
-#endif
 
 ; sprites list
 
