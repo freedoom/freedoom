@@ -5,7 +5,7 @@ person shooter game, but _Freedoom_ by itself is just the raw material
 for a game.  It must be paired with a compatible _Doom_ engine to be
 played.
 
-There is a massive http://doomwiki.org/wiki/Idgames_archive[back
+There is a massive https://doomwiki.org/wiki/Idgames_archive[back
 catalog], spanning over two decades, containing thousands of _Doom_
 levels and other modifications (“mods”) made by fans of the game.
 _Freedoom_ aims to be compatible with these and allows most to be
@@ -29,11 +29,11 @@ all the game data such as graphics, sound effects, music, and so on.
 This file is often called an “IWAD” by those in the _Doom_ and
 _Freedoom_ communities.  While the _Doom_ engine source code is free,
 you would normally still need one of the proprietary data files from
-http://www.idsoftware.com/[id Software] to play _Doom_.  _Freedoom_
+https://www.idsoftware.com/[id Software] to play _Doom_.  _Freedoom_
 aims to create a free alternative: combined with the GPL-licensed
 _Doom_ source code, this results in a completely free game.
 
-For more information, see http://freedoom.github.io/.
+For more information, see https://freedoom.github.io/.
 
 == How to play
 
@@ -41,7 +41,7 @@ Since _Freedoom_ is only the game data, you will still need to
 download an engine separately.  These are also often termed “source
 ports” by the community.  There are an overwhelming number of choices
 available, a lengthy list of which is available on the
-http://doomwiki.org/wiki/Source_port[Doom Wiki].
+https://doomwiki.org/wiki/Source_port[Doom Wiki].
 
 One particularly recommended by the _Freedoom_ project is
 https://zdoom.org/[GZDoom].  This engine offers good support for
@@ -97,8 +97,8 @@ intact, see `COPYING`), and you may study it--for example, to see how
 an “IWAD” is built.  To facilitate this, you can get the full source
 code for _Freedoom_, in this case, in the form of a DeuTex tree.
 
-You may read more about free software at the http://www.gnu.org/[GNU]
-and http://www.fsf.org/[Free Software Foundation] websites.
+You may read more about free software at the https://www.gnu.org/[GNU]
+and https://www.fsf.org/[Free Software Foundation] websites.
 
 == Contributing to Freedoom
 
@@ -197,10 +197,11 @@ patches, but keep in mind:
 === Submitting your work
 
 The most common, and a fairly simple method, to submit your work is by
-posting it on the http://www.doomworld.com/vb/freedoom/[Freedoom
-forum] on Doomworld Forums.  This allows a great number of people to
-review the contribution and provide feedback, although the
-registration process is known to be cumbersome.
+posting it on the
+https://www.doomworld.com/forum/17-freedoom/[Freedoom forum] on
+Doomworld Forums.  This allows a great number of people to review the
+contribution and provide feedback, although the registration process
+is known to be cumbersome.
 
 An alternative to using the forum, is to post your submission on the
 https://github.com/freedoom/freedoom/issues[issue tracker], which may
