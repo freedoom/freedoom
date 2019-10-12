@@ -207,10 +207,6 @@ An alternative to using the forum, is to post your submission on the
 https://github.com/freedoom/freedoom/issues[issue tracker], which may
 also be peer-reviewed and provide a feedback cycle.
 
-Lastly, it is possible to get work submitted by joining the official
-irc://irc.oftc.net/freedoom[#freedoom] IRC channel, although this
-poses the greatest risk of being lost and forgotten.
-
 Unfortunately, the Freedoom project cannot provide hosting space in
 the form of a web page nor FTP, however there are many free file hosts
 to use when you need a location to upload files.  Sites and services
