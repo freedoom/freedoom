@@ -74,10 +74,8 @@ of the following options should solve it:
     the above methods if possible.
 
     ** +freedoom1.wad+ can be renamed to +doom.wad+
-    ** +freedoom2.wad+ can be renamed to +doom2.wad+, +tnt.wad+, or
-       +plutonia.wad+
-    ** +freedm.wad+ can be renamed to +doom2.wad+, +tnt.wad+, or
-       +plutonia.wad+
+    ** +freedoom2.wad+ can be renamed to +doom2.wad+
+    ** +freedm.wad+ can be renamed to +doom2.wad+
 
 Additionally, for Unix-like operating systems, such as GNU/Linux or a
 BSD variant, _Freedoom_ may be packaged and installed with programs
