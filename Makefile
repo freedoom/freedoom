@@ -290,61 +290,85 @@ mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
 
-install_metadata_freedm:
-	install -Dm 644 dist/io.github.freedoom.FreeDM.desktop -t "$(target)/share/applications"
-	install -Dm 644 dist/io.github.freedoom.FreeDM.metainfo.xml -t "$(target)/share/metainfo"
+install-freedm: $(FREEDM) $(HTMLDOCS) manual/freedoom-manual.pdf \
+                freedm.6 freedm.png
+	install -Dm 644 dist/io.github.freedoom.FreeDM.desktop \
+	        -t "$(target)/share/applications"
+	install -Dm 644 dist/io.github.freedoom.FreeDM.metainfo.xml \
+	        -t "$(target)/share/metainfo"
+	install -Dm 755 dist/freedoom "$(target)$(bindir)/freedm"
+	install -Dm 644 dist/freedm.6 -t "$(target)$(mandir)/man6"
+	install -Dm 644 $(FREEDM) -t "$(target)$(waddir)"
+	install -Dm 644 dist/freedm.png -t "$(target)/share/icons"
+	install -Dm 644 CREDITS NEWS.html README.html -t "$(target)$(docdir)/freedm"
+	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
+	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/freedm"
 
-install_metadata_freedoom1:
-	install -Dm 644 dist/io.github.freedoom.Phase1.desktop -t "$(target)/share/applications"
-	install -Dm 644 dist/io.github.freedoom.Phase1.metainfo.xml -t "$(target)/share/metainfo"
+install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
+                  manual/freedoom-manual.pdf freedoom1.6 freedoom2.6    \
+                  freedoom1.png freedoom2.png
+	install -Dm 644 dist/io.github.freedoom.Phase1.desktop \
+	                -t "$(target)/share/applications"
+	install -Dm 644 dist/io.github.freedoom.Phase2.desktop \
+	                -t "$(target)/share/applications"
+	install -Dm 644 dist/io.github.freedoom.Phase1.metainfo.xml \
+	                -t "$(target)/share/metainfo"
+	install -Dm 644 dist/io.github.freedoom.Phase2.metainfo.xml \
+	                -t "$(target)/share/metainfo"
+	install -Dm 755 dist/freedoom "$(target)$(bindir)/freedoom1"
+	install -Dm 755 dist/freedoom "$(target)$(bindir)/freedoom2"
+	install -Dm 644 dist/freedoom1.6 -t "$(target)$(mandir)/man6"
+	install -Dm 644 dist/freedoom2.6 -t "$(target)$(mandir)/man6"
+	install -Dm 644 $(FREEDOOM1) $(FREEDOOM2) -t "$(target)$(waddir)"
+	install -Dm 644 dist/freedoom1.png -t "$(target)/share/icons"
+	install -Dm 644 dist/freedoom2.png -t "$(target)/share/icons"
+	install -Dm 644 CREDITS NEWS.html README.html \
+	                -t "$(target)$(docdir)/freedoom"
+	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedoom/COPYING"
+	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/freedoom"
 
-install_metadata_freedoom2:
-	install -Dm 644 dist/io.github.freedoom.Phase2.desktop -t "$(target)/share/applications"
-	install -Dm 644 dist/io.github.freedoom.Phase2.metainfo.xml -t "$(target)/share/metainfo"
+uninstall-freedm:
+	$(RM)                                                                   \
+	      "$(target)/share/applications/io.github.freedoom.FreeDM.desktop"  \
+	      "$(target)/share/metainfo/io.github.freedoom.FreeDM.metainfo.xml" \
+	      "$(target)/share/icons/freedm.png"                                \
+	      "$(target)$(bindir)/freedm"                                       \
+	      "$(target)$(mandir)/man6/freedm.6"                                \
+	      "$(target)$(waddir)/freedm.wad"                                   \
+	      "$(target)$(docdir)/freedm/CREDITS"                               \
+	      "$(target)$(docdir)/freedm/COPYING"                               \
+	      "$(target)$(docdir)/freedm/NEWS.html"                             \
+	      "$(target)$(docdir)/freedm/README.html"                           \
+	      "$(target)$(docdir)/freedm/freedoom-manual.pdf"
+	-rmdir -p "$(target)/share/applications"                    \
+	      "$(target)/share/metainfo" "$(target)/share/icons"    \
+	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \
+	      "$(target)$(waddir)" "$(target)$(docdir)/freedm"
 
-uninstall_metadata_freedm:
-	$(RM) "$(target)/share/applications/io.github.freedoom.FreeDM.desktop"
-	$(RM) "$(target)/share/metainfo/io.github.freedoom.FreeDM.metainfo.xml"
-	-rmdir -p "$(target)/share/applications"
-	-rmdir -p "$(target)/share/metainfo"
+uninstall-freedoom:
+	$(RM)                                                                   \
+	      "$(target)/share/applications/io.github.freedoom.Phase1.desktop"  \
+	      "$(target)/share/applications/io.github.freedoom.Phase2.desktop"  \
+	      "$(target)/share/metainfo/io.github.freedoom.Phase1.metainfo.xml" \
+	      "$(target)/share/metainfo/io.github.freedoom.Phase2.metainfo.xml" \
+	      "$(target)/share/icons/freedoom1.png"                             \
+	      "$(target)/share/icons/freedoom2.png"                             \
+	      "$(target)$(bindir)/freedoom1"                                    \
+	      "$(target)$(bindir)/freedoom2"                                    \
+	      "$(target)$(mandir)/man6/freedoom1.6"                             \
+	      "$(target)$(mandir)/man6/freedoom2.6"                             \
+	      "$(target)$(waddir)/freedoom1.wad"                                \
+	      "$(target)$(waddir)/freedoom2.wad"                                \
+	      "$(target)$(docdir)/freedoom/CREDITS"                             \
+	      "$(target)$(docdir)/freedoom/COPYING"                             \
+	      "$(target)$(docdir)/freedoom/NEWS.html"                           \
+	      "$(target)$(docdir)/freedoom/README.html"                         \
+	      "$(target)$(docdir)/freedoom/freedoom-manual.pdf"
+	-rmdir -p "$(target)/share/applications"                    \
+	      "$(target)/share/metainfo" "$(target)/share/icons"    \
+	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \
+	      "$(target)$(waddir)" "$(target)$(docdir)/freedoom"
 
-uninstall_metadata_freedoom1:
-	$(RM) "$(target)/share/applications/io.github.freedoom.Phase1.desktop"
-	$(RM) "$(target)/share/metainfo/io.github.freedoom.Phase1.metainfo.xml"
-	-rmdir -p "$(target)/share/applications"
-	-rmdir -p "$(target)/share/metainfo"
+install: install-freedm install-freedoom
 
-uninstall_metadata_freedoom2:
-	$(RM) "$(target)/share/applications/io.github.freedoom.Phase2.desktop"
-	$(RM) "$(target)/share/metainfo/io.github.freedoom.Phase2.metainfo.xml"
-	-rmdir -p "$(target)/share/applications"
-	-rmdir -p "$(target)/share/metainfo"
-
-install-%: $(WADS)/%.wad                          \
-           $(HTMLDOCS) manual/freedoom-manual.pdf \
-           %.6 %.png install_metadata_%
-	install -Dm 755 dist/freedoom "$(target)$(bindir)/$*"
-	install -Dm 644 dist/$*.6 -t "$(target)$(mandir)/man6"
-	install -Dm 644 $(WADS)/$*.wad -t "$(target)$(waddir)"
-	install -Dm 644 dist/$*.png -t "$(target)/share/icons"
-	install -Dm 644 CREDITS NEWS.html README.html -t "$(target)$(docdir)/$*"
-	install -Dm 644 COPYING.adoc "$(target)$(docdir)/$*/COPYING"
-	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/$*"
-
-uninstall-%: uninstall_metadata_%
-	$(RM) "$(target)$(bindir)/$*"
-	$(RM) "$(target)$(mandir)/man6/$*.6"
-	$(RM) "$(target)$(waddir)/$*.wad"
-	$(RM) "$(target)/share/icons/$*.png"
-	$(RM) "$(target)$(docdir)/$*/CREDITS" "$(target)$(docdir)/$*/COPYING"
-	$(RM) "$(target)$(docdir)/$*/NEWS.html" "$(target)$(docdir)/$*/README.html"
-	$(RM) "$(target)$(docdir)/$*/freedoom-manual.pdf"
-	-rmdir -p "$(target)$(bindir)"
-	-rmdir -p "$(target)$(mandir)/man6"
-	-rmdir -p "$(target)$(waddir)"
-	-rmdir -p "$(target)/share/icons"
-	-rmdir -p "$(target)$(docdir)/$*"
-
-install: install-freedm install-freedoom1 install-freedoom2
-
-uninstall: uninstall-freedm uninstall-freedoom1 uninstall-freedoom2
+uninstall: uninstall-freedm uninstall-freedoom
