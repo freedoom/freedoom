@@ -1,5 +1,27 @@
 = Freedoom project news
 
+== HEAD
+=== General
+  * The HTML documentation (eg, +NEWS+ and +README+ files) are
+    generated with a style based on _Freedoom_’s own website, rather
+    than the default AsciiDoc styling.
+
+=== Levels
+  * The sailor monster type is formally banished from _Freedoom_’s own
+    levels, and remaining uses of it were removed.
+
+=== Graphics
+  * New ESPI* textures are included as an alternative to the STAR*
+    textures.  These are named after and in honor of Esa Repo (Espi).
+  * A STARBR1 texture is now included as a counterpart to STARBR2.
+
+=== Build system
+  * The `make install` targets have been consolidated to behave more
+    similarly to how the pre-built zip distributions are: a split
+    between _FreeDM_ and _Phase 1+2_, rather than installing each of
+    the tree IWADs independently (and thus getting their own
+    +/usr/share/doc+ directories, for instance).
+
 == 0.12.0 (2019-10-10)
 === General
   * We now have a manual rendered to beautiful PDF format.  Thanks to
