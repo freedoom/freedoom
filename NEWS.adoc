@@ -1,5 +1,28 @@
 = Freedoom project news
 
+== 0.12.1 (2019-10-22)
+=== General
+  * The HTML documentation (eg, +NEWS+ and +README+ files) are
+    generated with a style based on _Freedoom_’s own website, rather
+    than the default AsciiDoc styling.
+  * _Phase 2_’s internal DEMO1 has been replaced, thanks to some odd
+    vanilla quirks that could cause it to desync in some (but not all)
+    conditions.
+
+=== Levels
+  * The sailor monster type is formally banished from _Freedoom_’s own
+    levels, and remaining uses of it were removed.
+
+=== Manual
+  * Incongruities between the actual game and manual have been fixed.
+
+=== Build system
+  * The `make install` targets have been consolidated to behave more
+    similarly to how the pre-built zip distributions are: a split
+    between _FreeDM_ and _Phase 1+2_, rather than installing each of
+    the tree IWADs independently (and thus getting their own
+    +/usr/share/doc+ directories, for instance).
+
 == 0.12.0 (2019-10-10)
 === General
   * We now have a manual rendered to beautiful PDF format.  Thanks to
