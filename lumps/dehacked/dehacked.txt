@@ -644,17 +644,17 @@ QUITMSG = Don't forget:\nYou're here\nforever.
 QUITMSG1 = Why would you...
 QUITMSG2 = Are you a disappointment?
 QUITMSG3 = Press N to keep destroying aliens.\nPress Y to surrender.
-QUITMSG4 = Please press N. Thank you.
-QUITMSG5 = But why?
+QUITMSG4 = I wouldn't press Y if I were you.\nSocial media is much worse.
+QUITMSG5 = If you leave now, it's over.
 QUITMSG6 = For every time somebody presses Y,\nGod kills a puppy.
-QUITMSG7 = Y\n\nN
+QUITMSG7 = They'll never rest.\nWill you rest?
 QUITMSG8 = What do you do with your life?
-QUITMSG9 = Don't press yes,\nthere's an army of zombies on your desktop!
+QUITMSG9 = Don't press Y,\nthere's an army of zombies on your desktop!
 QUITMSG10 = All of your friends are dead.\nAre you sure you want to quit?
 QUITMSG11 = Press Y and a serpentipede\nwill tear your friggin' face off.
 QUITMSG12 = Richard says no.
 QUITMSG13 = You come across a minefield.\nThe sign reads,\n"Press Y to jump right in."
-QUITMSG14 = Having fun, are we?
+QUITMSG14 = Not even going to stay for Deathmatch?
 
 #ifdef PHASE1
 # Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
