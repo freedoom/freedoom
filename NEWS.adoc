@@ -1,19 +1,26 @@
 = Freedoom project news
 
 == HEAD
+=== Graphics
+  * New ESPI* textures are included as an alternative to the STAR*
+    textures.  These are named after and in honor of Esa Repo (Espi).
+  * A STARBR1 texture is now included as a counterpart to STARBR2.
+
+== 0.12.1 (2019-10-22)
 === General
   * The HTML documentation (eg, +NEWS+ and +README+ files) are
     generated with a style based on _Freedoom_’s own website, rather
     than the default AsciiDoc styling.
+  * _Phase 2_’s internal DEMO1 has been replaced, thanks to some odd
+    vanilla quirks that could cause it to desync in some (but not all)
+    conditions.
 
 === Levels
   * The sailor monster type is formally banished from _Freedoom_’s own
     levels, and remaining uses of it were removed.
 
-=== Graphics
-  * New ESPI* textures are included as an alternative to the STAR*
-    textures.  These are named after and in honor of Esa Repo (Espi).
-  * A STARBR1 texture is now included as a counterpart to STARBR2.
+=== Manual
+  * Incongruities between the actual game and manual have been fixed.
 
 === Build system
   * The `make install` targets have been consolidated to behave more
