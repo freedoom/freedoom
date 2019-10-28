@@ -109,7 +109,7 @@ doom.gpl: lumps/playpal/playpal-base.lmp
 
 gimp-palette: doom.gpl
 
-clean: wad-image-clean
+clean:
 	$(RM) *.html doom.gpl $(OBJS) \
 	      ./COPYING.txt ./CREDITS.txt \
 	      ./wadinfo_phase1.txt \
