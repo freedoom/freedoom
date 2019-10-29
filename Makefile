@@ -1,6 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
-SHELL=bash -Eeuo pipefail
 VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo v0.12.1)
 WADS=wads
 ASCIIDOC=asciidoc
