@@ -574,7 +574,7 @@ suggestions:
 * If you encounter a horde of flesh worms or stealth worms, The angle grinder is a
   great weapon to use both to conserve ammo and avoid taking damage.
   Worms can't attack while being sawed, and if you back 
-  into any corner that is at roughly as wide as or narrower than a right angle,
+  into any corner that is roughly as wide as or narrower than a right angle,
   they can only come at you 
   one at a time. The angle grinder also works well on Trilobites: they can't attack
   while taking damage from it.
