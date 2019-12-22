@@ -571,11 +571,13 @@ suggestions:
   effectively, they’ll spend their energy killing each other and you’ll save
   on ammunition.
   
-* If you encounter a horde of flesh worms or stealth worms, The chainsaw is a
-  great weapon to use. Worms can't attack while being sawed, and if you back 
-  into a corner that is "107 degrees or narrower", they can only come at you 
-  one at a time. The chainsaw also works well on Trilobites: they can't attack
-  while taking damage from the chainsaw.
+* If you encounter a horde of flesh worms or stealth worms, The angle grinder is a
+  great weapon to use both to conserve ammo and avoid taking damage.
+  Worms can't attack while being sawed, and if you back 
+  into a corner that is at only as wide as or narrower than about a right angle,
+  they can only come at you 
+  one at a time. The angle grinder also works well on Trilobites: they can't attack
+  while taking damage from it.
 
 <<<
 
@@ -672,8 +674,9 @@ provided that https://github.com/freedoom/freedoom/blob/master/COPYING.adoc[cert
 are met.
 
 If you'd like to contribute to the Freedoom project, please check out the 
-https://github.com/freedoom/freedoom/[project's page] and
-https://www.doomworld.com/forum/17-freedoom/[discussion forum].
+https://github.com/freedoom/freedoom/[project's page],
+https://www.doomworld.com/forum/17-freedoom/[discussion forum],
+and https://discord.gg/9DA3fut[discord chat].
 
 https://help.github.com/en/github[How to use Git version control for contributions]
 
