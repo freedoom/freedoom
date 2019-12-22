@@ -18,7 +18,7 @@ OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 
 .PHONY: clean dist
 
-all: $(OBJS)
+all: deutex-check $(OBJS)
 
 subdirs:
 	$(MAKE) -C lumps/dehacked # graphics/text depends on generated dehacked files
@@ -41,6 +41,19 @@ lumps/freedoom.lmp lumps/freedm.lmp: force
 # deutex doesnt allow redirects for the filenames in the texture
 # entries, so we have to change the texture1 symlink to point
 # to whichever wad we are working on
+
+#---------------------------------------------------------
+# Build checks
+
+# Make sure deutex supports PNG
+deutex-check:
+	@$(DEUTEX) -h | grep -qw PNG || { \
+	echo "$(DEUTEX) does not support PNG. Try building deutex with the PNG"; \
+	echo "libraries (libpng and libpng-devel or similar packages) installed."; \
+	echo "deutex can be downloaded from https://github.com/Doom-Utils/deutex."; \
+	echo "The full path to duetex can be specified by passing"; \
+	echo "DEUTEX=/the/path/to/deutex to make when building Freedoom."; \
+	exit 1; }
 
 #---------------------------------------------------------
 # freedm iwad
