@@ -664,26 +664,26 @@ number of cheats that you can turn to:
 == Contributing to Freedoom ==
 
 Freedoom is a 
-[free and open source software (FOSS)]https://en.wikipedia.org/wiki/Free_and_open-source_software
+https://en.wikipedia.org/wiki/Free_and_open-source_software[free and open source software (FOSS)]
 project contributed to by many users around the world. It is available as 
 both free in cost (free as in free beer) and in modification and 
 redistribution rights (free as in free speech) to end users,
-provided that [certain requirenments]https://github.com/freedoom/freedoom/blob/master/COPYING.adoc
+provided that https://github.com/freedoom/freedoom/blob/master/COPYING.adoc[certain requirenments]
 are met.
 
 If you'd like to contribute to the Freedoom project, please check out the 
-[project's page]https://github.com/freedoom/freedoom/ and
-[discussion forum]https://www.doomworld.com/forum/17-freedoom/
+https://github.com/freedoom/freedoom/[project's page] and
+https://www.doomworld.com/forum/17-freedoom/[discussion forum]
 
-[How to use Git version control for contributions]https://help.github.com/en/github
+https://help.github.com/en/github[How to use Git version control for contributions]
 
 <<<
 
 [[reusing]]
 == Reusing portions of Freedoom ==
 
-Since [Freedoom is free]https://freedoom.github.io/about.html, some other
+Since https://freedoom.github.io/about.html[Freedoom is free], some other
 projects have used Freedoom's assets.  We think this is a great use of the 
 project and should be encouraged. If you use portions of Freedoom in your
 project, please let us know by filing an issue or pull request on
-[Freedoom's website project page]https://github.com/freedoom/freedoom.github.io
+https://github.com/freedoom/freedoom.github.io[Freedoom's website project page]
