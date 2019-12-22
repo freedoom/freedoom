@@ -570,6 +570,12 @@ suggestions:
   easier for you to target. It also encourages monster in-fighting; if done
   effectively, they’ll spend their energy killing each other and you’ll save
   on ammunition.
+  
+* If you encounter a horde of flesh worms or stealth worms, The chainsaw is a
+  great weapon to use. Worms can't attack while being sawed, and if you back 
+  into a corner that is "107 degrees or narrower", they can only come at you 
+  one at a time. The chainsaw also works well on Trilobites: they can't attack
+  while taking damage from the chainsaw.
 
 <<<
 
