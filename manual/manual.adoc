@@ -673,7 +673,7 @@ are met.
 
 If you'd like to contribute to the Freedoom project, please check out the 
 https://github.com/freedoom/freedoom/[project's page] and
-https://www.doomworld.com/forum/17-freedoom/[discussion forum]
+https://www.doomworld.com/forum/17-freedoom/[discussion forum].
 
 https://help.github.com/en/github[How to use Git version control for contributions]
 
