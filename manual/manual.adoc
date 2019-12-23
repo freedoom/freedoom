@@ -671,7 +671,7 @@ project contributed to by many users around the world. It is available as
 both free in cost (free as in free beer) and in modification and 
 redistribution rights (free as in free speech) to end users,
 provided that the original software license is included and/or 
-viewable by users of modified versions.
+viewable by users of modified or redistributed versions.
 
 If you'd like to contribute to the Freedoom project, please check out the 
 https://github.com/freedoom/freedoom[project's page],
