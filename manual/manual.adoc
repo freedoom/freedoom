@@ -680,6 +680,7 @@ and https://discord.gg/9DA3fut[discord chat].
 
 https://help.github.com/en/github[How to use Git version control for contributions]
 
+https://guides.github.com/activities/forking/[How to fork a project and create a pull request with Git]
 <<<
 
 [[reusing]]
