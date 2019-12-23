@@ -9,6 +9,8 @@ CPP=scripts/simplecpp
 DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-v0 -rate accept
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
+NODE_BUILDER=ZenNode
+NODE_BUILDER_LEVELS=c?m? dm?? map??
 
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
@@ -159,6 +161,15 @@ test: test-map-names
 # Fix the map names.
 fix-map-names:
 	scripts/fix-map-names levels
+
+# Rebuild the nodes for the level WADs. By default this invokes "ZenNode" on
+# all 100 level WADs. Override the "NODE_BUILDER" prefixed variables to
+# configure.
+rebuild-nodes: $(addprefix levels/,$(addsuffix .wad,$(NODE_BUILDER_LEVELS)))
+	for level in $^; \
+	do \
+		$(NODE_BUILDER) $$level -o $$level; \
+	done
 
 %.6:
 	$(MAKE) ASCIIDOC_MAN="$(ASCIIDOC_MAN)" -C dist $@
