@@ -162,7 +162,6 @@ def generate_kerning_test(font):
 if __name__ == "__main__":
 
     font = TextGenerator("fontchars", kerning_table=FONT_KERNING_RULES)
-    #generate_kerning_test(font)
     generate_graphics(font, red_graphics, color=font.COLOR_RED)
     generate_graphics(font, blue_graphics, color=font.COLOR_BLUE)
     generate_graphics(font, white_graphics, color=font.COLOR_WHITE)
