@@ -570,6 +570,14 @@ suggestions:
   easier for you to target. It also encourages monster in-fighting; if done
   effectively, they’ll spend their energy killing each other and you’ll save
   on ammunition.
+  
+* If you encounter a horde of flesh worms or stealth worms, The angle grinder is a
+  great weapon to use both to conserve ammo and avoid taking damage.
+  Worms can't attack while being sawed, and if you back 
+  into any corner that is roughly as wide as or narrower than a right angle,
+  they can only come at you 
+  one at a time. The angle grinder also works well on trilobites: they can't attack
+  while taking damage from it.
 
 <<<
 
@@ -628,19 +636,6 @@ on five star rankings by visitors to the site.
 
 <<<
 
-// == Contributing to Freedoom ==
-
-// TODO: Write this section.
-
-// <<<
-
-// [[reusing]]
-// == Reusing portions of Freedoom ==
-
-// TODO: Write this section.
-
-// <<<
-
 == Cheats ==
 
 If you’re finding the game too difficult, you can always try playing at
@@ -665,3 +660,35 @@ number of cheats that you can turn to:
 | **IDBEHOLDM** | Gives the tactical survey map.
 | **IDBEHOLDL** | Gives the night vision goggles.
 |==========================
+
+<<<
+
+== Contributing to Freedoom ==
+
+Freedoom is a 
+https://www.gnu.org/philosophy/free-sw.html[free content]
+project contributed to by many users around the world. It is available as 
+both free in cost (free as in free beer) and in modification and 
+redistribution rights (free as in free speech) to end users,
+provided that the original software license is included and/or 
+viewable by users of modified or redistributed versions.
+
+If you'd like to contribute to the Freedoom project, please check out the 
+https://github.com/freedoom/freedoom[project's page],
+https://www.doomworld.com/forum/17-freedoom/[discussion forum],
+and https://discord.gg/9DA3fut[discord chat].
+
+https://help.github.com/en/github[How to use Git version control for contributions]
+
+https://guides.github.com/activities/forking/[How to fork a project and create a pull request with Git]
+
+<<<
+
+[[reusing]]
+== Reusing portions of Freedoom ==
+
+Since https://freedoom.github.io/about.html[Freedoom is free], some other
+projects have used Freedoom's assets.  We think this is a great use of the 
+project and should be encouraged. If you use portions of Freedoom in your
+project, please let us know by filing an issue or pull request on
+https://github.com/freedoom/freedoom.github.io[Freedoom's website project page]
