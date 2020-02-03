@@ -1,10 +1,11 @@
 = Freedoom Manual
+// SPDX-License-Identifier: BSD-3-Clause
 
 Welcome to Freedoom, a complete game that is free and open source software.
 Freedoom is made available under the modified BSD license, meaning that
 anyone is free to share it, modify it and reuse parts of it.
 
-// For more details, see the <<reusing,reusing section>>.
+For more details, see the <<reusing,reusing section>>.
 
 image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
