@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 
 # These ports should be ordered by ease-of-use, of which menu
 # simplicity and support for high-resolution take high priority.
