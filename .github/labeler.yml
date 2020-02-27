@@ -1,0 +1,18 @@
+#maps
+maps:
+  - levels/**/*
+#sprites
+sprites:
+  - sprites/**/*
+#music
+music:
+  - musics/**/*
+#sounds:
+sounds:
+  - sounds/**/*
+#patches:
+patches:
+  - patches/**/*
+#flats:
+flats:
+  - flats/**/*
