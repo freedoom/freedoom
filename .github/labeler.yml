@@ -1,5 +1,5 @@
-#maps
-maps:
+#levels
+levels:
   - levels/**/*
 #sprites
 sprites:
