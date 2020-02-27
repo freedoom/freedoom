@@ -1,0 +1,29 @@
+name: Continuous Integration
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Deutex
+      run: |
+        git clone https://github.com/Doom-Utils/deutex.git
+        cd deutex
+        sudo apt install libpng-dev
+        ./bootstrap
+        ./configure
+        make
+        sudo make install
+    - name: Build
+      run: |
+        sudo apt install python3-pil
+        PATH=/usr/games:$PATH make
+    - name: Upload Package
+      uses: actions/upload-artifact@v1
+      with:
+        path: "./wads"
+        name: "wads"
