@@ -6,4 +6,4 @@ if [[ ! -f "$SNAP_USER_DATA/.config/gzdoom/gzdoom.ini" ]]; then
     mkdir $SNAP_USER_DATA/.config/gzdoom 2>/dev/null
     cp $SNAP/config/gzdoom.ini $SNAP_USER_DATA/.config/gzdoom/gzdoom.ini
 fi
-gzdoom
+gzdoom $@
