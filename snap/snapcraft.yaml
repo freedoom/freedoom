@@ -89,6 +89,7 @@ parts:
     source: https://github.com/Doom-Utils/deutex.git
     source-tag: v5.2.1
     plugin: autotools
+    configflags: ["--disable-man"]
     build-packages:
       - libpng-dev
     prime:
