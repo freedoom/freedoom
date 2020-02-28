@@ -270,3 +270,6 @@ uninstall-freedoom:
 install: install-freedm install-freedoom
 
 uninstall: uninstall-freedm uninstall-freedoom
+
+snap: force
+	snapcraft

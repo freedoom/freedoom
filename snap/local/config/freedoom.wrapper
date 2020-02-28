@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# copy default settings if they don't currently exist
+if [[ ! -f "$SNAP_USER_DATA/.config/gzdoom/gzdoom.ini" ]]; then
+    mkdir $SNAP_USER_DATA/.config 2>/dev/null
+    mkdir $SNAP_USER_DATA/.config/gzdoom 2>/dev/null
+    cp $SNAP/config/gzdoom.ini $SNAP_USER_DATA/.config/gzdoom/gzdoom.ini
+fi
+gzdoom

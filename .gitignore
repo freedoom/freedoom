@@ -4,10 +4,10 @@
 *.6
 *.bak
 *.html
-*.ini
 *.orig
 *.pdf
 *.pyc
+*.snap
 *.swp
 *.zip
 *~
@@ -62,6 +62,8 @@ doom.gpl
 /lumps/playpal.lmp
 
 /lumps/colormap/*.lmp
+
+/lumps/dmxgus/*.ini
 
 /lumps/genmidi/*.lmp
 

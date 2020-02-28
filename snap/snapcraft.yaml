@@ -1,0 +1,123 @@
+name: freedoom
+base: core18
+version: latest
+version-script: git describe --abbrev=8 --dirty 2>/dev/null
+summary: A free and open First-Person Shooter
+description: |
+  Freedoom is a completely free and open replacement for DOOM, and is fully compatible with all DOOM levels and modifcations.
+  This package contains Freedoom: Phase 1, Freedoom: Phase 2, and FreeDM.
+# The desktop launcher and icon have to be located within snap/gui to be included
+icon: snap/gui/io.github.freedoom.png
+license: "BSD-3-Clause"
+
+grade: stable
+confinement: strict
+
+apps:
+  freedoom:
+    command: desktop-launch $SNAP/bin/freedoom
+    plugs: [desktop, desktop-legacy, unity7, network, opengl, pulseaudio, audio-playback, joystick, x11, wayland, home]
+    environment:
+      LD_LIBRARY_PATH: $SNAP/usr/lib/x86_64-linux-gnu/pulseaudio:$LD_LIBRARY_PATH
+
+parts:
+  gzdoom:
+    source: https://github.com/coelckers/gzdoom.git
+    source-tag: 'g4.3.3'
+    plugin: cmake
+    configflags: ["-DCMAKE_BUILD_TYPE=Release", "-DNO_FMOD=ON"]
+    build-packages:
+      - g++
+      - make
+      - cmake
+      - libsdl2-dev
+      - git
+      - zlib1g-dev
+      - libbz2-dev
+      - libjpeg-dev
+      - libfluidsynth-dev
+      - libgme-dev
+      - libopenal-dev
+      - libmpg123-dev
+      - libsndfile1-dev
+      - libgtk-3-dev
+      - timidity
+      - nasm
+      - libgl1-mesa-dev
+      - tar
+      - libsdl1.2-dev
+      - libglew-dev
+    stage-packages:
+      - libsdl2-2.0-0
+      - libopenal1
+      - libfluidsynth1
+      - libgme0
+      - libmpg123-0
+      - libsndfile1
+      - libwildmidi2
+      - libgtk-3-0
+      - timidity
+      - libsdl1.2debian
+      - libgl1-mesa-glx
+      - libpulse0
+      - libgomp1
+      - yad
+      - libslang2
+      - libglu1-mesa
+      - freeglut3
+    after:
+      - desktop-glib-only
+    override-build: |
+      snapcraftctl build
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/share/sounds/sf2
+      cp $SNAPCRAFT_PART_BUILD/soundfonts/gzdoom.sf2 $SNAPCRAFT_PART_INSTALL/usr/share/sounds/sf2/gzdoom.sf2
+    prime: 
+      #We don't need the default soundfont (which is 140M)
+      - -usr/share/sounds/sf2/FluidR3_GM.sf2 
+      #We don't need the icons (which are 40M)
+      - -usr/share/icons
+  desktop-glib-only:
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: glib-only
+    plugin: make
+    build-packages:
+      - libglib2.0-dev
+    stage-packages:
+      - libglib2.0-bin
+  #only used for building freedoom
+  deutex:
+    source: https://github.com/Doom-Utils/deutex.git
+    source-tag: v5.2.1
+    plugin: autotools
+    build-packages:
+      - libpng-dev
+    prime:
+      [-bin/deutex, -share/man/man6/deutex.6]
+  freedoom:
+    source: .
+    plugin: make
+    after: [deutex]
+    build-packages:
+      - deutex
+      - python3-pil
+      - asciidoc
+      - libpng16-16
+    # Only copying the wads, not the docs, since they will be
+    # inaccessible within the snap.
+    override-build: |
+      make
+      mkdir -p $SNAPCRAFT_PART_INSTALL/share/games/doom
+      cp $SNAPCRAFT_PART_BUILD/wads/*.wad $SNAPCRAFT_PART_INSTALL/share/games/doom
+  config:
+    source: snap/local/config
+    source-type: local
+    plugin: dump
+    organize:
+      "freedoom.wrapper" : bin/freedoom
+      # gzdoom.ini contains some sane defaults for gzdoom
+      "gzdoom.ini" : config/gzdoom.ini
+layout:
+  /usr/share/games/doom: # to locate the wad files
+    bind: $SNAP/share/games/doom
+  /usr/share/doom/soundfonts: # to locate the soundfonts
+    bind: $SNAP/usr/share/sounds/sf2

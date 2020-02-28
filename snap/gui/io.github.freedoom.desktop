@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Freedoom
+Comment=Battle monsters in one massive 32-level chapter
+GenericName=First Person Shooter Game
+Type=Application
+Icon=${SNAP}/meta/gui/io.github.freedoom.png
+Keywords=first;person;shooter;doom;freedoom;
+Categories=Game;ActionGame;
+Exec=freedoom
