@@ -21,9 +21,9 @@ apps:
       LD_LIBRARY_PATH: $SNAP/usr/lib/x86_64-linux-gnu/pulseaudio:$LD_LIBRARY_PATH
 
 parts:
-  gzdoom:
-    source: https://github.com/coelckers/gzdoom.git
-    source-tag: 'g4.3.3'
+  lzdoom:
+    source: https://github.com/drfrag666/gzdoom.git
+    source-commit: 'bf8a562'
     plugin: cmake
     configflags: ["-DCMAKE_BUILD_TYPE=Release", "-DNO_FMOD=ON"]
     build-packages:
@@ -70,7 +70,7 @@ parts:
     override-build: |
       snapcraftctl build
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/share/sounds/sf2
-      cp $SNAPCRAFT_PART_BUILD/soundfonts/gzdoom.sf2 $SNAPCRAFT_PART_INSTALL/usr/share/sounds/sf2/gzdoom.sf2
+      cp $SNAPCRAFT_PART_BUILD/soundfonts/lzdoom.sf2 $SNAPCRAFT_PART_INSTALL/usr/share/sounds/sf2/lzdoom.sf2
     prime: 
       #We don't need the default soundfont (which is 140M)
       - -usr/share/sounds/sf2/FluidR3_GM.sf2 
@@ -114,8 +114,8 @@ parts:
     plugin: dump
     organize:
       "freedoom.wrapper" : bin/freedoom
-      # gzdoom.ini contains some sane defaults for gzdoom
-      "gzdoom.ini" : config/gzdoom.ini
+      # lzdoom.ini contains some sane defaults for lzdoom
+      "lzdoom.ini" : config/lzdoom.ini
 layout:
   /usr/share/games/doom: # to locate the wad files
     bind: $SNAP/share/games/doom
