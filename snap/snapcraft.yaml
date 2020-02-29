@@ -23,7 +23,7 @@ apps:
 parts:
   lzdoom:
     source: https://github.com/drfrag666/gzdoom.git
-    source-commit: 'bf8a562'
+    source-commit: '797037f'
     plugin: cmake
     configflags: ["-DCMAKE_BUILD_TYPE=Release", "-DNO_FMOD=ON"]
     build-packages:
