@@ -15,6 +15,7 @@ TEXTGEN_GRAPHIC_LUMPS = \
   m_mess.png   m_mouse.png  m_multi.png  m_player.png m_serial.png \
   m_setup.png  m_sound.png  m_stat.png   m_status.png m_tcpip.png  \
   m_versen.png m_video.png  m_wad.png    m_wadopt.png m_weap.png   \
+  m_crispy.png                                                     \
   prboom.png   t_phase1.png t_phase2.png                           \
   m_ultra.png  wibp1.png    wibp2.png    wibp3.png    wibp4.png    \
   wicolon.png  wienter.png  wif.png      wifrgs.png   wipcnt.png   \
