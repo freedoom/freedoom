@@ -203,6 +203,8 @@ red_graphics = {
     # match the other main menu graphics. Eternity Engine doesn't
     # use it any more, and on SMMU there's enough space for it.
     "m_multi": "Multiplayer",
+    # Crispy Doom's Crispness menu:
+    "m_crispy": "Crispness",
 }
 
 
