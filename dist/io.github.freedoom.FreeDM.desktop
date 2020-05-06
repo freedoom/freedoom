@@ -5,6 +5,7 @@ Comment[he]=הילחם בחברים ובאויבים בקרבות מיתה תח�
 GenericName=First Person Shooter Game
 GenericName[he]=משחק יריות בגוף ראשון
 Type=Application
+PrefersNonDefaultGPU=true
 Icon=io.github.freedoom.FreeDM
 Keywords=first;person;shooter;doom;freedoom;
 Categories=Game;ActionGame;

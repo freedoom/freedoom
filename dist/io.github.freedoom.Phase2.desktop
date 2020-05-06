@@ -6,6 +6,7 @@ Comment[he]=הילחם במפלצות בפרק אדיר אחד בעל 32 שלב�
 GenericName=First Person Shooter Game
 GenericName[he]=משחק יריות בגוף ראשון
 Type=Application
+PrefersNonDefaultGPU=true
 Icon=io.github.freedoom.Phase2
 Keywords=first;person;shooter;doom;freedoom;
 Categories=Game;ActionGame;
