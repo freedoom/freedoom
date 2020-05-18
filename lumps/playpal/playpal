@@ -199,13 +199,13 @@ for i in range(8):
 # STARTBONUSPALS
 
 for i in range(4):
-    p = (i + 1) * 0.4 / 4
+    p = (i + 1) * 0.5 / 4
 
-    palettes.append(bias_palette_towards(base_pal, (128, 128, 128), p))
+    palettes.append(bias_palette_towards(base_pal, (215, 186, 69), p))
 
 # RADIATIONPAL
 
-palettes.append(bias_palette_towards(base_pal, (0, 255, 0), 0.2))
+palettes.append(bias_palette_towards(base_pal, (0, 255, 0), 0.125))
 
 for palette in palettes:
     output_palette(palette)
