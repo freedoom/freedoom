@@ -262,7 +262,7 @@ To control how the node builder is invoked, or which levels are
 rebuilt, override the NODE_BUILDER and NODE_BUILDER_LEVELS make
 variables respectively. For example, to specify the full path to
 ZenNode when it's not in the path and to rebuild only the first
-chapter of Freedoom 1 as well all of the deathmatch levels:
+episode of Freedoom 1 as well all of the deathmatch levels:
 [source,bash]
 -----------------
 make NODE_BUILDER=/opt/zennode/ZenNode NODE_BUILDER_LEVELS="c1m? dm??" rebuild-nodes

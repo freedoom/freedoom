@@ -2,7 +2,7 @@ This directory contains the background music heard during play.
 
 In general, most files are per-level music files:
 
-  * d_eXmY.mid    - Freedoom: Phase 1 music for cXmY.
+  * d_eXmY.mid    - Freedoom: Phase 1 music for eXmY.
   * d_mapXY.mid   - Freedoom: Phase 2 music for mapXY.
   * d_dmXY.mid    - FreeDM music for level XY.
 
@@ -10,7 +10,7 @@ There are a few other MIDI files:
 
   * d_intro.mid / d_introa.mid - Freedoom: Phase 1 title music
   * d_inter.mid  - Freedoom: Phase 1 intermission music
-  * d_bunny.mid  - Freedoom: Phase 1 Chapter 3 end music
+  * d_bunny.mid  - Freedoom: Phase 1 Episode 3 end music
   * d_victor.mid - Freedoom: Phase 1 victory screen music
 
   * d_dm2ttl.mid - Freedoom: Phase 2 / FreeDM title music

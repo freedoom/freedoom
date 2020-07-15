@@ -35,7 +35,7 @@ following:
 
 Freedoom is split into _Freedoom: Phase 1_ (`freedoom1.wad`) and
 _Freedoom: Phase 2_ (`freedoom2.wad`). _Phase 1_ is split into four separate
-chapters of eight levels each, while _Phase 2_ is a single, 30 level campaign.
+episodes of eight levels each, while _Phase 2_ is a single, 30 level campaign.
 This gives 62 levels to play through, and there are also secret levels -- if
 you can discover how to reach them.
 
@@ -70,19 +70,19 @@ items you’ll encounter in the game.
 To start a new game, press _Esc_ to bring up the main menu, and choose
 _New Game_.
 
-When starting a new game, you may be prompted to choose which chapter to
+When starting a new game, you may be prompted to choose which episode to
 start playing.
 
-image::images/menu-chapter.png[Freedoom Chapter Menu,align="center",width=432,pdfwidth=50vw]
+image::images/menu-episode.png[Freedoom Episode Menu,align="center",width=432,pdfwidth=50vw]
 
 If you’re new to the game, start with _Outpost Outbreak_, the first
-chapter (and easiest). Once you finish one chapter, you can move on to
-the next. If you’re bored with the chapter you’re playing or stuck, you
-can always try playing a different chapter instead. There’s no requirement
-to play chapters in order.
+episode (and easiest). Once you finish one episode, you can move on to
+the next. If you’re bored with the episode you’re playing or stuck, you
+can always try playing a different episode instead. There’s no requirement
+to play episodes in order.
 
 [[skill]]
-After choosing a chapter, you need to pick a skill level. Skill level
+After choosing a episode, you need to pick a skill level. Skill level
 affects several factors in the game, most importantly the number of
 monsters you’ll encounter.
 
