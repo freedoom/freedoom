@@ -1915,7 +1915,7 @@ SPOSP0      27   47
 SPOSQ0      31   40
 SPOSR0      32   30
 SPOSS0      31   23
-SPOST0      35   17
+SPOST0      32   17
 SPOSU0      34   16
 
 TROOA1	23	56
