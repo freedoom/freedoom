@@ -22,9 +22,6 @@ DM05 (???): Cant really tell what changed.
 DM06 (Medium edit): Added extra shotgun ammo\weapons outside.
 > When playing this map in zandronum I noticed this map lacks shotgun ammo very badly in outside, by the way this can improve the gameplay of altdeath mode, since there's extra shotguns to player get in outside if the ssg is not present on respawn.
 
-DM08 (???): Cant really tell what changed.
-> Check * for details
-
 DM09 (Major edit):
 > This map increased a lot in size keeping the same theme.
 > Designed to be played with 4 players or more in mind.
