@@ -1,0 +1,82 @@
+(This file should be removed before merging this branch inside the "Fredoom\freedoom master" branch, if this file is present in there, please open a issue about it.)
+(This file exist just to keep the track of what was changed in each map.)
+
+Freedm Changelog:
+DM01 (Medium edit): Reworked the teleport area, and the teleport destination aim directly to the skag and it's more simple.
+> Before the skag was not in same angle of the destination, requiring the player to aim to the bfg, and the door to the bfg seems useless and just slow down the player.
+> Also theme was slight improved around and changed the weapon placement of the map and it has more rockets now.
+
+DM02 (Major edit):
+> I recycled a old version of this map with a different theme, making the map more open and fluid.
+Name: Sauna Fissure
+
+DM03 (Medium edit):
+> Just make this map a slight acceptable than before by removing secret and stuffs.
+
+DM04 (Minor edit): Just changed the positions of an stinpack and a ammo box and the bfg platform wont stop moving anymore.
+> When I edited this map layout I forget to replace these items on their correct spots and about the bfg platform it's better if it wont stop moving now.
+
+DM05 (???): Cant really tell what changed.
+> Check * for details
+
+DM06 (Medium edit): Added extra shotgun ammo\weapons outside.
+> When playing this map in zandronum I noticed this map lacks shotgun ammo very badly in outside, by the way this can improve the gameplay of altdeath mode, since there's extra shotguns to player get in outside if the ssg is not present on respawn.
+
+DM08 (???): Cant really tell what changed.
+> Check * for details
+
+DM09 (Major edit):
+> This map increased a lot in size keeping the same theme.
+> Designed to be played with 4 players or more in mind.
+> Removed the moving lift. Now you can acess plasma by using a staircase.
+> Each oposite side of map has a powerup.
+
+DM11 (Minor edit): Moved most of the barrels aways from the walls, added 2 extra sheels outside.
+> Before the barrels was "grued" in the wall for some reason, and more 1 shells pickups on each outside area wont hurt.
+
+DM12 (Major edit): Changed theme, Slight changed layout, enlarged the map, simplified the rooms, added extra spawn points and eliminated the chance of spamming polaric cannon in the middle of map.
+> Pre-rework this map had a serious issue with campers spamming a line of plasma across the level, now it's not possible anymore, togheter it gained a new look based on judas and a small increase in size to be more friedly with deathmatch.
+
+DM14 (Minor edit): Changed the ceiling in the southest to match with its neighbors, added a ammo box in there and removed all the unused textures ailingtments.
+> Just a health edit for this map, it's noticeable but wont hurt the original gameplay.
+
+DM15 (???): Cant really tell what changed.
+> Check * for details
+
+DM16 (Minor edit): Added extra shotgun boxes on each side.
+> Just to help with extended fights, still it wont help a lot.
+
+DM17 (Minor edit): Fixed a wrong ceiling texture on the polaric room.
+> Just a fix.
+
+DM18 (???): Cant really tell what changed.
+> Check * for details
+
+DM19 (Replaced): Old map was removed. <Tech isle: Way too big>
+> New map is still not good but it's way playable than it's precessor.
+Name: Unwanted Backyard
+
+DM20 (Replaced): Old map was not really removed. <Warehouse: Much big, not fun>
+> Believe or not it's a rework of the dm20 original layout.
+> I kept the main layout and them I reduced the map size and give it a new theme, this map looks way better than it was before.
+Name: Terra Mortis
+
+DM21 (Minor edit): Fixed the textures used by the lights spots of the map.
+> Just a fix.
+
+DM23 (Replaced): Old map was removed. <Confrontation: Not good>
+> New map based on one of my duel map pack, this map was reworked to be bigger to fit the deathmatch standards.
+Name: Testing Grounds
+
+DM24 (Minor edit): Fixed a wrong texture on the ceiling close to the skag room.
+> Just a fix.
+
+DM26 (Replaced): Old map was removed. <Acid Cripty: Map way too bad>
+> Bit bad for DM but excellent for duel, better than the old map at least.
+Name: Crater Excavation
+
+DM31 (Minor edit): Added extra ammo boxes for chaingun.
+> Ammo for chaingun in this map was way too low, this may help a bit.
+
+* Probably these edits was made way before stating the changelog and I cant really notice any
+* diference in the map to tell if something was really changed.
