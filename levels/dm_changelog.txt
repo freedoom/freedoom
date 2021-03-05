@@ -15,30 +15,31 @@ DM03 (Medium edit):
 
 DM04 (Minor edit): Just changed the positions of an stinpack and a ammo box and the bfg platform wont stop moving anymore.
 > When I edited this map layout I forget to replace these items on their correct spots and about the bfg platform it's better if it wont stop moving now.
-
-DM05 (???): Cant really tell what changed.
-> Check * for details
+> Fixed the exit room.
 
 DM06 (Medium edit): Added extra shotgun ammo\weapons outside.
 > When playing this map in zandronum I noticed this map lacks shotgun ammo very badly in outside, by the way this can improve the gameplay of altdeath mode, since there's extra shotguns to player get in outside if the ssg is not present on respawn.
 
-DM09 (Major edit):
+DM07 (Minor edit): Just a fix.
+> Corrected the alignment in the exit room.
+
+DM09 (Major edit): 
 > This map increased a lot in size keeping the same theme.
 > Designed to be played with 4 players or more in mind.
 > Removed the moving lift. Now you can acess plasma by using a staircase.
-> Each oposite side of map has a powerup.
+> Each opposite side of map has a powerup.
 
-DM11 (Minor edit): Moved most of the barrels aways from the walls, added 2 extra sheels outside.
-> Before the barrels was "grued" in the wall for some reason, and more 1 shells pickups on each outside area wont hurt.
+DM11 (Minor edit): Added extra barrels and moved them away from the walls, added 2 extra sheels outside.
+> Before the barrels was "glued" in the wall for some reason, and more 1 shells pickups on each outside area wont hurt.
+> Extra barrels was also added to increase this feature that's unique to this map.
+> Another area was added on the north side of the map, this have cells and a invisibility sphere.
+> Improved some curves of the map to make the plasma room "playable".
 
 DM12 (Major edit): Changed theme, Slight changed layout, enlarged the map, simplified the rooms, added extra spawn points and eliminated the chance of spamming polaric cannon in the middle of map.
-> Pre-rework this map had a serious issue with campers spamming a line of plasma across the level, now it's not possible anymore, togheter it gained a new look based on judas and a small increase in size to be more friedly with deathmatch.
+> Pre-rework this map had a serious issue with campers spamming a line of plasma across the level, now it's not possible anymore, together it gained a new look based on judas and a small increase in size to be more friendly with deathmatch.
 
-DM14 (Minor edit): Changed the ceiling in the southest to match with its neighbors, added a ammo box in there and removed all the unused textures ailingtments.
+DM14 (Minor edit): Changed the ceiling in the southeast to match with its neighbors, added a ammo box in there and removed all the unused textures alignment.
 > Just a health edit for this map, it's noticeable but wont hurt the original gameplay.
-
-DM15 (???): Cant really tell what changed.
-> Check * for details
 
 DM16 (Minor edit): Added extra shotgun boxes on each side.
 > Just to help with extended fights, still it wont help a lot.
@@ -46,16 +47,12 @@ DM16 (Minor edit): Added extra shotgun boxes on each side.
 DM17 (Minor edit): Fixed a wrong ceiling texture on the polaric room.
 > Just a fix.
 
-DM18 (???): Cant really tell what changed.
-> Check * for details
-
 DM19 (Replaced): Old map was removed. <Tech isle: Way too big>
-> New map is still not good but it's way playable than it's precessor.
+> New map is still not good but it's way playable than it's predecessor.
 Name: Unwanted Backyard
 
 DM20 (Replaced): Old map was not really removed. <Warehouse: Much big, not fun>
-> Believe or not it's a rework of the dm20 original layout.
-> I kept the main layout and them I reduced the map size and give it a new theme, this map looks way better than it was before.
+> Believe or not it's a rework of the dm20 original layout, i kept the main layout and them I reduced the map size and give it a new theme, this map looks way better than it was before.
 Name: Terra Mortis
 
 DM21 (Minor edit): Fixed the textures used by the lights spots of the map.
@@ -75,5 +72,5 @@ Name: Crater Excavation
 DM31 (Minor edit): Added extra ammo boxes for chaingun.
 > Ammo for chaingun in this map was way too low, this may help a bit.
 
-* Probably these edits was made way before stating the changelog and I cant really notice any
-* diference in the map to tell if something was really changed.
+DM32 (Minor edit): Lift is now faster.
+> Skag is useless on this map and slow lift just make it worse.
