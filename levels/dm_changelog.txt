@@ -4,7 +4,10 @@
 Freedm Changelog:
 DM01 (Medium edit): Reworked the teleport area, and the teleport destination aim directly to the skag and it's more simple.
 > Before the skag was not in same angle of the destination, requiring the player to aim to the bfg, and the door to the bfg seems useless and just slow down the player.
-> Also theme was slight improved around and changed the weapon placement of the map and it has more rockets now.
+> Reworked the west room making it more simple and real part of the action room.
+> Main outside room was decreased.
+> Removed unnecessary details on the map and enforced the theme in other rooms as well.
+> Rebalanced the weapon placement.
 
 DM02 (Major edit):
 > I recycled a old version of this map with a different theme, making the map more open and fluid.
@@ -36,10 +39,17 @@ DM11 (Minor edit): Added extra barrels and moved them away from the walls, added
 > Improved some curves of the map to make the plasma room "playable".
 
 DM12 (Major edit): Changed theme, Slight changed layout, enlarged the map, simplified the rooms, added extra spawn points and eliminated the chance of spamming polaric cannon in the middle of map.
-> Pre-rework this map had a serious issue with campers spamming a line of plasma across the level, now it's not possible anymore, together it gained a new look based on judas and a small increase in size to be more friendly with deathmatch.
+> Pre-rework this map had a serious issue with campers spamming a line of plasma across the level, now it's not possible anymore.
+> It gained a new look based on judas.
+> Small increase in size to be more friendly with deathmatch.
 
-DM14 (Minor edit): Changed the ceiling in the southeast to match with its neighbors, added a ammo box in there and removed all the unused textures alignment.
-> Just a health edit for this map, it's noticeable but wont hurt the original gameplay.
+DM14 (Medium edit): Theme reforced, and increased the general flow of the map.
+> Changed the ceiling in the southeast to match with its neighbors.
+> Shield was moved slight inside to the playable area, it was easy to fail picking it up.
+> Removed unecessary vertices, details and all the unused textures alignment.
+> Noticeable changed the layout of the ground level to be less frustating in certain spots.
+> Plasma switch removed, it was just a waste of time.
+> Slight Increased the size of map to compensate the changes.
 
 DM16 (Minor edit): Added extra shotgun boxes on each side.
 > Just to help with extended fights, still it wont help a lot.
