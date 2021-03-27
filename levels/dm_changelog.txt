@@ -54,8 +54,17 @@ DM14 (Medium edit): Theme reforced, and increased the general flow of the map.
 DM16 (Minor edit): Added extra shotgun boxes on each side.
 > Just to help with extended fights, still it wont help a lot.
 
-DM17 (Minor edit): Fixed a wrong ceiling texture on the polaric room.
-> Just a fix.
+DM17 (Medium edit): Several minor adjustments was done in the map to make it better to play both in duel and deathmatch.
+> Map was enlarged by 32px north.
+> Teleports on the pit was changed by 2 pathways.
+> Plasma locaion was moved.
+> You can leave both pits by an stair there.
+> Skag was removed.
+> All spawn spots start with ssg.
+> An extra Minigun and Missile launcher was added.
+> Rebalanced some of the items placement of the map.
+> Upper path was merged on the former bfg pillar room.
+> Pillars on middle can be used to go up instead of only way down.
 
 DM19 (Replaced): Old map was removed. <Tech isle: Way too big>
 > New map is still not good but it's way playable than it's predecessor.
