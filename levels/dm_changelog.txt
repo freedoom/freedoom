@@ -88,6 +88,9 @@ DM26 (Replaced): Old map was removed. <Acid Cripty: Map way too bad>
 > Bit bad for DM but excellent for duel, better than the old map at least.
 Name: Crater Excavation
 
+DM27 (Minor edit): Removed the east side of the map.
+> Few players was complaining about that area not being playable, now it was removed and changed.
+
 DM31 (Minor edit): Added extra ammo boxes for chaingun.
 > Ammo for chaingun in this map was way too low, this may help a bit.
 
