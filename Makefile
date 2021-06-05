@@ -145,22 +145,45 @@ clean:
 	$(MAKE) -C lumps/textures clean
 	$(MAKE) -C manual clean
 
-# Test targets all of which are a dependency of "test".
+# Test targets some of which are a dependency of "test".
 
-# Test that WAD files have the expected map names.
+# Test that the level WAD files have the expected map names.
 test-map-names:
-	scripts/fix-map-names -t levels
+	scripts/test-vanilla-compliance -n levels
+
+# Test that the level WAD files have vanilla compliance. This is a superset of
+# the "test-map-names" build target.
+test-vanilla-compliance:
+	scripts/test-vanilla-compliance levels
 
 # Run all tests. Add test-* targets above, and then as a dependency here.
-test: test-map-names
+test: test-vanilla-compliance
 	@echo
 	@echo "All tests passed."
 
-# Non-test targets that run scripts in the "scripts" directory.
+# Fix targets some of which are a dependency of "fix".
 
-# Fix the map names.
+# Fix the level WAD files so that they have the expected map names.
 fix-map-names:
-	scripts/fix-map-names levels
+	scripts/test-vanilla-compliance -fn levels
+
+# Fix the level WAD files so that they have vanilla compliance. This is a
+# superset of the "fix-map-names" build target.
+fix-vanilla-compliance:
+	scripts/test-vanilla-compliance -f levels
+
+# TODO: I'm not sure we want to run this routinely, but I thought I'd put it
+# here for completeness. Currently it makes a lot of changes to buildcfg.txt
+# that don't have an obvious impact. Consequently "fix" does not depend on this
+# target. Just delete this TODO and target if we don't want this. Maybe add a
+# proper description in any case.
+fix-gfx-offsets:
+	scripts/fix-gfx-offsets sprites/*.png
+
+# Run all fixes. Add fix-* targets above, and then as a dependency here.
+fix: fix-vanilla-compliance
+	@echo
+	@echo "All fixable errors fixed."
 
 # Rebuild the nodes for the level WADs. By default this invokes "ZenNode" on
 # all 100 level WADs. Override the "NODE_BUILDER" prefixed variables to

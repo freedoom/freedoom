@@ -162,6 +162,11 @@ It is sensible to also heed the following guidelines:
     is an engine with strict adherence to vanilla Doom limits and
     bugs, and working in it assures that levels can be played with any
     _Doom_ engine.
+  * Use a Doom editor to check for errors. In
+    http://eureka-editor.sourceforge.net/[Eureka] it's possible to
+    check for errors with the Check / All menu, or by pressing `F9`.
+  * If possible run `make test` and fix any errors found. Note that
+    some of the errors can be fixed by `make fix`.
 
 === Graphics
 
