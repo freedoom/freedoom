@@ -411,13 +411,13 @@ image:images/monster-flesh-worm.png[Flesh Worm,100,100]
 These flesh worm variants have been given stealth abilities which make them
 practically invisible. |
 image:images/monster-stealth-worm.png[Stealth Worm,100,100]
-| **Deadflare** |
-Floating skulls which charge from a distance. |
-image:images/monster-deadflare.png[Deadflare,100,100]
-| **Summoner** |
-These mobile Deadflare production factories will ensure you always have more
-work to do. |
-image:images/monster-summoner.png[Summoner,100,100]
+| **Hatchling** |
+Floating alien larva which charge from a distance. |
+image:images/monster-hatchling.png[hatchling,100,100]
+| **Matribite** |
+The mother of the Hatchlings will ensure you always have more of her babies
+to deal with. |
+image:images/monster-matribite.png[matribite,100,100]
 | **Trilobite** |
 These flying orb-like creatures spit fireballs and bite if you get too
 close. |
