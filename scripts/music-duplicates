@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# Find duplicated music tracks and create a summary report of music
+# that the project needs.
+
+from glob import glob
+import hashlib
+import os
+import re
+import sys
+
+PHASE1_MATCH_RE = re.compile(r"(e\dm\d)", re.I)
+PHASE2_MATCH_RE = re.compile(r"(map\d\d)", re.I)
+FREEDM_MATCH_RE = re.compile(r"(dm\d\d)", re.I)
+
+
+def get_music_tracks():
+    """Returns a dictionary mapping from MIDI file SHA1
+	   to a list of game tracks that use that MIDI."""
+    result = {}
+    musics_path = os.path.join(os.path.dirname(sys.argv[0]), "../musics")
+    for mus in glob("%s/*.mid" % musics_path):
+        with open(mus, "rb") as f:
+            contents = f.read()
+            m = hashlib.sha1()
+            m.update(contents)
+            digest = m.digest()
+            basename = os.path.basename(mus)
+            result.setdefault(digest, []).append(basename)
+    return result
+
+
+def get_prime_track(tracks):
+    """Given a list of tracks that all use the same MIDI, find the
+	   "prime" one (the one that isn't a reuse/duplicate)."""
+    # We have almost all Phase 2 tracks fulfilled. So if the same
+    # track is used in Phase 1 and Phase 2, or Phase 2 and FreeDM,
+    # the Phase 2 track is probably the leader.
+    phase2_tracks = [x for x in tracks if PHASE2_MATCH_RE.search(x)]
+    if len(phase2_tracks) == 1:
+        return phase2_tracks[0]
+
+    # FreeDM music has been hand-picked. So if it is used for both
+    # Phase 1 and FreeDM, assume it's probably a FreeDM track.
+    freedm_tracks = [x for x in tracks if FREEDM_MATCH_RE.search(x)]
+    if len(freedm_tracks) == 1:
+        return freedm_tracks[0]
+
+    # We're out of options. Pick the first one in the list.
+    # print "Warning: Don't know which of %s is the leader." % tracks
+    return sorted(tracks)[0]
+
+
+def find_missing_tracks(tracks):
+    """Given a dictionary of tracks, get a list of "missing" tracks."""
+    result = []
+    for midi, tracks in tracks.items():
+        if len(tracks) < 2:
+            continue
+        prime_track = get_prime_track(tracks)
+        result.extend(x for x in tracks if x != prime_track)
+    return result
+
+
+def tracks_matching_regexp(tracks, regexp):
+    return set([x for x in tracks if regexp.search(x)])
+
+
+def print_report(title, tracks):
+    if len(tracks) == 0:
+        return
+    print(title)
+    for track in sorted(tracks):
+        print("\t%s" % track.replace(".mid", "").upper())
+    print("")
+
+
+missing_tracks = set(find_missing_tracks(get_music_tracks()))
+phase1_tracks = tracks_matching_regexp(missing_tracks, PHASE1_MATCH_RE)
+phase2_tracks = tracks_matching_regexp(missing_tracks, PHASE2_MATCH_RE)
+freedm_tracks = tracks_matching_regexp(missing_tracks, FREEDM_MATCH_RE)
+other_tracks = missing_tracks - phase1_tracks - phase2_tracks - freedm_tracks
+
+print("=== Missing tracks (tracks currently using duplicates):\n")
+print_report("Phase 1 tracks:", phase1_tracks)
+print_report("Phase 2 tracks:", phase2_tracks)
+print_report("FreeDM tracks:", freedm_tracks)
+print_report("Other tracks:", other_tracks)

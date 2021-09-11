@@ -121,7 +121,7 @@ to specify a note you want to play. For example, for 'C#' in Octave -3:
 Once you're done, save your changes and type this to build a new GENMIDI
 for testing:
 
-  python mkgenmidi genmidi.lmp
+  python3 mkgenmidi genmidi.lmp
 
 To try it out, get a source port with OPL emulation support (eg. Chocolate
 Doom) and add genmidi.lmp on the command line, eg.
@@ -137,8 +137,7 @@ editors instead of AT2. There's a useful script included that will do
 exactly this. Specify the name of the a2i file and the name of the
 desired output file, as follows:
 
-  python a2i-to-sbi snazzy.a2i snazzy.sbi
+  python3 a2i-to-sbi snazzy.a2i snazzy.sbi
 
 Don't forget to update config.py to use the .sbi version of the file
 instead of the .a2i version!
-

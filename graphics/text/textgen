@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # SPDX-License-Identifier: BSD-3-Clause
 #
 # Script to generate menu and intermission screen 'text' graphics for
@@ -15,152 +15,153 @@ from image_dimensions import *
 from tint import image_tint
 
 
-
 class TextGenerator(object):
-	def __init__(self, fontdir, kerning_table={}):
-		self.fontdir = fontdir
-		self.kerning_table = self.compile_kerning_table(kerning_table)
-		self.get_font_widths()
+    def __init__(self, fontdir, kerning_table={}):
+        self.fontdir = fontdir
+        self.kerning_table = self.compile_kerning_table(kerning_table)
+        self.get_font_widths()
 
-	# Tinting parameters for colorizing text:
-	COLOR_BLUE = "#000001"
-	COLOR_RED = "#010000"
-	COLOR_WHITE = None
+    # Tinting parameters for colorizing text:
+    COLOR_BLUE = "#000001"
+    COLOR_RED = "#010000"
+    COLOR_WHITE = None
 
-	# Height of font in pixels.
-	FONT_HEIGHT = 15
-	FONT_LC_HEIGHT = 15  # 12
+    # Height of font in pixels.
+    FONT_HEIGHT = 15
+    FONT_LC_HEIGHT = 15  # 12
 
-	# If true, the font only has uppercase characters.
-	UPPERCASE_FONT = False
+    # If true, the font only has uppercase characters.
+    UPPERCASE_FONT = False
 
-	# Width of a space character in pixels.
-	SPACE_WIDTH = 7
-	LOWERCASE_RE = re.compile(r'^[a-z\!\. ]*$')
+    # Width of a space character in pixels.
+    SPACE_WIDTH = 7
+    LOWERCASE_RE = re.compile(r"^[a-z\!\. ]*$")
 
-	def compile_kerning_table(self, kerning_table):
-		"""Given a dictionary of kerning patterns, compile Regexps."""
+    def compile_kerning_table(self, kerning_table):
+        """Given a dictionary of kerning patterns, compile Regexps."""
 
-		result = {}
-		for pattern, adjust in kerning_table.items():
-			result[re.compile(pattern)] = adjust
-		return result
+        result = {}
+        for pattern, adjust in kerning_table.items():
+            result[re.compile(pattern)] = adjust
+        return result
 
-	def get_font_widths(self):
-		charfiles = glob('%s/font*.png' % self.fontdir)
-		self.char_widths = {}
-		for c in range(128):
-			filename = self.char_filename(chr(c))
-			if filename not in charfiles:
-				continue
-			w, _ = get_image_dimensions(filename)
-			self.char_widths[chr(c)] = w
+    def get_font_widths(self):
+        charfiles = glob("%s/font*.png" % self.fontdir)
+        self.char_widths = {}
+        for c in range(128):
+            filename = self.char_filename(chr(c))
+            if filename not in charfiles:
+                continue
+            w, _ = get_image_dimensions(filename)
+            self.char_widths[chr(c)] = w
 
-	def __contains__(self, c):
-		return c in self.char_widths
+    def __contains__(self, c):
+        return c in self.char_widths
 
-	def char_width(self, c):
-		return self.char_widths[c]
+    def char_width(self, c):
+        return self.char_widths[c]
 
-	def char_filename(self, c):
-		return '%s/font%03d.png' % (self.fontdir, ord(c))
+    def char_filename(self, c):
+        return "%s/font%03d.png" % (self.fontdir, ord(c))
 
-	def kerning_adjust(self, char_1, char_2):
-		"""Get kerning adjustment for pair of characters.
+    def kerning_adjust(self, char_1, char_2):
+        """Get kerning adjustment for pair of characters.
 
-		Zero means no adjustment. A negative value adjusts to the
-		left and a positive value adjusts to the right.
-		"""
-		for pattern, adjust in self.kerning_table.items():
-			if pattern.match(char_1 + char_2):
-				return adjust
-		else:
-			return 0
+        Zero means no adjustment. A negative value adjusts to the
+        left and a positive value adjusts to the right.
+        """
+        for pattern, adjust in self.kerning_table.items():
+            if pattern.match(char_1 + char_2):
+                return adjust
+        else:
+            return 0
 
-	def iterate_char_positions(self, text):
-		"""Iterate over characters in string, yielding character with
-		   position it should be placed at in the output file.
-		"""
-		x = 0
-		last_c = ' '
-		for c in text:
-			if c == ' ':
-				x += self.SPACE_WIDTH
+    def iterate_char_positions(self, text):
+        """Iterate over characters in string, yielding character with
+           position it should be placed at in the output file.
+        """
+        x = 0
+        last_c = " "
+        for c in text:
+            if c == " ":
+                x += self.SPACE_WIDTH
 
-			if c in self:
-				x += self.kerning_adjust(last_c, c)
+            if c in self:
+                x += self.kerning_adjust(last_c, c)
 
-				yield c, x
+                yield c, x
 
-				# Characters overlap by one pixel.
-				x += self.char_width(c) - 1
+                # Characters overlap by one pixel.
+                x += self.char_width(c) - 1
 
-			last_c = c
+            last_c = c
 
-		# We need to add back the missing pixel from the right side
-		# of the last char.
-		x += 1
-		yield None, x
+        # We need to add back the missing pixel from the right side
+        # of the last char.
+        x += 1
+        yield None, x
 
-	def text_width(self, text):
-		"""Given a string of text, get text width in pixels."""
-		for c, x in self.iterate_char_positions(text):
-			if c is None:
-				return x
+    def text_width(self, text):
+        """Given a string of text, get text width in pixels."""
+        for c, x in self.iterate_char_positions(text):
+            if c is None:
+                return x
 
-	def generate_graphic(self, text, color=None):
-		"""Get command to render text to a file
-		   with the given background color.
-		"""
+    def generate_graphic(self, text, color=None):
+        """Get command to render text to a file
+           with the given background color.
+        """
 
-		if self.UPPERCASE_FONT:
-			text = text.upper()
-		"""Command line construction helper, used in render functions"""
-		width = self.text_width(text)
+        if self.UPPERCASE_FONT:
+            text = text.upper()
+        """Command line construction helper, used in render functions"""
+        width = self.text_width(text)
 
-		if self.LOWERCASE_RE.match(text):
-			height = self.FONT_LC_HEIGHT
-		else:
-			height = self.FONT_HEIGHT
+        if self.LOWERCASE_RE.match(text):
+            height = self.FONT_LC_HEIGHT
+        else:
+            height = self.FONT_HEIGHT
 
-		txt_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-		for c, x in self.iterate_char_positions(text):
-			if c is None:
-				break
+        txt_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+        for c, x in self.iterate_char_positions(text):
+            if c is None:
+                break
 
-			filename = self.char_filename(c)
-			char_image = Image.open(filename)
-			char_image.load()
-			int_image = Image.new("RGBA", txt_image.size, (0, 0, 0, 0))
-			int_image.paste(char_image, (x, height - self.FONT_HEIGHT))
-			txt_image = Image.alpha_composite(txt_image, int_image)
+            filename = self.char_filename(c)
+            char_image = Image.open(filename)
+            char_image.load()
+            int_image = Image.new("RGBA", txt_image.size, (0, 0, 0, 0))
+            int_image.paste(char_image, (x, height - self.FONT_HEIGHT))
+            txt_image = Image.alpha_composite(txt_image, int_image)
 
-		txt_image = image_tint(txt_image, color)
-		return txt_image
+        txt_image = image_tint(txt_image, color)
+        return txt_image
 
 
 def generate_graphics(font, graphics, color=None):
-	for name, text in sorted(graphics.items()):
-		# write a makefile fragment
-		target = '%s.png' % name
-		image = font.generate_graphic(text, color=color)
-		image.save(target)
+    for name, text in sorted(graphics.items()):
+        # write a makefile fragment
+        target = "%s.png" % name
+        image = font.generate_graphic(text, color=color)
+        image.save(target)
 
 
 def generate_kerning_test(font):
-	pairs = []
-	for c1 in sorted(font.char_widths):
-		char1 = "%c" % c1
-		for c2 in sorted(font.char_widths):
-			char2 = "%c" % c2
-			if font.kerning_adjust(char1, char2) != 0:
-				pairs.append(char1 + char2)
+    pairs = []
+    for c1 in sorted(font.char_widths):
+        char1 = "%c" % c1
+        for c2 in sorted(font.char_widths):
+            char2 = "%c" % c2
+            if font.kerning_adjust(char1, char2) != 0:
+                pairs.append(char1 + char2)
 
-	cmd = font.generate_graphic(" ".join(pairs), "kerning.png")
+    image = font.generate_graphic(" ".join(pairs))
+    image.save("kerning.png")
 
-if __name__ == '__main__':
 
-	font = TextGenerator('fontchars', kerning_table=FONT_KERNING_RULES)
-	generate_graphics(font, red_graphics, color=font.COLOR_RED)
-	generate_graphics(font, blue_graphics, color=font.COLOR_BLUE)
-	generate_graphics(font, white_graphics, color=font.COLOR_WHITE)
+if __name__ == "__main__":
+
+    font = TextGenerator("fontchars", kerning_table=FONT_KERNING_RULES)
+    generate_graphics(font, red_graphics, color=font.COLOR_RED)
+    generate_graphics(font, blue_graphics, color=font.COLOR_BLUE)
+    generate_graphics(font, white_graphics, color=font.COLOR_WHITE)

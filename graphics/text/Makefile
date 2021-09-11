@@ -15,8 +15,7 @@ TEXTGEN_GRAPHIC_LUMPS = \
   m_mess.png   m_mouse.png  m_multi.png  m_player.png m_serial.png \
   m_setup.png  m_sound.png  m_stat.png   m_status.png m_tcpip.png  \
   m_versen.png m_video.png  m_wad.png    m_wadopt.png m_weap.png   \
-  m_acpt.png   m_can.png    m_chg.png    m_exito.png  m_epi5.png   \
-  m_epi6.png                                                       \
+  m_crispy.png                                                     \
   prboom.png   t_phase1.png t_phase2.png                           \
   m_ultra.png  wibp1.png    wibp2.png    wibp3.png    wibp4.png    \
   wicolon.png  wienter.png  wif.png      wifrgs.png   wipcnt.png   \
@@ -31,14 +30,14 @@ TEXTGEN_GRAPHIC_LUMPS = \
   dmwilv15.png dmwilv16.png dmwilv17.png dmwilv18.png dmwilv19.png \
   dmwilv20.png dmwilv21.png dmwilv22.png dmwilv23.png dmwilv24.png \
   dmwilv25.png dmwilv26.png dmwilv27.png dmwilv28.png dmwilv29.png \
-  dmwilv30.png dmwilv31.png dmwilv32.png                           \
+  dmwilv30.png dmwilv31.png                                        \
   cwilv00.png  cwilv01.png  cwilv02.png  cwilv03.png  cwilv04.png  \
   cwilv05.png  cwilv06.png  cwilv07.png  cwilv08.png  cwilv09.png  \
   cwilv10.png  cwilv11.png  cwilv12.png  cwilv13.png  cwilv14.png  \
   cwilv15.png  cwilv16.png  cwilv17.png  cwilv18.png  cwilv19.png  \
   cwilv20.png  cwilv21.png  cwilv22.png  cwilv23.png  cwilv24.png  \
   cwilv25.png  cwilv26.png  cwilv27.png  cwilv28.png  cwilv29.png  \
-  cwilv30.png  cwilv31.png  cwilv32.png                            \
+  cwilv30.png  cwilv31.png                                         \
   wilv00.png   wilv01.png   wilv02.png   wilv03.png   wilv04.png   \
   wilv05.png   wilv06.png   wilv07.png   wilv08.png   wilv10.png   \
   wilv11.png   wilv12.png   wilv13.png   wilv14.png   wilv15.png   \
@@ -57,17 +56,17 @@ TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
 all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
 
 # Generate the menu and level strings
-text_strings: config.py fontchars ../../lumps/dehacked.lmp
-	python textgen
+text_strings: config.py fontchars ../../lumps/dehacked/dehacked.txt
+	./textgen
 	cp $(TEXTGEN_GRAPHIC_LUMPS) ../
 
 # Background for the help screen is a color shifted version of INTERPIC:
 helpbg.png: ../interpic.png
-	python tint.py ../interpic.png '#57b9b0' helpbg.png
+	./tint.py ../interpic.png '#57b9b0' helpbg.png
 
 # Generate transparent image containing text for the HELP screen:
 help.png: text_strings helpbg.png
-	python smtextgen help.png 320x200         \
+	./smtextgen help.png 320x200                 \
 	   -background "helpbg.png"                  \
 	   150,5   "file:helpttl.png"                \
 	   10,25   "Weapons"                         \
@@ -125,46 +124,47 @@ help.png: text_strings helpbg.png
 
 
 credit.png: text_strings helpbg.png credit.txt
-	python smtextgen credit.png 320x200        \
+	./smtextgen credit.png 320x200                \
 	   -background "helpbg.png"                   \
 	   120,5  "file:freettl.png"                  \
 	   10,30  "include:credit.txt"
 	cp $@ ../
 
 wikilrs_horiz.png:
-	python smtextgen $@ 49x7 \
+	./smtextgen $@ 49x7 \
 	    0,0  killers
 
 wikilrs.png: wikilrs_horiz.png
-	python rotate.py wikilrs_horiz.png 270 $@
+	./rotate wikilrs_horiz.png 270 $@
 	cp $@ ../
 
 wivctms.png:
-	python smtextgen $@ 54x7 \
+	./smtextgen $@ 54x7 \
 	    0,0  victims
 	cp $@ ../
 
 titlepic: fd1title.png fd2title.png fdmtitle.png
 
 fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png 
-	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
+	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
 	cp $@ ../
 
 fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png
-	python create_caption.py ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
+	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
 	cp $@ ../
 
 fdmtitle.png: ../titlepic/freedm_titlepic.png
-	python create_caption.py $< $@
+	./create_caption $< $@
 	cp $@ ../
 
 clean:
-	rm -f $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
+	$(RM) $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
 	    graphics.stamp *.pyc credtext.png	                    \
 	    credtext.png credit.png dmwilv*.png wikilrs.png		    \
 	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
 	    ../wikilrs.png ../wivctms.png                           \
 		fd1title.png fd2title.png fdmtitle.png                  \
 	    ../fd1title.png ../fd2title.png ../fdmtitle.png 
-	for graphic in $(TEXTGEN_GRAPHICS); do rm -f ../$$graphic; done
-	rm -fr __pycache__
+	for graphic in $(TEXTGEN_GRAPHICS); do $(RM) ../$$graphic; done
+	$(RM) __pycache__/*
+	-rmdir __pycache__

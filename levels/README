@@ -1,7 +1,7 @@
 This directory contains the game levels. The files are named by the IWAD
 into which they are included:
 
- * cXmY.wad   - Freedoom: Phase 1
+ * eXmY.wad   - Freedoom: Phase 1
  * mapXY.wad  - Freedoom: Phase 2
  * dmXY.wad   - FreeDM
 

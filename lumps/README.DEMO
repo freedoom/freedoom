@@ -1,0 +1,28 @@
+For Phase 1 and 2, do not have a multiplayer demo in the DEMO1 slot.
+Vanilla Doom (and some source ports) do not allow using the “load
+game” option while in a network game, and network game demos count as
+such.  The other three demo slots are fair game, since they do not
+near-immediately block out the load game functionality when starting
+Freedoom.
+
+FreeDM is exempted since it is not intended to be a single-player
+game.
+
+Current demos recorded:
+Phase 1:
+DEMO1: C1M4 single-player by Erick - v0.12
+DEMO2: C2M3 single-player by Erick - v0.12
+DEMO3: C3M3 single-player by Chungy - v0.12
+DEMO4: C4M6 single-player by Erick - v0.12
+
+Phase 2:
+DEMO1: MAP15 single-player by Erick - v0.12
+DEMO2: MAP10 single-player by Erick - v0.12
+DEMO3: MAP02 single-player by Obsidian Plague - v0.12
+DEMO4: MAP26 single-player by Chungy - v0.12
+
+FreeDM:
+DEMO1: DM21 by Xindage, Chungy, Erick, and Xer - v0.12
+DEMO2: DM06 by Chungy, Xindage, and Erick - v0.12
+DEMO3: DM18 by Chungy, Xindage, and Erick - v0.12
+DEMO4: DM09 by Chungy, Xindage, and Erick - v0.12

@@ -3,9 +3,9 @@
 IWAD=./doom2.wad
 
 $(IWAD): ../lumps/playpal/playpal-base.lmp
-	./bootstrap.py < $< > $@
+	./bootstrap < $< > $@
 
 clean:
-	rm -f $(IWAD)
+	$(RM) $(IWAD)
 
 .PHONY: clean

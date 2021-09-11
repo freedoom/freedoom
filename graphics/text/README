@@ -4,6 +4,5 @@ subdirectory 'fontchars'. This is based on the original font graphics
 (found in 'font') which have been split up into individual files each
 containing a single character.
 
-The script generates the image by invoking ImageMagick to composite the
-character graphics together. ImageMagick is therefore a dependency,
-although the Python wrapper for ImageMagick is not used.
+The script generates the images by use of Pillow to composite
+character graphics together.

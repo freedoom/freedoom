@@ -1,8 +1,12 @@
-playpal.lmp: playpal-base.lmp playpal.py
-	./playpal.py playpal-base.lmp > playpal.lmp
+playpal.lmp: playpal-base.lmp playpal
+	./playpal playpal-base.lmp > playpal.lmp
 	cp playpal.lmp ../
 
+doom.gpl: playpal-base.lmp
+	./gen-gimp-palette
+
 clean:
-	rm -f playpal.lmp ../playpal.lmp
+	$(RM) playpal.lmp ../playpal.lmp
+	$(RM) doom.gpl
 
 .PHONY: clean

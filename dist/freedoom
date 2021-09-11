@@ -1,18 +1,20 @@
-#!/bin/sh -
+#!/usr/bin/env bash
+# SPDX-License-Identifier: CC0-1.0
 
-# These ports should really be ordered by ease-of-use.  Most likely
-# advanced users with many ports installed will invoke their preferred
-# one directly rather than depend on this script...
+# These ports should be ordered by ease-of-use, of which menu
+# simplicity and support for high-resolution take high priority.
 
-PORTS="doom odamex crispy-doom prboom-plus eternity gzdoom chocolate-doom"
+# "doom" is Debian’s generic name for their alternatives system.
+
+PORTS="doom odamex gzdoom crispy-doom chocolate-doom prboom-plus"
 
 # Just a single argument starting the command is allowed, -p, in order
 # to explicitly set a port on the command line. -- is also supported
-# so that -p can be instead sent directly to the port's argument list.
+# so that -p can be instead sent directly to the port’s argument list.
 
 if [ $# -gt 0 ]; then
     if [ "$1" = "-p" ]; then
-        PORT="$2"
+        DOOMPORT="$2"
         shift; shift
     elif [ "$1" = "--" ]; then
         shift
@@ -31,15 +33,37 @@ case "$(basename "$0")" in
         ;;
 esac
 
-if [ -z "$PORT" ] && [ -h "$HOME"/.doomport ]; then
+if [ -z "$DOOMWADPATH" ]; then
+    # Support installations of Freedoom to the home directory using
+    # the XDG spec.  Makes this complicated, but let’s do it right.
+    if [ -z "$XDG_DATA_HOME" ]; then
+        if [ -z "$HOME" ]; then
+            HOME=/
+        fi
+        XDG_PATH="$HOME"/.local/share/games/doom
+    else
+        XDG_PATH="$XDG_DATA_HOME"/games/doom
+    fi
+
+    PATHS=(
+        "$XDG_PATH"
+        /usr/local/share/games/doom
+        /usr/local/share/doom
+        /usr/share/games/doom
+        /usr/share/doom
+    )
+    export DOOMWADPATH="$(echo "${PATHS[@]}" | tr ' ' :)"
+fi
+
+if [ -z "$DOOMPORT" ] && [ -h "$HOME"/.doomport ]; then
     if [ -f "$(readlink -f "$HOME"/.doomport)" ] \
         && [ -x "$(readlink -f "$HOME"/.doomport)" ]; then
-        PORT="$(readlink -f "$HOME"/.doomport)"
+        DOOMPORT="$(readlink -f "$HOME"/.doomport)"
     fi
 fi
 
-if [ "$PORT" ]; then
-    exec "$PORT" -iwad "$IWAD" "$@"
+if [ "$DOOMPORT" ]; then
+    exec "$DOOMPORT" -iwad "$IWAD" "$@"
 fi
 
 dirpath=$(eval echo "\${PATH}" 2>/dev/null | tr : ' ')
@@ -54,14 +78,14 @@ for port in $PORTS; do
     done
 done
 
-# If we've reached this far, no engine was successfully executed.
+# If we’ve reached this far, no engine was successfully executed.
 # print message to stderr and exit with a status of 1.
 
 cat <<EOF >&2
 $(basename "$0") could not locate nor launch a Doom engine.  Most
 likely, you simply need to install one, check your distribution
-package repositories for names such as "prboom" or "odamex" or seek
-out one and install it manually.
+package repositories for names such as "odamex" or "chocolate-doom" or
+seek out one and install it manually.
 
 If you believe you already have one, you may just need to modify your
 PATH environment variable to include it, or set up the $HOME/.doomport

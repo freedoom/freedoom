@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # SPDX-License-Identifier: BSD-3-Clause
 #
 # Dump the contents of a GENMIDI lump into separate .sbi instrument files,
@@ -13,48 +13,52 @@ import sbi_file
 import midi
 import sbi_file
 
-def is_null_voice(voice_data):
-	for f in sbi_file.FIELDS:
-		if voice_data[f] != 0:
-			return False
 
-	return True
+def is_null_voice(voice_data):
+    for f in sbi_file.FIELDS:
+        if voice_data[f] != 0:
+            return False
+
+    return True
+
 
 def instr_to_str_def(filename, filename2, instr):
-	if is_null_voice(instr.voice1):
-		return "NullInstrument"
+    if is_null_voice(instr.voice1):
+        return "NullInstrument"
 
-	args = [ "\"%s\"" % filename ]
+    args = ['"%s"' % filename]
 
-	if instr.voice2 is not None:
-		args.append("\"%s\"" % filename2)
+    if instr.voice2 is not None:
+        args.append('"%s"' % filename2)
 
-	if instr.fixed_note is not None:
-		args.append("note=%s" % midi.def_for_note(instr.fixed_note))
-	if instr.offset1 != 0:
-		args.append("off1=%i" % instr.offset1)
-	if instr.offset2 != 0:
-		args.append("off2=%i" % instr.offset2)
+    if instr.fixed_note is not None:
+        args.append("note=%s" % midi.def_for_note(instr.fixed_note))
+    if instr.offset1 != 0:
+        args.append("off1=%i" % instr.offset1)
+    if instr.offset2 != 0:
+        args.append("off2=%i" % instr.offset2)
 
-	return "Instrument(%s)" % (", ".join(args))
+    return "Instrument(%s)" % (", ".join(args))
+
 
 def print_instr_def(filename, filename2, instr):
-	print("\t%s," % instr_to_str_def(filename, filename2, instr))
+    print("\t%s," % instr_to_str_def(filename, filename2, instr))
+
 
 def dump_instrument(filename, filename2, instr):
 
-	if is_null_voice(instr.voice1):
-		return
+    if is_null_voice(instr.voice1):
+        return
 
-	sbi_file.write(os.path.join("instruments", filename), instr.voice1)
+    sbi_file.write(os.path.join("instruments", filename), instr.voice1)
 
-	if instr.voice2 is not None:
-		sbi_file.write(os.path.join("instruments", filename2),
-		               instr.voice2)
+    if instr.voice2 is not None:
+        sbi_file.write(os.path.join("instruments", filename2), instr.voice2)
+
 
 if len(sys.argv) != 2:
-	sys.stderr.write("Usage: %s <filename>\n" % sys.argv[0])
-	sys.exit(-1)
+    sys.stderr.write("Usage: %s <filename>\n" % sys.argv[0])
+    sys.exit(-1)
 
 instruments = genmidi.read(sys.argv[1])
 
@@ -64,22 +68,21 @@ percussion = instruments[128:]
 print("INSTRUMENTS = [")
 
 for i in range(len(main_instrs)):
-	instr = main_instrs[i]
-	filename = "instr%03i.sbi" % (i+1)
-	filename2 = "instr%03i-2.sbi" % (i+1)
-	dump_instrument(filename, filename2, instr)
-	print_instr_def(filename, filename2, instr)
+    instr = main_instrs[i]
+    filename = "instr%03i.sbi" % (i + 1)
+    filename2 = "instr%03i-2.sbi" % (i + 1)
+    dump_instrument(filename, filename2, instr)
+    print_instr_def(filename, filename2, instr)
 
 print("]")
 print("")
 print("PERCUSSION = [")
 
 for i in range(len(percussion)):
-	instr = percussion[i]
-	filename = "perc%02i.sbi" % (i+35)
-	filename2 = "perc%02i-2.sbi" % (i+35)
-	dump_instrument(filename, filename2, instr)
-	print_instr_def(filename, filename2, instr)
+    instr = percussion[i]
+    filename = "perc%02i.sbi" % (i + 35)
+    filename2 = "perc%02i-2.sbi" % (i + 35)
+    dump_instrument(filename, filename2, instr)
+    print_instr_def(filename, filename2, instr)
 
 print("]")
-

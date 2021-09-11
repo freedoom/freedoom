@@ -1,15 +1,21 @@
-man-%: freedoom.adoc
-	sed -e s/freedoom/$*/ freedoom.adoc > $*.adoc
-	a2x -f manpage $*.adoc
+ASCIIDOC_MAN=a2x -f manpage
+.SUFFIXES: .adoc .6
 
-icon-freedm:
-	./pillow-resize ../graphics/titlepic/freedm_title2.png freedm.png 64 64
+all: freedm.6 freedoom1.6 freedoom2.6 io.github.freedoom.FreeDM.png \
+     io.github.freedoom.Phase1.png io.github.freedoom.Phase2.png
 
-icon-freedoom1:
-	./pillow-compose ../sprites/playa2a8.png freedoom1.png 64 64
+%.6: freedoom.adoc
+	sed -e s/freedoom/$*/ $< > $*.adoc
+	$(ASCIIDOC_MAN) $*.adoc
 
-icon-freedoom2:
-	./pillow-compose ../sprites/heada1.png freedoom2.png 64 64
+io.github.freedoom.FreeDM.png: ../graphics/titlepic/freedm_title2.png
+	./pillow-resize $< $@ 64 64
+
+io.github.freedoom.Phase1.png: ../sprites/playa2a8.png
+	./pillow-compose $< $@ 64 64
+
+io.github.freedoom.Phase2.png: ../sprites/heada1.png
+	./pillow-compose $< $@ 64 64
 
 clean:
-	rm -f *.6 *.png freedm.adoc freedoom1.adoc freedoom2.adoc
+	$(RM) *.6 *.png freedm.adoc freedoom1.adoc freedoom2.adoc

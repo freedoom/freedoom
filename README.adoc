@@ -5,7 +5,7 @@ person shooter game, but _Freedoom_ by itself is just the raw material
 for a game.  It must be paired with a compatible _Doom_ engine to be
 played.
 
-There is a massive http://doomwiki.org/wiki/Idgames_archive[back
+There is a massive https://doomwiki.org/wiki/Idgames_archive[back
 catalog], spanning over two decades, containing thousands of _Doom_
 levels and other modifications (“mods”) made by fans of the game.
 _Freedoom_ aims to be compatible with these and allows most to be
@@ -16,10 +16,10 @@ single-player oriented campaigns and one set of levels designed
 exclusively for multiplayer deathmatch:
 
 [horizontal]
-*Freedoom: Phase 1*:: Four chapters, nine levels each, totalling 36
+*Freedoom: Phase 1*:: Four episodes, nine levels each, totalling 36
 levels.  This game aims for compatibility with _The Ultimate Doom_
 mods, also known as plain _Doom_ or _Doom 1_.
-*Freedoom: Phase 2*:: 32 levels in one long chapter, featuring extra
+*Freedoom: Phase 2*:: 32 levels in one long episode, featuring extra
 monsters and a double-barrelled shotgun.  This project aims for
 compatibility with _Doom II_ mods.
 *FreeDM*:: A 32-level game designed for competitive deathmatch play.
@@ -29,11 +29,11 @@ all the game data such as graphics, sound effects, music, and so on.
 This file is often called an “IWAD” by those in the _Doom_ and
 _Freedoom_ communities.  While the _Doom_ engine source code is free,
 you would normally still need one of the proprietary data files from
-http://www.idsoftware.com/[id Software] to play _Doom_.  _Freedoom_
+https://www.idsoftware.com/[id Software] to play _Doom_.  _Freedoom_
 aims to create a free alternative: combined with the GPL-licensed
 _Doom_ source code, this results in a completely free game.
 
-For more information, see http://freedoom.github.io/.
+For more information, see https://freedoom.github.io/.
 
 == How to play
 
@@ -41,25 +41,19 @@ Since _Freedoom_ is only the game data, you will still need to
 download an engine separately.  These are also often termed “source
 ports” by the community.  There are an overwhelming number of choices
 available, a lengthy list of which is available on the
-http://doomwiki.org/wiki/Source_port[Doom Wiki].
+https://doomwiki.org/wiki/Source_port[Doom Wiki].
 
 One particularly recommended by the _Freedoom_ project is
 https://zdoom.org/[GZDoom].  This engine offers good support for
 single-player, multi-player, and the majority of mods created for both
 _Doom_ and _Freedoom_.
 
-On Windows, you should place _Freedoom_'s data files (those ending
+On Windows, you should place _Freedoom_’s data files (those ending
 with +.wad+) alongside the engine (eg, +odamex.exe+).  On Unix-like
 systems, these data files should go in either +/usr/share/games/doom+
 or your home directory.  If _Freedoom_ comes packaged as part of your
 operating system distribution, it should already be installed into the
 proper location.
-
-If you wish to venture outside of GZDoom, beware that _Phase 1_ and
-_Phase 2_ require a https://doomwiki.org/wiki/Limit_removing[limit
-removing] engine, which is thankfully the majority of them, but
-not all.  _FreeDM_, on the other hand, is intended to be playable by
-all variants of the _Doom_ engine.
 
 Hopefully, your engine of choice should already be capable of running
 _Freedoom_ without extra configuration.  This may not be the case,
@@ -72,18 +66,16 @@ of the following options should solve it:
     line, or adding it to an application shortcut.
   * Use the +DOOMWADPATH+ environment variable.  Many engines support
     this variable to add directories and/or files to their search
-    path.  The exact syntax matches your operating system's normal
+    path.  The exact syntax matches your operating system’s normal
     +PATH+ environment variable.
   * Rename the game files.  This may be a bit crude, but you can
-    rename the files to match those of _Doom_'s.  This is often the
+    rename the files to match those of _Doom_’s.  This is often the
     easiest quick-fix, although it is normally desirable to use one of
     the above methods if possible.
 
     ** +freedoom1.wad+ can be renamed to +doom.wad+
-    ** +freedoom2.wad+ can be renamed to +doom2.wad+, +tnt.wad+, or
-       +plutonia.wad+
-    ** +freedm.wad+ can be renamed to +doom2.wad+, +tnt.wad+, or
-       +plutonia.wad+
+    ** +freedoom2.wad+ can be renamed to +doom2.wad+
+    ** +freedm.wad+ can be renamed to +doom2.wad+
 
 Additionally, for Unix-like operating systems, such as GNU/Linux or a
 BSD variant, _Freedoom_ may be packaged and installed with programs
@@ -103,8 +95,8 @@ intact, see `COPYING`), and you may study it--for example, to see how
 an “IWAD” is built.  To facilitate this, you can get the full source
 code for _Freedoom_, in this case, in the form of a DeuTex tree.
 
-You may read more about free software at the http://www.gnu.org/[GNU]
-and http://www.fsf.org/[Free Software Foundation] websites.
+You may read more about free software at the https://www.gnu.org/[GNU]
+and https://www.fsf.org/[Free Software Foundation] websites.
 
 == Contributing to Freedoom
 
@@ -116,11 +108,11 @@ few guidelines that should be followed:
 We know people hate legalese, but this is important.  This applies to
 *everything* which is submitted.
 
-You must be incredibly careful when basing on existing graphics or
-sounds.  Most _Doom_ projects are incredibly lax on reusing
-intellectual property--there are many mods which contain modified
-_Doom_ sprites, for example.  However, due to the nature of this
-project, we do not have the same liberty to rip as we please.
+You must be careful when basing on existing graphics or sounds.  Most
+_Doom_ projects are lax on reusing intellectual property--there are
+many mods which contain modified _Doom_ sprites, for example.
+However, due to the nature of this project, we do not have the same
+liberty to rip as we please.
 
 The general rules go as follows:
 
@@ -144,22 +136,11 @@ The general rules go as follows:
 
 === Levels
 
-Levels for _Phase 1_ and _Phase 2_ must be compatible with any limit
-removing engine.  This means that you may exceed the limits of the
-original _Doom_, but do not depend on any additional mapping features.
-Levels should be in _Doom_'s original format, not in “Hexen”-format.
-
-It is a goal that future versions of _Freedoom_ will be entirely
-vanilla-compatible, not even allowing expanded limits.  Keeping this
-in mind while mapping may make it easier for your level to be
-preserved.  Levels requiring large amounts of modification to fit into
-vanilla limits may be discarded entirely in favor of a less complex map.
-
-Levels for _FreeDM_ must strictly be vanilla-compatible, that is, they
-must run in the original +doom2.exe+ engine for DOS and not cause any
-visplane overflows and other such problems in the vanilla engine.
-This ensures the maximum compatibility with all _Doom_-derived
-engines.
+All levels for _Freedoom_ must be vanilla-compatible, requiring an
+expanded-limits or limit-removing engine is not permissible.  This
+means you may not exceed the limits of the original _Doom_ engine, and
+do not depend on additional mapping features.  Levels should be in
+_Doom_’s original format, not in “Hexen”-format.
 
 It is sensible to also heed the following guidelines:
 
@@ -169,31 +150,25 @@ It is sensible to also heed the following guidelines:
   * Try to make levels appropriately difficult for their position
     within the progression of the game.  Also bear in mind that not
     all players may be as skilled a player as you.
-  * Do not use tricks that exploit _Doom_'s software renderer; some
+  * Do not use tricks that exploit _Doom_’s software renderer; some
     engines, especially those that use hardware accelerated rendering,
     may not render it properly.  Examples of tricks to avoid include
     those used to simulate 3D bridges and “deep water” effects.
   * While unrestricted by limits, do not make excessively complicated
     scenes.  It is desirable that _Freedoom_ levels should be playable
     on low-powered hardware, such as phones and old computers.
-  * For _Phase 1_ and _Phase 2_, try to test your levels in
-    http://fabiangreffrath.github.io/crispy-doom[Crispy Doom], which
-    is an engine that is limit removing but does not introduce mapping
-    features to accidentally exploit.
-  * For _FreeDM_, while you can test in the original +doom2.exe+
-    engine with DOS or an emulator, this original engine is not free
-    software and not legally obtainable without _Doom_, in addition to
-    the hassle of merely running it.
-    http://www.chocolate-doom.org/[Chocolate Doom] is a free software,
-    highly-portable, and strictly vanilla-compatible engine without
-    any extra features for levels, suitable for testing FreeDM.
+  * Test your levels in https://www.chocolate-doom.org/[Chocolate
+    Doom] to make sure that vanilla compatibility is maintained.  This
+    is an engine with strict adherence to vanilla Doom limits and
+    bugs, and working in it assures that levels can be played with any
+    _Doom_ engine.
 
 === Graphics
 
 Graphics should generally have the same color and size as the original
 _Doom_ graphics, as to remain compatible with mods.  Otherwise, levels
 may end up looking like a nightmare in design.  They may be
-thematically different as long as it doesn't clash.
+thematically different as long as it doesn’t clash.
 
 _Doom_ uses a fictional corporation abbreviated as “UAC:” this is
 trademarked by id Software and cannot be used in _Freedoom_.  Instead,
@@ -212,7 +187,7 @@ patches, but keep in mind:
     for Vim (perhaps other editors, too) to automatically re-format
     text.
   * Text is kept at 72 characters wide.  In Vim, you can set the
-    editor to automatically insert line breaks as you're typing by
+    editor to automatically insert line breaks as you’re typing by
     performing `set textwidth=72`.  Special exceptions to the width
     rule might be allowed when necessary (for example, inserting long
     URLs).
@@ -220,18 +195,15 @@ patches, but keep in mind:
 === Submitting your work
 
 The most common, and a fairly simple method, to submit your work is by
-posting it on the http://www.doomworld.com/vb/freedoom/[Freedoom
-forum] on Doomworld Forums.  This allows a great number of people to
-review the contribution and provide feedback, although the
-registration process is known to be cumbersome.
+posting it on the
+https://www.doomworld.com/forum/17-freedoom/[Freedoom forum] on
+Doomworld Forums.  This allows a great number of people to review the
+contribution and provide feedback, although the registration process
+is known to be cumbersome.
 
 An alternative to using the forum, is to post your submission on the
 https://github.com/freedoom/freedoom/issues[issue tracker], which may
 also be peer-reviewed and provide a feedback cycle.
-
-Lastly, it is possible to get work submitted by joining the official
-irc://irc.oftc.net/freedoom[#freedoom] IRC channel, although this
-poses the greatest risk of being lost and forgotten.
 
 Unfortunately, the Freedoom project cannot provide hosting space in
 the form of a web page nor FTP, however there are many free file hosts
@@ -252,7 +224,7 @@ You can also commit on a clone of the _Freedoom_ repository, although
 this is a technical task and it is okay to let other _Freedoom_
 maintainers to do it instead: that is our normal mode of operation.
 However, pull requests are much appreciated and you may submit them in
-any manner you wish, with GitHub's direct pull requests being the
+any manner you wish, with GitHub’s direct pull requests being the
 simplest, but by far not the only means.
 
 Freedoom uses the commit message style commonly seen in distributed
@@ -260,17 +232,3 @@ version control systems, adopted by projects such as Linux and Git.
 For an explanation of this style, see
 https://chris.beams.io/posts/git-commit/[How to Write a Git Commit
 Message].
-
-The commit `2017-02-20T01:52:35Z!mikeonthecomputer@gmail.com` is a
-good example of a properly-written commit.
-
-Do not use commit hashes to refer to other commits.  Use other kinds
-of pointers, simple ones like “my previous commit” might suffice, or
-use http://esr.ibiblio.org/?p=3872[action stamps], which can improve
-the meaningfulness of commit identifiers if the repository history is
-rewritten (this has happened at least twice!), or if the repository is
-converted to another VCS (this happened once before).  At the time of
-writing (February 2017), core Git does not yet have a mechanism to
-output this format, but you may use a
-https://gist.github.com/chungy/195f53bfb9253584e596[shell script] and
-place it in your `$PATH` to achieve some ease in generating them.

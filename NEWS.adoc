@@ -1,0 +1,179 @@
+= Freedoom project news
+
+== HEAD
+=== Graphics
+  * New ESPI* textures are included as an alternative to the STAR*
+    textures.  These are named after and in honor of Esa Repo (Espi).
+  * A STARBR1 texture is now included as a counterpart to STARBR2.
+
+== 0.12.1 (2019-10-22)
+=== General
+  * The HTML documentation (eg, +NEWS+ and +README+ files) are
+    generated with a style based on _Freedoom_’s own website, rather
+    than the default AsciiDoc styling.
+  * _Phase 2_’s internal DEMO1 has been replaced, thanks to some odd
+    vanilla quirks that could cause it to desync in some (but not all)
+    conditions.
+
+=== Levels
+  * The sailor monster type is formally banished from _Freedoom_’s own
+    levels, and remaining uses of it were removed.
+
+=== Manual
+  * Incongruities between the actual game and manual have been fixed.
+
+=== Build system
+  * The `make install` targets have been consolidated to behave more
+    similarly to how the pre-built zip distributions are: a split
+    between _FreeDM_ and _Phase 1+2_, rather than installing each of
+    the tree IWADs independently (and thus getting their own
+    +/usr/share/doc+ directories, for instance).
+
+== 0.12.0 (2019-10-10)
+=== General
+  * We now have a manual rendered to beautiful PDF format.  Thanks to
+    Simon Howard, the project’s founder.
+  * A strong focus on vanilla compatibility has been sought for this
+    release.  Most, if not all, levels should work now.
+  * _Final Doom_ compatibility de-emphasized.  Where it creates
+    conflicts with _Doom II_ mods or texture definitions, we prefer
+    the _Doom II_ side of things.  _Final Doom_-specific maps and mods
+    may never look completely right in _Freedoom_, as a result.
+
+=== Levels
+  * _FreeDM_ has seen a major overhaul, with most maps being modified,
+    with new additions and removals of the weaker levels.  It now
+    benefits from the use of Aquatex and Egyptian textures in some of
+    its levels, giving a more vibrant feel than before.
+  * _Phase 1_ gets a lot of mapping love in this round, fleshing out
+    the levels and tweaking difficulty levels so easy, normal, and
+    hard are all accounted for.  There is a new C3M5 by Mortrixs.
+  * _Phase 2_ MAP01 saw an overhaul, simplifying its design in
+    significant ways to improve the flow around the level.
+  * Two maps in _Phase 2_ were replaced due to being recreations of
+    _Doom II_ maps.  Jayexetee and GooseJelly get credits for the new
+    ones, in MAP06 and MAP26.
+  * Maps in _Phase 2_ in general have had some slight re-arrangement
+    based on difficulty levels and themes.  A new MAP06 by Jayexetee
+    is included, the old one taking the MAP18 slot.
+  * All levels are now guaranteed to have co-op and deathmatch starts.
+
+=== Graphics
+  * New power-up (stealth, overdrive, and ultra-overdrive) sprites.
+  * New necromancer (arch-vile) sprites by Urric.
+  * Some weapon and ammo sprites have been tweaked and improved.
+  * Completed and enhanced set of _Evilution_ and _Plutonia_ textures.
+  * New skull-switches by MissLav.
+  * New SKY4 based on an astronomy photograph.
+  * Tweaked player sprites and HUD face by Ferk.
+
+=== Music
+  * New tracks in C1M2, C2M3, C2M8, MAP03, MAP12, MAP22, MAP25, MAP26,
+    MAP27, DM03, DM06, DM09, DM17, DM24, DM31, and DM32.
+  * All files in-tree have been renamed from *.mus to *.mid.  The file
+    format must always be MIDI.  This makes it easy on music composers
+    to actually work with the files.
+
+=== Unix script and metadata
+  * Metainfo (formerly appdata) and desktop files have been brought up
+    to the latest standard specifications and recommendations, using
+    reverse-DNS for the project identifier, and a self-evaluated
+    content rating.
+  * The launch shell-script changed the `PORT` environment variable to
+    `DOOMPORT` to avoid conflicts with the genericly-named `PORT`.  It
+    also builds a sensible default `DOOMWADPATH` environment variable
+    to assist ports that do not have a hard-coded fallback.
+  * The script no longer tries to look for `boom`, `zdoom`, nor
+    `prboom` by default, as these are ports no longer maintained.
+
+=== Build system
+  * Freedoom’s build system now has a hard dependency on Python 3, in
+    anticipation of Python 2’s end-of-life.
+  * We have moved from ImageMagick to Pillow, a Python library for
+    graphics manipulation.  It provides faster build times as well as
+    API stability.
+  * GIF files have been replaced with PNG files.  True PNG file format
+    transparency is used instead of a cyan background.
+  * `ASCIIDOC` and `ASCIIDOC_MAN` variables have been added to the
+    Makefile to control the AsciiDoc implementation used to generate
+    HTML and man page files.
+
+== 0.11.3 (2017-07-18)
+  * Builds with DeuTex 5.0 and newer.
+
+== 0.11.2 (2017-03-15)
+  * Missing multiplayer starts have been added to several levels.
+  * A few mapping errors were repaired by changing sector heights.
+    Speedrunners can better appreciate smooth flow through the levels.
+  * Easy and normal difficulty levels have been tweaked.
+  * Par times for _Phase 1_ have been added.
+  * Cleaned up the title screen using the _Freedoom_ font for “Phase
+    1” and “Phase 2” on-screen.
+
+== 0.11.1 (2017-02-22)
+  * 1% armor bonus picks are recolored from red to green.  They were
+    too easily confused for health pickups.
+  * New _TNT: Evilution_ compatible textures.
+  * New pain bringer and pain lord sprites, replacing old concept
+    art-derived ones.
+  * A few mapping errors are fixed, including misaligned textures,
+    leftover Boom specials, and it should no longer be possible to get
+    stuck between a rock and a tree in _Phase 1_ C1M1.
+  * Brand-new _Phase 1_ C3M1, replacing the old _Doom_-inspired level.
+  * Widescreen statusbar for ZDoom removed.  This created
+    incompatibility with some mods.
+
+== 0.11 (2017-02-16)
+  * _Freedoom_ is now a limit-removing game rather than using Boom
+    specials.
+  * Lots of new music.
+  * New levels, including a new C1M1 for _Phase 1_.
+  * Aquatex: over 200 new textures for mappers to use.
+  * New intermission screens.
+  * Some new weapon sprites: new pistol and new pickups.
+  * New medkit and armor pickup sprites.
+  * New project logo
+
+== 0.10.1 (2015-12-23)
+  * Repairs an incompatibility in _Phase 1_ C3M7 with Boom 2.02.
+  * Fully-completed sprite set for the flame bringer.
+
+== 0.10 (2015-12-16)
+  * Brand new status bar.
+  * New sprites for the serpent and orb monsters.
+  * New HUD graphics for the single- and double-barreled shotguns,
+    missile launcher, and SKAG-1337.
+  * New pain sounds for many monsters and the player.
+  * New maps in _Phase 1_ and _Phase 2_.
+
+== 0.9 (2014-10-14)
+  * New file names that no longer conflict with _Doom_’s
+  ** +freedoom1.wad+ is _Freedoom: Phase 1_ -- compatible with _The
+     Ultimate Doom_.
+  ** +freedoom2.wad+ is _Freedoom: Phase 2_ -- compatible with _Doom
+     II_ and _Final Doom_.
+  * _FreeDM_ and _Phase 1_ have grown out of the shadows of the
+    project and have seen rapid advances, largely led by Xindage, our
+    prominent Brazilian contributor.
+  * New text font from Mechadon to replace the old one in all menus,
+    in-game text, and status-bar HUD.
+  * New zombie, shotgun zombie, and assault tripod sprites by a
+    skilled pixel artist, raymoohawk.
+  * New sounds for the dark soldier by jewellds.
+  * More complete support for _Final Doom_ mods, adding many more
+    textures missing to support mods for both _TNT: Evilution_ and
+    _The Plutonia Experiment_, thanks to fraggle and AXDOOMER.
+
+== 0.8 (2014-01-01)
+  * _Ultimate Freedoom_’s episode 4 is now the Cacoward-winning _Double Impact_.
+  * Many maps have been updated
+  * Improved sprites and sounds
+  * _FreeDM_ is now vanilla-compatible and has quite a few new maps.
+  * A BEX file is included in the IWADs, which allows compatible
+    source ports to replace many strings in the game, such as level
+    names, weapon pickups, and intermission text.
+
+// TODO: Older news
+//
+// 0.8 was around the time that summarized lists of changes were
+// started, with very sparse information about older releases.

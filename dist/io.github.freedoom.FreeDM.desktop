@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=FreeDM
+Comment=Fight friends and enemies in competitive deathmatch
+Comment[he]=הילחם בחברים ובאויבים בקרבות מיתה תחרותיים
+GenericName=First Person Shooter Game
+GenericName[he]=משחק יריות בגוף ראשון
+Type=Application
+PrefersNonDefaultGPU=true
+Icon=io.github.freedoom.FreeDM
+Keywords=first;person;shooter;doom;freedoom;
+Categories=Game;ActionGame;
+Exec=freedm

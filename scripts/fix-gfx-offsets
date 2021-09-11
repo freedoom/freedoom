@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+
+from os import path
+import sys
+import glob
+import struct
+import png
+
+
+class Graphic(object):
+    def __init__(self, filepath):
+        self.filepath = filepath
+        self.filename = path.split(filepath)[1]
+        self.name = path.splitext(self.filename)[0].upper().replace("^", "\\")
+        self.has_offset = False
+        self.get_png_offset()
+
+    def get_png_offset(self):
+        reader = png.Reader(file=open(self.filepath, "rb"))
+        for chunk in reader.chunks():
+            if chunk[0] == "grAb":
+                self.xoffset, self.yoffset = struct.unpack(">II", chunk[1])
+                self.has_offset = True
+
+
+def main():
+    dirname = path.split(path.abspath(__file__))[0]
+    graphics = []
+    files = []
+    if len(sys.argv) < 2:
+        print(
+            'This script takes the offsets stored in the "grAb" chunk of '
+            + "the specified PNGs and adjusts the graphics offsets in the build_cfg file.\n"
+        )
+        print("Usage:\n\t fix-sprite-offsets <names> [names] [...]\n")
+        print(
+            "example: \n\tfix-sprite-offsets sprites/vilea1.png sprites/vileb1.png"
+        )
+        print("You can also use wildcards:")
+        print("\t fix-sprite-offsets sprites/vile*.png")
+        exit()
+    else:
+        for param in sys.argv[1:]:
+            files.append(dirname + "/../" + param)
+
+    for filepath in files:
+        if not path.isfile(filepath):
+            print("Could not find" + filepath + ", skipping...")
+        elif path.splitext(filepath)[1] == ".png":
+            graphics.append(Graphic(filepath))
+    for graphic in graphics:
+        if graphic.has_offset == False:
+            graphics.remove(graphic)
+    f = open(dirname + "/../buildcfg.txt", "r")
+    lines = f.readlines()
+    f.close()
+    newlines = []
+    for line in lines:
+        replaced_line = False
+        for graphic in graphics:
+            if graphic.has_offset is True:
+                thing = line.split()
+                if len(thing) > 0 and thing[0] == graphic.name:
+                    new_string = "%s\t%i\t%i" % (
+                        graphic.name,
+                        graphic.xoffset,
+                        graphic.yoffset,
+                    )
+                    comments = line.split(";")
+                    if len(comments) > 1:
+                        new_string += "\t;" + "".join(comments[1:])
+                    else:
+                        new_string += "\n"
+                    newlines.append(new_string)
+                    replaced_line = True
+                    print("Updated " + graphic.name + " offsets")
+                    break
+        if replaced_line is False:
+            newlines.append(line)
+    f = open(dirname + "/../buildcfg.txt", "w")
+    f.writelines(newlines)
+    f.close()
+
+
+if __name__ == "__main__":
+    main()

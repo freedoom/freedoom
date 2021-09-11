@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Phase 1
+Name[he]=מופע 1
+Comment=Battle monsters in four 9-level episodes
+Comment[he]=הילחם במפלצות בארבעה פרקים בעלי 9 שלבים
+GenericName=First Person Shooter Game
+GenericName[he]=משחק יריות בגוף ראשון
+Type=Application
+PrefersNonDefaultGPU=true
+Icon=io.github.freedoom.Phase1
+Keywords=first;person;shooter;doom;freedoom;
+Categories=Game;ActionGame;
+Exec=freedoom1

@@ -1,0 +1,10 @@
+This directory contains the source DeHackEd patch used for Freedoom.
+
+We generate three unique files for each IWAD, most of the data being
+identical to each other.
+
+- FreeDM has all par times set to 0 and the map names would otherwise
+  override Phase 2.
+- We override the no-clipping cheat in Phase 1 so IDCLIP is used in
+  all games.
+- Phase 2 has map names that would otherwise override FreeDM.

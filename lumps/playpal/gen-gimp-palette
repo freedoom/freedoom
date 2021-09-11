@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Generates a file suitable for importing into GIMP based on
+# playpal-base.lmp, and placed into doom.gpl
+
+# File header
+cat > doom.gpl <<EOF
+GIMP Palette
+Name: Doom
+Columns: 16
+#
+EOF
+
+od -An -w3 -tu1 playpal-base.lmp >> doom.gpl

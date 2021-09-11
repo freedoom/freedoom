@@ -13,3 +13,6 @@ The input for the script is playpal-base.lmp which contains the default
 palette seen during normal gameplay. The script translates this palette
 into the various other forms which are shown in different situations.
 
+There is additionally a “gen-gimp-palette” script that may be used to
+create a “doom.gpl” file suitable for importing into GIMP’s palette
+selection.

@@ -1,0 +1,240 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# fix-map-names - Fix map names in WAD files
+#
+# Fix the map name, which is the name of the first lump. If the "-t" option is
+# passed for test mode then incorrect map names are displayed, but not fixed.
+#
+# This script can be invoked with make target "fix-map-names" (no "-t" option)
+# or make target "test-map-names" ("-t" option). Make target "test"
+# ("-t" option) will run this and any other test.
+
+# Imports
+
+import argparse
+import os
+import re
+import struct
+import sys
+
+# Globals
+
+args = {}  # Command line arguments.
+error_count = 0
+fixes_needed = 0
+freedoom_1_re = re.compile(r"^C(\d)M(\d)$")  # FD #1 maps
+freedoom_dm_re = re.compile(r"^DM(\d\d)$")  # FD DM maps
+header_shown = False
+ignored_wads = set(["dummy.wad", "test_levels.wad"])
+last_error = None
+map_name_re = re.compile(r"^((E\dM\d)|(MAP\d\d))$")
+output_line = "%-17s %-9s %-7s %s"
+
+# Functions
+
+# Handle error 'msg'. Pass None to reset 'last_error'.
+def error(msg):
+    global error_count
+    global last_error
+
+    last_error = msg
+    if msg:
+        error_count += 1
+
+
+# Given WAD path 'wad' return the expected map name as a function of the
+# filename.
+def get_expected_map_name(wad):
+    # Strip of the directory, upper case, remove ".wad".
+    name = os.path.basename(wad).upper()
+    if name.endswith(".WAD"):
+        name = name[:-4]
+
+    # Convert from Freedoom name to Doom names.
+    name = freedoom_1_re.sub(r"E\1M\2", name)
+    name = freedoom_dm_re.sub(r"MAP\1", name)
+
+    if map_name_re.match(name):
+        return name
+    else:
+        return None
+
+
+# Parse the command line arguments and store the result in 'args'.
+def parse_args():
+    global args
+
+    parser = argparse.ArgumentParser(
+        description="Fix map names in WAD files.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+
+    # The following is sorted by long argument.
+
+    parser.add_argument(
+        "-f",
+        "--force",
+        action="store_true",
+        help="Force. Fix map name regardless of the existing map name.",
+    )
+    parser.add_argument(
+        "-q", "--quiet", action="store_true", help="Quiet (minimum output)."
+    )
+    parser.add_argument(
+        "-r",
+        "--recursive",
+        action="store_true",
+        help="Recurse into directories.",
+    )
+    parser.add_argument(
+        "-t",
+        "--test",
+        action="store_true",
+        help="Test mode. Don't make any changes.",
+    )
+    parser.add_argument(
+        "paths",
+        metavar="PATH",
+        nargs="+",
+        help="WAD paths, files and directories.",
+    )
+
+    args = parser.parse_args()
+
+    return args
+
+
+# Process path 'path' which is at depth 'depth'. If 'depth' is 0 then this is
+# a top level path passed in on the command line.
+def process_path(path, depth):
+    if os.path.isdir(path):
+        # Directory. If not recursive then only consider this directory if it
+        # was specified explicitly.
+        if args.recursive or not depth:
+            path_list = os.listdir(path)
+            path_list.sort()
+            for base in path_list:
+                process_path(path + "/" + base, depth + 1)
+    else:
+        # File. Only process WAD files that were specified explicitly
+        # (depth 0), or that have the expected suffix.
+        if (not depth) or path.lower().endswith(".wad"):
+            process_wad(path)
+
+
+# Process the paths passed in on the command line.
+def process_paths():
+    for path in args.paths:
+        process_path(path, 0)
+
+
+# Process WAD path 'wad'.
+def process_wad(wad):
+    global header_shown
+    global last_error
+    global fixes_needed
+
+    if os.path.basename(wad).lower() in ignored_wads:
+        # A known WAD that should not be processed.
+        return
+
+    try:
+        # Reset everything.
+        error(None)
+        lump_name = None
+        fix_needed = False
+
+        expected_name = get_expected_map_name(wad)
+        if not expected_name:
+            raise Exception("Unable to get the expected name")
+        with open(wad, "rb" if args.test else "r+b") as fhand:
+            magic = fhand.read(4)
+            if not isinstance(magic, str):
+                # magic is bytes in Python 3.
+                magic = magic.decode("UTF-8")
+            if not magic == "PWAD":
+                raise Exception("Not a PWAD. magic=" + magic)
+            # Directory at offset 0x8 in the header.
+            fhand.seek(0x08)
+            directory_offset, = struct.unpack("<I", fhand.read(4))
+            fhand.seek(directory_offset)
+            # The first lump in the directory, which should be the 0 byte map
+            # name one.
+            lump_data_offset, lump_size, lump_name = struct.unpack(
+                "<II8s", fhand.read(16)
+            )
+            if not isinstance(lump_name, str):
+                # lump_name is bytes in Python 3.
+                lump_name = lump_name.decode("UTF-8")
+            # Get rid of the null suffix.
+            lump_name = lump_name.partition("\0")[0]
+            if lump_size:
+                # The first lump should be 0 bytes.
+                error(
+                    "First lump size non-zero with "
+                    + str(lump_size)
+                    + " bytes"
+                )
+            elif not (args.force or map_name_re.match(lump_name)):
+                # A sanity check to make sure we read the right part.
+                error("Actual name unexpected")
+            elif expected_name != lump_name:
+                # The name is not what we thought it should be.
+                fix_needed = True
+                fixes_needed += 1
+            if fix_needed and not args.test:
+                # Seek to the lump name and the overwrite the lump name with
+                # the expected name.
+                fhand.seek(directory_offset + 8)
+                fhand.write(struct.pack("8s", expected_name.encode("UTF-8")))
+    except IOError as err:
+        # Probably the WAD file couldn't be open for read (test) or read and
+        # write (default).
+        error(
+            "Unable to open for read"
+            + ("" if args.test else " and write")
+            + ": "
+            + str(err)
+        )
+    except struct.error as err:
+        # This is probably the reason since seek silently succeeds even when
+        # the location is not possible, but then unpack fails due to the short
+        # read.
+        error("File too small: " + str(err))
+    except Exception as err:
+        # This was probably explicitly thrown by this script.
+        error(str(err))
+
+    if (last_error or fix_needed) and not args.quiet:
+        # Map None to "".
+        expected_name, lump_name, last_error = [
+            x if x else "" for x in (expected_name, lump_name, last_error)
+        ]
+        if not header_shown:
+            print(output_line % ("WAD", "Expected", "Actual", "Error"))
+            print(output_line % ("---", "--------", "------", "-----"))
+            header_shown = True
+        print(output_line % (wad, expected_name, lump_name, last_error))
+
+
+# Summarize what happened, and then exit with the appropriate exit code.
+def summarize():
+    if not args.quiet:
+        if fixes_needed:
+            print(
+                "\n%s %d WADs with the incorrect map name."
+                % ("Found" if args.test else "Fixed", fixes_needed)
+            )
+        else:
+            print("\nAll WADs had the correct map name.")
+        if error_count:
+            print("There were %d errors." % error_count)
+    sys.exit(1 if (error_count or (args.test and fixes_needed)) else 0)
+
+
+# Main
+
+parse_args()
+process_paths()
+summarize()

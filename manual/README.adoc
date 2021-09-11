@@ -1,0 +1,4 @@
+`manual.adoc` contains Freedoom’s manual. It is intended to be built
+as a PDF file but can also be viewed in HTML format. To build as a
+PDF, https://asciidoctor.org/[Asciidoctor] is required, since it has
+superior PDF output to the Asciidoc reference implementation.

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # SPDX-License-Identifier: BSD-3-Clause
 
 import hashlib
@@ -12,15 +12,16 @@ import sys
 # expands or switches web host.
 
 iwads = {
-    "freedm.wad": {
-        "description": "Deathmatch IWAD",
-        "name": "FreeDM"},
+    "freedm.wad": {"description": "Deathmatch IWAD", "name": "FreeDM"},
     "freedoom1.wad": {
         "description": "Ultimate Doom compatible IWAD",
-        "name": "Freedoom: Phase 1"},
+        "name": "Freedoom: Phase 1",
+    },
     "freedoom2.wad": {
         "description": "Doom II compatible IWAD",
-        "name": "Freedoom: Phase 2"}}
+        "name": "Freedoom: Phase 2",
+    },
+}
 
 # Find the version to generate JSON for:
 
@@ -33,8 +34,8 @@ json_file = os.getenv("JSON")
 if version is None:
     sys.stderr.write("Version is not specified for release\n")
     sys.exit(1)
-if version[0] is 'v':
-    # Strip the leading 'v' from versioning
+if version[0] is "v":
+    # Strip the leading "v" from versioning
     version = version[1:]
 
 if json_file is None:
@@ -50,12 +51,31 @@ with open("wads/freedoom2.wad", "rb") as f:
 with open("wads/freedm.wad", "rb") as f:
     iwads["freedm.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
 
-iwads["freedoom1.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/download/v" + version + "/freedoom-" + version + ".zip"
+iwads["freedoom1.wad"]["url"] = (
+    "https://github.com/freedoom/freedoom/releases/download/v"
+    + version
+    + "/freedoom-"
+    + version
+    + ".zip"
+)
 iwads["freedoom1.wad"]["version"] = version
-iwads["freedoom2.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/download/v" + version + "/freedoom-" + version + ".zip"
+iwads["freedoom2.wad"]["url"] = (
+    "https://github.com/freedoom/freedoom/releases/download/v"
+    + version
+    + "/freedoom-"
+    + version
+    + ".zip"
+)
 iwads["freedoom2.wad"]["version"] = version
-iwads["freedm.wad"]["url"] = "https://github.com/freedoom/freedoom/releases/download/v" + version + "/freedm-" + version + ".zip"
+iwads["freedm.wad"]["url"] = (
+    "https://github.com/freedoom/freedoom/releases/download/v"
+    + version
+    + "/freedm-"
+    + version
+    + ".zip"
+)
 iwads["freedm.wad"]["version"] = version
 
 with open(json_file, "w") as f:
     json.dump(iwads, f, indent=2, sort_keys=True)
+    f.write("\n")
