@@ -1101,8 +1101,8 @@ CWILV31 = DMWILV31
 
 #ifdef PHASE2
 
-BBRNA0						; boss brain
-BBRNB0
+BBRNA0 25 118					; boss brain
+BBRNB0 31 113
 BOS2A1 24 69	; hell knight
 BOS2A2 24 69
 BOS2A3 26 69
