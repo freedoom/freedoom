@@ -422,14 +422,14 @@ image:images/monster-matribite.png[matribite,100,100]
 These flying orb-like creatures spit fireballs and bite if you get too
 close. |
 image:images/monster-trilobite.png[Trilobite,100,100]
-| **Pain Bringer** |
+| **Paladin** |
 100% muscle, these guys take at least three rocket blasts to take down, and
 while you’re trying they’ll shower you with energy projectiles. |
-image:images/monster-pain-bringer.png[Pain Bringer,100,100]
-| **Pain Lord** |
-If the Pain Bringer wasn’t tough enough, this one will take five rocket
+image:images/monster-paladin.png[Paladin,100,100]
+| **Warlord** |
+If the Paladin wasn’t tough enough, this one will take five rocket
 blasts. |
-image:images/monster-pain-lord.png[Pain Lord,100,100]
+image:images/monster-warlord.png[Warlord,100,100]
 | **Dark Soldier** |
 Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
 match with one of these guys. |
@@ -438,23 +438,23 @@ image:images/monster-dark-soldier.png[Dark Soldier,100,100]
 If he’s not setting you on fire, he’s undoing all your hard work by bringing
 his friends back from the dead. |
 image:images/monster-necromancer.png[Necromancer,100,100]
-| **Combat Slug** |
-These genetically-engineered super-slugs have been fitted with long distance
+| **Chimera** |
+These genetically-engineered composites have been fitted with long distance
 flame throwers, practically making them into living, slithering tanks. |
-image:images/monster-combat-slug.png[Combat Slug,100,100]
-| **Technospider** |
-These spider creatures have been equipped with polaric energy cannons, making
+image:images/monster-chimera.png[Chimera,100,100]
+| **Manticore** |
+These creatures have been equipped with polaric energy cannons, making
 them a deadly challenge. |
-image:images/monster-technospider.png[Technospider,100,100]
-| **Large Technospider** |
+image:images/monster-manticore.png[Manticore,100,100]
+| **Dominion** |
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
 of effort to bring down. |
-image:images/monster-large-technospider.png[Large Technospider,100,100]
-| **Assault Tripod** |
+image:images/monster-dominion.png[Dominion,100,100]
+| **Throne** |
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
 missile launcher that you’ll want to avoid. |
-image:images/monster-assault-tripod.png[Assault Tripod,100,100]
+image:images/monster-assault-throne.png[Throne,100,100]
 |==========================
 
 === Using the map
