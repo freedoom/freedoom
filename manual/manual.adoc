@@ -454,7 +454,7 @@ image:images/monster-dominion.png[Dominion,100,100]
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
 missile launcher that you’ll want to avoid. |
-image:images/monster-assault-throne.png[Throne,100,100]
+image:images/monster-throne.png[Throne,100,100]
 |==========================
 
 === Using the map
