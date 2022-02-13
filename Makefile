@@ -10,7 +10,7 @@ DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-v0 -rate accept
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 NODE_BUILDER=ZenNode
-NODE_BUILDER_LEVELS=c?m? dm?? map??
+NODE_BUILDER_LEVELS=e?m? dm?? map??
 
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad

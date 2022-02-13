@@ -88,7 +88,7 @@ white_graphics = {
 
 blue_graphics = {
     "m_disopt": "DISPLAY OPTIONS",
-    "m_episod": "Choose Chapter:",
+    "m_episod": "Choose Episode:",
     "m_optttl": "OPTIONS",
     "m_skill": "Choose Skill Level:",
 }
