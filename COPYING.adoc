@@ -1,4 +1,4 @@
-Copyright © 2001-2021
+Copyright © 2001-2022
 Contributors to the Freedoom project.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
