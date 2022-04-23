@@ -430,10 +430,10 @@ image:images/monster-pain-bringer.png[Pain Bringer,100,100]
 If the Pain Bringer wasn’t tough enough, this one will take five rocket
 blasts. |
 image:images/monster-pain-lord.png[Pain Lord,100,100]
-| **Dark Soldier** |
-Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
-match with one of these guys. |
-image:images/monster-dark-soldier.png[Dark Soldier,100,100]
+| **Octaminator** |
+These cybernetic abominations can fire powerful homing
+missiles at you, or beat you to a bloody pulp in a melee. |
+image:images/monster-octaminator.png[Octaminator,100,100]
 | **Necromancer** |
 If he’s not setting you on fire, he’s undoing all your hard work by bringing
 his friends back from the dead. |
