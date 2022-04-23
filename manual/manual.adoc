@@ -432,7 +432,7 @@ blasts. |
 image:images/monster-pain-lord.png[Pain Lord,100,100]
 | **Octaminator** |
 These cybernetic abominations can fire powerful homing
-missiles at you, or beat you to a bloody pulp in a melee. |
+missiles at you, or beat you to a bloody pulp up close. |
 image:images/monster-octaminator.png[Octaminator,100,100]
 | **Necromancer** |
 If he’s not setting you on fire, he’s undoing all your hard work by bringing
