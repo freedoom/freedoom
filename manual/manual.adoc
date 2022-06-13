@@ -143,7 +143,7 @@ next time you play.
 The following are some useful keyboard shortcuts that can save time
 accessing common menu functions.
 
-[cols="1,2,8",width="90%",align="center",valign="middle"]
+[cols="1,3,7",width="90%",align="center",valign="middle"]
 |==========================
 | **Esc** | <<menus,Menu>> | Bring up the main menu.
 | **F1** | Help | Bring up the help screen that shows information about the
@@ -206,7 +206,7 @@ the following sections:
 
 image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",align="center"]
 
-[cols="1,6",width="90%",align="center",valign="middle"]
+[cols="2,5",width="90%",align="center",valign="middle"]
 |==========================
 | **Ammo** | Number of units of <<ammo,ammunition>> remaining for the current
 weapon.
@@ -228,7 +228,7 @@ You start the game with only a handgun, 50 bullets and your fists to fall back
 on once they run out. You’ll want to find yourself some better weaponry as
 soon as possible.
 
-[options="header",cols="4,1,7,3,2",valign="middle"]
+[options="header",cols="4,2,5,3,2",valign="middle",width="100%"]
 |==========================
 | Weapon | Key | Description | | Ammo
 | **Fist** | 1 | If you have no ammunition, you can always fall back on punching the
@@ -274,7 +274,7 @@ certain type of ammo, and you should be careful to look out for more ammo as
 you’re exploring.
 
 [[ammo]]
-[options="header",cols="2,1,1",width="50%",align="center",valign="middle"]
+[options="header",cols="2,1,1",width="70%",align="center",valign="middle"]
 |==========================
 | Ammo type | Small | Large
 | **Bullets** |
@@ -304,7 +304,7 @@ You die if your health reaches 0%. You’ll find health bonuses around the
 levels which can restore you back to 100% health; 1% health bonuses can take
 you over 100% and up to 200% health.
 
-[options="header",cols="1,1,1,1",width="50%",align="center",halign="center"]
+[options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 10% | 25% | 100%
 | image:../sprites/bon1a0.png[1% Health Bonus] |
@@ -318,7 +318,7 @@ image:../sprites/soula0.png[Overdrive Sphere]
 
 You start with 0% armor and can increase this up to 200% by collecting bonuses.
 
-[options="header",cols="1,1,1",width="50%",align="center",halign="center"]
+[options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 100% | 200%
 | image:../sprites/bon2a0.png[1% Armor Bonus] |
@@ -384,77 +384,77 @@ The levels are filled with monsters who have no other goal apart from stopping
 you from completing your mission. Here’s a selection of some of these monsters
 who you can expect to encounter.
 
-[frame="none",cols="2,6,2",valign="middle",grid="none",align="center",width="90%"]
+[frame="none",cols="2,6,3",valign="middle",grid="none",align="center",width="100%"]
 |==========================
 | **Zombie** |
 These undead creatures are armed with a pistol and intent on your destruction.
 Drops a clip of bullets when killed. |
-image:images/monster-zombie.png[Zombie,100,100]
+image:images/monster-zombie.png[Zombie,100,100,width=100%]
 | **Shotgun Zombie** |
 These guys traded their pistol for a shotgun and pack far more of a punch.
 Drops a shotgun when killed. |
-image:images/monster-shotgun-zombie.png[Shotgun Zombie,100,100]
+image:images/monster-shotgun-zombie.png[Shotgun Zombie,100,100,width=100%]
 | **Minigun Zombie** |
 As soon as you’re in sight of one of these, he’ll lock on with his minigun and
 keep on firing until you’re dead. It’s best to take cover quickly or take him
 out. Drops a minigun when killed. |
-image:images/monster-minigun-zombie.png[Minigun Zombie,100,100]
+image:images/monster-minigun-zombie.png[Minigun Zombie,100,100,width=100%]
 | **Serpentipede** |
 Serpent footsoldiers of the alien invasion. Let them get close and they’ll
 tear you to shreds; at a distance they’ll instead rain down fireballs. |
-image:images/monster-serpentipede.png[Serpentipede,100,100]
+image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
 | **Flesh Worm** |
 Tough and fast-moving, these worms attack at close range and take several
 shotgun blasts to take down. It’s best to keep back. |
-image:images/monster-flesh-worm.png[Flesh Worm,100,100]
+image:images/monster-flesh-worm.png[Flesh Worm,100,100,width=100%]
 | **Stealth Worm** |
 These flesh worm variants have been given stealth abilities which make them
 practically invisible. |
-image:images/monster-stealth-worm.png[Stealth Worm,100,100]
+image:images/monster-stealth-worm.png[Stealth Worm,100,100,width=100%]
 | **Hatchling** |
 Floating alien larvae which charge from a distance. |
-image:images/monster-hatchling.png[hatchling,100,100]
+image:images/monster-hatchling.png[hatchling,100,100,width=100%]
 | **Matribite** |
 The mother of the Hatchlings will ensure you always have more of her babies
 to deal with. |
-image:images/monster-matribite.png[matribite,100,100]
+image:images/monster-matribite.png[matribite,100,100,width=100%]
 | **Trilobite** |
 These flying orb-like creatures spit fireballs and bite if you get too
 close. |
-image:images/monster-trilobite.png[Trilobite,100,100]
+image:images/monster-trilobite.png[Trilobite,100,100,width=100%]
 | **Pain Bringer** |
 100% muscle, these guys take at least three rocket blasts to take down, and
 while you’re trying they’ll shower you with energy projectiles. |
-image:images/monster-pain-bringer.png[Pain Bringer,100,100]
+image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
 | **Pain Lord** |
 If the Pain Bringer wasn’t tough enough, this one will take five rocket
 blasts. |
-image:images/monster-pain-lord.png[Pain Lord,100,100]
+image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
 | **Dark Soldier** |
 Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
 match with one of these guys. |
-image:images/monster-dark-soldier.png[Dark Soldier,100,100]
+image:images/monster-dark-soldier.png[Dark Soldier,100,100,width=100%]
 | **Necromancer** |
 If he’s not setting you on fire, he’s undoing all your hard work by bringing
 his friends back from the dead. |
-image:images/monster-necromancer.png[Necromancer,100,100]
+image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
 | **Combat Slug** |
 These genetically-engineered super-slugs have been fitted with long distance
 flame throwers, practically making them into living, slithering tanks. |
-image:images/monster-combat-slug.png[Combat Slug,100,100]
+image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 | **Technospider** |
 These spider creatures have been equipped with polaric energy cannons, making
 them a deadly challenge. |
-image:images/monster-technospider.png[Technospider,100,100]
+image:images/monster-technospider.png[Technospider,100,100,width=100%]
 | **Large Technospider** |
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
 of effort to bring down. |
-image:images/monster-large-technospider.png[Large Technospider,100,100]
+image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
 | **Assault Tripod** |
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
 missile launcher that you’ll want to avoid. |
-image:images/monster-assault-tripod.png[Assault Tripod,100,100]
+image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
 |==========================
 
 === Using the map
@@ -469,7 +469,7 @@ image::images/map.png[Map Screenshot,width="640",pdfwidth="70vw",align="center"]
 Your current position and orientation are shown by a white arrow.
 Areas of the map are usually color coded as follows:
 
-[frame="none",cols="1,4",valign="middle",align="center",width="60%"]
+[frame="none",cols="3,8",valign="middle",align="center",width="70%"]
 |==========================
 | **Red** | Walls (or possibly secret doors)
 | **Yellow** | Changes in ceiling height, including doors.
@@ -502,7 +502,7 @@ your current position.
 If the monsters weren’t enough, the environment itself poses hazards which
 can hurt or even kill you!
 
-[frame="none",cols="1,4,2",valign="middle",grid="none"]
+[frame="none",cols="2,5,3",valign="middle",grid="none",width="100%"]
 |==========================
 | **Barrels** |
 These exploding barrels litter many of the levels. Several shots with a pistol
@@ -510,19 +510,19 @@ are usually enough to make them detonate, damaging anything in their immediate
 vicinity. Make sure when engaged in combat to never stand too close, or a stray
 shot from an enemy may cause one to explode in your face! Be aware too of the
 potential for chain reactions when several barrels are clustered together. |
-image:images/hazard-barrels.png[Barrels,150,150]
+image:images/hazard-barrels.png[Barrels,150,150,width=100%]
 | **Damaging Floors** |
 Red-hot lava and radioactive sludge are just two of the types of damaging floor
 you can encounter in Freedoom’s levels. If walking over it is necessary, try to
 find yourself a <<specialitems,hazard suit>>, but be aware that it will only
 protect you for a limited time. |
-image:images/hazard-slime.png[Radioactive slime,150,150]
+image:images/hazard-slime.png[Radioactive slime,150,150,width=100%]
 | **Crushing Ceilings** |
 Many of the levels have been rigged with traps and this is just one of them.
 These moving ceilings are often placed above tempting-looking items. Be very
 careful not to get caught beneath one, or it will quickly crush you into a
 paste! |
-image:images/hazard-crusher.png[Crushing Ceiling,150,150]
+image:images/hazard-crusher.png[Crushing Ceiling,150,150,width=100%]
 |==========================
 
 === Tactical tips
@@ -645,7 +645,7 @@ an <<skill,easier skill level>>. However, if that’s not enough, or if you just
 want to have fun feeling like an unstoppable killing machine, there are a
 number of cheats that you can turn to:
 
-[cols="1,4",width="90%",align="center",valign="middle"]
+[cols="2,4",width="90%",align="center",valign="middle"]
 |==========================
 | **IDDQD** | God mode. Makes you invulnerable to all damage.
 | **IDFA** | Gives all weapons and ammo.
