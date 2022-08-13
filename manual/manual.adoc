@@ -384,7 +384,7 @@ Freedoom's keys are designed to be distinguishable not just by color but
 also by shape, to make the game more accessible to color-blind players.
 Each key color has an associated unique shape:
 
-[cols="1,3",width="50%",align="center",valign="middle"]
+[cols="2,3",width="50%",align="center",valign="middle"]
 |==========================
 | **Key color** | **Shape**
 | Red | Horizontal lines
@@ -397,7 +397,7 @@ icons, the key sprites and on walls indicating keyed doors. For the skull
 keys, pay attention to the direction that the horns point. For example,
 here is how the different key icons appear in the status bar:
 
-image:images/key-icons.png[Key icons]
+image:images/key-icons.png[Key icons,align="center"]
 
 === Enemies
 
