@@ -378,6 +378,27 @@ image:../sprites/pinva0.png[Invulnerability Sphere] |
 Makes you immune to all damage for a limited time.
 |==========================
 
+=== Color blind accessibility
+
+Freedoom's keys are designed to be distinguishable not just by color but
+also by shape, to make the game more accessible to color-blind players.
+Each key color has an associated unique shape:
+
+[cols="1,3",width="50%",align="center",valign="middle"]
+|==========================
+| **Key color** | **Shape**
+| Red | Horizontal lines
+| Yellow | Vertical lines
+| Blue | Cross shape (X)
+|==========================
+
+These shapes are used consistently throughout the game: in the status bar
+icons, the key sprites and on walls indicating keyed doors. For the skull
+keys, pay attention to the direction that the horns point. For example,
+here is how the different key icons appear in the status bar:
+
+image:images/key-icons.png[Key icons]
+
 === Enemies
 
 The levels are filled with monsters who have no other goal apart from stopping
