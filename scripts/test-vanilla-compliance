@@ -1,0 +1,667 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# test-vanilla-compliance - Test for vanilla compliance
+#
+# This tests for vanilla compliance, that for levels specified the lump names,
+# attributes of things, linedefs and sectors are as expected for an ordinary,
+# or vanilla, level.
+#
+# The levels may be specified by passing any number of directories that
+# contain WAD files, or the WAD files themselves.
+#
+# Since this script replaces the now defunct "fix-map-names" that functionality
+# can be accessed via options "-n" (name-only), and "-f" (fix instead of
+# test).
+#
+# The output, which is a bit different than "fix-map-names", is designed to be
+# easy to parse. For example, grep for "^THINGS MAP10" to see errors with
+# things in MAP10. The columns are space separated. The errors or fixes are
+# listed after "ERRORS:" and "FIXES:" respectively.
+#
+# Normally this script is invoked by "make":
+#   make test           # Test all of the levels
+#   make test-map-names # Test only the map names (first zero byte lump)
+#   make fix            # Fix all fixable errors in all levels
+#   make fix-map-names  # Fix only the map names (first zero byte lump)
+
+# Imports
+
+import argparse
+import os
+import re
+import struct
+import sys
+
+# Globals. Alphabetical.
+
+# Command line arguments.
+args = {}
+
+# A type that is harmless / invisible to be deleted later. This is the Doom
+# Builder camera.
+benign_type = 32000 # Doom Builder camera
+
+# The Doom version. 0 for unknown, 1 for Doom 1 and 2 for Doom 2.
+doom_version = 0
+
+# The WAD file currently being processed.
+current_wad = ""
+
+# The directory count read from the header.
+dir_count = 0
+
+# The following option_* variables can be used to turn on additional checks for
+# a stricter vanilla, but they are not required for Freedoom.
+
+# If true then test that only the lower 9 bits of linedef flags are set.
+option_linedef_flags = False
+
+# If true then test that the angle is a multiple of 45 degrees.
+option_thing_angle = False
+
+# If true then test that only the lower 5 bits of spawn flags are set.
+option_thing_spawn_flags = False
+
+# Convert from Freedoom 1 names to Doom 1 names. This isn't needed for modern
+# Freedoom, but it allows this script to work on older Freedoom.
+freedoom_1_re = re.compile(r"^C(\d)M(\d)$")
+
+# Convert from Freedoom death map (dm*.wad) names to Doom 2 names.
+freedoom_dm_re = re.compile(r"^DM(\d\d)$")
+
+# Test WAD files that are to be ignored.
+ignored_wads = set(["dummy.wad", "test_levels.wad"])
+
+# Whether the current map is allowed to have secret exits (whether it is listed
+# in may_have_secret_exit).
+is_may_have_secret_exit = False
+
+# A regular expression that matches name lumps (the first zero byte lump such
+# as "E1M1" or "MAP01").
+map_name_re = re.compile(r"^((E\dM\d)|(MAP\d\d))$")
+
+# The number of WADs that have been processed. This should be the total number
+# of WADs specified minus the ignored_wads.
+processed_wad_count = 0
+
+# Keeps track of whether the header for the map name and WAD combination has
+# been shown.
+region_header_shown = {}
+
+# Information per region. A region is a contiguous portion of the WAD file
+# with some repeating structure. Usually it's a lump, but it can also be the
+# directory.
+region_info = {"THINGS"    : ("<2h3H",
+                              ("X", "Y", "Angle", "Type", "SFs"),
+                              "%5d %5d %5d %5d %5d"),
+               "LINEDEFS"  : ("<7H",
+                              ("BVert", "EVert", "Flags", "LineT", "STag",
+                                 "RSDef", "LSDef"),
+                              "%5d %5d %5d %5d %5d %5d %5d"),
+               "SECTORS"   : ("<2h8s8sh2H",
+                              ("FHght", "CHght", "FText", "CText", "Light",
+                                 "Type", "Tag"),
+                              "%5d %5d %8s %8s %5d %5d %5d"),
+                "directory": ("<2i8s",
+                              ("Offset", "Size", "Name"),
+                             "%8d %8d %8s")}
+
+# The standard lump names, in order, as they are to appear in vanilla PWAD
+# level files that don't contain extra resources (textures, etc.). This assumes
+# a node builder has been used.
+standard_lump_names = ("<map name>", "THINGS", "LINEDEFS", "SIDEDEFS",
+               "VERTEXES", "SEGS", "SSECTORS", "NODES", "SECTORS", "REJECT",
+               "BLOCKMAP")
+
+# The expected number of lumps.
+standard_lump_names_len = len(standard_lump_names)
+
+# Used to phrase message correctly. Future is used for test mode, and past for
+# fix mode.
+tense = ""
+
+# The total number of errors or fixes returned by do_* methods.
+total_do_count = 0
+
+# A count of unexpected errors. These are errors other than what this script
+# intends to check for, such as the file not being readable. These errors
+# suggest that something is fundamentally wrong, and that the results should
+# not be trusted.
+unexpected_count = 0
+
+# Maps that can have secret exits. A secret exit in maps other than these is
+# an error.
+may_have_secret_exit = { "E1M3", "E2M5", "E3M6", "E4M2", "MAP15", "MAP31" }
+
+# Number of WADs that had errors or fixes seen as indicated by the do_* methods.
+wad_error_fix_count = 0
+
+# Things. Specifies what is allowed for things.
+
+# Allowed values for Ultimate Doom (Doom 1 in doom.wad) from this list of
+# editor numbers. See
+#   https://zdoom.org/wiki/Standard_editor_numbers
+allowed_things_doom = {
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+    60, 61, 62, 63, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010, 2011,
+    2012, 2013, 2014, 2015, 2018, 2019, 2022, 2023, 2024, 2025, 2026, 2028,
+    2035, 2045, 2046, 2047, 2048, 2049, 3001, 3002, 3003, 3004, 3005, 3006 }
+
+# Doom 2 editor numbers are Doom 1 (the above) with additional Doom 2 monsters.
+allowed_things_doom2 = allowed_things_doom.union(set(range(64, 90)))
+
+# Allowed things as a function of the doom version.
+allowed_things_all = { 1: allowed_things_doom, 2: allowed_things_doom2 }
+
+# A reference to the current allowed things in allowed_things_all. It's set
+# with each map change.
+allowed_things = None
+
+# A mask of the allowed spawn flag bits. See
+#   https://zdoom.org/wiki/Thing#Spawn_flags
+allowed_things_spawn_flags = 0x1f  # [0, 32)
+
+# Linedefs. Specifies what is allowed for linedefs.
+
+# A mask of the allowed linedef flag bits. See
+#   https://zdoom.org/wiki/Linedef#Linedef_flags
+allowed_linedefs_flags = 0x1ff     # [0, 512)
+
+# The allowed linedef types. This is the "Reg", meaning regular, linedef types
+# taken from this documentation:
+#   https://soulsphere.org/projects/boomref/boomref.txt
+allowed_linedefs_types = set(range(142)) # Exclude 78?
+
+# The subset of allowed_linedefs_types that leads to secret maps.
+allowed_linedefs_types_to_secret = { 51, 124 }
+
+# Sectors. Specifies what is allowed for sectors.
+
+# The allowed sector types. See
+#   https://doomwiki.org/wiki/Sector#Doom
+allowed_sectors_types = { 0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17 }
+
+# Classes
+
+# The error exception class for this script.
+class TestException(Exception):
+    pass
+
+# Functions. Alphabetical.
+
+# The following do_* methods take action (test or fix). For them the term "region"
+# means a contiguous set of bytes in a WAD file that consists of some structure,
+# and "item" means one instance of that repeated structure.
+
+# Process a directory item.
+def do_directory(messages, number, offset, size, name):
+    # We don't have an expectation for lump names for IWADs. For --name-only
+    # only process the first lump (the name lump at number == 0).
+    first_lump_only = args.name_only or args.fix
+    if (not args.iwad) and ((not first_lump_only) or (number == 0)):
+        fix_name = get_expected_lump_name(number)
+        if fix_name and (name != fix_name):
+            orig_name = name
+            if number == 0:
+                fixable = ", but " + tense + " fixed with " + fix_name
+                if args.fix:
+                    name = fix_name
+                allowed = " is not allowed"
+            else:
+                fixable = " and can not be fixed"
+                allowed = " is at the wrong index" if name in standard_lump_names \
+                    else " is not allowed"
+            messages.append("Lump name %s%s%s." % (orig_name, allowed, fixable))
+        # It's not clear where to put this error message that concerns the
+        # entire directory (not just one entry), so add it to the first entry.
+        if (not first_lump_only) and (number == 0) and (
+            dir_count != standard_lump_names_len):
+                messages.append("Expected %d lumps, but found %d lumps." % (
+                    standard_lump_names_len, dir_count))
+
+    return (offset, size, name)
+
+
+# Process a LINEDEFS item.
+def do_linedef(messages, number, bvert, evert, flags, linet, stag, rsdef, lsdef):
+    # Flag bit 0 through 8 are allowed.
+    if option_linedef_flags:
+        fix_flags = allowed_linedefs_flags & flags
+        if flags != fix_flags:
+            messages.append("Flags %d is not allowed, but %s fixed with %d." % (
+              flags, tense, fix_flags))
+            if args.fix:
+                flags = fix_flags
+
+    # There's no obvious automated way of fixing line types.
+    if (linet not in allowed_linedefs_types) and not args.fix:
+        messages.append("Type %s is not allowed and can not be fixed." % linet)
+
+    # Only allow secret exits on the correct maps since that behavior is hard
+    # coded in the engine. A possible fix would be to map to the equivalent
+    # non-secret exit type, but it's probably better to evaluate it and replace
+    # it in order to avoid multiple exits.
+    if (linet in allowed_linedefs_types_to_secret) and not is_may_have_secret_exit:
+        messages.append("Type %s is a secret exit, but secret exits are only "
+            "allowed on maps %s. Not fixable." % (
+                linet, may_have_secret_exit))
+
+    return (bvert, evert, flags, linet, stag, rsdef, lsdef)
+
+
+# Process (do) a region. A region can be either a lump, or some other non-lump
+# array of structures (the directory). Note that unlike the other do_*
+# methods this method process the entire region, not just one item in it.
+def do_region(region_name, map_name, wad, fhand, lump_offset, lump_size):
+    info = region_info.get(region_name)
+    if info is None:
+        # Nothing is supported for this region type.
+        return 0
+    old_pos = fhand.tell()
+    fhand.seek(lump_offset)
+    unpack_format, field_names_part, row_format_part, do_item = info
+    unpack_size = struct.calcsize(unpack_format)
+    field_names = ("Region", "Map", "Num") + field_names_part + (
+        " Fixes" if args.fix else " Errors",)
+    row_format = "%" + str(len(region_name)) + "s %5s %5d " + \
+        row_format_part + "%s"
+    header_format = row_format.replace("d", "s")
+    header = header_format % field_names
+
+    count = 0 # Count of errors or fixes.
+    offset = 0
+    num = 0
+    first = len(region_header_shown) == 0
+    while offset < lump_size:
+        bytes = fhand.read(unpack_size)
+        fields = wad_unpack(unpack_format, bytes)
+        messages = []
+        fields = do_item(messages, num, *fields)
+        if args.fix and len(messages) > 0:
+            fhand.seek(fhand.tell() - unpack_size)
+            bytes = wad_pack(unpack_format, *fields)
+            fhand.write(bytes)
+        if args.verbose or len(messages) > 0:
+            if region_name not in region_header_shown:
+                region_header_shown[region_name] = set()
+            shown = region_header_shown[region_name]
+            if wad not in shown:
+                if not first:
+                    print("")
+                print("Process %s for %s in %s" % (region_name, map_name, wad))
+                print(header)
+                shown.add(wad)
+            row = (region_name, map_name, num) + fields + (
+                get_combined_message(messages),)
+            print(row_format % row)
+            count += len(messages)
+        offset += unpack_size
+        num += 1
+    fhand.seek(old_pos)
+    return count
+
+
+# Process a SECTORS item.
+def do_sector(messages, number, fhght, chght, ftext, ctext, light, typ, tag):
+    # There's no obvious automated way of fixing sector types.
+    if (typ not in allowed_sectors_types) and not args.fix:
+        messages.append("Type %s is not allowed and can not be fixed." % typ)
+
+    return (fhght, chght, ftext, ctext, light, typ, tag)
+
+
+# Process a THINGS item.
+def do_thing(messages, number, x, y, angle, typ, spawn_flags):
+    # In the following sections each check one field within the thing. They are
+    # in file order.
+
+    # Make sure that the angle is in range [0, 360) and that it is a
+    # multiple of 45. The "//" rounds down, so the " + 22" makes it round
+    # off to the nearing multiple of 45. The "% 360" gets it to range [0, 360).
+    if option_thing_angle:
+        fix_angle = (45 * ((angle + 22) // 45)) % 360
+        if angle != fix_angle:
+            messages.append("Angle %d is not allowed, but %s fixed with %d." % (
+                angle, tense, fix_angle))
+            if args.fix:
+                angle = fix_angle
+
+    # Make sure the thing type is allowed for the Doom version.
+    if typ not in allowed_things:
+        prefix = "Type %d is not allowed for Doom %s, but " % (
+            typ, doom_version)
+        if typ == benign_type:
+            # Don't fix if already benign.
+            if not args.fix:
+                messages.append("%sis already the benign type, so it will not "
+                    "be fixed." % prefix)
+        else:
+            messages.append("%s%s fixed with begin type %d." % (
+                prefix, tense, benign_type))
+        if args.fix:
+            # This seems to be a benign and non-visible type, so it's not a full
+            # fix (since proper deleting is hard) but this makes it easier to
+            # find all the offending things by searching for one type.
+            # (benign_type).
+            typ = benign_type
+
+    # Make sure the spawn flags limited to the lowest 5 bits.
+    if option_thing_spawn_flags:
+        fix_spawn_flags = 0x1f & spawn_flags
+        if spawn_flags != fix_spawn_flags:
+            messages.append("Spawn flags %d is not allowed, but %s fixed with "
+                "%d." % (spawn_flags, tense, fix_spawn_flags))
+            if args.fix:
+                spawn_flags = fix_spawn_flags
+
+    return (x, y, angle, typ, spawn_flags)
+
+
+# Combine a list of messages by comma separating them, and and then prefixing
+# with " ERRORS: " or " FIXES: " depending on the mode.
+def get_combined_message(messages):
+    if len(messages) == 0:
+        return ""
+    return (" FIXES: " if args.fix else " ERRORS: " ) + ", ".join(messages)
+
+
+# Get the doom version. 1 for Doom 1 or 2 for Doom 2
+def get_doom_version(map_name):
+    return 2 if map_name.startswith("MAP") else 1
+
+
+# Get the expected lump name at a specified index.
+def get_expected_lump_name(index):
+    if index == 0:
+        # Strip of the directory, upper case, remove ".wad".
+        name = os.path.basename(current_wad).upper()
+        if name.endswith(".WAD"):
+            name = name[:-4]
+
+        # For IWADS guess that the first name should be the first map.
+        if args.iwad and ("DOOM" in name):
+            return "MAP01" if ("2" in name) else "E1M1"
+
+        # Convert from Freedoom name to Doom names.
+        name = freedoom_1_re.sub(r"E\1M\2", name)
+        name = freedoom_dm_re.sub(r"MAP\1", name)
+
+        if map_name_re.match(name):
+            return name
+        else:
+            return None
+    elif index < standard_lump_names_len:
+        return standard_lump_names[index]
+    else:
+        return None
+
+
+# Update globals that depend on the map name. This is called for each map
+# change.
+def handle_map_change(map_name):
+    global doom_version
+    global allowed_things
+    global is_may_have_secret_exit
+
+    new_doom_version = get_doom_version(map_name)
+    if new_doom_version != doom_version:
+        doom_version = new_doom_version
+        allowed_things = allowed_things_all[doom_version]
+    is_may_have_secret_exit = map_name in may_have_secret_exit
+
+
+# Initialization that can't be done in global variables.
+def init():
+    global tense
+
+    # This is done here beacuse the function names are not yet visible in the
+    # global variables.
+    region_info["THINGS"]    += (do_thing,)
+    region_info["LINEDEFS"]  += (do_linedef,)
+    region_info["SECTORS"]   += (do_sector,)
+    region_info["directory"] += (do_directory,)
+
+    # Tense as in "was" for the past and "can be" for the future.
+    tense = "was" if args.fix else "can be"
+
+    # It's fine if this is incorrect for Doom 1. It will be overridden when
+    # the first map is seen.
+    handle_map_change("MAP01")
+
+# Main enty point.
+def main():
+    parse_args()
+    init()
+    process_paths()
+    summarize()
+
+
+# Parse the command line arguments and store the result in 'args'.
+def parse_args():
+    global args
+
+    parser = argparse.ArgumentParser(
+        description="Fix map names in WAD files.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+    # The following is sorted by long argument.
+
+    parser.add_argument(
+        "-f",
+        "--fix",
+        action="store_true",
+        help="Fix. Fix a subset of the errors.")
+    parser.add_argument(
+        "-l",
+        "--follow-symlinks",
+        action="store_true",
+        help="Follow symbolic links (dangerous).")
+    parser.add_argument(
+        "-i",
+        "--iwad",
+        action="store_true",
+        help="IWAD. Allow processing of IWADs in addition to PWADs. This is " +
+            "mostly for internal use. When combined with verbose (-v) it can " +
+            "be used to generate lists of allowed values.")
+    parser.add_argument(
+        "-n",
+        "--name-only",
+        action="store_true",
+        help="Only consider the map name (first lump), and nothing else.")
+    parser.add_argument(
+        "-r",
+        "--recursive",
+        action="store_true",
+        help="Recurse into sub-directories.")
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Verbose. Output every item processed.")
+    parser.add_argument(
+        "paths",
+        metavar="PATH",
+        nargs="+",
+        help="WAD paths, files and directories.")
+
+    args = parser.parse_args()
+
+    return args
+
+
+# Process path 'path' which is at depth 'depth'. If 'depth' is 0 then this is
+# a top level path passed in on the command line.
+def process_path(path, depth):
+    global current_wad
+
+    if os.path.islink(path) and not args.follow_symlinks:
+        # Symlink. Avoid following by default in case it points somewhere it
+        # shouldn't.
+        print("Ignoring symlink \"%s\". Use -l to follow symlinks." % path)
+    elif os.path.isdir(path):
+        # Directory. If not recursive then only consider this directory if it
+        # was specified explicitly.
+        if args.recursive or not depth:
+            path_list = os.listdir(path)
+            path_list.sort()
+            for base in path_list:
+                process_path(os.path.join(path, base), depth + 1)
+    else:
+        # File. Only process WAD files that were specified explicitly
+        # (depth 0), or that have the expected suffix.
+        if (not depth) or path.lower().endswith(".wad"):
+            current_wad = path
+            process_wad(path)
+
+
+# Process the paths passed in on the command line.
+def process_paths():
+    for path in args.paths:
+        process_path(path, 0)
+
+
+# Process WAD path 'wad'.
+def process_wad(wad):
+    global wad_error_fix_count
+    global dir_count
+    global processed_wad_count
+    global total_do_count
+    global unexpected_count
+
+    if os.path.basename(wad).lower() in ignored_wads:
+        # A known WAD that should not be processed.
+        return
+
+    # This is after the above since it is only a count of WADs that were
+    # processed.
+    processed_wad_count += 1
+
+    try:
+        wad_do_count = 0 # The number of errors or fixes.
+        map_name = "???" # Used for logging. May be "???" for IWADs.
+        with open(wad, "r+b" if args.fix else "rb") as fhand:
+            magic, dir_count, dir_offset = wad_unpack("<4s2i",
+                fhand.read(12))
+            is_iwad = magic == "IWAD"
+            if not (magic == "PWAD" or (args.iwad and is_iwad)):
+                raise TestException("Not an allowed Doom file header magic. "
+                                    "magic=" + magic)
+            # Directory at offset 0x8 in the header.
+            fhand.seek(dir_offset)
+
+            lump_index = 0 # zero based
+            # Process the lumps. For --name-only only the first lump needs to
+            # be processed in order to get the map name.
+            if args.name_only:
+                lump_index_limit = 1
+            else:
+                lump_index_limit = dir_count
+            while lump_index < lump_index_limit:
+                # The first lump in the directory, which should be the 0 byte map
+                # name one.
+                lump_offset, lump_size, lump_name = wad_unpack("<2i8s",
+                    fhand.read(16))
+
+                # Get the map name both so that the Doom version can be
+                # determined, and for logging.
+                if is_iwad:
+                    # Limited error checking, and no fixing, for IWADs.
+                    name_lump = map_name_re.match(lump_name)
+                else:
+                    # A particular order and sizes are expected for levels.
+                    name_lump = lump_index == 0
+                if name_lump:
+                    map_name = lump_name
+
+                # This tells us what items are allowed.
+                if name_lump and not args.name_only:
+                    handle_map_change(map_name)
+
+                # Verify the contents of lumps.
+                wad_do_count += do_region(lump_name, map_name, wad, fhand,
+                                          lump_offset, lump_size)
+
+                lump_index += 1
+
+            # Consider the directory, which is traditionally after all of the
+            # lumps, now that the lumps have been processed. "16" is the size
+            # of each directory entry.
+            wad_do_count += do_region("directory", map_name, wad, fhand,
+                                      dir_offset, dir_count * 16)
+
+    except IOError as err:
+        # Probably the WAD file couldn't be open for read (test) or read and
+        # write (default).
+        print("Unable to open for read%s: %s: " % (
+            " and write" if args.fix else "", err))
+        unexpected_count += 1
+    except struct.error as err:
+        # This is probably the reason since seek silently succeeds even when
+        # the location is not possible, but then unpack fails due to the short
+        # read.
+        print("WAD file %s is too small: %s" % (wad, err))
+        unexpected_count += 1
+    except TestException as err:
+        print(str(err))
+        unexpected_count += 1
+
+    if wad_do_count > 0 or args.verbose:
+        print("\nFilename for map %s in the above is %s. It has %d %s" % (
+            map_name, wad, wad_do_count, "fixes." if args.fix else "errors."))
+        if wad_do_count > 0:
+            total_do_count += wad_do_count
+            wad_error_fix_count += 1
+
+
+# Summarize what happened, and then exit with the appropriate exit code.
+def summarize():
+    no_fixes = "did not have fixable errors" if args.fix else "were correct"
+    end = "fixes." if args.fix else "errors."
+    if wad_error_fix_count == 0:
+        # A bit confusing in the fix case since only fixes that can
+        # actually be done are counted, but hopefully people will figure it out.
+        print("\nAll %d WADs %s. There are no %s" % (
+            processed_wad_count, no_fixes, end))
+    else:
+        print("\n%d of %d WAD files have %s There are a total of %d %s" % (
+            wad_error_fix_count, processed_wad_count, end, total_do_count, end))
+    if unexpected_count > 0:
+        print("There were %d unexpected errors, so the result may not be "
+            "valid." % unexpected_count)
+    sys.exit(1 if (unexpected_count or (total_do_count and not args.fix)) else 0)
+
+
+# A version of wad_pack() suitable for WAD files. Convert strings to bytes
+# before packing.
+def wad_pack(format, *fields):
+    if "s" in format:
+        new_fields = []
+        for field in fields:
+            new_fields.append(field.encode("UTF-8") if type(field) == str else field)
+    else:
+        new_fields = fields
+    return struct.pack(format, *new_fields)
+
+
+# A version of wad_unpack() suitable for WAD files. Convert strings to UTF-8
+# (superset of ASCII), and strip off any trailing nulls.
+def wad_unpack(format, buffer):
+    raw_fields = struct.unpack(format, buffer)
+    if "s" in format:
+        fields = []
+        for field in raw_fields:
+            # Split by null and take the first non-null result in order to
+            # strip trailing nulls.
+            fields.append(field.decode("UTF-8").partition("\0")[0]
+                if type(field) == bytes else field)
+        return tuple(fields)
+    else:
+        return raw_fields
+
+
+# So that this script may be accessed as a module.
+if __name__ == "__main__":
+    main()
