@@ -237,3 +237,13 @@ version control systems, adopted by projects such as Linux and Git.
 For an explanation of this style, see
 https://chris.beams.io/posts/git-commit/[How to Write a Git Commit
 Message].
+
+If you create a git commit for someone else it is helpful to set the
+author of the commit so that they get credit. Ask them what name/alias
+and email they would like to use. For example:
+[source,bash]
+-----------------
+git commit --author "Bob Smith <bob@example.com>" ...
+-----------------
+If they prefer not to give an email then the email can be omitted, so
+just "Bob Smith" in the above example.
