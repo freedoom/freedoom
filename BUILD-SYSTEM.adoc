@@ -265,5 +265,5 @@ ZenNode when it's not in the path and to rebuild only the first
 episode of Freedoom 1 as well all of the deathmatch levels:
 [source,bash]
 -----------------
-make NODE_BUILDER=/opt/zennode/ZenNode NODE_BUILDER_LEVELS="c1m? dm??" rebuild-nodes
+make NODE_BUILDER=/opt/zennode/ZenNode NODE_BUILDER_LEVELS="e1m? dm??" rebuild-nodes
 -----------------

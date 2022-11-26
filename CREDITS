@@ -384,9 +384,9 @@ D: sprites
 
 N: Simon Howard
 S: fraggle
-E: idgames@soulsphere.org
+E: fraggle@soulsphere.org
 W: https://soulsphere.org
-D: project admin, scripting and build system, textures, sprites
+D: project admin, scripting, build system, textures, sprites, graphics, lumps, manual, patches
 
 N: Joe Dowland
 E: jon+joefreedoom@alcopop.org
@@ -820,7 +820,7 @@ D: sprites: Zombieman/Shotgunners boots update
 
 S: Korp
 E: korpkat@gmail.com
-D: Sprites, Textures and Musics
+D: Sprites, Textures, Musics, buildcfg.txt, patches
 
 S: ajanddino
 N: Anthony Pierce
@@ -831,4 +831,91 @@ N: Jaden LeMieux
 S: i"Red"MC
 E: jadenquinn8@hotmail.com
 D: Map balancing fixes, C3M4
+
+S: /dev/urandom
+E: dev.urandom@posteo.org
+D: graphics, patches, sprites
+
+S: AerialB
+D: COPYING.adoc
+
+S: basedSkeleton
+D: sprites
+
+S: boogiebogus
+D: buildcfg.txt, sprites
+
+S: Chexter
+D: patches
+
+S: ConsumingCritic
+D: levels
+
+S: Eonfge
+E: contact@kevindegeling.nl
+D: dist
+
+N: Erick Tenorio
+S: guynamederick
+E: guynamederick@gmail.com
+D: levels, lumps, sounds
+
+N: Fabian Greffrath
+E: fabian@greffrath.com
+D: buildcfg.txt, graphics
+
+S: HorroMovieGuy
+D: buildcfg.txt, lumps, manual, sounds, sprites
+
+N: Hugo Locurcio
+E: hugo.locurcio@hugo.pro
+D: dist
+
+N: Jason Yundt
+E: swagfortress@gmail.com
+D: levels
+
+S: kitchen-ace
+E: 68k@quikphix.org
+D: levels, patches
+
+S: Korp
+E: korpkat@gmail.com
+D: buildcfg.txt, musics, patches, sprites
+
+S: m
+E: mchan223@shaw.ca
+D: buildcfg.txt, sounds, sprites
+
+S: mkrupczak3
+E: matthew@krupczak.org
+D: manual
+
+S: Mortrixs19
+D: levels
+
+N: Nicholas Zatkovich
+S: NickZ
+E: nzatkovich@gmail.com
+D: .github, levels
+
+S: ObsidainPlague
+D: musics
+
+N: Perry Fraser
+S: perry
+E: me@pprogs.blog
+D: levels
+
+S: shino1
+E: nobody.shinobi@gmail.com
+D: buildcfg.txt, sprites
+
+N: Steven Elliott
+E: selliott512@gmail.com
+D: buildcfg.txt, BUILD-SYSTEM.adoc, levels, Makefile, README.adoc, scripts, sprites
+
+N: Tyler True
+D: Makefile
+
 =======
