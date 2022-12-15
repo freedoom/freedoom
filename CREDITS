@@ -644,11 +644,6 @@ E: eriance@gmail.com
 W: http://amuscaria.deviantart.com/
 D: sprites
 
-S: horrormovieguy
-N: Reinaldo
-E: crumbscrunchydelights@gmail.com
-D: sprites, flats
-
 S: zrrion
 N: Roth Smith
 E: zrrion@gmail.com
@@ -803,8 +798,8 @@ D: c3m5
 
 S: GooseJelly
 N: Nathaniel Patasky
-E: n.patasky
-D: map26
+E: n.patasky@gmail.com
+D: buildcfg.txt, CREDITS, levels
 
 S: Craneo
 E: memod_99@hotmail.com
@@ -864,8 +859,10 @@ N: Fabian Greffrath
 E: fabian@greffrath.com
 D: buildcfg.txt, graphics
 
-S: HorroMovieGuy
-D: buildcfg.txt, lumps, manual, sounds, sprites
+S: Rei
+N: Reinaldo
+E: crumbscrunchydelights@gmail.com
+D: buildcfg.txt, lumps, manual, sounds, sprites, flats
 
 N: Hugo Locurcio
 E: hugo.locurcio@hugo.pro
@@ -913,5 +910,42 @@ D: buildcfg.txt, BUILD-SYSTEM.adoc, levels, Makefile, README.adoc, scripts, spri
 
 N: Tyler True
 D: Makefile
+
+S: BeachThunder
+D: levels
+
+N: Clayton Sobrino
+E: ClaytonSobrino@yahoo.com
+D: patches
+
+N: Colton G. Rushton
+E: colton51919@gmail.com
+D: lumps
+
+S: drbugbait
+E: arlesschill@hotmail.com
+D: lumps
+
+S: igdegoo
+D: COPYING.adoc, lumps, musics
+
+S: inkoalawetrust
+D: levels
+
+S: MissLav
+D: patches
+
+S: unfa
+E: unfa00@gmail.com
+D: sounds
+
+N: William Breathitt Gray
+E: vilhelm.gray@gmail.com
+D: dist
+
+S: DOGB01
+D: levels
+
+S: arborix
 
 =======
