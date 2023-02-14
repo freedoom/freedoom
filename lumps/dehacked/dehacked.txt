@@ -564,7 +564,7 @@ C5TEXT = You step onto the machine and\n\
          You silently bring out\n\
          your gun, ready to kill.
 # Before MAP32 (secret level #2):
-C6TEXT = The world dissipitates around you.\n\
+C6TEXT = The world dissipates around you.\n\
          As the glow of the teleporter\n\
          subsides, a sinking feeling sets in\n\
          that you may have made a wrong turn.\n\n\
