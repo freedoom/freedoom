@@ -853,11 +853,11 @@ D: dist
 N: Erick Tenorio
 S: guynamederick
 E: guynamederick@gmail.com
-D: levels, lumps, sounds
+D: graphics, levels, lumps, sounds, sprites
 
 N: Fabian Greffrath
 E: fabian@greffrath.com
-D: buildcfg.txt, graphics
+D: buildcfg.txt, graphics, levels, lumps
 
 S: Rei
 N: Reinaldo
@@ -866,7 +866,7 @@ D: buildcfg.txt, lumps, manual, sounds, sprites, flats
 
 N: Hugo Locurcio
 E: hugo.locurcio@hugo.pro
-D: dist
+D: buildcfg.txt, dist, manual
 
 N: Jason Yundt
 E: swagfortress@gmail.com
@@ -890,7 +890,7 @@ D: levels
 N: Nicholas Zatkovich
 S: NickZ
 E: nzatkovich@gmail.com
-D: .github, levels
+D: buildcfg.txt, COMPILING.adoc, CREDITS, .gitattributes, .github, .gitignore, graphics, levels, lumps, patches, scripts, sprites
 
 S: ObsidainPlague
 D: musics
@@ -947,5 +947,6 @@ S: DOGB01
 D: levels
 
 S: arborix
+D: sprites
 
 =======
