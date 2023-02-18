@@ -439,19 +439,17 @@ E2TEXT = The massive brutes collapse onto the\n\
          You board the platform and fade away.\n\
          Next stop: Horizon.
 E3TEXT = The abomination explodes into oblivion.\n\
-         You, however, remain trapped in Horizon -\n\
-         a place even worse than the outpost in\n\
-         which you were rotting away for years.\n\n\
-         You soon find another high-powered\n\
+         You, however, remain trapped on Horizon -\n\
+         a world far worse than the one you were\n\
+         rotting away on in that outpost for years.\n\n\
+         You soon find another high-powered AGM\n\
          teleporter, this one set for a place\n\
-         called "Double Impact." You can find\n\
-         no data on this facility, but AGM\n\
-         can't rely on teleporters forever -\n\
+         called "Double Impact." There is nothing\n\
+         in your database under this name, but\n\
+         they can't rely on teleporters forever -\n\
          you're bound to find a functioning ship.\n\n\
-         You drop your gear and get on the pad.\n\n\
-         It turns out all these names\n\
-         don't refer to facilities,\n\
-         but entire new worlds...
+         You drop your gear and get on the pad,\n\
+         reintegrating on yet another new world...\n\
 E4TEXT = After yet another army of monsters\n\
          you manage to find a functioning ship.\n\
          Looks like freedom is yours.\n\n\
