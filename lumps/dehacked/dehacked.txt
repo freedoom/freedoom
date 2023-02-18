@@ -443,9 +443,9 @@ E3TEXT = The abomination explodes into oblivion.\n\
          a world far worse than the one you were\n\
          rotting away on in that outpost for years.\n\n\
          You soon find another high-powered AGM\n\
-         teleporter, this one set for a place\n\
-         called "Double Impact." There is nothing\n\
-         in your database under this name, but\n\
+         teleporter, this one set for a place called\n\
+         "Double Impact." There is nothing in the\n\
+         archives you've read under this name, but\n\
          they can't rely on teleporters forever -\n\
          you're bound to find a functioning ship.\n\n\
          You drop your gear and get on the pad,\n\
