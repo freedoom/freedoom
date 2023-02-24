@@ -411,9 +411,6 @@ NIGHTMARE = This is the highest skill level.\n\
             Not recommended unless you're experienced.\n\n\
             (Press Y to confirm)
 # End-of-episode texts, now with a consistent story. Feel free to edit them.
-E1TEXT = Breaking free of that dreadful outpost\n\
-         still leaves you stuck on this rock,\n\
-
 E1TEXT = Free at last from that dreadful outpost!\n\
          But you're still stuck on this rock, with\n\
          AGM and all their monstrous "experiments."\n\
