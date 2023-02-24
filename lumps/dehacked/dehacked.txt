@@ -427,10 +427,10 @@ E1TEXT = Free at last from that dreadful outpost!\n\
          to raid the Military Labs.
 E2TEXT = The massive brutes collapse onto the\n\
          ground, falling apart bit by bit.\n\
-         You may now enter the... star... port?\n\n\
-         Where a ship should have been now sits\n\
-         a single enormous teleporter machine,\n\
-         permanently set to one destination.\n\n\
+         The starport is yours.\n\n\
+         But where is the ship? In the launch bay\n\
+         you find only one enormous teleporter.\n\
+         Limited inorganics. Fixed destination.\n\n\
          You've never heard of this "Horizon."\n\n\
          Probably another AGM outpost, which means\n\
          you should be able to find a ship on the\n\
@@ -442,7 +442,7 @@ E3TEXT = The abomination explodes into oblivion.\n\
          You, however, remain trapped on Horizon -\n\
          a world even worse than the one that saw\n\
          you rotting away in a cage for years.\n\n\
-         Deep beneath the monster's lair is a second\n\
+         Deep beneath the monster's lair is another\n\
          interplanetary teleporter, this time set\n\
          for a place unhelpfully described only as\n\
          "Double Impact." There's nothing in any AGM\n\
