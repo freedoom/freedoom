@@ -412,44 +412,48 @@ NIGHTMARE = This is the highest skill level.\n\
             (Press Y to confirm)
 # End-of-episode texts, now with a consistent story. Feel free to edit them.
 E1TEXT = Breaking free of that dreadful outpost\n\
-         still leaves you stuck on this rock\n\
-         with AGM and all their "experiments."\n\
-         But what monstrosity might they have\n\
-         made of you if you had not escaped?\n\n\
+         still leaves you stuck on this rock,\n\
+
+E1TEXT = Free at last from that dreadful outpost!\n\
+         But you're still stuck on this rock, with\n\
+         AGM and all their monstrous "experiments."\n\
+         Best not to dwell on what horrors they\n\
+         might have had in mind to make out of you.\n\n\
          You need a functioning starship to\n\
          get back to Earth. The best chance at\n\
-         one is the facility where they kept you\n\
+         one is the facility they had you in\n\
          when they first brought you planetside.\n\
          When they first gave you your powers.\n\n\
-         When the nightmare began.\n\n\
+         When the nightmare had first begun...\n\n\
          Perfect time for the teleporter to\n\
          glitch out your gear as you get ready\n\
          to raid the Military Labs.
 E2TEXT = The massive brutes collapse onto the\n\
          ground, falling apart bit by bit.\n\
          But what happened to the starport?\n\n\
-         Inside the former launch bay now sits an\n\
-         enormous lone teleporter. You have no way\n\
-         to change its current destination.\n\n\
+         Inside the former launch bay now sits\n\
+         a single enormous teleporter machine,\n\
+         permanently set to one destination.\n\n\
          You've never heard of this "Horizon."\n\n\
-         Most likely another AGM facility, which\n\
-         means you might find a working ship on the\n\
+         Probably another AGM outpost, which means\n\
+         you should be able to find a ship on the\n\
          other side. Which means you've got a plan -\n\
          not a good plan, but as good as it gets.\n\n\
          You board the platform and fade away.\n\
          Next stop: Horizon.
 E3TEXT = The abomination explodes into oblivion.\n\
          You, however, remain trapped on Horizon -\n\
-         a world far worse than the one you were\n\
-         rotting away on in that outpost for years.\n\n\
-         You soon find another high-powered AGM\n\
-         teleporter, this one set for a place called\n\
-         "Double Impact." There is nothing in the\n\
-         archives you've read under this name, but\n\
-         they can't rely on teleporters forever -\n\
-         you're bound to find a functioning ship.\n\n\
+         a world even worse than the one that saw\n\
+         you rotting away in a cage for years.\n\n\
+         Deep beneath the monster's lair is a second\n\
+         interplanetary teleporter, this time set\n\
+         for a place unhelpfully described only as\n\
+         "Double Impact." There's nothing in any AGM\n\
+         archives you've found under this name, but\n\
+         teleporters can only go so far - you've got\n\
+         to find a functioning ship somewhere!\n\n\
          You drop your gear and get on the pad,\n\
-         reintegrating on yet another new world...\n\
+         reintegrating on yet another new world...
 E4TEXT = After yet another army of monsters\n\
          you manage to find a functioning ship.\n\
          Looks like freedom is yours.\n\n\
@@ -513,7 +517,7 @@ C1TEXT = Not even Earth is safe from these monsters.\n\
          Checked your weapons.\n\n\
          Time to punch through.
 # After MAP11, before MAP12:
-C2TEXT = The facility is gone, no doubt there.\n\
+C2TEXT = The facility is gone, no doubt about that.\n\
          You didn't find anyone alive.\n\n\
          The fighting is taking its toll on you.\n\
          The pain. The brutality. The loneliness.\n\
@@ -522,11 +526,11 @@ C2TEXT = The facility is gone, no doubt there.\n\
          A train rumbles in the distance.\n\n\
          You follow the sound down the empty road\n\
          and reach the edge of a railyard.\n\n\
-         Trains mean cities,\n\
-         and cities mean people.\n\n\
+         Trains mean cities.\n\
+         Cities mean people.\n\n\
          Right?
 # After MAP20, before MAP21:
-C3TEXT = There is no AGM here. No humans.\n\
+C3TEXT = You'll find no AGM here. No humans.\n\
          Just monsters and monsters.\n\n\
          And you.\n\n\
          You've been tracking their movements\n\
