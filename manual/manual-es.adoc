@@ -126,7 +126,7 @@ limitado de espacios, en tal caso tendrás que sobrescribir un juego guardado ya
 existente una vez que ya no haya más espacios de guardado disponibles. Por la
 misma razón es una buena idea escribir una buena descripción para tu juego
 guardado. Incluir el número del nivel y algo descriptivo de hasta donde has
-llegado; por ejemplo: “C1M3 - Blue Key Door.”
+llegado; por ejemplo: “E1M3 - Blue Key Door.”
 
 El menú de _Load Game_ usualmente luce prácticamente idéntico al menú de _Save
 Game_. Para restaurar tu juego guardado, simplemente selecciona _Load Game_
