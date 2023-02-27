@@ -900,9 +900,10 @@ S: perry
 E: me@pprogs.blog
 D: levels
 
-S: shino1
+N: Ada Mackiewicz
+S: Shinosarna
 E: nobody.shinobi@gmail.com
-D: buildcfg.txt, sprites
+D: buildcfg.txt, levels, sprites
 
 N: Steven Elliott
 E: selliott512@gmail.com
@@ -948,5 +949,13 @@ D: levels
 
 S: arborix
 D: sprites
+
+S: Inuk
+E: inuquire@gmail.com
+D: levels
+
+S: GojiBerry
+E: gojidoesit@proton.me
+D: levels
 
 =======
