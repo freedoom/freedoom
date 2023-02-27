@@ -118,7 +118,7 @@ _Enter_. Some source ports have a limited number of slots, in which case you
 will have to overwrite an existing saved game once there are no more slots
 available. For the same reason it’s a good idea to write a good description
 for your saved game. Include the level number and something descriptive of
-where you’ve reached; for example, “C1M3 - Blue Key Door.”
+where you’ve reached; for example, “E1M3 - Blue Key Door.”
 
 The _Load Game_ menu usually looks largely identical to the _Save Game_
 menu. To restore your saved game, simply select _Load Game_ from the main
