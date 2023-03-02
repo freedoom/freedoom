@@ -414,8 +414,8 @@ NIGHTMARE = This is the highest skill level.\n\
 E1TEXT = Free at last from that dreadful outpost!\n\
          But you're still stuck on this rock, with\n\
          AGM and all their monstrous "experiments."\n\
-         Best not to dwell on what horrors they\n\
-         might have had in mind to make out of you.\n\n\
+         Best not to dwell on what evil horrors\n\
+         they were going to create from you...\n\n\
          You need a functioning starship to\n\
          get back to Earth. The best chance at\n\
          one is the facility they had you in\n\
@@ -439,9 +439,10 @@ E2TEXT = The massive brutes collapse onto the\n\
          You board the platform and fade away.\n\
          Next stop: Horizon.
 E3TEXT = The abomination explodes into oblivion.\n\
-         You, however, remain trapped on Horizon -\n\
-         a world even worse than the one that saw\n\
+         You, however, remain grounded on Horizon -\n\
+         a world even worse than the one that had\n\
          you rotting away in a cage for years.\n\n\
+         Which means you're still trapped.\n\n\
          Deep beneath the monster's lair is another\n\
          interplanetary teleporter, this time set\n\
          for a place unhelpfully described only as\n\
