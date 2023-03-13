@@ -438,10 +438,10 @@ image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
 Por si el Pain Bringer no fuera lo suficientemente duro, este puede resistir
 cinco explosiones de cohetes. |
 image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
-| **Dark Soldier** |
-Rápidos, resistentes y disparan misiles que buscan el calor. No te metas en un
+| **Octaminator** |
+Rápidos, resistentes y disparan misiles autoguiados. No te metas en un
 combate de boxeo con uno de estos tipos. |
-image:images/monster-dark-soldier.png[Dark Soldier,100,100,width=100%]
+image:images/monster-octaminator.png[Octaminator,100,100,width=100%]
 | **Necromancer** |
 Si no te está prendiendo fuego, está deshaciendo todo tu arduo trabajo al traer
 a sus amigos de entre los muertos. |
