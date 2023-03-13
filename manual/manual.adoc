@@ -451,10 +451,10 @@ image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
 If the Pain Bringer wasn’t tough enough, this one will take five rocket
 blasts. |
 image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
-| **Dark Soldier** |
-Fast moving, tough, and fires heat-seeking missiles. Do not get into a boxing
+| **Octaminator** |
+Fast moving, tough, and fires homing missiles. Do not get into a boxing
 match with one of these guys. |
-image:images/monster-dark-soldier.png[Dark Soldier,100,100,width=100%]
+image:images/monster-octaminator.png[Octaminator,100,100,width=100%]
 | **Necromancer** |
 If he’s not setting you on fire, he’s undoing all your hard work by bringing
 his friends back from the dead. |
