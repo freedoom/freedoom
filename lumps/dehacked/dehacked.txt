@@ -421,7 +421,7 @@ E1TEXT = Free at last from that dreadful outpost!\n\
          one is the facility they had you in\n\
          when they first brought you planetside.\n\
          When they first gave you your powers.\n\n\
-         When the nightmare had first begun...\n\n\
+         When the nightmare first began...\n\n\
          Perfect time for the teleporter to\n\
          glitch out your gear as you get ready\n\
          to raid the Military Labs.
@@ -461,8 +461,8 @@ E4TEXT = After yet another army of monsters\n\
          The ship rumbles as she wakes up;\n\
          you think of Earth as she lifts off.\n\n\
          Hopefully AGM won't find you there:\n\
-         they've got the outbreak to deal\n\
-         with, so that'll give you some time.\n\n\
+         they've got the outbreak to deal with,\n\
+         so that'll give you some time.\n\n\
          Destination: Earth!
 #ifdef FREEDM
 # After MAP06, before MAP07:
@@ -515,7 +515,7 @@ C1TEXT = Not even Earth is safe from these monsters.\n\
          Checked your weapons.\n\n\
          Time to punch through.
 # After MAP11, before MAP12:
-C2TEXT = The facility is gone, no doubt about that.\n\
+C2TEXT = The facility is gone, no doubt there.\n\
          You didn't find anyone alive.\n\n\
          The fighting is taking its toll on you.\n\
          The pain. The brutality. The loneliness.\n\
