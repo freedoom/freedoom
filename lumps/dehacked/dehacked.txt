@@ -406,7 +406,7 @@ STSTR_FAADDED = Weapons and ammo added.
 STSTR_NCON = Noclip on.
 STSTR_NCOFF = Noclip off.
 STSTR_CHOPPERS = Vroom!
-STSTR_BEHOLD = choose: van, smash, infil, rescue, area, light
+STSTR_BEHOLD = vanguard, smash, infil, rescue, area or light?
 NIGHTMARE = The game is not designed to be\n\
             beatable at this skill level.\n\n\
             Not recommended unless you're\n\
