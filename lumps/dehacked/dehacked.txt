@@ -155,25 +155,25 @@ STARTUP5========================================================================
 #endif
 GOTARMOR = Picked up some basic infantry armor.
 GOTMEGA = Picked up some heavy assault armor.
-GOTHTHBONUS = Got a 1% health bonus.
-GOTARMBONUS = Got a 1% armor bonus.
+GOTHTHBONUS = Picked up a life charge.
+GOTARMBONUS = Picked up an armor charge.
 GOTSTIM = Picked up a small health pack.
-GOTMEDINEED = Found a large health pack, just in time!
+GOTMEDINEED = Picked up a large health pack, just in time!
 GOTMEDIKIT = Picked up a large health pack.
-GOTSUPER = You got the overdrive sphere!
+GOTSUPER = Life surge!
 GOTBLUECARD = Picked up a blue passcard.
 GOTYELWCARD = Picked up a yellow passcard.
 GOTREDCARD = Picked up a red passcard.
 GOTBLUESKUL = Picked up a blue skeleton key.
 GOTYELWSKUL = Picked up a yellow skeleton key.
 GOTREDSKULL = Picked up a red skeleton key.
-GOTINVUL = You are untouchable!
-GOTBERSERK = Punch 'em to death!
-GOTINVIS = You got the stealth sphere!
-GOTSUIT = Picked up a hazard suit.
-GOTMAP = Got the tactical survey map.
-GOTVISOR = Got the night vision goggles.
-GOTMSPHERE = You got the ultra-overdrive sphere!
+GOTINVUL = Vanguard of the gods!
+GOTBERSERK = Smash them to pieces!
+GOTINVIS = Invisibility!
+GOTSUIT = Rescue operations suit.
+GOTMAP = Area survey map.
+GOTVISOR = Low-light goggles.
+GOTMSPHERE = Maximum power!
 GOTCLIP = Picked up an ammo clip.
 GOTCLIPBOX = Picked up a box of ammo.
 GOTROCKET = Picked up a missile.
@@ -417,9 +417,11 @@ STSTR_FAADDED = Weapons and ammo added.
 STSTR_NCON = Noclip on.
 STSTR_NCOFF = Noclip off.
 STSTR_CHOPPERS = Vroom!
-STSTR_BEHOLD = v=invuln, s=steroids, i=invis, r=hazard, a=map, l=night vision
-NIGHTMARE = This is the highest skill level.\n\
-            Not recommended unless you're experienced.\n\n\
+STSTR_BEHOLD = vanguard, smash, invis, rescue, area or light?
+NIGHTMARE = The game is not designed to be\n\
+            beatable at this skill level.\n\n\
+            Not recommended unless you're\n\
+            really that good - or bored.\n\n\
             (Press Y to confirm)
 # End-of-episode texts, now with a consistent story. Feel free to edit them.
 E1TEXT = You've made it out of the outpost.\n\
