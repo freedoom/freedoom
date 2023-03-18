@@ -158,7 +158,7 @@ GOTYELWSKUL = Picked up a yellow skeleton key.
 GOTREDSKULL = Picked up a red skeleton key.
 GOTINVUL = Vanguard of the gods!
 GOTBERSERK = Smash them to pieces!
-GOTINVIS = Infiltrate, subvert, destroy!
+GOTINVIS = Invisibility!
 GOTSUIT = Rescue operations suit.
 GOTMAP = Area survey map.
 GOTVISOR = Low-light goggles.
@@ -406,7 +406,7 @@ STSTR_FAADDED = Weapons and ammo added.
 STSTR_NCON = Noclip on.
 STSTR_NCOFF = Noclip off.
 STSTR_CHOPPERS = Vroom!
-STSTR_BEHOLD = vanguard, smash, infil, rescue, area or light?
+STSTR_BEHOLD = vanguard, smash, invis, rescue, area or light?
 NIGHTMARE = The game is not designed to be\n\
             beatable at this skill level.\n\n\
             Not recommended unless you're\n\
