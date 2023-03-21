@@ -430,30 +430,30 @@ E1TEXT = Free at last from that dreadful outpost!\n\
 E2TEXT = The massive brutes collapse onto the\n\
          ground, falling apart bit by bit.\n\
          The starport is yours.\n\n\
-         But where is the ship? In the launch bay\n\
-         you find only one enormous teleporter.\n\
+         But no ship: the launch bay sits empty,\n\
+         leaving only a massive teleporter pad.\n\
          Limited inorganics. Fixed destination.\n\n\
-         You've never heard of this "Horizon."\n\n\
-         Probably another AGM outpost, which means\n\
-         you should be able to find a ship on the\n\
-         other side. Which means you've got a plan -\n\
-         not a good plan, but as good as it gets.\n\n\
+         Judging from that name, it's probably\n\
+         AGM's ship hub in this star cluster.\n\
+         Bastards owe you for what they've done,\n\
+         so what's a little interstellar hijacking\n\
+         but some D.I.Y. law enforcement?\n\n\
          You board the platform and fade away.\n\
          Next stop: Horizon.
 E3TEXT = The abomination explodes into oblivion.\n\
-         You, however, remain grounded on Horizon -\n\
-         a world even worse than the one that had\n\
-         you rotting away in a cage for years.\n\n\
-         Which means you're still trapped.\n\n\
-         Deep beneath the monster's lair is another\n\
-         interplanetary teleporter, this time set\n\
-         for a place unhelpfully described only as\n\
-         "Double Impact." There's nothing in any AGM\n\
-         archives you've found under this name, but\n\
-         teleporters can only go so far - you've got\n\
-         to find a functioning ship somewhere!\n\n\
-         You drop your gear and get on the pad,\n\
-         reintegrating on yet another new world...
+         What the hell even was that?\n\n\
+         As the shadow sets over this red rock,\n\
+         you realize that you're now trapped here.\n\
+         At least you've got more space in this\n\
+         wasteland than your old cell.\n\n\
+         You kick the corpse in anger, and it feels\n\
+         good. You kick it again, and a remote falls\n\
+         out. You press the button, and hear a click\n\
+         revealing a teleport pad nearby. You look\n\
+         at the gizmo - it says "To Double Impact."\n\n\
+         Wherever or whatever that is, you pray\n\
+         to any listening deity that there's\n\
+         a working ship on the other side.
 E4TEXT = After yet another army of monsters\n\
          you manage to find a functioning ship.\n\
          Looks like freedom is yours.\n\n\
