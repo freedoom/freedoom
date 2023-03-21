@@ -535,14 +535,14 @@ C3TEXT = You'll find no AGM here. No humans.\n\
          And you.\n\n\
          You've been tracking their movements\n\
          and comparing notes with AGM's records.\n\
-         Everything seems to lead to one central\n\
-         entity sending them out, worming its way\n\
-         to Earth through AGM's teleporter network.\n\n\
-         All you need to do now is find this entity\n\
-         and destroy it, if you ever want to see\n\
-         the constant fighting come to an end.\n\n\
-         This could be the beginning of\n\
-         your freedom - or your doom.
+         Hunting down the interdimensional being\n\
+         that has been sending its nightmare army\n\
+         to Earth through AGM's teleporter network.\n\
+         Carving your path of destruction deep into\n\
+         its territory.\n\n\
+         No human has ever survived this wasteland.\n\n\
+         This could be the beginning\n\
+         of your freedom - or your doom.
 # After MAP30 (endgame text):
 C4TEXT = The evil thing becomes unstable.\n\
          Its final roars echo throughout the room\n\
