@@ -536,10 +536,10 @@ C3TEXT = You'll find no AGM here. No humans.\n\
          You've been tracking their movements\n\
          and comparing notes with AGM's records.\n\
          Hunting down the interdimensional being\n\
-         that has been sending its nightmare army\n\
+         that has been sending its nightmare armies\n\
          to Earth through AGM's teleporter network.\n\
-         Carving your path of destruction deep into\n\
-         its territory.\n\n\
+         Carving your path of destruction\n\
+         deep into its territory.\n\n\
          No human has ever survived this wasteland.\n\n\
          This could be the beginning\n\
          of your freedom - or your doom.
