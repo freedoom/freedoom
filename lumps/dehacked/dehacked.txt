@@ -505,20 +505,21 @@ C6TEXT = You're playing FreeDM, the Freedoom\n\
          https://freedoom.github.io/
 #else
 # After MAP06, before MAP07:
-C1TEXT = Not even Earth is safe from these monsters.\n\
-         This AGM space terminal is a lost cause.\n\
-         Best to get out.\n\n\
-         The teleporter infrastructure seems\n\
-         pretty much completely intact.\n\
-         You find an old one and boot it up.\n\
+C1TEXT = Not even Earth is safe. The monsters show\n\
+         up ahead of you everywhere you run.\n\
+         Where are they even coming from?\n\n\
+         Despite all the other destruction they've\n\
+         wrought, the teleportation infrastructure\n\
+         remains intact - you might be able to\n\
+         get back to civilization this way.\n\n\
+         You find an old pad and boot it up.\n\
          Connection live. Handshake established.\n\n\
          Growling and chittering on the intercom.\n\n\
-         Planted your feet.\n\n\
-         Checked your weapons.\n\n\
+         Planted your feet.\n\
+         Checked your weapons.\n\
          Time to punch through.
 # After MAP11, before MAP12:
-C2TEXT = The facility is gone, no doubt there.\n\
-         You didn't find anyone alive.\n\n\
+C2TEXT = You didn't find anyone alive. Again.\n\n\
          The fighting is taking its toll on you.\n\
          The pain. The brutality. The loneliness.\n\
          There's got to be a way to somewhere,\n\
@@ -530,8 +531,8 @@ C2TEXT = The facility is gone, no doubt there.\n\
          Cities mean people.\n\n\
          Right?
 # After MAP20, before MAP21:
-C3TEXT = You'll find no AGM here. No humans.\n\
-         Just monsters and monsters.\n\n\
+C3TEXT = There is no AGM here, but only monsters.\n\
+         Monsters, no humans and the bloody road.\n\n\
          And you.\n\n\
          You've been tracking their movements\n\
          and comparing notes with AGM's records.\n\
@@ -540,7 +541,7 @@ C3TEXT = You'll find no AGM here. No humans.\n\
          to Earth through AGM's teleporter network.\n\
          Carving your path of destruction\n\
          deep into its territory.\n\n\
-         No human has ever survived this wasteland.\n\n\
+         No one has ever survived in this wasteland.\n\n\
          This could be the beginning\n\
          of your freedom - or your doom.
 # After MAP30 (endgame text):
