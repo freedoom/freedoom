@@ -433,11 +433,11 @@ E2TEXT = The massive brutes collapse onto the\n\
          But no ship: the launch bay sits empty,\n\
          leaving only a massive teleporter pad.\n\
          Limited inorganics. Fixed destination.\n\n\
-         Judging from that name, it's probably\n\
-         AGM's ship hub in this star cluster.\n\
+         The name suggests it's probably the new\n\
+         AGM ship hub in this remote star cluster.\n\
          Bastards owe you for what they've done,\n\
-         so what's a little interstellar hijacking\n\
-         but some D.I.Y. law enforcement?\n\n\
+         so what even is interstellar piracy\n\
+         but a bit of D.I.Y. law enforcement?\n\n\
          You board the platform and fade away.\n\
          Next stop: Horizon.
 E3TEXT = The abomination explodes into oblivion.\n\
