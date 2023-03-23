@@ -531,17 +531,18 @@ C2TEXT = You didn't find anyone alive. Again.\n\n\
          Cities mean people.\n\n\
          Right?
 # After MAP20, before MAP21:
-C3TEXT = There is no AGM here, but only monsters.\n\
-         Monsters, no humans and the bloody road.\n\n\
-         And you.\n\n\
-         You've been tracking their movements\n\
-         and comparing notes with AGM's records.\n\
-         Hunting down the interdimensional being\n\
-         that has been sending its nightmare armies\n\
-         to Earth through AGM's teleporter network.\n\
-         Carving your path of destruction\n\
-         deep into its territory.\n\n\
-         No one has ever survived in this wasteland.\n\n\
+C3TEXT = Here is no AGM but only monsters.\n\
+         Monsters, no humans and dusty days\n\
+         sleeping in old ruins and eating scraps.\n\
+         No one has escaped this wasteland alive.\n\n\
+         You've been tracking their movements.\n\
+         AGM records and alien scrawlings point\n\
+         to something big worming its way through\n\
+         the entire teleportation network.\n\
+         Sending its nightmare armies of brain-\n\
+         scrambled sapients - including humans -\n\
+         to conquer all known space.\n\n\
+         And now you're fighting at its doorstep.\n\n\
          This could be the beginning\n\
          of your freedom - or your doom.
 # After MAP30 (endgame text):
@@ -557,25 +558,32 @@ C4TEXT = The evil thing becomes unstable.\n\
          No one will know what happened here.\n\n\
          No one will ever find you again.
 # Before MAP31 (secret level #1):
-C5TEXT = You step onto the machine and\n\
-         after a strange flash you find\n\
-         yourself in a rusty cage.\n\n\
-         What happened? Where is this?\n\n\
-         Before you can wonder further\n\
-         you notice that you are surrounded\n\
-         by monsters. It was a trap.\n\n\
-         You silently bring out\n\
-         your gun, ready to kill.
+C5TEXT = You step into the teleporter. You feel a\n\
+         familiar flash and... you're in a cage?\n\
+         Jailed?\n\n\
+         There are other cages in here. Occupied.\n\
+         So is this how they capture humans?\n\
+         Or did they set this up specially for you,\n\
+         as a reward for being such a monkey wrench\n\
+         in their plans?\n\n\
+         The guards haven't noticed you - yet.\n\
+         Any noise could mean death. Or worse.\n\n\
+         When they zombify you, are you awake the\n\
+         entire time, locked inside of your brain?\n\n\
+         You'd rather not find out.
 # Before MAP32 (secret level #2):
-C6TEXT = The world dissipates around you.\n\
-         As the glow of the teleporter\n\
-         subsides, a sinking feeling sets in\n\
-         that you may have made a wrong turn.\n\n\
-         Again.\n\n\
-         The world comes back to you.\n\
-         The monsters you fought before\n\
-         raise their weapons,\n\
-         aiming for your head.
+C6TEXT = Forcibly uncaged again. Good job.\n\n\
+         But where are you? The air and gravity\n\
+         still feel like whatever hell-rock that\n\
+         strange prison had been on.\n\n\
+         You look around and the layout triggers\n\
+         some old memories from history class.\n\n\
+         This is an arena.\n\
+         Where they send prisoners to die.\n\
+         That wasn't an exit - but an entrance.\n\n\
+         You will find your way back to the city,\n\
+         but it will have to be on the other side\n\
+         of a few homicidal mutants...
 #endif
 BGFLATE1 = AQF051
 BGFLATE2 = AQF054
