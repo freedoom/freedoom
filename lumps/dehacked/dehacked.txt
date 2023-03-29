@@ -27,6 +27,17 @@ Sprite subnumber = 32773
 Frame 689
 Sprite subnumber = 32773
 
+# The super shotgun's first frame is 7 tics long before it
+# begins its reload sequence, but the muzzle flash animation
+# totals 9 tics, causing the flash to trail behind the gun.
+# This shortens the flash down to exactly 7 tics.
+
+Frame 47
+Duration = 4
+
+Frame 48
+Duration = 3
+
 # This is a magic comment recognized by Chocolate Doom, so that the
 # BEX [STRINGS] section below will be parsed:
 #
