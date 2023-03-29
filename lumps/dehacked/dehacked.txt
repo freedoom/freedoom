@@ -413,49 +413,47 @@ NIGHTMARE = The game is not designed to be\n\
             really that good - or bored.\n\n\
             (Press Y to confirm)
 # End-of-episode texts, now with a consistent story. Feel free to edit them.
-E1TEXT = You've made it out of the outpost.\n\
-         But you're still stuck on this rock.\n\
-         AGM sure has been busy with their\n\
-         "experiments," with those monsters\n\
-         infesting that dreadful place. You are\n\
-         an experiment as well, so who cares?\n\
-         There weren't any ships inside the\n\
-         outpost. The only section that might\n\
-         have one is the Military Labs. The\n\
-         very place you got your strength\n\
-         from. Damned AGM scientists.\n\n\
-         This nightmare is too much. You\n\
-         step through the massive doors of\n\
-         the Military Labs.\n\n\
-         There could be a way to escape in there.
-E2TEXT = The massive brutes collapse onto\n\
-         the ground. They fall apart bit by bit.\n\
-         Unfortunately, there was no ship\n\
-         here either. The Labs have bizarre\n\
-         technology though. Like this one.\n\n\
-         A huge teleporter machine, set for...\n\
-         A place called Horizon?\n\n\
-         You never heard of such a thing before.\n\
-         Maybe it's another AGM facility.\n\
-         Meaning there could be a ship on\n\
-         the other side. Sounds like a good\n\
-         plan. Or at least, as good as it gets.\n\n\
-         Next stop, Horizon.
-E3TEXT = The abomination explodes into\n\
-         oblivion. That's that. Horizon is a\n\
-         whole new world, not a facility.\n\
-         Even worse than the outpost you\n\
-         rotted away for years in. Meaning\n\
-         you're still trapped.\n\n\
-         An AGM teleporter is here somehow.\n\
-         They must have been here, then.\n\
-         The teleporter is set for a facility\n\
-         called "Double Impact," which is a\n\
-         ridiculous name. Who cares? All\n\
-         you need is a working ship.\n\n\
-         You drop all your weapons on\n\
-         the ground and step on the platform,\n\
-         reintegrating on Double Impact.
+E1TEXT = Free at last from that dreadful outpost!\n\
+         But you're still stuck on this rock, with\n\
+         AGM and all their monstrous "experiments."\n\
+         Best not to dwell on what evil horrors\n\
+         they were going to create from you...\n\n\
+         You need a functioning starship to\n\
+         get back to Earth. The best chance at\n\
+         one is the facility they had you in\n\
+         when they first brought you planetside.\n\
+         When they first gave you your powers.\n\n\
+         When the nightmare first began...\n\n\
+         Perfect time for the teleporter to\n\
+         glitch out your gear as you get ready\n\
+         to raid the Military Labs.
+E2TEXT = The massive brutes collapse onto the\n\
+         ground, falling apart bit by bit.\n\
+         The starport is yours.\n\n\
+         But no ship: the launch bay sits empty,\n\
+         leaving only a massive teleporter pad.\n\
+         Limited inorganics. Fixed destination.\n\n\
+         The name suggests it's probably the new\n\
+         AGM ship hub in this remote star cluster.\n\
+         Bastards owe you for what they've done,\n\
+         so what even is interstellar piracy\n\
+         but a bit of D.I.Y. law enforcement?\n\n\
+         You board the platform and fade away.\n\
+         Next stop: Horizon.
+E3TEXT = The abomination explodes into oblivion.\n\
+         What the hell even was that?\n\n\
+         As the shadow sets over this red rock,\n\
+         you realize that you're now trapped here.\n\
+         At least you've got more space in this\n\
+         wasteland than your old cell.\n\n\
+         You kick the corpse in anger, and it feels\n\
+         good. You kick it again, and a remote falls\n\
+         out. You press the button, and hear a click\n\
+         revealing a teleport pad nearby. You look\n\
+         at the gizmo - it says "To Double Impact."\n\n\
+         Wherever or whatever that is, you pray\n\
+         to any listening deity that there's\n\
+         a working ship on the other side.
 E4TEXT = After yet another army of monsters\n\
          you manage to find a functioning ship.\n\
          Looks like freedom is yours.\n\n\
@@ -463,10 +461,10 @@ E4TEXT = After yet another army of monsters\n\
          pilot's seat, a luxurious welcome\n\
          as you leave this wretched rock.\n\n\
          The ship rumbles as she wakes up;\n\
-         you think of Earth as she lifts off.\n\
-         Hopefully, AGM won't find you there:\n\
-         they've got the outbreak to deal\n\
-         with, so that'll give you some time.\n\n\
+         you think of Earth as she lifts off.\n\n\
+         Hopefully AGM won't find you there:\n\
+         they've got the outbreak to deal with,\n\
+         so that'll give you some time.\n\n\
          Destination: Earth!
 #ifdef FREEDM
 # After MAP06, before MAP07:
@@ -507,80 +505,85 @@ C6TEXT = You're playing FreeDM, the Freedoom\n\
          https://freedoom.github.io/
 #else
 # After MAP06, before MAP07:
-C1TEXT = You've found your way to the\n\
-         complex's outer storage warehouse.\n\
-         Not even Earth was safe from the\n\
-         monsters. This AGM space terminal\n\
-         is a lost cause. Best to get out.\n\n\
-         You press the panel to call the lift.\n\
-         It slowly lowers, then speeds up.\n\
-         Growls come along with it.\n\
-         Looks like you're not alone here.\n\n\
-         Planted your feet.\n\n\
-         Checked your weapons.\n\n\
-         Time to go up.
+C1TEXT = Not even Earth is safe. The monsters show\n\
+         up ahead of you everywhere you run.\n\
+         Where are they even coming from?\n\n\
+         Despite all the other destruction they've\n\
+         wrought, the teleportation infrastructure\n\
+         remains intact - you might be able to\n\
+         get back to civilization this way.\n\n\
+         You find an old pad and boot it up.\n\
+         Connection live. Handshake established.\n\n\
+         Growling and chittering on the intercom.\n\n\
+         Planted your feet.\n\
+         Checked your weapons.\n\
+         Time to punch through.
 # After MAP11, before MAP12:
-C2TEXT = The facility is gone, no doubt there.\n\
-         You didn't find anyone alive.\n\
-         But you don't want to keep fighting\n\
-         either. You are only human.\n\
-         There's a teleporter here, set for\n\
-         a city unknown to you. City means\n\
-         people, right?\n\n\
-         The bolts holding the platform\n\
-         fly off over the ledge. The place\n\
-         is falling apart. You quickly step on\n\
-         the platform and reappear at the city.\n\
-         It's been destroyed to the ground.\n\n\
-         You can't go back either.
+C2TEXT = You didn't find anyone alive. Again.\n\n\
+         The fighting is taking its toll on you.\n\
+         The pain. The brutality. The loneliness.\n\
+         There's got to be a way to somewhere,\n\
+         something that isn't... this.\n\n\
+         A train rumbles in the distance.\n\n\
+         You follow the sound down the empty road\n\
+         and reach the edge of a railyard.\n\n\
+         Trains mean cities.\n\
+         Cities mean people.\n\n\
+         Right?
 # After MAP20, before MAP21:
-C3TEXT = There is no AGM here. No humans.\n\
-         Just monsters and monsters.\n\
-         And you.\n\
-         This could be the beginning of\n\
-         your freedom.\n\
-         The finale of this endless fighting\n\
-         against the monsters.\n\
-         No man has ever survived in this\n\
-         wasteland.\n\n\
-         Other than you, that is.\n\
-         Maybe AGM saw this place.\n\
-         But never got through here.\n\
-         Either way, it doesn't matter.\n\n\
-         You're stuck here once again.
+C3TEXT = Here is no AGM but only monsters.\n\
+         Monsters, no humans and dusty days\n\
+         sleeping in old ruins and eating scraps.\n\
+         No one has escaped this wasteland alive.\n\n\
+         You've been tracking their movements.\n\
+         AGM records and alien scrawlings point\n\
+         to something big worming its way through\n\
+         the entire teleportation network.\n\
+         Sending its nightmare armies of brain-\n\
+         scrambled sapients - including humans -\n\
+         to conquer all known space.\n\n\
+         And now you're fighting at its doorstep.\n\n\
+         This could be the beginning\n\
+         of your freedom - or your doom.
 # After MAP30 (endgame text):
-C4TEXT = The evil thing becomes unstable.\n\n\
-         Its final roars echo throughout the\n\
-         room until it crumples into scrap metal.\n\
-         A portal opens up, and in it, you see a\n\
-         small town. You jump in quickly.\n\
-         AGM learned its lesson this time.\n\n\
-         Hopefully.\n\n\
+C4TEXT = The evil thing becomes unstable.\n\
+         Its final roars echo throughout the room\n\
+         until it crumples into scrap metal.\n\n\
+         A targeting portal opens, blissfully\n\
+         unaware of its master's demise.\n\n\
+         On the other side you see a small town.\n\
+         You ditch your weapons and slip through,\n\
+         leaving AGM and all its horrors behind.\n\n\
          No one will know who saved them.\n\n\
          No one will know what happened here.\n\n\
          No one will ever find you again.
 # Before MAP31 (secret level #1):
-C5TEXT = You step onto the machine and\n\
-         after a strange flash you find\n\
-         yourself in a rusty cage.\n\n\
-         What happened? Where is this?\n\n\
-         Before you can wonder further\n\
-         you notice that you are surrounded\n\
-         by monsters. It was a trap.\n\n\
-         You silently bring out\n\
-         your gun, ready to kill.
+C5TEXT = You step into the teleporter. You feel a\n\
+         familiar flash and... you're in a cage?\n\
+         Jailed?\n\n\
+         There are other cages in here. Occupied.\n\
+         So is this how they capture humans?\n\
+         Or did they set this up specially for you,\n\
+         as a reward for being such a monkey wrench\n\
+         in their plans?\n\n\
+         The guards haven't noticed you - yet.\n\
+         Any noise could mean death. Or worse.\n\n\
+         When they zombify you, are you awake the\n\
+         entire time, locked inside of your brain?\n\n\
+         You'd rather not find out.
 # Before MAP32 (secret level #2):
-C6TEXT = The world dissipitates around\n\
-         you. You got out of that trap. Only\n\
-         to find yourself inside another.\n\
-         As the glow of the teleporter\n\
-         subsides, it looks like you may\n\
-         have made a wrong turn.\n\n\
-         Again.\n\n\
-         The world comes back to you.\n\
-         The monsters you fought before\n\
-         raise their weapons,\n\n\
-         aiming for your head.
+C6TEXT = Forcibly uncaged again. Good job.\n\n\
+         But where are you? The air and gravity\n\
+         still feel like whatever hell-rock that\n\
+         strange prison had been on.\n\n\
+         You look around and the layout triggers\n\
+         some old memories from history class.\n\n\
+         This is an arena.\n\
+         Where they send prisoners to die.\n\
+         That wasn't an exit - but an entrance.\n\n\
+         You will find your way back to the city,\n\
+         but it will have to be on the other side\n\
+         of a few homicidal mutants...
 #endif
 BGFLATE1 = AQF051
 BGFLATE2 = AQF054
