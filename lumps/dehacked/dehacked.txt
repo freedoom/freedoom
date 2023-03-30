@@ -656,21 +656,22 @@ OB_MPTELEFRAG=%o stood where %k was teleporting.
 OB_RAILGUN=%o was railed by %k.
 OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
 # Quit messages.
-QUITMSG = AGM's scientists are planning an even worse nightmare.\nPress Y if you don't care.
+DOSY = (Press Y to exit the program.)
+QUITMSG = AGM's investors are planning\nan even worse nightmare.\nPress Y if you don't care.
 QUITMSG1 = Why would you...
-QUITMSG2 = Hey buddy, there's still much work to be done.\nAre you truly sure you want to quit?
-QUITMSG3 = Press N to keep annihilating aliens.\nPress Y to surrender.
+QUITMSG2 = Hey buddy, there's still\nwork to be done.\nAre you sure you want to quit?
+QUITMSG3 = Press N to keep\nannihilating aliens.\nPress Y to surrender.
 QUITMSG4 = I wouldn't press Y if I were you.\nSocial media is much worse.
 QUITMSG5 = If you leave now, it's over.
-QUITMSG6 = If you give up, this fight will never end.\nWe still need you to restore our freedom.
+QUITMSG6 = If you give up, this\nfight will never end.\n\We still need you\nto restore our freedom.
 QUITMSG7 = They'll never rest.\nWill you rest?
 QUITMSG8 = What do you do with your life?
-QUITMSG9 = Don't press Y!\nThere's an army of zombies on your desktop!
-QUITMSG10 = All of your friends are dead.\nAre you sure you want to quit?
-QUITMSG11 = Press Y to let AGM decimate Earth with their monstrosities.
-QUITMSG12 = Don't quit!\nMonsters will kill you while you sleep.
-QUITMSG13 = Do you think you can walk away just like that?
-QUITMSG14 = Not even going to stay for Deathmatch?
+QUITMSG9 = Don't press Y!\nThere's an army of\nzombies on your desktop!
+QUITMSG10 = Your revenge is unsatisfied.\nAre you sure you want to quit?
+QUITMSG11 = Press Y to let AGM decimate\nEarth with their monstrosities.
+QUITMSG12 = Don't quit!\nMonsters will kill\nyou while you sleep.
+QUITMSG13 = Do you think you can\nwalk away just like that?
+QUITMSG14 = Not even going to\nstay for Deathmatch?
 
 #ifdef PHASE1
 # Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
