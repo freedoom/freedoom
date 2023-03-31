@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Get full repository history
@@ -42,7 +42,7 @@ jobs:
         if [[ ${VERSION:0:1} == "v" ]]; then
           export VERSION=${VERSION:1}
         fi
-        echo "::set-output name=VERSION::$VERSION"
+        echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
     - name: Upload Freedoom
       uses: actions/upload-artifact@v1
       with:
@@ -53,4 +53,3 @@ jobs:
       with:
         path: "artifacts/freedm"
         name: freedm-${{steps.buildstep.outputs.VERSION}}
-
