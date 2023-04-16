@@ -38,6 +38,15 @@ Duration = 4
 Frame 48
 Duration = 3
 
+# Things 104 and 109 both hang from ceiling and use the same sprite,
+# but 109 (the non-blocking one) is height 52 instead, causing its
+# sprite to clip into the ceiling since the sprite offset is meant
+# for thing 104's correct height of 84.
+# This sets the non-blocker's height to match its counterpart.
+
+Thing 109
+Height = 5505024
+
 # This is a magic comment recognized by Chocolate Doom, so that the
 # BEX [STRINGS] section below will be parsed:
 #
