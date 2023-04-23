@@ -1,0 +1,684 @@
+Patch File for DeHackEd v3.0
+Doom version = 19
+Patch format = 6
+
+# SPDX-License-Identifier: BSD-3-Clause
+
+# The following changes turn on full brightness for a few firing frames,
+# since these they show gun flashes and it looks weird if they aren't full
+# brightness. Doom itself has this problem too but it's more noticeable with
+# the Freedoom sprites.
+
+# Zombie
+Frame 185
+Sprite subnumber = 32773
+
+# Minigun zombie
+Frame 419
+Sprite subnumber = 32773
+
+# Assault tripod
+Frame 685
+Sprite subnumber = 32773
+
+Frame 687
+Sprite subnumber = 32773
+
+Frame 689
+Sprite subnumber = 32773
+
+# The super shotgun's first frame is 7 tics long before it
+# begins its reload sequence, but the muzzle flash animation
+# totals 9 tics, causing the flash to trail behind the gun.
+# This shortens the flash down to exactly 7 tics.
+
+Frame 47
+Duration = 4
+
+Frame 48
+Duration = 3
+
+# This is a magic comment recognized by Chocolate Doom, so that the
+# BEX [STRINGS] section below will be parsed:
+#
+#   *allow-extended-strings*
+
+[PARS]
+#ifndef FREEDM
+# Par times. The BEX format requires these to be specified in number
+# of seconds, but for convenience we include the min:sec value in a
+# comment. Comment also indicates when the run was done - ideally
+# this should be re-done for every new release. Times are rounded
+# to nearest half-minute.
+par  1 1   30  # 00:30 - Voros for v0.12 - 2017/03
+par  1 2  120  # 02:00 - Voros for v0.12 - 2017/03
+par  1 3  150  # 02:30 - Voros for v0.12 - 2017/03
+par  1 4  180  # 03:00 - Voros for v0.12 - 2017/03
+par  1 5  420  # 07:00 - Voros for v0.12 - 2017/03
+par  1 6  390  # 06:30 - Voros for v0.12 - 2017/03
+par  1 7  690  # 11:30 - Voros for v0.12 - 2017/03
+par  1 8   60  # 01:00 - Voros for v0.12 - 2017/03
+par  1 9   30  # 01:30 - Voros for v0.12 - 2017/03
+par  2 1  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 2  150  # 02:30 - Voros for v0.12 - 2017/03
+par  2 3  180  # 03:00 - Voros for v0.12 - 2017/03
+par  2 4  270  # 04:30 - Voros for v0.12 - 2017/03
+par  2 5  300  # 05:00 - Voros for v0.12 - 2017/03
+par  2 6  150  # 02:30 - Voros for v0.12 - 2017/03
+par  2 7  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 8  120  # 02:00 - Voros for v0.12 - 2017/03
+par  2 9  360  # 06:00 - Voros for v0.12 - 2017/03
+par  3 1   30  # 00:30 - Voros for v0.12 - 2017/03
+par  3 2  120  # 02:00 - Voros for v0.12 - 2017/03
+par  3 3  240  # 04:00 - Voros for v0.12 - 2017/03
+par  3 4  270  # 04:30 - Voros for v0.12 - 2017/03
+par  3 5    0  # 00:00
+par  3 6  180  # 03:00 - Voros for v0.12 - 2017/03
+par  3 7  300  # 05:00 - Voros for v0.12 - 2017/03
+par  3 8   60  # 01:00 - Voros for v0.12 - 2017/03
+par  3 9  570  # 09:30 - Voros for v0.12 - 2017/03
+par  1   30  # 00:30  - Voros for v0.11 - 2017/02
+par  2   90  # 01:30  - Voros for v0.11 - 2017/02
+par  3  120  # 02:00  - Voros for v0.11 - 2017/02
+par  4  120  # 02:00  - Voros for v0.11 - 2017/02
+par  5  150  # 02:30  - Voros for v0.11 - 2017/02
+par  6  90   # 01:30  - Voros for v0.11 - 2017/02
+par  7  150  # 02:30  - Voros for v0.11 - 2017/02
+par  8  330  # 05:30  - Voros for v0.11 - 2017/02
+par  9  150  # 02:30  - Voros for v0.11 - 2017/02
+par 10  120  # 02:00  - Voros for v0.11 - 2017/02
+par 11  420  # 07:00  - Voros for v0.11 - 2017/02
+par 12  630  # 10:30  - Voros for v0.11 - 2017/02
+par 13  180  # 03:00  - Voros for v0.11 - 2017/02
+par 14  150  # 02:30  - Voros for v0.11 - 2017/02
+par 15  510  # 08:30  - Voros for v0.11 - 2017/02
+par 16  120  # 02:00  - Voros for v0.11 - 2017/02
+par 17  120  # 02:00  - Voros for v0.11 - 2017/02
+par 18  180  # 03:00  - Voros for v0.11 - 2017/02
+par 19  210  # 03:30  - Voros for v0.11 - 2017/02
+par 20  420  # 07:00  - Voros for v0.11 - 2017/02
+par 21  330  # 05:30  - Voros for v0.11 - 2017/02
+par 22  420  # 07:00  - Voros for v0.11 - 2017/02
+par 23  240  # 04:00  - Voros for v0.11 - 2017/02
+par 24  420  # 07:00  - Catoptromancy OLD run for v0.7
+par 25  600  # 10:00  - Voros for v0.11 - 2017/02
+par 26  270  # 04:30  - Voros for v0.11 - 2017/02
+par 27  690  # 11:30  - Voros for v0.11 - 2017/02
+par 28  450  # 07:30  - Voros for v0.11 - 2017/02
+par 29  300  # 05:00  - Voros for v0.11 - 2017/02
+par 30   60  # 01:00  - Voros for v0.11 - 2017/02
+par 31   60  # 01:00  - Voros for v0.11 - 2017/02
+par 32  210  # 03:30  - Voros for v0.11 - 2017/02
+#else
+# Par times don't matter so much for FreeDM, just set all to zero.
+par  1 0
+par  2 0
+par  3 0
+par  4 0
+par  5 0
+par  6 0
+par  7 0
+par  8 0
+par  9 0
+par 10 0
+par 11 0
+par 12 0
+par 13 0
+par 14 0
+par 15 0
+par 16 0
+par 17 0
+par 18 0
+par 19 0
+par 20 0
+par 21 0
+par 22 0
+par 23 0
+par 24 0
+par 25 0
+par 26 0
+par 27 0
+par 28 0
+par 29 0
+par 30 0
+par 31 0
+par 32 0
+#endif
+
+[STRINGS]
+# Text shown on startup in Boom-compatible ports. This is all in
+# STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+#ifdef FREEDM
+STARTUP5============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
+#else
+STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
+#endif
+GOTARMOR = Picked up some basic infantry armor.
+GOTMEGA = Picked up some heavy assault armor.
+GOTHTHBONUS = Picked up a life charge.
+GOTARMBONUS = Picked up an armor charge.
+GOTSTIM = Picked up a small health pack.
+GOTMEDINEED = Picked up a large health pack, just in time!
+GOTMEDIKIT = Picked up a large health pack.
+GOTSUPER = Life surge!
+GOTBLUECARD = Picked up a blue passcard.
+GOTYELWCARD = Picked up a yellow passcard.
+GOTREDCARD = Picked up a red passcard.
+GOTBLUESKUL = Picked up a blue skeleton key.
+GOTYELWSKUL = Picked up a yellow skeleton key.
+GOTREDSKULL = Picked up a red skeleton key.
+GOTINVUL = Vanguard of the gods!
+GOTBERSERK = Smash them to pieces!
+GOTINVIS = Invisibility!
+GOTSUIT = Rescue operations suit.
+GOTMAP = Area survey map.
+GOTVISOR = Low-light goggles.
+GOTMSPHERE = Maximum power!
+GOTCLIP = Picked up an ammo clip.
+GOTCLIPBOX = Picked up a box of ammo.
+GOTROCKET = Picked up a missile.
+GOTROCKBOX = Picked up a crate of missiles.
+GOTCELL = Picked up a small energy recharge.
+GOTCELLBOX = Picked up a large energy recharge.
+GOTSHELLS = Picked up some shotgun shells.
+GOTSHELLBOX = Picked up a box of shotgun shells.
+GOTBACKPACK = You found a backpack!
+GOTBFG9000 = The SKAG 1337 ... time to kick some ass!
+GOTCHAINGUN = You got the minigun!
+GOTCHAINSAW = You got the angle grinder!
+GOTLAUNCHER = You got the missile launcher!
+GOTPLASMA = You got the polaric energy cannon!
+GOTSHOTGUN = You got the pump-action shotgun!
+GOTSHOTGUN2 = You got the double-barrelled shotgun!
+TAG_FIST = fist
+TAG_BFG9000 = SKAG 1337
+TAG_CHAINGUN = minigun
+TAG_CHAINSAW = angle grinder
+TAG_ROCKETLAUNCHER = missile launcher
+TAG_PLASMARIFLE = polaric energy cannon
+TAG_SHOTGUN = pump-action shotgun
+TAG_SUPERSHOTGUN = double-barrelled shotgun
+PD_BLUEO = This object requires a blue key.
+PD_REDO = This object requires a red key.
+PD_YELLOWO = This object requires a yellow key.
+PD_BLUEK = This door requires a blue key.
+PD_REDK = This door requires a red key.
+PD_YELLOWK = This door requires a yellow key.
+PD_BLUEC = This door requires the blue passcard.
+PD_REDC = This door requires the red passcard.
+PD_YELLOWC = This door requires the yellow passcard.
+PD_BLUES = This door requires the blue skeleton key.
+PD_REDS = This door requires the red skeleton key.
+PD_YELLOWS = This door requires the yellow skeleton key.
+PD_ANY = This door requires any key.
+PD_ALL3 = This door requires all three keys.
+PD_ALL6 = This door requires all six keys!
+HUSTR_E1M1 = E1M1: Outer Prison
+HUSTR_E1M2 = E1M2: Communications Center
+HUSTR_E1M3 = E1M3: Waste Disposal
+HUSTR_E1M4 = E1M4: Supply Depot
+HUSTR_E1M5 = E1M5: Armory
+HUSTR_E1M6 = E1M6: Training Facility
+HUSTR_E1M7 = E1M7: Transportation Bay
+HUSTR_E1M8 = E1M8: Outpost Quarry
+HUSTR_E1M9 = E1M9: Nutrient Recycling
+HUSTR_E2M1 = E2M1: Surreality
+HUSTR_E2M2 = E2M2: Shifter
+HUSTR_E2M3 = E2M3: Reclaimed Facilities
+HUSTR_E2M4 = E2M4: Flooded installation
+HUSTR_E2M5 = E2M5: Underground Hub
+HUSTR_E2M6 = E2M6: Hidden Sector
+HUSTR_E2M7 = E2M7: Control Complex
+HUSTR_E2M8 = E2M8: Containment Cell
+HUSTR_E2M9 = E2M9: Fortress 31
+HUSTR_E3M1 = E3M1: Land of the Lost
+HUSTR_E3M2 = E3M2: Derelict Temple
+HUSTR_E3M3 = E3M3: Sacrificial Bastion
+HUSTR_E3M4 = E3M4: Oblation Temple
+HUSTR_E3M5 = E3M5: Infernal Hallows
+HUSTR_E3M6 = E3M6: Igneous Intrusion
+HUSTR_E3M7 = E3M7: No Regrets
+HUSTR_E3M8 = E3M8: Ancient Lair
+HUSTR_E3M9 = E3M9: Acquainted With Grief
+HUSTR_E4M1 = E4M1: Maintenance Area
+HUSTR_E4M2 = E4M2: Research Complex
+HUSTR_E4M3 = E4M3: Central Computing
+HUSTR_E4M4 = E4M4: Hydroponic Facility
+HUSTR_E4M5 = E4M5: Engineering Station
+HUSTR_E4M6 = E4M6: Command Center
+HUSTR_E4M7 = E4M7: Waste Treatment
+HUSTR_E4M8 = E4M8: Launch Bay
+HUSTR_E4M9 = E4M9: Operations
+CC_ZOMBIE = zombie
+CC_SHOTGUN = shotgun zombie
+CC_HEAVY = minigun zombie
+CC_IMP = serpentipede
+CC_DEMON = flesh worm
+CC_LOST = hatchling
+CC_CACO = trilobite
+CC_HELL = pain bringer
+CC_BARON = pain lord
+CC_ARACH = technospider
+CC_PAIN = matribite
+CC_REVEN = octaminator
+CC_MANCU = combat slug
+CC_ARCH = necromancer
+CC_SPIDER = large technospider
+CC_CYBER = assault tripod
+CC_HERO = savior of humanity
+#ifdef FREEDM
+HUSTR_1 = DM01: Tech Test
+HUSTR_2 = DM02: Natural Station
+HUSTR_3 = DM03: Issues of Claveria
+HUSTR_4 = DM04: Steel
+HUSTR_5 = DM05: Dense Fields
+HUSTR_6 = DM06: Temple of Ammon
+HUSTR_7 = DM07: Main Stronghold
+HUSTR_8 = DM08: Artifact Base
+HUSTR_9 = DM09: Industrial Outland
+HUSTR_10 = DM10: Detached Grounds
+HUSTR_11 = DM11: Isolated Facility
+HUSTR_12 = DM12: Up 'n' Down Canyon
+HUSTR_13 = DM13: Unholy Blood
+HUSTR_14 = DM14: Technical Assault
+HUSTR_15 = DM15: Shallow Complex
+HUSTR_16 = DM16: Barren Alleys
+HUSTR_17 = DM17: Underwoods
+HUSTR_18 = DM18: Deserted Courtyard
+HUSTR_19 = DM19: Tech Isle
+HUSTR_20 = DM20: Warehouse
+HUSTR_21 = DM21: Refinery
+HUSTR_22 = DM22: Fourplay
+HUSTR_23 = DM23: Confrontation
+HUSTR_24 = DM24: Flooded Base
+HUSTR_25 = DM25: Mansion Yard
+HUSTR_26 = DM26: Acidic Crypt
+HUSTR_27 = DM27: The Exile
+HUSTR_28 = DM28: Weapons Factory
+HUSTR_29 = DM29: Unusual Territory
+HUSTR_30 = DM30: Last Man Standing
+HUSTR_31 = DM31: Desolated Fort
+HUSTR_32 = DM32: Chocolate
+#else
+HUSTR_1 = MAP01: Hydroelectric Plant
+HUSTR_2 = MAP02: Filtration Tunnels
+HUSTR_3 = MAP03: Crude Processing Center
+HUSTR_4 = MAP04: Containment Bay
+HUSTR_5 = MAP05: Sludge Burrow
+HUSTR_6 = MAP06: Gamma Labs
+HUSTR_7 = MAP07: Outer Storage Warehouse
+HUSTR_8 = MAP08: Astronomy Complex
+HUSTR_9 = MAP09: Datacenter
+HUSTR_10 = MAP10: Deadly Outlands
+HUSTR_11 = MAP11: Dimensional Rift Observatory
+HUSTR_12 = MAP12: Railroads
+HUSTR_13 = MAP13: Station Earth
+HUSTR_14 = MAP14: Nuclear Zone
+HUSTR_15 = MAP15: Hostile Takeover
+HUSTR_16 = MAP16: Urban Jungle
+HUSTR_17 = MAP17: City Capitol
+HUSTR_18 = MAP18: Aquatics Lab
+HUSTR_19 = MAP19: Sewage Control
+HUSTR_20 = MAP20: Blood Ember Fortress
+HUSTR_21 = MAP21: Under Realm
+HUSTR_22 = MAP22: Remanasu
+HUSTR_23 = MAP23: Underground Facility
+HUSTR_24 = MAP24: Tertiary Loading Bay
+HUSTR_25 = MAP25: Red Works
+HUSTR_26 = MAP26: Dark Depths
+HUSTR_27 = MAP27: Palace of Red
+HUSTR_28 = MAP28: Grim Redoubt
+HUSTR_29 = MAP29: Last Stand
+HUSTR_30 = MAP30: Jaws of Defeat
+HUSTR_31 = MAP31: Be Quiet
+HUSTR_32 = MAP32: Not Sure
+#endif
+# Final Doom level strings, left blank
+PHUSTR_1 = MAP01
+PHUSTR_2 = MAP02
+PHUSTR_3 = MAP03
+PHUSTR_4 = MAP04
+PHUSTR_5 = MAP05
+PHUSTR_6 = MAP06
+PHUSTR_7 = MAP07
+PHUSTR_8 = MAP08
+PHUSTR_9 = MAP09
+PHUSTR_10 = MAP10
+PHUSTR_11 = MAP11
+PHUSTR_12 = MAP12
+PHUSTR_13 = MAP13
+PHUSTR_14 = MAP14
+PHUSTR_15 = MAP15
+PHUSTR_16 = MAP16
+PHUSTR_17 = MAP17
+PHUSTR_18 = MAP18
+PHUSTR_19 = MAP19
+PHUSTR_20 = MAP20
+PHUSTR_21 = MAP21
+PHUSTR_22 = MAP22
+PHUSTR_23 = MAP23
+PHUSTR_24 = MAP24
+PHUSTR_25 = MAP25
+PHUSTR_26 = MAP26
+PHUSTR_27 = MAP27
+PHUSTR_28 = MAP28
+PHUSTR_29 = MAP29
+PHUSTR_30 = MAP30
+PHUSTR_31 = MAP31
+PHUSTR_32 = MAP32
+THUSTR_1 = MAP01
+THUSTR_2 = MAP02
+THUSTR_3 = MAP03
+THUSTR_4 = MAP04
+THUSTR_5 = MAP05
+THUSTR_6 = MAP06
+THUSTR_7 = MAP07
+THUSTR_8 = MAP08
+THUSTR_9 = MAP09
+THUSTR_10 = MAP10
+THUSTR_11 = MAP11
+THUSTR_12 = MAP12
+THUSTR_13 = MAP13
+THUSTR_14 = MAP14
+THUSTR_15 = MAP15
+THUSTR_16 = MAP16
+THUSTR_17 = MAP17
+THUSTR_18 = MAP18
+THUSTR_19 = MAP19
+THUSTR_20 = MAP20
+THUSTR_21 = MAP21
+THUSTR_22 = MAP22
+THUSTR_23 = MAP23
+THUSTR_24 = MAP24
+THUSTR_25 = MAP25
+THUSTR_26 = MAP26
+THUSTR_27 = MAP27
+THUSTR_28 = MAP28
+THUSTR_29 = MAP29
+THUSTR_30 = MAP30
+THUSTR_31 = MAP31
+THUSTR_32 = MAP32
+HUSTR_PLRGREEN = g:
+HUSTR_PLRINDIGO = i:
+HUSTR_PLRBROWN = b:
+HUSTR_PLRRED = r:
+AMSTR_FOLLOWON = Map following player.
+AMSTR_FOLLOWOFF = Map no longer following player.
+AMSTR_GRIDON = Map grid on.
+AMSTR_GRIDOFF = Map grid off.
+AMSTR_MARKEDSPOT = Added map bookmark.
+AMSTR_MARKSCLEARED = All map bookmarks cleared.
+STSTR_MUS = Music changed.
+STSTR_NOMUS = Unknown music track?
+STSTR_DQDON = God mode on.
+STSTR_DQDOFF = God mode off.
+STSTR_KFAADDED = Keys, weapons and ammo added.
+STSTR_FAADDED = Weapons and ammo added.
+STSTR_NCON = Noclip on.
+STSTR_NCOFF = Noclip off.
+STSTR_CHOPPERS = Vroom!
+STSTR_BEHOLD = vanguard, smash, invis, rescue, area or light?
+NIGHTMARE = The game is not designed to be\n\
+            beatable at this skill level.\n\n\
+            Not recommended unless you're\n\
+            really that good - or bored.\n\n\
+            (Press Y to confirm)
+# End-of-episode texts, now with a consistent story. Feel free to edit them.
+E1TEXT = Free at last from that dreadful outpost!\n\
+         But you're still stuck on this rock, with\n\
+         AGM and all their monstrous "experiments."\n\
+         Best not to dwell on what evil horrors\n\
+         they were going to create from you...\n\n\
+         You need a functioning starship to\n\
+         get back to Earth. The best chance at\n\
+         one is the facility they had you in\n\
+         when they first brought you planetside.\n\
+         When they first gave you your powers.\n\n\
+         When the nightmare first began...\n\n\
+         Perfect time for the teleporter to\n\
+         glitch out your gear as you get ready\n\
+         to raid the Military Labs.
+E2TEXT = The massive brutes collapse onto the\n\
+         ground, falling apart bit by bit.\n\
+         The starport is yours.\n\n\
+         But no ship: the launch bay sits empty,\n\
+         leaving only a massive teleporter pad.\n\
+         Limited inorganics. Fixed destination.\n\n\
+         The name suggests it's probably the new\n\
+         AGM ship hub in this remote star cluster.\n\
+         Bastards owe you for what they've done,\n\
+         so what even is interstellar piracy\n\
+         but a bit of D.I.Y. law enforcement?\n\n\
+         You board the platform and fade away.\n\
+         Next stop: Horizon.
+E3TEXT = The abomination explodes into oblivion.\n\
+         What the hell even was that?\n\n\
+         As the shadow sets over this red rock,\n\
+         you realize that you're now trapped here.\n\
+         At least you've got more space in this\n\
+         wasteland than your old cell.\n\n\
+         You kick the corpse in anger, and it feels\n\
+         good. You kick it again, and a remote falls\n\
+         out. You press the button, and hear a click\n\
+         revealing a teleport pad nearby. You look\n\
+         at the gizmo - it says "To Double Impact."\n\n\
+         Wherever or whatever that is, you pray\n\
+         to any listening deity that there's\n\
+         a working ship on the other side.
+E4TEXT = After yet another army of monsters\n\
+         you manage to find a functioning ship.\n\
+         Looks like freedom is yours.\n\n\
+         You practically melt into the soft\n\
+         pilot's seat, a luxurious welcome\n\
+         as you leave this wretched rock.\n\n\
+         The ship rumbles as she wakes up;\n\
+         you think of Earth as she lifts off.\n\n\
+         Hopefully AGM won't find you there:\n\
+         they've got the outbreak to deal with,\n\
+         so that'll give you some time.\n\n\
+         Destination: Earth!
+#ifdef FREEDM
+# After MAP06, before MAP07:
+C1TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP11, before MAP12:
+C2TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP20, before MAP21:
+C3TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# After MAP30 (endgame text):
+C4TEXT = Thank you for playing FreeDM, the\n\
+         Freedoom deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP31 (secret level #1):
+C5TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+# Before MAP32 (secret level #2):
+C6TEXT = You're playing FreeDM, the Freedoom\n\
+         deathmatch spinoff project.\n\n\
+         For more information about Freedoom\n\
+         and FreeDM, see:\n\n\
+         https://freedoom.github.io/
+#else
+# After MAP06, before MAP07:
+C1TEXT = Not even Earth is safe. The monsters show\n\
+         up ahead of you everywhere you run.\n\
+         Where are they even coming from?\n\n\
+         Despite all the other destruction they've\n\
+         wrought, the teleportation infrastructure\n\
+         remains intact - you might be able to\n\
+         get back to civilization this way.\n\n\
+         You find an old pad and boot it up.\n\
+         Connection live. Handshake established.\n\n\
+         Growling and chittering on the intercom.\n\n\
+         Planted your feet.\n\
+         Checked your weapons.\n\
+         Time to punch through.
+# After MAP11, before MAP12:
+C2TEXT = You didn't find anyone alive. Again.\n\n\
+         The fighting is taking its toll on you.\n\
+         The pain. The brutality. The loneliness.\n\
+         There's got to be a way to somewhere,\n\
+         something that isn't... this.\n\n\
+         A train rumbles in the distance.\n\n\
+         You follow the sound down the empty road\n\
+         and reach the edge of a railyard.\n\n\
+         Trains mean cities.\n\
+         Cities mean people.\n\n\
+         Right?
+# After MAP20, before MAP21:
+C3TEXT = Here is no AGM but only monsters.\n\
+         Monsters, no humans and dusty days\n\
+         sleeping in old ruins and eating scraps.\n\
+         No one has escaped this wasteland alive.\n\n\
+         You've been tracking their movements.\n\
+         AGM records and alien scrawlings point\n\
+         to something big worming its way through\n\
+         the entire teleportation network.\n\
+         Sending its nightmare armies of brain-\n\
+         scrambled sapients - including humans -\n\
+         to conquer all known space.\n\n\
+         And now you're fighting at its doorstep.\n\n\
+         This could be the beginning\n\
+         of your freedom - or your doom.
+# After MAP30 (endgame text):
+C4TEXT = The evil thing becomes unstable.\n\
+         Its final roars echo throughout the room\n\
+         until it crumples into scrap metal.\n\n\
+         A targeting portal opens, blissfully\n\
+         unaware of its master's demise.\n\n\
+         On the other side you see a small town.\n\
+         You ditch your weapons and slip through,\n\
+         leaving AGM and all its horrors behind.\n\n\
+         No one will know who saved them.\n\n\
+         No one will know what happened here.\n\n\
+         No one will ever find you again.
+# Before MAP31 (secret level #1):
+C5TEXT = You step into the teleporter. You feel a\n\
+         familiar flash and... you're in a cage?\n\
+         Jailed?\n\n\
+         There are other cages in here. Occupied.\n\
+         So is this how they capture humans?\n\
+         Or did they set this up specially for you,\n\
+         as a reward for being such a monkey wrench\n\
+         in their plans?\n\n\
+         The guards haven't noticed you - yet.\n\
+         Any noise could mean death. Or worse.\n\n\
+         When they zombify you, are you awake the\n\
+         entire time, locked inside of your brain?\n\n\
+         You'd rather not find out.
+# Before MAP32 (secret level #2):
+C6TEXT = Forcibly uncaged again. Good job.\n\n\
+         But where are you? The air and gravity\n\
+         still feel like whatever hell-rock that\n\
+         strange prison had been on.\n\n\
+         You look around and the layout triggers\n\
+         some old memories from history class.\n\n\
+         This is an arena.\n\
+         Where they send prisoners to die.\n\
+         That wasn't an exit - but an entrance.\n\n\
+         You will find your way back to the city,\n\
+         but it will have to be on the other side\n\
+         of a few homicidal mutants...
+#endif
+BGFLATE1 = AQF051
+BGFLATE2 = AQF054
+BGFLATE3 = FLAT5_2
+BGFLATE4 = AQF075
+BGFLAT06 = AQF016
+BGFLAT11 = AQF001
+BGFLAT20 = FLAT5_6
+BGFLAT30 = SLIME13
+BGFLAT15 = AQF004
+BGFLAT31 = AQF021
+# Obituary texts, for ZDoom-based ports.
+OB_STEALTHBABY=%o thought %g saw a technospider.
+OB_STEALTHVILE=%o thought %g saw a necromancer.
+OB_STEALTHBARON=%o thought %g saw a pain lord.
+OB_STEALTHCACO=%o thought %g saw a trilobite
+OB_STEALTHCHAINGUY=%o thought %g saw a minigun zombie.
+OB_STEALTHDEMON=%o thought %g saw a flesh worm.
+OB_STEALTHKNIGHT=%o thought %g saw a pain bringer.
+OB_STEALTHIMP=%o thought %g saw a serpentipede.
+OB_STEALTHFATSO=%o thought %g saw a combat slug.
+OB_STEALTHUNDEAD=%o thought %g saw an octaminator.
+OB_STEALTHSHOTGUY=%o thought %g saw a shotgun zombie.
+OB_STEALTHZOMBIE=%o thought %g saw a zombie.
+OB_UNDEADHIT=%o was punched by an octaminator.
+OB_IMPHIT=%o was slashed by a serpentipede.
+OB_CACOHIT=%o got too close to a trilobite.
+OB_DEMONHIT=%o was bitten by a flesh worm.
+OB_SPECTREHIT=%o was eaten by a stealth worm.
+OB_BARONHIT=%o was torn open by a pain lord.
+OB_KNIGHTHIT=%o was gutted by a pain bringer.
+OB_ZOMBIE=%o was killed by a zombie.
+OB_SHOTGUY=%o was gunned down by a shotgun zombie.
+OB_VILE=%o was incinerated by a necromancer.
+OB_UNDEAD=%o couldn't evade an octaminator's fireball.
+OB_FATSO=%o was blasted by a combat slug.
+OB_CHAINGUY=%o was perforated by a minigun zombie.
+OB_SKULL=%o was slammed by a hatchling.
+OB_IMP=%o was burned by a serpentipede.
+OB_CACO=%o was smitten by a trilobite.
+OB_BARON=%o was bruised by a pain lord.
+OB_KNIGHT=%o was splayed by a pain bringer.
+OB_SPIDER=%o stood in awe of the large technospider.
+OB_BABY=%o let a technospider get %h.
+OB_CYBORG=%o was splattered by an assault tripod.
+OB_WOLFSS=%o met a sailor.
+OB_MPFIST=%k punched %o to death.
+OB_MPCHAINSAW=%o was shredded by %k's angle grinder.
+OB_MPPISTOL=%o was tickled by %k's handgun.
+OB_MPSHOTGUN=%o chewed on %k's boomstick.
+OB_MPSSHOTGUN=%k swapped two barrels upside %o's head.
+OB_MPCHAINGUN=%o was perforated by %k's minigun.
+OB_MPROCKET=%o was mutilated by %k's missile.
+OB_MPR_SPLASH=%o couldn't dodge %k's missile.
+OB_MPPLASMARIFLE=%o swallowed too much of %k's polaric energy.
+OB_MPBFG_BOOM=%o had %p ass kicked by %k's SKAG!
+OB_MPBFG_SPLASH=%o couldn't hide from %k's SKAG.
+OB_MPTELEFRAG=%o stood where %k was teleporting.
+OB_RAILGUN=%o was railed by %k.
+OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
+# Quit messages.
+DOSY = (Press Y to exit the program.)
+QUITMSG = AGM's investors are planning\nan even worse nightmare.\nPress Y if you don't care.
+QUITMSG1 = Why would you...
+QUITMSG2 = Hey buddy, there's still\nwork to be done.\nAre you sure you want to quit?
+QUITMSG3 = Press N to keep\nannihilating aliens.\nPress Y to surrender.
+QUITMSG4 = I wouldn't press Y if I were you.\nSocial media is much worse.
+QUITMSG5 = If you leave now, it's over.
+QUITMSG6 = If you give up, this\nfight will never end.\nWe still need you\nto restore our freedom.
+QUITMSG7 = They'll never rest.\nWill you rest?
+QUITMSG8 = What do you do with your life?
+QUITMSG9 = Don't press Y!\nThere's an army of\nzombies on your desktop!
+QUITMSG10 = Your revenge is unsatisfied.\nAre you sure you want to quit?
+QUITMSG11 = Press Y to let AGM decimate\nEarth with their monstrosities.
+QUITMSG12 = Don't quit!\nMonsters will kill\nyou while you sleep.
+QUITMSG13 = Do you think you can\nwalk away just like that?
+QUITMSG14 = Not even going to\nstay for Deathmatch?
+
+#ifdef PHASE1
+# Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
+# IDSPISPOPD is swapped into the slot normally for Phase 2, in case of
+# engines that would otherwise try to apply the cheat twice.
+
+Cheat 0
+No Clipping 1 = idclip
+No Clipping 2 = idspispopd
+#endif
