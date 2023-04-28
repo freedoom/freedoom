@@ -54,11 +54,11 @@ par  1 1   30  # 00:30 - Voros for v0.12 - 2017/03
 par  1 2  120  # 02:00 - Voros for v0.12 - 2017/03
 par  1 3  150  # 02:30 - Voros for v0.12 - 2017/03
 par  1 4  180  # 03:00 - Voros for v0.12 - 2017/03
-par  1 5  420  # 07:00 - Voros for v0.12 - 2017/03
+par  1 5   90  # 01:30 - Voros for v0.12 - 2017/03
 par  1 6  390  # 06:30 - Voros for v0.12 - 2017/03
 par  1 7  690  # 11:30 - Voros for v0.12 - 2017/03
 par  1 8   60  # 01:00 - Voros for v0.12 - 2017/03
-par  1 9   30  # 01:30 - Voros for v0.12 - 2017/03
+par  1 9  240  # 04:00 - m for v0.13 - 2023/04
 par  2 1  120  # 02:00 - Voros for v0.12 - 2017/03
 par  2 2  150  # 02:30 - Voros for v0.12 - 2017/03
 par  2 3  180  # 03:00 - Voros for v0.12 - 2017/03
@@ -217,11 +217,11 @@ HUSTR_E1M1 = E1M1: Outer Prison
 HUSTR_E1M2 = E1M2: Communications Center
 HUSTR_E1M3 = E1M3: Waste Disposal
 HUSTR_E1M4 = E1M4: Supply Depot
-HUSTR_E1M5 = E1M5: Main Control
+HUSTR_E1M5 = E1M5: Armory
 HUSTR_E1M6 = E1M6: Training Facility
 HUSTR_E1M7 = E1M7: Transportation Bay
 HUSTR_E1M8 = E1M8: Outpost Quarry
-HUSTR_E1M9 = E1M9: Armory
+HUSTR_E1M9 = E1M9: Nutrient Recycling
 HUSTR_E2M1 = E2M1: Surreality
 HUSTR_E2M2 = E2M2: Shifter
 HUSTR_E2M3 = E2M3: Reclaimed Facilities
