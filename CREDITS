@@ -808,7 +808,7 @@ D: sprites: technospider reshading
 S: northivanastan
 N: Ivan Stanton
 E: northivanastan@gmail.com
-D: musics: d_e1m5
+D: musics: d_e1m5, d_e4m1, d_e4m8, d_e4m9
 
 S: MothraMaster
 D: sprites: Zombieman/Shotgunners boots update
@@ -963,5 +963,11 @@ S: iRedMC
 E: jadenquinn8@hotmail.com
 W: http://iredmc.us.to/
 D: levels, musics
+
+S: M.3.
+D: musics: d_e4m3
+
+S: ZeMystic
+D: musics: d_e4m6
 
 =======
