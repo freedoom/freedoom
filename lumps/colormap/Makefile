@@ -1,4 +1,4 @@
-PLAYPAL = ../playpal/playpal-base.lmp
+PLAYPAL = ../playpal/playpal-new.lmp
 
 COLORMAPS = colormap.lmp
 

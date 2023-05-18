@@ -88,13 +88,22 @@ class WADFile:
             for dir_entry in directory:
                 wadfile.write(struct.pack(WAD_DIR_ENTRY, *dir_entry))
 
-def replace_in_wad(wadfname, lump_name, lump_index, datafile):
-    lump_index = int(lump_index)
+def replace_in_wad(wadfname, replace_stuff):
     wadfile = WADFile.from_wad(wadfname)
-    with open(datafile, "rb") as datafile:
-        data = datafile.read()
-        wadfile.replace(lump_name, lump_index, data)
+    # Each thing in replace_stuff should be like this:
+    # (lump_name, lump_index, datafile)
+    for replacement in replace_stuff:
+        lump_name, lump_index, datafile = replacement
+        lump_index = int(lump_index)
+        with open(datafile, "rb") as datafile:
+            data = datafile.read()
+            wadfile.replace(lump_name, lump_index, data)
     wadfile.save_wad(wadfname)
 
 if __name__ == "__main__":
-    replace_in_wad(*argv[1:])
+    replace_args = argv[2:]
+    replacements = []
+    for start_index in range(0, len(replace_args), 3):
+        end_index = start_index + 3
+        replacements.append(replace_args[start_index:end_index])
+    replace_in_wad(argv[1], replacements)
