@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# WAD utility script
+#
+# Currently used to replace a lump within a Doom WAD file with a file on the
+# user's file system
+#
+from sys import argv
+from collections import namedtuple
+import struct
+
+DoomWadHeader = namedtuple("DoomWadHeader", "type lump_count dir_offset")
+DoomWadDirEntry = namedtuple("DoomWadDirEntry", "start size name")
+DoomWadLump = namedtuple("DoomWadLump", "name data")
+
+WAD_HEADER = "4s2I"
+WAD_DIR_ENTRY = "2I8s"
+
+class WADFile:
+    def __init__(self):
+        self.type = b"PWAD"
+        self.lumps = []
+        self.lumps_names = {}
+
+    @staticmethod
+    def from_wad(wadfname):
+        wadf = WADFile()
+        with open(wadfname, "rb") as wadfile:
+            header = DoomWadHeader._make(struct.unpack(WAD_HEADER,
+                         wadfile.read(struct.calcsize(WAD_HEADER))
+                     ))
+            wadf.type = header.type
+            wadfile.seek(header.dir_offset)
+            directory = []
+            for _ in range(header.lump_count):
+                directory.append(DoomWadDirEntry._make(struct.unpack(
+                        WAD_DIR_ENTRY,
+                        wadfile.read(struct.calcsize(WAD_DIR_ENTRY))
+                    )))
+            lumps_index = {}
+            for dir_index, dir_entry in enumerate(directory):
+                lump_name = dir_entry.name
+                wadfile.seek(dir_entry.start)
+                lump_data = wadfile.read(dir_entry.size)
+
+                wadf.lumps.append(DoomWadLump(lump_name, lump_data))
+
+                lump_index = format(
+                    lumps_index.setdefault(lump_name, 0), "d").encode()
+                lumps_index[lump_name] += 1
+                wadf.lumps_names[lump_name + lump_index] = dir_index
+        return wadf
+
+    @staticmethod
+    def lump_ref(lump_name, lump_index):
+        lump_name = lump_name[:8]
+        return (lump_name +
+                    ("\0" * (8 - len(lump_name))) +
+                    format(lump_index, "d")
+                    ).encode()
+
+    def replace(self, lump_name, lump_index, data):
+        lump_ref = WADFile.lump_ref(lump_name, lump_index)
+        lump_name = lump_ref[:8]
+        lump_index = self.lumps_names[lump_ref]
+        self.lumps[lump_index] = DoomWadLump(lump_name, data)
+
+    def save_wad(self, wadfname):
+        data_start = struct.calcsize(WAD_HEADER)
+        lumps_combined_size = sum(map(lambda l: len(l.data), self.lumps))
+        header = DoomWadHeader(
+            self.type, len(self.lumps),
+            lumps_combined_size + data_start
+        )
+
+        directory = []
+        start = data_start
+        for lump in self.lumps:
+            directory.append(DoomWadDirEntry(start, len(lump.data), lump.name))
+            start += len(lump.data)
+        del start
+
+        with open(wadfname, "wb") as wadfile:
+            wadfile.write(struct.pack(WAD_HEADER, *header))
+            for lump in self.lumps:
+                wadfile.write(lump.data)
+            for dir_entry in directory:
+                wadfile.write(struct.pack(WAD_DIR_ENTRY, *dir_entry))
+
+def replace_in_wad(wadfname, lump_name, lump_index, datafile):
+    lump_index = int(lump_index)
+    wadfile = WADFile.from_wad(wadfname)
+    with open(datafile, "rb") as datafile:
+        data = datafile.read()
+        wadfile.replace(lump_name, lump_index, data)
+    wadfile.save_wad(wadfname)
+
+if __name__ == "__main__":
+    replace_in_wad(*argv[1:])

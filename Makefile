@@ -67,6 +67,7 @@ $(FREEDM): wadinfo_freedm.txt subdirs
 	@mkdir -p $(WADS)
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
+	scripts/replace-lump $(FREEDM) PLAYPAL 0 lumps/newpal.lmp
 
 #---------------------------------------------------------
 # phase 1 (udoom) iwad
@@ -78,6 +79,7 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs
 	@mkdir -p $(WADS)
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase1.txt $@
+	scripts/replace-lump $(FREEDOOM1) PLAYPAL 0 lumps/newpal.lmp
 
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
@@ -89,6 +91,7 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
+	scripts/replace-lump $(FREEDOOM2) PLAYPAL 0 lumps/newpal.lmp
 
 %.html: %.adoc
 	$(ASCIIDOC) $(ADOCOPTS) $<
