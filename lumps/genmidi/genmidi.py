@@ -123,7 +123,7 @@ def decode_voice(data, name):
 
     result["m_ksl_volume"] = result["m_ksl"] | result["m_volume"]
     result["c_ksl_volume"] = result["c_ksl"] | result["c_volume"]
-    result["name"] = name.decode("ascii").rstrip("\0")
+    result["name"] = name.decode("ascii").rstrip("\0").rstrip()
 
     return result
 
