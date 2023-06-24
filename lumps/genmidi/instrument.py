@@ -9,6 +9,8 @@ import sys
 import sbi_file
 import a2i_file
 
+DO_OPL2_CHECK = False
+
 # Check the specified instrument data is OPL2-compatible and does not
 # use any OPL3 features. Returns an error message, or 'None' if data
 # is valid.
@@ -50,7 +52,8 @@ def load_instrument(filename):
     else:
         raise Exception("Unknown instrument file type: '%s'" % filename)
 
-    check_opl2(filename, result)
+    if DO_OPL2_CHECK:
+        check_opl2(filename, result)
 
     return result
 
