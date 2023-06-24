@@ -35,7 +35,7 @@ def read(filename):
         raise Exception("Invalid header for SBI file!")
 
     instr_data = data[36:]
-    result = {"name": name.decode("ascii").rstrip("\0")}
+    result = {"name": name.decode("ascii").rstrip("\0").rstrip()}
 
     for i in range(len(FIELDS)):
         result[FIELDS[i]], = struct.unpack("B", instr_data[i : i + 1])
