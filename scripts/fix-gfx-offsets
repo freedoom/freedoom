@@ -20,7 +20,7 @@ class Graphic(object):
         reader = png.Reader(file=open(self.filepath, "rb"))
         for chunk in reader.chunks():
             if chunk[0] == "grAb":
-                self.xoffset, self.yoffset = struct.unpack(">II", chunk[1])
+                self.xoffset, self.yoffset = struct.unpack(">ii", chunk[1])
                 self.has_offset = True
 
 
