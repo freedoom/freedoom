@@ -78,7 +78,7 @@ def encode_instrument(instrument):
     else:
         fixed_note = 0
 
-    header = struct.pack("<hBB", flags, 128, fixed_note)
+    header = struct.pack("<hBB", flags, 128 + instrument.tune, fixed_note)
 
     return header + instr1_data + instr2_data
 
@@ -149,7 +149,8 @@ def decode_instrument(data, name):
         fixed_note = None
 
     return Instrument(
-        voice1, voice2, off1=offset1, off2=offset2, note=fixed_note
+        voice1, voice2, off1=offset1, off2=offset2, note=fixed_note,
+        tune=finetune - 128
     )
 
 

@@ -56,7 +56,7 @@ def load_instrument(filename):
 
 
 class Instrument:
-    def __init__(self, file1, file2=None, off1=0, off2=0, note=None):
+    def __init__(self, file1, file2=None, off1=0, off2=0, note=None, tune=0):
         self.voice1 = load_instrument(file1)
 
         if file2 is not None:
@@ -67,6 +67,7 @@ class Instrument:
         self.fixed_note = note
         self.offset1 = off1
         self.offset2 = off2
+        self.tune = tune
 
 
 NullInstrument = Instrument("dummy.sbi")
