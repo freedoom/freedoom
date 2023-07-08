@@ -50,6 +50,7 @@ Duration = 3
 # comment. Comment also indicates when the run was done - ideally
 # this should be re-done for every new release. Times are rounded
 # to nearest half-minute.
+#ifdef PHASE1
 par  1 1   30  # 00:30 - Voros for v0.12 - 2017/03
 par  1 2  120  # 02:00 - Voros for v0.12 - 2017/03
 par  1 3  150  # 02:30 - Voros for v0.12 - 2017/03
@@ -77,6 +78,7 @@ par  3 6  180  # 03:00 - Voros for v0.12 - 2017/03
 par  3 7  300  # 05:00 - Voros for v0.12 - 2017/03
 par  3 8   60  # 01:00 - Voros for v0.12 - 2017/03
 par  3 9  570  # 09:30 - Voros for v0.12 - 2017/03
+#else
 par  1   30  # 00:30  - Voros for v0.11 - 2017/02
 par  2   90  # 01:30  - Voros for v0.11 - 2017/02
 par  3  120  # 02:00  - Voros for v0.11 - 2017/02
@@ -109,6 +111,7 @@ par 29  300  # 05:00  - Voros for v0.11 - 2017/02
 par 30   60  # 01:00  - Voros for v0.11 - 2017/02
 par 31   60  # 01:00  - Voros for v0.11 - 2017/02
 par 32  210  # 03:30  - Voros for v0.11 - 2017/02
+#endif
 #else
 # Par times don't matter so much for FreeDM, just set all to zero.
 par  1 0
