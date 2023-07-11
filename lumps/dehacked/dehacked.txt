@@ -288,7 +288,7 @@ HUSTR_18 = DM18: Deserted Courtyard
 HUSTR_19 = DM19: Tech Isle
 HUSTR_20 = DM20: Warehouse
 HUSTR_21 = DM21: Refinery
-HUSTR_22 = DM22: Fourplay
+HUSTR_22 = DM22: Military depot
 HUSTR_23 = DM23: Confrontation
 HUSTR_24 = DM24: Flooded Base
 HUSTR_25 = DM25: Mansion Yard
@@ -298,7 +298,7 @@ HUSTR_28 = DM28: Weapons Factory
 HUSTR_29 = DM29: Unusual Territory
 HUSTR_30 = DM30: Last Man Standing
 HUSTR_31 = DM31: Desolated Fort
-HUSTR_32 = DM32: Chocolate
+HUSTR_32 = DM32: Fourplay
 #else
 HUSTR_1 = MAP01: Hydroelectric Plant
 HUSTR_2 = MAP02: Filtration Tunnels
