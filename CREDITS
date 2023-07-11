@@ -803,7 +803,7 @@ D: sprites: technospider reshading
 S: northivanastan
 N: Ivan Stanton
 E: northivanastan@gmail.com
-D: musics: d_e1m5
+D: musics: d_e1m5, d_e4m1, d_e4m8, d_e4m9
 
 S: MothraMaster
 D: sprites: Zombieman/Shotgunners boots update
@@ -965,6 +965,15 @@ E: owlgal69@protonmail.com
 W: https://owly.fans
 D: Freedoom website
 
+S: Matzu
+D: musics: d_e4m3
+
+S: ZeMystic
+D: musics: d_e4m6
+
+S: R0rque
+D: musics: d_e4m2
+
 S: rostuhan
 E: rostuhan123@gmail.com
-D: D_DM07 and D_DM13 music
+D: musics: d_dm07, d_dm13
