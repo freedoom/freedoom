@@ -547,7 +547,7 @@ D: levels
 N: Alexandre-Xavier Labonté-Lamoureux
 S: AXDOOMER
 E: alexandrexavier@live.ca
-D: patches
+D: patches, levels, graphics, sprites
 
 N: Daniel Jewell
 S: Jewellds
@@ -976,4 +976,4 @@ D: musics: d_e4m2
 
 S: rostuhan
 E: rostuhan123@gmail.com
-D: musics: d_dm07
+D: musics: d_dm07, d_dm13
