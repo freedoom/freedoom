@@ -11,6 +11,8 @@ DEUTEX_BASIC_ARGS=-v0 -rate accept
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 NODE_BUILDER=ZenNode
 NODE_BUILDER_LEVELS=e?m? dm?? map??
+LEGACY_TRANSPARENCY_INDEX=255
+LEGACY_TRANSPARENCY_REPLACEMENT=133
 
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
@@ -18,7 +20,7 @@ FREEDM=$(WADS)/freedm.wad
 
 OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 
-.PHONY: clean dist
+.PHONY: clean dist pngs-modified-check
 
 all: deutex-check $(OBJS)
 
@@ -55,6 +57,12 @@ deutex-check:
 	echo "deutex can be downloaded from https://github.com/Doom-Utils/deutex."; \
 	echo "The full path to duetex can be specified by passing"; \
 	echo "DEUTEX=/the/path/to/deutex to make when building Freedoom."; \
+	exit 1; }
+
+# Make sure that no PNG files are modified if scripts are to modify them.
+pngs-modified-check:
+	@{ ! git status -s | grep -q \\.png$ ; }  || { \
+	echo "PNG fix targets can not be run if there are modified PNGs." ; \
 	exit 1; }
 
 #---------------------------------------------------------
@@ -180,8 +188,34 @@ fix-vanilla-compliance:
 fix-gfx-offsets:
 	scripts/fix-gfx-offsets sprites/*.png
 
+# Overwrite PNGs with what deutex extracts from the WADs produced.
+fix-deutex-pngs: pngs-modified-check
+	scripts/fix-deutex-pngs $(OBJS)
+
+# For each PNG replace the legacy transparency index with a similar color, but
+# only if the PNG matches the playpal palette specified. It may be helpful to
+# run target fix-deutex-pngs before this one.
+fix-legacy-transparency-pngs: pngs-modified-check
+	scripts/map-color-index -p lumps/playpal/playpal-base.lmp . \
+		$(LEGACY_TRANSPARENCY_INDEX) $(LEGACY_TRANSPARENCY_REPLACEMENT)
+
+# Fix targets that fix PNGs. Note that because of the interaction between the
+# scripts that are run it can be necessary to run this more than once:
+#	make  # Optional, but make sure the IWADs (wads dir) is up-to-date.
+#   make fix-pngs
+#   git commit -m 'Fix the PNGs' -- '*.png'  # So the tree is clean for the next run.
+#	make  # Required - so the IWADs are updated.
+#   make fix-pngs
+#   git commit --amend --no-edit -- '*.png'
+#	make  # Optional - the PNGs should be stable.
+#	make fix-pngs  # Optional - should not have an effect.
+# The final invocation of "fix-pngs" is not needed, but doing so, and seeing
+# a clean build tree, is reassuring. If "fix-pngs" needs to be run more than
+# twice then something is wrong.
+fix-pngs: fix-deutex-pngs fix-legacy-transparency-pngs
+
 # Run all fixes. Add fix-* targets above, and then as a dependency here.
-fix: fix-vanilla-compliance
+fix: fix-vanilla-compliance fix-pngs
 	@echo
 	@echo "All fixable errors fixed."
 

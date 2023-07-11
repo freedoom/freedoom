@@ -240,36 +240,49 @@ Empiezas un juego con tan solo una pistola, 50 balas y tus puños a los que
 recurrir cuando se acaban. Querrás encontrar un mejor armamento tan pronto como
 sea posible.
 
-[options="header",cols="4,2,5,3,2",valign="middle",width="100%"]
+[options="header",cols="3,1,5",valign="middle",width="100%"]
 |==========================
-| Arma | Tecla | Descripción | | Munición
+| Arma | Tecla | Descripción
 | Fist | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
-monstruos con tus manos desnudas.  | | Ninguna
-| Angle Grinder | 1 | Diseñada para cortar a través del metal, pero la
+monstruos con tus manos desnudas. Munición: Ninguna
+| Angle Grinder +
+image:../sprites/csawa0.png[Image] |
+1 | Diseñada para cortar a través del metal, pero la
 amoladora angular funciona igual de bien como arma cuerpo a cuerpo para cortar
-a través de la carne.  | image:../sprites/csawa0.png[Image] | Ninguna
+a través de la carne. Munición: Ninguna
 | Handgun | 2 | Tu arma inicial. Unos cuantos disparos derribaran monstruos de
 bajo nivel, pero es mejor obtener algo mejor antes de confrontar oponentes más
-duros.  | | Balas
-| Pump-action Shotgun | 3 | El arma principal; dispara siete perdigones en un
+duros. Munición: Balas
+| Pump-action Shotgun +
+image:../sprites/shota0.png[Image] |
+3 | El arma principal; dispara siete perdigones en un
 estrecho grupo, y es efectiva tanto a corto como largo alcance contra enemigos
-de nivel bajo y medio.  | image:../sprites/shota0.png[Image] | Perdigones
-| Double-barrelled Shotgun | 3 | El Doble de poderosa que la escopeta, pero
+de nivel bajo y medio. Munición:Perdigones
+| Double-barrelled Shotgun +
+image:../sprites/sgn2a0.png[Image] |
+3 | El Doble de poderosa que la escopeta, pero
 menos efectiva a cortas distancias; Es Buena a corto alcance contra grupos de
-enemigos.  | image:../sprites/sgn2a0.png[Image] | Perdigones
-| Minigun | 4 | Conceptualmente es una versión mucha más rápida de la pistola
-básica, pero consume munición mucho más rápido.  |
-image:../sprites/mguna0.png[Image] | Balas
-| Missile Launcher | 5 | Dispara misiles explosivos que son efectivos contra
-monstruos de alto nivel. ¡Ten cuidado de no ser atrapado en la explosión!  |
-image:../sprites/launa0.png[Image] | Misiles
-| Polaric Energy Cannon | 6 | Produce un continuo flujo de proyectiles de
-energía polarica. Los cuales son efectivos contra monstruos de alto nivel.  |
-image:../sprites/plasa0.png[Image] | Energía
-| SKAG 1337 | 7 | Un arma experimental que lanza una bola orbe de energía que
+enemigos. Munición: Perdigones
+| Minigun +
+image:../sprites/mguna0.png[Image] |
+4 | Conceptualmente es una versión mucha más rápida de la pistola
+básica, pero consume munición mucho más rápido.  Munición: Balas
+| Missile Launcher +
+image:../sprites/launa0.png[Image] |
+5 | Dispara misiles explosivos que son efectivos contra
+monstruos de alto nivel. ¡Ten cuidado de no ser atrapado en la explosión!
+Munición: Misiles
+| Polaric Energy Cannon +
+image:../sprites/plasa0.png[Image] |
+6 | Produce un continuo flujo de proyectiles de
+energía polarica. Los cuales son efectivos contra monstruos de alto nivel.
+Munición: Energía
+| SKAG 1337 +
+image:../sprites/bfuga0.png[Image] |
+7 | Un arma experimental que lanza una bola orbe de energía que
 hace una gran cantidad de daño, además de que daña otros enemigos en la
-proximidad. Lenta para disparar, pero increiblemente poderosa.  |
-image:../sprites/bfuga0.png[Image] | Energía
+proximidad. Lenta para disparar, pero increiblemente poderosa.
+Munición: Energía
 |==========================
 
 Presiona la Tecla numerada en el teclado para cambiar al arma correspondiente
@@ -348,39 +361,39 @@ blindado pesado si puedes encontrar uno.
 También puedes encontrar cualquiera de estos objetos especiales mientras
 exploras:
 
-[cols="2,1,5",width="80%",align="center",valign="middle"]
+[cols="1,2",width="90%",align="center",valign="middle"]
 |==========================
-| **Keys** |
+| **Keys** +
 image:../sprites/bkeya0.png[Blue Key]
-image:../sprites/bskua0.png[Blue Key]
 image:../sprites/rkeya0.png[Red Key]
+image:../sprites/ykeya0.png[Yellow Key] +
+image:../sprites/bskua0.png[Blue Key]
 image:../sprites/rskua0.png[Red Key]
-image:../sprites/ykeya0.png[Yellow Key]
 image:../sprites/yskua0.png[Yellow Key] |
 Permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
 Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
 acceder a zonas secretas.
-| **Night Vision Goggles** |
+| **Night Vision Goggles** +
 image:../sprites/pvisa0.png[Night Vision Goggles] |
 Te permiten ver en la obscuridad por un tiempo limitado.
-| **Ultra-Overdrive Sphere** |
+| **Ultra-Overdrive Sphere** +
 image:../sprites/megaa0.png[Ultra-Overdrive Sphere] |
 Maximiza tu salud y armadura hasta el 200%
-| **Tactical Survey Map** |
+| **Tactical Survey Map** +
 image:../sprites/pmapa0.png[Tactical Survey Map] |
 Desbloquea todas las áreas del mapa, incluidas algunas áreas secretas que
 pueden no ser inmediatamente visibles.
-| **Hazard Suit** |
+| **Hazard Suit** +
 image:../sprites/suita0.png[Hazard Suit] |
 Te protege de la radiación de los pisos dañinos, por un tiempo limitado.
-| **Strength Power-Up** |
+| **Strength Power-Up** +
 image:../sprites/pstra0.png[Strength Power-Up] |
 Incrementa tu salud al 100% y mejora tus puños para que hagan 10 veces su daño
 normal, hasta el final del nivel.
-| **Stealth Sphere** |
+| **Stealth Sphere** +
 image:../sprites/pinsa0.png[Stealth Sphere] |
 Te hace casi invisible por tiempo limitado.
-| **Invulnerability Sphere** |
+| **Invulnerability Sphere** +
 image:../sprites/pinva0.png[Invulnerability Sphere] |
 Te hace inmune a todo el daño por tiempo limitado.
 |==========================
@@ -391,75 +404,75 @@ Los niveles están llenos de monstruos que no tienen otro objetivo más que
 impedir que completes tu misión. Aquí hay una selección de algunos de estos
 monstruos con los que puedes encontrarte.
 
-[frame="none",cols="2,6,3",valign="middle",grid="none",align="center",width="100%"]
+[frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
 |==========================
-| **Zombie** |
+| **Zombie** +
 Estas criaturas no muertas están armadas con una pistola y tienen la intención
 de destruirte. Sueltan un cargador de balas cuando muere. |
 image:images/monster-zombie.png[Zombie,100,100,width=100%]
-| **Shotgun Zombie** |
+| **Shotgun Zombie** +
 Estos muchachos cambiaron su pistola por una escopeta y tienen mucho más
 impacto. Sueltan una escopeta cuando mueren. |
 image:images/monster-shotgun-zombie.png[Shotgun Zombie,100,100,width=100%]
-| **Minigun Zombie** |
+| **Minigun Zombie** +
 Tan pronto como estés a la vista de uno de estos, activaran su ametralladora y
 seguirá disparando hasta que estés muerto. Lo mejor es ponerse a cubierto
 rápidamente o eliminarlo. Sueltan una ametralladora cuando mueren. |
 image:images/monster-minigun-zombie.png[Minigun Zombie,100,100,width=100%]
-| **Serpentipede** |
+| **Serpentipede** +
 Serpientes soldado que fungen como la infantería de la invasión alienígena.
 Deja que se acerquen y te harán trizas; a distancia, en cambio, lloverán bolas
 de fuego. |
 image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
-| **Flesh Worm** |
+| **Flesh Worm** +
 Resistentes y rápidos, estos gusanos atacan a corta distancia y necesitan
 varios disparos de escopeta para derribarlos. Lo mejor es quedarse atrás. |
 image:images/monster-flesh-worm.png[Flesh Worm,100,100,width=100%]
-| **Stealth Worm** |
+| **Stealth Worm** +
 A estas variantes de los gusanos de carne se les han dado habilidades de sigilo
 que las hacen prácticamente invisibles. |
 image:images/monster-stealth-worm.png[Stealth Worm,100,100,width=100%]
-| **Hatchling** |
+| **Hatchling** +
 Larvas alienígenas flotantes que cargan desde la distancia. |
 image:images/monster-hatchling.png[hatchling,100,100,width=100%]
-| **Matribite** |
+| **Matribite** +
 La madre de las larvas se asegurará de que siempre tengas más de sus bebés con
 los que lidiar. |
 image:images/monster-matribite.png[matribite,100,100,width=100%]
-| **Trilobite** |
+| **Trilobite** +
 Estas criaturas voladoras con forma de orbe escupen bolas de fuego y muerden si
 te acercas demasiado. |
 image:images/monster-trilobite.png[Trilobite,100,100,width=100%]
-| **Pain Bringer** |
+| **Pain Bringer** +
 100% musculo, estos tipos necesitan al menos tres disparos de cohetes para
 derribarlos y, mientras lo intentas, te bañarán con proyectiles de energía. |
 image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
-| **Pain Lord** |
+| **Pain Lord** +
 Por si el Pain Bringer no fuera lo suficientemente duro, este puede resistir
 cinco explosiones de cohetes. |
 image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
-| **Octaminator** |
+| **Octaminator** +
 Rápidos, resistentes y disparan misiles autoguiados. No te metas en un
 combate de boxeo con uno de estos tipos. |
 image:images/monster-octaminator.png[Octaminator,100,100,width=100%]
-| **Necromancer** |
+| **Necromancer** +
 Si no te está prendiendo fuego, está deshaciendo todo tu arduo trabajo al traer
 a sus amigos de entre los muertos. |
 image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
-| **Combat Slug** |
+| **Combat Slug** +
 Estas súper-babosas diseñadas genéticamente han sido equipadas con lanzallamas
 de larga distancia, convirtiéndolas prácticamente en tanques vivientes y
 deslizantes. |
 image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
-| **Technospider** |
+| **Technospider** +
 Estas criaturas arácnidas han sido equipadas con cañones de energía polar, lo
 que las convierte en un desafío mortal. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
-| **Large Technospider** |
+| **Large Technospider** +
 Este tanque con patas está equipado con una ametralladora de fuego rápido y
 requerirá mucho esfuerzo para derribarlo. |
 image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
-| **Assault Tripod** |
+| **Assault Tripod** +
 La combinación definitiva de tecnología militar e ingeniería genética, estas
 criaturas de tres patas se mueven rápidamente, están fuertemente blindadas y
 equipadas con un lanzamisiles que querrás evitar. |

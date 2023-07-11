@@ -50,7 +50,7 @@ _Esc_ key on your keyboard.
 
 image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]
 
-[cols="1,4",width="90%",align="center",valign="middle"]
+[cols="2,4",width="100%",align="center",valign="middle"]
 |==========================
 | <<newgame,**New game**>> | Start a new game, abandoning the current game (if you’re
 already playing).
@@ -228,44 +228,47 @@ You start the game with only a handgun, 50 bullets and your fists to fall back
 on once they run out. You’ll want to find yourself some better weaponry as
 soon as possible.
 
-[options="header",cols="4,2,5,3,2",valign="middle",width="100%"]
+[options="header",cols="3,1,5",valign="middle",width="100%"]
 |==========================
-| Weapon | Key | Description | | Ammo
+| Weapon | Key | Description
 | **Fist** | 1 | If you have no ammunition, you can always fall back on punching the
-monsters with your bare hands. | | None
-| **Angle Grinder** | 1 | Designed for cutting through metal, the angle grinder
-also works well as a melee weapon for cutting through flesh. |
+monsters with your bare hands. Ammo: None
+| **Angle Grinder** +
 image:../sprites/csawa0.png[Angle Grinder] |
-None
+1 | Designed for cutting through metal, the angle grinder
+also works well as a melee weapon for cutting through flesh. Ammo: None
 | **Handgun** | 2 | Your starter weapon. A few shots will take down low-level
-monsters but it’s best to upgrade before taking on any tougher opponents. | | Bullets
-| **Pump-action Shotgun** | 3 | The main “workhorse” weapon; fires seven pellets
-in a tight cluster and is effective over both short and long ranges against
-low- and medium-level monsters. |
+monsters but it’s best to upgrade before taking on any tougher opponents.
+Ammo: Bullets
+| **Pump-action Shotgun** +
 image:../sprites/shota0.png[Pump-action Shotgun] |
-Shells
-| **Double-barrelled Shotgun** | 3 | Twice as powerful as the pump-action shotgun
-but less effective at long ranges; good at short range against crowds of
-enemies. |
+3 | The main “workhorse” weapon; fires seven pellets
+in a tight cluster and is effective over both short and long ranges against
+low- and medium-level monsters. Ammo: Shells
+| **Double-barrelled Shotgun** +
 image:../sprites/sgn2a0.png[Double-barrelled Shotgun] |
-Shells
-| **Minigun** | 4 | Conceptually like a faster version of the basic handgun, but
-eats ammo much more quickly. |
+3 | Twice as powerful as the pump-action shotgun
+but less effective at long ranges; good at short range against crowds of
+enemies. Ammo: Shells
+| **Minigun** +
 image:../sprites/mguna0.png[Minigun] |
-Bullets
-| **Missile Launcher** | 5 | Fires exploding missiles which are effective against
-higher-level monsters. Be careful not to get caught in the blast! |
+4 | Conceptually like a faster version of the basic handgun, but
+eats ammo much more quickly. Ammo: Bullets
+| **Missile Launcher** +
 image:../sprites/launa0.png[Missile Launcher] |
-Missiles
-| **Polaric Energy Cannon** | 6 | Produces a continuous stream of polaric energy
-projectiles which are very effective against higher-level monsters. |
+5 | Fires exploding missiles which are effective against
+higher-level monsters. Be careful not to get caught in the blast!
+Ammo: Missiles
+| **Polaric Energy Cannon** +
 image:../sprites/plasa0.png[Polaric Energy Cannon] |
-Energy
-| **SKAG 1337** | 7 | Experimental weapon that launches a energy ball that does a
-huge amount of damage, plus also damages other enemies in the vicinity.
-Slow to fire, but incredibly powerful. |
+6 | Produces a continuous stream of polaric energy
+projectiles which are very effective against higher-level monsters.
+Ammo: Energy
+| **SKAG 1337** +
 image:../sprites/bfuga0.png[SKAG 1337] |
-Energy
+7 | Experimental weapon that launches a energy ball that does a
+huge amount of damage, plus also damages other enemies in the vicinity.
+Slow to fire, but incredibly powerful. Ammo: Energy
 |==========================
 
 Pressing the numbered key on the keyboard switches to the given weapon (if it
@@ -340,40 +343,40 @@ a very good idea to get your hands on a heavy armor vest if you can locate one.
 
 You may also encounter any one of these special items while exploring:
 
-[cols="2,1,5",width="80%",align="center",valign="middle"]
+[cols="1,2",width="90%",align="center",valign="middle"]
 |==========================
-| **Keys** |
+| **Keys** +
 image:../sprites/bkeya0.png[Blue Key]
-image:../sprites/bskua0.png[Blue Key]
 image:../sprites/rkeya0.png[Red Key]
+image:../sprites/ykeya0.png[Yellow Key] +
+image:../sprites/bskua0.png[Blue Key]
 image:../sprites/rskua0.png[Red Key]
-image:../sprites/ykeya0.png[Yellow Key]
 image:../sprites/yskua0.png[Yellow Key] |
 Allow you to open certain locked doors and activate locked switches.
 Usually essential to be able to progress, although they sometimes allow
 access to secret areas.
-| **Night Vision Goggles** |
+| **Night Vision Goggles** +
 image:../sprites/pvisa0.png[Night Vision Goggles] |
 Allow you to see in the dark for a limited time.
-| **Ultra-Overdrive Sphere** |
+| **Ultra-Overdrive Sphere** +
 image:../sprites/megaa0.png[Ultra-Overdrive Sphere] |
 Maxes you out to 200% health and armor.
-| **Tactical Survey Map** |
+| **Tactical Survey Map** +
 image:../sprites/pmapa0.png[Tactical Survey Map] |
 Unlocks all areas of the map, including some secret areas that may not be
 immediately visible.
-| **Hazard Suit** |
+| **Hazard Suit** +
 image:../sprites/suita0.png[Hazard Suit] |
 Protects you from the harmful radiation of damaging floors, for a limited
 time.
-| **Strength Power-Up** |
+| **Strength Power-Up** +
 image:../sprites/pstra0.png[Strength Power-Up] |
 Increases your health back to 100% and enhances your fists to 10x their
 normal damage, until the end of level.
-| **Stealth Sphere** |
+| **Stealth Sphere** +
 image:../sprites/pinsa0.png[Stealth Sphere] |
 Makes you almost invisible for a limited time.
-| **Invulnerability Sphere** |
+| **Invulnerability Sphere** +
 image:../sprites/pinva0.png[Invulnerability Sphere] |
 Makes you immune to all damage for a limited time.
 |==========================
@@ -405,73 +408,73 @@ The levels are filled with monsters who have no other goal apart from stopping
 you from completing your mission. Here’s a selection of some of these monsters
 who you can expect to encounter.
 
-[frame="none",cols="2,6,3",valign="middle",grid="none",align="center",width="100%"]
+[frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
 |==========================
-| **Zombie** |
+| **Zombie** +
 These undead creatures are armed with a pistol and intent on your destruction.
 Drops a clip of bullets when killed. |
 image:images/monster-zombie.png[Zombie,100,100,width=100%]
-| **Shotgun Zombie** |
+| **Shotgun Zombie** +
 These guys traded their pistol for a shotgun and pack far more of a punch.
 Drops a shotgun when killed. |
 image:images/monster-shotgun-zombie.png[Shotgun Zombie,100,100,width=100%]
-| **Minigun Zombie** |
+| **Minigun Zombie** +
 As soon as you’re in sight of one of these, he’ll lock on with his minigun and
 keep on firing until you’re dead. It’s best to take cover quickly or take him
 out. Drops a minigun when killed. |
 image:images/monster-minigun-zombie.png[Minigun Zombie,100,100,width=100%]
-| **Serpentipede** |
+| **Serpentipede** +
 Serpent footsoldiers of the alien invasion. Let them get close and they’ll
 tear you to shreds; at a distance they’ll instead rain down fireballs. |
 image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
-| **Flesh Worm** |
+| **Flesh Worm** +
 Tough and fast-moving, these worms attack at close range and take several
 shotgun blasts to take down. It’s best to keep back. |
 image:images/monster-flesh-worm.png[Flesh Worm,100,100,width=100%]
-| **Stealth Worm** |
+| **Stealth Worm** +
 These flesh worm variants have been given stealth abilities which make them
 practically invisible. |
 image:images/monster-stealth-worm.png[Stealth Worm,100,100,width=100%]
-| **Hatchling** |
+| **Hatchling** +
 Floating alien larvae which charge from a distance. |
 image:images/monster-hatchling.png[hatchling,100,100,width=100%]
-| **Matribite** |
+| **Matribite** +
 The mother of the Hatchlings will ensure you always have more of her babies
 to deal with. |
 image:images/monster-matribite.png[matribite,100,100,width=100%]
-| **Trilobite** |
+| **Trilobite** +
 These flying orb-like creatures spit fireballs and bite if you get too
 close. |
 image:images/monster-trilobite.png[Trilobite,100,100,width=100%]
-| **Pain Bringer** |
+| **Pain Bringer** +
 100% muscle, these guys take at least three rocket blasts to take down, and
 while you’re trying they’ll shower you with energy projectiles. |
 image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
-| **Pain Lord** |
+| **Pain Lord** +
 If the Pain Bringer wasn’t tough enough, this one will take five rocket
 blasts. |
 image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
-| **Octaminator** |
+| **Octaminator** +
 Fast moving, tough, and fires homing missiles. Do not get into a boxing
 match with one of these guys. |
 image:images/monster-octaminator.png[Octaminator,100,100,width=100%]
-| **Necromancer** |
+| **Necromancer** +
 If he’s not setting you on fire, he’s undoing all your hard work by bringing
 his friends back from the dead. |
 image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
-| **Combat Slug** |
+| **Combat Slug** +
 These genetically-engineered super-slugs have been fitted with long distance
 flame throwers, practically making them into living, slithering tanks. |
 image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
-| **Technospider** |
+| **Technospider** +
 These spider creatures have been equipped with polaric energy cannons, making
 them a deadly challenge. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
-| **Large Technospider** |
+| **Large Technospider** +
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
 of effort to bring down. |
 image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
-| **Assault Tripod** |
+| **Assault Tripod** +
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
 missile launcher that you’ll want to avoid. |
