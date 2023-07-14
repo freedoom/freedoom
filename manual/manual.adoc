@@ -310,10 +310,10 @@ you over 100% and up to 200% health.
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 10% | 25% | 100%
-| image:../sprites/bon1a0.png[1% Health Bonus] |
-image:../sprites/stima0.png[Small Health Pack] |
-image:../sprites/media0.png[Large Health Pack] |
-image:../sprites/soula0.png[Overdrive Sphere]
+| image:../sprites/bon1a0.png[Ectoplasmic Polyp] |
+image:../sprites/stima0.png[Regenerative Nanobot Canister] |
+image:../sprites/media0.png[Regenerative Nano-Surgery Kit] |
+image:../sprites/soula0.png[Ectoplasmic Surge]
 |==========================
 
 [[armor]]
@@ -324,9 +324,9 @@ You start with 0% armor and can increase this up to 200% by collecting bonuses.
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 100% | 200%
-| image:../sprites/bon2a0.png[1% Armor Bonus] |
-image:../sprites/arm1a0.png[Light Armor Vest] |
-image:../sprites/arm2a0.png[Heavy Armor Vest]
+| image:../sprites/bon2a0.png[Polaric Energy Field Emitter] |
+image:../sprites/arm1a0.png[Polaric Shielding Vest] |
+image:../sprites/arm2a0.png[Attuned Polaric Energy Armor]
 |==========================
 
 Normal armor absorbs one third of damage you receive. For example, suppose
@@ -334,9 +334,10 @@ you’re hit by a missile that reduces your health from 100% to 50%. If you’re
 hit by the same missile while wearing 100% armor, your health will reduce to
 only 66%, but you’ll lose 16% armor.
 
-The heavy armor vest has slightly different behavior: in addition to being
-worth 200% armor, it also absorbs half of all damage. For this reason, it’s
-a very good idea to get your hands on a heavy armor vest if you can locate one.
+The attuned armor has slightly different behavior: in addition to being
+worth 200% armor, it also absorbs half of all damage. Because polaric field
+emitters add the same armor type you already have, it may be good to pick
+up the attuned armor vest immediately if you don't already have one.
 
 [[specialitems]]
 === Special Items
@@ -355,30 +356,32 @@ image:../sprites/yskua0.png[Yellow Key] |
 Allow you to open certain locked doors and activate locked switches.
 Usually essential to be able to progress, although they sometimes allow
 access to secret areas.
-| **Night Vision Goggles** +
-image:../sprites/pvisa0.png[Night Vision Goggles] |
+| **Low-Light Goggles** +
+image:../sprites/pvisa0.png[Low-Light Goggles] |
 Allow you to see in the dark for a limited time.
-| **Ultra-Overdrive Sphere** +
-image:../sprites/megaa0.png[Ultra-Overdrive Sphere] |
-Maxes you out to 200% health and armor.
-| **Tactical Survey Map** +
-image:../sprites/pmapa0.png[Tactical Survey Map] |
-Unlocks all areas of the map, including some secret areas that may not be
-immediately visible.
-| **Hazard Suit** +
-image:../sprites/suita0.png[Hazard Suit] |
-Protects you from the harmful radiation of damaging floors, for a limited
-time.
-| **Strength Power-Up** +
-image:../sprites/pstra0.png[Strength Power-Up] |
-Increases your health back to 100% and enhances your fists to 10x their
-normal damage, until the end of level.
-| **Stealth Sphere** +
-image:../sprites/pinsa0.png[Stealth Sphere] |
-Makes you almost invisible for a limited time.
-| **Invulnerability Sphere** +
-image:../sprites/pinva0.png[Invulnerability Sphere] |
-Makes you immune to all damage for a limited time.
+| **Negentropic Surge** +
+image:../sprites/megaa0.png[Negentropic Surge] |
+Maxes you out to 200% health and armor, however little you had before.
+| **Area Survey Map** +
+image:../sprites/pmapa0.png[Area Survey Map] |
+Reveals unexplored areas of the map, including some secret areas that
+may not be immediately visible.
+| **Rescue Operations Suit** +
+image:../sprites/suita0.png[Rescue Operations Suit] |
+Protects you from heat, toxins and radiation from damaging floors,
+for a limited time.
+| **Strength Symbiote** +
+image:../sprites/pstra0.png[Strength Symbiote] |
+Increases your health back to 100%, and enhances your fists to 10x their
+normal damage until the end of level.
+| **Invisibility Cloak** +
+image:../sprites/pinsa0.png[Invisibility Cloak] |
+Makes you almost invisible for a limited time. Monsters still detect
+your presence, but they'll find it much harder to aim.
+| **Vanguard Device** +
+image:../sprites/pinva0.png[Vanguard Device] |
+Makes you immune to all damage for a limited time, allowing you to get
+past overwhelming defences and unavoidable traps.
 |==========================
 
 === Color blind accessibility
@@ -451,7 +454,7 @@ image:images/monster-trilobite.png[Trilobite,100,100,width=100%]
 while you’re trying they’ll shower you with energy projectiles. |
 image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
 | **Pain Lord** +
-If the Pain Bringer wasn’t tough enough, this one will take five rocket
+If the Pain Bringer wasn’t tough enough, this one can take five rocket
 blasts. |
 image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
 | **Octaminator** +
@@ -679,12 +682,12 @@ number of cheats that you can turn to:
 | **IDCLEVxy** | Warp to CxMy (Phase 1) or MAPxy (Phase 2).
 | **IDMUSxy** | Change music to that of CxMy (Phase 1) or MAPxy (Phase 2).
 | **IDCHOPPERS** | Gives the angle grinder weapon.
-| **IDBEHOLDV** | Gives the invulnerability sphere powerup.
+| **IDBEHOLDV** | Gives the vanguard device powerup.
 | **IDBEHOLDS** | Gives the strength powerup.
-| **IDBEHOLDI** | Gives the stealth sphere powerup.
-| **IDBEHOLDR** | Gives the hazard suit powerup.
-| **IDBEHOLDM** | Gives the tactical survey map.
-| **IDBEHOLDL** | Gives the night vision goggles.
+| **IDBEHOLDI** | Gives the invisibility powerup.
+| **IDBEHOLDR** | Gives the rescue suit powerup.
+| **IDBEHOLDM** | Gives the area survey map.
+| **IDBEHOLDL** | Gives the low-light goggles.
 |==========================
 
 <<<
