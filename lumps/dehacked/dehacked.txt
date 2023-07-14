@@ -153,14 +153,14 @@ STARTUP5========================================================================
 #else
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 #endif
-GOTARMOR = Picked up some basic infantry armor.
-GOTMEGA = Picked up some heavy assault armor.
-GOTHTHBONUS = Picked up a life charge.
-GOTARMBONUS = Picked up an armor charge.
-GOTSTIM = Picked up a small health pack.
-GOTMEDINEED = Picked up a large health pack, just in time!
-GOTMEDIKIT = Picked up a large health pack.
-GOTSUPER = Life surge!
+GOTARMOR = Put on a polaric shielding vest.
+GOTMEGA = Put on the attuned polaric energy armor.
+GOTHTHBONUS = Harvested an ectoplasmic polyp.
+GOTARMBONUS = Connected a polaric field emitter.
+GOTSTIM = Applied a regenerative nanobot canister.
+GOTMEDINEED = Nano-surgeried some really sensitive parts!
+GOTMEDIKIT = Applied a regenerative nano-surgery kit.
+GOTSUPER = Ectoplasmic surge!
 GOTBLUECARD = Picked up a blue passcard.
 GOTYELWCARD = Picked up a yellow passcard.
 GOTREDCARD = Picked up a red passcard.
@@ -173,7 +173,7 @@ GOTINVIS = Invisibility!
 GOTSUIT = Rescue operations suit.
 GOTMAP = Area survey map.
 GOTVISOR = Low-light goggles.
-GOTMSPHERE = Maximum power!
+GOTMSPHERE = Negentropic surge!
 GOTCLIP = Picked up an ammo clip.
 GOTCLIPBOX = Picked up a box of ammo.
 GOTROCKET = Picked up a missile.
