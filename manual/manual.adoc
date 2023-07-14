@@ -311,7 +311,7 @@ you over 100% and up to 200% health.
 |==========================
 | 1% | 10% | 25% | 100%
 | image:../sprites/bon1a0.png[Ectoplasmic Polyp] |
-image:../sprites/stima0.png[Regenerative Nanobot Canister] |
+image:../sprites/stima0.png[Regenerative Nanobot Gauze] |
 image:../sprites/media0.png[Regenerative Nano-Surgery Kit] |
 image:../sprites/soula0.png[Ectoplasmic Surge]
 |==========================
