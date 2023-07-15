@@ -245,10 +245,10 @@ sea posible.
 | Arma | Tecla | Descripción
 | Fist | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
 monstruos con tus manos desnudas. Munición: Ninguna
-| Angle Grinder +
+| Ripsaw +
 image:../sprites/csawa0.png[Image] |
-1 | Diseñada para cortar a través del metal, pero la
-amoladora angular funciona igual de bien como arma cuerpo a cuerpo para cortar
+1 | Diseñada para cortar a través del madera, pero la
+sierra de hender funciona igual de bien como arma cuerpo a cuerpo para cortar
 a través de la carne. Munición: Ninguna
 | Handgun | 2 | Tu arma inicial. Unos cuantos disparos derribaran monstruos de
 bajo nivel, pero es mejor obtener algo mejor antes de confrontar oponentes más
@@ -602,12 +602,10 @@ sugerencias tácticas:
   matándose unos a otros y ahorrarás en municiones.
 
 * Si te encuentras con una horda de gusanos de carne o gusanos sigilosos, la
-  amoladora angular es una gran arma para conservar munición y evitar daños.
+  sierra de hender es una gran arma para conservar munición y evitar daños.
   Los gusanos no pueden atacar mientras están siendo aserrados, y si retrocedes
   hacia cualquier esquina que sea aproximadamente tan ancha o más estrecha que
-  un ángulo recto, solo pueden atacarte uno a la vez. La amoladora angular
-  también funciona bien en trilobites: no pueden atacar mientras reciben daño
-  de ella.
+  un ángulo recto, solo pueden atacarte uno a la vez.
 
 <<<
 
@@ -684,7 +682,7 @@ paredes.
 los enemigos y objetos.
 | **IDCLEVxy** | Teletransportate a CxMy (Phase 1) o MAPxy (Phase 2).
 | **IDMUSxy** | Cambia la música por la de CxMy (Phase 1) o MAPxy (Phase 2).
-| **IDCHOPPERS** | Te da una angle grinder.
+| **IDCHOPPERS** | Te da una sierra de hender.
 | **IDBEHOLDV** | Te da la esfera de invulnerabilidad.
 | **IDBEHOLDS** | Te da una mejora de fuerza.
 | **IDBEHOLDI** | Te da una esfera de sigilo.
