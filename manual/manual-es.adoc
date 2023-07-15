@@ -245,10 +245,10 @@ sea posible.
 | Arma | Tecla | Descripción
 | Fist | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
 monstruos con tus manos desnudas. Munición: Ninguna
-| Angle Grinder +
+| Ripsaw +
 image:../sprites/csawa0.png[Image] |
-1 | Diseñada para cortar a través del metal, pero la
-amoladora angular funciona igual de bien como arma cuerpo a cuerpo para cortar
+1 | Diseñada para cortar a través del madera, pero la
+sierra de hender funciona igual de bien como arma cuerpo a cuerpo para cortar
 a través de la carne. Munición: Ninguna
 | Handgun | 2 | Tu arma inicial. Unos cuantos disparos derribaran monstruos de
 bajo nivel, pero es mejor obtener algo mejor antes de confrontar oponentes más
@@ -325,10 +325,10 @@ de salud.
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 10% | 25% | 100%
-| image:../sprites/bon1a0.png[1% Health Bonus] |
-image:../sprites/stima0.png[Small Health Pack] |
-image:../sprites/media0.png[Large Health Pack] |
-image:../sprites/soula0.png[Overdrive Sphere]
+| image:../sprites/bon1a0.png[Ectoplasmic Polyp] |
+image:../sprites/stima0.png[Regenerative Nanobot Gauze] |
+image:../sprites/media0.png[Regenerative Nano-Surgery Kit] |
+image:../sprites/soula0.png[Ectoplasmic Surge]
 |==========================
 
 [[armor]]
@@ -340,9 +340,9 @@ bonos.
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 100% | 200%
-| image:../sprites/bon2a0.png[1% Armor Bonus] |
-image:../sprites/arm1a0.png[Light Armor Vest] |
-image:../sprites/arm2a0.png[Heavy Armor Vest]
+| image:../sprites/bon2a0.png[Polaric Energy Field Emitter] |
+image:../sprites/arm1a0.png[Polaric Shielding Vest] |
+image:../sprites/arm2a0.png[Attuned Polaric Energy Armor]
 |==========================
 
 La armadura normal absorbe un tercio del daño que recibes. Por ejemplo, supon
@@ -373,28 +373,28 @@ image:../sprites/yskua0.png[Yellow Key] |
 Permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
 Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
 acceder a zonas secretas.
-| **Night Vision Goggles** +
-image:../sprites/pvisa0.png[Night Vision Goggles] |
+| **Low-Light Goggles** +
+image:../sprites/pvisa0.png[Low-Light Goggles] |
 Te permiten ver en la obscuridad por un tiempo limitado.
-| **Ultra-Overdrive Sphere** +
-image:../sprites/megaa0.png[Ultra-Overdrive Sphere] |
+| **Negentropic Surge** +
+image:../sprites/megaa0.png[Negentropic Surge] |
 Maximiza tu salud y armadura hasta el 200%
-| **Tactical Survey Map** +
-image:../sprites/pmapa0.png[Tactical Survey Map] |
+| **Area Survey Map** +
+image:../sprites/pmapa0.png[Area Survey Map] |
 Desbloquea todas las áreas del mapa, incluidas algunas áreas secretas que
 pueden no ser inmediatamente visibles.
-| **Hazard Suit** +
-image:../sprites/suita0.png[Hazard Suit] |
+| **Rescue Operations Suit** +
+image:../sprites/suita0.png[Rescue Operations Suit] |
 Te protege de la radiación de los pisos dañinos, por un tiempo limitado.
-| **Strength Power-Up** +
-image:../sprites/pstra0.png[Strength Power-Up] |
+| **Strength Symbiote** +
+image:../sprites/pstra0.png[Strength Symbiote] |
 Incrementa tu salud al 100% y mejora tus puños para que hagan 10 veces su daño
 normal, hasta el final del nivel.
-| **Stealth Sphere** +
-image:../sprites/pinsa0.png[Stealth Sphere] |
+| **Invisibility Cloak** +
+image:../sprites/pinsa0.png[Invisibility Cloak] |
 Te hace casi invisible por tiempo limitado.
-| **Invulnerability Sphere** +
-image:../sprites/pinva0.png[Invulnerability Sphere] |
+| **Vanguard Device** +
+image:../sprites/pinva0.png[Vanguard Device] |
 Te hace inmune a todo el daño por tiempo limitado.
 |==========================
 
@@ -602,12 +602,10 @@ sugerencias tácticas:
   matándose unos a otros y ahorrarás en municiones.
 
 * Si te encuentras con una horda de gusanos de carne o gusanos sigilosos, la
-  amoladora angular es una gran arma para conservar munición y evitar daños.
+  sierra de hender es una gran arma para conservar munición y evitar daños.
   Los gusanos no pueden atacar mientras están siendo aserrados, y si retrocedes
   hacia cualquier esquina que sea aproximadamente tan ancha o más estrecha que
-  un ángulo recto, solo pueden atacarte uno a la vez. La amoladora angular
-  también funciona bien en trilobites: no pueden atacar mientras reciben daño
-  de ella.
+  un ángulo recto, solo pueden atacarte uno a la vez.
 
 <<<
 
@@ -684,7 +682,7 @@ paredes.
 los enemigos y objetos.
 | **IDCLEVxy** | Teletransportate a CxMy (Phase 1) o MAPxy (Phase 2).
 | **IDMUSxy** | Cambia la música por la de CxMy (Phase 1) o MAPxy (Phase 2).
-| **IDCHOPPERS** | Te da una angle grinder.
+| **IDCHOPPERS** | Te da una sierra de hender.
 | **IDBEHOLDV** | Te da la esfera de invulnerabilidad.
 | **IDBEHOLDS** | Te da una mejora de fuerza.
 | **IDBEHOLDI** | Te da una esfera de sigilo.
