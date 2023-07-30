@@ -227,6 +227,11 @@ rebuild-nodes: $(addprefix levels/,$(addsuffix .wad,$(NODE_BUILDER_LEVELS)))
 	do \
 		$(NODE_BUILDER) $$level -o $$level; \
 	done
+	
+# Update feed.mxl (RSS feed) on the website based on NEWS.adoc. This assumes
+# that the website has the same parent directory as this build.
+news-to-feed: NEWS.adoc
+	scripts/news-to-feed NEWS.adoc ../freedoom.github.io/feed.xml
 
 %.6:
 	$(MAKE) ASCIIDOC_MAN="$(ASCIIDOC_MAN)" -C dist $@
