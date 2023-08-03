@@ -27,6 +27,14 @@ Sprite subnumber = 32773
 Frame 689
 Sprite subnumber = 32773
 
+# The armour fullbright blinking never made sense.
+
+Frame 803
+Sprite subnumber = 1
+
+Frame 805
+Sprite subnumber = 1
+
 # The super shotgun's first frame is 7 tics long before it
 # begins its reload sequence, but the muzzle flash animation
 # totals 9 tics, causing the flash to trail behind the gun.
