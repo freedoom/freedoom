@@ -470,7 +470,7 @@ These genetically-engineered super-slugs have been fitted with long distance
 flame throwers, practically making them into living, slithering tanks. |
 image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 | **Technospider** +
-These spider-like creatures have been equipped with polaric energy weapons,
+These spider-like creatures fire high-capacity polaric energy support weapons,
 making them a deadly challenge. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
 | **Large Technospider** +
