@@ -102,8 +102,8 @@ a la mitad.
 | 2 | **Will This Hurt?** | Nivel de dificultad fácil, una buena elección si
 encuentras _Bring on the Pain_ demasiado desafiante.
 | 3 | **Bring on the Pain.** | El nivel de dificultad default.
-| 4 | **Extreme Carnage.** | Un nivel de dificultad más desafiante, recomendado
-para jugadores experimentados y personas que estén en busca de un desafío.
+| 4 | **Extreme Carnage.** | Recomendado para jugadores mas experimentados
+que estén en busca de un desafío.
 | 5 | **MAYHEM!** | **No Recomendado**. Esto es equivalente a _Extreme Carnage_
 con la excepción de que los ataques de los monstruos son el doble de rápidos, y
 los monstruos asesinados regresan a la vida tras aproximadamente 40 segundos.
@@ -246,7 +246,7 @@ sea posible.
 | Fist | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
 monstruos con tus manos desnudas. Munición: Ninguna
 | Ripsaw +
-image:../sprites/csawa0.png[Image] |
+image:../sprites/csawa0.png[Ripsaw] |
 1 | Diseñada para cortar a través del madera, pero la
 sierra de hender funciona igual de bien como arma cuerpo a cuerpo para cortar
 a través de la carne. Munición: Ninguna
@@ -254,31 +254,31 @@ a través de la carne. Munición: Ninguna
 bajo nivel, pero es mejor obtener algo mejor antes de confrontar oponentes más
 duros. Munición: Balas
 | Pump-action Shotgun +
-image:../sprites/shota0.png[Image] |
+image:../sprites/shota0.png[Pump-action Shotgun] |
 3 | El arma principal; dispara siete perdigones en un
 estrecho grupo, y es efectiva tanto a corto como largo alcance contra enemigos
 de nivel bajo y medio. Munición:Perdigones
 | Double-barrelled Shotgun +
-image:../sprites/sgn2a0.png[Image] |
+image:../sprites/sgn2a0.png[Double-barrelled Shotgun] |
 3 | El Doble de poderosa que la escopeta, pero
 menos efectiva a cortas distancias; Es Buena a corto alcance contra grupos de
 enemigos. Munición: Perdigones
 | Minigun +
-image:../sprites/mguna0.png[Image] |
+image:../sprites/mguna0.png[Minigun] |
 4 | Conceptualmente es una versión mucha más rápida de la pistola
 básica, pero consume munición mucho más rápido.  Munición: Balas
 | Missile Launcher +
-image:../sprites/launa0.png[Image] |
-5 | Dispara misiles explosivos que son efectivos contra
-monstruos de alto nivel. ¡Ten cuidado de no ser atrapado en la explosión!
+image:../sprites/launa0.png[Missile Launcher] |
+5 | Dispara misiles que tratan mucho daño en el impacto, y explotan para matar
+pequeños monstruos cercanos. ¡Ten cuidado de no ser atrapado en la explosión!
 Munición: Misiles
-| Polaric Energy Cannon +
-image:../sprites/plasa0.png[Image] |
+| Polaric Energy Weapon +
+image:../sprites/plasa0.png[Polaric Energy Weapon] |
 6 | Produce un continuo flujo de proyectiles de
 energía polarica. Los cuales son efectivos contra monstruos de alto nivel.
 Munición: Energía
 | SKAG 1337 +
-image:../sprites/bfuga0.png[Image] |
+image:../sprites/bfuga0.png[SKAG 1337] |
 7 | Un arma experimental que lanza una bola orbe de energía que
 hace una gran cantidad de daño, además de que daña otros enemigos en la
 proximidad. Lenta para disparar, pero increiblemente poderosa.
@@ -465,8 +465,8 @@ de larga distancia, convirtiéndolas prácticamente en tanques vivientes y
 deslizantes. |
 image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 | **Technospider** +
-Estas criaturas arácnidas han sido equipadas con cañones de energía polar, lo
-que las convierte en un desafío mortal. |
+Estas criaturas arácnidas han sido equipadas con ametralladoras de energía polar,
+lo que las convierte en un desafío mortal. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
 | **Large Technospider** +
 Este tanque con patas está equipado con una ametralladora de fuego rápido y

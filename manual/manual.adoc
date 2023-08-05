@@ -95,8 +95,8 @@ effectively the same as _Will This Hurt?_, except that damage is halved.
 | 2 | **Will This Hurt?** | Easy skill level, a good choice if you’re
 finding _Bring on the Pain_ too challenging.
 | 3 | **Bring on the Pain.** | The default skill level.
-| 4 | **Extreme Carnage.** | A more challenging skill level, suited more
-for experienced players and people in search of a challenge.
+| 4 | **Extreme Carnage.** | Suited more for more experienced players
+in search of a challenge.
 | 5 | **MAYHEM!** | **Not Recommended**. This is equivalent to
 _Extreme Carnage_ except that monster attacks are up to twice as fast,
 and killed monsters come back to life after around 40 seconds.
@@ -158,7 +158,7 @@ which saves time if you’re repeatedly saving your progress while you play.
 messages shown when you collect an item.
 | **F9** | <<savegame,Quickload>> | Load the game from your _quicksave_ slot.
 | **F10** | Quit Game | Quit the game and return to the operating system.
-| **F11** | Brightness | Toggle the on-screen brightness level.
+| **F11** | Brightness | Cycle through the in-game brightness levels.
 |==========================
 
 <<<
@@ -256,11 +256,11 @@ image:../sprites/mguna0.png[Minigun] |
 eats ammo much more quickly. Ammo: Bullets
 | **Missile Launcher** +
 image:../sprites/launa0.png[Missile Launcher] |
-5 | Fires exploding missiles which are effective against
-higher-level monsters. Be careful not to get caught in the blast!
+5 | Fires missiles that deal a lot of damage on impact, then explode to take
+out any smaller monsters nearby. Be careful not to get caught in the blast!
 Ammo: Missiles
-| **Polaric Energy Cannon** +
-image:../sprites/plasa0.png[Polaric Energy Cannon] |
+| **Polaric Energy Weapon** +
+image:../sprites/plasa0.png[Polaric Energy Weapon] |
 6 | Produces a continuous stream of polaric energy
 projectiles which are very effective against higher-level monsters.
 Ammo: Energy
@@ -470,8 +470,8 @@ These genetically-engineered super-slugs have been fitted with long distance
 flame throwers, practically making them into living, slithering tanks. |
 image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 | **Technospider** +
-These spider creatures have been equipped with polaric energy cannons, making
-them a deadly challenge. |
+These spider-like creatures fire high-capacity polaric energy support weapons,
+making them a deadly challenge. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
 | **Large Technospider** +
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
