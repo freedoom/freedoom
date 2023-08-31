@@ -15,8 +15,9 @@ Freedoom is distributed as three files named `freedoom1.wad`, `freedoom2.wad`
 and `freedm.wad` which contain the artwork, levels, music and sound
 effects that make up the game.
 
-To actually play the game, you can use DOOM.EXE,
-or one of the "source ports" that fans have made for modern systems.
+To actually play the game, you can use DOOM.EXE, but mbut probably it'll be
+easier to use a "source port" - one of many adaptations of the original
+Doom program that fans have made for modern systems.
 
 The Doom Wiki
 https://doomwiki.org/wiki/Source_port[source ports page] has a

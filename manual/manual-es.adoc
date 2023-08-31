@@ -18,8 +18,9 @@ Freedoom esta distribuido en tres archivos llamados `freedoom1.wad`, `freedoom2.
 y `freedm.wad` los cuales contienen todo el contenido gráfico, niveles,
 música y efectos de sonido que componen al juego.
 
-Para jugar al juego, puedes usar DOOM.EXE, o uno de los "source ports"
-que los aficionados han hecho para los sistemas modernos.
+Para jugar al juego, puedes usar DOOM.EXE, pero probablemente será más fácil
+utilizar un "source port" - una de las muchas adaptaciones del programa
+original de Doom que los aficionados han hecho para los sistemas modernos.
 
 https://doomwiki.org/wiki/Source_port[La página de source ports] de la
 Wiki de Doom tiene una comprensiva lista. Las siguientes son algunas buenas
