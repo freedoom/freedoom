@@ -19,16 +19,15 @@ y `freedm.wad` los cuales contienen todo el contenido gráfico, niveles,
 música y efectos de sonido que componen al juego.
 
 Para jugar al juego, puedes usar DOOM.EXE, pero probablemente será más fácil
-utilizar un "source port" - una de las muchas adaptaciones del programa
+usar un "source port" - una de las muchas adaptaciones del programa
 original de Doom que los aficionados han hecho para los sistemas modernos.
 
 https://doomwiki.org/wiki/Source_port[La página de source ports] de la
-Wiki de Doom tiene una comprensiva lista. Las siguientes son algunas buenas
-sugerencias estandart:
+Wiki de Doom tiene una comprensiva lista. Como un punto inicial, puedes probar:
 
-* https://zdoom.org[GZDoom] es un source port moderno que incluye renderización
+* https://zdoom.org[GZDoom], un source port moderno que incluye renderización
   por hardware y capacidad ampliada de modificación.
-* https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom] es
+* https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom],
   un source port más minimalista que retiente esa sensación de la “vieja
   escuela”.
 

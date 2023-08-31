@@ -21,12 +21,12 @@ Doom program that fans have made for modern systems.
 
 The Doom Wiki
 https://doomwiki.org/wiki/Source_port[source ports page] has a
-comprehensive list of such programs. As a starting point:
+comprehensive list of such programs. As a starting point, you can try:
 
-* https://zdoom.org[GZDoom] is a modern source port that includes hardware
+* https://zdoom.org[GZDoom], a modern source port that includes hardware
   rendering and extended mod capability.
-* https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom]
-  is a more minimalist source port that retains an “old school” feel.
+* https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom],
+  a more minimalist source port that retains an “old school” feel.
 
 Setup depends on the source port you use, and it’s best to refer to the
 instructions for that source port. Generally though, you can try one of the
