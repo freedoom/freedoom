@@ -11,16 +11,19 @@ image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",wid
 
 == Installing Freedoom
 
-Freedoom is distributed as two files named `freedoom1.wad` and
-`freedoom2.wad` which contain the artwork, levels, music and sound
-effects that make up the game.  To be played it needs to be paired
-with a source port. Fans of the original Doom games have created a
-number of these; the Doom Wiki’s
-https://doomwiki.org/wiki/Source_port[source ports page] has a
-comprehensive list. The following are some good default suggestions:
+Freedoom is distributed as three files named `freedoom1.wad`, `freedoom2.wad`
+and `freedm.wad` which contain the artwork, levels, music and sound
+effects that make up the game.
 
-* https://zdoom.org[GZDoom] is a modern source port that includes various
-  features such as a hardware renderer.
+To actually play the game, you can use DOOM.EXE,
+or one of the "source ports" that fans have made for modern systems.
+
+The Doom Wiki
+https://doomwiki.org/wiki/Source_port[source ports page] has a
+comprehensive list of such programs. As a starting point:
+
+* https://zdoom.org[GZDoom] is a modern source port that includes hardware
+  rendering and extended mod capability.
 * https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom]
   is a more minimalist source port that retains an “old school” feel.
 
@@ -38,6 +41,10 @@ _Freedoom: Phase 2_ (`freedoom2.wad`). _Phase 1_ is split into four separate
 episodes of eight levels each, while _Phase 2_ is a single, 30 level campaign.
 This gives 62 levels to play through, and there are also secret levels -- if
 you can discover how to reach them.
+
+FreeDM (`freedm.wad`) is a monster-free set of levels, made specifically
+for player-versus player. For how to host a multiplayer game,
+consult your source port.
 
 <<<
 
@@ -76,10 +83,7 @@ start playing.
 image::images/menu-episode.png[Freedoom Episode Menu,align="center",width=432,pdfwidth=50vw]
 
 If you’re new to the game, start with _Outpost Outbreak_, the first
-episode (and easiest). Once you finish one episode, you can move on to
-the next. If you’re bored with the episode you’re playing or stuck, you
-can always try playing a different episode instead. There’s no requirement
-to play episodes in order.
+episode (and easiest). There is no requirement to play episodes in order.
 
 [[skill]]
 After choosing a episode, you need to pick a skill level. Skill level
@@ -92,11 +96,9 @@ image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwi
 |==========================
 | 1 | **Please Don’t Kill Me!** | The easiest skill level. This is
 effectively the same as _Will This Hurt?_, except that damage is halved.
-| 2 | **Will This Hurt?** | Easy skill level, a good choice if you’re
-finding _Bring on the Pain_ too challenging.
+| 2 | **Will This Hurt?** | Easy skill level.
 | 3 | **Bring on the Pain.** | The default skill level.
-| 4 | **Extreme Carnage.** | Suited more for more experienced players
-in search of a challenge.
+| 4 | **Extreme Carnage.** | Hard skill level.
 | 5 | **MAYHEM!** | **Not Recommended**. This is equivalent to
 _Extreme Carnage_ except that monster attacks are up to twice as fast,
 and killed monsters come back to life after around 40 seconds.
@@ -113,23 +115,20 @@ if you die.
 image::images/menu-save-game.png[Save Game Menu,align="center",width=473,pdfwidth=50vw]
 
 To save the game, press _Esc_ to bring up the menu, select _Save Game_ and
-choose a slot to save in. Type a description for the save game and press
-_Enter_. Some source ports have a limited number of slots, in which case you
-will have to overwrite an existing saved game once there are no more slots
-available. For the same reason it’s a good idea to write a good description
-for your saved game. Include the level number and something descriptive of
-where you’ve reached; for example, “E1M3 - Blue Key Door.”
+choose a slot to save in. Type a memorable description for the save game (e.g.,
+“E1M3 - Blue Key Door”) and press _Enter_. If there are no free slots, you can
+overwrite an existing one, destroying the old data.
 
-The _Load Game_ menu usually looks largely identical to the _Save Game_
-menu. To restore your saved game, simply select _Load Game_ from the main
+To restore your saved game, select _Load Game_ from the main
 menu and choose your saved game.
 
 If you find yourself saving the game often, you may want to use the
 _Quicksave_ feature. Press _F6_ during play to quicksave. The _Save Game_
 menu appears as usual; choosing a slot makes that your quicksave slot.
-Pressing _F6_ again in the future will overwrite your quicksave slot with
-just a couple of keystrokes. If you die you can also restore your
-quicksave slot by pressing _F9_.
+Pressing _F6_ again in the future will overwrite your quicksave slot
+without navigating the menu.
+
+You can restore your quicksave slot with the menu or by pressing _F9_.
 
 === Quitting the game
 
@@ -172,12 +171,12 @@ series of levels, in each one trying to find the way to the exit. An
 assortment of monsters will try to stop you, and you’ll need to use weapons
 to defend yourself.
 Portions of the levels may be inaccessible until you find a particular key, or
-find a switch to open a locked door. This gives a puzzle element to the game in
+find a switch to open a passage. This gives a puzzle element to the game in
 addition to the action.
 
 By default, the keyboard cursor keys will move forward and backward, and turn
 left and right. The _Control_ key fires the current weapon, and the spacebar
-will open doors and activate switches. All source ports allow you to rebind
+will open doors and activate switches. Consult your source port on how to rebind
 these keys to a setup that you find more comfortable. You’ll also want to look
 into using the strafe (sidestep) and run keys to better control over your
 movement.
@@ -197,7 +196,7 @@ abilities. Picking something up is a simple matter of walking over it -- an
 on-screen message and a brief flash of the screen indicate that you’ve done so
 successfully. If you don’t pick it up, it’s likely you don’t need it right
 now (for example, you can’t pick up a health pack when you already have 100%
-health).
+health). If an item gives you more than you can carry, the difference is lost.
 
 === The Status Bar
 
@@ -224,9 +223,12 @@ ammunition>>, along with the maximum of each you can carry.
 [[weapons]]
 === Freedoom’s Weapons
 
-You start the game with only a handgun, 50 bullets and your fists to fall back
-on once they run out. You’ll want to find yourself some better weaponry as
-soon as possible.
+You start the game with only a handgun, 50 bullets and your fists.
+Exploring the level will reveal more weapons and ammo that you can pick up and use.
+
+Pressing the numbered key on the keyboard switches to the given weapon
+(if you have it). Apart from the melee weapons, each weapon consumes a
+certain type of ammo, which may be found somewhere in the level.
 
 [options="header",cols="3,1,5",valign="middle",width="100%"]
 |==========================
@@ -237,23 +239,26 @@ monsters with your bare hands. Ammo: None
 image:../sprites/csawa0.png[Ripsaw] |
 1 | Designed for cutting through wood, the ripsaw
 also works well as a melee weapon for cutting through flesh. Ammo: None
-| **Handgun** | 2 | Your starter weapon. A few shots will take down low-level
-monsters but it’s best to upgrade before taking on any tougher opponents.
+| **Handgun** +
+image:../sprites/pista0.png[Handgun] |
+2 | Your starter weapon. Its main purpose is to let you fight your way
+to a better weapon, and to hit shootable switches without wasting a second bullet.
 Ammo: Bullets
 | **Pump-action Shotgun** +
 image:../sprites/shota0.png[Pump-action Shotgun] |
-3 | The main “workhorse” weapon; fires seven pellets
-in a tight cluster and is effective over both short and long ranges against
-low- and medium-level monsters. Ammo: Shells
+3 | Shoots seven pellets in a fan pattern, letting you hit multiple
+targets or one big one. Ammo: Shells
 | **Double-barrelled Shotgun** +
 image:../sprites/sgn2a0.png[Double-barrelled Shotgun] |
-3 | Twice as powerful as the pump-action shotgun
-but less effective at long ranges; good at short range against crowds of
+3 | The simpler flash hiding system guarantees better
+projectile fragmentation for almost 50% more hits per shell
+across a wider spread. Good for short range against groups of
 enemies. Ammo: Shells
 | **Minigun** +
 image:../sprites/mguna0.png[Minigun] |
-4 | Conceptually like a faster version of the basic handgun, but
-eats ammo much more quickly. Ammo: Bullets
+4 | A much better use for your clips than the handgun.
+Up to forty seconds of bringing the pain to keep you safe.
+Ammo: Bullets
 | **Missile Launcher** +
 image:../sprites/launa0.png[Missile Launcher] |
 5 | Fires missiles that deal a lot of damage on impact, then explode to take
@@ -262,27 +267,22 @@ Ammo: Missiles
 | **Polaric Energy Weapon** +
 image:../sprites/plasa0.png[Polaric Energy Weapon] |
 6 | Produces a continuous stream of polaric energy
-projectiles which are very effective against higher-level monsters.
+projectiles which are very effective against stronger monsters.
 Ammo: Energy
 | **SKAG 1337** +
 image:../sprites/bfuga0.png[SKAG 1337] |
-7 | Experimental weapon that launches a energy ball that does a
-huge amount of damage, plus also damages other enemies in the vicinity.
-Slow to fire, but incredibly powerful. Ammo: Energy
+7 | Experimental weapon that launches a single massive polaric energy ball,
+then releases a secondary energy blast in the same direction!
+Slow to shoot, but worth the wait. Ammo: Energy
 |==========================
-
-Pressing the numbered key on the keyboard switches to the given weapon (if it
-has been picked up!). Apart from the melee weapons, each weapon consumes a
-certain type of ammo, and you should be careful to look out for more ammo as
-you’re exploring.
 
 [[ammo]]
 [options="header",cols="2,1,1",width="70%",align="center",valign="middle"]
 |==========================
 | Ammo type | Small | Large
 | **Bullets** |
-image:../sprites/clipa0.png[Ammo Clip] |
-image:../sprites/ammoa0.png[Ammo Clip]
+image:../sprites/clipa0.png[Bullet Clip] |
+image:../sprites/ammoa0.png[Case of Bullets]
 | **Shells** |
 image:../sprites/shela0.png[Shotgun Shells] |
 image:../sprites/sboxa0.png[Box of Shotgun Shells]
@@ -297,8 +297,9 @@ image:../sprites/celpa0.png[Large Energy Recharge]
 image:../sprites/bpaka0.png[Backpack]
 |==========================
 
-The backpack item is a special item that contains several of every ammo type
-and doubles the maximum amount of ammo you can carry.
+The backpack gives one small pickup's worth of every ammo type.
+Once you have one, you can carry twice as much ammo as normal
+for the rest of the game.
 
 [[health]]
 === Health
@@ -329,10 +330,9 @@ image:../sprites/arm1a0.png[Polaric Shielding Vest] |
 image:../sprites/arm2a0.png[Attuned Polaric Energy Armor]
 |==========================
 
-Normal armor absorbs one third of damage you receive. For example, suppose
-you’re hit by a missile that reduces your health from 100% to 50%. If you’re
-hit by the same missile while wearing 100% armor, your health will reduce to
-only 66%, but you’ll lose 16% armor.
+Normal armor absorbs one third of damage you receive. Absorption is rounded down:
+if you have 100 health and 100 armor and are hit for 50 damage, you'll lose
+34 health and 16 armor.
 
 The attuned armor has slightly different behavior: in addition to being
 worth 200% armor, it also absorbs half of all damage. Because polaric field
@@ -347,21 +347,25 @@ You may also encounter any one of these special items while exploring:
 [cols="1,2",width="90%",align="center",valign="middle"]
 |==========================
 | **Keys** +
-image:../sprites/bkeya0.png[Blue Key]
-image:../sprites/rkeya0.png[Red Key]
-image:../sprites/ykeya0.png[Yellow Key] +
-image:../sprites/bskua0.png[Blue Key]
-image:../sprites/rskua0.png[Red Key]
-image:../sprites/yskua0.png[Yellow Key] |
+image:../sprites/bkeya0.png[Blue Passcard]
+image:../sprites/ykeya0.png[Yellow Passcard]
+image:../sprites/rkeya0.png[Red Passcard] +
+image:../sprites/bskua0.png[Blue Skeleton Key]
+image:../sprites/yskua0.png[Yellow Skeleton Key]
+image:../sprites/rskua0.png[Red Skeleton Key] |
 Allow you to open certain locked doors and activate locked switches.
 Usually essential to be able to progress, although they sometimes allow
 access to secret areas.
+
+If you can't see the colors, check the center of the card or the horns
+on the skull: +
+• the first two letters of "Azure" have lots of diagonal lines. +
+• the word "Yellow" has two vertical lines. +
+• the planet Horizon is very red. +
+image:images/key-icons.png[Key icons,align="center"]
 | **Low-Light Goggles** +
 image:../sprites/pvisa0.png[Low-Light Goggles] |
 Allow you to see in the dark for a limited time.
-| **Negentropic Surge** +
-image:../sprites/megaa0.png[Negentropic Surge] |
-Maxes you out to 200% health and armor, however little you had before.
 | **Area Survey Map** +
 image:../sprites/pmapa0.png[Area Survey Map] |
 Reveals unexplored areas of the map, including some secret areas that
@@ -378,32 +382,14 @@ normal damage until the end of level.
 image:../sprites/pinsa0.png[Invisibility Cloak] |
 Makes you almost invisible for a limited time. Monsters still detect
 your presence, but they'll find it much harder to aim.
+| **Negentropic Surge** +
+image:../sprites/megaa0.png[Negentropic Surge] |
+Maxes you out to 200% health and armor.
 | **Vanguard Device** +
 image:../sprites/pinva0.png[Vanguard Device] |
 Makes you immune to all damage for a limited time, allowing you to get
 past overwhelming defences and unavoidable traps.
 |==========================
-
-=== Color blind accessibility
-
-Freedoom's keys are designed to be distinguishable not just by color but
-also by shape, to make the game more accessible to color-blind players.
-Each key color has an associated unique shape:
-
-[cols="2,3",width="50%",align="center",valign="middle"]
-|==========================
-| **Key color** | **Shape**
-| Red | Horizontal lines
-| Yellow | Vertical lines
-| Blue | Cross shape (X)
-|==========================
-
-These shapes are used consistently throughout the game: in the status bar
-icons, the key sprites and on walls indicating keyed doors. For the skull
-keys, pay attention to the direction that the horns point. For example,
-here is how the different key icons appear in the status bar:
-
-image:images/key-icons.png[Key icons,align="center"]
 
 === Enemies
 
@@ -414,8 +400,8 @@ who you can expect to encounter.
 [frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
 |==========================
 | **Zombie** +
-These undead creatures are armed with a pistol and intent on your destruction.
-Drops a clip of bullets when killed. |
+These brain-dead workers of iniquity are armed with a pistol and intent on
+your destruction. Drops a bullet clip when killed. |
 image:images/monster-zombie.png[Zombie,100,100,width=100%]
 | **Shotgun Zombie** +
 These guys traded their pistol for a shotgun and pack far more of a punch.
@@ -427,7 +413,7 @@ keep on firing until you’re dead. It’s best to take cover quickly or take hi
 out. Drops a minigun when killed. |
 image:images/monster-minigun-zombie.png[Minigun Zombie,100,100,width=100%]
 | **Serpentipede** +
-Serpent footsoldiers of the alien invasion. Let them get close and they’ll
+Rank and file footsoldiers of the alien invasion. Let them get close and they’ll
 tear you to shreds; at a distance they’ll instead rain down fireballs. |
 image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
 | **Flesh Worm** +
@@ -440,17 +426,16 @@ practically invisible. |
 image:images/monster-stealth-worm.png[Stealth Worm,100,100,width=100%]
 | **Hatchling** +
 Floating alien larvae which charge from a distance. |
-image:images/monster-hatchling.png[hatchling,100,100,width=100%]
+image:images/monster-hatchling.png[Hatchling,100,100,width=100%]
 | **Matribite** +
-The mother of the Hatchlings will ensure you always have more of her babies
+The mother of the hatchlings will ensure you always have more of her babies
 to deal with. |
-image:images/monster-matribite.png[matribite,100,100,width=100%]
+image:images/monster-matribite.png[Matribite,100,100,width=100%]
 | **Trilobite** +
-These flying orb-like creatures spit fireballs and bite if you get too
-close. |
+These flying orb-like things spit plasma and bite if you get too close. |
 image:images/monster-trilobite.png[Trilobite,100,100,width=100%]
 | **Pain Bringer** +
-100% muscle, these guys take at least three rocket blasts to take down, and
+These guys take at least three rocket blasts to take down, and
 while you’re trying they’ll shower you with energy projectiles. |
 image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
 | **Pain Lord** +
@@ -466,21 +451,21 @@ If he’s not setting you on fire, he’s undoing all your hard work by bringing
 his friends back from the dead. |
 image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
 | **Combat Slug** +
-These genetically-engineered super-slugs have been fitted with long distance
-flame throwers, practically making them into living, slithering tanks. |
+These genetically-engineered flesh monsters have been fitted with long distance
+flame throwers, making them into living, slithering tanks. |
 image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 | **Technospider** +
-These spider-like creatures fire high-capacity polaric energy support weapons,
+These cybernetic creatures fire high-capacity polaric energy support weapons,
 making them a deadly challenge. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
 | **Large Technospider** +
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
-of effort to bring down. |
+of effort to bring down. Immune to explosions from rockets and barrels. |
 image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
 | **Assault Tripod** +
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
-missile launcher that you’ll want to avoid. |
+missile launcher that you’ll want to avoid. Immune to explosions from rockets and barrels. |
 image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
 |==========================
 
@@ -505,21 +490,19 @@ Areas of the map are usually color coded as follows:
 if the <<specialitems,Tactical Survey Map>> item is discovered).
 |==========================
 
-While using the map, the game continues as normal, so it is wise to find a
-safe place before activating it, to avoid being ambushed by monsters. Normal
-controls continue to work as usual, but the following additional keys are
-available:
+While using the map, the game continues as normal. Controls continue
+to work as usual, but the following additional keys are available:
 
 [frame="none",cols="1,4",valign="middle",align="center",width="80%"]
 |==========================
-| **Tab** | Toggle Map
-| **-** | Zoom out
-| **+** | Zoom in
-| **0** | Maximum zoom out
+| **Tab** | Toggle map.
+| **-** | Zoom out.
+| **+** | Zoom in.
+| **0** | Maximum zoom out.
 | **F** | Toggle whether the map follows the player. When disabled, the
 cursor keys can be used to pan the view of the map around independent of
 your current position.
-| **G** | Toggle map grid
+| **G** | Toggle map grid.
 | **M** | Add a map bookmark at the current location.
 | **C** | Clear all bookmarks.
 |==========================
@@ -674,11 +657,11 @@ number of cheats that you can turn to:
 |==========================
 | **IDDQD** | God mode. Makes you invulnerable to all damage.
 | **IDFA** | Gives all weapons and ammo.
-| **IDKFA** | All weapons, ammo and keys.
-| **IDCLIP** | Turn on noclip mode, which lets you walk through walls.
+| **IDKFA** | Gives all weapons, ammo and keys.
+| **IDCLIP** | Noclip mode, which lets you walk through walls.
 | **IDDT** | Reveals full map; type twice to reveal all enemies and items.
-| **IDCLEVxy** | Warp to CxMy (Phase 1) or MAPxy (Phase 2).
-| **IDMUSxy** | Change music to that of CxMy (Phase 1) or MAPxy (Phase 2).
+| **IDCLEVxy** | Starts a new game (which resets everything) on ExMy (Phase 1) or MAPxy (Phase 2).
+| **IDMUSxy** | Change music to that of ExMy (Phase 1) or MAPxy (Phase 2).
 | **IDCHOPPERS** | Gives the ripsaw weapon.
 | **IDBEHOLDV** | Gives the vanguard device powerup.
 | **IDBEHOLDS** | Gives the strength powerup.
