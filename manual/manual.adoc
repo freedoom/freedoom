@@ -1,7 +1,9 @@
 = Freedoom Manual
 // SPDX-License-Identifier: BSD-3-Clause
 
-Welcome to Freedoom, a complete game that is free and open source software.
+Welcome to Freedoom, a complete game that is
+https://www.gnu.org/philosophy/free-sw.html[free]
+and https://opensource.org/osd/[open source software].
 Freedoom is made available under the modified BSD license, meaning that
 anyone is free to share it, modify it and reuse parts of it.
 
@@ -690,15 +692,54 @@ number of cheats that you can turn to:
 
 <<<
 
+== Freedoom is about freedom ==
+
+When people hear about Freedoom, they often assume the name refers to price --
+that the project just aims to provide an alternative to Doom that can be
+obtained for free. But this isn't the case.
+
+The word "free" has two different meanings in English. We say "free" to mean
+that something costs nothing, but we also use it to refer to freedom -- like
+"free speech" or "the free press". Freedoom is about the latter. That might
+sound confusing. What does it mean?
+
+Imagine a world where artists could only buy paints from a single company. A
+monopoly like that would mean paints would probably be more expensive, but the
+price wouldn't be the main concern. The bigger issue would be the power that it
+would grant to that company. The freedom of those artists to express themselves
+would depend on the company supplying them their paints.
+
+For over 30 years now, the Doom modding community has produced thousands upon
+thousands of levels, mods and even entirely new games built upon the original
+Doom games. These are works of art and ought to be recognised as such.
+https://www.youtube.com/watch?v=KxYND6K6u8w[Doom is an art scene].
+The raw material these works of art are made from is not paint or ink, but the
+original game itself -- endlessly modified, reused and remixed into new
+variations.
+
+The authors of Doom, id Software, have historically been very generous to the
+Doom community. From the time of the game's release they went out of their way
+to share technical details with fans, and they later released Doom's source
+code under a free software license -- something that was unknown in the games
+industry at the time and should be commended. But despite this benevolence,
+they have always held a position of power. Today, rather than being a small
+independent studio, they and the Doom franchise are owned by a large
+multinational corporation.
+
+Everybody deserves to be able to experience the wonder that is Doom and take
+part in its vibrant modding community that has endured for so many years. But
+that community also deserves its freedom and independence. By providing a free
+alternative that anyone can play, share, modify and reuse, we hope that's
+something that Freedoom can help to provide.
+
 == Contributing to Freedoom ==
 
-Freedoom is a
-https://www.gnu.org/philosophy/free-sw.html[free content]
-project contributed to by many users around the world. It is available as
-both free in cost (free as in free beer) and in modification and
-redistribution rights (free as in free speech) to end users,
-provided that the original software license is included and/or
-viewable by users of modified or redistributed versions.
+Freedoom is a https://www.gnu.org/philosophy/free-sw.html[free content]
+project contributed to by many users around the world. It is available as both
+free in cost (free as in free beer) and in modification and redistribution
+rights (free as in free speech) to end users, provided that the original
+software license is included and/or viewable by users of modified or
+redistributed versions.
 
 If you’d like to contribute to the Freedoom project, please check out the
 https://github.com/freedoom/freedoom[project’s page],
