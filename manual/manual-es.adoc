@@ -58,7 +58,7 @@ una partida multijugador, consulta su source port.
 El menú principal puede desplegarse a cualquier momento al
 presionar la tecla _Esc_ en tú teclado.
 
-image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]
+image::images/menu-mainmenu.png[Menú principal de Freedoom,align="center",width=380,pdfwidth=50vw]
 
 [cols="1,4",width="90%",align="center",valign="middle"]
 |==========================
