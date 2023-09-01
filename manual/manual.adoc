@@ -75,9 +75,9 @@ items you’ll encounter in the game.
 [[newgame]]
 === Starting a new game
 
-[**Shortcut:** On most source ports, if you repeatedly hit Enter after the
+[**Shortcut:** On most source ports, if you repeatedly hit _Enter_ after the
 program has started, you will start a new game on the default skill level
-(in the first episode if you're playing Phase 1).]
+(in the first episode if you're playing Phase 1). You do not need to do this quickly.]
 
 To start a new game, press _Esc_ to bring up the main menu, and choose
 _New Game_.
