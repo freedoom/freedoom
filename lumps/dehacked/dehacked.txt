@@ -156,7 +156,6 @@ STARTUP5========================================================================
 #else
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 #endif
-
 GOTARMOR = Put on a polaric shielding vest.
 GOTMEGA = Put on the attuned polaric energy armor.
 GOTHTHBONUS = Applied a health boost.
