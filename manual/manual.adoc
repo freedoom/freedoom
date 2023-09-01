@@ -53,8 +53,7 @@ consult your source port.
 [[menus]]
 == Using the Freedoom Menus
 
-Freedoom’s menus are fairly self-explanatory but here are some brief
-instructions. The main menu can be brought up at any time by pressing the
+The main menu can be brought up at any time by pressing the
 _Esc_ key on your keyboard.
 
 image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]

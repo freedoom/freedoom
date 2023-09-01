@@ -55,9 +55,8 @@ una partida multijugador, consulta su source port.
 [[menus]]
 == Usar los Menús de Freedoom
 
-Los menús de Freedoom son bastante auto-explicativos, pero aquí hay unas
-breves instrucciones. El menú principal puede desplegarse a cualquier
-momento al presionar la Tecla _Esc_ en tú teclado.
+El menú principal puede desplegarse a cualquier momento al
+presionar la tecla _Esc_ en tú teclado.
 
 image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]
 
