@@ -306,9 +306,10 @@ for the rest of the game.
 [[health]]
 === Health
 
-You die if your health reaches 0%. You’ll find health bonuses around the
-levels which can restore you back to 100% health; 1% health bonuses can take
-you over 100% and up to 200% health.
+You start with 100% health. You die if your health reaches 0%.
+
+Picking up any health item will give you the number shown, up to its limit.
+The refills are limited to 100%, but the boosts are limited to 200%.
 
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
@@ -322,7 +323,8 @@ image:../sprites/soula0.png[Ectoplasmic Surge]
 [[armor]]
 === Armor
 
-You start with 0% armor and can increase this up to 200% by collecting bonuses.
+You start with 0% armor. Picking up a vest will get you up to the number
+shown, while each small boost increases your armor until you reach 200%.
 
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================

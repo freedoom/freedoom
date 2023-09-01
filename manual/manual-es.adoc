@@ -315,27 +315,27 @@ Una que tengas uno, podrás llevar el doble de munición de lo normal,
 durante el resto del juego.
 
 [[health]]
-=== Salúd
+=== Salud
 
-Mueres si tu salud llega a 0%. Encontraras bonos de salud alrededor de los
-niveles, los cuales pueden restaurarte de vuelta al 100% de salud; bonos de
-salud del 1% pueden subir tú salud más allá del 100% y elevarla hasta el 200%
-de salud.
+Comienzas con 0% de salud. Mueres si tu salud llega a 0%.
+
+Recoger cualquier objeto de salud te dará el número mostrado, hasta su límite.
+Los recambios están limitados al 100%, pero los empujes están limitados al 200%.
 
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 10% | 25% | 100%
-| image:../sprites/bon1a0.png[Empuje de salúd] |
-image:../sprites/stima0.png[Recambio pequeño de salúd] |
-image:../sprites/media0.png[Recambio grande de salúd] |
+| image:../sprites/bon1a0.png[Empuje de salud] |
+image:../sprites/stima0.png[Recambio pequeño de salud] |
+image:../sprites/media0.png[Recambio grande de salud] |
 image:../sprites/soula0.png[Oleada ectoplásmica]
 |==========================
 
 [[armor]]
 === Armadura
 
-Comienzas con 0% de armadura y puede incrementar hasta 200% al recolectar
-bonos.
+Comienzas con 0% de armadura. Recoger un chaleco te llevará hasta el número mostrado,
+mientras que cada pequeño empuje incrementa tu armadura hasta que alcanzas los 200%.
 
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
