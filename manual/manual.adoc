@@ -654,8 +654,8 @@ on five star rankings by visitors to the site.
 == Cheats ==
 
 If you’re finding the game too difficult, you can always try playing at
-an <<skill,easier skill level>>. However, if that’s not enough, or if you just
-want to have fun feeling like an unstoppable killing machine, there are a
+an <<skill,easier skill level>>. However, if that’s not enough, or if you
+just want to experiment with the game mechanics, there are a
 number of cheats that you can turn to:
 
 [cols="2,4",width="90%",align="center",valign="middle"]
@@ -745,4 +745,4 @@ Since https://freedoom.github.io/about.html[Freedoom is free], some other
 projects have used Freedoom’s assets.  We think this is a great use of the
 project and should be encouraged. If you use portions of Freedoom in your
 project, please let us know by filing an issue or pull request on
-https://github.com/freedoom/freedoom.github.io[Freedoom’s website project page]
+https://github.com/freedoom/freedoom.github.io[Freedoom’s website project page].

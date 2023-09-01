@@ -675,8 +675,8 @@ siguientes son algunas sugerencias sobre dónde buscar el mejor contenido:
 
 Si encuentra el juego demasiado difícil, siempre puede intentar jugar en
 <<skill,un nivel de dificultad más fácil>>. Sin embargo, si eso no es
-suficiente, o si solo quieres divertirte sintiéndote como una máquina de matar
-imparable, hay una serie de trucos a los que puedes recurrir:
+suficiente, o si solo quieres experimentar con la mecánica del juego,
+hay una serie de trucos a los que puedes recurrir:
 
 [cols="2,4",width="90%",align="center",valign="middle"]
 |==========================
