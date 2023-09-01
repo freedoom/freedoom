@@ -89,7 +89,7 @@ If you’re new to the game, start with _Outpost Outbreak_, the first
 episode (and easiest). There is no requirement to play episodes in order.
 
 [[skill]]
-After choosing a episode, you need to pick a skill level. Skill level
+After choosing an episode, you need to pick a skill level. Skill level
 affects several factors in the game, most importantly the number of
 monsters you’ll encounter.
 
