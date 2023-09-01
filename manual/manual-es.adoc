@@ -18,9 +18,8 @@ Freedoom esta distribuido en tres archivos llamados `freedoom1.wad`, `freedoom2.
 y `freedm.wad` los cuales contienen todo el contenido gráfico, niveles,
 música y efectos de sonido que componen al juego.
 
-Para jugar al juego, puedes usar DOOM.EXE, pero probablemente será más fácil
-usar un "source port" - una de las muchas adaptaciones del programa
-original de Doom que los aficionados han hecho para los sistemas modernos.
+Para jugar al juego, puedes usar una de las muchas adaptaciones ("source ports")
+del programa original de Doom que los aficionados han desarrollado para los sistemas modernos.
 
 https://doomwiki.org/wiki/Source_port[La página de source ports] de la
 Wiki de Doom tiene una comprensiva lista. Como un punto inicial, puedes probar:
@@ -263,9 +262,9 @@ image:../sprites/shota0.png[Escopeta de bombeo] |
 múltiples objetivos o uno grande. Munición: Perdigones
 | **Escopeta de doble cañón** +
 image:../sprites/sgn2a0.png[Escopeta de doble cañón] |
-3 | El sistema de ocultación de destellos más sencillo garantiza una mejor
-fragmentación del proyectil, para casi un 50% más de impactos por cartucho
-a través de una dispersión más amplia. Es buena a corto alcance contra grupos de
+3 | Mayor tolerancia a cargas potentes significa mejor fragmentación
+del proyectil, para casi un 50% más de impactos por cartucho a través de
+una dispersión más amplia. Es buena a corto alcance contra grupos de
 enemigos. Munición: Perdigones
 | **Minigun** +
 image:../sprites/mguna0.png[Minigun] |
@@ -376,11 +375,10 @@ Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
 acceder a zonas secretas.
 
 Si no puedes ver los colores, fíjate en el centro de la tarjeta o en los
-cuernos de la calavera: +
-• las dos primeras letras de "Azul" tienen muchas líneas diagonales. +
-• "Amarillo" tiene dos líneas verticales. +
-• el planeta "Horizon" es muy rojo. +
-image:images/key-icons.png[Iconos de llaves,align="center"]
+cuernos de la calavera - azul diagonal, amarillo vertical, rojo horizontal: +
+image:images/key-icons.png[Iconos de llaves,align="center"] +
+Estas formas se usan consistentemente para todo el juego: en la barra de
+estado, las llaves mismas y en la mayoría de las puertas que requieren llaves.
 | **Gafas luminosas** +
 image:../sprites/pvisa0.png[Gafas luminosas] |
 Te permiten ver en la obscuridad por un tiempo limitado.

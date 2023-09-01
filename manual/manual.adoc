@@ -17,9 +17,8 @@ Freedoom is distributed as three files named `freedoom1.wad`, `freedoom2.wad`
 and `freedm.wad` which contain the artwork, levels, music and sound
 effects that make up the game.
 
-To actually play the game, you can use DOOM.EXE, but probably it'll be
-easier to use a "source port" - one of many adaptations of the original
-Doom program that fans have made for modern systems.
+To actually play the game, you can use one of many adaptations ("source ports")
+of the original Doom program that fans have developed for modern systems.
 
 The Doom Wiki
 https://doomwiki.org/wiki/Source_port[source ports page] has a
@@ -253,13 +252,13 @@ image:../sprites/shota0.png[Pump-action Shotgun] |
 targets or one big one. Ammo: Shells
 | **Double-barrelled Shotgun** +
 image:../sprites/sgn2a0.png[Double-barrelled Shotgun] |
-3 | The simpler flash hiding system guarantees better
+3 | Stronger tolerance for powerful loads means better
 projectile fragmentation for almost 50% more hits per shell
 across a wider spread. Good for short range against groups of
 enemies. Ammo: Shells
 | **Minigun** +
 image:../sprites/mguna0.png[Minigun] |
-4 | A much better use for your clips than the handgun.
+4 | A much better use for your bullets than the handgun.
 Up to forty seconds of bringing the pain to keep you safe.
 Ammo: Bullets
 | **Missile Launcher** +
@@ -361,11 +360,10 @@ Usually essential to be able to progress, although they sometimes allow
 access to secret areas.
 
 If you can't see the colors, check the center of the card or the horns
-on the skull: +
-• the first two letters of "Azure" have lots of diagonal lines. +
-• the word "Yellow" has two vertical lines. +
-• the planet Horizon is very red. +
-image:images/key-icons.png[Key icons,align="center"]
+on the skull - blue diagonal, yellow vertical, red horizontal: +
+image:images/key-icons.png[Key icons,align="center"] +
+These shapes are used consistently throughout the game: in the status bar
+icons, the key sprites and on walls indicating keyed doors.
 | **Low-Light Goggles** +
 image:../sprites/pvisa0.png[Low-Light Goggles] |
 Allow you to see in the dark for a limited time.
