@@ -325,9 +325,9 @@ de salud.
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 10% | 25% | 100%
-| image:../sprites/bon1a0.png[Pólipo ectoplásmico] |
-image:../sprites/stima0.png[Gasa regenerativa nanobot] |
-image:../sprites/media0.png[Equipo quirúrgico regenerativa nanobot] |
+| image:../sprites/bon1a0.png[Empuje de salúd] |
+image:../sprites/stima0.png[Recambio pequeño de salúd] |
+image:../sprites/media0.png[Recambio grande de salúd] |
 image:../sprites/soula0.png[Oleada ectoplásmica]
 |==========================
 
@@ -340,7 +340,7 @@ bonos.
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 100% | 200%
-| image:../sprites/bon2a0.png[Emisor de campos de energía polarica] |
+| image:../sprites/bon2a0.png[Empuje de armadura] |
 image:../sprites/arm1a0.png[Chaleco de campo de fuerza polarica] |
 image:../sprites/arm2a0.png[Armadura sintonizada]
 |==========================
@@ -351,7 +351,7 @@ te golpea por 50 puntos de daño, perderás 34 de salud y 16 de armadura.
 
 La armadura sintonizada tiene un comportamiento ligeramente diferente: en
 adición de valer un 200 % de armadura, también absorbe la mitad de todo el
-daño. Como los emisores polarica dan el mismo tipo de armadura que ya tienes,
+daño. Como los empujes pequeños dan el mismo tipo de armadura que ya tienes,
 puede ser una buena idea para obtener inmediatamente una armadura sintonizada
 si tu no tiene ya uno.
 

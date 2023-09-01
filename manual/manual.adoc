@@ -313,9 +313,9 @@ you over 100% and up to 200% health.
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 10% | 25% | 100%
-| image:../sprites/bon1a0.png[Ectoplasmic Polyp] |
-image:../sprites/stima0.png[Regenerative Nanobot Gauze] |
-image:../sprites/media0.png[Regenerative Nano-Surgery Kit] |
+| image:../sprites/bon1a0.png[Health Boost] |
+image:../sprites/stima0.png[Small Health Refill] |
+image:../sprites/media0.png[Large Health Refill] |
 image:../sprites/soula0.png[Ectoplasmic Surge]
 |==========================
 
@@ -327,7 +327,7 @@ You start with 0% armor and can increase this up to 200% by collecting bonuses.
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 100% | 200%
-| image:../sprites/bon2a0.png[Polaric Energy Field Emitter] |
+| image:../sprites/bon2a0.png[Armor Boost] |
 image:../sprites/arm1a0.png[Polaric Shielding Vest] |
 image:../sprites/arm2a0.png[Attuned Polaric Energy Armor]
 |==========================
@@ -337,8 +337,8 @@ if you have 100 health and 100 armor and are hit for 50 damage, you'll lose
 34 health and 16 armor.
 
 The attuned armor has slightly different behavior: in addition to being
-worth 200% armor, it also absorbs half of all damage. Because polaric field
-emitters add the same armor type you already have, it may be good to pick
+worth 200% armor, it also absorbs half of all damage. Because the small
+boosts add the same armor type you already have, it may be good to pick
 up the attuned armor vest immediately if you don't already have one.
 
 [[specialitems]]
