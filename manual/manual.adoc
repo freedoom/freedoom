@@ -309,7 +309,7 @@ for the rest of the game.
 You start with 100% health. You die if your health reaches 0%.
 
 Picking up any health item will give you the number shown, up to its limit.
-The refills are limited to 100%, but the boosts are limited to 200%.
+The refills are limited to 100%, but the boosts (1% and 100%) are limited to 200%.
 
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
