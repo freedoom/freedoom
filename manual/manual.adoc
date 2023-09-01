@@ -76,6 +76,10 @@ items you’ll encounter in the game.
 [[newgame]]
 === Starting a new game
 
+On most source ports, if you repeatedly hit Enter after the program has
+started, you will end up starting a new game on the normal skill level
+(in the first episode if you're playing Phase 1).
+
 To start a new game, press _Esc_ to bring up the main menu, and choose
 _New Game_.
 
@@ -84,7 +88,7 @@ start playing.
 
 image::images/menu-episode.png[Freedoom Episode Menu,align="center",width=432,pdfwidth=50vw]
 
-If you’re new to the game, start with _Outpost Outbreak_, the first
+If you’re new to the game, start with Phase 1 _Outpost Outbreak_, the first
 episode (and easiest). There is no requirement to play episodes in order.
 
 [[skill]]

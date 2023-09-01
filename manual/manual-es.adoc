@@ -78,6 +78,12 @@ de los objetos que puedes encontrar en el juego.
 [[newgame]]
 === Comenzar un nuevo juego
 
+On most source ports, if you repeatedly hit Enter after the program has started, you will end up starting a new game on the normal skill level.
+
+En la mayoría de los source ports, si pulsas repetidamente _Enter_ después de que el
+programa se haya iniciado, empezarás una nueva juego en el nivel de dificultad default
+(en el primer episodio si jugares Phase 1).
+
 Para empezar un nuevo juego, presiona _Esc_ para mostrar el menú principal, y
 elije _New Game_.
 
@@ -86,8 +92,8 @@ comenzar a jugar.
 
 image::images/menu-episode.png[Freedoom Episode Menu,align="center",width=432,pdfwidth=50vw]
 
-Si eres nuevo en el juego, empieza con Outpost Outbreak, el primer episodio (y
-el más fácil). No hay ningún requerimiento para jugar los episodios en orden.
+Si eres nuevo en el juego, empieza con _Outpost Outbreak_ en Phase 1, el primer episodio
+(y el más fácil). No hay ningún requerimiento para jugar los episodios en orden.
 
 [[skill]]
 Después de elegir un episodio, necesitas elegir un nivel de dificultad. El
