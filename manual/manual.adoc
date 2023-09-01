@@ -403,11 +403,11 @@ who you can expect to encounter.
 [frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
 |==========================
 | **Zombie** +
-These brain-dead workers of iniquity are armed with a pistol and intent on
+These brain-dead workers of iniquity are armed with a handgun and intent on
 your destruction. Drops a bullet clip when killed. |
 image:images/monster-zombie.png[Zombie,100,100,width=100%]
 | **Shotgun Zombie** +
-These guys traded their pistol for a shotgun and pack far more of a punch.
+These guys traded their handgun for a shotgun and pack far more of a punch.
 Drops a shotgun when killed. |
 image:images/monster-shotgun-zombie.png[Shotgun Zombie,100,100,width=100%]
 | **Minigun Zombie** +
@@ -431,8 +431,7 @@ image:images/monster-stealth-worm.png[Stealth Worm,100,100,width=100%]
 Floating alien larvae which charge from a distance. |
 image:images/monster-hatchling.png[Hatchling,100,100,width=100%]
 | **Matribite** +
-The mother of the hatchlings will ensure you always have more of her babies
-to deal with. |
+What sick mother sends her own babies to fight? Thus is the duty of empire. |
 image:images/monster-matribite.png[Matribite,100,100,width=100%]
 | **Trilobite** +
 These flying orb-like things spit plasma and bite if you get too close. |
@@ -518,7 +517,7 @@ can hurt or even kill you!
 [frame="none",cols="2,5,3",valign="middle",grid="none",width="100%"]
 |==========================
 | **Barrels** |
-These exploding barrels litter many of the levels. Several shots with a pistol
+These exploding barrels litter many of the levels. Several shots with a handgun
 are usually enough to make them detonate, damaging anything in their immediate
 vicinity. Make sure when engaged in combat to never stand too close, or a stray
 shot from an enemy may cause one to explode in your face! Be aware too of the

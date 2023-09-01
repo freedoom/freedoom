@@ -122,7 +122,7 @@ image::images/menu-save-game.png[Save Game Menu,align="center",width=473,pdfwidt
 
 Para guardar el juego, presiona _Esc_ para mostrar el menú, selecciona _Save
 Game_ y elije un espacio en el cual guardar.  Escribe una descripción fácil de
-recordar para la partida guardada (p. ej., “E1M3 - Puerta con llave azul”) y
+recordar para la partida guardada (p. ej., “E1M3 - Puerta de llave azul”) y
 presione _Enter_. Si no hay espacios vacantes, puedes sobrescribir uno existente,
 destruyendo los datos antiguos.
 
@@ -285,7 +285,7 @@ Munición: Energía
 | **SKAG 1337** +
 image:../sprites/bfuga0.png[SKAG 1337] |
 7 | Un arma experimental que lanza una bola orbe de energía polarica que
-hace una gran cantidad de daño, y suelta una explosión secundaria de energía
+hace una gran cantidad de daño, y suelta una ráfaga secundaria de energía
 en la misma dirección. Lenta para disparar, vale la pena esperar.
 Munición: Energía
 |==========================
@@ -432,7 +432,7 @@ Soldados rasos de la invasión alienígena. Deja que se acerquen y te harán tri
 a distancia, en cambio, lloverán bolas de fuego. |
 image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
 | **Gusano de carne** +
-Resistentes y rápidos, estos gusanos atacan a corta distancia y necesitan
+Resistentes y rápidos, estos atacan a corta distancia y necesitan
 varios disparos de escopeta para derribarlos. Lo mejor es quedarse atrás. |
 image:images/monster-flesh-worm.png[Gusano de carne,100,100,width=100%]
 | **Gusano de sigilo** +
