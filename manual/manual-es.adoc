@@ -320,7 +320,7 @@ durante el resto del juego.
 Comienzas con 0% de salud. Mueres si tu salud llega a 0%.
 
 Recoger cualquier objeto de salud te dará el número mostrado, hasta su límite.
-Los recambios están limitados al 100%, pero los empujes (1% et 100%) están limitados al 200%.
+Los recambios están limitados al 100%, pero los empujes (1% y 100%) están limitados al 200%.
 
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
