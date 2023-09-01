@@ -78,9 +78,9 @@ de los objetos que puedes encontrar en el juego.
 [[newgame]]
 === Comenzar un nuevo juego
 
-En la mayoría de los source ports, si pulsas repetidamente _Enter_ después de que el
-programa se haya iniciado, empezarás una nueva juego en el nivel de dificultad default
-(en el primer episodio si jugares Phase 1).
+[**Atajo:** En la mayoría de los source ports, si pulsas repetidamente _Enter_ después
+de que el programa se haya iniciado, empezarás una nueva juego en el nivel de dificultad
+default (en el primer episodio si jugares Phase 1).]
 
 Para empezar un nuevo juego, presiona _Esc_ para mostrar el menú principal, y
 elije _New Game_.
