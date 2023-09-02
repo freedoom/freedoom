@@ -320,7 +320,7 @@ durante el resto del juego.
 [[health]]
 === Salud
 
-Comienzas con 0% de salud. Mueres si tu salud llega a 0%.
+Comienzas con 100% de salud. Mueres si tu salud llega a 0%.
 
 Recoger cualquier objeto de salud te dará el número mostrado, hasta su límite.
 Los recambios están limitados al 100%, pero los empujes (1% y 100%) están limitados al 200%.
