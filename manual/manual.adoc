@@ -678,6 +678,28 @@ number of cheats that you can turn to:
 
 <<<
 
+== Accessibility ==
+
+Freedoom is a volunteer project that receives contributions from a wide
+variety of people with differing abilities and needs. The community
+tries to address accessibility issues as they come up but there is always
+room for improvement.
+
+Contributions and feedback are welcome.
+
+* **Color blind accessibility:** Nothing should be distinguished solely
+by hue. Each type of key has different markings, the two armors have
+different silhouettes, and switches have up/down positions; where color
+is the main difference, it always accompanies a change in brightness as
+well. (The "pain brothers" are confusingly similar even for people who
+are not color blind. :))
+
+* **Controls:** Areas that can only be accessed by straferunning are
+discouraged, as it may not be available on certain controller configurations.
+
+* **Cognitive:** Levels are regularly tested for signposting and navigability.
+Attempts are made to keep terminology consistent without confusingly similar terms.
+
 == Freedoom is about freedom ==
 
 When people hear about Freedoom, they often assume the name refers to price --

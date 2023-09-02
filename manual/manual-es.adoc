@@ -700,6 +700,34 @@ los enemigos y objetos.
 
 <<<
 
+== Assesibilidad ==
+
+Freedoom es un proyecto voluntario que recibe contribuciones de varias
+personas con distintas capacidades y necesidades. La comunidad intenta
+resolver los problemas de accesibilidad tal como aparecen, pero siempre
+hay margen de mejora.
+
+Contribuciones y comentarios son bienvenidos.
+
+* **Accesibilidad para daltónicos:** Nada debe distinguirse únicamente
+por el tono. Cada tipo de llave tiene marcas diferentes, los dos armaduras
+tienen siluetas diferentes y los interruptores tienen posiciones arriba/abajo;
+donde el color es la principal diferencia, siempre acompaña también un
+cambio de brillo. (Los "hermanos de dolor" se ven confusamente similares
+incluso para personas que no son daltónicas. :))
+
+* **Controles:** Se desaconsejan las áreas a las que solo se puede acceder
+mediante straferunning, ya que es posible que no estén disponibles en ciertas
+configuraciones de controlador.
+
+* **Cognitivo:** Los niveles se prueban periódicamente para señalización
+y navegabilidad. Se intenta mantener la terminología coherente sin términos
+similares que puedan generar confusión.
+
+== Freedoom se trata de la libertad ==
+
+[¡traducción viene pronto!]
+
 == Contribuir a Freedoom
 
 Freedoom es un proyecto de
