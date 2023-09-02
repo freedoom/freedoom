@@ -695,7 +695,7 @@ los enemigos y objetos.
 | **IDBEHOLDI** | Te da el **i**nvisibilizador.
 | **IDBEHOLDR** | Te da una **r**opa de protección.
 | **IDBEHOLDM** | Te da un mapa del **á**rea.
-| **IDBEHOLDL** | Te da unas gafas **l**uminosas.
+| **IDBEHOLDL** | Te da gafas **l**uminosas.
 |==========================
 
 <<<
