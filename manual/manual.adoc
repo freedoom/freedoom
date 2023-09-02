@@ -333,8 +333,8 @@ shown, while each small boost increases your armor until you reach 200%.
 |==========================
 | 1% | 100% | 200%
 | image:../sprites/bon2a0.png[Armor Boost] |
-image:../sprites/arm1a0.png[Polaric Shielding Vest] |
-image:../sprites/arm2a0.png[Attuned Polaric Energy Armor]
+image:../sprites/arm1a0.png[Force Field Armor Vest] |
+image:../sprites/arm2a0.png[Attuned Force Field Armor Vest]
 |==========================
 
 Normal armor absorbs one third of damage you receive. Absorption is rounded down:

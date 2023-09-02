@@ -156,8 +156,8 @@ STARTUP5========================================================================
 #else
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 #endif
-GOTARMOR = Put on a polaric shielding vest.
-GOTMEGA = Put on the attuned polaric energy armor.
+GOTARMOR = Put on a force field vest.
+GOTMEGA = Put on the attuned force field armor.
 GOTHTHBONUS = Consumed a health boost.
 GOTARMBONUS = Put on an armor boost.
 GOTSTIM = Consumed a small health refill.
@@ -181,8 +181,8 @@ GOTCLIP = Got a bullet clip.
 GOTCLIPBOX = Got a case of bullets.
 GOTROCKET = Got a missile.
 GOTROCKBOX = Got a crate of missiles.
-GOTCELL = Got a small energy recharge.
-GOTCELLBOX = Got a large energy recharge.
+GOTCELL = Got a small polaric energy recharge.
+GOTCELLBOX = Got a large polaric energy recharge.
 GOTSHELLS = Got some shotgun shells.
 GOTSHELLBOX = Got a box of shotgun shells.
 GOTBACKPACK = A backpack for all your ammo storage needs!

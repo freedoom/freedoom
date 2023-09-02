@@ -335,26 +335,27 @@ image:../sprites/soula0.png[Oleada ectoplásmica]
 |==========================
 
 [[armor]]
-=== Armadura
+=== Blindaje
 
-Comienzas con 0% de armadura. Recoger un chaleco te llevará hasta el número mostrado,
-mientras que cada pequeño empuje incrementa tu armadura hasta que alcanzas los 200%.
+Comienzas con 0% de blindaje. Recoger una coraza o una armadura te llevará hasta
+el número mostrado, mientras que cada pequeño empuje incrementa tu blindaje
+hasta que alcanzas los 200%.
 
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 100% | 200%
-| image:../sprites/bon2a0.png[Empuje de armadura] |
-image:../sprites/arm1a0.png[Chaleco de campo de fuerza polarica] |
-image:../sprites/arm2a0.png[Armadura sintonizada]
+| image:../sprites/bon2a0.png[Empuje de blindaje] |
+image:../sprites/arm1a0.png[Coraza de campo de fuerza] |
+image:../sprites/arm2a0.png[Armadura sintonizada de campo de fuerza]
 |==========================
 
-La armadura normal absorbe un tercio del daño que recibes.
-La absorción se redondea: si tienes 100 de salud y 100 de armadura y
-te golpea por 50 puntos de daño, perderás 34 de salud y 16 de armadura.
+El blindaje normal absorbe un tercio del daño que recibes.
+La absorción se redondea: si tienes 100 de salud y 100 de blindaje y
+te golpea por 50 puntos de daño, perderás 34 de salud y 16 de blindaje.
 
 La armadura sintonizada tiene un comportamiento ligeramente diferente: en
-adición de valer un 200 % de armadura, también absorbe la mitad de todo el
-daño. Como los empujes pequeños dan el mismo tipo de armadura que ya tienes,
+adición de valer un 200 % de blindaje, también absorbe la mitad de todo el
+daño. Como los empujes pequeños dan el mismo tipo de blindaje que ya tienes,
 puede ser una buena idea para obtener inmediatamente una armadura sintonizada
 si tu no tiene ya uno.
 
