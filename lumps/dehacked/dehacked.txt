@@ -158,11 +158,11 @@ STARTUP5========================================================================
 #endif
 GOTARMOR = Put on a polaric shielding vest.
 GOTMEGA = Put on the attuned polaric energy armor.
-GOTHTHBONUS = Applied a health boost.
+GOTHTHBONUS = Consumed a health boost.
 GOTARMBONUS = Put on an armor boost.
-GOTSTIM = Applied a small health refill.
-GOTMEDINEED = Applied a health refill that could be larger!
-GOTMEDIKIT = Applied a large health refill.
+GOTSTIM = Consumed a small health refill.
+GOTMEDINEED = Consumed a large health refill. Not dead yet!
+GOTMEDIKIT = Consumed a large health refill.
 GOTSUPER = Ectoplasmic surge!
 GOTBLUECARD = Found the blue passcard.
 GOTYELWCARD = Found the yellow passcard.
