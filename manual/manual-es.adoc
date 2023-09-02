@@ -693,7 +693,7 @@ los enemigos y objetos.
 | **IDBEHOLDV** | Te da la **V**ia Gladii.
 | **IDBEHOLDS** | Te da una **s**imbionte de fuerza.
 | **IDBEHOLDI** | Te da el **i**nvisibilizador.
-| **IDBEHOLDR** | Te da una **r**opa de protección.
+| **IDBEHOLDR** | Te da **r**opa de protección.
 | **IDBEHOLDM** | Te da un mapa del **á**rea.
 | **IDBEHOLDL** | Te da gafas **l**uminosas.
 |==========================
