@@ -156,10 +156,10 @@ STARTUP5========================================================================
 #else
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 #endif
-GOTARMOR = Put on a force field vest.
-GOTMEGA = Put on the attuned force field armor.
+GOTARMOR = Equipped a force field vest.
+GOTMEGA = Equipped the attuned force field armor.
 GOTHTHBONUS = Consumed a health boost.
-GOTARMBONUS = Put on an armor boost.
+GOTARMBONUS = Equipped an armor boost.
 GOTSTIM = Consumed a small health refill.
 GOTMEDINEED = Consumed a large health refill. Not dead yet!
 GOTMEDIKIT = Consumed a large health refill.
@@ -177,14 +177,14 @@ GOTSUIT = Rescue operations suit.
 GOTMAP = Area survey map.
 GOTVISOR = Low-light goggles.
 GOTMSPHERE = Negentropic surge!
-GOTCLIP = Got a bullet clip.
-GOTCLIPBOX = Got a case of bullets.
-GOTROCKET = Got a missile.
-GOTROCKBOX = Got a crate of missiles.
-GOTCELL = Got a small energy recharge.
-GOTCELLBOX = Got a large energy recharge.
-GOTSHELLS = Got some shotgun shells.
-GOTSHELLBOX = Got a box of shotgun shells.
+GOTCLIP = Acquired a bullet clip.
+GOTCLIPBOX = Acquired a case of bullets.
+GOTROCKET = Acquired a missile.
+GOTROCKBOX = Acquired a crate of missiles.
+GOTCELL = Acquired a small energy recharge.
+GOTCELLBOX = Acquired a large energy recharge.
+GOTSHELLS = Acquired some shotgun shells.
+GOTSHELLBOX = Acquired a box of shotgun shells.
 GOTBACKPACK = A backpack for all your ammo storage needs!
 GOTBFG9000 = Got the SKAG 1337... time to kick some ass!
 GOTCHAINGUN = Got the minigun!
