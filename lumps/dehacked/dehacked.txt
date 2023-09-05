@@ -468,12 +468,13 @@ E3TEXT = The abomination explodes into oblivion.\n\
          Wherever or whatever that is, you pray\n\
          to any listening deity that there's\n\
          a working ship on the other side.
-E4TEXT = Suppressive fire saturates the hallway as\n\
-         the survivors flee the ship. Staying to kill\n\
-         you would only strand them in cold space.\n\n\
-         Fifty-nine. Fifty-eight. Fifty-seven...\n\
-         You melt into the soft pilot's seat, the\n\
-         auto-announcer an assembly of angels\n\
+E4TEXT = Suppressing fire echoes above as the last\n\
+         survivors flee the ship. The launch process\n\
+         is irreversible: killing you now would only\n\
+         bring a slow death drifting through space.\n\n\
+         Fifty-nine. Fifty-eight. Fifty-seven. .  .\n\
+         You melt into the pilot's seat, lost in the\n\
+         voice of an automated assembly of angels\n\
          delivering you from this wretched rock.\n\n\
          The ship rumbles as she wakes up;\n\
          you think of Earth as she lifts off.\n\
