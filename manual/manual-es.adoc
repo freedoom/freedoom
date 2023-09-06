@@ -1,14 +1,15 @@
 = Manual de Freedoom
 // SPDX-License-Identifier: BSD-3-Clause
 
-Bienvenido a Freedoom, un juego completo que es software libre y de código
-abierto. Freedoom esta disponible bajo una licencia BSD modificada, lo que
-significa que cualquiera es libre de compartirlo, modificarlo y reutilizar
-partes de el.
+Bienvenido a Freedoom, un juego completo que es software
+https://www.gnu.org/philosophy/free-sw.html[libre]
+y de https://opensource.org/osd/[código abierto].
+Freedoom esta disponible bajo una licencia BSD modificada, lo que significa
+que cualquiera es libre de compartirlo, modificarlo y reutilizar partes de el.
 
 Para más detalles, ver la <<reusing,sección de reuso>>.
 
-Traducción: NecSau, DoomguyAlighieri
+Traducción: NecSau, DoomguyAlighieri, Alaux
 
 image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
@@ -725,9 +726,47 @@ configuraciones de controlador.
 y navegabilidad. Se intenta mantener la terminología coherente sin términos
 similares que puedan generar confusión.
 
-== Freedoom se trata de la libertad ==
+== Freedoom es sobre libertad ==
 
-[¡traducción viene pronto!]
+Cuando la gente oye hablar de Freedoom, suelen asumir que el nombre se refiere
+al precio -- que el proyecto solamente apunta a ser una alternativa a Doom que
+puede obtenerse gratuitamente. Pero no es así.
+
+La palabra "free" tiene dos significados diferentes en inglés. Decimos "free"
+para decir que algo no tiene costo (es "gratis"), pero también para referirnos
+a la libertad (es "libre") -- como "libre expresión". Freedoom es sobre esto
+último. Eso puede ser confuso. ¿Qué significa?
+
+Imagina un mundo en el cual los artistas solamente pueden comprar cuadros de
+una única compañia. Un monopolio como ese significaría que las pinturas
+probablemente serían más caras, pero el precio no sería la mayor inquietud.
+El gran problema sería el poder que otorgaría a esa compañia. La libertad de
+expresión de esos artistas dependería de la compañia que les provee sus
+pinturas.
+
+Por más de 30 años, la comunidad de modding de Doom ha producido miles y miles
+de niveles, mods e incluso juegos completamente nuevos hechos en base a los
+juegos de Doom originales. Estos son obras de artes y deberían ser reconocidos
+como tales.
+https://www.youtube.com/watch?v=KxYND6K6u8w[Doom es una escena artística].
+La materia prima de estas obras de arte no es pintura ni tinta, sino el juego
+original -- modificado, reutilizado y reversionado sin cesar para dar nuevas
+variaciones.
+
+Históricamente, los autores de Doom, id Software, han sido muy generosos con
+la comunidad de Doom. Desde el lanzamiento del juego se lanzaron a compartir
+detalles técnicos con los fans, y posteriormente lanzaron el código fuente de
+Doom bajo una licencia de software libre -- algo desconocido en la industria
+de juegos de la época y que debería ser elogiado. Pero a pesar de esta
+generosidad, siempre mantuvieron una posición de poder. Hoy en día, en lugar
+de ser un pequeño estudio independiente, ellos y la franquicia de Doom son
+propiedad de una gran corporación multinacional.
+
+Todos merecen poder experimentar la maravilla que es Doom y formar parte de su
+vibrante comunidad de modding que ha perdurado por tantos años. Pero esa
+comunidad también merece su libertad e independencia. Al ofrecer una
+alternativa libre y gratuita que cualquiera puede jugar, compartir, modificar
+y reutilizar, esperamos que eso sea algo que Freedoom pueda otorgar.
 
 == Contribuir a Freedoom
 
