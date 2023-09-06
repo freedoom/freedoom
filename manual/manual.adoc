@@ -703,8 +703,8 @@ Attempts are made to keep terminology consistent without confusingly similar ter
 == Freedoom is about freedom ==
 
 When people hear about Freedoom, they often assume the name refers to price --
-that the project just aims to provide an alternative to Doom that can be
-obtained for free. But this isn't the case.
+that the only thing this project aims to do is to provide an alternative to
+Doom that can be obtained without paying money. But this is not the case.
 
 The word "free" has two different meanings in English. We say "free" to mean
 that something costs nothing, but we also use it to refer to freedom -- like
