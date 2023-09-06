@@ -696,9 +696,15 @@ are not color blind. :))
 
 * **Controls:** Areas that can only be accessed by straferunning are
 discouraged, as it may not be available on certain controller configurations.
+Recent efforts are being made to ensure that no obligatory components
+require precisely timed combinations of movements.
+All levels are tested to avoid "hot starts" where enemies can attack
+players before the player has provided any input.
 
 * **Cognitive:** Levels are regularly tested for signposting and navigability.
-Attempts are made to keep terminology consistent without confusingly similar terms.
+In-game messages are given key words to distinguish what sort of gameplay
+mechanic is being affected, minimizing lookup time.
+The same word is generally used for the same thing.
 
 == Freedoom is about freedom ==
 
