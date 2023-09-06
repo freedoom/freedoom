@@ -355,10 +355,10 @@ You may also encounter any one of these special items while exploring:
 |==========================
 | **Keys** +
 image:../sprites/bkeya0.png[Blue Passcard]
+image:../sprites/bskua0.png[Blue Skeleton Key] +
 image:../sprites/ykeya0.png[Yellow Passcard]
-image:../sprites/rkeya0.png[Red Passcard] +
-image:../sprites/bskua0.png[Blue Skeleton Key]
-image:../sprites/yskua0.png[Yellow Skeleton Key]
+image:../sprites/yskua0.png[Yellow Skeleton Key] +
+image:../sprites/rkeya0.png[Red Passcard]
 image:../sprites/rskua0.png[Red Skeleton Key] |
 Allow you to open certain locked doors and activate locked switches.
 Usually essential to be able to progress, although they sometimes allow

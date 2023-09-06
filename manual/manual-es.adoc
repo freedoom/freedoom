@@ -369,10 +369,10 @@ exploras:
 |==========================
 | **Llaves** +
 image:../sprites/bkeya0.png[Tarjeta de acceso azul]
+image:../sprites/bskua0.png[Llave muerta azul] +
 image:../sprites/ykeya0.png[Tarjeta de acceso amarillo]
-image:../sprites/rkeya0.png[Tarjeta de acceso rojo] +
-image:../sprites/bskua0.png[Llave muerta azul]
-image:../sprites/yskua0.png[Llave muerta amarillo]
+image:../sprites/yskua0.png[Llave muerta amarillo] +
+image:../sprites/rkeya0.png[Tarjeta de acceso rojo]
 image:../sprites/rskua0.png[Llave muerta rojo] |
 Permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
 Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
