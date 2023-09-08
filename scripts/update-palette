@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# update-palette - Update the palettes of all PNG graphics
+#
+# All of the PNGs in Freedoom are paletted, and the palettes of each PNG match
+# the colours in the PLAYPAL lump. If a user wants to make changes to the
+# palette, they would have to update the palette in all of Freedoom's graphics
+# for consistency.
+#
+# This script takes a new PLAYPAL as an argument, compares the old and new
+# palettes, and modifies every paletted PNG file in the repo so that the new
+# colours are used.
+
+import argparse
+from collections import namedtuple
+from itertools import zip_longest
+from shutil import copy
+import struct
+import os
+from zlib import crc32
+
+PngChunk = namedtuple("PNGChunk", "type data")
+
+PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
+
+# Parse the command line arguments, and return a dict with the arguments
+def parse_args():
+    parser = argparse.ArgumentParser("update-palette")
+    parser.add_argument("palette", help="The new palette to use")
+    parser.add_argument(
+        "--dir", "-d", help=(
+            "The directory to recursively process. "
+            "Defaults to working directory"),
+        default=os.getcwd())
+    args = parser.parse_args()
+    return args
+
+
+# https://docs.python.org/3/library/itertools.html#itertools-recipes
+def grouper(iterable, n, *, incomplete='fill', fillvalue=None):
+    "Collect data into non-overlapping fixed-length chunks or blocks"
+    # grouper('ABCDEFG', 3, fillvalue='x') --> ABC DEF Gxx
+    # grouper('ABCDEFG', 3, incomplete='strict') --> ABC DEF ValueError
+    # grouper('ABCDEFG', 3, incomplete='ignore') --> ABC DEF
+    args = [iter(iterable)] * n
+    if incomplete == 'fill':
+        return zip_longest(*args, fillvalue=fillvalue)
+    if incomplete == 'strict':
+        return zip(*args, strict=True)
+    if incomplete == 'ignore':
+        return zip(*args)
+    else:
+        raise ValueError('Expected fill, strict, or ignore')
+
+
+# Compare the old palette and the new palette, and return a dict with the
+# differences.
+def compare_palettes(new_palette):
+    old_to_new = {}
+    old_palette = "lumps/playpal/playpal-base.lmp"
+    with open(old_palette, "rb") as handle:
+        old_palette = handle.read()
+        if len(old_palette) < 768:
+            raise ValueError("Old palette is too short!")
+        old_palette = list(grouper(old_palette[:768], 3, incomplete='strict'))
+    with open(new_palette, "rb") as handle:
+        new_palette = handle.read()
+        if len(new_palette) < 768:
+            raise ValueError("New palette is too short!")
+        new_palette = list(grouper(new_palette[:768], 3, incomplete='strict'))
+    for index, zipper in enumerate(zip(old_palette, new_palette)):
+        old_colour, new_colour = zipper
+        if old_colour != new_colour:
+            # Index is unnecessary (I hope)?
+            # old_to_new[(index, old_colour)] = new_colour
+            old_to_new[old_colour] = new_colour
+    return old_to_new
+
+
+# "Stolen" from the map-color-index script
+# Process a directory recursively for PNG files.
+def process_dir(colour_map, args_dir):
+    pngs_changed_count = 0
+    pngs_examined_count = 0
+
+    for dirpath, dirnames, filenames in os.walk(args_dir):
+        for png_base in filenames:
+            if not png_base.lower().endswith(".png"):
+                continue
+            png_path = os.path.join(dirpath, png_base)
+            pngs_examined_count += 1
+            if process_png(colour_map, png_path):
+                pngs_changed_count += 1
+
+
+# Process a PNG file in place.
+def process_png(colour_map, png_path):
+
+    # Read a chunk from the PNG file
+    def read_png_chunk(png_file):
+        chunk_len = png_file.read(4)
+        if chunk_len == b"": return None  # End of file
+        chunk_len = struct.unpack("!I", chunk_len)[0]
+        chunk_type = png_file.read(4)
+        chunk_data = png_file.read(chunk_len)
+        chunk_crc = png_file.read(4)
+        chunk_crc = struct.unpack("!I", chunk_crc)[0]
+        # crc = crc32(chunk_type)
+        # crc = crc32(chunk_data, crc)
+        # if crc != chunk_crc:
+        #     return None
+        return PngChunk(chunk_type, chunk_data)
+
+    # Change the old colours to the new colours
+    def maybe_modify_plte(plte_data):
+        nonlocal colour_map
+        modified = False
+        colours = list(grouper(plte_data, 3, incomplete='strict'))
+        for index, colour in enumerate(colours):
+            if colour in colour_map:
+                modified = True
+                colours[index] = colour_map[colour]
+        colours = b"".join(map(bytes, colours))
+        return modified, colours
+
+    # Read the PNG file
+    chunks = []
+    with open(png_path, "rb") as handle:
+        if handle.read(8) != PNG_SIGNATURE:
+            print("{0} is not a valid PNG file!".format(png_path))
+            return False
+        while chunk := read_png_chunk(handle):
+            chunks.append(chunk)
+
+    # Modify the PLTE chunk, if necessary
+    plte_modified = False
+    for index, chunk in enumerate(chunks):
+        if chunk.type == b"PLTE":
+            chunk_name = chunk.type
+            plte_modified, chunk_data = maybe_modify_plte(chunk.data)
+            chunks[index] = PngChunk(chunk_name, chunk_data)
+
+    # Write the modified PNG file
+    if plte_modified:
+        with open(png_path, "wb") as handle:
+            handle.write(PNG_SIGNATURE)
+            for chunk in chunks:
+                chunk_crc = crc32(chunk.type)
+                chunk_crc = crc32(chunk.data, chunk_crc)
+                chunk_crc = struct.pack("!I", chunk_crc)
+                chunk_len = struct.pack("!I", len(chunk.data))
+                handle.write(chunk_len)
+                handle.write(chunk.type)
+                handle.write(chunk.data)
+                handle.write(chunk_crc)
+
+    return True
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    comparison = compare_palettes(args.palette)
+    process_dir(comparison, args.dir)
+    # Replace old playpal-base.lmp
+    copy(args.palette, "lumps/playpal/playpal-base.lmp")
