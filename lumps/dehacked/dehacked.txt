@@ -462,8 +462,8 @@ E3TEXT = The abomination explodes into oblivion.\n\
          wasteland than your old cell.\n\n\
          You kick the corpse in anger, and it feels\n\
          good. You kick it again, and a remote falls\n\
-         out. You press the button, and hear a click\n\
-         revealing a teleport pad nearby. You look\n\
+         out. You press the button, and the ground\n\
+         gives way to reveal a teleporter. You look\n\
          at the gizmo - it says "To Double Impact."\n\n\
          Wherever or whatever that is, you pray\n\
          to any listening deity that there's\n\
