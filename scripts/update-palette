@@ -21,7 +21,7 @@ from functools import reduce
 from itertools import zip_longest
 import struct
 import os
-from os.path import dirname, realpath, join, normpath
+from os.path import dirname, relpath, realpath, join, normpath
 import png
 from sys import argv
 from zlib import crc32
@@ -137,12 +137,12 @@ def process_dir(colour_map, dir, dry_run, palette):
                 continue
             png_path = os.path.join(dirpath, png_base)
             pngs_examined_count += 1
-            if process_png(colour_map, png_path, dry_run):
+            if process_png(colour_map, png_path, dry_run, dir):
                 pngs_changed_count += 1
 
 
 # Process a PNG file in place.
-def process_png(colour_map, png_path, dry):
+def process_png(colour_map, png_path, dry, dir):
 
     # Read a chunk from the PNG file
     def read_png_chunk(png_file):
@@ -211,8 +211,8 @@ def process_png(colour_map, png_path, dry):
         idat_modified = any(map(is_colour_changed, values))
 
     # Write the modified PNG file
-    if plte_modified and idat_modified:
-        print("{} was changed".format(png_path))
+    if idat_modified:
+        print("{} was changed".format(relpath(png_path, start=dir)))
         if not dry:
             with open(png_path, "wb") as handle:
                 handle.write(PNG_SIGNATURE)
@@ -226,7 +226,7 @@ def process_png(colour_map, png_path, dry):
                     handle.write(chunk.data)
                     handle.write(chunk_crc)
 
-    return True
+    return idat_modified
 
 
 if __name__ == "__main__":
