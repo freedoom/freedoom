@@ -11,6 +11,9 @@
 # This script takes a new PLAYPAL as an argument, compares the old and new
 # palettes, and modifies every paletted PNG file in the repo so that the new
 # colours are used.
+#
+# Dependencies:
+# - pypng: https://gitlab.com/drj11/pypng (retrieved Sept 10 2023)
 
 import argparse
 from collections import namedtuple
@@ -18,7 +21,8 @@ from functools import reduce
 from itertools import zip_longest
 import struct
 import os
-from os.path import dirname, join
+from os.path import dirname, realpath, join, normpath
+import png
 from sys import argv
 from zlib import crc32
 
@@ -34,7 +38,7 @@ def parse_args():
         "--dir", "-d", help=(
             "The directory to recursively process. "
             "Defaults to repository root directory."),
-        default=join(dirname(argv[0]), ".."))
+        default=normpath(join(dirname(realpath(argv[0])), "..")))
     parser.add_argument(
         "--dry-run", help="Do not modify any PNGs", action='store_true')
     args = parser.parse_args()
@@ -179,27 +183,9 @@ def process_png(colour_map, png_path, dry):
         colours = b"".join(map(bytes, colours))
         return modified, colours
 
-    def is_colour_changed(bit_depth):
-        def split_byte(byte):
-            if bit_depth == 1:
-                indices = [
-                    byte & 0x80, byte & 0x40, byte & 0x20, byte & 0x10,
-                    byte & 0x08, byte & 0x04, byte & 0x02, byte & 0x01
-                ]
-            elif bit_depth == 2:
-                # 1 + 2 = 3 = 0x03
-                # 4 + 8 = 12 = 0x0C
-                indices = [byte & 0xC0, byte & 0x30, byte & 0x0C, byte & 0x03]
-            elif bit_depth == 4:
-                # Nibbles
-                indices = [byte & 0xF0, byte & 0x0F]
-            elif bit_depth == 8:
-                indices = [byte]
-            return indices
-        def colour_changed(byte):
-            return any(map(
-                lambda b: b in modified_palette_colours, split_byte(byte)))
-        return colour_changed
+    def is_colour_changed(colour_index):
+        nonlocal modified_palette_colours
+        return colour_index in modified_palette_colours
 
     # Modify the PLTE chunk, if necessary, and check if the PLTE modifications
     # affect the IDAT chunk.
@@ -219,9 +205,10 @@ def process_png(colour_map, png_path, dry):
             chunk_name = chunk.type
             plte_modified, chunk_data = maybe_modify_plte(chunk.data)
             chunks[index] = PngChunk(chunk_name, chunk_data)
-        if plte_modified and chunk.type == b"IDAT":
-            if any(map(is_colour_changed(bit_depth), chunk.data)):
-                idat_modified = True
+    if plte_modified:
+        png_reader = png.Reader(filename=png_path)
+        width, height, values, info = png_reader.read_flat()
+        idat_modified = any(map(is_colour_changed, values))
 
     # Write the modified PNG file
     if plte_modified and idat_modified:
