@@ -14,10 +14,12 @@
 
 import argparse
 from collections import namedtuple
+from functools import reduce
 from itertools import zip_longest
-from shutil import copy
 import struct
 import os
+from os.path import dirname, join
+from sys import argv
 from zlib import crc32
 
 PngChunk = namedtuple("PNGChunk", "type data")
@@ -31,8 +33,10 @@ def parse_args():
     parser.add_argument(
         "--dir", "-d", help=(
             "The directory to recursively process. "
-            "Defaults to working directory"),
-        default=os.getcwd())
+            "Defaults to repository root directory."),
+        default=join(dirname(argv[0]), ".."))
+    parser.add_argument(
+        "--dry-run", help="Do not modify any PNGs", action='store_true')
     args = parser.parse_args()
     return args
 
@@ -54,48 +58,87 @@ def grouper(iterable, n, *, incomplete='fill', fillvalue=None):
         raise ValueError('Expected fill, strict, or ignore')
 
 
+
 # Compare the old palette and the new palette, and return a dict with the
 # differences.
 def compare_palettes(new_palette):
-    old_to_new = {}
     old_palette = "lumps/playpal/playpal-base.lmp"
+
+    # Read both palettes into a more usable format
     with open(old_palette, "rb") as handle:
         old_palette = handle.read()
         if len(old_palette) < 768:
             raise ValueError("Old palette is too short!")
         old_palette = list(grouper(old_palette[:768], 3, incomplete='strict'))
+
     with open(new_palette, "rb") as handle:
         new_palette = handle.read()
         if len(new_palette) < 768:
             raise ValueError("New palette is too short!")
         new_palette = list(grouper(new_palette[:768], 3, incomplete='strict'))
+
+    # Given a colour palette and a dict, return a dict with the indexes of
+    # each colour. This function is meant to be used with functools.reduce.
+    def get_duplicate_colours(value, index_colour):
+        index, colour = index_colour
+        value.setdefault(colour, []).append(index)
+        return value
+
+    # Scan the old palette for duplicate colours
+    old_palette_duplicates = reduce(
+        get_duplicate_colours, enumerate(old_palette), {})
+    # Eliminate unique colours
+    old_palette_duplicates = dict(filter(
+        # kv[1] is the value, and it's unique if it's length is 1
+        lambda kv: None if len(kv[1]) == 1 else kv,
+        old_palette_duplicates.items()
+    ))
+
+    # Map old indices to new colours for now.
+    old_to_new = {}
     for index, zipper in enumerate(zip(old_palette, new_palette)):
         old_colour, new_colour = zipper
         if old_colour != new_colour:
-            # Index is unnecessary (I hope)?
-            # old_to_new[(index, old_colour)] = new_colour
-            old_to_new[old_colour] = new_colour
+            old_to_new[index] = new_colour
+
+    # Does the new palette replace ALL instances of a duplicate colour in the
+    # old palette? If so, map the old colour to the first replacement in the
+    # new palette, but if not, leave the old colour unchanged.
+    replaced = {}
+    for colour, indices in old_palette_duplicates.items():
+        if all(map(lambda i: i in old_to_new.keys(), indices)):
+            replaced[colour] = old_to_new[min(indices)]
+        else:
+            replaced[colour] = None
+
+    # Replace the keys in old_to_new, which are indices, with the old palette
+    # colours they correspond to. This way, we have a colour-to-colour dict.
+    old_to_new = dict(filter(lambda kv: kv[1], map(
+        lambda iv: (old_palette[iv[0]],
+                    replaced.get(old_palette[iv[0]], iv[1])),
+        old_to_new.items()
+    )))
     return old_to_new
 
 
 # "Stolen" from the map-color-index script
 # Process a directory recursively for PNG files.
-def process_dir(colour_map, args_dir):
+def process_dir(colour_map, dir, dry_run, palette):
     pngs_changed_count = 0
     pngs_examined_count = 0
 
-    for dirpath, dirnames, filenames in os.walk(args_dir):
+    for dirpath, dirnames, filenames in os.walk(dir):
         for png_base in filenames:
             if not png_base.lower().endswith(".png"):
                 continue
             png_path = os.path.join(dirpath, png_base)
             pngs_examined_count += 1
-            if process_png(colour_map, png_path):
+            if process_png(colour_map, png_path, dry_run):
                 pngs_changed_count += 1
 
 
 # Process a PNG file in place.
-def process_png(colour_map, png_path):
+def process_png(colour_map, png_path, dry):
 
     # Read a chunk from the PNG file
     def read_png_chunk(png_file):
@@ -112,18 +155,6 @@ def process_png(colour_map, png_path):
         #     return None
         return PngChunk(chunk_type, chunk_data)
 
-    # Change the old colours to the new colours
-    def maybe_modify_plte(plte_data):
-        nonlocal colour_map
-        modified = False
-        colours = list(grouper(plte_data, 3, incomplete='strict'))
-        for index, colour in enumerate(colours):
-            if colour in colour_map:
-                modified = True
-                colours[index] = colour_map[colour]
-        colours = b"".join(map(bytes, colours))
-        return modified, colours
-
     # Read the PNG file
     chunks = []
     with open(png_path, "rb") as handle:
@@ -133,27 +164,80 @@ def process_png(colour_map, png_path):
         while chunk := read_png_chunk(handle):
             chunks.append(chunk)
 
-    # Modify the PLTE chunk, if necessary
+    # Change the old colours to the new colours
+    modified_palette_colours = set()
+    def maybe_modify_plte(plte_data):
+        nonlocal colour_map
+        nonlocal modified_palette_colours
+        modified = False
+        colours = list(grouper(plte_data, 3, incomplete='strict'))
+        for index, colour in enumerate(colours):
+            if colour in colour_map:
+                modified = True
+                modified_palette_colours.add(index)
+                colours[index] = colour_map[colour]
+        colours = b"".join(map(bytes, colours))
+        return modified, colours
+
+    def is_colour_changed(bit_depth):
+        def split_byte(byte):
+            if bit_depth == 1:
+                indices = [
+                    byte & 0x80, byte & 0x40, byte & 0x20, byte & 0x10,
+                    byte & 0x08, byte & 0x04, byte & 0x02, byte & 0x01
+                ]
+            elif bit_depth == 2:
+                # 1 + 2 = 3 = 0x03
+                # 4 + 8 = 12 = 0x0C
+                indices = [byte & 0xC0, byte & 0x30, byte & 0x0C, byte & 0x03]
+            elif bit_depth == 4:
+                # Nibbles
+                indices = [byte & 0xF0, byte & 0x0F]
+            elif bit_depth == 8:
+                indices = [byte]
+            return indices
+        def colour_changed(byte):
+            return any(map(
+                lambda b: b in modified_palette_colours, split_byte(byte)))
+        return colour_changed
+
+    # Modify the PLTE chunk, if necessary, and check if the PLTE modifications
+    # affect the IDAT chunk.
     plte_modified = False
+    idat_modified = False
+    is_paletted = False
     for index, chunk in enumerate(chunks):
-        if chunk.type == b"PLTE":
+        if chunk.type == b"IHDR":
+            width, height, bit_depth, colour_type = struct.unpack_from(
+                "!IIBB", chunk.data
+            )
+            is_paletted = colour_type == 3 and (
+                bit_depth == 1 or bit_depth == 2 or
+                bit_depth == 4 or bit_depth == 8
+            )
+        if is_paletted and chunk.type == b"PLTE":
             chunk_name = chunk.type
             plte_modified, chunk_data = maybe_modify_plte(chunk.data)
             chunks[index] = PngChunk(chunk_name, chunk_data)
+        if plte_modified and chunk.type == b"IDAT":
+            if any(map(is_colour_changed(bit_depth), chunk.data)):
+                idat_modified = True
 
     # Write the modified PNG file
-    if plte_modified:
-        with open(png_path, "wb") as handle:
-            handle.write(PNG_SIGNATURE)
-            for chunk in chunks:
-                chunk_crc = crc32(chunk.type)
-                chunk_crc = crc32(chunk.data, chunk_crc)
-                chunk_crc = struct.pack("!I", chunk_crc)
-                chunk_len = struct.pack("!I", len(chunk.data))
-                handle.write(chunk_len)
-                handle.write(chunk.type)
-                handle.write(chunk.data)
-                handle.write(chunk_crc)
+    if plte_modified and idat_modified:
+        print("{} was changed".format(png_path))
+        if not dry:
+            with open(png_path, "wb") as handle:
+                handle.write(PNG_SIGNATURE)
+                for chunk in chunks:
+                    chunk_crc = crc32(chunk.type)
+                    chunk_crc = crc32(chunk.data, chunk_crc)
+                    chunk_crc = struct.pack("!I", chunk_crc)
+                    chunk_len = struct.pack("!I", len(chunk.data))
+                    handle.write(chunk_len)
+                    handle.write(chunk.type)
+                    handle.write(chunk.data)
+                    handle.write(chunk_crc)
 
     return True
 
@@ -161,6 +245,11 @@ def process_png(colour_map, png_path):
 if __name__ == "__main__":
     args = parse_args()
     comparison = compare_palettes(args.palette)
-    process_dir(comparison, args.dir)
+    process_dir(comparison, **vars(args))
     # Replace old playpal-base.lmp
-    copy(args.palette, "lumps/playpal/playpal-base.lmp")
+    if not args.dry_run:
+        with (open(args.palette, "rb") as new_palfile,
+              open("lumps/playpal/playpal-base.lmp", "wb") as old_palfile):
+            # Only copy the first 768 bytes of the new palette to playpal-base
+            new_pal = new_palfile.read(768)
+            old_palfile.write(new_pal)
