@@ -112,6 +112,12 @@ and killed monsters come back to life after around 40 seconds.
 [[savegame]]
 === Loading and saving the game
 
+[**Warning:** the original Doom program has a bug that makes it crash
+when you save a game while too much is going on on the level. Some
+source ports intentionally emulate this behaviour. You may want to check
+your source port's compatibility settings and disable this (e.g.,
+"Vanilla savegame limit" in Chocolate Doom) before playing.]
+
 It is a good idea to save the game regularly -- for example, at the start
 of each new level. You may also want to save the game after completing a
 challenging section of a level so that you do not have to repeat it again
