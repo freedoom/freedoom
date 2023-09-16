@@ -156,7 +156,7 @@ def pairwise(iterable):
 
 
 def process_idat(
-    all_idats, width, bit_depth, compression, filtering, interlacing
+    data, width, bit_depth, compression, filtering, interlacing
     ):
 
     def mask_bits(bit_depth):
@@ -193,12 +193,13 @@ def process_idat(
             filter_type = filtered[0]
             scanline = tuple(chain((0,), filtered[1:]))
             if prev_bgn >= 0:
-                prev_scanline = tuple(chain((0,), lines[-1]))
+                # Reconstructed scanlines in lines list all start with a zero
+                prev_scanline = tuple(lines[-1])
             else:
                 prev_scanline = tuple([0 for _ in range(filtered_stride)])
             # c b
             # a x
-            reconstructed = [0]
+            reconstructed = bytearray(1)
             for byte_index in range(1, len(scanline)):
                 unfilters = {  # Filter type to reconstruction function
                     # No filter
@@ -240,7 +241,7 @@ def process_idat(
             data)))
 
     if compression == 0:
-        data = zlib.decompress(all_idats)
+        data = zlib.decompress(data)
     if filtering == 0:
         data = defilter(data, width, bit_depth)
     if interlacing != 0:
