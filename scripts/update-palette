@@ -12,19 +12,20 @@
 # palettes, and modifies every paletted PNG file in the repo so that the new
 # colours are used.
 #
-# Dependencies:
+# Optional dependencies:
 # - pypng: https://gitlab.com/drj11/pypng (retrieved Sept 10 2023)
 
 import argparse
 from collections import namedtuple
 from functools import reduce
-from itertools import zip_longest
+from itertools import chain, starmap, tee, zip_longest
+from math import floor, ceil
 import struct
 import os
 from os.path import dirname, relpath, realpath, join, normpath
-import png
+# import png
 from sys import argv
-from zlib import crc32
+import zlib
 
 PngChunk = namedtuple("PNGChunk", "type data")
 
@@ -61,6 +62,11 @@ def grouper(iterable, n, *, incomplete='fill', fillvalue=None):
     else:
         raise ValueError('Expected fill, strict, or ignore')
 
+
+# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
+def flatten(list_of_lists):
+    "Flatten one level of nesting"
+    return chain.from_iterable(list_of_lists)
 
 
 # Compare the old palette and the new palette, and return a dict with the
@@ -141,6 +147,109 @@ def process_dir(colour_map, dir, dry_run, palette):
                 pngs_changed_count += 1
 
 
+# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
+def pairwise(iterable):
+    "s -> (s0,s1), (s1,s2), (s2, s3), ..."
+    a, b = tee(iterable)
+    next(b, None)
+    return zip(a, b)
+
+
+def process_idat(
+    all_idats, width, bit_depth, compression, filtering, interlacing
+    ):
+
+    def mask_bits(bit_depth):
+        base_bit_mask = reduce(lambda a, b: a | (1 << b), range(bit_depth), 0)
+        bit_mask = base_bit_mask
+        shift = 0
+        while bit_mask:
+            yield bit_mask, shift
+            bit_mask = (bit_mask << bit_depth) & 0xFF
+            shift += bit_depth
+
+    def paeth_predictor(a_byte, b_byte, c_byte):
+        # Paeth predictor of x:
+        paeth = a_byte + b_byte - c_byte
+        pa = abs(paeth - a_byte)
+        pb = abs(paeth - b_byte)
+        pc = abs(paeth - c_byte)
+        if pa <= pb and pa <= pc:
+            predictor = a_byte
+        elif pb <= pc:
+            predictor = b_byte
+        else:
+            predictor = c_byte
+        return predictor
+
+    def defilter(data, width, bit_depth):
+        stride = ceil(width / 8 * bit_depth)
+        filtered_stride = stride + 1
+        bgn_end = pairwise(range(0, len(data), filtered_stride))
+        lines = []
+        for bgn, end in bgn_end:
+            prev_bgn = bgn - filtered_stride + 1
+            filtered = data[bgn:end]
+            filter_type = filtered[0]
+            scanline = tuple(chain((0,), filtered[1:]))
+            if prev_bgn >= 0:
+                prev_scanline = tuple(chain((0,), lines[-1]))
+            else:
+                prev_scanline = tuple([0 for _ in range(filtered_stride)])
+            # c b
+            # a x
+            reconstructed = [0]
+            for byte_index in range(1, len(scanline)):
+                unfilters = {  # Filter type to reconstruction function
+                    # No filter
+                    0: lambda fx, ra, rb, rc: fx % 256,
+                    # Sub
+                    1: lambda fx, ra, rb, rc: (fx + ra) % 256,
+                    # Up
+                    2: lambda fx, ra, rb, rc: (fx + rb) % 256,
+                    # Average
+                    3: lambda fx, ra, rb, rc: \
+                        (fx + floor((ra + rb) / 2)) % 256,
+                    # Paeth
+                    4: lambda fx, ra, rb, rc: \
+                        (fx + paeth_predictor(ra, rb, rc)) % 256
+                }
+                x_byte = scanline[byte_index]
+                a_byte = reconstructed[byte_index - 1]
+                b_byte = prev_scanline[byte_index]
+                c_byte = prev_scanline[byte_index - 1]
+                unfilter = unfilters[filter_type]
+                reconstructed.append(unfilter(x_byte, a_byte, b_byte, c_byte))
+            lines.append(reconstructed)
+        # Remove zeros from scanlines in lines list
+        return bytes(flatten(map(lambda l: l[1:], lines)))
+
+    # Expand the packed bytes into colour or index samples
+    def expand_bytes(data, bit_depth):
+        if bit_depth not in {1,2,4,8}:
+            return None
+
+        # No expansion necessary
+        if bit_depth == 8:
+            return data
+
+        return bytes(flatten(map(
+            lambda b: bytes(starmap(
+                lambda mask, shift: (b & mask) >> shift,
+                mask_bits(bit_depth))),
+            data)))
+
+    if compression == 0:
+        data = zlib.decompress(all_idats)
+    if filtering == 0:
+        data = defilter(data, width, bit_depth)
+    if interlacing != 0:
+        print("WARNING! This image is interlaced! De-interlacing is not"
+              "implemented yet!")
+    data = expand_bytes(data, bit_depth)
+    return data
+
+
 # Process a PNG file in place.
 def process_png(colour_map, png_path, dry, dir):
 
@@ -153,8 +262,8 @@ def process_png(colour_map, png_path, dry, dir):
         chunk_data = png_file.read(chunk_len)
         chunk_crc = png_file.read(4)
         chunk_crc = struct.unpack("!I", chunk_crc)[0]
-        # crc = crc32(chunk_type)
-        # crc = crc32(chunk_data, crc)
+        # crc = zlib.crc32(chunk_type)
+        # crc = zlib.crc32(chunk_data, crc)
         # if crc != chunk_crc:
         #     return None
         return PngChunk(chunk_type, chunk_data)
@@ -192,23 +301,32 @@ def process_png(colour_map, png_path, dry, dir):
     plte_modified = False
     idat_modified = False
     is_paletted = False
+    all_idat = []
     for index, chunk in enumerate(chunks):
         if chunk.type == b"IHDR":
-            width, height, bit_depth, colour_type = struct.unpack_from(
-                "!IIBB", chunk.data
+            (width, height, bit_depth, colour_type,
+             compression, filtering, interlacing) = struct.unpack_from(
+                "!IIBBBBB", chunk.data
             )
             is_paletted = colour_type == 3 and (
                 bit_depth == 1 or bit_depth == 2 or
                 bit_depth == 4 or bit_depth == 8
             )
-        if is_paletted and chunk.type == b"PLTE":
+        elif is_paletted and chunk.type == b"PLTE":
             chunk_name = chunk.type
             plte_modified, chunk_data = maybe_modify_plte(chunk.data)
             chunks[index] = PngChunk(chunk_name, chunk_data)
+        elif chunk.type == b"IDAT":
+            all_idat.append(chunk.data)
     if plte_modified:
-        png_reader = png.Reader(filename=png_path)
-        width, height, values, info = png_reader.read_flat()
+        all_idat = bytes(flatten(all_idat))
+        values = process_idat(all_idat, width, bit_depth,
+                              compression, filtering, interlacing)
+        # png_reader = png.Reader(filename=png_path)
+        # width, height, values, info = png_reader.read_flat()
         idat_modified = any(map(is_colour_changed, values))
+        del values
+    del all_idat
 
     # Write the modified PNG file
     if idat_modified:
@@ -217,8 +335,8 @@ def process_png(colour_map, png_path, dry, dir):
             with open(png_path, "wb") as handle:
                 handle.write(PNG_SIGNATURE)
                 for chunk in chunks:
-                    chunk_crc = crc32(chunk.type)
-                    chunk_crc = crc32(chunk.data, chunk_crc)
+                    chunk_crc = zlib.crc32(chunk.type)
+                    chunk_crc = zlib.crc32(chunk.data, chunk_crc)
                     chunk_crc = struct.pack("!I", chunk_crc)
                     chunk_len = struct.pack("!I", len(chunk.data))
                     handle.write(chunk_len)
@@ -235,8 +353,8 @@ if __name__ == "__main__":
     process_dir(comparison, **vars(args))
     # Replace old playpal-base.lmp
     if not args.dry_run:
-        with (open(args.palette, "rb") as new_palfile,
-              open("lumps/playpal/playpal-base.lmp", "wb") as old_palfile):
+        with  open(args.palette, "rb") as new_palfile, \
+              open("lumps/playpal/playpal-base.lmp", "wb") as old_palfile:
             # Only copy the first 768 bytes of the new palette to playpal-base
             new_pal = new_palfile.read(768)
             old_palfile.write(new_pal)
