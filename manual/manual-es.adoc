@@ -141,6 +141,12 @@ sin navegar por el menú.
 
 Puedes restaurar tu espacio de guardado rápido con el menú o al presionar _F9_.
 
+[**Advertencia:** el programa Doom original tiene un error que hace que
+se bloquee cuando guardas una partida mientras están pasando demasiadas
+cosas en el nivel. Chocolate Doom emula intencionadamente este
+error. Es posible que desee ir a chocolate-setup y desactivar
+"Vanilla savegame limit" antes de jugar.]
+
 === Salir del juego
 
 Cuando hayas terminado de jugar Freedoom, presiona _Esc_ para mostrar el menú
@@ -379,11 +385,8 @@ Permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
 Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
 acceder a zonas secretas.
 
-Si no puedes ver los colores, fíjate en el centro de la tarjeta o en los
-cuernos de la calavera - azul diagonal, amarillo vertical, rojo horizontal: +
-image:images/key-icons.png[Iconos de llaves,align="center"] +
-Estas formas se usan consistentemente para todo el juego: en la barra de
-estado, las llaves mismas y en la mayoría de las puertas que requieren llaves.
+El color de una llave es siempre asociados con la dirección de su líneas
+o cuernos: azul diagonal, amarillo vertical, rojo horizontal.
 | **Gafas luminosas** +
 image:../sprites/pvisa0.png[Gafas luminosas] |
 Te permiten ver en la obscuridad por un tiempo limitado.
@@ -408,6 +411,30 @@ Maximiza tu salud y armadura hasta el 200%.
 image:../sprites/pinva0.png[Via Gladii] |
 Te hace inmune a todo el daño por tiempo limitado.
 |==========================
+
+=== Accesibilidad para daltónicos
+
+Las llaves de Freedoom están diseñadas para distinguirse no sólo por su
+color, sino también por su forma, para hacer el juego más accesible a los
+jugadores daltónicos. Cada color de llave tiene una forma única asociada:
+
+[cols="2,3",width="50%",align="center",valign="middle"]
+|==========================
+| **Key color** | **Shape**
+| Blue | Forma de cruz (X)
+| Yellow | Líneas verticales
+| Red | Líneas horizontales
+|==========================
+
+Estas formas se utilizan sistemáticamente en todo el juego: en los iconos
+de la barra de estatus, en los sprites de las llaves y en las paredes que
+indican las puertas con llave.
+
+Para las llaves muertas, presta atención a la dirección a la que apuntan
+los cuernos. Por ejemplo, así es como aparecen los distintos iconos de las
+llaves en la barra de estatus:
+
+image:images/key-icons.png[Key icons,align="center"]
 
 === Enemigos
 
@@ -701,30 +728,6 @@ los enemigos y objetos.
 |==========================
 
 <<<
-
-== Assesibilidad ==
-
-Freedoom es un proyecto voluntario que recibe contribuciones de varias
-personas con distintas capacidades y necesidades. La comunidad intenta
-resolver los problemas de accesibilidad tal como aparecen, pero siempre
-hay margen de mejora.
-
-Contribuciones y comentarios son bienvenidos.
-
-* **Accesibilidad para daltónicos:** Nada debe distinguirse únicamente
-por el tono. Cada tipo de llave tiene marcas diferentes, los dos armaduras
-tienen siluetas diferentes y los interruptores tienen posiciones arriba/abajo;
-donde el color es la principal diferencia, siempre acompaña también un
-cambio de brillo. (Los "hermanos de dolor" se ven confusamente similares
-incluso para personas que no son daltónicas. :))
-
-* **Controles:** Se desaconsejan las áreas a las que solo se puede acceder
-mediante straferunning, ya que es posible que no estén disponibles en ciertas
-configuraciones de controlador.
-
-* **Cognitivo:** Los niveles se prueban periódicamente para señalización
-y navegabilidad. Se intenta mantener la terminología coherente sin términos
-similares que puedan generar confusión.
 
 == Freedoom es sobre libertad ==
 

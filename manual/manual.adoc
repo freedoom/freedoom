@@ -45,8 +45,8 @@ This gives 62 levels to play through, and there are also secret levels -- if
 you can discover how to reach them.
 
 FreeDM (`freedm.wad`) is a monster-free set of levels, made specifically
-for player-versus player. For how to host a multiplayer game,
-consult your source port.
+for player-versus-player. For how to host a multiplayer game,
+check the instructions on your source port.
 
 <<<
 
@@ -112,12 +112,6 @@ and killed monsters come back to life after around 40 seconds.
 [[savegame]]
 === Loading and saving the game
 
-[**Warning:** the original Doom program has a bug that makes it crash
-when you save a game while too much is going on on the level. Some
-source ports intentionally emulate this behaviour. You may want to check
-your source port's compatibility settings and disable this (e.g.,
-"Vanilla savegame limit" in Chocolate Doom) before playing.]
-
 It is a good idea to save the game regularly -- for example, at the start
 of each new level. You may also want to save the game after completing a
 challenging section of a level so that you do not have to repeat it again
@@ -140,6 +134,11 @@ Pressing _F6_ again in the future will overwrite your quicksave slot
 without navigating the menu.
 
 You can restore your quicksave slot with the menu or by pressing _F9_.
+
+[**Warning:** the original Doom program has a bug that makes it crash
+when you save a game while too much is going on on the level. Chocolate
+Doom intentionally emulates this behaviour. You may want to go into
+chocolate-setup and disable "Vanilla savegame limit" before playing.]
 
 === Quitting the game
 
@@ -187,10 +186,10 @@ addition to the action.
 
 By default, the keyboard cursor keys will move forward and backward, and turn
 left and right. The _Control_ key fires the current weapon, and the spacebar
-will open doors and activate switches. Consult your source port on how to rebind
-these keys to a setup that you find more comfortable. You’ll also want to look
-into using the strafe (sidestep) and run keys to better control over your
-movement.
+will open doors and activate switches. Check the settings on your source port
+on how to rebind these keys to a setup that you find more comfortable.
+You’ll also want to look into using the strafe (sidestep) and run keys to
+better control over your movement.
 
 If you haven’t played Freedoom before, take a few minutes when you start the
 game to get familiar with the controls, and reconfigure controls as you find
@@ -237,7 +236,7 @@ ammunition>>, along with the maximum of each you can carry.
 You start the game with only a handgun, 50 bullets and your fists.
 Exploring the level will reveal more weapons and ammo that you can pick up and use.
 
-Pressing the numbered key on the keyboard switches to the given weapon
+Pressing the number key on the keyboard switches to the given weapon
 (if you have it). Apart from the melee weapons, each weapon consumes a
 certain type of ammo, which may be found somewhere in the level.
 
@@ -368,13 +367,10 @@ image:../sprites/rkeya0.png[Red Passcard]
 image:../sprites/rskua0.png[Red Skeleton Key] |
 Allow you to open certain locked doors and activate locked switches.
 Usually essential to be able to progress, although they sometimes allow
-access to secret areas.
+access to shortcuts of secret areas.
 
-If you can't see the colors, check the center of the card or the horns
-on the skull - blue diagonal, yellow vertical, red horizontal: +
-image:images/key-icons.png[Key icons,align="center"] +
-These shapes are used consistently throughout the game: in the status bar
-icons, the key sprites and on walls indicating keyed doors.
+The color of a key is always associated with the direction of a key's
+lines or horns: blue diagonal, yellow vertical, red horizontal.
 | **Low-Light Goggles** +
 image:../sprites/pvisa0.png[Low-Light Goggles] |
 Allow you to see in the dark for a limited time.
@@ -402,6 +398,28 @@ image:../sprites/pinva0.png[Vanguard Device] |
 Makes you immune to all damage for a limited time, allowing you to get
 past overwhelming defences and unavoidable traps.
 |==========================
+
+=== Color blind accessibility
+
+Freedoom's keys are designed to be distinguishable not just by color but
+also by shape, to make the game more accessible to color-blind players.
+Each key color has an associated unique shape:
+
+[cols="2,3",width="50%",align="center",valign="middle"]
+|==========================
+| **Key color** | **Shape**
+| Blue | Cross shape (X)
+| Yellow | Vertical lines
+| Red | Horizontal lines
+|==========================
+
+These shapes are used consistently throughout the game: in the status bar
+icons, the key sprites and on walls indicating keyed doors.
+
+For the skeleton keys, pay attention to the direction that the horns point.
+For example, here is how the different key icons appear in the status bar:
+
+image:images/key-icons.png[Key icons,align="center"]
 
 === Enemies
 
@@ -683,34 +701,6 @@ number of cheats that you can turn to:
 |==========================
 
 <<<
-
-== Accessibility ==
-
-Freedoom is a volunteer project that receives contributions from a wide
-variety of people with differing abilities and needs. The community
-tries to address accessibility issues as they come up but there is always
-room for improvement.
-
-Contributions and feedback are welcome.
-
-* **Color blind accessibility:** Nothing should be distinguished solely
-by hue. Each type of key has different markings, the two armors have
-different silhouettes, and switches have up/down positions; where color
-is the main difference, it always accompanies a change in brightness as
-well. (The "pain brothers" are confusingly similar even for people who
-are not color blind. :))
-
-* **Controls:** Areas that can only be accessed by straferunning are
-discouraged, as it may not be available on certain controller configurations.
-Recent efforts are being made to ensure that no obligatory components
-require precisely timed combinations of movements.
-All levels are tested to avoid "hot starts" where enemies can attack
-players before the player has provided any input.
-
-* **Cognitive:** Levels are regularly tested for signposting and navigability.
-In-game messages are given key words to distinguish what sort of gameplay
-mechanic is being affected, minimizing lookup time.
-The same word is generally used for the same thing.
 
 == Freedoom is about freedom ==
 
