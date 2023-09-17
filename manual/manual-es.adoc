@@ -421,9 +421,9 @@ jugadores daltónicos. Cada color de llave tiene una forma única asociada:
 [cols="2,3",width="50%",align="center",valign="middle"]
 |==========================
 | **Key color** | **Shape**
-| Blue | Forma de cruz (X)
-| Yellow | Líneas verticales
-| Red | Líneas horizontales
+| Azul | Forma de cruz (X)
+| Amarillo | Líneas verticales
+| Rojo | Líneas horizontales
 |==========================
 
 Estas formas se utilizan sistemáticamente en todo el juego: en los iconos
