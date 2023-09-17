@@ -468,14 +468,16 @@ E3TEXT = The abomination explodes into oblivion.\n\
          Wherever or whatever that is, you pray\n\
          to any listening deity that there's\n\
          a working ship on the other side.
-E4TEXT = After yet another army of monsters\n\
-         you manage to find a functioning ship.\n\
-         Looks like freedom is yours.\n\n\
-         You practically melt into the soft\n\
-         pilot's seat, a luxurious welcome\n\
-         as you leave this wretched rock.\n\n\
+E4TEXT = Suppressing fire echoes above as the last\n\
+         survivors flee the ship. The launch process\n\
+         is irreversible: killing you now would only\n\
+         bring a slow death drifting through space.\n\n\
+         Fifty-nine. Fifty-eight. Fifty-seven. .  .\n\
+         You melt into the pilot's seat, lost in the\n\
+         voice of an automated assembly of angels\n\
+         delivering you from this wretched rock.\n\n\
          The ship rumbles as she wakes up;\n\
-         you think of Earth as she lifts off.\n\n\
+         you think of Earth as she lifts off.\n\
          Hopefully AGM won't find you there:\n\
          they've got the outbreak to deal with,\n\
          so that'll give you some time.\n\n\
