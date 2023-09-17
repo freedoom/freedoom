@@ -137,7 +137,7 @@ You can restore your quicksave slot with the menu or by pressing _F9_.
 
 [**Warning:** the original Doom program has a bug that makes it crash
 when you save a game while too much is going on on the level. Chocolate
-Doom intentionally emulates this behaviour. You may want to go into
+Doom intentionally emulates this bug. You may want to go into
 chocolate-setup and disable "Vanilla savegame limit" before playing.]
 
 === Quitting the game
@@ -367,7 +367,7 @@ image:../sprites/rkeya0.png[Red Passcard]
 image:../sprites/rskua0.png[Red Skeleton Key] |
 Allow you to open certain locked doors and activate locked switches.
 Usually essential to be able to progress, although they sometimes allow
-access to shortcuts of secret areas.
+access to shortcuts or secret areas.
 
 The color of a key is always associated with the direction of a key's
 lines or horns: blue diagonal, yellow vertical, red horizontal.

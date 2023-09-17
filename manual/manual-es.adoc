@@ -383,7 +383,7 @@ image:../sprites/rkeya0.png[Tarjeta de acceso rojo]
 image:../sprites/rskua0.png[Llave muerta rojo] |
 Permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
 Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
-acceder a zonas secretas.
+acceder a atajos o zonas secretas.
 
 El color de una llave es siempre asociados con la dirección de su líneas
 o cuernos: azul diagonal, amarillo vertical, rojo horizontal.
