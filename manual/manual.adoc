@@ -175,7 +175,7 @@ messages shown when you collect an item.
 
 == How to Play
 
-image::images/c5m1-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
+image::images/map01-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
 
 Freedoom is a real-time first-person shooter (FPS). You’ll be exploring a
 series of levels, in each one trying to find the way to the exit. An
@@ -535,7 +535,7 @@ image:images/hazard-barrels.png[Barrels,150,150,width=100%]
 | **Damaging Floors** |
 Red-hot lava and radioactive sludge are just two of the types of damaging floor
 you can encounter in Freedoom’s levels. If walking over it is necessary, try to
-find yourself a <<specialitems,hazard suit>>, but be aware that it will only
+find yourself a <<specialitems,rescue suit>>, but be aware that it will only
 protect you for a limited time. |
 image:images/hazard-slime.png[Radioactive slime,150,150,width=100%]
 | **Crushing Ceilings** |

@@ -177,7 +177,7 @@ mensajes mostrados cuando recolectas un objeto.
 
 == Como Jugar
 
-image::images/c5m1-sshot.png[Captura de pantalla de Freedoom,width="640",pdfwidth="70vw",align="center"]
+image::images/map01-sshot.png[Captura de pantalla de Freedoom,width="640",pdfwidth="70vw",align="center"]
 
 Freedoom es un juego en tiempo real de disparos en primera persona (FPS).
 Estarás explorando una serie de niveles, en cada uno, tratando de encontrar un
