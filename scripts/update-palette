@@ -46,21 +46,12 @@ def parse_args():
     return args
 
 
-# https://docs.python.org/3/library/itertools.html#itertools-recipes
-def grouper(iterable, n, *, incomplete='fill', fillvalue=None):
-    "Collect data into non-overlapping fixed-length chunks or blocks"
-    # grouper('ABCDEFG', 3, fillvalue='x') --> ABC DEF Gxx
-    # grouper('ABCDEFG', 3, incomplete='strict') --> ABC DEF ValueError
-    # grouper('ABCDEFG', 3, incomplete='ignore') --> ABC DEF
+# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
+def grouper(iterable, n, fillvalue=None):
+    "Collect data into fixed-length chunks or blocks"
+    # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
     args = [iter(iterable)] * n
-    if incomplete == 'fill':
-        return zip_longest(*args, fillvalue=fillvalue)
-    if incomplete == 'strict':
-        return zip(*args, strict=True)
-    if incomplete == 'ignore':
-        return zip(*args)
-    else:
-        raise ValueError('Expected fill, strict, or ignore')
+    return zip_longest(*args, fillvalue=fillvalue)
 
 
 # https://docs.python.org/3.8/library/itertools.html#itertools-recipes
@@ -79,13 +70,13 @@ def compare_palettes(new_palette):
         old_palette = handle.read()
         if len(old_palette) < 768:
             raise ValueError("Old palette is too short!")
-        old_palette = list(grouper(old_palette[:768], 3, incomplete='strict'))
+        old_palette = list(grouper(old_palette[:768], 3))
 
     with open(new_palette, "rb") as handle:
         new_palette = handle.read()
         if len(new_palette) < 768:
             raise ValueError("New palette is too short!")
-        new_palette = list(grouper(new_palette[:768], 3, incomplete='strict'))
+        new_palette = list(grouper(new_palette[:768], 3))
 
     # Given a colour palette and a dict, return a dict with the indexes of
     # each colour. This function is meant to be used with functools.reduce.
@@ -284,7 +275,7 @@ def process_png(colour_map, png_path, dry, dir):
         nonlocal colour_map
         nonlocal modified_palette_colours
         modified = False
-        colours = list(grouper(plte_data, 3, incomplete='strict'))
+        colours = list(grouper(plte_data, 3))
         for index, colour in enumerate(colours):
             if colour in colour_map:
                 modified = True
