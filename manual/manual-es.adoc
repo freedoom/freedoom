@@ -203,14 +203,27 @@ movimiento.
 
 Si no has jugado Freedoom antes, tomate unos minutos cuando comience el juego
 para familiarizarte con los controles, y reconfigura los controles a medida que
-lo encuentres más cómodo jugar. Practica moverte y disparar el arma. Puede que
-encuentres algunos monstruos de nivel bajo, pero aquellos que se encuentran en
-el primer nivel no presentan un gran desafío y son una buena oportunidad para
-practicar el cómo disparar.
+lo encuentres más cómodo jugar. Practica moverte y disparar el arma.
+
+En particular, tendrá que sentirse cómodo:
+- mover hacia delante, hacia atrás, a la izquierda y a la derecha,
+y cualquier combinación razonable de ellas.
+- girar para apuntar con tu arma (el centro de la pantalla) a un objeto determinado.
+- girar y apuntar a las cosas mientras te mueves en cada una de las direcciones.
+- hacerse a un lado como para dejar pasar algo y volver a la posición inicial
+a su posición original después de que el objeto haya pasado.
+- mover a la izquierda mientras giras a la derecha, y viceversa, para estando
+de cara a (y apuntando tu arma a) un punto en particular mientras te mueves.
+- realizar cualquiera de estas acciones mientras se pulsa la tecla Disparo.
+- realizar cualquiera de estas acciones mientras se pulsa la tecla Usar.
+- realizar cualquiera de estas acciones mientras se pulsa la tecla Correr
+(o está activada la opción "Corre siempre").
+
+Luego ve y mata a un zombi. Trate de no ser golpeado.
 
 Dentro del juego encontrarás varios objetos coleccionables y potenciadores.
 Estos típicamente te darán más <<ammo,munición>> para tus armas, más
-<<health,salud>> o más <<armor,armadura>>. También puedes encontrar
+<<health,salud>> o más <<armor,blindaje>>. También puedes encontrar
 <<weapons,nuevas armas>> y algunos de los <<specialitems,potenciadores más
 raros>> que te otorgan habilidades especiales. Recoger algo es tan simple
 como solo caminar sobre el objeto — un mensaje en tu pantalla y un breve
@@ -444,19 +457,19 @@ monstruos con los que puedes encontrarte.
 
 [frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
 |==========================
-| **Zombie** +
+| **Zombi** +
 Estas obradores de iniquidad con muerte cerebral están armadas con una pistola y tienen
 la intención de destruirte. Sueltan un cargador de balas cuando muere. |
-image:images/monster-zombie.png[Zombie,100,100,width=100%]
-| **Escopeta zombie** +
+image:images/monster-zombie.png[Zombi,100,100,width=100%]
+| **Escopeta zombi** +
 Estos muchachos cambiaron su pistola por una escopeta y tienen mucho más
 impacto. Sueltan una escopeta cuando mueren. |
-image:images/monster-shotgun-zombie.png[Escopeta zombie,100,100,width=100%]
-| **Minigun zombie** +
+image:images/monster-shotgun-zombie.png[Escopeta zombi,100,100,width=100%]
+| **Minigun zombi** +
 Tan pronto como estés a la vista de uno de estos, activaran su ametralladora y
 seguirá disparando hasta que estés muerto. Lo mejor es ponerse a cubierto
 rápidamente o eliminarlo. Sueltan una ametralladora cuando mueren. |
-image:images/monster-minigun-zombie.png[Minigun zombie,100,100,width=100%]
+image:images/monster-minigun-zombie.png[Minigun zombi,100,100,width=100%]
 | **Serpentipede** +
 Soldados rasos de la invasión alienígena. Deja que se acerquen y te harán trizas;
 a distancia, en cambio, lloverán bolas de fuego. |
@@ -609,7 +622,7 @@ sugerencias tácticas:
   visión. Querrás encontrar paredes, pilares y otras formas de cobertura tras
   las que puedas esconderte mientras recargas tu arma. Este consejo es
   particularmente importante cuando te enfrentas a ciertos monstruos que pueden
-  "fijarte" (minigun zombie, nigromante); esconderse de estos es una habilidad
+  "fijarte" (minigun zombi, nigromante); esconderse de estos es una habilidad
   crucial.
 
 * Muchos de los niveles están llenos de barriles que explotan. Si bien estos
