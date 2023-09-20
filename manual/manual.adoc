@@ -196,15 +196,23 @@ game to get familiar with the controls, and reconfigure controls as you find
 makes it more comfortable to play.
 
 In particular you will need to be comfortable:
+
 * moving forward, backward, left, and right, and any reasonable combination of them.
+
 * turning to point your weapon (the center of your screen) at a given object.
+
 * turning and pointing at things while moving in each of the directions.
+
 * stepping to one side as though to let something pass by you, then stepping back
 into your original position after the object has cleared.
+
 * moving left while turning right, and vice versa, so that you can keep facing
 (and pointing your weapon at) a particular spot while moving about.
+
 * doing any of these while the Fire key is pressed.
+
 * doing any of these while tapping the Use key.
+
 * doing any of these while the Run key is pressed (or "Always Run" is enabled).
 
 Then go and kill a zombie. Try not to get hit.

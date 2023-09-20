@@ -206,16 +206,24 @@ para familiarizarte con los controles, y reconfigura los controles a medida que
 lo encuentres más cómodo jugar. Practica moverte y disparar el arma.
 
 En particular, tendrá que sentirse cómodo:
+
 * mover hacia delante, hacia atrás, a la izquierda y a la derecha,
 y cualquier combinación razonable de ellas.
+
 * girar para apuntar con tu arma (el centro de la pantalla) a un objeto determinado.
+
 * girar y apuntar a las cosas mientras te mueves en cada una de las direcciones.
+
 * hacerse a un lado como para dejar pasar algo y volver a la posición inicial
 a su posición original después de que el objeto haya pasado.
+
 * mover a la izquierda mientras giras a la derecha, y viceversa, para estando
 de cara a (y apuntando tu arma a) un punto en particular mientras te mueves.
+
 * realizar cualquiera de estas acciones mientras se pulsa la tecla Disparo.
+
 * realizar cualquiera de estas acciones mientras se pulsa la tecla Usar.
+
 * realizar cualquiera de estas acciones mientras se pulsa la tecla Correr
 (o está activada la opción "Corre siempre").
 
