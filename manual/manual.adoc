@@ -203,8 +203,8 @@ In particular you will need to be comfortable:
 
 * turning and pointing at things while moving in each of the directions.
 
-* stepping to one side as though to let something pass by you, then stepping back
-into your original position after the object has cleared.
+* looking at something, stepping behind something else, then stepping back
+into view, like playing "Peek-A-Boo" with a child.
 
 * moving left while turning right, and vice versa, so that you can keep facing
 (and pointing your weapon at) a particular spot while moving about.

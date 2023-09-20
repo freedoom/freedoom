@@ -214,8 +214,8 @@ y cualquier combinación razonable de ellas.
 
 * girar y apuntar a las cosas mientras te mueves en cada una de las direcciones.
 
-* hacerse a un lado como para dejar pasar algo y volver a la posición inicial
-a su posición original después de que el objeto haya pasado.
+* mirar algo, ponerse detrás de otra cosa y luego volver a la vista,
+como cuando se juega al "Cucú" con un niño.
 
 * mover a la izquierda mientras giras a la derecha, y viceversa, para estando
 de cara a (y apuntando tu arma a) un punto en particular mientras te mueves.
