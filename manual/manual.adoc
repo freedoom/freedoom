@@ -227,6 +227,12 @@ successfully. If you don’t pick it up, it’s likely you don’t need it right
 now (for example, you can’t pick up a health pack when you already have 100%
 health). If an item gives you more than you can carry, the difference is lost.
 
+The original Doom did not let you look up or down. If you have a monster, a
+barrel or a PvP opponent crossing the middle line of your screen when your
+weapon discharges, the game will adjust your vertical aim for you. Some source
+ports will let you disable this behaviour and let you adjust vertical aim
+manually instead.
+
 === The Status Bar
 
 At the bottom of the screen, you’ll see the status bar, which is divided into

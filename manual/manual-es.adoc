@@ -240,6 +240,12 @@ recoges, es probable que no lo necesites en este momento (por ejemplo, no
 puedes recoger un paquete de salud cuando ya tienes 100% de salud).
 Si un artículo te da más de lo que puedes llevar, se pierde la diferencia.
 
+El Doom original no te permitía mirar hacia arriba o hacia abajo. Si
+tienes un monstruo, un barril o un oponente PvP cruzando la línea central
+de tu pantalla cuando tu arma se dispara, el juego ajustará tu puntería
+vertical por ti. Algunos ports te permitirán desactivar este comportamiento
+y ajustar la puntería vertical manualmente.
+
 === Barra de Estatus
 
 En la zona inferior de la pantalla, podrás ver la barra de estatus, la cual
