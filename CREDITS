@@ -803,7 +803,7 @@ D: sprites: technospider reshading
 S: northivanastan
 N: Ivan Stanton
 E: northivanastan@gmail.com
-D: musics: d_e1m5, d_e4m1, d_e4m8, d_e4m9
+D: musics
 
 S: MothraMaster
 D: sprites: Zombieman/Shotgunners boots update
@@ -815,7 +815,7 @@ D: Sprites, Textures, Musics, buildcfg.txt, patches
 S: ajanddino
 N: Anthony Pierce
 E: ajanddino@gmail.com
-D: musics: e1m6, e2m8, e2m9
+D: musics
 
 N: Jaden LeMieux
 S: i"Red"MC
@@ -966,17 +966,17 @@ W: https://owly.fans
 D: Freedoom website
 
 S: Matzu
-D: musics: d_e4m3
+D: musics
 
 S: ZeMystic
-D: musics: d_e4m6
+D: musics
 
 S: R0rque
-D: musics: d_e4m2
+D: musics
 
 S: rostuhan
 E: rostuhan123@gmail.com
-D: musics: d_dm25, d_dm30, d_dm32
+D: musics
 
 S: SuperDave938
 D: textures
@@ -986,3 +986,8 @@ D: sprites
 
 S: Berubaretto
 D: levels
+
+N: Enzo Carozza
+S: uni
+E: dudetank4@gmail.com
+D: CREDITS-MUSIC
