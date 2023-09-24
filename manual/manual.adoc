@@ -318,7 +318,7 @@ some <<specialitems,rarer power-ups>> which give you special abilities.
 Picking something up is a simple matter of walking over it -- an
 on-screen message and a brief flash of the screen indicate that you’ve done so
 successfully. If you don’t pick it up, it’s likely you don’t need it right
-now (for example, you can’t pick up a health pack when you already have 100%
+now (for example, you can’t pick up a health refill when you already have 100%
 health). If an item gives you more than you can carry, the difference is lost.
 
 [[weapons]]
@@ -446,16 +446,13 @@ up the attuned armor vest immediately if you don't already have one.
 [[keys]]
 === Keys
 
-Keys you to open certain locked doors and activate locked switches.
-Usually essential to be able to progress, although they sometimes allow
-access to shortcuts or secret areas.
-
-The color of a key is always associated with the direction of a key's
-lines or horns: blue diagonal, yellow vertical, red horizontal.
-
 image:../sprites/bkeya0.png[Blue Passcard] image:../sprites/bskua0.png[Blue Skeleton Key] +
 image:../sprites/ykeya0.png[Yellow Passcard] image:../sprites/yskua0.png[Yellow Skeleton Key] +
 image:../sprites/rkeya0.png[Red Passcard] image:../sprites/rskua0.png[Red Skeleton Key]
+
+Keys you to open certain locked doors and activate locked switches.
+Usually essential to be able to progress, although they sometimes allow
+access to shortcuts or secret areas.
 
 === Color blind accessibility
 

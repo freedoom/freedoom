@@ -335,7 +335,7 @@ raros>> que te otorgan habilidades especiales.
 Recoger algo es tan simple como solo caminar sobre el objeto — un mensaje
 en tu pantalla y un breve parpadeo de la pantalla indicaran que lo has
 hecho exitosamente. Si no lo recoges, es probable que no lo necesites en
-este momento (por ejemplo, no puedes recoger un paquete de salud cuando
+este momento (por ejemplo, no puedes recoger un recambio de salud cuando
 ya tienes 100% de salud). Si un artículo te da más de lo que puedes
 llevar, se pierde la diferencia.
 
@@ -467,16 +467,13 @@ si tu no tiene ya uno.
 [[keys]]
 === Llaves
 
-Llaves permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
-Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
-acceder a atajos o zonas secretas.
-
-El color de una llave es siempre asociados con la dirección de su líneas
-o cuernos: azul diagonal, amarillo vertical, rojo horizontal.
-
 image:../sprites/bkeya0.png[Tarjeta de acceso azul] image:../sprites/bskua0.png[Llave muerta azul] +
 image:../sprites/ykeya0.png[Tarjeta de acceso amarillo] image:../sprites/yskua0.png[Llave muerta amarillo] +
 image:../sprites/rkeya0.png[Tarjeta de acceso rojo] image:../sprites/rskua0.png[Red Llave muerta rojo]
+
+Llaves permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
+Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
+acceder a atajos o zonas secretas.
 
 === Accesibilidad para daltónicos
 
