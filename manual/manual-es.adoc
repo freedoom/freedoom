@@ -722,7 +722,7 @@ considerar algunas de estas sugerencias:
 * ¡No aplastes los botones! Casi todas las armas tienen un ligero período de
   recuperación cuando sueltas la tecla Disparo, lo que te cuesta tiempo y
   le da a tu objetivo más oportunidades de devolver el fuego. Mantener
-  presionado Fuego te permitirá disparar cualquier arma continuamente
+  presionado Disparo te permitirá disparar cualquier arma continuamente
   hasta que se te acabe la munición o la sueltes.
 
 * ¡Ponte a cubierto! Los monstruos solo atacan cuando estás en su línea de
