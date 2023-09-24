@@ -193,58 +193,114 @@ ser inaccesibles hasta que encuentre una llave en particular, o encuentres un
 interruptor para abrir un paso. Esto le da un elemento de
 rompecabezas al juego que se añade a la acción.
 
-Por default, las teclas del cursor del teclado te moverán hacia adelante y
-hacia atrás, y te harán girar a la izquierda y a la derecha. La tecla _Control_
-dispara el arma en uso, y la barra espaciadora abre puertas y activa
-interruptores. Consulta su source port para saber cómo modificar estas teclas
-a una configuración que te resulte más cómoda. También querrás considerar el uso
-de las teclas de strafe (paso lateral) y correr para para controlar mejor tu
-movimiento.
+Estos son los controles principales del juego para interactuar con el entorno:
+[options="header",cols="3,1,2,1",width="70%",align="center",halign="center"]
+|==========================
+| Function | Primera tecla default^1^ | Segunda tecla default | Comúnmente configurado para^2^
+| Avanzar/Retroceder | Up/Down | Movimiento del mouse (o Mouse2 para avanzar) | W/S
+| Mover a la izquierda/derecha | ,/. | Alt (o Mouse3) + izquierda/derecha | A/D
+| Girar a la izquierda/derecha^3^ | Izquierda/Derecha | Movimiento del mouse | Movimiento del mouse
+| Disparo | Ctrl | Mouse1 | Mouse1
+| Usar | Espaciadora | Doble clic Mouse2 o Mouse3 | E
+| Correr^4^ | Mayúsculas | - | Mayúsculas
+|==========================
+^1^Tu source port debería permitirte usar cualquier botón de tu controlador o mouse;
+por brevedad, este manual usa "tecla" para incluir otros controles según
+lo requieran las circunstancias.
 
-Si no has jugado Freedoom antes, tomate unos minutos cuando comience el juego
-para familiarizarte con los controles, y reconfigura los controles a medida que
-lo encuentres más cómodo jugar. Practica moverte y disparar el arma.
+^2^En un teclado QWERTY las teclas W, S, A y D forma un segundo juego
+de teclas de dirección para la mano izquierda.
 
-En particular, tendrá que sentirse cómodo:
-
-* mover hacia delante, hacia atrás, a la izquierda y a la derecha,
-y cualquier combinación razonable de ellas.
-
-* girar para apuntar con tu arma (el centro de la pantalla) a un objeto determinado.
-
-* girar y apuntar a las cosas mientras te mueves en cada una de las direcciones.
-
-* mirar algo, ponerse detrás de otra cosa y luego volver a la vista,
-como cuando se juega al "Cucú" con un niño.
-
-* mover a la izquierda mientras giras a la derecha, y viceversa, para estando
-de cara a (y apuntando tu arma a) un punto en particular mientras te mueves.
-
-* realizar cualquiera de estas acciones mientras se pulsa la tecla Disparo.
-
-* realizar cualquiera de estas acciones mientras se pulsa la tecla Usar.
-
-* realizar cualquiera de estas acciones mientras se pulsa la tecla Correr
-(o está activada la opción "Corre siempre").
-
-Luego ve y mata a un zombi. Trate de no ser golpeado.
-
-Dentro del juego encontrarás varios objetos coleccionables y potenciadores.
-Estos típicamente te darán más <<ammo,munición>> para tus armas, más
-<<health,salud>> o más <<armor,blindaje>>. También puedes encontrar
-<<weapons,nuevas armas>> y algunos de los <<specialitems,potenciadores más
-raros>> que te otorgan habilidades especiales. Recoger algo es tan simple
-como solo caminar sobre el objeto — un mensaje en tu pantalla y un breve
-parpadeo de la pantalla indicaran que lo has hecho exitosamente. Si no lo
-recoges, es probable que no lo necesites en este momento (por ejemplo, no
-puedes recoger un paquete de salud cuando ya tienes 100% de salud).
-Si un artículo te da más de lo que puedes llevar, se pierde la diferencia.
-
-El Doom original no te permitía mirar hacia arriba o hacia abajo. Si
-tienes un monstruo, un barril o un oponente PvP cruzando la línea central
+^3^Si tienes un monstruo, un barril o un oponente PvP cruzando el medio
 de tu pantalla cuando tu arma se dispara, el juego ajustará tu puntería
-vertical por ti. Algunos ports te permitirán desactivar este comportamiento
-y ajustar la puntería vertical manualmente.
+vertical por ti. Algunos source ports te permitirán desactivar este
+comportamiento y ajustar la puntería vertical manualmente.
+
+^4^La mayoría de los source ports tienen una opción de "Correr siempre"
+("Always Run"), en la que si mantienes pulsada esta tecla, irás más despacio.
+El personaje del jugador no se cansa, así que la velocidad lenta
+sólo es necesaria para aumentar la precisión.
+
+**Los valores predeterminados de Doom se consideran en general subóptimos;**
+consulta el source port para saber cómo reconfigurarlos. Se proporcionan 
+as opciones más comunes, pero existe una solución "óptima" que funcione
+para todo el mundo; es posible que deba experimentar.
+Como mínimo, debes sentirte cómodo moviéndote en cualquiera de las cuatro
+direcciones mientras giras y disparas simultáneamente.
+
+=== Uno Tutorial
+
+image::images/e1m1-tutorial-sshot.png[Captura de pantalla de Freedoom,width="640",pdfwidth="70vw",align="center"]
+
+Este tutorial te presentará todas las acciones básicas que necesitas
+para jugar y vencer a Freedoom.
+
+Comienza un nuevo juego en la Phase 1, Episodio 1 en modo fácil y sigue los pasos.
+Sáltate algo que te aburra o te confunda, y repite algo que te resulte difícil
+tanto tiempo como quieras, antes de pasar a lo siguiente o de volver
+a hacer algo anterior.
+
+* Intenta moverte hacia delante, hacia atrás, a la izquierda y a la derecha.
+  Intenta hacer un ocho. (No salgas de la jaula todavía: hay monstruos fuera.)
+
+* Gira en círculo para examinar tu entorno. Ve a tu propio ritmo, parando o
+  invirtiendo para mirar cualquier cosa que quieras. Haz un segundo círculo,
+  moviéndote un poco a medida que avanzas, y observa cómo eso cambia la
+  perspectiva y cómo el movimiento lateral puede ayudarte a ver lo larga
+  que es una pared o lo lejos que está un objeto.
+
+* Vuelve al centro de la jaula. Gíra para apuntar con tu pistola directamente
+  a una de las columnas del marco de la puerta.
+
+* Muévete -sin girarte- para que tu pistola apunte a la otra columna.
+  (Puntos extra si puedes detenerte de forma natural sobre el objetivo).
+
+* Muévete un poco a la izquierda o a la derecha, luego gira para apuntar
+  de nuevo a la columna. Vuelve a hacerlo, pero empieza a girar antes de
+  que tu momento se desgasta. Vuelve a hacerlo unas cuantas veces,
+  recorriendo las cuatro direcciones y girando cada vez más pronto hasta
+  que estés apuntando y el movimiento sea de una pieza.
+  (Retrocede o avanza para reajustarte si te acercas demasiado
+  o chocas contra las paredes).
+
+* Intenta hacer un ocho mientras apuntas a la columna todo el tiempo.
+  Prioriza la suavidad sobre la precisión: es mejor estar cerca la mayor
+  parte del tiempo que ser perfecto algunas veces.
+
+* Muévete a una de las esquinas con las camas encima para que la columna
+  ya no esté en tu línea de visión. Entra y desaparece de la vista con
+  la columna jugando "Cucú" con ella. Lío con la distancia y el tiempo.
+  Intente permanecer apuntando a la columna incluso cuando no pueda verla.
+
+* Juega un poco con lo anterior. Intente presionar la tecla Disparo para
+  disparar a la columna, ya sea que esté quieta o en movimiento, y observe
+  dónde y cuándo aparecen las bocanadas de bala.
+  (Deja de disparar antes de que tu recuento de munición baje de 30
+  aproximadamente; ¡las necesitarás para más adelante!)
+
+* Toque la tecla 1 en el teclado para cambiar a su puño e intente
+  golpear la columna y vea a qué distancia puede hacerlo.
+  Toque la tecla 2 para volver a la pistola.
+
+* Mantenga presionada la tecla Correr (o habilite "Corre siempre" en sus
+  opciones) y vea si aún puede hacer todo con suficiente precisión.
+
+* Baja a la trinchera y mata a un <<enemies,zombi>>. Trate de no ser golpeado.
+
+* Una vez que estés a salvo, mira cerca del cuerpo del zombi para ver
+  si puede haber dejado un <<ammo,cargador>>. Si es así, muévete sobre
+   él para recogerlo.
+
+* Vuelve por donde viniste. Sube al ascensor como si fueras con puño a
+  golpearlo y luego presiona Usar para llamarlo. Súbete a él y te llevará
+  de regreso. Recoge los elementos en el área superior para restaurar
+  o mejorar tu salud.
+
+* Explora el resto de la zona. Encontrarás dos puertas, una de cada tipo:
+  la inferior se puede utilizar directamente, como el ascensor, mientras
+  que la superior se abre mediante un interruptor cercano. Una vez que
+  hayas decidido qué camino tomar, abre la puerta y prepárate para
+  empezar a jugar Cucú de las Pistolas nuevamente.
 
 === Barra de Estatus
 
@@ -268,8 +324,23 @@ lastimado. Mira la <<armor,sección de armadura>> para más información.
 tipos de munición>>, junto con el máximo que puedes cargar de cada una.
 |==========================
 
+[[items]]
+=== Objetos
+
+Dentro del juego encontrarás varios objetos coleccionables y potenciadores:
+<<weapons,armas>>, <<ammo,munición>>, <<health,salud>>, <<armor,blindaje>>,
+<<keys,llaves>> y algunos de los <<specialitems,potenciadores más
+raros>> que te otorgan habilidades especiales.
+
+Recoger algo es tan simple como solo caminar sobre el objeto — un mensaje
+en tu pantalla y un breve parpadeo de la pantalla indicaran que lo has
+hecho exitosamente. Si no lo recoges, es probable que no lo necesites en
+este momento (por ejemplo, no puedes recoger un paquete de salud cuando
+ya tienes 100% de salud). Si un artículo te da más de lo que puedes
+llevar, se pierde la diferencia.
+
 [[weapons]]
-=== Armas de Freedoom
+=== Armas
 
 Empiezas un juego con tan solo una pistola, 50 balas y tus puños.
 Explorar el nivel revelará más armas y municiones que puedes recoger y usar.
@@ -393,6 +464,44 @@ daño. Como los empujes pequeños dan el mismo tipo de blindaje que ya tienes,
 puede ser una buena idea para obtener inmediatamente una armadura sintonizada
 si tu no tiene ya uno.
 
+[[keys]]
+=== Llaves
+
+Llaves permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
+Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
+acceder a atajos o zonas secretas.
+
+El color de una llave es siempre asociados con la dirección de su líneas
+o cuernos: azul diagonal, amarillo vertical, rojo horizontal.
+
+image:../sprites/bkeya0.png[Tarjeta de acceso azul] image:../sprites/bskua0.png[Llave muerta azul] +
+image:../sprites/ykeya0.png[Tarjeta de acceso amarillo] image:../sprites/yskua0.png[Llave muerta amarillo] +
+image:../sprites/rkeya0.png[Tarjeta de acceso rojo] image:../sprites/rskua0.png[Red Llave muerta rojo]
+
+=== Accesibilidad para daltónicos
+
+Las llaves de Freedoom están diseñadas para distinguirse no sólo por su
+color, sino también por su forma, para hacer el juego más accesible a los
+jugadores daltónicos. Cada color de llave tiene una forma única asociada:
+
+[cols="2,3",width="50%",align="center",valign="middle"]
+|==========================
+| **Key color** | **Shape**
+| Azul | Cruz diagonal
+| Amarillo | Líneas verticales
+| Rojo | Líneas horizontales
+|==========================
+
+Estas formas se utilizan sistemáticamente en todo el juego: en los iconos
+de la barra de estatus, en los sprites de las llaves y en las paredes que
+indican las puertas con llave.
+
+Para las llaves muertas, presta atención a la dirección a la que apuntan
+los cuernos. Por ejemplo, así es como aparecen los distintos iconos de las
+llaves en la barra de estatus:
+
+image:images/key-icons.png[Key icons,align="center"]
+
 [[specialitems]]
 === Objetos Especiales
 
@@ -401,19 +510,6 @@ exploras:
 
 [cols="1,2",width="90%",align="center",valign="middle"]
 |==========================
-| **Llaves** +
-image:../sprites/bkeya0.png[Tarjeta de acceso azul]
-image:../sprites/bskua0.png[Llave muerta azul] +
-image:../sprites/ykeya0.png[Tarjeta de acceso amarillo]
-image:../sprites/yskua0.png[Llave muerta amarillo] +
-image:../sprites/rkeya0.png[Tarjeta de acceso rojo]
-image:../sprites/rskua0.png[Llave muerta rojo] |
-Permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
-Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
-acceder a atajos o zonas secretas.
-
-El color de una llave es siempre asociados con la dirección de su líneas
-o cuernos: azul diagonal, amarillo vertical, rojo horizontal.
 | **Gafas luminosas** +
 image:../sprites/pvisa0.png[Gafas luminosas] |
 Te permiten ver en la obscuridad por un tiempo limitado.
@@ -439,30 +535,7 @@ image:../sprites/pinva0.png[Via Gladii] |
 Te hace inmune a todo el daño por tiempo limitado.
 |==========================
 
-=== Accesibilidad para daltónicos
-
-Las llaves de Freedoom están diseñadas para distinguirse no sólo por su
-color, sino también por su forma, para hacer el juego más accesible a los
-jugadores daltónicos. Cada color de llave tiene una forma única asociada:
-
-[cols="2,3",width="50%",align="center",valign="middle"]
-|==========================
-| **Key color** | **Shape**
-| Azul | Forma de cruz (X)
-| Amarillo | Líneas verticales
-| Rojo | Líneas horizontales
-|==========================
-
-Estas formas se utilizan sistemáticamente en todo el juego: en los iconos
-de la barra de estatus, en los sprites de las llaves y en las paredes que
-indican las puertas con llave.
-
-Para las llaves muertas, presta atención a la dirección a la que apuntan
-los cuernos. Por ejemplo, así es como aparecen los distintos iconos de las
-llaves en la barra de estatus:
-
-image:images/key-icons.png[Key icons,align="center"]
-
+[[enemies]]
 === Enemigos
 
 Los niveles están llenos de monstruos que no tienen otro objetivo más que
@@ -611,33 +684,56 @@ aplastará rápidamente hasta convertirte en una pasta! |
 image:images/hazard-crusher.png[Crushing Ceiling,150,150,width=100%]
 |==========================
 
+=== Muriendo
+
+Con el tiempo, te encontrarás en una situación que no podrás manejar y
+tu avatar de jugador morirá. Puedes tomar esto como una señal para tomar
+un descanso del juego, o recargar tu último juego guardado, o presionar
+Usar para reiniciar el nivel con plena salud pero sin equipo excepto tu
+pistola y 50 balas. (Algunos source ports no hacen esto último, sino
+que guardan el juego al comienzo de cada nivel y al presionar Usar se
+carga ese juego).
+
+No hay límite de vidas.
+
+En el modo multijugador, presionar Usar restablecerá tu salud y tu
+inventario y te colocará en la posición inicial, pero el juego continúa
+normalmente. Es posible recoger munición y morir sin usarla tantas veces
+que su equipo se ve obligado a terminar el mapa usando sólo pistolas,
+muriendo para poder recargar.
+
 === Consejos Tácticos
 
-Si tienes problemas con la dificultad del juego, una opción es cambiar a un
-nivel de habilidad más fácil. Alternativamente, puedes probar algunas de estas
-sugerencias tácticas:
+Si tienes problemas con la dificultad del juego, puede que valga la pena
+considerar algunas de estas sugerencias:
 
-* En primer lugar, dedica algo de tiempo a configurar tus controles. La mayoría
-  de los jugadores encuentran que una combinación de mouse y teclado es la más
-  efectiva, donde el mouse se usa para girar mientras que el teclado se usa
-  para moverse. En particular, asegúrate de haber configurado las teclas de
-  strafe (paso lateral). Muchos de los enemigos del juego lanzan proyectiles
-  que hay que esquivar. Eludir estos proyectiles es una habilidad importante
-  para aprender. Sabrás que has dominado esta habilidad cuando puedas rodear
-  fácilmente a un enemigo y esquivar sus proyectiles mientras mantienes tu arma
-  apuntada hacia él.
+* Dedica algo de tiempo a configurar tus controles -- ambos asignación
+  de botones/teclas y sensibilidad de giro del mouse/joystick. Ninguna
+  configuración es mejor para todos y es una buena idea experimentar:
+  cualquiera que te ayude a esquivar proyectiles y entrar y salir de la
+  cubierto mientras mantienes tu arma apuntando al enemigo, y proporciona
+  la menor distracción mientras te mueves por el mapa buscando. cosas, es bueno.
 
 * Juega con auriculares. La separación estéreo del juego puede brindar pistas
   de audio útiles sobre las posiciones de los enemigos y alertarte sobre los
   proyectiles que se aproximan. Los auriculares te brindan una forma más
   precisa de captar estas señales.
 
+* ¡No aplastes los botones! Casi todas las armas tienen un ligero período de
+  recuperación cuando sueltas la tecla Disparo, lo que te cuesta tiempo y
+  le da a tu objetivo más oportunidades de devolver el fuego. Mantener
+  presionado Fuego te permitirá disparar cualquier arma continuamente
+  hasta que se te acabe la munición o la sueltes.
+
 * ¡Ponte a cubierto! Los monstruos solo atacan cuando estás en su línea de
-  visión. Querrás encontrar paredes, pilares y otras formas de cobertura tras
+  visión. Querrás encontrar paredes, pilares y otras formas de cubierto tras
   las que puedas esconderte mientras recargas tu arma. Este consejo es
   particularmente importante cuando te enfrentas a ciertos monstruos que pueden
   "fijarte" (minigun zombi, nigromante); esconderse de estos es una habilidad
-  crucial.
+  crucial. Los monstruos con armas de fuego no son ni mejores ni peores a la
+  hora de golpearte, ya sea que estés en movimiento o parado, por lo que no
+  puedes esquivar continuamente en campo abierto como lo haces contra
+  proyectiles que se mueven visiblemente.
 
 * Muchos de los niveles están llenos de barriles que explotan. Si bien estos
   pueden representar un peligro para ti, son igualmente peligrosos para tus
@@ -653,8 +749,8 @@ sugerencias tácticas:
   correcto para que los de atrás disparen a los de adelante. Hazlo bien y
   pasarán más tiempo peleando entre ellos que peleando contigo, y los
   sobrevivientes se debilitarán significativamente. Sin embargo, ten en cuenta
-  que un monstruo no puede ser herido por un proyectil lanzado por otro de la
-  misma especie.
+  que un monstruo no puede ser herido por un proyectil visible lanzado por otro
+  de la misma especie.
 
 * A veces te enfrentarás a multitudes de monstruos, lo que puede resultar
   abrumador y agotar tus reservas de munición. Aprende a dominar el control de

@@ -179,59 +179,112 @@ image::images/map01-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",al
 Freedoom is a real-time first-person shooter (FPS). You’ll be exploring a
 series of levels, in each one trying to find the way to the exit. An
 assortment of monsters will try to stop you, and you’ll need to use weapons
-to defend yourself.
-Portions of the levels may be inaccessible until you find a particular key, or
-find a switch to open a passage. This gives a puzzle element to the game in
-addition to the action.
+to defend yourself. Portions of the levels may be inaccessible until you
+find a particular key, or find a switch to open a passage. This means that
+gameplay will involve hidden-object exploration puzzles as well as real-time
+action puzzles about placing and timing the shots of your weapons.
 
-By default, the keyboard cursor keys will move forward and backward, and turn
-left and right. The _Control_ key fires the current weapon, and the spacebar
-will open doors and activate switches. Check the settings on your source port
-on how to rebind these keys to a setup that you find more comfortable.
-You’ll also want to look into using the strafe (sidestep) and run keys to
-better control over your movement.
+These are the core in-game controls for interacting with the environment:
+[options="header",cols="3,1,2,1",width="70%",align="center",halign="center"]
+|==========================
+| Function | Default key^1^ 1 | Default key 2 | Commonly set to^2^
+| Move forward/backward | Up/Down | Mouse movement (or Mouse2 for forward) | W/S
+| Move ("strafe") left/right | ,/. | Alt (or Mouse3) + Left/Right | A/D
+| Turn left/right^3^ | Left/Right | Mouse movement | Mouse movement
+| Fire | Ctrl | Mouse1 | Mouse1
+| Use | Space | Double-click Mouse2 or Mouse3 | E
+| Run^4^ | Shift | - | Shift
+|==========================
+^1^Your source port should allow you to use any button on your controller
+or mouse; for brevity, "key" is used in this manual to include
+other controls as circumstances require.
 
-If you haven’t played Freedoom before, take a few minutes when you start the
-game to get familiar with the controls, and reconfigure controls as you find
-makes it more comfortable to play.
+^2^On a QWERTY keyboard the W, S, A and D keys
+form a second set of arrow keys for the left hand.
 
-In particular you will need to be comfortable:
+^3^If you have a monster, a barrel or a PvP opponent crossing the middle
+of your screen when your weapon discharges, the game will adjust your
+vertical aim for you. Some source ports will let you disable this
+behaviour and aim manually instead.
 
-* moving forward, backward, left, and right, and any reasonable combination of them.
+^4^Most source ports have an "Always Run" option where holding this key
+makes you go slower instead. The player character does not get tired so
+the slow speed is only necessary for increased precision.
 
-* turning to point your weapon (the center of your screen) at a given object.
+**Doom's defaults are widely considered suboptimal;** check your source port
+for how to reconfigure them. The most common options are provided but there is
+no one "best" solution that works for everyone -- you may need to experiment.
+At minimum you must be comfortable moving in any one of the four directions
+while simultaneously turning and shooting.
 
-* turning and pointing at things while moving in each of the directions.
+=== A Tutorial
 
-* looking at something, stepping behind something else, then stepping back
-into view, like playing "Peek-A-Boo" with a child.
+image::images/e1m1-tutorial-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
 
-* moving left while turning right, and vice versa, so that you can keep facing
-(and pointing your weapon at) a particular spot while moving about.
+This tutorial will introduce you to every basic action you need to play
+and beat all of Freedoom.
 
-* doing any of these while the Fire key is pressed.
+Start a new game in Phase 1, Episode 1 on easy and follow the steps.
+Skip anything that bores or confuses you, and redo anything you find
+challenging as long as you like, before moving on to the next thing or
+redoing a previous thing.
 
-* doing any of these while tapping the Use key.
+* Try moving forward, backward, left, and right. Try doing a figure eight.
+  (Don't leave the cage yet -- there are monsters outside.)
 
-* doing any of these while the Run key is pressed (or "Always Run" is enabled).
+* Turn around in a circle to examine your surroundings. Go at your own pace,
+  stopping or reversing to look at anything whenever you want.
+  Do a second circle, moving a little bit as you go, and watch how that
+  changes the perspective and how sideways movement can help you see
+  how long a wall or how far away an object is.
 
-Then go and kill a zombie. Try not to get hit.
+* Move back to the middle of the cage. Turn to point your handgun
+  directly at one of the doorframe columns.
 
-Within the game you’ll encounter various collectible items and power-ups.
-These will typically give you more <<ammo,ammunition>> for your weapons, more
-<<health,health>> or more <<armor,armor>>. You can also find <<weapons,new
-weapons>> and some <<specialitems,rarer power-ups>> which give you special
-abilities. Picking something up is a simple matter of walking over it -- an
-on-screen message and a brief flash of the screen indicate that you’ve done so
-successfully. If you don’t pick it up, it’s likely you don’t need it right
-now (for example, you can’t pick up a health pack when you already have 100%
-health). If an item gives you more than you can carry, the difference is lost.
+* Move -- without turning -- so that your handgun is pointed at the other column.
+ (Bonus points if you can come to a natural stop on target.)
 
-The original Doom did not let you look up or down. If you have a monster, a
-barrel or a PvP opponent crossing the middle line of your screen when your
-weapon discharges, the game will adjust your vertical aim for you. Some source
-ports will let you disable this behaviour and let you adjust vertical aim
-manually instead.
+* Move a bit left or right, then turn to point at the column again.
+  Do it again, but start turning before your momentum wears off.
+  Do this again a few times, cycling through all four directions and turning
+  sooner and sooner until you are pointing and the moving seamlessly.
+  (Move backwards or forwards to reset if you get too close or are
+  running into walls.)
+
+* Try doing a figure eight while pointing at the column the entire time.
+  Prioritize smoothness over precision -- it's better to be close most of the time
+  than perfect some of the time.
+
+* Move to one of the corners with the beds on them so that the column is
+  no longer in your line of sight. Move in and out of sight with
+  the column playing "Peek-A-Boo" with it. Mess with distance and timing.
+  Try to stay pointed at the column even when you can't see it.
+
+* Play around with the above for a bit. Try pressing the Fire key to shoot at
+  the column, both standing still and moving, and note where and when
+  the bullet puffs appear. (Stop shooting before your ammo count goes below
+  30 or so -- you will need those for later!)
+
+* Tap the 1 key on the keyboard to switch to your fist, and try to punch the
+  column and see how far away you can do it. Tap the 2 key to switch back
+  to the handgun.
+
+* Hold down the Run key (or enable "Always Run" in your options) and see if
+  you can still do everything with sufficient precision.
+
+* Move down into the trench and kill a <<enemies,zombie>>. Try not to get hit.
+
+* Once you're safe, look near the zombie's body to see if it may have left
+  a <<ammo,clip>>. If it has, move over it to pick it up.
+
+* Go back the way you came. Go up to the lift like you're going to punch it,
+  then hit Use to call it down. Get on it and it will take you back up.
+  Pick up the items in the upper area to restore or boost your health.
+
+* Explore the rest of the area. You will find two doors, one of each type:
+  the bottom one can be used directly, like the lift, while the top one
+  is opened by using a nearby switch. Once you've decided which way to go,
+  open the door -- and get ready to start playing Gun Peek-A-Boo again.
 
 === The Status Bar
 
@@ -255,8 +308,21 @@ you’re injured. See the <<armor,armor section>> for more information.
 ammunition>>, along with the maximum of each you can carry.
 |==========================
 
+[[items]]
+=== Items
+
+Within the game you’ll encounter various collectible items: <<weapons,weapons>>,
+<<ammo,ammunition>>, <<health,health>>, <<armor,armor>>, <<keys,keys>> and
+some <<specialitems,rarer power-ups>> which give you special abilities.
+
+Picking something up is a simple matter of walking over it -- an
+on-screen message and a brief flash of the screen indicate that you’ve done so
+successfully. If you don’t pick it up, it’s likely you don’t need it right
+now (for example, you can’t pick up a health pack when you already have 100%
+health). If an item gives you more than you can carry, the difference is lost.
+
 [[weapons]]
-=== Freedoom’s Weapons
+=== Weapons
 
 You start the game with only a handgun, 50 bullets and your fists.
 Exploring the level will reveal more weapons and ammo that you can pick up and use.
@@ -276,8 +342,8 @@ image:../sprites/csawa0.png[Ripsaw] |
 also works well as a melee weapon for cutting through flesh. Ammo: None
 | **Handgun** +
 image:../sprites/pista0.png[Handgun] |
-2 | Your starter weapon. Its main purpose is to let you fight your way
-to a better weapon, and to hit shootable switches without wasting a second bullet.
+2 | Your starter weapon. Its main purpose is to let you fight your way to
+a better weapon, and to hit shootable switches without wasting a second bullet.
 Ammo: Bullets
 | **Pump-action Shotgun** +
 image:../sprites/shota0.png[Pump-action Shotgun] |
@@ -312,6 +378,7 @@ Slow to shoot, but worth the wait. Ammo: Energy
 |==========================
 
 [[ammo]]
+=== Ammo
 [options="header",cols="2,1,1",width="70%",align="center",valign="middle"]
 |==========================
 | Ammo type | Small | Large
@@ -376,6 +443,42 @@ worth 200% armor, it also absorbs half of all damage. Because the small
 boosts add the same armor type you already have, it may be good to pick
 up the attuned armor vest immediately if you don't already have one.
 
+[[keys]]
+=== Keys
+
+Keys you to open certain locked doors and activate locked switches.
+Usually essential to be able to progress, although they sometimes allow
+access to shortcuts or secret areas.
+
+The color of a key is always associated with the direction of a key's
+lines or horns: blue diagonal, yellow vertical, red horizontal.
+
+image:../sprites/bkeya0.png[Blue Passcard] image:../sprites/bskua0.png[Blue Skeleton Key] +
+image:../sprites/ykeya0.png[Yellow Passcard] image:../sprites/yskua0.png[Yellow Skeleton Key] +
+image:../sprites/rkeya0.png[Red Passcard] image:../sprites/rskua0.png[Red Skeleton Key]
+
+=== Color blind accessibility
+
+Freedoom's keys are designed to be distinguishable not just by color but
+also by shape, to make the game more accessible to color-blind players.
+Each key color has an associated unique shape:
+
+[cols="2,3",width="50%",align="center",valign="middle"]
+|==========================
+| **Key color** | **Shape**
+| Blue | Diagonal cross
+| Yellow | Vertical lines
+| Red | Horizontal lines
+|==========================
+
+These shapes are used consistently throughout the game: in the status bar
+icons, the key sprites and on walls indicating keyed doors.
+
+For the skeleton keys, pay attention to the direction that the horns point.
+For example, here is how the different key icons appear in the status bar:
+
+image:images/key-icons.png[Key icons,align="center"]
+
 [[specialitems]]
 === Special Items
 
@@ -383,19 +486,6 @@ You may also encounter any one of these special items while exploring:
 
 [cols="1,2",width="90%",align="center",valign="middle"]
 |==========================
-| **Keys** +
-image:../sprites/bkeya0.png[Blue Passcard]
-image:../sprites/bskua0.png[Blue Skeleton Key] +
-image:../sprites/ykeya0.png[Yellow Passcard]
-image:../sprites/yskua0.png[Yellow Skeleton Key] +
-image:../sprites/rkeya0.png[Red Passcard]
-image:../sprites/rskua0.png[Red Skeleton Key] |
-Allow you to open certain locked doors and activate locked switches.
-Usually essential to be able to progress, although they sometimes allow
-access to shortcuts or secret areas.
-
-The color of a key is always associated with the direction of a key's
-lines or horns: blue diagonal, yellow vertical, red horizontal.
 | **Low-Light Goggles** +
 image:../sprites/pvisa0.png[Low-Light Goggles] |
 Allow you to see in the dark for a limited time.
@@ -424,28 +514,7 @@ Makes you immune to all damage for a limited time, allowing you to get
 past overwhelming defences and unavoidable traps.
 |==========================
 
-=== Color blind accessibility
-
-Freedoom's keys are designed to be distinguishable not just by color but
-also by shape, to make the game more accessible to color-blind players.
-Each key color has an associated unique shape:
-
-[cols="2,3",width="50%",align="center",valign="middle"]
-|==========================
-| **Key color** | **Shape**
-| Blue | Cross shape (X)
-| Yellow | Vertical lines
-| Red | Horizontal lines
-|==========================
-
-These shapes are used consistently throughout the game: in the status bar
-icons, the key sprites and on walls indicating keyed doors.
-
-For the skeleton keys, pay attention to the direction that the horns point.
-For example, here is how the different key icons appear in the status bar:
-
-image:images/key-icons.png[Key icons,align="center"]
-
+[[enemies]]
 === Enemies
 
 The levels are filled with monsters who have no other goal apart from stopping
@@ -589,30 +658,54 @@ paste! |
 image:images/hazard-crusher.png[Crushing Ceiling,150,150,width=100%]
 |==========================
 
+=== Dying
+
+Eventually you will get into a situation you can't handle and your player
+avatar will be killed. You can take this as a sign to take a break from
+playing, or reload your last saved game, or press Use to restart the level
+with full health but no gear except your pistol and 50 bullets. (Some source
+ports don't do this last one, but instead save your game at the start of
+every level and pressing Use loads that game instead.)
+
+There is no lives limit.
+
+In multiplayer pressing Use will reset your health and inventory and put
+you at the starting position, but the game itself continues normally.
+It is possible to pick up ammo and die without using it so many times
+that your team is forced to finish the map using only pistols,
+dying in order to reload.
+
 === Tactical tips
 
-If you’re struggling with the difficulty of the game, one option is to change
-to an easier skill level. Alternatively, you can try some of these tactical
-suggestions:
+If you’re struggling with the difficulty of the game, it may be worth looking
+into some of these suggestions:
 
-* Firstly, put some time into setting up your controls. Most players find that
-  a mouse and keyboard combination is the most effective, where the mouse is
-  used to turn while the keyboard is used to move around. In particular, make
-  sure that you have set up strafe (sidestep) keys. Many of the enemies in
-  the game launch projectiles which must be dodged. Sidestepping these
-  projectiles is an important skill to learn. You’ll know you’ve mastered this
-  skill when you can easily circle around an enemy and dodge its projectiles
-  while simultaneously keeping your weapon trained on it.
+* Put time into setting up your controls -- both button/key assignment
+  and mouse/joystick turning sensitivity. No one configuration
+  is best for everyone and it is a good idea to experiment: whatever helps
+  you dodge projectiles and pop in and out of cover while keeping your
+  weapon pointed at the enemy, and provides the least distraction as you
+  move about the map looking for things, is good.
 
 * Play with headphones. The game’s stereo separation can give helpful audio
   cues about the positions of enemies and alert you to incoming projectiles.
   Headphones give you a more precise way to pick up on these cues.
 
+* Do *not* button-mash! Nearly every weapon has a slight cooldown period
+  when you let go of the Fire key, costing you time and giving your target
+  more opportunity to return fire. Holding down Fire will let you shoot
+  any weapon continuously until your ammo runs out or you let go.
+
 * Take cover! Monsters only attack when you’re in their line of sight. You’ll
-  want to find walls, pillars and other forms of cover you can hide behind
-  while your weapon reloads. This advice is particularly important when
-  facing certain monsters which can “lock on” to you (minigun zombie;
-  necromancer); hiding from these is a crucial skill.
+  want to find hard cover (most opaque things that show up on your automap
+  without cheat codes) that you can put between yourself and any enemy you're not
+  actively hitting with your own weapon. Cover is particularly important
+  when facing certain monsters which can “lock on” to you (minigun zombie;
+  necromancer) and finding cover may be the only way to get them to stop
+  shooting long enough for you to return fire. Monsters with guns are also
+  not any better or worse at hitting you whether you are moving or standing
+  still, so you can't continuously dodge on open ground the
+  way you can against visibly moving projectiles.
 
 * Many of the levels are littered with exploding barrels. While these can pose
   a danger to you, they’re equally dangerous to your opponents. A single,
@@ -627,7 +720,7 @@ suggestions:
   place so that those at the back shoot those at the front. Do it right and
   they’ll spend more time fighting each other than fighting you, and the
   survivors will be significantly weakened.  Be aware though, that a monster
-  cannot be injured by a projectile launched by another of the same species.
+  cannot be injured by a visible projectile launched by another of the same species.
 
 * Sometimes you’ll face crowds of monsters, which can be overwhelming and also
   drain your ammo supplies. Learn to master crowd control. The primary
@@ -637,11 +730,11 @@ suggestions:
   effectively, they’ll spend their energy killing each other and you’ll save
   on ammunition.
 
-* If you encounter a horde of flesh worms or stealth worms, the ripsaw is
-  a great weapon to use both to conserve ammo and avoid taking damage.
-  Worms can’t attack while being sawed, and if you back into any corner
-  that is roughly as wide as or narrower than a right angle,
-  they can only come at you one at a time.
+* If you encounter flesh worms or stealth worms and are not at immediate
+  risk of being surrounded, the ripsaw is a great way to conserve ammo and
+  avoid taking damage. Worms can’t attack while being sawed, and if you
+  back into any corner that is roughly as wide as or narrower than a right
+  angle, they can only come at you one at a time.
 
 <<<
 
