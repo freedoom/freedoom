@@ -136,7 +136,7 @@ without navigating the menu.
 You can restore your quicksave slot with the menu or by pressing _F9_.
 
 [**Warning:** the original Doom program has a bug that makes it crash
-when you save a game while too much is going on on the level. Chocolate
+when you save a game while too much is going on in the level. Chocolate
 Doom intentionally emulates this bug. You may want to go into
 chocolate-setup and disable "Vanilla savegame limit" before playing.]
 
