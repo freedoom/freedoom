@@ -660,7 +660,7 @@ image:images/hazard-crusher.png[Crushing Ceiling,150,150,width=100%]
 Eventually you will get into a situation you can't handle and your player
 avatar will be killed. You can take this as a sign to take a break from
 playing, or reload your last saved game, or press Use to restart the level
-with full health but no gear except your pistol and 50 bullets. (Some source
+with full health but no gear except your handgun and 50 bullets. (Some source
 ports don't do this last one, but instead save your game at the start of
 every level and pressing Use loads that game instead.)
 
@@ -669,7 +669,7 @@ There is no lives limit.
 In multiplayer pressing Use will reset your health and inventory and put
 you at the starting position, but the game itself continues normally.
 It is possible to pick up ammo and die without using it so many times
-that your team is forced to finish the map using only pistols,
+that your team is forced to finish the map using only handguns,
 dying in order to reload.
 
 === Tactical tips
