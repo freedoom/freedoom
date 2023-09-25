@@ -229,7 +229,8 @@ Skip anything that bores or confuses you, and redo anything you find
 challenging as long as you like, before moving on to the next thing or
 redoing a previous thing.
 
-* Try moving forward, backward, left, and right. Try doing a figure eight.
+* Try moving forward, backward, left, and right.
+  Trace a square. Try both directions. Try doing a figure eight.
   (Don't leave the cage yet -- there are monsters outside.)
 
 * Turn around in a circle to examine your surroundings. Go at your own pace,
@@ -251,9 +252,9 @@ redoing a previous thing.
   (Move backwards or forwards to reset if you get too close or are
   running into walls.)
 
-* Try doing a figure eight while pointing at the column the entire time.
-  Prioritize smoothness over precision -- it's better to be close most of the time
-  than perfect some of the time.
+* Try doing a square (or figure eight, etc.) while pointing at the column
+  the entire time. Prioritize smoothness over precision -- it's better to
+  be close most of the time than perfect some of the time.
 
 * Move to one of the corners with the beds on them so that the column is
   no longer in your line of sight. Move in and out of sight with
@@ -269,8 +270,7 @@ redoing a previous thing.
   column and see how far away you can do it. Tap the 2 key to switch back
   to the handgun.
 
-* Hold down the Run key (or enable "Always Run" in your options) and see if
-  you can still do everything with sufficient precision.
+* See if you can still do everything while holding down the Run key.
 
 * Move down into the trench and kill a <<enemies,zombie>>. Try not to get hit.
 

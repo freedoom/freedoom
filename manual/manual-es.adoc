@@ -241,7 +241,8 @@ tanto tiempo como quieras, antes de pasar a lo siguiente o de volver
 a hacer algo anterior.
 
 * Intenta moverte hacia delante, hacia atrás, a la izquierda y a la derecha.
-  Intenta hacer un ocho. (No salgas de la jaula todavía: hay monstruos fuera.)
+  Intenta hacer un cuadrado. Intent ambos direcciónes. Intenta hacer un ocho.
+  (No salgas de la jaula todavía: hay monstruos fuera.)
 
 * Gira en círculo para examinar tu entorno. Ve a tu propio ritmo, parando o
   invirtiendo para mirar cualquier cosa que quieras. Haz un segundo círculo,
@@ -263,9 +264,9 @@ a hacer algo anterior.
   (Retrocede o avanza para reajustarte si te acercas demasiado
   o chocas contra las paredes).
 
-* Intenta hacer un ocho mientras apuntas a la columna todo el tiempo.
-  Prioriza la suavidad sobre la precisión: es mejor estar cerca la mayor
-  parte del tiempo que ser perfecto algunas veces.
+* Intenta hacer un cuadrado (o un ocho, etc.) mientras apuntas a la columna
+  todo el tiempo. Prioriza la suavidad sobre la precisión: es mejor estar
+  cerca la mayor parte del tiempo que ser perfecto algunas veces.
 
 * Muévete a una de las esquinas con las camas encima para que la columna
   ya no esté en tu línea de visión. Entra y desaparece de la vista con
@@ -282,8 +283,7 @@ a hacer algo anterior.
   golpear la columna y vea a qué distancia puede hacerlo.
   Toque la tecla 2 para volver a la pistola.
 
-* Mantenga presionada la tecla Correr (o habilite "Corre siempre" en sus
-  opciones) y vea si aún puede hacer todo con suficiente precisión.
+* Vea si aún puede hacer todo mientras presionando la tecla Correr.
 
 * Baja a la trinchera y mata a un <<enemies,zombi>>. Trate de no ser golpeado.
 
