@@ -241,7 +241,7 @@ tanto tiempo como quieras, antes de pasar a lo siguiente o de volver
 a hacer algo anterior.
 
 * Intenta moverte hacia delante, hacia atrás, a la izquierda y a la derecha.
-  Intenta hacer un cuadrado. Intent ambos direcciónes. Intenta hacer un ocho.
+  Intenta hacer un cuadrado. Intenta ambos direcciónes. Intenta hacer un ocho.
   (No salgas de la jaula todavía: hay monstruos fuera.)
 
 * Gira en círculo para examinar tu entorno. Ve a tu propio ritmo, parando o
