@@ -398,6 +398,7 @@ Munición: Energía
 |==========================
 
 [[ammo]]
+=== Munición
 [options="header",cols="2,1,1",width="70%",align="center",valign="middle"]
 |==========================
 | Tipo de municion | Pequeño | Grande
