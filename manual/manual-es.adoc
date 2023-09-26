@@ -1,4 +1,4 @@
-= Freedoom Manual
+= Manual de Freedoom
 // SPDX-License-Identifier: BSD-3-Clause
 
 Bienvenido a Freedoom, un juego completo que es software
@@ -15,18 +15,19 @@ image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",wid
 
 == Instalar Freedoom
 
-Freedoom esta distribuido en dos archivos llamados `freedoom1.wad` y
-`freedoom2.wad` los cuales contienen todo el contenido gráfico, niveles,
-música y efectos de sonido que componen al juego. Para ser jugado se
-necesita ser emparejado con un source port. Fans de los juegos de Doom
-originales han creado un puñado de estos;
-https://doomwiki.org/wiki/Source_port[La página de source ports] de la
-Wiki de Doom tiene una comprensiva lista. Las siguientes son algunas buenas
-sugerencias estandart:
+Freedoom esta distribuido en tres archivos llamados `freedoom1.wad`, `freedoom2.wad`
+y `freedm.wad` los cuales contienen todo el contenido gráfico, niveles,
+música y efectos de sonido que componen al juego.
 
-* https://zdoom.org[GZDoom] es un source port moderno que incluye varias
-  funciones tales como renderización por hardware
-* https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom] es
+Para jugar al juego, puedes usar una de las muchas adaptaciones ("source ports")
+del programa original de Doom que los aficionados han desarrollado para los sistemas modernos.
+
+https://doomwiki.org/wiki/Source_port[La página de source ports] de la
+Wiki de Doom tiene una comprensiva lista. Como un punto inicial, puedes probar:
+
+* https://zdoom.org[GZDoom], un source port moderno que incluye renderización
+  por hardware y capacidad ampliada de modificación.
+* https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom],
   un source port más minimalista que retiente esa sensación de la “vieja
   escuela”.
 
@@ -46,16 +47,19 @@ sola compaña de 30 niveles. Esto da 62 niveles por los cuales jugar, y
 ademas existen también niveles secretos -- si puedes descubrir cómo llegar
 a ellos.
 
+FreeDM (`freedm.wad`) es un conjunto de niveles sin monstruos, creado
+específicamente para jugador contra jugador. Para saber cómo alojar
+una partida multijugador, consulta su source port.
+
 <<<
 
 [[menus]]
 == Usar los Menús de Freedoom
 
-Los menús de Freedoom son bastante auto-explicativos, pero aquí hay unas
-breves instrucciones. El menú principal puede desplegarse a cualquier
-momento al presionar la Tecla _Esc_ en tú teclado.
+El menú principal puede desplegarse a cualquier momento al
+presionar la tecla _Esc_ en tú teclado.
 
-image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]
+image::images/menu-mainmenu.png[Menú principal de Freedoom,align="center",width=380,pdfwidth=50vw]
 
 [cols="1,4",width="90%",align="center",valign="middle"]
 |==========================
@@ -74,6 +78,10 @@ de los objetos que puedes encontrar en el juego.
 [[newgame]]
 === Comenzar un nuevo juego
 
+[**Atajo:** En la mayoría de los source ports, si pulsas repetidamente _Enter_ después
+de que el programa se haya iniciado, empezarás una nueva juego en el nivel de dificultad
+default (en el primer episodio si jugares Phase 1). No necesitas hacerlo rápidamente.]
+
 Para empezar un nuevo juego, presiona _Esc_ para mostrar el menú principal, y
 elije _New Game_.
 
@@ -82,11 +90,8 @@ comenzar a jugar.
 
 image::images/menu-episode.png[Freedoom Episode Menu,align="center",width=432,pdfwidth=50vw]
 
-Si eres nuevo en el juego, empieza con Outpost Outbreak, el primer episodio (y
-el más fácil). Una vez que termines un episodio, puedes pasar al siguiente. Si
-estas aburrido del episodio que estas jugando o atascado, siempre puedes
-intentar jugar un episodio diferente en su lugar. No hay ningún requerimiento
-para jugar los episodios en orden.
+Si eres nuevo en el juego, empieza con _Outpost Outbreak_ en Phase 1, el primer episodio
+(y el más fácil). No hay ningún requerimiento para jugar los episodios en orden.
 
 [[skill]]
 Después de elegir un episodio, necesitas elegir un nivel de dificultad. El
@@ -100,11 +105,9 @@ image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwi
 | 1 | **Please Don’t Kill Me!** | El nivel de dificultad más sencillo. Este es
 esencialmente igual a _Will This Hurt?_, excepto que el daño enemigo se reduce
 a la mitad.
-| 2 | **Will This Hurt?** | Nivel de dificultad fácil, una buena elección si
-encuentras _Bring on the Pain_ demasiado desafiante.
+| 2 | **Will This Hurt?** | Nivel de dificultad fácil.
 | 3 | **Bring on the Pain.** | El nivel de dificultad default.
-| 4 | **Extreme Carnage.** | Recomendado para jugadores mas experimentados
-que estén en busca de un desafío.
+| 4 | **Extreme Carnage.** | Nivel de dificultad difícil.
 | 5 | **MAYHEM!** | **No Recomendado**. Esto es equivalente a _Extreme Carnage_
 con la excepción de que los ataques de los monstruos son el doble de rápidos, y
 los monstruos asesinados regresan a la vida tras aproximadamente 40 segundos.
@@ -121,25 +124,28 @@ mueres.
 image::images/menu-save-game.png[Save Game Menu,align="center",width=473,pdfwidth=50vw]
 
 Para guardar el juego, presiona _Esc_ para mostrar el menú, selecciona _Save
-Game_ y elije un espacio en el cual guardar. Teclea una descripción para el
-juego guardado y presiona _Enter_. Algunos source ports tienen un número
-limitado de espacios, en tal caso tendrás que sobrescribir un juego guardado ya
-existente una vez que ya no haya más espacios de guardado disponibles. Por la
-misma razón es una buena idea escribir una buena descripción para tu juego
-guardado. Incluir el número del nivel y algo descriptivo de hasta donde has
-llegado; por ejemplo: “E1M3 - Blue Key Door.”
+Game_ y elije un espacio en el cual guardar.  Escribe una descripción fácil de
+recordar para la partida guardada (p. ej., “E1M3 - Puerta de llave azul”) y
+presione _Enter_. Si no hay espacios vacantes, puedes sobrescribir uno existente,
+destruyendo los datos antiguos.
 
-El menú de _Load Game_ usualmente luce prácticamente idéntico al menú de _Save
-Game_. Para restaurar tu juego guardado, simplemente selecciona _Load Game_
+Para restaurar tu juego guardado, selecciona _Load Game_
 desde el menú principal y escoge tu juego guardado.
 
 Si te encuentras a ti mismo guardando el juego a menudo, tal vez quieras usar
 la función de Guardado Rápido. Presiona _F6_ durante el juego para hacer un
 guardado rápido. El menú para Guardar Juego aparecerá como es usual; elegir una
 ranura hace que esta se convierta en tú espacio de guardado rápido. Presionar
-_F6_ de nuevo en el futuro sobre-escribirá en tu espacio de guardado rápido con
-tan solo presionar un par de teclas. Si mueres también puedes restaurar tu
-espacio de guardado rápido al presionar _F9_.
+_F6_ de nuevo en el futuro sobre-escribirá en tu espacio de guardado rápido
+sin navegar por el menú.
+
+Puedes restaurar tu espacio de guardado rápido con el menú o al presionar _F9_.
+
+[**Advertencia:** el programa Doom original tiene un error que hace que
+se bloquee cuando guardas una partida mientras están pasando demasiadas
+cosas en el nivel. Chocolate Doom emula intencionadamente este
+error. Es posible que desee ir a chocolate-setup y desactivar
+"Vanilla savegame limit" antes de jugar.]
 
 === Salir del juego
 
@@ -177,40 +183,124 @@ mensajes mostrados cuando recolectas un objeto.
 
 == Como Jugar
 
-image::images/c5m1-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
+image::images/map01-sshot.png[Captura de pantalla de Freedoom,width="640",pdfwidth="70vw",align="center"]
 
 Freedoom es un juego en tiempo real de disparos en primera persona (FPS).
 Estarás explorando una serie de niveles, en cada uno, tratando de encontrar un
 camino hacia la salida. Una variedad de monstruos trataran de detenerte, y
 necesitarás usar armas para defenderte. Algunas partes de los niveles pueden
 ser inaccesibles hasta que encuentre una llave en particular, o encuentres un
-interruptor para abrir una puerta bloqueada. Esto le da un elemento de
+interruptor para abrir un paso. Esto le da un elemento de
 rompecabezas al juego que se añade a la acción.
 
-Por default, las teclas del cursor del teclado te moverán hacia adelante y
-hacia atrás, y te harán girar a la izquierda y a la derecha. La tecla _Control_
-dispara el arma en uso, y la barra espaciadora abre puertas y activa
-interruptores. Todos los source ports te permitirán modificar estas teclas a
-una configuración que te resulte más cómoda. También querrás considerar el uso
-de las teclas de strafe (paso lateral) y correr para para controlar mejor tu
-movimiento.
+Estos son los controles principales del juego para interactuar con el entorno:
+[options="header",cols="3,1,2,1",width="70%",align="center",halign="center"]
+|==========================
+| Function | Primera tecla default^1^ | Segunda tecla default | Comúnmente configurado para^2^
+| Avanzar/Retroceder | Up/Down | Movimiento del mouse (o Mouse2 para avanzar) | W/S
+| Mover a la izquierda/derecha | ,/. | Alt (o Mouse3) + izquierda/derecha | A/D
+| Girar a la izquierda/derecha^3^ | Izquierda/Derecha | Movimiento del mouse | Movimiento del mouse
+| Disparo | Ctrl | Mouse1 | Mouse1
+| Usar | Espaciadora | Doble clic Mouse2 o Mouse3 | E
+| Correr^4^ | Mayúsculas | - | Mayúsculas
+|==========================
+^1^Tu source port debería permitirte usar cualquier botón de tu controlador o mouse;
+por brevedad, este manual usa "tecla" para incluir otros controles según
+lo requieran las circunstancias.
 
-Si no has jugado Freedoom antes, tomate unos minutos cuando comience el juego
-para familiarizarte con los controles, y reconfigura los controles a medida que
-lo encuentres más cómodo jugar. Practica moverte y disparar el arma. Puede que
-encuentres algunos monstruos de nivel bajo, pero aquellos que se encuentran en
-el primer nivel no presentan un gran desafío y son una buena oportunidad para
-practicar el cómo disparar.
+^2^En un teclado QWERTY las teclas W, S, A y D forma un segundo juego
+de teclas de dirección para la mano izquierda.
 
-Dentro del juego encontrarás varios objetos coleccionables y potenciadores.
-Estos típicamente te darán más <<ammo,munición>> para tus armas, más
-<<health,salud>> o más <<armor,armadura>>. También puedes encontrar
-<<weapons,nuevas armas>> y algunos de los <<specialitems,potenciadores más
-raros>> que te otorgan habilidades especiales. Recoger algo es tan simple
-como solo caminar sobre el objeto — un mensaje en tu pantalla y un breve
-parpadeo de la pantalla indicaran que lo has hecho exitosamente. Si no lo
-recoges, es probable que no lo necesites en este momento (por ejemplo, no
-puedes recoger un paquete de salud cuando ya tienes 100% de salud).
+^3^Si tienes un monstruo, un barril o un oponente PvP cruzando el medio
+de tu pantalla cuando tu arma se dispara, el juego ajustará tu puntería
+vertical por ti. Algunos source ports te permitirán desactivar este
+comportamiento y ajustar la puntería vertical manualmente.
+
+^4^La mayoría de los source ports tienen una opción de "Correr siempre"
+("Always Run"), en la que si mantienes pulsada esta tecla, irás más despacio.
+El personaje del jugador no se cansa, así que la velocidad lenta
+sólo es necesaria para aumentar la precisión.
+
+**Los valores predeterminados de Doom se consideran en general subóptimos;**
+consulta el source port para saber cómo reconfigurarlos. Se proporcionan 
+as opciones más comunes, pero existe una solución "óptima" que funcione
+para todo el mundo; es posible que deba experimentar.
+Como mínimo, debes sentirte cómodo moviéndote en cualquiera de las cuatro
+direcciones mientras giras y disparas simultáneamente.
+
+=== Uno Tutorial
+
+image::images/e1m1-tutorial-sshot.png[Captura de pantalla de Freedoom,width="640",pdfwidth="70vw",align="center"]
+
+Este tutorial te presentará todas las acciones básicas que necesitas
+para jugar y vencer a Freedoom.
+
+Comienza un nuevo juego en la Phase 1, Episodio 1 en modo fácil y sigue los pasos.
+Sáltate algo que te aburra o te confunda, y repite algo que te resulte difícil
+tanto tiempo como quieras, antes de pasar a lo siguiente o de volver
+a hacer algo anterior.
+
+* Intenta moverte hacia delante, hacia atrás, a la izquierda y a la derecha.
+  Intenta hacer un cuadrado. Intenta ambos direcciónes. Intenta hacer un ocho.
+  (No salgas de la jaula todavía: hay monstruos fuera.)
+
+* Gira en círculo para examinar tu entorno. Ve a tu propio ritmo, parando o
+  invirtiendo para mirar cualquier cosa que quieras. Haz un segundo círculo,
+  moviéndote un poco a medida que avanzas, y observa cómo eso cambia la
+  perspectiva y cómo el movimiento lateral puede ayudarte a ver lo larga
+  que es una pared o lo lejos que está un objeto.
+
+* Vuelve al centro de la jaula. Gíra para apuntar con tu pistola directamente
+  a una de las columnas del marco de la puerta.
+
+* Muévete -sin girarte- para que tu pistola apunte a la otra columna.
+  (Puntos extra si puedes detenerte de forma natural sobre el objetivo).
+
+* Muévete un poco a la izquierda o a la derecha, luego gira para apuntar
+  de nuevo a la columna. Vuelve a hacerlo, pero empieza a girar antes de
+  que tu momento se desgasta. Vuelve a hacerlo unas cuantas veces,
+  recorriendo las cuatro direcciones y girando cada vez más pronto hasta
+  que estés apuntando y el movimiento sea de una pieza.
+  (Retrocede o avanza para reajustarte si te acercas demasiado
+  o chocas contra las paredes).
+
+* Intenta hacer un cuadrado (o un ocho, etc.) mientras apuntas a la columna
+  todo el tiempo. Prioriza la suavidad sobre la precisión: es mejor estar
+  cerca la mayor parte del tiempo que ser perfecto algunas veces.
+
+* Muévete a una de las esquinas con las camas encima para que la columna
+  ya no esté en tu línea de visión. Entra y desaparece de la vista con
+  la columna jugando "Cucú" con ella. Lío con la distancia y el tiempo.
+  Intente permanecer apuntando a la columna incluso cuando no pueda verla.
+
+* Juega un poco con lo anterior. Intente presionar la tecla Disparo para
+  disparar a la columna, ya sea que esté quieta o en movimiento, y observe
+  dónde y cuándo aparecen las bocanadas de bala.
+  (Deja de disparar antes de que tu recuento de munición baje de 30
+  aproximadamente; ¡las necesitarás para más adelante!)
+
+* Toque la tecla 1 en el teclado para cambiar a su puño e intente
+  golpear la columna y vea a qué distancia puede hacerlo.
+  Toque la tecla 2 para volver a la pistola.
+
+* Vea si aún puede hacer todo mientras presionando la tecla Correr.
+
+* Baja a la trinchera y mata a un <<enemies,zombi>>. Trate de no ser golpeado.
+
+* Una vez que estés a salvo, mira cerca del cuerpo del zombi para ver
+  si puede haber dejado un <<ammo,cargador>>. Si es así, muévete sobre
+   él para recogerlo.
+
+* Vuelve por donde viniste. Sube al ascensor como si fueras con puño a
+  golpearlo y luego presiona Usar para llamarlo. Súbete a él y te llevará
+  de regreso. Recoge los elementos en el área superior para restaurar
+  o mejorar tu salud.
+
+* Explora el resto de la zona. Encontrarás dos puertas, una de cada tipo:
+  la inferior se puede utilizar directamente, como el ascensor, mientras
+  que la superior se abre mediante un interruptor cercano. Una vez que
+  hayas decidido qué camino tomar, abre la puerta y prepárate para
+  empezar a jugar Cucú de las Pistolas nuevamente.
 
 === Barra de Estatus
 
@@ -230,131 +320,185 @@ salud>> para ver potenciadores que puedes encontrar para recuperar tu salud.
 | **Freedoomguy** | Una rápida indicación visual de como se encuentra tu salud.
 | **Armor** | Mientras más armadura tengas, menos sufrirá tu salud cuando seas
 lastimado. Mira la <<armor,sección de armadura>> para más información.
-| **Ammo counts** | Cuanto estas cargando de cada uno de los <<ammo,cuatro
+| **Recuentos de munición** | Cuanto estas cargando de cada uno de los <<ammo,cuatro
 tipos de munición>>, junto con el máximo que puedes cargar de cada una.
 |==========================
 
-[[weapons]]
-=== Armas de Freedoom
+[[items]]
+=== Objetos
 
-Empiezas un juego con tan solo una pistola, 50 balas y tus puños a los que
-recurrir cuando se acaban. Querrás encontrar un mejor armamento tan pronto como
-sea posible.
+Dentro del juego encontrarás varios objetos coleccionables y potenciadores:
+<<weapons,armas>>, <<ammo,munición>>, <<health,salud>>, <<armor,blindaje>>,
+<<keys,llaves>> y algunos de los <<specialitems,potenciadores más
+raros>> que te otorgan habilidades especiales.
+
+Recoger algo es tan simple como solo caminar sobre el objeto — un mensaje
+en tu pantalla y un breve parpadeo de la pantalla indicaran que lo has
+hecho exitosamente. Si no lo recoges, es probable que no lo necesites en
+este momento (por ejemplo, no puedes recoger un recambio de salud cuando
+ya tienes 100% de salud). Si un artículo te da más de lo que puedes
+llevar, se pierde la diferencia.
+
+[[weapons]]
+=== Armas
+
+Empiezas un juego con tan solo una pistola, 50 balas y tus puños.
+Explorar el nivel revelará más armas y municiones que puedes recoger y usar.
+
+Presiona la tecla numerada en el teclado para cambiar al arma correspondiente
+(si lo tiene). Con excepción de las armas cuerpo a cuerpo, cada
+arma consume cierto tipo de munición, que puede encontrarse en algún lugar del nivel.
 
 [options="header",cols="3,1,5",valign="middle",width="100%"]
 |==========================
 | Arma | Tecla | Descripción
-| Fist | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
+| **Puño** | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
 monstruos con tus manos desnudas. Munición: Ninguna
-| Ripsaw +
-image:../sprites/csawa0.png[Ripsaw] |
+| **Sierra de hender** +
+image:../sprites/csawa0.png[Sierra de hender] |
 1 | Diseñada para cortar a través del madera, pero la
 sierra de hender funciona igual de bien como arma cuerpo a cuerpo para cortar
 a través de la carne. Munición: Ninguna
-| Handgun | 2 | Tu arma inicial. Unos cuantos disparos derribaran monstruos de
-bajo nivel, pero es mejor obtener algo mejor antes de confrontar oponentes más
-duros. Munición: Balas
-| Pump-action Shotgun +
-image:../sprites/shota0.png[Pump-action Shotgun] |
-3 | El arma principal; dispara siete perdigones en un
-estrecho grupo, y es efectiva tanto a corto como largo alcance contra enemigos
-de nivel bajo y medio. Munición:Perdigones
-| Double-barrelled Shotgun +
-image:../sprites/sgn2a0.png[Double-barrelled Shotgun] |
-3 | El Doble de poderosa que la escopeta, pero
-menos efectiva a cortas distancias; Es Buena a corto alcance contra grupos de
+| **Pistola** +
+image:../sprites/pista0.png[Pistola] |
+2 | Tu arma inicial. Su objetivo principal es permitirte abrirte camino hacia
+una mejor arma, y presionar interruptores disparables sin desperdiciar
+una segunda bala. Munición: Balas
+| **Escopeta de bombeo** +
+image:../sprites/shota0.png[Escopeta de bombeo] |
+3 | Dispara siete perdigones en forma de abanico, lo que le permite golpear
+múltiples objetivos o uno grande. Munición: Perdigones
+| **Escopeta de doble cañón** +
+image:../sprites/sgn2a0.png[Escopeta de doble cañón] |
+3 | Mayor tolerancia a cargas potentes significa mejor fragmentación
+del proyectil, para casi un 50% más de impactos por cartucho a través de
+una dispersión más amplia. Es buena a corto alcance contra grupos de
 enemigos. Munición: Perdigones
-| Minigun +
+| **Minigun** +
 image:../sprites/mguna0.png[Minigun] |
-4 | Conceptualmente es una versión mucha más rápida de la pistola
-básica, pero consume munición mucho más rápido.  Munición: Balas
-| Missile Launcher +
-image:../sprites/launa0.png[Missile Launcher] |
+4 | Un uso mucho mejor para los balas que la pistola.
+Hasta cuarenta segundos de traer el dolor para mantenerte a salvo.
+Munición: Balas
+| **Lanzamisiles** +
+image:../sprites/launa0.png[Lanzamisiles] |
 5 | Dispara misiles que tratan mucho daño en el impacto, y explotan para matar
 pequeños monstruos cercanos. ¡Ten cuidado de no ser atrapado en la explosión!
 Munición: Misiles
-| Polaric Energy Weapon +
-image:../sprites/plasa0.png[Polaric Energy Weapon] |
+| **Arma de energía polarica** +
+image:../sprites/plasa0.png[Arma de energía polarica] |
 6 | Produce un continuo flujo de proyectiles de
-energía polarica. Los cuales son efectivos contra monstruos de alto nivel.
+energía polarica. Los cuales son efectivos contra monstruos más fuertes.
 Munición: Energía
-| SKAG 1337 +
+| **SKAG 1337** +
 image:../sprites/bfuga0.png[SKAG 1337] |
-7 | Un arma experimental que lanza una bola orbe de energía que
-hace una gran cantidad de daño, además de que daña otros enemigos en la
-proximidad. Lenta para disparar, pero increiblemente poderosa.
+7 | Un arma experimental que lanza una bola orbe de energía polarica que
+hace una gran cantidad de daño, y suelta una ráfaga secundaria de energía
+en la misma dirección. Lenta para disparar, vale la pena esperar.
 Munición: Energía
 |==========================
-
-Presiona la Tecla numerada en el teclado para cambiar al arma correspondiente
-(¡Si ya ha sido recogida!). Con excepción de las armas cuerpo a cuerpo, cada
-arma consume cierto tipo de munición, y deberás estar atento de buscar más
-munición mientras estas explorando.
 
 [[ammo]]
+=== Munición
 [options="header",cols="2,1,1",width="70%",align="center",valign="middle"]
 |==========================
-| Tipo de municion | Small | Large
+| Tipo de municion | Pequeño | Grande
 | **Balas** |
-image:../sprites/clipa0.png[Ammo Clip] |
-image:../sprites/ammoa0.png[Ammo Clip]
+image:../sprites/clipa0.png[Cargador de balas] |
+image:../sprites/ammoa0.png[Caso de balas]
 | **Perdigones** |
-image:../sprites/shela0.png[Shotgun Shells] |
-image:../sprites/sboxa0.png[Box of Shotgun Shells]
+image:../sprites/shela0.png[Perdigones] |
+image:../sprites/sboxa0.png[Caja de perdigones]
 | **Misiles** |
-image:../sprites/rocka0.png[Missile] |
-image:../sprites/broka0.png[Crate of Missiles]
+image:../sprites/rocka0.png[Misile] |
+image:../sprites/broka0.png[Cajón de misiles]
 | **Energía** |
-image:../sprites/cella0.png[Small Energy Recharge] |
-image:../sprites/celpa0.png[Large Energy Recharge]
+image:../sprites/cella0.png[Pequeña ecarga de energía] |
+image:../sprites/celpa0.png[Gran ecarga de energía]
 | **Mochila** |
 - |
 image:../sprites/bpaka0.png[Mochila]
 |==========================
 
-La mochila es un objeto especial que contiene múltiples tipos de munición y
-duplica el máximo de munición que puedes cargar.
+La mochila ofrece una recogida pequeña de cada tipo de munición.
+Una que tengas uno, podrás llevar el doble de munición de lo normal,
+durante el resto del juego.
 
 [[health]]
-=== Salúd
+=== Salud
 
-Mueres si tu salud llega a 0%. Encontraras bonos de salud alrededor de los
-niveles, los cuales pueden restaurarte de vuelta al 100% de salud; bonos de
-salud del 1% pueden subir tú salud más allá del 100% y elevarla hasta el 200%
-de salud.
+Comienzas con 100% de salud. Mueres si tu salud llega a 0%.
+
+Recoger cualquier objeto de salud te dará el número mostrado, hasta su límite.
+Los recambios están limitados al 100%, pero los empujes (1% y 100%) están limitados al 200%.
 
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 10% | 25% | 100%
-| image:../sprites/bon1a0.png[Ectoplasmic Polyp] |
-image:../sprites/stima0.png[Regenerative Nanobot Gauze] |
-image:../sprites/media0.png[Regenerative Nano-Surgery Kit] |
-image:../sprites/soula0.png[Ectoplasmic Surge]
+| image:../sprites/bon1a0.png[Empuje de salud] |
+image:../sprites/stima0.png[Recambio pequeño de salud] |
+image:../sprites/media0.png[Recambio grande de salud] |
+image:../sprites/soula0.png[Oleada ectoplásmica]
 |==========================
 
 [[armor]]
-=== Armadura
+=== Blindaje
 
-Comienzas con 0% de armadura y puede incrementar hasta 200% al recolectar
-bonos.
+Comienzas con 0% de blindaje. Recoger una coraza o una armadura te llevará hasta
+el número mostrado, mientras que cada pequeño empuje incrementa tu blindaje
+hasta que alcanzas los 200%.
 
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
 | 1% | 100% | 200%
-| image:../sprites/bon2a0.png[Polaric Energy Field Emitter] |
-image:../sprites/arm1a0.png[Polaric Shielding Vest] |
-image:../sprites/arm2a0.png[Attuned Polaric Energy Armor]
+| image:../sprites/bon2a0.png[Empuje de blindaje] |
+image:../sprites/arm1a0.png[Coraza de campo de fuerza] |
+image:../sprites/arm2a0.png[Armadura sintonizada de campo de fuerza]
 |==========================
 
-La armadura normal absorbe un tercio del daño que recibes. Por ejemplo, supon
-que te golpea un misil que reduce tu salud del 100% al 50%. Si te golpea el
-mismo misil mientras llevas un 100% de armadura, tu salud se reducirá a solo
-un 66%, pero perderás un 16% de armadura.
+El blindaje normal absorbe un tercio del daño que recibes.
+La absorción se redondea: si tienes 100 de salud y 100 de blindaje y
+te golpea por 50 puntos de daño, perderás 34 de salud y 16 de blindaje.
 
-El chaleco de armadura pesada tiene un comportamiento ligeramente diferente: en
-adición de valer un 200 % de armadura, también absorbe la mitad de todo el
-daño. Por esta razón, es una muy buena idea tener en tus manos un chaleco
-blindado pesado si puedes encontrar uno.
+La armadura sintonizada tiene un comportamiento ligeramente diferente: en
+adición de valer un 200 % de blindaje, también absorbe la mitad de todo el
+daño. Como los empujes pequeños dan el mismo tipo de blindaje que ya tienes,
+puede ser una buena idea para obtener inmediatamente una armadura sintonizada
+si tu no tiene ya uno.
+
+[[keys]]
+=== Llaves
+
+image:../sprites/bkeya0.png[Tarjeta de acceso azul] image:../sprites/bskua0.png[Llave muerta azul] +
+image:../sprites/ykeya0.png[Tarjeta de acceso amarillo] image:../sprites/yskua0.png[Llave muerta amarillo] +
+image:../sprites/rkeya0.png[Tarjeta de acceso rojo] image:../sprites/rskua0.png[Red Llave muerta rojo]
+
+Llaves permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
+Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
+acceder a atajos o zonas secretas.
+
+=== Accesibilidad para daltónicos
+
+Las llaves de Freedoom están diseñadas para distinguirse no sólo por su
+color, sino también por su forma, para hacer el juego más accesible a los
+jugadores daltónicos. Cada color de llave tiene una forma única asociada:
+
+[cols="2,3",width="50%",align="center",valign="middle"]
+|==========================
+| **Key color** | **Shape**
+| Azul | Cruz diagonal
+| Amarillo | Líneas verticales
+| Rojo | Líneas horizontales
+|==========================
+
+Estas formas se utilizan sistemáticamente en todo el juego: en los iconos
+de la barra de estatus, en los sprites de las llaves y en las paredes que
+indican las puertas con llave.
+
+Para las llaves muertas, presta atención a la dirección a la que apuntan
+los cuernos. Por ejemplo, así es como aparecen los distintos iconos de las
+llaves en la barra de estatus:
+
+image:images/key-icons.png[Key icons,align="center"]
 
 [[specialitems]]
 === Objetos Especiales
@@ -364,41 +508,32 @@ exploras:
 
 [cols="1,2",width="90%",align="center",valign="middle"]
 |==========================
-| **Keys** +
-image:../sprites/bkeya0.png[Blue Key]
-image:../sprites/rkeya0.png[Red Key]
-image:../sprites/ykeya0.png[Yellow Key] +
-image:../sprites/bskua0.png[Blue Key]
-image:../sprites/rskua0.png[Red Key]
-image:../sprites/yskua0.png[Yellow Key] |
-Permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
-Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
-acceder a zonas secretas.
-| **Low-Light Goggles** +
-image:../sprites/pvisa0.png[Low-Light Goggles] |
+| **Gafas luminosas** +
+image:../sprites/pvisa0.png[Gafas luminosas] |
 Te permiten ver en la obscuridad por un tiempo limitado.
-| **Negentropic Surge** +
-image:../sprites/megaa0.png[Negentropic Surge] |
-Maximiza tu salud y armadura hasta el 200%
-| **Area Survey Map** +
-image:../sprites/pmapa0.png[Area Survey Map] |
+| **Mapa del área** +
+image:../sprites/pmapa0.png[Mapa del área] |
 Desbloquea todas las áreas del mapa, incluidas algunas áreas secretas que
 pueden no ser inmediatamente visibles.
-| **Rescue Operations Suit** +
-image:../sprites/suita0.png[Rescue Operations Suit] |
+| **Ropa de protección** +
+image:../sprites/suita0.png[Ropa de protección] |
 Te protege de la radiación de los pisos dañinos, por un tiempo limitado.
-| **Strength Symbiote** +
-image:../sprites/pstra0.png[Strength Symbiote] |
+| **Simbionte de fuerza** +
+image:../sprites/pstra0.png[Simbionte de fuerza] |
 Incrementa tu salud al 100% y mejora tus puños para que hagan 10 veces su daño
 normal, hasta el final del nivel.
-| **Invisibility Cloak** +
-image:../sprites/pinsa0.png[Invisibility Cloak] |
+| **Invisibilizador** +
+image:../sprites/pinsa0.png[Invisibilizador] |
 Te hace casi invisible por tiempo limitado.
-| **Vanguard Device** +
-image:../sprites/pinva0.png[Vanguard Device] |
+| **Oleada negentropica** +
+image:../sprites/megaa0.png[Oleada negentropica] |
+Maximiza tu salud y armadura hasta el 200%.
+| **Via Gladii** +
+image:../sprites/pinva0.png[Via Gladii] |
 Te hace inmune a todo el daño por tiempo limitado.
 |==========================
 
+[[enemies]]
 === Enemigos
 
 Los niveles están llenos de monstruos que no tienen otro objetivo más que
@@ -407,77 +542,77 @@ monstruos con los que puedes encontrarte.
 
 [frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
 |==========================
-| **Zombie** +
-Estas criaturas no muertas están armadas con una pistola y tienen la intención
-de destruirte. Sueltan un cargador de balas cuando muere. |
-image:images/monster-zombie.png[Zombie,100,100,width=100%]
-| **Shotgun Zombie** +
+| **Zombi** +
+Estas obradores de iniquidad con muerte cerebral están armadas con una pistola y tienen
+la intención de destruirte. Sueltan un cargador de balas cuando muere. |
+image:images/monster-zombie.png[Zombi,100,100,width=100%]
+| **Escopeta zombi** +
 Estos muchachos cambiaron su pistola por una escopeta y tienen mucho más
 impacto. Sueltan una escopeta cuando mueren. |
-image:images/monster-shotgun-zombie.png[Shotgun Zombie,100,100,width=100%]
-| **Minigun Zombie** +
+image:images/monster-shotgun-zombie.png[Escopeta zombi,100,100,width=100%]
+| **Minigun zombi** +
 Tan pronto como estés a la vista de uno de estos, activaran su ametralladora y
 seguirá disparando hasta que estés muerto. Lo mejor es ponerse a cubierto
 rápidamente o eliminarlo. Sueltan una ametralladora cuando mueren. |
-image:images/monster-minigun-zombie.png[Minigun Zombie,100,100,width=100%]
+image:images/monster-minigun-zombie.png[Minigun zombi,100,100,width=100%]
 | **Serpentipede** +
-Serpientes soldado que fungen como la infantería de la invasión alienígena.
-Deja que se acerquen y te harán trizas; a distancia, en cambio, lloverán bolas
-de fuego. |
+Soldados rasos de la invasión alienígena. Deja que se acerquen y te harán trizas;
+a distancia, en cambio, lloverán bolas de fuego. |
 image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
-| **Flesh Worm** +
-Resistentes y rápidos, estos gusanos atacan a corta distancia y necesitan
+| **Gusano de carne** +
+Resistentes y rápidos, estos atacan a corta distancia y necesitan
 varios disparos de escopeta para derribarlos. Lo mejor es quedarse atrás. |
-image:images/monster-flesh-worm.png[Flesh Worm,100,100,width=100%]
-| **Stealth Worm** +
+image:images/monster-flesh-worm.png[Gusano de carne,100,100,width=100%]
+| **Gusano de sigilo** +
 A estas variantes de los gusanos de carne se les han dado habilidades de sigilo
 que las hacen prácticamente invisibles. |
-image:images/monster-stealth-worm.png[Stealth Worm,100,100,width=100%]
-| **Hatchling** +
+image:images/monster-stealth-worm.png[Gusano de sigilo,100,100,width=100%]
+| **Cría** +
 Larvas alienígenas flotantes que cargan desde la distancia. |
-image:images/monster-hatchling.png[hatchling,100,100,width=100%]
+image:images/monster-hatchling.png[Cría,100,100,width=100%]
 | **Matribite** +
-La madre de las larvas se asegurará de que siempre tengas más de sus bebés con
-los que lidiar. |
-image:images/monster-matribite.png[matribite,100,100,width=100%]
+¿Qué madre arroja a sus hijos desde su nacimiento a las crueles fauces de la guerra?
+En su imperio nunca se pone el sol. |
+image:images/monster-matribite.png[Matribite,100,100,width=100%]
 | **Trilobite** +
-Estas criaturas voladoras con forma de orbe escupen bolas de fuego y muerden si
+Estas cosas voladoras con forma de orbe escupen bolas de plasma y muerden si
 te acercas demasiado. |
 image:images/monster-trilobite.png[Trilobite,100,100,width=100%]
-| **Pain Bringer** +
-100% musculo, estos tipos necesitan al menos tres disparos de cohetes para
+| **Portador de dolor** +
+Estos tipos necesitan al menos tres disparos de misiles para
 derribarlos y, mientras lo intentas, te bañarán con proyectiles de energía. |
-image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
-| **Pain Lord** +
-Por si el Pain Bringer no fuera lo suficientemente duro, este puede resistir
-cinco explosiones de cohetes. |
-image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
+image:images/monster-pain-bringer.png[Portador de dolor,100,100,width=100%]
+| **Señor de dolor** +
+Por si el portador de dolor no fuera lo suficientemente duro, este puede resistir
+cinco disparos de misiles. |
+image:images/monster-pain-lord.png[Señor de dolor,100,100,width=100%]
 | **Octaminator** +
 Rápidos, resistentes y disparan misiles autoguiados. No te metas en un
 combate de boxeo con uno de estos tipos. |
 image:images/monster-octaminator.png[Octaminator,100,100,width=100%]
-| **Necromancer** +
+| **Nigromante** +
 Si no te está prendiendo fuego, está deshaciendo todo tu arduo trabajo al traer
 a sus amigos de entre los muertos. |
 image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
-| **Combat Slug** +
-Estas súper-babosas diseñadas genéticamente han sido equipadas con lanzallamas
-de larga distancia, convirtiéndolas prácticamente en tanques vivientes y
-deslizantes. |
-image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
-| **Technospider** +
-Estas criaturas arácnidas han sido equipadas con ametralladoras de energía polar,
-lo que las convierte en un desafío mortal. |
-image:images/monster-technospider.png[Technospider,100,100,width=100%]
-| **Large Technospider** +
+| **Babosa de batalla** +
+Estos monstruos de carne diseñados genéticamente han sido equipados con lanzallamas
+de larga distancia, convirtiéndolos en tanques vivientes y deslizantes. |
+image:images/monster-combat-slug.png[Babosa de batalla,100,100,width=100%]
+| **Tecnaraña** +
+Estas criaturas cibernéticas han sido equipadas con ametralladoras de energía
+polarica, lo que las convierte en un desafío mortal. |
+image:images/monster-technospider.png[Tecnaraña,100,100,width=100%]
+| **Tecnaraña grande** +
 Este tanque con patas está equipado con una ametralladora de fuego rápido y
-requerirá mucho esfuerzo para derribarlo. |
-image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
-| **Assault Tripod** +
+requerirá mucho esfuerzo para derribarlo.
+Inmune a las explosiones de misiles y barriles. |
+image:images/monster-large-technospider.png[Tecnaraña grande,100,100,width=100%]
+| **Trípode de asalto** +
 La combinación definitiva de tecnología militar e ingeniería genética, estas
 criaturas de tres patas se mueven rápidamente, están fuertemente blindadas y
-equipadas con un lanzamisiles que querrás evitar. |
-image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
+equipadas con un lanzamisiles que querrás evitar.
+Inmune a las explosiones de misiles y barriles. |
+image:images/monster-assault-tripod.png[Trípode de asalto,100,100,width=100%]
 |==========================
 
 === Usando el mapa
@@ -501,21 +636,19 @@ del mapa generalmente están codificadas por colores de la siguiente manera:
 revelarse si se descubre el <<specialitems,Mapa de Inspección Táctica>>).
 |==========================
 
-Mientras usas el mapa, el juego continúa con normalidad, por lo que es
-aconsejable encontrar un lugar seguro antes de activarlo, para evitar ser
-emboscado por monstruos. Los controles normales continúan funcionando como de
-costumbre, pero las siguientes teclas adicionales están disponibles:
+Mientras usas el mapa, el juego continúa con normalidad. Los controles continúan 
+funcionando como de costumbre, pero las siguientes teclas adicionales están disponibles:
 
 [frame="none",cols="1,4",valign="middle",align="center",width="80%"]
 |==========================
-| **Tab** | Mostrar Mapa
-| **-** | Menos Zoom
-| **+** | Más Zoom
-| **0** | Aleja el zoom al máximo
+| **Tab** | Mostrar mapa.
+| **-** | Menos zoom.
+| **+** | Más zoom.
+| **0** | Aleja el zoom al máximo.
 | **F** | Cambia si el mapa sigue al jugador. Cuando está deshabilitado, las
 teclas del cursor se pueden usar para desplazar la vista del mapa
 independientemente de tu posición actual.
-| **G** | Muestra la cuadricula del mapa
+| **G** | Muestra la cuadricula del mapa.
 | **M** | Agrega un marcador al mapa sobre tu ubicación actual.
 | **C** | Elimina todos los marcadores.
 |==========================
@@ -549,33 +682,56 @@ aplastará rápidamente hasta convertirte en una pasta! |
 image:images/hazard-crusher.png[Crushing Ceiling,150,150,width=100%]
 |==========================
 
+=== Muriendo
+
+Con el tiempo, te encontrarás en una situación que no podrás manejar y
+tu avatar de jugador morirá. Puedes tomar esto como una señal para tomar
+un descanso del juego, o recargar tu último juego guardado, o presionar
+Usar para reiniciar el nivel con plena salud pero sin equipo excepto tu
+pistola y 50 balas. (Algunos source ports no hacen esto último, sino
+que guardan el juego al comienzo de cada nivel y al presionar Usar se
+carga ese juego).
+
+No hay límite de vidas.
+
+En el modo multijugador, presionar Usar restablecerá tu salud y tu
+inventario y te colocará en la posición inicial, pero el juego continúa
+normalmente. Es posible recoger munición y morir sin usarla tantas veces
+que su equipo se ve obligado a terminar el mapa usando sólo pistolas,
+muriendo para poder recargar.
+
 === Consejos Tácticos
 
-Si tienes problemas con la dificultad del juego, una opción es cambiar a un
-nivel de habilidad más fácil. Alternativamente, puedes probar algunas de estas
-sugerencias tácticas:
+Si tienes problemas con la dificultad del juego, puede que valga la pena
+considerar algunas de estas sugerencias:
 
-* En primer lugar, dedica algo de tiempo a configurar tus controles. La mayoría
-  de los jugadores encuentran que una combinación de mouse y teclado es la más
-  efectiva, donde el mouse se usa para girar mientras que el teclado se usa
-  para moverse. En particular, asegúrate de haber configurado las teclas de
-  strafe (paso lateral). Muchos de los enemigos del juego lanzan proyectiles
-  que hay que esquivar. Eludir estos proyectiles es una habilidad importante
-  para aprender. Sabrás que has dominado esta habilidad cuando puedas rodear
-  fácilmente a un enemigo y esquivar sus proyectiles mientras mantienes tu arma
-  apuntada hacia él.
+* Dedica algo de tiempo a configurar tus controles -- ambos asignación
+  de botones/teclas y sensibilidad de giro del mouse/joystick. Ninguna
+  configuración es mejor para todos y es una buena idea experimentar:
+  cualquiera que te ayude a esquivar proyectiles y entrar y salir de la
+  cubierto mientras mantienes tu arma apuntando al enemigo, y proporciona
+  la menor distracción mientras te mueves por el mapa buscando. cosas, es bueno.
 
 * Juega con auriculares. La separación estéreo del juego puede brindar pistas
   de audio útiles sobre las posiciones de los enemigos y alertarte sobre los
   proyectiles que se aproximan. Los auriculares te brindan una forma más
   precisa de captar estas señales.
 
+* ¡No aplastes los botones! Casi todas las armas tienen un ligero período de
+  recuperación cuando sueltas la tecla Disparo, lo que te cuesta tiempo y
+  le da a tu objetivo más oportunidades de devolver el fuego. Mantener
+  presionado Disparo te permitirá disparar cualquier arma continuamente
+  hasta que se te acabe la munición o la sueltes.
+
 * ¡Ponte a cubierto! Los monstruos solo atacan cuando estás en su línea de
-  visión. Querrás encontrar paredes, pilares y otras formas de cobertura tras
+  visión. Querrás encontrar paredes, pilares y otras formas de cubierto tras
   las que puedas esconderte mientras recargas tu arma. Este consejo es
   particularmente importante cuando te enfrentas a ciertos monstruos que pueden
-  "fijarte" (minigun zombie, nigromante); esconderse de estos es una habilidad
-  crucial.
+  "fijarte" (minigun zombi, nigromante); esconderse de estos es una habilidad
+  crucial. Los monstruos con armas de fuego no son ni mejores ni peores a la
+  hora de golpearte, ya sea que estés en movimiento o parado, por lo que no
+  puedes esquivar continuamente en campo abierto como lo haces contra
+  proyectiles que se mueven visiblemente.
 
 * Muchos de los niveles están llenos de barriles que explotan. Si bien estos
   pueden representar un peligro para ti, son igualmente peligrosos para tus
@@ -591,8 +747,8 @@ sugerencias tácticas:
   correcto para que los de atrás disparen a los de adelante. Hazlo bien y
   pasarán más tiempo peleando entre ellos que peleando contigo, y los
   sobrevivientes se debilitarán significativamente. Sin embargo, ten en cuenta
-  que un monstruo no puede ser herido por un proyectil lanzado por otro de la
-  misma especie.
+  que un monstruo no puede ser herido por un proyectil visible lanzado por otro
+  de la misma especie.
 
 * A veces te enfrentarás a multitudes de monstruos, lo que puede resultar
   abrumador y agotar tus reservas de munición. Aprende a dominar el control de
@@ -669,27 +825,27 @@ siguientes son algunas sugerencias sobre dónde buscar el mejor contenido:
 
 Si encuentra el juego demasiado difícil, siempre puede intentar jugar en
 <<skill,un nivel de dificultad más fácil>>. Sin embargo, si eso no es
-suficiente, o si solo quieres divertirte sintiéndote como una máquina de matar
-imparable, hay una serie de trucos a los que puedes recurrir:
+suficiente, o si solo quieres experimentar con la mecánica del juego,
+hay una serie de trucos a los que puedes recurrir:
 
 [cols="2,4",width="90%",align="center",valign="middle"]
 |==========================
 | **IDDQD** | Modo Dios. Te hace invulnerable a todo el daño.
 | **IDFA** | Te da todas las armas y munición.
-| **IDKFA** | Todas las armas, munición y llaves.
-| **IDCLIP** | Activa el modo noclip, lo que te permite caminar a traves de las
+| **IDKFA** | Te da todas las armas, munición y llaves.
+| **IDCLIP** | Modo noclip, lo que te permite caminar a traves de las
 paredes.
 | **IDDT** | Revela el mapa completo; escribelo dos veces para revelar todos
 los enemigos y objetos.
-| **IDCLEVxy** | Teletransportate a CxMy (Phase 1) o MAPxy (Phase 2).
-| **IDMUSxy** | Cambia la música por la de CxMy (Phase 1) o MAPxy (Phase 2).
+| **IDCLEVxy** | Empieza un nuevo juego (que reinicia todo) en ExMy (Phase 1) o MAPxy (Phase 2).
+| **IDMUSxy** | Cambia la música por la de ExMy (Phase 1) o MAPxy (Phase 2).
 | **IDCHOPPERS** | Te da una sierra de hender.
-| **IDBEHOLDV** | Te da la esfera de invulnerabilidad.
-| **IDBEHOLDS** | Te da una mejora de fuerza.
-| **IDBEHOLDI** | Te da una esfera de sigilo.
-| **IDBEHOLDR** | Te da un traje de protección.
-| **IDBEHOLDM** | Te da un mapa de inspección táctica.
-| **IDBEHOLDL** | Te da unas gafas de visión nocturna.
+| **IDBEHOLDV** | Te da la **V**ia Gladii.
+| **IDBEHOLDS** | Te da una **s**imbionte de fuerza.
+| **IDBEHOLDI** | Te da el **i**nvisibilizador.
+| **IDBEHOLDR** | Te da **r**opa de protección.
+| **IDBEHOLDM** | Te da un mapa del **á**rea.
+| **IDBEHOLDL** | Te da gafas **l**uminosas.
 |==========================
 
 <<<
