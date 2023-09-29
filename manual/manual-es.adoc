@@ -528,8 +528,8 @@ Te hace casi invisible por tiempo limitado.
 | **Oleada negentropica** +
 image:../sprites/megaa0.png[Oleada negentropica] |
 Maximiza tu salud y armadura hasta el 200%.
-| **Via Gladii** +
-image:../sprites/pinva0.png[Via Gladii] |
+| **Artefacto de vanguardia** +
+image:../sprites/pinva0.png[Artefacto de vanguardia] |
 Te hace inmune a todo el daño por tiempo limitado.
 |==========================
 
