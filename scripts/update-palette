@@ -33,15 +33,24 @@ PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 
 # Parse the command line arguments, and return a dict with the arguments
 def parse_args():
-    parser = argparse.ArgumentParser("update-palette")
+    parser = argparse.ArgumentParser(
+        "update-palette",
+        description="This script takes a new palette, compares the new "
+        "palette with the old one, and scans and updates images in the repo "
+        "which use the colours that were replaced in the new palette."
+    )
     parser.add_argument("palette", help="The new palette to use")
+    # This is a potential vulnerability, and besides, it doesn't make
+    # sense to update the palette for images which aren't in the repo.
+    # parser.add_argument(
+    #     "--dir", "-d", help=(
+    #         "The directory to recursively process. "
+    #         "Defaults to repository root directory."),
+    #     default=normpath(join(dirname(realpath(argv[0])), "..")))
     parser.add_argument(
-        "--dir", "-d", help=(
-            "The directory to recursively process. "
-            "Defaults to repository root directory."),
-        default=normpath(join(dirname(realpath(argv[0])), "..")))
-    parser.add_argument(
-        "--dry-run", help="Do not modify any PNGs", action='store_true')
+        "-d", "--dry-run",
+        help="Do not modify any PNGs, just show which ones would be modified",
+        action='store_true')
     args = parser.parse_args()
     return args
 
@@ -124,17 +133,18 @@ def compare_palettes(new_palette):
 
 # "Stolen" from the map-color-index script
 # Process a directory recursively for PNG files.
-def process_dir(colour_map, dir, dry_run, palette):
+def process_dir(colour_map, dry_run, palette):
+    directory = normpath(join(dirname(realpath(argv[0])), ".."))
     pngs_changed_count = 0
     pngs_examined_count = 0
 
-    for dirpath, dirnames, filenames in os.walk(dir):
+    for dirpath, dirnames, filenames in os.walk(directory):
         for png_base in filenames:
             if not png_base.lower().endswith(".png"):
                 continue
             png_path = os.path.join(dirpath, png_base)
             pngs_examined_count += 1
-            if process_png(colour_map, png_path, dry_run, dir):
+            if process_png(colour_map, png_path, dry_run, directory):
                 pngs_changed_count += 1
 
 
@@ -243,7 +253,7 @@ def process_idat(
 
 
 # Process a PNG file in place.
-def process_png(colour_map, png_path, dry, dir):
+def process_png(colour_map, png_path, dry, directory):
 
     # Read a chunk from the PNG file
     def read_png_chunk(png_file):
@@ -322,7 +332,7 @@ def process_png(colour_map, png_path, dry, dir):
 
     # Write the modified PNG file
     if idat_modified:
-        print("{} was changed".format(relpath(png_path, start=dir)))
+        print("{} was changed".format(relpath(png_path, start=directory)))
         if not dry:
             with open(png_path, "wb") as handle:
                 handle.write(PNG_SIGNATURE)
