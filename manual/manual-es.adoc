@@ -840,7 +840,7 @@ los enemigos y objetos.
 | **IDCLEVxy** | Empieza un nuevo juego (que reinicia todo) en ExMy (Phase 1) o MAPxy (Phase 2).
 | **IDMUSxy** | Cambia la música por la de ExMy (Phase 1) o MAPxy (Phase 2).
 | **IDCHOPPERS** | Te da una sierra de hender.
-| **IDBEHOLDV** | Te da la **V**ia Gladii.
+| **IDBEHOLDV** | Te da el artefacto de **v**anguardia.
 | **IDBEHOLDS** | Te da una **s**imbionte de fuerza.
 | **IDBEHOLDI** | Te da el **i**nvisibilizador.
 | **IDBEHOLDR** | Te da **r**opa de protección.
