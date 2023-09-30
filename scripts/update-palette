@@ -71,8 +71,8 @@ def flatten(list_of_lists):
 
 # Compare the old palette and the new palette, and return a dict with the
 # differences.
-def compare_palettes(new_palette):
-    old_palette = "lumps/playpal/playpal-base.lmp"
+def compare_palettes(directory, new_palette):
+    old_palette = join(directory, "lumps", "playpal", "playpal-base.lmp")
 
     # Read both palettes into a more usable format
     with open(old_palette, "rb") as handle:
@@ -133,8 +133,7 @@ def compare_palettes(new_palette):
 
 # "Stolen" from the map-color-index script
 # Process a directory recursively for PNG files.
-def process_dir(colour_map, dry_run, palette):
-    directory = normpath(join(dirname(realpath(argv[0])), ".."))
+def process_dir(colour_map, dry_run, directory, palette):
     pngs_changed_count = 0
     pngs_examined_count = 0
 
@@ -351,12 +350,15 @@ def process_png(colour_map, png_path, dry, directory):
 
 if __name__ == "__main__":
     args = parse_args()
-    comparison = compare_palettes(args.palette)
-    process_dir(comparison, **vars(args))
+    directory = normpath(join(dirname(realpath(argv[0])), ".."))
+    comparison = compare_palettes(directory, args.palette)
+    process_dir(comparison, directory=directory, **vars(args))
     # Replace old playpal-base.lmp
     if not args.dry_run:
+        playpal_base_path = (
+            join(directory, "lumps", "playpal", "playpal-base.lmp"))
         with  open(args.palette, "rb") as new_palfile, \
-              open("lumps/playpal/playpal-base.lmp", "wb") as old_palfile:
+              open(playpal_base_path, "wb") as old_palfile:
             # Only copy the first 768 bytes of the new palette to playpal-base
             new_pal = new_palfile.read(768)
             old_palfile.write(new_pal)
