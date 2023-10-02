@@ -37,7 +37,10 @@ def parse_args():
         "update-palette",
         description="This script takes a new palette, compares the new "
         "palette with the old one, and scans and updates images in the repo "
-        "which use the colours that were replaced in the new palette."
+        "which use the colours that were replaced in the new palette. This "
+        "script only supports indexed-colour PNGs. You may need to run 'make "
+        "fix-deutex-pngs' before running this script in order to palettize "
+        "any true-colour PNGs in the repo."
     )
     parser.add_argument("palette", help="The new palette to use")
     # This is a potential vulnerability, and besides, it doesn't make
@@ -74,15 +77,22 @@ def flatten(list_of_lists):
 def compare_palettes(directory, new_palette):
     old_palette = join(directory, "lumps", "playpal", "playpal-base.lmp")
 
+    # The "new" palette is the old palette?
+    old_pal_full_path = relpath(normpath(old_palette), directory)
+    new_pal_full_path = relpath(normpath(new_palette), directory)
+    if old_pal_full_path == new_pal_full_path:
+        raise ValueError("You're trying to replace the old palette with "
+                         "itself! Try another palette.")
+
     # Read both palettes into a more usable format
     with open(old_palette, "rb") as handle:
-        old_palette = handle.read()
+        old_palette = handle.read(768)
         if len(old_palette) < 768:
             raise ValueError("Old palette is too short!")
         old_palette = list(grouper(old_palette[:768], 3))
 
     with open(new_palette, "rb") as handle:
-        new_palette = handle.read()
+        new_palette = handle.read(768)
         if len(new_palette) < 768:
             raise ValueError("New palette is too short!")
         new_palette = list(grouper(new_palette[:768], 3))
@@ -357,8 +367,10 @@ if __name__ == "__main__":
     if not args.dry_run:
         playpal_base_path = (
             join(directory, "lumps", "playpal", "playpal-base.lmp"))
+        # The old/new palette being the same is checked in compare_palettes
         with  open(args.palette, "rb") as new_palfile, \
               open(playpal_base_path, "wb") as old_palfile:
             # Only copy the first 768 bytes of the new palette to playpal-base
             new_pal = new_palfile.read(768)
+            # Palette length is checked in compare_palettes
             old_palfile.write(new_pal)
