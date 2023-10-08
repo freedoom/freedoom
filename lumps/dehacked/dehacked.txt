@@ -157,7 +157,7 @@ STARTUP5========================================================================
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 #endif
 GOTARMOR = Put on a force field vest.
-GOTMEGA = Put on the attuned force field armor.
+GOTMEGA = Put on the attuned force field armor!
 GOTHTHBONUS = Health boosted!
 GOTARMBONUS = Armor boosted!
 GOTSTIM = Took a health refill.
