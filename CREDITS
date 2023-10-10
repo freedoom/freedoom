@@ -767,7 +767,7 @@ D: graphics (titlepic)
 N: Kevin Caccamo
 S: Talon1024
 E: kevin@ciinet.org
-D: textures
+D: textures, flats
 
 S: BobFromReboot
 N: Bradley Lavigne
@@ -803,7 +803,7 @@ D: sprites: technospider reshading
 S: northivanastan
 N: Ivan Stanton
 E: northivanastan@gmail.com
-D: musics: d_e1m5, d_e4m1, d_e4m8, d_e4m9
+D: musics
 
 S: MothraMaster
 D: sprites: Zombieman/Shotgunners boots update
@@ -815,7 +815,7 @@ D: Sprites, Textures, Musics, buildcfg.txt, patches
 S: ajanddino
 N: Anthony Pierce
 E: ajanddino@gmail.com
-D: musics: e1m6, e2m8, e2m9
+D: musics
 
 N: Jaden LeMieux
 S: i"Red"MC
@@ -873,7 +873,7 @@ D: levels, patches
 
 S: m
 E: verdantdregs@shaw.ca
-D: buildcfg.txt, sounds, sprites
+D: levels, sounds, sprites
 
 S: mkrupczak3
 E: matthew@krupczak.org
@@ -951,7 +951,7 @@ D: levels
 
 S: GojiBerry
 E: gojidoesit@proton.me
-D: sound
+D: sounds, musics
 
 N: Jaden LeMieux
 S: iRedMC
@@ -966,14 +966,28 @@ W: https://owly.fans
 D: Freedoom website
 
 S: Matzu
-D: musics: d_e4m3
+D: musics
 
 S: ZeMystic
-D: musics: d_e4m6
+D: musics
 
 S: R0rque
-D: musics: d_e4m2
+D: musics
 
 S: rostuhan
 E: rostuhan123@gmail.com
-D: musics: d_dm07, d_dm13
+D: musics
+
+S: SuperDave938
+D: textures
+
+S: Cascade
+D: sprites
+
+S: Berubaretto
+D: levels
+
+N: Enzo Carozza
+S: uni
+E: dudetank4@gmail.com
+D: CREDITS-MUSIC

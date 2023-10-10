@@ -50,6 +50,7 @@ Duration = 3
 # comment. Comment also indicates when the run was done - ideally
 # this should be re-done for every new release. Times are rounded
 # to nearest half-minute.
+#ifdef PHASE1
 par  1 1   30  # 00:30 - Voros for v0.12 - 2017/03
 par  1 2  120  # 02:00 - Voros for v0.12 - 2017/03
 par  1 3  150  # 02:30 - Voros for v0.12 - 2017/03
@@ -77,6 +78,7 @@ par  3 6  180  # 03:00 - Voros for v0.12 - 2017/03
 par  3 7  300  # 05:00 - Voros for v0.12 - 2017/03
 par  3 8   60  # 01:00 - Voros for v0.12 - 2017/03
 par  3 9  570  # 09:30 - Voros for v0.12 - 2017/03
+#else
 par  1   30  # 00:30  - Voros for v0.11 - 2017/02
 par  2   90  # 01:30  - Voros for v0.11 - 2017/02
 par  3  120  # 02:00  - Voros for v0.11 - 2017/02
@@ -109,6 +111,7 @@ par 29  300  # 05:00  - Voros for v0.11 - 2017/02
 par 30   60  # 01:00  - Voros for v0.11 - 2017/02
 par 31   60  # 01:00  - Voros for v0.11 - 2017/02
 par 32  210  # 03:30  - Voros for v0.11 - 2017/02
+#endif
 #else
 # Par times don't matter so much for FreeDM, just set all to zero.
 par  1 0
@@ -153,47 +156,47 @@ STARTUP5========================================================================
 #else
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
 #endif
-GOTARMOR = Picked up some basic infantry armor.
-GOTMEGA = Picked up some heavy assault armor.
-GOTHTHBONUS = Picked up a life charge.
-GOTARMBONUS = Picked up an armor charge.
-GOTSTIM = Picked up a small health pack.
-GOTMEDINEED = Picked up a large health pack, just in time!
-GOTMEDIKIT = Picked up a large health pack.
-GOTSUPER = Life surge!
-GOTBLUECARD = Picked up a blue passcard.
-GOTYELWCARD = Picked up a yellow passcard.
-GOTREDCARD = Picked up a red passcard.
-GOTBLUESKUL = Picked up a blue skeleton key.
-GOTYELWSKUL = Picked up a yellow skeleton key.
-GOTREDSKULL = Picked up a red skeleton key.
+GOTARMOR = Equipped a force field vest.
+GOTMEGA = Equipped the attuned force field armor.
+GOTHTHBONUS = Consumed a health boost.
+GOTARMBONUS = Equipped an armor boost.
+GOTSTIM = Consumed a small health refill.
+GOTMEDINEED = Consumed a large health refill. Not dead yet!
+GOTMEDIKIT = Consumed a large health refill.
+GOTSUPER = Ectoplasmic surge!
+GOTBLUECARD = Secured the blue passcard!
+GOTYELWCARD = Secured the yellow passcard!
+GOTREDCARD = Secured the red passcard!
+GOTBLUESKUL = Secured the blue skeleton key!
+GOTYELWSKUL = Secured the yellow skeleton key!
+GOTREDSKULL = Secured the red skeleton key!
 GOTINVUL = Vanguard of the gods!
 GOTBERSERK = Smash them to pieces!
 GOTINVIS = Invisibility!
 GOTSUIT = Rescue operations suit.
 GOTMAP = Area survey map.
 GOTVISOR = Low-light goggles.
-GOTMSPHERE = Maximum power!
-GOTCLIP = Picked up an ammo clip.
-GOTCLIPBOX = Picked up a box of ammo.
-GOTROCKET = Picked up a missile.
-GOTROCKBOX = Picked up a crate of missiles.
-GOTCELL = Picked up a small energy recharge.
-GOTCELLBOX = Picked up a large energy recharge.
-GOTSHELLS = Picked up some shotgun shells.
-GOTSHELLBOX = Picked up a box of shotgun shells.
-GOTBACKPACK = You found a backpack!
-GOTBFG9000 = The SKAG 1337 ... time to kick some ass!
-GOTCHAINGUN = You got the minigun!
-GOTCHAINSAW = You got the angle grinder!
-GOTLAUNCHER = You got the missile launcher!
-GOTPLASMA = You got the polaric energy weapon!
-GOTSHOTGUN = You got the pump-action shotgun!
-GOTSHOTGUN2 = You got the double-barrelled shotgun!
+GOTMSPHERE = Negentropic surge!
+GOTCLIP = Acquired a bullet clip.
+GOTCLIPBOX = Acquired a case of bullets.
+GOTROCKET = Acquired a missile.
+GOTROCKBOX = Acquired a crate of missiles.
+GOTCELL = Acquired a small energy recharge.
+GOTCELLBOX = Acquired a large energy recharge.
+GOTSHELLS = Acquired some shotgun shells.
+GOTSHELLBOX = Acquired a box of shotgun shells.
+GOTBACKPACK = A backpack for all your ammo storage needs!
+GOTBFG9000 = Got the SKAG 1337... time to kick some ass!
+GOTCHAINGUN = Got the minigun!
+GOTCHAINSAW = Got the ripsaw!
+GOTLAUNCHER = Got the missile launcher!
+GOTPLASMA = Got the polaric energy weapon!
+GOTSHOTGUN = Got the pump-action shotgun!
+GOTSHOTGUN2 = Got the double-barrelled shotgun!
 TAG_FIST = fist
 TAG_BFG9000 = SKAG 1337
 TAG_CHAINGUN = minigun
-TAG_CHAINSAW = angle grinder
+TAG_CHAINSAW = ripsaw
 TAG_ROCKETLAUNCHER = missile launcher
 TAG_PLASMARIFLE = polaric energy weapon
 TAG_SHOTGUN = pump-action shotgun
@@ -222,7 +225,7 @@ HUSTR_E1M6 = E1M6: Training Facility
 HUSTR_E1M7 = E1M7: Transportation Bay
 HUSTR_E1M8 = E1M8: Outpost Quarry
 HUSTR_E1M9 = E1M9: Nutrient Recycling
-HUSTR_E2M1 = E2M1: Surreality
+HUSTR_E2M1 = E2M1: Elemental Gate
 HUSTR_E2M2 = E2M2: Shifter
 HUSTR_E2M3 = E2M3: Reclaimed Facilities
 HUSTR_E2M4 = E2M4: Flooded Installation
@@ -459,20 +462,22 @@ E3TEXT = The abomination explodes into oblivion.\n\
          wasteland than your old cell.\n\n\
          You kick the corpse in anger, and it feels\n\
          good. You kick it again, and a remote falls\n\
-         out. You press the button, and hear a click\n\
-         revealing a teleport pad nearby. You look\n\
+         out. You press the button, and the ground\n\
+         gives way to reveal a teleporter. You look\n\
          at the gizmo - it says "To Double Impact."\n\n\
          Wherever or whatever that is, you pray\n\
          to any listening deity that there's\n\
          a working ship on the other side.
-E4TEXT = After yet another army of monsters\n\
-         you manage to find a functioning ship.\n\
-         Looks like freedom is yours.\n\n\
-         You practically melt into the soft\n\
-         pilot's seat, a luxurious welcome\n\
-         as you leave this wretched rock.\n\n\
+E4TEXT = Suppressing fire echoes above as the last\n\
+         survivors flee the ship. The launch process\n\
+         is irreversible: killing you now would only\n\
+         bring a slow death drifting through space.\n\n\
+         Fifty-nine. Fifty-eight. Fifty-seven. .  .\n\
+         You melt into the pilot's seat, lost in the\n\
+         voice of an automated assembly of angels\n\
+         delivering you from this wretched rock.\n\n\
          The ship rumbles as she wakes up;\n\
-         you think of Earth as she lifts off.\n\n\
+         you think of Earth as she lifts off.\n\
          Hopefully AGM won't find you there:\n\
          they've got the outbreak to deal with,\n\
          so that'll give you some time.\n\n\
@@ -606,55 +611,55 @@ BGFLAT20 = FLAT5_6
 BGFLAT30 = SLIME13
 BGFLAT15 = AQF004
 BGFLAT31 = AQF021
-# Obituary texts, for ZDoom-based ports.
-OB_STEALTHBABY=%o thought %g saw a technospider.
-OB_STEALTHVILE=%o thought %g saw a necromancer.
-OB_STEALTHBARON=%o thought %g saw a pain lord.
-OB_STEALTHCACO=%o thought %g saw a trilobite
-OB_STEALTHCHAINGUY=%o thought %g saw a minigun zombie.
-OB_STEALTHDEMON=%o thought %g saw a flesh worm.
-OB_STEALTHKNIGHT=%o thought %g saw a pain bringer.
-OB_STEALTHIMP=%o thought %g saw a serpentipede.
-OB_STEALTHFATSO=%o thought %g saw a combat slug.
-OB_STEALTHUNDEAD=%o thought %g saw an octaminator.
-OB_STEALTHSHOTGUY=%o thought %g saw a shotgun zombie.
-OB_STEALTHZOMBIE=%o thought %g saw a zombie.
-OB_UNDEADHIT=%o was punched by an octaminator.
-OB_IMPHIT=%o was slashed by a serpentipede.
-OB_CACOHIT=%o got too close to a trilobite.
-OB_DEMONHIT=%o was bitten by a flesh worm.
-OB_SPECTREHIT=%o was eaten by a stealth worm.
-OB_BARONHIT=%o was torn open by a pain lord.
-OB_KNIGHTHIT=%o was gutted by a pain bringer.
-OB_ZOMBIE=%o was killed by a zombie.
-OB_SHOTGUY=%o was gunned down by a shotgun zombie.
-OB_VILE=%o was incinerated by a necromancer.
-OB_UNDEAD=%o couldn't evade an octaminator's fireball.
-OB_FATSO=%o was blasted by a combat slug.
-OB_CHAINGUY=%o was perforated by a minigun zombie.
-OB_SKULL=%o was slammed by a hatchling.
-OB_IMP=%o was burned by a serpentipede.
-OB_CACO=%o was smitten by a trilobite.
-OB_BARON=%o was bruised by a pain lord.
-OB_KNIGHT=%o was splayed by a pain bringer.
-OB_SPIDER=%o stood in awe of the large technospider.
-OB_BABY=%o let a technospider get %h.
-OB_CYBORG=%o was splattered by an assault tripod.
-OB_WOLFSS=%o met a sailor.
-OB_MPFIST=%k punched %o to death.
-OB_MPCHAINSAW=%o was shredded by %k's angle grinder.
-OB_MPPISTOL=%o was tickled by %k's handgun.
-OB_MPSHOTGUN=%o chewed on %k's boomstick.
-OB_MPSSHOTGUN=%k swapped two barrels upside %o's head.
-OB_MPCHAINGUN=%o was perforated by %k's minigun.
-OB_MPROCKET=%o was mutilated by %k's missile.
-OB_MPR_SPLASH=%o couldn't dodge %k's missile.
-OB_MPPLASMARIFLE=%o went QQ over %k's pew pew.
-OB_MPBFG_BOOM=%o had %p ass kicked by %k's SKAG!
-OB_MPBFG_SPLASH=%o couldn't hide from %k's SKAG.
-OB_MPTELEFRAG=%o stood where %k was teleporting.
-OB_RAILGUN=%o was railed by %k.
-OB_MPBFG_MBF=%o had %p ass kicked by %k's SKAG!
+# Obituary texts, for ports that use them.
+OB_STEALTHBABY = %o thought %g saw a technospider.
+OB_STEALTHVILE = %o thought %g saw a necromancer.
+OB_STEALTHBARON = %o thought %g saw a pain lord.
+OB_STEALTHCACO = %o thought %g saw a trilobite.
+OB_STEALTHCHAINGUY = %o thought %g saw a minigun zombie.
+OB_STEALTHDEMON = %o thought %g saw a flesh worm.
+OB_STEALTHKNIGHT = %o thought %g saw a pain bringer.
+OB_STEALTHIMP = %o thought %g saw a serpentipede.
+OB_STEALTHFATSO = %o thought %g saw a combat slug.
+OB_STEALTHUNDEAD = %o thought %g saw an octaminator.
+OB_STEALTHSHOTGUY = %o thought %g saw a shotgun zombie.
+OB_STEALTHZOMBIE = %o thought %g saw a zombie.
+OB_UNDEADHIT = %o was beaten up by an octaminator.
+OB_IMPHIT = %o was lacerated by a serpentipede.
+OB_CACOHIT = %o got trilo-bitten.
+OB_DEMONHIT = %o was eaten by a flesh worm.
+OB_SPECTREHIT = %o was eaten by a stealth worm.
+OB_BARONHIT = %o was torn open by a pain lord.
+OB_KNIGHTHIT = %o was gutted by a pain bringer.
+OB_ZOMBIE = %o was killed by a zombie.
+OB_SHOTGUY = %o was perforated by a shotgun zombie.
+OB_VILE = %o was raised by a necromancer.
+OB_UNDEAD = %o couldn't evade an octaminator's fireball.
+OB_FATSO = %o was blasted by a combat slug.
+OB_CHAINGUY = %o was ventilated by a minigun zombie.
+OB_SKULL = %o was slammed by a hatchling.
+OB_IMP = %o was scorched by a serpentipede.
+OB_CACO = %o was zapped by a trilobite.
+OB_BARON = %o was nuked by a pain lord.
+OB_KNIGHT = %o was fried by a pain bringer.
+OB_SPIDER = %o stood in awe of the large technospider.
+OB_BABY = %o was immolated by a technospider.
+OB_CYBORG = %o was mutilated by an assault tripod.
+OB_WOLFSS = %o met a sailor.
+OB_MPFIST = %o was beaten up by %k.
+OB_MPCHAINSAW = %o was shredded by %k's ripsaw.
+OB_MPPISTOL = %o was killed by %k's handgun.
+OB_MPSHOTGUN = %o was perforated by %k's pump-action shotgun.
+OB_MPSSHOTGUN = %o was permeated by %k's double-barreled shotgun.
+OB_MPCHAINGUN = %o was ventilated by %k's minigun.
+OB_MPROCKET = %o was mutilated by %k's missile.
+OB_MPR_SPLASH = %o couldn't dodge %k's missile.
+OB_MPPLASMARIFLE = %o was immolated by %k's polaric energy weapon.
+OB_MPBFG_BOOM = %o had %p ass kicked by %k's SKAG!
+OB_MPBFG_SPLASH = %o couldn't hide from %k's SKAG.
+OB_MPTELEFRAG = %o stood where %k was teleporting.
+OB_RAILGUN = %o was sniped by %k's railgun.
+OB_MPBFG_MBF = %o had %p ass kicked by %k's SKAG!
 # Quit messages.
 DOSY = (Press Y to exit the program.)
 QUITMSG = AGM's investors are planning\nan even worse nightmare.\nPress Y if you don't care.
