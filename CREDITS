@@ -767,7 +767,7 @@ D: graphics (titlepic)
 N: Kevin Caccamo
 S: Talon1024
 E: kevin@ciinet.org
-D: textures, flats
+D: textures, flats, sounds
 
 S: BobFromReboot
 N: Bradley Lavigne
@@ -810,7 +810,7 @@ D: sprites: Zombieman/Shotgunners boots update
 
 S: Korp
 E: korpkat@gmail.com
-D: Sprites, Textures, Musics, buildcfg.txt, patches
+D: Sprites, Textures, Musics, buildcfg.txt, patches, sounds
 
 S: ajanddino
 N: Anthony Pierce
