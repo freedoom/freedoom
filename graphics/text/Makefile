@@ -83,7 +83,7 @@ help.png: text_strings helpbg.png
 	   110,67  "Shells"                          \
 	   170,62  "file:../../sprites/sboxa0.png"   \
 	   160,67  "file:../../sprites/shela0.png"   \
-	   248,67  "Backpack"                        \
+	   248,65  "Backpack"                        \
 	   268,74  "file:../../sprites/bpaka0.png"   \
 	   10,90   "Missiles"                        \
 	   80,80   "file:../../sprites/broka0.png"   \
@@ -92,33 +92,33 @@ help.png: text_strings helpbg.png
 	   210,80  "file:../../sprites/celpa0.png"   \
 	   200,91  "file:../../sprites/cella0.png"   \
 	   10,115  "Health"                          \
-	   63,118  "file:../../sprites/bon1a0.png"   \
+	   63,111  "file:../../sprites/bon1a0.png"   \
 	   92,104  "file:../../sprites/media0.png"   \
 	   83,120  "file:../../sprites/stima0.png"   \
 	   128,107 "file:../../sprites/pstra0.png"   \
-	   176,115 "Armor"                           \
+	   172,115 "Armor"                           \
 	   280,110 "file:../../sprites/arm2b0.png"   \
-	   242,104 "file:../../sprites/arm1b0.png"   \
-	   228,114 "file:../../sprites/bon2b0.png"   \
-	   145,137 "Map"                             \
+	   242,107 "file:../../sprites/arm1b0.png"   \
+	   226,114 "file:../../sprites/bon2a0.png"   \
+	   145,139 "Map"                             \
 	   175,127 "file:../../sprites/pmapa0.png"   \
-	   10,140  "Big Boost"                       \
+	   10,139  "Big Boost"                       \
 	   84,132  "file:../../sprites/soula0.png"   \
 	   110,132 "file:../../sprites/megaa0.png"   \
-	   10,163  "Light"                           \
-	   48,160  "file:../../sprites/pvisa0.png"   \
+	   10,160  "Light"                           \
+	   48,157  "file:../../sprites/pvisa0.png"   \
 	   34,182  "Cloak"                           \
-	   76,166  "file:../../sprites/pinsa0.png"   \
-	   115,182 "Invuln."                         \
-	   170,171 "file:../../sprites/pinva0.png"   \
-	   265,140 "Keys"                            \
-	   254,155 "file:../../sprites/rkeya0.png"   \
-	   271,155 "file:../../sprites/ykeya0.png"   \
-	   288,155 "file:../../sprites/bkeya0.png"   \
+	   80,166  "file:../../sprites/pinsa0.png"   \
+	   119,182 "Invuln."                         \
+	   174,171 "file:../../sprites/pinva0.png"   \
+	   265,142 "Keys"                            \
+	   254,154 "file:../../sprites/rkeya0.png"   \
+	   271,154 "file:../../sprites/ykeya0.png"   \
+	   288,154 "file:../../sprites/bkeya0.png"   \
 	   255,178 "file:../../sprites/rskua0.png"   \
 	   273,178 "file:../../sprites/yskua0.png"   \
 	   291,178 "file:../../sprites/bskua0.png"   \
-	   130,163 "Rescue suit"                     \
+	   130,160 "Rescue suit"                     \
 	   215,142 "file:../../sprites/suita0.png"
 	cp $@ ../
 
