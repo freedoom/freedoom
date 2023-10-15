@@ -99,7 +99,7 @@ help.png: text_strings helpbg.png
 	   172,115 "Armor"                           \
 	   280,110 "file:../../sprites/arm2b0.png"   \
 	   242,107 "file:../../sprites/arm1b0.png"   \
-	   226,114 "file:../../sprites/bon2a0.png"   \
+	   226,114 "file:../../sprites/bon2b0.png"   \
 	   145,139 "Map"                             \
 	   175,127 "file:../../sprites/pmapa0.png"   \
 	   10,139  "Big Boost"                       \
