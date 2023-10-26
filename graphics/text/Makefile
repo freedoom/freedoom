@@ -78,28 +78,28 @@ help.png: text_strings helpbg.png
 	   235,23  "file:../../sprites/plasa0.png"   \
 	   235,38  "file:../../sprites/bfuga0.png"   \
 	   10,67   "Bullets"                         \
-	   77,62   "file:../../sprites/ammoa0.png"   \
+	   80,62   "file:../../sprites/ammoa0.png"   \
 	   68,67   "file:../../sprites/clipa0.png"   \
-	   110,67  "Shells"                          \
-	   170,62  "file:../../sprites/sboxa0.png"   \
-	   160,67  "file:../../sprites/shela0.png"   \
-	   248,65  "Backpack"                        \
-	   268,74  "file:../../sprites/bpaka0.png"   \
+	   113,67  "Shells"                          \
+	   180,62  "file:../../sprites/sboxa0.png"   \
+	   163,67  "file:../../sprites/shela0.png"   \
+	   252,65  "Backpack"                        \
+	   272,74  "file:../../sprites/bpaka0.png"   \
 	   10,90   "Missiles"                        \
-	   80,80   "file:../../sprites/broka0.png"   \
+	   90,80   "file:../../sprites/broka0.png"   \
 	   76,80   "file:../../sprites/rocka0.png"   \
-	   150,90  "Energy"                          \
-	   210,80  "file:../../sprites/celpa0.png"   \
-	   200,91  "file:../../sprites/cella0.png"   \
+	   158,90  "Energy"                          \
+	   225,81  "file:../../sprites/celpa0.png"   \
+	   206,89  "file:../../sprites/cella0.png"   \
 	   10,115  "Health"                          \
 	   63,111  "file:../../sprites/bon1a0.png"   \
-	   92,104  "file:../../sprites/media0.png"   \
-	   83,120  "file:../../sprites/stima0.png"   \
-	   128,107 "file:../../sprites/pstra0.png"   \
-	   172,115 "Armor"                           \
-	   280,110 "file:../../sprites/arm2b0.png"   \
-	   242,107 "file:../../sprites/arm1b0.png"   \
-	   226,114 "file:../../sprites/bon2b0.png"   \
+	   100,106  "file:../../sprites/media0.png"   \
+	   79,118  "file:../../sprites/stima0.png"   \
+	   132,107 "file:../../sprites/pstra0.png"   \
+	   180,115 "Armor"                           \
+	   276,110 "file:../../sprites/arm2b0.png"   \
+	   240,107 "file:../../sprites/arm1b0.png"   \
+	   225,114 "file:../../sprites/bon2b0.png"   \
 	   145,139 "Map"                             \
 	   175,127 "file:../../sprites/pmapa0.png"   \
 	   10,139  "Big Boost"                       \
