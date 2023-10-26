@@ -6,7 +6,8 @@ TEXTGEN_GRAPHIC_LUMPS = \
   m_gdlow.png  m_hurt.png   m_jkill.png  m_lgttl.png  m_loadg.png  \
   m_messg.png  m_msens.png  m_msgoff.png m_msgon.png  m_musvol.png \
   m_newg.png   m_ngame.png  m_nmare.png  m_option.png m_optttl.png \
-  m_pause.png  m_quitg.png  m_rdthis.png m_rough.png  m_saveg.png  \
+  # m_pause.png \
+  m_quitg.png  m_rdthis.png m_rough.png  m_saveg.png  \
   m_scrnsz.png m_sfxvol.png m_sgttl.png  m_skill.png  m_svol.png   \
   m_about.png  m_accel.png  m_auto.png   m_chat.png   m_chatm.png  \
   m_compat.png m_demos.png  m_dmflag.png m_enem.png   m_etcopt.png \
