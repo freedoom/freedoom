@@ -158,7 +158,7 @@ red_graphics = {
     "wipcnt": "%",
     "wiminus": "-",
     "wienter": "ENTERING",
-    "m_pause": "pause",
+#    "m_pause": "pause",  # Doom is hard-coded to assume M_PAUSE is 68px, FD's font makes it 52
     # Extra graphics used in PrBoom's menus. Generate these as well
     # so that when we play in PrBoom the menus look consistent.
     "prboom": "PrBoom",
