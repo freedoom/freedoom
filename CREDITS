@@ -767,7 +767,7 @@ D: graphics (titlepic)
 N: Kevin Caccamo
 S: Talon1024
 E: kevin@ciinet.org
-D: textures, flats
+D: textures, flats, sounds
 
 S: BobFromReboot
 N: Bradley Lavigne
@@ -798,7 +798,7 @@ D: buildcfg.txt, CREDITS, levels
 
 S: Craneo
 E: memod_99@hotmail.com
-D: sprites: technospider reshading
+D: sprites: technospider reshading, textures
 
 S: northivanastan
 N: Ivan Stanton
@@ -810,7 +810,7 @@ D: sprites: Zombieman/Shotgunners boots update
 
 S: Korp
 E: korpkat@gmail.com
-D: Sprites, Textures, Musics, buildcfg.txt, patches
+D: Sprites, Textures, Musics, buildcfg.txt, patches, sounds
 
 S: ajanddino
 N: Anthony Pierce
@@ -873,7 +873,7 @@ D: levels, patches
 
 S: m
 E: verdantdregs@shaw.ca
-D: levels, sounds, sprites
+D: levels, sounds, sprites, textures
 
 S: mkrupczak3
 E: matthew@krupczak.org
@@ -951,7 +951,7 @@ D: levels
 
 S: GojiBerry
 E: gojidoesit@proton.me
-D: sounds, musics
+D: sounds, musics, textures
 
 N: Jaden LeMieux
 S: iRedMC
@@ -991,3 +991,12 @@ N: Enzo Carozza
 S: uni
 E: dudetank4@gmail.com
 D: CREDITS-MUSIC
+
+S: MoonDeLaAxel
+D: sounds, musics, textures
+
+S: klickach
+D: textures
+
+S: Magnolia
+D: sprites
