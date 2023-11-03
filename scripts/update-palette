@@ -12,22 +12,18 @@
 # palettes, and modifies every paletted PNG file in the repo so that the new
 # colours are used.
 #
-# Optional dependencies:
+# Dependencies:
 # - pypng: https://gitlab.com/drj11/pypng (retrieved Sept 10 2023)
 
 import argparse
-from collections import namedtuple
 from functools import reduce
-from itertools import chain, starmap, tee, zip_longest
-from math import floor, ceil
+from itertools import zip_longest
 import struct
 import os
 from os.path import dirname, relpath, realpath, join, normpath
-# import png
+import png
 from sys import argv
 import zlib
-
-PngChunk = namedtuple("PNGChunk", "type data")
 
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 
@@ -64,12 +60,6 @@ def grouper(iterable, n, fillvalue=None):
     # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
     args = [iter(iterable)] * n
     return zip_longest(*args, fillvalue=fillvalue)
-
-
-# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
-def flatten(list_of_lists):
-    "Flatten one level of nesting"
-    return chain.from_iterable(list_of_lists)
 
 
 # Compare the old palette and the new palette, and return a dict with the
@@ -157,136 +147,10 @@ def process_dir(colour_map, dry_run, directory, palette):
                 pngs_changed_count += 1
 
 
-# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
-def pairwise(iterable):
-    "s -> (s0,s1), (s1,s2), (s2, s3), ..."
-    a, b = tee(iterable)
-    next(b, None)
-    return zip(a, b)
-
-
-def process_idat(
-    data, width, bit_depth, compression, filtering, interlacing
-    ):
-
-    def mask_bits(bit_depth):
-        base_bit_mask = reduce(lambda a, b: a | (1 << b), range(bit_depth), 0)
-        bit_mask = base_bit_mask
-        shift = 0
-        while bit_mask:
-            yield bit_mask, shift
-            bit_mask = (bit_mask << bit_depth) & 0xFF
-            shift += bit_depth
-
-    def paeth_predictor(a_byte, b_byte, c_byte):
-        # Paeth predictor of x:
-        paeth = a_byte + b_byte - c_byte
-        pa = abs(paeth - a_byte)
-        pb = abs(paeth - b_byte)
-        pc = abs(paeth - c_byte)
-        if pa <= pb and pa <= pc:
-            predictor = a_byte
-        elif pb <= pc:
-            predictor = b_byte
-        else:
-            predictor = c_byte
-        return predictor
-
-    def defilter(data, width, bit_depth):
-        stride = ceil(width / 8 * bit_depth)
-        filtered_stride = stride + 1
-        bgn_end = pairwise(range(0, len(data), filtered_stride))
-        lines = []
-        for bgn, end in bgn_end:
-            prev_bgn = bgn - filtered_stride + 1
-            filtered = data[bgn:end]
-            filter_type = filtered[0]
-            scanline = tuple(chain((0,), filtered[1:]))
-            if prev_bgn >= 0:
-                # Reconstructed scanlines in lines list all start with a zero
-                prev_scanline = tuple(lines[-1])
-            else:
-                prev_scanline = tuple([0 for _ in range(filtered_stride)])
-            # c b
-            # a x
-            reconstructed = bytearray(1)
-            for byte_index in range(1, len(scanline)):
-                unfilters = {  # Filter type to reconstruction function
-                    # No filter
-                    0: lambda fx, ra, rb, rc: fx % 256,
-                    # Sub
-                    1: lambda fx, ra, rb, rc: (fx + ra) % 256,
-                    # Up
-                    2: lambda fx, ra, rb, rc: (fx + rb) % 256,
-                    # Average
-                    3: lambda fx, ra, rb, rc: \
-                        (fx + floor((ra + rb) / 2)) % 256,
-                    # Paeth
-                    4: lambda fx, ra, rb, rc: \
-                        (fx + paeth_predictor(ra, rb, rc)) % 256
-                }
-                x_byte = scanline[byte_index]
-                a_byte = reconstructed[byte_index - 1]
-                b_byte = prev_scanline[byte_index]
-                c_byte = prev_scanline[byte_index - 1]
-                unfilter = unfilters[filter_type]
-                reconstructed.append(unfilter(x_byte, a_byte, b_byte, c_byte))
-            lines.append(reconstructed)
-        # Remove zeros from scanlines in lines list
-        return bytes(flatten(map(lambda l: l[1:], lines)))
-
-    # Expand the packed bytes into colour or index samples
-    def expand_bytes(data, bit_depth):
-        if bit_depth not in {1,2,4,8}:
-            return None
-
-        # No expansion necessary
-        if bit_depth == 8:
-            return data
-
-        return bytes(flatten(map(
-            lambda b: bytes(starmap(
-                lambda mask, shift: (b & mask) >> shift,
-                mask_bits(bit_depth))),
-            data)))
-
-    if compression == 0:
-        data = zlib.decompress(data)
-    if filtering == 0:
-        data = defilter(data, width, bit_depth)
-    if interlacing != 0:
-        print("WARNING! This image is interlaced! De-interlacing is not"
-              "implemented yet!")
-    data = expand_bytes(data, bit_depth)
-    return data
-
-
 # Process a PNG file in place.
 def process_png(colour_map, png_path, dry, directory):
-
-    # Read a chunk from the PNG file
-    def read_png_chunk(png_file):
-        chunk_len = png_file.read(4)
-        if chunk_len == b"": return None  # End of file
-        chunk_len = struct.unpack("!I", chunk_len)[0]
-        chunk_type = png_file.read(4)
-        chunk_data = png_file.read(chunk_len)
-        chunk_crc = png_file.read(4)
-        chunk_crc = struct.unpack("!I", chunk_crc)[0]
-        # crc = zlib.crc32(chunk_type)
-        # crc = zlib.crc32(chunk_data, crc)
-        # if crc != chunk_crc:
-        #     return None
-        return PngChunk(chunk_type, chunk_data)
-
     # Read the PNG file
-    chunks = []
-    with open(png_path, "rb") as handle:
-        if handle.read(8) != PNG_SIGNATURE:
-            print("{0} is not a valid PNG file!".format(png_path))
-            return False
-        while chunk := read_png_chunk(handle):
-            chunks.append(chunk)
+    png_reader = png.Reader(filename=png_path)
 
     # Change the old colours to the new colours
     modified_palette_colours = set()
@@ -294,66 +158,102 @@ def process_png(colour_map, png_path, dry, directory):
         nonlocal colour_map
         nonlocal modified_palette_colours
         modified = False
-        colours = list(grouper(plte_data, 3))
+
+        # A pypng palette colour is 3 elements long, or 4 if the image has
+        # transparent colours.
+        if len(plte_data[0]) > 3:
+            alphas = list(map(lambda co: co[3], plte_data))
+        else:
+            alphas = [None] * len(plte_data)
+
+        colours = list(map(lambda co: co[0:3], plte_data))
+        # Scan the palette for colours that should be changed, and change them
+        # according to colour_map
         for index, colour in enumerate(colours):
             if colour in colour_map:
                 modified = True
                 modified_palette_colours.add(index)
                 colours[index] = colour_map[colour]
-        colours = b"".join(map(bytes, colours))
+        # pypng needs the palette as an iterable of 3-tuples for opaque
+        # paletted images, or 4-tuples for transparent paletted images
+        colours = list(map(lambda c, a: (*c,) if a is None else (*c, a),
+                           colours, alphas))
         return modified, colours
 
-    def is_colour_changed(colour_index):
+    def is_paletted_colour_changed(row):
         nonlocal modified_palette_colours
-        return colour_index in modified_palette_colours
+        return any(map(lambda colour_index: \
+            colour_index in modified_palette_colours, row))
 
-    # Modify the PLTE chunk, if necessary, and check if the PLTE modifications
+    def maybe_modify_truecolour_image(rows, channels, transparent_colour):
+        nonlocal colour_map
+        modified = False
+
+        def maybe_modify_row(row):
+            nonlocal colour_map
+            nonlocal channels
+            nonlocal transparent_colour
+            nonlocal modified
+            def maybe_modify_colour(co):
+                nonlocal colour_map
+                nonlocal transparent_colour
+                nonlocal modified
+                # Seperate RGB and alpha
+                co_rgb = co[0:3]
+                co_alpha = co[3] if len(co) > 3 else None
+                # Get the new colour from the colour map
+                new_colour = (
+                    colour_map.get(co_rgb, co_rgb)
+                    if co_rgb != transparent_colour else co_rgb
+                )
+                if co_alpha is not None:
+                    new_colour = (*new_colour, co_alpha)
+                modified = new_colour == co
+                return new_colour
+            pixels = map(maybe_modify_colour,
+                         grouper(row, channels))
+            pixels = bytearray(b"".join(map(bytes, pixels)))
+            return pixels
+
+        new_rows = list(map(maybe_modify_row, rows))
+
+        return modified, new_rows
+
+    # Modify the PLTE chunk if necessary, and check if the PLTE modifications
     # affect the IDAT chunk.
     plte_modified = False
     idat_modified = False
-    is_paletted = False
-    all_idat = []
-    for index, chunk in enumerate(chunks):
-        if chunk.type == b"IHDR":
-            (width, height, bit_depth, colour_type,
-             compression, filtering, interlacing) = struct.unpack_from(
-                "!IIBBBBB", chunk.data
-            )
-            is_paletted = colour_type == 3 and (
-                bit_depth == 1 or bit_depth == 2 or
-                bit_depth == 4 or bit_depth == 8
-            )
-        elif is_paletted and chunk.type == b"PLTE":
-            chunk_name = chunk.type
-            plte_modified, chunk_data = maybe_modify_plte(chunk.data)
-            chunks[index] = PngChunk(chunk_name, chunk_data)
-        elif chunk.type == b"IDAT":
-            all_idat.append(chunk.data)
-    if plte_modified:
-        all_idat = bytes(flatten(all_idat))
-        values = process_idat(all_idat, width, bit_depth,
-                              compression, filtering, interlacing)
-        # png_reader = png.Reader(filename=png_path)
-        # width, height, values, info = png_reader.read_flat()
-        idat_modified = any(map(is_colour_changed, values))
-        del values
-    del all_idat
+    width, height, rows, info = png_reader.read()
+    # "rows" is an iterator, so it needs to be a list so that it can be
+    # modified if the image is true-colour, or scanned if the image is
+    # paletted
+    rows = list(rows)
+    grayscale = info.get("greyscale")
+    is_paletted = info.get("palette")
+    bit_depth = info.get("bitdepth")
+    transparent_colour = info.get("transparent")
+    has_alpha = info.get("alpha", False)
+    if is_paletted:
+        plte_modified, new_palette = maybe_modify_plte(info["palette"])
+        if plte_modified:
+            idat_modified = any(map(is_paletted_colour_changed, rows))
+    # This code doesn't seem to work properly; it modifies plssa0.png, but it
+    # should not modify bpaka0.png
+    #
+    # elif not grayscale:
+    #     new_palette = None
+    #     idat_modified, rows = maybe_modify_truecolour_image(
+    #         rows, info.get("planes"), transparent_colour)
 
     # Write the modified PNG file
     if idat_modified:
         print("{} was changed".format(relpath(png_path, start=directory)))
         if not dry:
-            with open(png_path, "wb") as handle:
-                handle.write(PNG_SIGNATURE)
-                for chunk in chunks:
-                    chunk_crc = zlib.crc32(chunk.type)
-                    chunk_crc = zlib.crc32(chunk.data, chunk_crc)
-                    chunk_crc = struct.pack("!I", chunk_crc)
-                    chunk_len = struct.pack("!I", len(chunk.data))
-                    handle.write(chunk_len)
-                    handle.write(chunk.type)
-                    handle.write(chunk.data)
-                    handle.write(chunk_crc)
+            with open(png_path, "wb") as png_file:
+                png_writer = png.Writer(
+                    width, height, bitdepth=bit_depth, palette=new_palette,
+                    alpha=has_alpha, transparent=transparent_colour)
+                png_writer.write(png_file, rows)
 
     return idat_modified
 
