@@ -33,10 +33,7 @@ def parse_args():
         "update-palette",
         description="This script takes a new palette, compares the new "
         "palette with the old one, and scans and updates images in the repo "
-        "which use the colours that were replaced in the new palette. This "
-        "script only supports indexed-colour PNGs. You may need to run 'make "
-        "fix-deutex-pngs' before running this script in order to palettize "
-        "any true-colour PNGs in the repo."
+        "which use the colours that were replaced in the new palette."
     )
     parser.add_argument("palette", help="The new palette to use")
     # This is a potential vulnerability, and besides, it doesn't make
@@ -208,7 +205,7 @@ def process_png(colour_map, png_path, dry, directory):
                 )
                 if co_alpha is not None:
                     new_colour = (*new_colour, co_alpha)
-                modified = new_colour == co
+                modified = modified or new_colour != co
                 return new_colour
             pixels = map(maybe_modify_colour,
                          grouper(row, channels))
@@ -233,17 +230,15 @@ def process_png(colour_map, png_path, dry, directory):
     bit_depth = info.get("bitdepth")
     transparent_colour = info.get("transparent")
     has_alpha = info.get("alpha", False)
+    channels = info.get("planes")
     if is_paletted:
         plte_modified, new_palette = maybe_modify_plte(info["palette"])
         if plte_modified:
             idat_modified = any(map(is_paletted_colour_changed, rows))
-    # This code doesn't seem to work properly; it modifies plssa0.png, but it
-    # should not modify bpaka0.png
-    #
-    # elif not grayscale:
-    #     new_palette = None
-    #     idat_modified, rows = maybe_modify_truecolour_image(
-    #         rows, info.get("planes"), transparent_colour)
+    elif not grayscale:
+        new_palette = None
+        idat_modified, rows = maybe_modify_truecolour_image(
+            rows, channels, transparent_colour)
 
     # Write the modified PNG file
     if idat_modified:
@@ -252,7 +247,8 @@ def process_png(colour_map, png_path, dry, directory):
             with open(png_path, "wb") as png_file:
                 png_writer = png.Writer(
                     width, height, bitdepth=bit_depth, palette=new_palette,
-                    alpha=has_alpha, transparent=transparent_colour)
+                    alpha=has_alpha, transparent=transparent_colour,
+                    greyscale=grayscale)
                 png_writer.write(png_file, rows)
 
     return idat_modified
