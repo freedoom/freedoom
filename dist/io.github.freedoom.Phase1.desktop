@@ -2,8 +2,10 @@
 Name=Freedoom 1
 Comment=Battle monsters in four 9-level episodes
 Comment[he]=הילחם במפלצות בארבעה פרקים בעלי 9 שלבים
+Comment[fr]=Affrontez des monstres dans quatre épisodes de 9 niveaux
 GenericName=First Person Shooter Game
 GenericName[he]=משחק יריות בגוף ראשון
+GenericName[fr]=Jeu de tir à la première personne
 Type=Application
 PrefersNonDefaultGPU=true
 Icon=io.github.freedoom.Phase1
