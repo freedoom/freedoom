@@ -16,16 +16,25 @@
 # - pypng: https://gitlab.com/drj11/pypng (retrieved Sept 10 2023)
 
 import argparse
+import array
 from functools import reduce
-from itertools import zip_longest
+from itertools import cycle, zip_longest
 import struct
+from operator import eq
 import os
 from os.path import dirname, relpath, realpath, join, normpath
 import png
 from sys import argv
 import zlib
 
-PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
+# Misc. utility functions
+# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
+def grouper(iterable, n, fillvalue=None):
+    "Collect data into fixed-length chunks or blocks"
+    # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
+    args = [iter(iterable)] * n
+    return zip_longest(*args, fillvalue=fillvalue)
+
 
 # Parse the command line arguments, and return a dict with the arguments
 def parse_args():
@@ -49,14 +58,6 @@ def parse_args():
         action='store_true')
     args = parser.parse_args()
     return args
-
-
-# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
-def grouper(iterable, n, fillvalue=None):
-    "Collect data into fixed-length chunks or blocks"
-    # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
-    args = [iter(iterable)] * n
-    return zip_longest(*args, fillvalue=fillvalue)
 
 
 # Compare the old palette and the new palette, and return a dict with the
@@ -115,8 +116,38 @@ def compare_palettes(directory, new_palette):
     for colour, indices in old_palette_duplicates.items():
         if all(map(lambda i: i in old_to_new.keys(), indices)):
             replaced[colour] = old_to_new[min(indices)]
-        else:
-            replaced[colour] = None
+    print("replaced", replaced)
+
+    # Find the closest colour in the old palette for each grayscale colour
+    def is_grayscale(colour):
+        return all(map(eq, colour[1], cycle((colour[1][0],))))
+    # def to_grayscale(colour):
+    #     return colour[0] if is_grayscale(colour) else colour
+    grayscale_colours_in_palette = dict(
+        map(lambda g: (g[0], g[1][0]),
+        filter(is_grayscale, enumerate(new_palette)))
+    )
+    def closest_grayscale(grayscale):
+        nonlocal grayscale_colours_in_palette
+        distances = sorted(map(
+            lambda kv: (kv[0], abs(kv[1] - grayscale)),
+            grayscale_colours_in_palette.items()
+        ), key=lambda kv: kv[1])
+        closest = distances[0][1]
+        distances = sorted(
+            filter(lambda kv: kv[1] == closest, distances),
+            key=lambda kv: kv[0])
+        return distances[0][0]
+    # This is a map from grayscale to palette index
+    gray_map = array.array('B', map(closest_grayscale, range(256)))
+    # Turn it into a grayscale to colour map, in case any grayscale colours
+    # were changed in the new palette
+    gray_map = dict(
+        map(lambda g: (g[0], old_to_new[g[1]]),
+            filter(
+                lambda g: g[1] in old_to_new,
+                enumerate(gray_map))))
+    print(len(gray_map), gray_map)
 
     # Replace the keys in old_to_new, which are indices, with the old palette
     # colours they correspond to. This way, we have a colour-to-colour dict.
@@ -125,12 +156,12 @@ def compare_palettes(directory, new_palette):
                     replaced.get(old_palette[iv[0]], iv[1])),
         old_to_new.items()
     )))
-    return old_to_new
+    return old_to_new, gray_map
 
 
 # "Stolen" from the map-color-index script
 # Process a directory recursively for PNG files.
-def process_dir(colour_map, dry_run, directory, palette):
+def process_dir(colour_map, gray_map, dry_run, directory, palette):
     pngs_changed_count = 0
     pngs_examined_count = 0
 
@@ -140,12 +171,12 @@ def process_dir(colour_map, dry_run, directory, palette):
                 continue
             png_path = os.path.join(dirpath, png_base)
             pngs_examined_count += 1
-            if process_png(colour_map, png_path, dry_run, directory):
+            if process_png(colour_map, gray_map, png_path, dry_run, directory):
                 pngs_changed_count += 1
 
 
 # Process a PNG file in place.
-def process_png(colour_map, png_path, dry, directory):
+def process_png(colour_map, gray_map, png_path, dry, directory):
     # Read the PNG file
     png_reader = png.Reader(filename=png_path)
 
@@ -216,8 +247,9 @@ def process_png(colour_map, png_path, dry, directory):
 
         return modified, new_rows
 
-    # Modify the PLTE chunk if necessary, and check if the PLTE modifications
-    # affect the IDAT chunk.
+    def maybe_modify_grayscale_image(rows, channels):
+        pass
+
     plte_modified = False
     idat_modified = False
     width, height, rows, info = png_reader.read()
@@ -232,6 +264,8 @@ def process_png(colour_map, png_path, dry, directory):
     has_alpha = info.get("alpha", False)
     channels = info.get("planes")
     if is_paletted:
+        # Modify the PLTE chunk if necessary, and check if the PLTE
+        # modifications affect the colours used in the IDAT chunk.
         plte_modified, new_palette = maybe_modify_plte(info["palette"])
         if plte_modified:
             idat_modified = any(map(is_paletted_colour_changed, rows))
@@ -239,6 +273,8 @@ def process_png(colour_map, png_path, dry, directory):
         new_palette = None
         idat_modified, rows = maybe_modify_truecolour_image(
             rows, channels, transparent_colour)
+    else:
+        idat_modified, rows = maybe_modify_grayscale_image(rows, channels)
 
     # Write the modified PNG file
     if idat_modified:
@@ -257,8 +293,11 @@ def process_png(colour_map, png_path, dry, directory):
 if __name__ == "__main__":
     args = parse_args()
     directory = normpath(join(dirname(realpath(argv[0])), ".."))
-    comparison = compare_palettes(directory, args.palette)
-    process_dir(comparison, directory=directory, **vars(args))
+    colour_map, gray_map = compare_palettes(directory, args.palette)
+    print("The rest of the script is disabled for development right now")
+    exit(0)
+
+    process_dir(colour_map, gray_map, directory=directory, **vars(args))
     # Replace old playpal-base.lmp
     if not args.dry_run:
         playpal_base_path = (
