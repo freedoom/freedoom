@@ -69,58 +69,60 @@ helpbg.png: ../interpic.png
 help.png: text_strings helpbg.png
 	./smtextgen help.png 320x200                 \
 	   -background "helpbg.png"                  \
-	   150,5   "file:helpttl.png"                \
-	   10,25   "Weapons"                         \
-	   20,38   "file:../../sprites/csawa0.png"   \
-	   90,23   "file:../../sprites/shota0.png"   \
-	   90,38   "file:../../sprites/sgn2a0.png"   \
-	   155,18  "file:../../sprites/mguna0.png"   \
-	   155,38  "file:../../sprites/launa0.png"   \
-	   235,23  "file:../../sprites/plasa0.png"   \
-	   235,38  "file:../../sprites/bfuga0.png"   \
-	   10,67   "Bullets"                         \
-	   80,62   "file:../../sprites/ammoa0.png"   \
-	   68,67   "file:../../sprites/clipa0.png"   \
-	   113,67  "Shells"                          \
-	   180,62  "file:../../sprites/sboxa0.png"   \
-	   163,67  "file:../../sprites/shela0.png"   \
-	   252,65  "Backpack"                        \
-	   272,74  "file:../../sprites/bpaka0.png"   \
-	   10,90   "Missiles"                        \
-	   90,80   "file:../../sprites/broka0.png"   \
-	   76,80   "file:../../sprites/rocka0.png"   \
-	   158,90  "Energy"                          \
-	   225,81  "file:../../sprites/celpa0.png"   \
-	   206,89  "file:../../sprites/cella0.png"   \
-	   10,115  "Health"                          \
-	   63,111  "file:../../sprites/bon1a0.png"   \
-	   100,106  "file:../../sprites/media0.png"   \
-	   79,118  "file:../../sprites/stima0.png"   \
-	   132,107 "file:../../sprites/pstra0.png"   \
-	   180,115 "Armor"                           \
-	   276,110 "file:../../sprites/arm2b0.png"   \
-	   240,107 "file:../../sprites/arm1b0.png"   \
-	   225,114 "file:../../sprites/bon2b0.png"   \
-	   145,139 "Map"                             \
-	   175,127 "file:../../sprites/pmapa0.png"   \
-	   10,139  "Big Boost"                       \
-	   84,132  "file:../../sprites/soula0.png"   \
-	   110,132 "file:../../sprites/megaa0.png"   \
-	   10,160  "Light"                           \
-	   48,157  "file:../../sprites/pvisa0.png"   \
-	   34,182  "Cloak"                           \
-	   80,166  "file:../../sprites/pinsa0.png"   \
-	   119,182 "Invuln."                         \
-	   174,171 "file:../../sprites/pinva0.png"   \
-	   265,142 "Keys"                            \
-	   254,154 "file:../../sprites/rkeya0.png"   \
-	   271,154 "file:../../sprites/ykeya0.png"   \
-	   288,154 "file:../../sprites/bkeya0.png"   \
-	   255,178 "file:../../sprites/rskua0.png"   \
-	   273,178 "file:../../sprites/yskua0.png"   \
-	   291,178 "file:../../sprites/bskua0.png"   \
-	   130,160 "Rescue suit"                     \
-	   215,142 "file:../../sprites/suita0.png"
+	   150,2   "file:helpttl.png"                \
+	   10,20   "Weapons"                         \
+	   20,33   "file:../../sprites/csawa0.png"   \
+	   90,25   "file:../../sprites/shota0.png"   \
+	   90,40   "file:../../sprites/sgn2a0.png"   \
+	   154,15  "file:../../sprites/mguna0.png"   \
+	   161,35  "file:../../sprites/launa0.png"   \
+	   235,18  "file:../../sprites/plasa0.png"   \
+	   235,33  "file:../../sprites/bfuga0.png"   \
+	   10,62   "Bullets"                         \
+	   80,57   "file:../../sprites/ammoa0.png"   \
+	   68,62   "file:../../sprites/clipa0.png"   \
+	   113,62  "Shells"                          \
+	   180,57  "file:../../sprites/sboxa0.png"   \
+	   163,62  "file:../../sprites/shela0.png"   \
+	   252,60  "Backpack"                        \
+	   272,69  "file:../../sprites/bpaka0.png"   \
+	   10,85   "Missiles"                        \
+	   90,75   "file:../../sprites/broka0.png"   \
+	   76,75   "file:../../sprites/rocka0.png"   \
+	   158,85  "Energy"                          \
+	   225,76  "file:../../sprites/celpa0.png"   \
+	   206,84  "file:../../sprites/cella0.png"   \
+	   10,110  "Health"                          \
+	   63,106  "file:../../sprites/bon1a0.png"   \
+	   100,101  "file:../../sprites/media0.png"   \
+	   79,113  "file:../../sprites/stima0.png"   \
+	   132,102 "file:../../sprites/pstra0.png"   \
+	   180,110 "Armor"                           \
+	   276,105 "file:../../sprites/arm2b0.png"   \
+	   240,102 "file:../../sprites/arm1b0.png"   \
+	   225,109 "file:../../sprites/bon2b0.png"   \
+	   145,134 "Map"                             \
+	   175,122 "file:../../sprites/pmapa0.png"   \
+	   10,134  "Big Boost"                       \
+	   84,127  "file:../../sprites/soula0.png"   \
+	   110,127 "file:../../sprites/megaa0.png"   \
+	   10,155  "Light"                           \
+	   48,152  "file:../../sprites/pvisa0.png"   \
+	   34,177  "Cloak"                           \
+	   80,161  "file:../../sprites/pinsa0.png"   \
+	   119,177 "Invuln."                         \
+	   174,166 "file:../../sprites/pinva0.png"   \
+	   265,137 "Keys"                            \
+	   254,149 "file:../../sprites/rkeya0.png"   \
+	   271,149 "file:../../sprites/ykeya0.png"   \
+	   288,149 "file:../../sprites/bkeya0.png"   \
+	   255,173 "file:../../sprites/rskua0.png"   \
+	   273,173 "file:../../sprites/yskua0.png"   \
+	   291,173 "file:../../sprites/bskua0.png"   \
+	   130,155 "Rescue suit"                     \
+	   215,137 "file:../../sprites/suita0.png"   \
+	   2,192 "https://freedoom.github.io/"       \
+	   214,192 "<Esc> to return"
 	cp $@ ../
 
 
