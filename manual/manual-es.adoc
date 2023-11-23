@@ -63,7 +63,7 @@ presionar la tecla _Esc_ en tú teclado.
 
 image::images/menu-mainmenu.png[Menú principal de Freedoom,align="center",width=380,pdfwidth=50vw]
 
-[cols="1,4",width="90%",align="center",valign="middle"]
+[cols="2,5",width="100%",align="center",valign="middle"]
 |==========================
 | <<newgame,**New game**>> | Comienza un Nuevo Juego, abandonando el juego en
 curso (Si ya estas jugando).
@@ -72,9 +72,9 @@ opciones disponibles dependen del source port que eses usando.
 | <<savegame,**Load Game**>> | Carga un juego guardado.
 | <<savegame,**Save Game**>> | Guarda el juego en curso, para que puedas
 continuar jugando después.
-| **Read This!** | Despliega una pantalla de ayuda que muestra una descripción
-de los objetos que puedes encontrar en el juego.
-| **Quit Game** | Termina el juego y regresa al Sistema operativo.
+| **Read This!** | Despliega una pantalla de ayuda con los objetos
+que puedes encontrar en el juego.
+| **Quit Game** | Salir al Sistema operativo.
 |==========================
 
 [[newgame]]
