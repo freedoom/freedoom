@@ -296,11 +296,12 @@ a hacer algo anterior.
   de regreso. Recoge los elementos en el área superior para restaurar
   o mejorar tu salud.
 
-* Explora el resto de la zona. Encontrarás dos puertas, una de cada tipo:
-  la inferior se puede utilizar directamente, como el ascensor, mientras
-  que la superior se abre mediante un interruptor cercano. Una vez que
-  hayas decidido qué camino tomar, abre la puerta y prepárate para
-  empezar a jugar Cucú de las Pistolas nuevamente.
+* Explora el resto de la zona. Encontrarás dos puertas que se pueden
+  abrir directamente, como el ascensor. El inferior te acercará a la
+  salida, mientras que el superior te abrirá una ruta opcional,
+  más difícil pero más gratificante. Una vez que hayas decidido qué
+  camino tomar, abre la puerta y prepárate para empezar
+  a jugar Cucú de las Pistolas nuevamente.
 
 === Barra de Estatus
 

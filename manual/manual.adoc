@@ -281,9 +281,8 @@ redoing a previous thing.
   then hit Use to call it down. Get on it and it will take you back up.
   Pick up the items in the upper area to restore or boost your health.
 
-* Explore the rest of the area. You will find two doors, one of each type:
-  the bottom one can be used directly, like the lift, while the top one
-  is opened by using a nearby switch. Once you've decided which way to go,
+* Explore the rest of the area. You will find two pathways, one of each type:
+  the bottom one will lead you to the main path, while the other one will lead you to the alternate path. Once you've decided which way to go,
   open the door -- and get ready to start playing Gun Peek-A-Boo again.
 
 === The Status Bar
