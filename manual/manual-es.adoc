@@ -201,9 +201,9 @@ Estos son los controles principales del juego para interactuar con el entorno:
 [options="header",cols="1,1,1,1",width="100%",align="center",halign="center"]
 |==========================
 | Function | Primera control default | Segunda control default | Comúnmente configurado para
-| Avanzar/Retroceder | Up/Down | Movimiento del mouse (o Mouse2 para avanzar) | W/S^1^
-| Mover a la izquierda/derecha | ,/. | Alt (o Mouse3) + izquierda/derecha | A/D
-| Girar a la izquierda/derecha^2^ | Izquierda/Derecha | Movimiento del mouse | Movimiento del mouse
+| Avanzar / Retroceder | Up/Down | Movimiento del mouse (o Mouse2 para avanzar) | W/S^1^
+| Mover a la izquierda / derecha | ,/. | Alt (o Mouse3) + izquierda / derecha | A/D
+| Girar a la izquierda / derecha^2^ | Izquierda / Derecha | Movimiento del mouse | Movimiento del mouse
 | Disparo | Ctrl | Mouse1 | Mouse1
 | Usar | Espaciadora | Doble clic Mouse2 o Mouse3 | E
 | Correr^3^ | Mayúsculas | - | Mayúsculas
