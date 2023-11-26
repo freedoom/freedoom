@@ -232,6 +232,15 @@ rebuild-nodes: $(addprefix levels/,$(addsuffix .wad,$(NODE_BUILDER_LEVELS)))
 # that the website has the same parent directory as this build.
 news-to-feed: NEWS.adoc
 	scripts/news-to-feed NEWS.adoc ../freedoom.github.io/feed.xml
+	
+# Display the ENDOOM lumps.
+display-endooms: lumps/*endoom*.lmp
+	for endoom in $^; \
+	do \
+		echo; \
+		echo "ENDOOM lump $$endoom:"; \
+		scripts/endoom-tool -d $$endoom; \
+	done
 
 %.6:
 	$(MAKE) ASCIIDOC_MAN="$(ASCIIDOC_MAN)" -C dist $@
