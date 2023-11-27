@@ -307,7 +307,7 @@ weapon.
 | **Armor** | The more armor you have, the less your health will suffer if
 you’re injured. See the <<armor,armor section>> for more information.
 | **Ammo counts** | How much you’re carrying of each of the <<ammo,four types of
-ammunition>>, along with the maximum of each you can carry.
+ammunition>>, and the maximum of each you can carry.
 |==========================
 
 <<<
@@ -438,7 +438,7 @@ image:../sprites/arm1a0.png[Force Field Armor Vest] |
 image:../sprites/arm2a0.png[Attuned Force Field Armor Vest]
 |==========================
 
-Normal armor absorbs 1/3 of damage you receive. Absorption is rounded down:
+Normal armor absorbs one third of damage you receive, rounded down.
 if you have 100 health and 100 armor and are hit for 50 damage, you'll lose
 34 health and 16 armor.
 
@@ -483,28 +483,28 @@ image:images/key-icons.png[Key icons,align="center"]
 [[specialitems]]
 === Special Items
 
-You may also encounter any one of these special items while exploring:
+You may also encounter any one of these while exploring:
 
-[cols="1,2",width="90%",align="center",valign="middle"]
+[cols="1,3",width="90%",align="center",valign="middle"]
 |==========================
 | **Low-Light Goggles** +
 image:../sprites/pvisa0.png[Low-Light Goggles] |
 Let you see in the dark. +
-Effect lasts 2 minutes.
+Lasts 2 minutes.
 | **Area Survey Map** +
 image:../sprites/pmapa0.png[Area Survey Map] |
 Reveals unexplored areas of the map, including some secret areas that
 may not be immediately visible. +
-Effective for the entire level and that level only.
+Lasts the entire level but effective only for the current level.
 | **Rescue Operations Suit** +
 image:../sprites/suita0.png[Rescue Operations Suit] |
 Protects you from heat, toxins and radiation from damaging floors. +
 Lasts 1 minute.
 | **Strength Symbiote** +
 image:../sprites/pstra0.png[Strength Symbiote] |
-Increases your health back to 100%, and enhances your fists to 10x their
+Increases your health back to 100%, and enhances your fists to do ten times their
 normal damage. +
-Health is permanent; damage increase lasts only for that level. +
+Health lasts until removed by damage; enhanced fists last only for that level. +
 | **Invisibility Cloak** +
 image:../sprites/pinsa0.png[Invisibility Cloak] |
 Makes you almost invisible. Monsters still detect
@@ -513,7 +513,7 @@ Lasts 1 minute.
 | **Negentropic Surge** +
 image:../sprites/megaa0.png[Negentropic Surge] |
 Maxes you out to 200% health+armor. +
-Permanent.
+Lasts until removed by damage.
 | **Vanguard Device** +
 image:../sprites/pinva0.png[Vanguard Device] |
 Makes you immune to all damage, allowing you to get
