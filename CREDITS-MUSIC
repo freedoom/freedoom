@@ -101,18 +101,18 @@ Title: (same as Phase 2)
 Intermission: (same as Phase 2)
 Story: (same as Phase 2)
 
-	DM01: crudreams2.mid by Ralph "Ralphis" Vickers
-	DM02: crudreams3.mid by Ralph "Ralphis" Vickers
+	DM01: "Zero Fort" by Ralph "Ralphis" Vickers
+	DM02: "Untitled Jam" by Ralph "Ralphis" Vickers
 	DM03: "Dynamite!" by Korp
 	DM04: "Rush" by Kevin "Velvetic" Martins and Simone Alauk
-	DM05: "Riders of Hell" by Tyler "Picklehammer" Pantella
+	DM05: "Riders of Hell" by Tyler "Picklehammer" Pantella, modified by m
 	DM06: "Workout" by Korp
 	DM07: "I Fell Off The Stairs" by Korp
 	DM08: "Jump Is Not Allowed!" by Korp
 
 	DM09: freedoom2.mid by Matias "jupiter_ex" Roldan
 	DM10: Doom1.mid by Bradley "BobFromReboot" Lavigne
-	DM11: "Spamhambled In Space" by Mark "TheMisterCat" McGill-Smith
+	DM11: "Stanky Leg Specialist" by Lola "BlueWorrior" Harvey
 	DM12: "Parallax" by Korp
 	DM13: "Shut It" by Korp
 	DM14: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
@@ -129,10 +129,10 @@ Story: (same as Phase 2)
 	DM24: freedoom3.mid by Matias "jupiter_ex" Roldan
 
 	DM25: "Shoot 'em All" by rostuhan
-	DM26: dave3d09.mid by jute
+	DM26: "World of Pain" by Josephus "DH4050" Astartes
 	DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
-	DM28: ctf2.mid by Ralph "Ralphis" Vickers
-	DM29: crudreams.mid by Ralph "Ralphis" Vickers
+	DM28: "Bobby Sent Me" by Ralph "Ralphis" Vickers
+	DM29: "SevenFour" by Ralph "Ralphis" Vickers
 	DM30: "Freedom for Your Shooting Skills" by rostuhan
 	DM31: "The Syntax of Time" by Kevin "Velvetic" Martins
 	DM32: "Bullet Hell" by rostuhan
@@ -148,7 +148,7 @@ Bunny: "Look At The Bunnies" by RestlessRodent
 E1M3: "Mortal" by Jeremy "Vandalorian" Emerson
 E1M5: "sit on a bench 'n release that tensh'n" by Jazz "jmickle" Mickle
 E1M6: dave3d35.mid by jute
-E1M7: Sewers by Discoholic and Samuel "Blastfrog" Oliver (moved to MAP12, not removed)
+E1M7: "Sewers" by Discoholic, remix of "Wasteland Scavengers" by Samuel "Blastfrog" Oliver (moved to MAP12, not removed)
 E1M9: "The Raging Sun" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins (moved to E1M5, not removed)
 E2M1: dave3d38.mid by jute
 E2M2: "Animal Skin" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins
@@ -167,7 +167,7 @@ MAP06: "Dark Trail" by Tyler "Picklehammer" Pantella
 MAP07: "Riders of Hell" by Tyler "Picklehammer" Pantella (moved to DM05, not removed)
 MAP10: "Death's Embrace" by Tyler "Picklehammer" Pantella
 MAP11: dave3d02.mid by jute
-MAP12: doom2alt.mid by Bradley "BobFromReboot" Lavigne
+MAP12: Doom2Alt.mid by Bradley "BobFromReboot" Lavigne
 MAP20: dave3d05.mid by jute
 MAP21: "Violence Culture" by Jeremy "Vandalorian" Emerson
 MAP22: "Mists Over the Mire" by Tyler "Picklehammer" Pantella
@@ -181,6 +181,7 @@ DM05: map01.mid by Ralph "Ralphis" Vickers (moved to MAP07, not removed)
 DM06: "The Heroic Battle" by Tyler "Picklehammer" Pantella
 DM07: dave3d30.mid by jute
 DM08: Dave3d13.mid by jute
+DM11: "Spamhambled In Space" by Mark "TheMisterCat" McGill-Smith
 DM12: dave3d24.mid by jute
 DM13: e1m1.mid by Ralph "Ralphis" Vickers
 DM18: dave3d06.mid by jute
@@ -189,6 +190,7 @@ DM20: dave3d16.mid by jute
 DM21: dave3d12.mid by jute
 DM23: dave3d27.mid by jute
 DM25: dave3d20.mid by jute
+DM26: dave3d09.mid by jute
 DM30: dave3d01.mid by jute
 DM32: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
 
