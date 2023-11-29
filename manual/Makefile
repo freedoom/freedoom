@@ -1,4 +1,4 @@
-ASCIIDOCTOR_FLAGS = -a toc -a pdf-page-size=A5
+ASCIIDOCTOR_FLAGS = -a pdf-page-size=A5
 all: freedoom-manual.pdf freedoom-manual-es.pdf
 
 freedoom-manual.pdf: manual.adoc
