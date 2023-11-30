@@ -627,19 +627,19 @@ les hubs communautaires suivants:
 * Le dépots de source de Freedoom: +
 https://github.com/freedoom/freedoom
 
-* Le Forum de discussion Freedoom sur Doomworld: *
+* Le Forum de discussion Freedoom sur Doomworld: +
 https://www.doomworld.com/forum/17-freedoom/
 
-* La Guilde Discord: *
+* La Guilde Discord: +
 https://discord.gg/9DA3fut
 
 
 Pour savoir comment soumettre un ajout, veuillez consulter les pages suivantes sur l'utilisation GitHub:
 
-* Comment utiliser le contrôle de version Git pour des contributions: *
+* Comment utiliser le contrôle de version Git pour des contributions: +
 https://help.github.com/en/github
 
-* Comment faire un "fork" d'un projet et crée un "pull request" avec Git: *
+* Comment faire un "fork" d'un projet et crée un "pull request" avec Git: +
 https://guides.github.com/activities/forking/
 
 ^1^ Le mot "free" en Anglais veut à la fois dire gratuit et libre.
