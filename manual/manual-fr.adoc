@@ -1,15 +1,17 @@
 = Manuel Freedoom
 // SPDX-License-Identifier: BSD-3-Clause
+:toc:
+:toc-title:
+
+image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
 Bienvenue sur Freedoom, un jeu complet qui est
 https://www.gnu.org/philosophy/free-sw.html[libre]
 et https://opensource.org/osd/[open source].
-Freedoom est disponible sous la licence BSD, permettant
+Freedoom est disponible sous <<licence, la licence BSD Modifiée>>, permettant
 n'importe qui de partager, de modifier et de réutiliser des parties du jeu.
 
-Pour plus de détails, consultez la <<reusing,section sur la réutilisation>>.
-
-image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
+Pour plus de détails, consultez le site web https://freedoom.github.io/.
 
 == Installation de Freedoom
 
@@ -17,7 +19,7 @@ Freedoom est distribué sous la forme de trois fichiers nommés «freedoom1.wad�
 «freedoom2.wad» et « freedm.wad » qui contiennent les graphismes, les niveaux,
 la musique et les effets sonores qui font partie du jeu.
 
-Pour jouer au jeu, vous pouvez utiliser l’une des nombreuses adaptations ("portage")
+Pour jouer au jeu, vous pouvez utiliser l'une des nombreuses adaptations ("portage")
 du programme Doom que les fans ont développé pour les ordinateurs modernes.
 
 Le Doom Wiki possède une
@@ -34,15 +36,15 @@ de se référer aux instructions pour ce portage. En règle générale, vous
 pouvez essayer l'une des méthodes suivantes:
 
 * Placez les fichiers `.wad` de Freedoom dans le même dossier que le portage
-  avant de le lancer. Il est possible qu'ils soient automatiquement détectés.
+  avant de le lancer. Il est possible que le portage les détecte automatiquement.
 * Si vous le lancez à partir de la ligne de commande, essayez
   ex. `mon-portage-favoris -iwad freedoom1.wad`.
 
 Freedoom est séparé en deux parties, _Freedoom: Phase 1_ (`freedoom1.wad`) et
 _Freedoom: Phase 2_ (`freedoom2.wad`). _Phase 1_ est composée de quatre épisodes
 de huit niveaux, tandis que la _Phase 2_ est une campagne unique de 30 niveaux.
-Ça revient à 62 niveaux à jouer, et il y a aussi des niveaux secrets -- si
-vous pouvez découvrir comment les atteindre.
+Ça revient à 62 niveaux à jouer, plus des niveaux secrets -- si vous pouvez 
+découvrir comment les atteindre.
 
 FreeDM («freedm.wad») est un ensemble de niveaux sans monstre, conçu
 spécifiquement pour le PvP. Si vous souhaitez savoir comment héberger une
@@ -58,7 +60,7 @@ _Échap_ de votre clavier.
 
 image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]
 
-[cols="2,4",width="100%",align="center",valign="middle"]
+[cols="2,5",width="100%",align="center",valign="middle"]
 |==========================
 | <<newgame,**New game**>> | Commencez une nouvelle partie, en abandonnant le jeu actuel
 (si vous jouez déjà).
@@ -67,9 +69,9 @@ options à disposition varient en fonction du portage que vous utilisez.
 | <<savegame,**Load Game**>> | Charge une partie sauvegardée.
 | <<savegame,**Save Game**>> | Sauvegarder votre partie actuelle, afin de pouvoir
 continuer à jouer plus tard.
-| **Read This!** | Affiche un écran d'aide montrant une description des
-objets que vous verrez dans le jeu.
-| **Quit Game** | Éteint le jeu et vous retourne au système d’exploitation.
+| **Read This!** | Affiche un écran d'aide montrant lesobjets que vous verrez
+dans le jeu.
+| **Quit Game** | Éteint le jeu et vous retourne au système d'exploitation.
 |==========================
 
 [[newgame]]
@@ -77,7 +79,7 @@ objets que vous verrez dans le jeu.
 
 [**Raccourci:** Sur la plupart des portages, en appuyant plusieurs fois sur la touche _Entrée_
 après avoir lancé le jeu, vous commencerez une nouvelle partie avec le niveau de difficulté par défaut
-(dans le premier épisode si vous jouez Phase 1). Vous n’avez pas besoin de le faire rapidement.]
+(dans le premier épisode si vous jouez Phase 1). Vous n'avez pas besoin de le faire rapidement.]
 
 Pour commencer une nouvelle partie, appuyez sur la touche _Échap_ afin d'afficher le menu principal, puis sélectionnez
 _New Game_.
@@ -86,7 +88,7 @@ Lorsque vous commencez une nouvelle partie, il est possible que vous soyez invit
 
 image::images/menu-episode.png[Freedoom Episode Menu,align="center",width=432,pdfwidth=50vw]
 
-Si vous êtes nouveau au jeu, commencez par la Phase 1 _Outpost Outbreak_, le premier épisode (et le plus facile). Il n'y a aucune obligation de jouer les épisodes dans l’ordre.
+Si vous êtes nouveau au jeu, commencez par la Phase 1 _Outpost Outbreak_, le premier épisode (et le plus facile). Il n'y a aucune obligation de jouer les épisodes dans l'ordre.
 
 [[skill]]
 Après avoir choisi un épisode, vous devez sélectionner un niveau de difficulté. Le niveau de difficulté affecte plusieurs facteurs dans le jeu, le plus important étant le nombre de monstres que vous rencontrerez.
@@ -99,7 +101,7 @@ image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwi
 | 2 | **Will This Hurt?** | Niveau de difficulté Facile.
 | 3 | **Bring on the Pain.** | Niveau de difficulté par défaut.
 | 4 | **Extreme Carnage.** | Niveau de difficulté Difficile.
-| 5 | **MAYHEM!** | **Déconseillé**. Ceci est équivalent à _Extreme Carnage_ sauf que les attaques des monstres sont jusqu’à deux fois plus rapides, et les monstres tués reviennent à la vie après environ 40 secondes.
+| 5 | **MAYHEM!** | **Déconseillé**. Ceci est équivalent à _Extreme Carnage_ sauf que les attaques des monstres sont jusqu'à deux fois plus rapides, et les monstres tués reviennent à la vie après environ 40 secondes.
 
 |==========================
 
@@ -118,17 +120,17 @@ Si vous sauvegardez fréquemment votre partie, vous allez peut-être vouloir uti
 
 Vous pouvez charger la partie de votre emplacement de sauvegarde rapide à travers le menu ou appuyant sur la touche _F9_.
 
-[**Attention:** le programme Doom originale contient un bug qui le fait planter lorsque vous sauvegarder une partie avec trop de choses qui se passent dans le niveau. Le portage Chocolate Doom réplique ce bug intentionnellement. Si ceci est indésirable, veuillez aller dans chocolate-setup et désactiver "Vanilla savegame limit" avant de jouer.]
+[**Attention:** Le portage Chocolate Doom réplique un bug du jeu _Doom_ originale qui fait planter le jeu lorsque vous sauvegarder une partie avec trop de choses qui se passent dans le niveau. Ceci peut-être désactiver dans chocolate-setup sous la catégorie "Vanilla savegame limit".]
 
 === Quitter le jeu
 
-Lorsque vous aurez fini de jouer à Freedoom, appuyez sur _Échap_ pour afficher le menu principal et sélectionnez _Quit Game_ pour quitter. Vous aurez surement envie de sélectionner _Save Game_ en premier afin d'enregistrer votre progrès et pouvoir revenir à l’endroit où vous vous étiez arrêté lors de votre prochaine session.
+Lorsque vous aurez fini de jouer à Freedoom, appuyez sur _Échap_ pour afficher le menu principal et sélectionnez _Quit Game_ pour quitter. Vous aurez surement envie de sélectionner _Save Game_ en premier afin d'enregistrer votre progrès et pouvoir revenir à l'endroit où vous vous étiez arrêté lors de votre prochaine session.
 
 === Raccourcis clavier
 
-Quelques raccourcis clavier pratiques qui vous aideront à gagner du temps pour accéder aux fonctions courantes du menu.
+Quelques raccourcis clavier pour accéder aux fonctions du menu instantanément.
 
-[cols="1,3,7",width="90%",align="center",valign="middle"]
+[cols="2,6,16",width="90%",align="center",valign="middle"]
 |==========================
 | **Échap** | <<menus,Menu>> | Affiche le menu principal.
 | **F1** | Info | Affiche l'écran d'aide qui présente des informations sur les objets dans le jeu.
@@ -137,9 +139,9 @@ Quelques raccourcis clavier pratiques qui vous aideront à gagner du temps pour 
 | **F4** | Volume | Affiche le menu pour régler le volume.
 | **F6** | <<savegame,Sauvegarde Rapide>> | Savevarge la partie à l'emplacement de _sauvegarde rapide_, ce qui permet de gagner du temps si vous sauvegardez fréquemment lors d'une partie.
 | **F7** | Quitter la Partie | Termine la partie actuelle et retourne au menu principal.
-| **F8** | Messages | Bascule entre montrer ou masquer les messages à l’écran qui s'affiche lorsque vous ramassez un objet.
+| **F8** | Messages | Bascule entre montrer ou masquer les messages à l'écran pour les objets ramassés, les clés, les triches, etc...
 | **F9** | <<savegame,Charger Sauvegarde Rapide>> | Charge la partie de votre emplacement _sauvegarde rapide_.
-| **F10** | Quitter le Jeu | Quitte le jeu et vous retourne au système d’exploitation.
+| **F10** | Quitter le Jeu | Quitte le jeu et vous retourne au système d'exploitation.
 | **F11** | Luminosité | Permet de régler le niveau de luminosité dans le jeu.
 |==========================
 
@@ -149,29 +151,28 @@ Quelques raccourcis clavier pratiques qui vous aideront à gagner du temps pour 
 
 image::images/map01-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
 
-Freedoom est un jeu de tir à la première personne (FPS) en temps réel. Explorez une série de niveaux dans lesquels devez trouver le chemin vers la sortie. Un assortiment de monstres tentera de vous arrêter, et vous aurez besoin d’utiliser les armes à votre disposition pour vous défendre. Certaines parties des niveaux peuvent demeurer inaccessibles jusqu'à ce que vous trouviez une clé spécifique ou que vous trouviez un interrupteur pour ouvrir un passage. Cela signifie que le gameplay impliquera des puzzles d’exploration pour dénicher des objets cachés ainsi que des puzzles d’action en temps réel sur le placement et le timing de vos tirs.
+Freedoom est un jeu de tir à la première personne (FPS) en temps réel. Explorez une série de niveaux dans lesquels devez trouver le chemin vers la sortie. Un assortiment de monstres tentera de vous arrêter, et vous aurez besoin d'utiliser les armes à votre disposition pour vous défendre. Certaines parties des niveaux peuvent demeurer inaccessibles jusqu'à ce que vous trouviez une clé spécifique ou que vous trouviez un interrupteur pour ouvrir un passage. Cela signifie que le gameplay impliquera des puzzles d'exploration pour dénicher des objets cachés ainsi que des puzzles d'action en temps réel sur le placement et le timing de vos tirs.
 
-Voici les contrôles de base du jeu pour  interagir avec l'environnement:
-[options="header",cols="3,1,2,1",width="70%",align="center",halign="center"]
+Voici un tableau avec les contrôles de base du jeu. **Les défauts de Doom sont largement considérés suboptimaux;** vérifiez votre portage pour savoir comment les reconfigurer. Des alternatives courantes sont fournies, mais il n'y a pas de "meilleure" solution qui convient pour tout le monde -- vous allez peut-être devoir expérimenter. Au minimum, vous devez être à l'aise en vous déplaçant dans l'une des quatre directions tout en tournant et en tirant simultanément.
+
+[options="header",cols="1,1,1,1",width="100%",align="center",halign="center"]
 |==========================
-| Fonction | Touche par Defaut ^1^ 1 | Touche par Defaut 2 | Souvent assigné à ^2^
-| Déplacer avant/arrière | Haut/Bas | Déplacement de la Souris (ou Mouse2 pour avancé) | Z/S
+| Fonction | Touche par Defaut 1 | Touche par Defaut 2 | Alternatives courantes
+| Déplacer avant/arrière | Haut/Bas | Déplacement de la Souris (ou Mouse2 pour avancé) | Z/S ^1^
 | Déplacer ("strafe") gauche/droite | ,/. | Alt (ou Mouse3) + Gauche/Droite | Q/D
-| Tourner gauche/droite ^3^ | Gauche/Droite | Déplacement de la Souris | Déplacement de la Souris
+| Tourner gauche/droite ^2^ | Gauche/Droite | Déplacement de la Souris | Déplacement de la Souris
 | Tirer | Ctrl | Mouse1 | Mouse1
 | Utiliser | Espace | Double-click Mouse2 ou Mouse3 | E
-| Courir ^4^ | Shift | - | Shift
+| Courir ^3^ | Shift | _<rien>_ | Shift
 |==========================
 
-^1^ Votre portage devrait vous donner la possibilité d’utiliser n’importe quel bouton sur votre manette ou votre souris; pour être plus brief, le terme "touche" est utilisé dans ce manuel pour inclure d’autres commandes selon les circonstances.
+^1^ Sur un clavier AZERTY les touches Z, S, Q et D constituent un deuxième ensemble de touches directionnelles pour la main gauche.
 
-^2^ Sur un clavier AZERTY les touches Z, S, Q et D constituent un deuxième ensemble de touches directionnelles pour la main gauche.
+^2^ Si vous avez un monstre, un baril ou un adversaire en PvP qui traverse le milieu de votre écran lors du coup de feu de votre arme, le jeu ajustera votre visée verticale pour vous. Certains portages vous permettront de désactiver ce comportement et de viser manuellement à la place.
 
-^3^ Si vous avez un monstre, un baril ou un adversaire en PvP qui traverse le milieu de votre écran lors du coup de feu de votre arme, le jeu ajustera votre visée verticale pour vous. Certains portages vous permettront de désactiver ce comportement et de viser manuellement à la place.
+^3^ La plupart des portages ont une option "Toujours Courrir" ("Always Run" en Anglais) où le fait de maintenir cette touche ralentit votre vitesse de déplacement. Puisque le personnage du joueur ne se fatigue pas, se déplacer lentement ne sert qu'à augmenter votre précision.
 
-^4^ La plupart des portages ont une option "Toujours Courrir" ("Always Run" en Anglais) où le fait de maintenir cette touche ralentit votre vitesse de déplacement. Le personnage du joueur ne se fatigue pas donc la vitesse lente est seulement nécessaire pour améliorer la précision.
-
-**Les défauts de Doom sont largement considérés suboptimaux;** Vérifiez votre portage pour savoir comment les reconfigurer. Les options les plus fréquemment utilisés sont fournies, mais il n’y a pas de "meilleure" solution qui convient pour tout le monde -- vous allez peut-être devoir expérimenter. Au minimum, vous devez être à l’aise en vous déplaçant dans l’une des quatre directions tout en tournant et en tirant simultanément.
+<<<
 
 === Un Tutoriel
 
@@ -181,47 +182,48 @@ Ce tutoriel vous présentera toutes les actions de base dont vous aurez besoin p
 
 Commencez une nouvelle partie dans Freedoom Phase 1, épisode 1 sur le niveau de difficulté facile et suivez les étapes. Ignorer tout ce qui vous ennuie ou vous embrouille, et refaites tout ce que vous trouvez difficile aussi longtemps que vous le souhaitez, avant de passer à l'étape suivante ou de refaire une étape précédente.
 
-* Essayez de vous déplacer en avant, en arrière, à gauche, et à droite.
+1. Essayez de vous déplacer en avant, en arrière, à gauche, et à droite.
   Tracez un carré. Essayez de le faire dans le sens horaire et antihoraire. Essayez de faire le numéro huit. (Ne quittez pas la cage pour l'instant -- il y a des monstres à l'extérieur.)
 
-* Tournez en rond pour examiner votre environnement. Faites-le à votre propre
+1. Tournez en rond pour examiner votre environnement. Faites-le à votre propre
   rythme, en vous arrêtant ou en changeant de direction pour regarder n'importe où quand vous voulez. Faites un deuxième cercle, en vous déplaçant un peu au fur à mesure, et observez comment cela change la perspective et comment le mouvement latéral peut vous aider à voir la longueur d'un mur ou la distance d'un objet.
 
-* Retournez au milieu de la cage. Tournez et pointez votre pistolet
+1. Retournez au milieu de la cage. Tournez et pointez votre pistolet
   sur l'une des colonnes du cadre de porte.
 
-* Déplacez-vous -- sans tourner -- afin que votre pistolet soit pointé vers 
+1. Déplacez-vous -- sans tourner -- afin que votre pistolet soit pointé vers 
   l'autre colonne (Points bonus si vous pouvez vous arrêter naturellement sur la cible.)
 
-* Déplacez-vous un peu à gauche ou à droite, puis tournez à nouveau pour
+1. Déplacez-vous un peu à gauche ou à droite, puis tournez à nouveau pour
   pointer vers la colonne. Recommencez, mais tournez avant que votre élan ne s'estompe. Recommencez quelques fois, en utilisant les quatre directions et en tournant de plus en plus tôt jusqu'à ce que vous pointiez et que vous vous déplaciez de façon fluide. (Reculez ou avancez pour réinitialiser si vous vous approchez trop ou si vous courez dans les murs.)
 
-* Essayez de faire un carré (ou le numéro huit, etc.) tout en pointant
+1. Essayez de faire un carré (ou le numéro huit, etc.) tout en pointant
   vers la colonne en même temps. Privilégiez la fluidité au lieu de la précision -- il vaut mieux être proche la plupart du temps que parfait une partie du temps.
 
-* Déplacez-vous sur un des lits dans les coins afin que la colonne ne
+1. Déplacez-vous sur un des lits dans les coins afin que la colonne ne
   soit plus visible. Déplacez-vous afin que la colonne entre et sorte de vue. Expérimentez avec la distance et le timing. Et tentez de pointer vers la colonne même si vous ne pouvez pas la voir.
 
-* Jouez un peu avec ce qui a été dit précédemment. Essayez d'appuyer
+1. Jouez un peu avec ce qui a été dit précédemment. Essayez d'appuyer
   sur la touche Tirer pour tirer sur la colonne en restant immobile et en vous déplaçant, observez où et quand un petit nuage de fumée se forme. (Arrêtez de tirer avant que votre nombre de munitions tombe en dessous de 30 -- vous en aurez besoin pour plus tard!)
 
-* Appuyez sur la touche 1 du clavier pour passer à vos poings, et
+1. Appuyez sur la touche 1 du clavier pour passer à vos poings, et
   tentez de frapper la colonne et observez jusqu'à quelle distance vous pouvez le faire. Appuyez sur la touche 2 pour retourner à votre pistolet.
 
-* Maintenant vérifiez si vous pouvez accomplir toutes les tâches
+1. Maintenant vérifiez si vous pouvez accomplir toutes les tâches
   tout en maintenant la touche Courir enfoncée.
 
-* Descendez dans la tranchée et tuez un <<enemies,zombie>>. Essayez
+1. Descendez dans la tranchée et tuez un <<enemies,zombie>>. Essayez
   de ne pas prendre de dégâts.
 
-* Une fois en sécurité, regardez près du corps du zombie pour voir
+1. Une fois en sécurité, regardez près du corps du zombie pour voir
   s'il a laissé tomber un <<ammo,chargeur>>. Si oui, déplacez-vous pour le ramasser.
 
-* Retournez en arrière d'où vous venez. Allez à l'ascenseur comme
+1. Retournez en arrière d'où vous venez. Allez à l'ascenseur comme
   si vous alliez le frapper, puis appuyez sur la touche Utiliser pour l'appeler. Montez dessus et il vous sortira de la tranchée. Ramassez les objets dans la zone supérieure pour rétablir ou booster votre santé.
 
-* Explorez le reste de la zone. Vous trouverez deux portes, une de
-  chaque type: celle dans la tranchée peut être utilisée directement, comme l'ascenseur, tandis que celle en haut est ouverte à l'aide d'un interrupteur à proximité. Une fois que vous avez fait votre choix, ouvrez la porte et préparez-vous à utiliser le savoir que vous avez acquis.
+1. Explorez le reste de la zone. Vous trouverez deux portes qui peuvent être utilisées directement, comme l'ascenseur. La porte du bas vous mènera vers un chemin plus proche de la sortie, tandis que celle du haut vous mènera vers un chemin plus dur mais également plus gratifiant.
+
+1. Une fois que vous avez fait votre choix, ouvrez la porte et préparez-vous à utiliser le savoir que vous avez acquis.
 
 === La Barre d'État
 
@@ -244,44 +246,44 @@ image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",ali
 
 Dans le jeu, vous trouverez divers objets ramassable: <<weapons,des armes>>, <<ammo,des munitions>>, <<health,de la santé>>, <<armor,de l'armure>>, <<keys,des clés>> et quelques <<specialitems,power-ups plus rares>> qui vous donnent des capacités spéciales.
 
-Pour ramasser quelque chose, il suffit tout simplement de marcher dessus -- un message à l’écran et un bref flash indiquent que vous l’avez bien ramassé. Si vous ne le ramassez pas, il est probable que vous n’en ayez pas besoin actuellement (par exemple, vous ne pouvez pas prendre d'objets qui rechargent votre santé lorsque votre santé est déjà à 100%). Si un objet vous donne plus que ce que vous pouvez transporter, la différence est perdue.
+Pour ramasser quelque chose, il suffit tout simplement de marcher dessus -- un message à l'écran et un bref flash indiquent que vous l'avez bien ramassé. Si vous ne le ramassez pas, il est probable que vous n'en ayez pas besoin actuellement (par exemple, vous ne pouvez pas prendre d'objets qui rechargent votre santé lorsque votre santé est déjà à 100%). Si un objet vous donne plus que ce que vous pouvez transporter, la différence est perdue.
 
 [[weapons]]
 === Armes
 
 Vous commencez le jeu avec seulement un pistolet, 50 balles et vos poings. En explorant le niveau, vous trouverez plus d'armes et de munitions que vous pourrez utiliser.
 
-En appuyant sur les touches numériques du clavier, vous pouvez basculer vers l’arme liée à la touche (si vous l'avez).En dehors des armes de corps à corps, chaque arme consomme un type de munitions, qui peut être trouvé quelque part dans le niveau.
+En appuyant sur les touches numériques du clavier, vous pouvez basculer vers l'arme liée à la touche (si vous l'avez).En dehors des armes de corps à corps, chaque arme consomme un type de munitions, qui peut être trouvé quelque part dans le niveau.
 
-[options="header",cols="3,1,5",valign="middle",width="100%"]
+[options="header",cols="3,1,9",valign="middle",width="100%"]
 |==========================
 | Arme | Touche | Description
-| **Poing** | 1 | Si vous n’avez plus de munitions, vous pouvez toujours frapper les monstres à mains nues. Munitions : Aucune
+| **Poing** | 1 | Si vous n'avez plus de munitions, vous pouvez toujours frapper les monstres à mains nues. _Munitions:_ Aucune
 | **Scie** +
 image:../sprites/csawa0.png[Ripsaw] |
-1 | Conçue pour couper le bois, la scie fonctionne également comme une arme de corps à corps pour trancher la chair. Munitions : Aucune
+1 | Conçue pour couper le bois, la scie fonctionne également comme une arme de corps à corps pour trancher la chair. _Munitions:_ Aucune
 | **Pistolet** +
 image:../sprites/pista0.png[Handgun] |
-2 | Votre arme de départ. Elle vous permet de vous battre pour obtenir une meilleure arme, et d'activer des interrupteurs sans gaspiller de balle. Munitions : Balles
+2 | Votre arme de départ. Elle vous permet de vous battre pour obtenir une meilleure arme, et d'activer des interrupteurs sans gaspiller de balle. _Munitions:_ Balles
 | **Fusil à Pompe** +
 image:../sprites/shota0.png[Pump-action Shotgun] |
-3 | Tire sept cartouches qui se propagent, vous permettant de toucher plusieurs cibles ou une grande cible. Munitions : Cartouches
+3 | Tire sept cartouches qui se propagent, vous permettant de toucher plusieurs cibles ou une grande cible. _Munitions:_ Cartouches
 | **Fusil à Double Canon** +
 image:../sprites/sgn2a0.png[Double-barrelled Shotgun] |
-3 | Une meilleure tolérance pour les charges puissantes signifie une meilleure fragmentation des projectiles, ce qui se traduit par une augmentation de près de 50% du nombre de coups par cartouches sur une zone plus étendue. Bon à courte portée contre les groupes d’ennemis. Munitions : Cartouches
+3 | Une meilleure tolérance pour les charges puissantes signifie une meilleure fragmentation des projectiles, ce qui se traduit par une augmentation de près de 50% du nombre de coups par cartouches sur une zone plus étendue. Bon à courte portée contre les groupes d'ennemis. _Munitions:_ Cartouches
 | **Minigun** +
 image:../sprites/mguna0.png[Minigun] |
-4 | Une utilisation bien plus efficace de vos balles qu'avec le pistolet. Jusqu’à quarante secondes de souffrance pour vous protéger. Munitions : Balles
+4 | Une utilisation bien plus efficace de vos balles qu'avec le pistolet. Jusqu'à quarante secondes de souffrance pour vous protéger. _Munitions:_ Balles
 | **Lance-Missile** +
 image:../sprites/launa0.png[Missile Launcher] |
-5 | Tire des missiles qui infligent beaucoup de dégâts à l’impact, puis explose pour éliminer les petits monstres à proximité. Attention, éviter d'être trop proche de l’explosion! Munitions : Missiles
+5 | Tire des missiles qui infligent beaucoup de dégâts à l'impact, puis explose pour éliminer les petits monstres à proximité. Attention, éviter d'être trop proche de l'explosion! _Munitions:_ Missiles
 | **Arme à Énergie Polarique** +
 image:../sprites/plasa0.png[Polaric Energy Weapon] |
-6 | Produit un flux continu de projectiles d’énergie polarique qui sont très efficaces contre les monstres forts.
-Ammo: Énergie
+6 | Produit un flux continu de projectiles d'énergie polarique qui sont très efficaces contre les monstres forts.
+_Munitions:_ Énergie
 | **SKAG 1337** +
 image:../sprites/bfuga0.png[SKAG 1337] |
-7 | Une arme expérimentale qui tire une boule d’énergie polarique massive, puis déclenche une explosion d’énergie secondaire dans la même direction! Tire lentement, mais ça vaut la peine. Munitions : Énergie
+7 | Une arme expérimentale qui tire une boule d'énergie polarique massive, puis déclenche une explosion d'énergie secondaire dans la même direction! Tire lentement, mais ça vaut la peine. _Munitions:_ Énergie
 |==========================
 
 [[ammo]]
@@ -327,7 +329,7 @@ image:../sprites/soula0.png[Ectoplasmic Surge]
 [[armor]]
 === Armure
 
-Vous commencez avec 0% d’armure. En ramassant une veste vous pourrez atteindre la quantité d'armure indiquée. Chaque petit boost augmente votre armure jusqu’à ce que vous atteigniez 200%.
+Vous commencez avec 0% d'armure. En ramassant une veste vous pourrez atteindre la quantité d'armure indiquée. Chaque petit boost augmente votre armure jusqu'à ce que vous atteigniez 200%.
 
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
 |==========================
@@ -337,9 +339,9 @@ image:../sprites/arm1a0.png[Force Field Armor Vest] |
 image:../sprites/arm2a0.png[Attuned Force Field Armor Vest]
 |==========================
 
-L'armure normale absorbe un tiers des dégâts que vous recevez. L'absorption est arrondie vers le bas : si vous avez 100% de vie et 100% d'armure, et que vous subissez 50% de dégâts, vous perdrez 34% de vie et 16% d'armure.
+L'armure normale absorbe un tiers des dégâts que vous recevez, ceci est arrondie vers le bas. Si vous avez 100% de vie et 100% d'armure, et que vous subissez 50% de dégâts, vous perdrez 34% de vie et 16% d'armure.
 
-L'armure blindée a un comportement légèrement différent : en plus de valoir 200% d'armure, elle absorbe également la moitié des dégâts. Étant donné que les petits boosts ajoutent le même type d'armure que vous avez déjà, il est peut-être préférable de ramasser l'armure  blindée immédiatement si vous n'en avez pas déjà une.
+L'armure blindée a un comportement légèrement différent: en plus de valoir 200% d'armure, elle absorbe également la moitié des dégâts. Étant donné que les petits boosts ajoutent le même type d'armure que vous avez déjà, il est peut-être préférable de ramasser l'armure  blindée immédiatement si vous n'en avez pas déjà une.
 
 [[keys]]
 === Clées
@@ -348,11 +350,11 @@ image:../sprites/bkeya0.png[Blue Passcard] image:../sprites/bskua0.png[Blue Skel
 image:../sprites/ykeya0.png[Yellow Passcard] image:../sprites/yskua0.png[Yellow Skeleton Key] +
 image:../sprites/rkeya0.png[Red Passcard] image:../sprites/rskua0.png[Red Skeleton Key]
 
-Les clés vous permettent d’ouvrir certaines portes verrouillées et d’activer les interrupteurs verrouillés. En règle générale, elles sont indispensables pour progresser, bien qu'elles permettent parfois l’accès à des raccourcis ou des zones secrètes.
+Les clés vous permettent d'ouvrir certaines portes verrouillées et d'activer les interrupteurs verrouillés. En règle générale, elles sont indispensables pour progresser, bien qu'elles permettent parfois l'accès à des raccourcis ou des zones secrètes.
 
 === Accessibilité Daltonisme
 
-Les clées dans Freedoom sont non seulement conçues pour être distinguer par leur couleur mais aussi par leur forme, afin de rendre le jeu plus accessible aux joueurs daltoniens. Chaque clé colorée a une forme unique associée :
+Les clées dans Freedoom sont non seulement conçues pour être distinguer par leur couleur mais aussi par leur forme, afin de rendre le jeu plus accessible aux joueurs daltoniens. Chaque clé colorée est associée à une forme:
 
 [cols="2,3",width="50%",align="center",valign="middle"]
 |==========================
@@ -362,40 +364,40 @@ Les clées dans Freedoom sont non seulement conçues pour être distinguer par l
 | Rouge | Lignes horizontales
 |==========================
 
-Ces formes sont utilisées de façon consistante tout au long du jeu : avec les icônes de la barre d’état, les images des clés et sur les murs indiquant les portes verrouillées.
+Ces formes sont utilisées de façon consistante avec les icônes de la barre d'état, les images des clés et sur les murs indiquant les portes verrouillées.
 
-Pour les clés squelettes, faites attention à la direction vers laquelle les cornes pointent. Par exemple, voici comment les icônes des clés apparaissent dans la barre d’état :
+Pour les clés squelettes, faites attention à la direction vers laquelle les cornes pointent. Par exemple, voici comment les icônes des clés apparaissent dans la barre d'état:
 
 image:images/key-icons.png[Key icons,align="center"]
 
 [[specialitems]]
 === Special Items
 
-Il est possible que vous voyiez l'un de ces objets spéciaux lorsque vous explorez ;
+Il est possible que vous les voyiez lorsque vous explorez:
 
 [cols="1,2",width="90%",align="center",valign="middle"]
 |==========================
 | **Lunettes Vision Sombre** +
 image:../sprites/pvisa0.png[Low-Light Goggles] |
-Permet de voir dans le noir, pour un temps limité.
+Permet de voir dans le noir. Dure 2 minutes.
 | **Carte Enquête Zone** +
 image:../sprites/pmapa0.png[Area Survey Map] |
-Révèle les zones inexplorées de la carte, y compris les zones secrètes qui ne sont pas immédiatement visibles.
+Révèle les zones inexplorées de la carte, y compris les zones secrètes qui ne sont pas immédiatement visibles. Dure jusqu'a la fin du niveau actuel
 | **Combinaison de Secours** +
 image:../sprites/suita0.png[Rescue Operations Suit] |
-Protège contre la chaleur, les toxines et les radiations provenant des sols endommagés, pour un temps limité.
+Protège contre la chaleur, les toxines et les radiations provenant des sols endommagés. Dure 1 minute.
 | **Symbiote de la Force** +
 image:../sprites/pstra0.png[Strength Symbiote] |
-Rétablis votre santé à 100%, et vos poings font 10x plus de dégâts jusqu’à la fin du niveau.
+Rétablis votre santé à 100%, et vos poings font 10x plus de dégâts jusqu'à la fin du niveau. Le bonus de vie dure jusqu'à ce que vous preniez des dégâts, et le bonus de dégâts dure jusqu'à la fin du niveau actuel.
 | **Cape d'Invisibilité** +
 image:../sprites/pinsa0.png[Invisibility Cloak] |
-Vous rend presque invisible pour un temps limité. Les monstres détectent toujours votre présence, mais ils auront beaucoup plus de mal à viser.
+Vous rend presque invisible. Les monstres détectent toujours votre présence, mais ils auront beaucoup plus de mal à viser. Dure 1 minute.
 | **Surtension Néguentropique** +
 image:../sprites/megaa0.png[Negentropic Surge] |
-Maximise votre santé et armure à 200%.
+Maximise votre santé et armure à 200%. Dure jusqu'à ce que vous preniez des dégâts.
 | **Dispositif Vanguard** +
 image:../sprites/pinva0.png[Vanguard Device] |
-Vous immunise contre tous les dégâts pour un temps limité, vous permettant de surmonter les défenses écrasantes de l'ennemie et les pièges inévitables.
+Vous immunise contre tous les dégâts, vous permettant de surmonter les défenses écrasantes de l'ennemie et les pièges inévitables. Dure 30 secondes.
 |==========================
 
 [[enemies]]
@@ -403,7 +405,7 @@ Vous immunise contre tous les dégâts pour un temps limité, vous permettant de
 
 Les niveaux sont remplis de monstres qui ont pour unique objectif de vous empêcher de terminer votre mission. Voici une sélection des monstres que vous allez rencontrer.
 
-[frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
+[frame="none",cols="5,2",valign="middle",grid="none",align="center",width="100%"]
 |==========================
 | **Zombie** +
 Ces travailleurs d'iniquité qui n'ont rien dans la tête sont armés d'un pistolet et sont résolus à vous anéantir. Ils lâchent un chargeur de balles lorsqu'ils sont tués. |
@@ -421,10 +423,10 @@ image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
 Balaises et rapides, ces vers attaquent au corps-à-corps et peuvent encaisser plusieurs coups de fusil à pompe avant de succomber. Il est préférable de maintenir une certaine distance. |
 image:images/monster-flesh-worm.png[Flesh Worm,100,100,width=100%]
 | **Ver Furtif** +
-Ces variantes du Ver de Chair ont été équipé avec des capacités furtives qui les rendent pratiquement invisibles. |
+Certains Vers de Chair peuvent courber la lumière autour d'eux, les rendant presque invisibles dans les environnements plus obscurs et remplis. |
 image:images/monster-stealth-worm.png[Stealth Worm,100,100,width=100%]
 | **Larvillon** +
-Larves aliens flottantes qui vous chargent à distance. |
+Des larves aliens ionisées qui infligent des dégâts surprenants lorsqu'elle vous plaque. |
 image:images/monster-hatchling.png[Hatchling,100,100,width=100%]
 | **Matribite** +
 Quelle mère cinglé envoie ses propres bébés se battre? Ainsi est le devoir de l'empire. |
@@ -445,15 +447,15 @@ image:images/monster-octaminator.png[Octaminator,100,100,width=100%]
 S'ils ne vous mettent pas en feu, ils ruinent votre travail en ramenant leurs amis de l'au-delà. |
 image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
 | **Limace de Combat** +
-Ces monstres de chair génétiquement modifiés ont été équipés de lance-flammes à longue portée, ce qui en fait des chars vivants et glissants. |
+Ces monstres de chair glissant génétiquement modifiés ont été équipés de lance-flammes à longue portée. |
 image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 | **Technospider** +
-Ces créatures cybernétiques tirent des armes à haute capacité d’énergie poliarque, ce qui fait d'eux un défi mortel. |
+Ces créatures cybernétiques tirent des armes à haute capacité d'énergie poliarque, ce qui fait d'eux un défi mortel. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
 | **Grosse Technospider** +
 Ce char avec des jambes est équipé d'un minigun à haute cadence et il demandera un effort considérable pour l'achever. Immunisé contre les explosions de missiles et de barils. |
 image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
-| **Assault Tripod** +
+| **Trépied d'Assaut** +
 Le mélange ultime de technologies militaire et de manipulations génétiques, ces créatures à trois pattes sont rapides, lourdement blindés et équipés d'un lance-missiles que vous souhaiterez éviter. Elles sont immunisées aux explosions de missiles et de barils. |
 image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
 |==========================
@@ -475,7 +477,7 @@ Votre position et orientation actuelles sont indiquées par une flèche blanche.
 si l'objet <<specialitems,Carte Enquête Zone>> est découvertes).
 |==========================
 
-Lors de l'utilisation de la carte, le jeu n'est pas mis sur pause. Et les contrôles continuent de fonctionner comme d'habitude, mais les touches supplémentaires suivantes sont disponibles:
+Lors de l'utilisation de la carte, le jeu n'est pas mis sur pause. Les contrôles continuent de fonctionner comme d'habitude, avec les additions suivantes:
 
 [frame="none",cols="1,4",valign="middle",align="center",width="80%"]
 |==========================
@@ -483,9 +485,7 @@ Lors de l'utilisation de la carte, le jeu n'est pas mis sur pause. Et les contr�
 | **-** | Zoom arrière.
 | **+** | Zoom avant.
 | **0** | Zoom arrière au maximum.
-| **F** | Toggle whether the map follows the player. When disabled, the
-cursor keys can be used to pan the view of the map around independent of
-your current position.
+| **F** | Active/Désactive si la carte suit le joueur. Lorsque désactivé, utilisées les touches du curseur pour déplacer la vue de la carte indépendamment de votre position actuelle.
 | **G** | Active/Désactive la grille de la carte.
 | **M** | Ajoutez un marque-page sur la carte à votre position actuelle.
 | **C** | Effacer tous les marque-pages.
@@ -502,7 +502,7 @@ Ces barils explosifs parsèment de nombreux niveaux. Quelques tirs avec le pisto
 image:images/hazard-barrels.png[Barrels,150,150,width=100%]
 | **Sols Nocifs** |
 
-La lave rouge brûlante et la boue radioactive ne sont que deux des types de sols nocifs que vous pouvez rencontrer dans les niveaux de Freedoom. Si vous devez marcher dessus, essayez de trouver une <<specialitems,combinaison de secours>>, mais sachez qu'elle ne vous protégera que pour un temps limité. |
+La lave rouge brûlante et la boue radioactive ne sont que deux des types de sols nocifs que vous pouvez rencontrer dans les niveaux de Freedoom. Si vous devez marcher dessus, essayez de trouver une <<specialitems,combinaison de secours>>, un chemin plus court à travers la zone, ou une façon de traverser la zone sans toucher le sol. |
 image:images/hazard-slime.png[Radioactive slime,150,150,width=100%]
 | **Plafonds Écraseur** |
 
@@ -556,16 +556,16 @@ Si vous gallerez avec la difficulté du jeu, ca vaux peut-ête le coup d'examine
 .Joue à Scythe MAP09 avec Freedoom.
 image::images/scythe-map09.png[Scythe MAP09,width="640",pdfwidth="70vw",align="center"]
 
-Une des meilleures fonctionnalités de Freedoom est sa compatibilité avec le catalogue de milliers de niveaux créés par les fans pour les jeux classiques _Doom_ . À quelques exceptions près, les mods et niveaux les plus populaires pour _Doom_ et _Doom II_ peuvent également être joués avec Freedoom. Le plus grand répertoire de mods _Doom_ est l'archive idgames, une interface de navigation pour l'archive https://www.doomworld.com/idgames/[peut être trouvée sur Doomworld].
+Une des meilleures fonctionnalités de Freedoom est sa compatibilité avec le catalogue de milliers de niveaux créés par les fans pour les jeux classiques _Doom_ . La plupart des mods et niveaux les plus populaires pour _Doom_ et _Doom II_ peuvent également être joués avec Freedoom. Le plus grand répertoire de mods _Doom_ est l'archive idgames, une interface de navigation pour l'archive https://www.doomworld.com/idgames/[peut être trouvée sur Doomworld].
 
-Charger un fichier `.wad` est généralement assez simple. Pour les mods fabriqués pour le premier _Doom_, utilisez Freedoom: Phase 1 (`freedoom1.wad`); pour les autres fabriqués pour _Doom 2_ ou _Final Doom_, utilisez Freedoom: Phase 2 (`freedoom2.wad`).
+Pour les mods fabriqués pour le premier _Doom_, utilisez Freedoom: Phase 1 (`freedoom1.wad`); pour les autres fabriqués pour _Doom 2_ ou _Final Doom_, utilisez Freedoom: Phase 2 (`freedoom2.wad`).
 Si vous vous servez de la ligne de commande, utilisez le paramètre `-file` lorsque vous démarrez le jeu. Par exemple, pour charger le fichier `scythe.wad`:
 
   mon-portage-favori -iwad freedoom2.wad -file scythe.wad
 
 Si vous utilisez pas la ligne de commande, vous pouvez cliquer glisser le fichier `.wad` sur l'icône de votre portage dans votre gestionnaire de fichiers -- plusieurs portages supporte cette fonctionnalité.
 
-=== Suggestions
+=== Ressources Suggérées
 
 Au cours de plus de deux décennies, littéralement des milliers de niveaux _Doom_ ont été créés, et il y en a tellement qu'il peut être difficile de savoir par où commencer. Voici quelques suggestions pour trouver le meilleur contenu:
 
@@ -573,7 +573,7 @@ Au cours de plus de deux décennies, littéralement des milliers de niveaux _Doo
 
 * https://www.doomworld.com/cacowards/[Les Cacowards] est une cérémonie annuelle organisée par Doomworld, avec une remise de prix qui récompense les meilleures sorties de la communauté _Doom_ au cours de la dernière année. C'est un bon moyen de découvrir les développements plus récents, y compris les mods les plus inhabituels que les gens publient.
 
-* La https://doomwiki.org/wiki/List_of_notable_WADs[Liste des WADs notables] du Doom Wiki contient une liste exhaustive de WADs fait par les fans. Le Doom Wiki comprend des informations détaillées sur de tels mods, ce qui comprends des captures d'écran, des cartes et des statistiques par niveau, c'est donc un point d'entrée utile pour découvrir des mods intéressants.
+* La https://doomwiki.org/wiki/List_of_notable_WADs[Liste des WADs notables] du Doom Wiki contient une liste exhaustive de WADs fait par les fans avec des captures d'écran, des cartes et des statistiques par niveau.
 
 * L'interface de Doomworld vers l'archive idgames inclut la capacité de lister les https://www.doomworld.com/idgames/index.php?top[meilleurs niveaux] en fonction du score cinq étoiles attribuées par les visiteurs du site.
 
@@ -581,14 +581,14 @@ Au cours de plus de deux décennies, littéralement des milliers de niveaux _Doo
 
 == Triches ==
 
-Si vous trouvez le jeu trop difficile, vous pouvez toujours jouer à un <<skill,niveau de difficulté plus facile>>. Cependant, si cela ne suffit pas, ou si vous voulez expérimenter avec les mécaniques du jeu, il y a quelques triches que vous pouvez utiliser:
+Si vous trouvez le jeu trop difficile, peu importe le <<skill,niveau de difficulté>>, ou si vous voulez expérimenter avec les mécaniques du jeu, voici quelques triches que vous pouvez utiliser:
 
 [cols="2,4",width="90%",align="center",valign="middle"]
 |==========================
 | **IDDQD** | Mode Dieu, vous rend invulnérable à tous les dégâts.
 | **IDFA** | Donne toutes les armes et munitions.
 | **IDKFA** | Donne toutes les armes, munitions et clés.
-| **IDCLIP** | Mode Noclip, vous permet de traverser les murs
+| **IDCLIP** | Mode Noclip, vous permet de traverser les murs et les acteurs.
 | **IDDT** | Révèle entièrement la carte; à rentrer deux fois pour révéler tous les ennemis et objets.
 | **IDCLEVxy** | Commence une nouvelle partie (ce qui réinitialise tout) sur ExMy (Phase 1) ou MAPxy (Phase 2).
 | **IDMUSxy** | Changez la musique pour celle de ExMy (Phase 1) ou MAPxy (Phase 2).
@@ -621,17 +621,65 @@ Tout le monde mérite de pouvoir apprécier la merveille qu'est Doom et de parti
 
 Freedoom est un projet au https://www.gnu.org/philosophy/free-sw.html[contenu libre] avec de nombreux contributeurs venant du monde entier. Il est disponible à la fois "free" ^1^ en coût ("free" ^1^ comme une bière gratuite) et en droit de modification et de redistribution ("free" ^1^ comme la liberté d'expression) aux utilisateurs finaux, à condition que la licence originale soit incluse et/ou visible aux utilisateurs de versions modifiées ou redistribuées. 
 
-Si vous souhaitez contribuer au projet Freedoom, veuillez consulter https://github.com/freedoom/freedoom[la page du projet], https://www.doomworld.com/forum/17-freedoom/[le forum de discussion] et https://discord.gg/9DA3fut[le chat discord].
+Si vous souhaitez contribuer au projet Freedoom, veuillez consulter
+les hubs communautaires suivants:
 
-https://help.github.com/en/github[Comment utiliser le contrôle de version Git pour des contributions]
+* Le dépots de source de Freedoom: +
+https://github.com/freedoom/freedoom
 
-https://guides.github.com/activities/forking/[Comment faire un "fork" d'un projet et crée un "pull request" avec Git]
+* Le Forum de discussion Freedoom sur Doomworld: *
+https://www.doomworld.com/forum/17-freedoom/
+
+* La Guilde Discord: *
+https://discord.gg/9DA3fut
+
+
+Pour savoir comment soumettre un ajout, veuillez consulter les pages suivantes sur l'utilisation GitHub:
+
+* Comment utiliser le contrôle de version Git pour des contributions: *
+https://help.github.com/en/github
+
+* Comment faire un "fork" d'un projet et crée un "pull request" avec Git: *
+https://guides.github.com/activities/forking/
 
 ^1^ Le mot "free" en Anglais veut à la fois dire gratuit et libre.
-
-<<<
 
 [[reusing]]
 == Réutilisation de portions de Freedoom ==
 
-Puisque https://freedoom.github.io/about.html[Freedoom est libre], d'autres projets ont utilisé des éléments de Freedom.  Nous pensons que c'est une excellente utilisation du projet et nous l'encourageons. Si vous utilisez des portions de Freedoom dans votre projet, veuillez nous informer en formulant un "issue" ou un "pull request" sur https://github.com/freedoom/freedoom.github.io[la page du projet Freedoom].
+Puisque https://freedoom.github.io/about.html[Freedoom est libre], d'autres projets ont utilisé des éléments de Freedom.  Nous pensons que c'est une excellente utilisation du projet et nous l'encourageons. Si vous utilisez des portions de Freedoom dans votre projet, veuillez nous informer en formulant un "issue" ou un "pull request" sur la page du projet Freedoom
+https://github.com/freedoom/freedoom .
+
+[[licence]]
+=== BSD 3-Clause copyright licence
+
+Copyright © 2001-2023
+Contributors to the Freedoom project.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+  * Neither the name of the Freedoom project nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS
+IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+For a list of contributors to the Freedoom project, see the file
+CREDITS.
