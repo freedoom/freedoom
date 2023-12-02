@@ -130,7 +130,7 @@ Lorsque vous aurez fini de jouer à Freedoom, appuyez sur _Échap_ pour afficher
 
 Quelques raccourcis clavier pour accéder aux fonctions du menu instantanément.
 
-[cols="2,6,16",width="90%",align="center",valign="middle"]
+[cols="4,6,15",width="90%",align="center",valign="middle"]
 |==========================
 | **Échap** | <<menus,Menu>> | Affiche le menu principal.
 | **F1** | Info | Affiche l'écran d'aide qui présente des informations sur les objets dans le jeu.
@@ -253,11 +253,11 @@ Pour ramasser quelque chose, il suffit tout simplement de marcher dessus -- un m
 
 Vous commencez le jeu avec seulement un pistolet, 50 balles et vos poings. En explorant le niveau, vous trouverez plus d'armes et de munitions que vous pourrez utiliser.
 
-En appuyant sur les touches numériques du clavier, vous pouvez basculer vers l'arme liée à la touche (si vous l'avez).En dehors des armes de corps à corps, chaque arme consomme un type de munitions, qui peut être trouvé quelque part dans le niveau.
+En appuyant sur les touches numériques du clavier, vous pouvez basculer vers l'arme liée à la touche (si vous l'avez). En dehors des armes de corps à corps, chaque arme consomme un type de munitions, qui peut être trouvé quelque part dans le niveau.
 
 [options="header",cols="3,1,9",valign="middle",width="100%"]
 |==========================
-| Arme | Touche | Description
+| Arme | Nº | Description
 | **Poing** | 1 | Si vous n'avez plus de munitions, vous pouvez toujours frapper les monstres à mains nues. _Munitions:_ Aucune
 | **Scie** +
 image:../sprites/csawa0.png[Ripsaw] |
@@ -583,7 +583,7 @@ Au cours de plus de deux décennies, littéralement des milliers de niveaux _Doo
 
 Si vous trouvez le jeu trop difficile, peu importe le <<skill,niveau de difficulté>>, ou si vous voulez expérimenter avec les mécaniques du jeu, voici quelques triches que vous pouvez utiliser:
 
-[cols="2,4",width="90%",align="center",valign="middle"]
+[cols="2,6",width="100%",align="center",valign="middle"]
 |==========================
 | **IDDQD** | Mode Dieu, vous rend invulnérable à tous les dégâts.
 | **IDFA** | Donne toutes les armes et munitions.
