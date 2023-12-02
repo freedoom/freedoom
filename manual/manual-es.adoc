@@ -1,17 +1,19 @@
 = Manual de Freedoom
 // SPDX-License-Identifier: BSD-3-Clause
+:toc:
+:toc-title:
+
+image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
 Bienvenido a Freedoom, un juego completo que es software
 https://www.gnu.org/philosophy/free-sw.html[libre]
 y de https://opensource.org/osd/[código abierto].
-Freedoom esta disponible bajo una licencia BSD modificada, lo que significa
+Freedoom esta disponible bajo una <<licence,licencia BSD modificada>>, lo que significa
 que cualquiera es libre de compartirlo, modificarlo y reutilizar partes de el.
 
-Para más detalles, ver la <<reusing,sección de reuso>>.
+Para más detalles, ver el sitio web en https://freedoom.github.io/.
 
 Traducción: NecSau, DoomguyAlighieri, Alaux
-
-image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
 == Instalar Freedoom
 
@@ -61,7 +63,7 @@ presionar la tecla _Esc_ en tú teclado.
 
 image::images/menu-mainmenu.png[Menú principal de Freedoom,align="center",width=380,pdfwidth=50vw]
 
-[cols="1,4",width="90%",align="center",valign="middle"]
+[cols="2,5",width="100%",align="center",valign="middle"]
 |==========================
 | <<newgame,**New game**>> | Comienza un Nuevo Juego, abandonando el juego en
 curso (Si ya estas jugando).
@@ -70,9 +72,9 @@ opciones disponibles dependen del source port que eses usando.
 | <<savegame,**Load Game**>> | Carga un juego guardado.
 | <<savegame,**Save Game**>> | Guarda el juego en curso, para que puedas
 continuar jugando después.
-| **Read This!** | Despliega una pantalla de ayuda que muestra una descripción
-de los objetos que puedes encontrar en el juego.
-| **Quit Game** | Termina el juego y regresa al Sistema operativo.
+| **Read This!** | Despliega una pantalla de ayuda con los objetos
+que puedes encontrar en el juego.
+| **Quit Game** | Salir al Sistema operativo.
 |==========================
 
 [[newgame]]
@@ -100,13 +102,15 @@ el numero de monstruos con los que te encontraras.
 
 image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwidth=50vw]
 
-[cols="1,3,8",width="90%",align="center",valign="middle"]
+[cols="1,5,13",width="90%",align="center",valign="middle"]
 |==========================
-| 1 | **Please Don’t Kill Me!** | El nivel de dificultad más sencillo. Este es
+| 1 | **Please Don’t +
+Kill Me!** | El nivel de dificultad más sencillo. Este es
 esencialmente igual a _Will This Hurt?_, excepto que el daño enemigo se reduce
 a la mitad.
 | 2 | **Will This Hurt?** | Nivel de dificultad fácil.
-| 3 | **Bring on the Pain.** | El nivel de dificultad default.
+| 3 | **Bring On +
+The Pain.** | El nivel de dificultad default.
 | 4 | **Extreme Carnage.** | Nivel de dificultad difícil.
 | 5 | **MAYHEM!** | **No Recomendado**. Esto es equivalente a _Extreme Carnage_
 con la excepción de que los ataques de los monstruos son el doble de rápidos, y
@@ -159,7 +163,7 @@ lo dejaste la próxima vez que juegues.
 Los siguientes son algunos útiles atajos del teclado que pueden ahorrarte
 tiempo para acceder a funciones comunes del menú.
 
-[cols="1,3,7",width="90%",align="center",valign="middle"]
+[cols="2,6,16",width="90%",align="center",valign="middle"]
 |==========================
 | **Esc** | <<menus,Menu>> | Muestra el menú principal.
 | **F1** | Help | Muestra la pantalla de ayuda que muestra información de los
@@ -194,29 +198,26 @@ interruptor para abrir un paso. Esto le da un elemento de
 rompecabezas al juego que se añade a la acción.
 
 Estos son los controles principales del juego para interactuar con el entorno:
-[options="header",cols="3,1,2,1",width="70%",align="center",halign="center"]
+[options="header",cols="1,1,1,1",width="100%",align="center",halign="center"]
 |==========================
-| Function | Primera tecla default^1^ | Segunda tecla default | Comúnmente configurado para^2^
-| Avanzar/Retroceder | Up/Down | Movimiento del mouse (o Mouse2 para avanzar) | W/S
-| Mover a la izquierda/derecha | ,/. | Alt (o Mouse3) + izquierda/derecha | A/D
-| Girar a la izquierda/derecha^3^ | Izquierda/Derecha | Movimiento del mouse | Movimiento del mouse
+| Function | Primera control default | Segunda control default | Comúnmente configurado para
+| Avanzar / Retroceder | Up/Down | Movimiento del mouse (o Mouse2 para avanzar) | W/S^1^
+| Mover a la izquierda / derecha | ,/. | Alt (o Mouse3) + izquierda / derecha | A/D
+| Girar a la izquierda / derecha^2^ | Izquierda / Derecha | Movimiento del mouse | Movimiento del mouse
 | Disparo | Ctrl | Mouse1 | Mouse1
 | Usar | Espaciadora | Doble clic Mouse2 o Mouse3 | E
-| Correr^4^ | Mayúsculas | - | Mayúsculas
+| Correr^3^ | Mayúsculas | - | Mayúsculas
 |==========================
-^1^Tu source port debería permitirte usar cualquier botón de tu controlador o mouse;
-por brevedad, este manual usa "tecla" para incluir otros controles según
-lo requieran las circunstancias.
 
-^2^En un teclado QWERTY las teclas W, S, A y D forma un segundo juego
+^1^En un teclado QWERTY las teclas W, S, A y D forma un segundo juego
 de teclas de dirección para la mano izquierda.
 
-^3^Si tienes un monstruo, un barril o un oponente PvP cruzando el medio
+^2^Si tienes un monstruo, un barril o un oponente PvP cruzando el medio
 de tu pantalla cuando tu arma se dispara, el juego ajustará tu puntería
 vertical por ti. Algunos source ports te permitirán desactivar este
 comportamiento y ajustar la puntería vertical manualmente.
 
-^4^La mayoría de los source ports tienen una opción de "Correr siempre"
+^3^La mayoría de los source ports tienen una opción de "Correr siempre"
 ("Always Run"), en la que si mantienes pulsada esta tecla, irás más despacio.
 El personaje del jugador no se cansa, así que la velocidad lenta
 sólo es necesaria para aumentar la precisión.
@@ -350,52 +351,53 @@ Presiona la tecla numerada en el teclado para cambiar al arma correspondiente
 (si lo tiene). Con excepción de las armas cuerpo a cuerpo, cada
 arma consume cierto tipo de munición, que puede encontrarse en algún lugar del nivel.
 
-[options="header",cols="3,1,5",valign="middle",width="100%"]
+[options="header",cols="3,1,9",valign="middle",width="100%"]
 |==========================
 | Arma | Tecla | Descripción
 | **Puño** | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
-monstruos con tus manos desnudas. Munición: Ninguna
+monstruos con tus manos desnudas. _Munición:_ Ninguna
 | **Sierra de hender** +
 image:../sprites/csawa0.png[Sierra de hender] |
 1 | Diseñada para cortar a través del madera, pero la
 sierra de hender funciona igual de bien como arma cuerpo a cuerpo para cortar
-a través de la carne. Munición: Ninguna
+a través de la carne. +
+_Munición:_ Ninguna
 | **Pistola** +
 image:../sprites/pista0.png[Pistola] |
 2 | Tu arma inicial. Su objetivo principal es permitirte abrirte camino hacia
 una mejor arma, y presionar interruptores disparables sin desperdiciar
-una segunda bala. Munición: Balas
+una segunda bala. _Munición:_ Balas
 | **Escopeta de bombeo** +
 image:../sprites/shota0.png[Escopeta de bombeo] |
 3 | Dispara siete perdigones en forma de abanico, lo que le permite golpear
-múltiples objetivos o uno grande. Munición: Perdigones
+múltiples objetivos o uno grande. _Munición:_ Perdigones
 | **Escopeta de doble cañón** +
 image:../sprites/sgn2a0.png[Escopeta de doble cañón] |
 3 | Mayor tolerancia a cargas potentes significa mejor fragmentación
 del proyectil, para casi un 50% más de impactos por cartucho a través de
 una dispersión más amplia. Es buena a corto alcance contra grupos de
-enemigos. Munición: Perdigones
+enemigos. _Munición:_ Perdigones
 | **Minigun** +
 image:../sprites/mguna0.png[Minigun] |
 4 | Un uso mucho mejor para los balas que la pistola.
-Hasta cuarenta segundos de traer el dolor para mantenerte a salvo.
-Munición: Balas
+Hasta cuarenta segundos de traer el dolor para mantenerte a salvo. +
+_Munición:_ Balas
 | **Lanzamisiles** +
 image:../sprites/launa0.png[Lanzamisiles] |
 5 | Dispara misiles que tratan mucho daño en el impacto, y explotan para matar
 pequeños monstruos cercanos. ¡Ten cuidado de no ser atrapado en la explosión!
-Munición: Misiles
+_Munición:_ Misiles
 | **Arma de energía polarica** +
 image:../sprites/plasa0.png[Arma de energía polarica] |
 6 | Produce un continuo flujo de proyectiles de
-energía polarica. Los cuales son efectivos contra monstruos más fuertes.
-Munición: Energía
+energía polarica. Los cuales son efectivos contra monstruos más fuertes. +
+_Munición:_ Energía
 | **SKAG 1337** +
 image:../sprites/bfuga0.png[SKAG 1337] |
 7 | Un arma experimental que lanza una bola orbe de energía polarica que
 hace una gran cantidad de daño, y suelta una ráfaga secundaria de energía
 en la misma dirección. Lenta para disparar, vale la pena esperar.
-Munición: Energía
+_Munición:_ Energía
 |==========================
 
 [[ammo]]
@@ -534,14 +536,16 @@ image:../sprites/pinva0.png[Artefacto de vanguardia] |
 Te hace inmune a todo el daño por tiempo limitado.
 |==========================
 
+<<<
+
 [[enemies]]
 === Enemigos
 
 Los niveles están llenos de monstruos que no tienen otro objetivo más que
-impedir que completes tu misión. Aquí hay una selección de algunos de estos
+impedir que completes tu misión. Aquí hay una selección de
 monstruos con los que puedes encontrarte.
 
-[frame="none",cols="2,1",valign="middle",grid="none",align="center",width="100%"]
+[frame="none",cols="5,2",valign="middle",grid="none",align="center",width="100%"]
 |==========================
 | **Zombi** +
 Estas obradores de iniquidad con muerte cerebral están armadas con una pistola y tienen
@@ -596,12 +600,12 @@ Si no te está prendiendo fuego, está deshaciendo todo tu arduo trabajo al trae
 a sus amigos de entre los muertos. |
 image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
 | **Babosa de batalla** +
-Estos monstruos de carne diseñados genéticamente han sido equipados con lanzallamas
-de larga distancia, convirtiéndolos en tanques vivientes y deslizantes. |
+Estos tanques vivientes y deslizantes diseñados genéticamente han sido
+equipados con lanzallamas de larga distancia. |
 image:images/monster-combat-slug.png[Babosa de batalla,100,100,width=100%]
 | **Tecnaraña** +
 Estas criaturas cibernéticas han sido equipadas con ametralladoras de energía
-polarica, lo que las convierte en un desafío mortal. |
+polarica. |
 image:images/monster-technospider.png[Tecnaraña,100,100,width=100%]
 | **Tecnaraña grande** +
 Este tanque con patas está equipado con una ametralladora de fuego rápido y
@@ -659,7 +663,7 @@ independientemente de tu posición actual.
 Por si los monstruos no fueran suficientes, el ambiente mismo posee peligros
 que pueden lastimarte, ¡o incluso matarte!
 
-[frame="none",cols="2,5,3",valign="middle",grid="none",width="100%"]
+[frame="none",cols="3,7,3",valign="middle",grid="none",width="100%"]
 |==========================
 | **Barriles** |
 Estos barriles explosivos ensucian muchos de los niveles. Varios disparos con
@@ -690,8 +694,8 @@ tu avatar de jugador morirá. Puedes tomar esto como una señal para tomar
 un descanso del juego, o recargar tu último juego guardado, o presionar
 Usar para reiniciar el nivel con plena salud pero sin equipo excepto tu
 pistola y 50 balas. (Algunos source ports no hacen esto último, sino
-que guardan el juego al comienzo de cada nivel y al presionar Usar se
-carga ese juego).
+que guardan el juego al comienzo de cada nivel, en cuyo caso al presionar
+_Usar_ se carga ese juego).
 
 No hay límite de vidas.
 
@@ -739,7 +743,7 @@ considerar algunas de estas sugerencias:
   oponentes. Un solo disparo de escopeta en el momento oportuno dirigido a un
   barril puede derribar a varios enemigos a la vez. La explosión de un barril
   puede desencadenar otro, por lo que a veces puedes desencadenar una reacción
-  en cadena que derriba a toda una multitud, ¡pero ten cuidado de que no te
+  en cadena que derriba a toda una multitud. ¡Ten cuidado de que no te
   incluya a ti!
 
 * Si un monstruo es herido por otro monstruo, tomará represalias contra el que
@@ -824,12 +828,11 @@ siguientes son algunas sugerencias sobre dónde buscar el mejor contenido:
 
 == Trucos
 
-Si encuentra el juego demasiado difícil, siempre puede intentar jugar en
-<<skill,un nivel de dificultad más fácil>>. Sin embargo, si eso no es
-suficiente, o si solo quieres experimentar con la mecánica del juego,
-hay una serie de trucos a los que puedes recurrir:
+Si no puedes pasar de cierto punto, o si quieres experimentar con
+la mecánica del juego, hay algo chetos a los que puedes recurrir.
+(Introdúcelos durante el juego, no abras la consola.)
 
-[cols="2,4",width="90%",align="center",valign="middle"]
+[cols="2,6",width="100%",align="center",valign="middle"]
 |==========================
 | **IDDQD** | Modo Dios. Te hace invulnerable a todo el daño.
 | **IDFA** | Te da todas las armas y munición.
@@ -903,18 +906,23 @@ libertad de expresión) para los usuarios finales, siempre que la licencia de
 software original esté incluida y/o sea visible para los usuarios del software
 modificado o versiones redistribuidas.
 
-Si te gustaría contribuir al proyecto Freedoom, por favor revisa la
-https://github.com/freedoom/freedoom[página del proyecto],
-https://www.doomworld.com/forum/17-freedoom/[foros de discusión], y el
-https://discord.gg/9DA3fut[chat de discord].
+Si te gustaría contribuir al proyecto Freedoom, por favor revisa:
 
-https://help.github.com/es/github[Cómo usar el control de versiones de Git para
-contribuciones].
+* la página del proyecto: +
+https://github.com/freedoom/freedoom
 
-https://guides.github.com/activities/forking/[Cómo bifurcar un proyecto y crear
-una solicitud de extracción con Git (Revisar)].
+* los foros de discusión: +
+https://www.doomworld.com/forum/17-freedoom/
 
-<<<
+* el chat de Discord: https://discord.gg/9DA3fut
+
+Para más información sobre cómo enviar una adición, consulte las páginas sobre cómo utilizar GitHub:
+
+* Cómo usar el control de versiones de Git para contribuciones: +
+https://help.github.com/es/github
+
+* Cómo bifurcar un proyecto y crear una solicitud de extracción con Git (Revisar): +
+https://guides.github.com/activities/forking/
 
 [[reusing]]
 == Reusar porciones Freedoom
@@ -923,6 +931,39 @@ Dado que https://freedoom.github.io/about.html[Freedoom es libre], algunos
 otros proyectos han utilizado los materiales de Freedoom. Creemos que este es
 un gran uso del proyecto y debe fomentarse. Si tu usas partes de Freedoom en tu
 proyecto, puedes informarnos presentando una solicitud a
-https://github.com/freedoom/freedoom.github.io[la página web del proyecto
-Freedoom].
+la página web del proyecto Freedoom en https://github.com/freedoom/freedoom.github.io.
 
+
+[[licence]]
+=== Licencia BSD modificada (inglés)
+
+Copyright © 2001-2023
+Contributors to the Freedoom project.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+  * Neither the name of the Freedoom project nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS
+IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+For a list of contributors to the Freedoom project, see the file
+CREDITS.
