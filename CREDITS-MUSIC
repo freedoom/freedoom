@@ -115,7 +115,7 @@ Story: (same as Phase 2)
 	DM11: "Stanky Leg Specialist" by Lola "BlueWorrior" Harvey
 	DM12: "Parallax" by Korp
 	DM13: "Shut It" by Korp
-	DM14: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
+	DM14: "The Heroic Battle" by Tyler "Picklehammer" Pantella
 	DM15: "Neat" by Ralph "Ralphis" Vickers
 	DM16: "Deathmatch Construct" by Korp
 
@@ -178,12 +178,13 @@ MAP30: "Paranoia" by Tyler "Picklehammer" Pantella
 
 DM03: "Music for Freedoom 2" by Jeremy "Vandalorian" Emerson
 DM05: map01.mid by Ralph "Ralphis" Vickers (moved to MAP07, not removed)
-DM06: "The Heroic Battle" by Tyler "Picklehammer" Pantella
+DM06: "The Heroic Battle" by Tyler "Picklehammer" Pantella (moved to DM14, not removed)
 DM07: dave3d30.mid by jute
 DM08: Dave3d13.mid by jute
 DM11: "Spamhambled In Space" by Mark "TheMisterCat" McGill-Smith
 DM12: dave3d24.mid by jute
 DM13: e1m1.mid by Ralph "Ralphis" Vickers
+DM14: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
 DM17: d_stlks3.mid by Vincent "Vicious" Fong
 DM18: dave3d06.mid by jute
 DM19: dave3d27.mid by jute
