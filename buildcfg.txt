@@ -492,11 +492,6 @@ D_BUNNY
 
 #else  /* #ifndef PHASE2 */
 
-; doom 2 music
-D_READ_M
-D_DM2TTL
-D_DM2INT
-
 #ifndef FREEDM
 
 D_RUNNIN = D_MAP01
@@ -531,6 +526,9 @@ D_SHAWN3 = D_MAP29
 D_OPENIN = D_MAP30
 D_EVIL   = D_MAP31
 D_ULTIMA = D_MAP32
+D_READ_M
+D_DM2TTL
+D_DM2INT
 
 #else /* FREEDM */
 
