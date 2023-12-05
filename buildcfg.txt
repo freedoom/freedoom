@@ -568,6 +568,9 @@ D_SHAWN3 = D_DM29
 D_OPENIN = D_DM30
 D_EVIL   = D_DM31
 D_ULTIMA = D_DM32
+D_DM2TTL = D_FDMTTL
+D_DM2INT = D_FDMINT
+D_READ_M = D_FDMRDM
 
 #endif /* #ifdef FREEDM */
 #endif /* #ifndef PHASE2 */
