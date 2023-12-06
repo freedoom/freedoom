@@ -3,7 +3,7 @@
 :toc:
 :toc-title:
 
-image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
+image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=45vw]
 
 Bienvenue sur Freedoom, un jeu complet qui est
 https://www.gnu.org/philosophy/free-sw.html[libre]
@@ -15,9 +15,9 @@ Pour plus de détails, consultez le site web https://freedoom.github.io/.
 
 == Installation de Freedoom
 
-Freedoom est distribué sous la forme de trois fichiers nommés « freedoom1.wad »,
-« freedoom2.wad » et « freedm.wad » qui contiennent les graphismes, les niveaux,
-la musique et les effets sonores qui font partie du jeu.
+Freedoom est distribué sous la forme de trois fichiers nommés `freedoom1.wad`,
+`freedoom2.wad` et `freedm.wad` qui contiennent les graphismes, les niveaux,
+la musique et les effets sonores qui composent le jeu.
 
 Pour jouer au jeu, vous pouvez utiliser l'une des nombreuses adaptations (« portages »)
 du programme Doom que les fans ont développé pour les ordinateurs modernes.
@@ -37,7 +37,7 @@ pouvez essayer l'une des méthodes suivantes :
 
 * Placez les fichiers `.wad` de Freedoom dans le même dossier que le portage
   avant de le lancer. Il est possible que le portage les détecte automatiquement.
-* Si vous le lancez à partir de la ligne de commande, essayez
+* Pour le lancer avec la ligne de commande, essayez
   ex. `mon-portage-favori -iwad freedoom1.wad`.
 
 Freedoom est séparé en deux parties, _Freedoom: Phase 1_ (`freedoom1.wad`) et
@@ -46,7 +46,7 @@ de huit niveaux, tandis que la _Phase 2_ est une campagne unique de 30 niveaux.
 Ça revient à 62 niveaux à jouer, plus des niveaux secrets -- si vous pouvez 
 découvrir comment les atteindre.
 
-FreeDM («freedm.wad») est un ensemble de niveaux sans monstre, conçu
+FreeDM (`freedm.wad`) est un ensemble de niveaux sans monstre, conçu
 spécifiquement pour le PvP. Si vous souhaitez savoir comment héberger une
 partie multijoueur, veuillez consulter les instructions de votre portage.
 
@@ -120,7 +120,7 @@ Si vous sauvegardez fréquemment votre partie, vous allez peut-être vouloir uti
 
 Vous pouvez charger la partie de votre emplacement de sauvegarde rapide à travers le menu ou appuyant sur la touche _F9_.
 
-[**Attention:** Le portage Chocolate Doom réplique un bug du jeu _Doom_ original qui fait planter le jeu lorsque vous sauvegardez une partie avec trop de choses qui se passent dans le niveau. Ceci peut-être désactiver dans chocolate-setup sous la catégorie « Vanilla savegame limit ».]
+[**Attention:** Le portage Chocolate Doom réplique un bug du jeu _Doom_ original qui fait planter le jeu lorsque vous sauvegardez une partie avec trop de choses qui se passent dans le niveau. Ceci peut-être désactiver dans `chocolate-setup` sous la catégorie « Vanilla savegame limit ».]
 
 === Quitter le jeu
 
@@ -255,9 +255,9 @@ Vous commencez le jeu avec seulement un pistolet, 50 balles et vos poings. En ex
 
 En appuyant sur les touches numériques du clavier, vous pouvez basculer vers l'arme liée à la touche (si vous l'avez). En dehors des armes de corps à corps, chaque arme consomme un type de munitions, qui peut être trouvé quelque part dans le niveau.
 
-[options="header",cols="3,1,9",valign="middle",width="100%"]
+[options="header",cols="2,2,9",valign="middle",width="100%"]
 |==========================
-| Arme | Nº | Description
+| Arme | Touche | Description
 | **Poing** | 1 | Si vous n'avez plus de munitions, vous pouvez toujours frapper les monstres à mains nues. _Munitions:_ Aucune
 | **Scie** +
 image:../sprites/csawa0.png[Ripsaw] |
@@ -617,6 +617,8 @@ Les auteurs de Doom, id Software, ont historiquement été très généreux enve
 
 Tout le monde mérite de pouvoir apprécier la merveille qu'est Doom et de participer dans sa communauté de modding qui a enduré après tant d'années. Mais cette communauté mérite aussi sa liberté et son indépendance. En fournissant une alternative libre que tout le monde peut jouer, partager, modifier et réutiliser, nous espérons que c'est quelque chose que Freedoom peut aider à offrir.
 
+<<<
+
 == Contribuer à Freedoom ==
 
 Freedoom est un projet au https://www.gnu.org/philosophy/free-sw.html[contenu libre] avec de nombreux contributeurs venant du monde entier. Il est disponible à la fois "free" ^1^ en coût ("free" ^1^ comme une bière gratuite) et en droit de modification et de redistribution ("free" ^1^ comme la liberté d'expression) aux utilisateurs finaux, à condition que la licence originale soit incluse et/ou visible aux utilisateurs de versions modifiées ou redistribuées. 
@@ -649,6 +651,8 @@ https://guides.github.com/activities/forking/
 
 Puisque https://freedoom.github.io/about.html[Freedoom est libre], d'autres projets ont utilisé des éléments de Freedom.  Nous pensons que c'est une excellente utilisation du projet et nous l'encourageons. Si vous utilisez des portions de Freedoom dans votre projet, veuillez nous informer en formulant une « issue » ou un « pull request » sur la page du projet Freedoom
 https://github.com/freedoom/freedoom .
+
+<<<
 
 [[licence]]
 === BSD 3-Clause copyright licence
