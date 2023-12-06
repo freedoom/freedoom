@@ -153,7 +153,7 @@ image::images/map01-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",al
 
 Freedoom est un jeu de tir à la première personne (FPS) en temps réel. Explorez une série de niveaux dans lesquels devez trouver le chemin vers la sortie. Un assortiment de monstres tentera de vous arrêter, et vous aurez besoin d'utiliser les armes à votre disposition pour vous défendre. Certaines parties des niveaux peuvent demeurer inaccessibles jusqu'à ce que vous trouviez une clé spécifique ou que vous trouviez un interrupteur pour ouvrir un passage. Cela signifie que le gameplay impliquera des puzzles d'exploration pour dénicher des objets cachés ainsi que des puzzles d'action en temps réel sur le placement et le timing de vos tirs.
 
-Voici un tableau avec les contrôles de base du jeu. **Les valeurs par défaut de Doom sont généralement considérées comme obsolètes ;** vérifiez votre portage pour savoir comment les reconfigurer. Des alternatives courantes sont fournies, mais il n'y a pas de « meilleure » solution qui convient pour tout le monde -- vous allez peut-être devoir expérimenter. Au minimum, vous devez être à l'aise en vous déplaçant dans l'une des quatre directions tout en tournant et en tirant simultanément.
+Voici un tableau avec les contrôles de base du jeu. **Les contrôles par défaut de Doom sont généralement considérées comme obsolètes ;** vérifiez votre portage pour savoir comment les reconfigurer. Des alternatives courantes sont fournies, mais il n'y a pas de « meilleure » solution qui convient pour tout le monde -- vous allez peut-être devoir expérimenter. Au minimum, vous devez être à l'aise en vous déplaçant dans l'une des quatre directions tout en tournant et en tirant simultanément.
 
 [options="header",cols="1,1,1,1",width="100%",align="center",halign="center"]
 |==========================
@@ -553,7 +553,7 @@ Si vous galérez avec la difficulté du jeu, ça vaut peut-être le coup d'exami
 [[wads]]
 == Jouer avec des WADS et mods faits par les fans ==
 
-.Jouer à Scythe MAP09 avec Freedoom.
+.Scythe MAP09 en utilisant Freedoom.
 image::images/scythe-map09.png[Scythe MAP09,width="640",pdfwidth="70vw",align="center"]
 
 Une des meilleures fonctionnalités de Freedoom est sa compatibilité avec le catalogue de milliers de niveaux créés par les fans pour les jeux classiques _Doom_ . La plupart des mods et niveaux les plus populaires pour _Doom_ et _Doom II_ peuvent également être joués avec Freedoom. Le plus grand répertoire de mods _Doom_ est l'archive idgames, une interface de navigation pour l'archive https://www.doomworld.com/idgames/[peut être trouvée sur Doomworld].
