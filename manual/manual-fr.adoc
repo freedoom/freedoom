@@ -332,8 +332,6 @@ image:../sprites/media0.png[Large Health Refill] |
 image:../sprites/soula0.png[Ectoplasmic Surge]
 |==========================
 
-<<<
-
 [[armor]]
 === Armure
 
@@ -350,6 +348,8 @@ image:../sprites/arm2a0.png[Attuned Force Field Armor Vest]
 L'armure normale absorbe un tiers des dégâts que vous recevez, ceci est arrondie vers le bas. Si vous avez 100% de vie et 100% d'armure, et que vous subissez 50% de dégâts, vous perdrez 34% de vie et 16% d'armure.
 
 L'armure blindée a un comportement légèrement différent : en plus de valoir 200% d'armure, elle absorbe également la moitié des dégâts. Étant donné que les petits boosts ajoutent le même type d'armure que vous avez déjà, il est peut-être préférable de ramasser l'armure blindée immédiatement si vous n'en avez pas déjà une.
+
+<<<
 
 [[keys]]
 === Clés
@@ -377,6 +377,8 @@ Ces formes sont utilisées de façon cohérente avec les icônes de la barre d'�
 Pour les clés squelettes, faites attention à la direction vers laquelle les cornes pointent. Par exemple, voici comment les icônes des clés apparaissent dans la barre d'état :
 
 image:images/key-icons.png[Key icons,align="center"]
+
+<<<
 
 [[specialitems]]
 === Objets spéciaux
@@ -407,6 +409,8 @@ Maximise votre santé et armure à 200%. Dure jusqu'à ce que vous preniez des d
 image:../sprites/pinva0.png[Vanguard Device] |
 Vous immunise contre tous les dégâts, vous permettant de surmonter les défenses écrasantes de l'ennemi et les pièges inévitables. Dure 30 secondes.
 |==========================
+
+<<<
 
 [[enemies]]
 === Ennemis
