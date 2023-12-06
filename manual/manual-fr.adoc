@@ -349,8 +349,6 @@ L'armure normale absorbe un tiers des dégâts que vous recevez, ceci est arrond
 
 L'armure blindée a un comportement légèrement différent : en plus de valoir 200% d'armure, elle absorbe également la moitié des dégâts. Étant donné que les petits boosts ajoutent le même type d'armure que vous avez déjà, il est peut-être préférable de ramasser l'armure blindée immédiatement si vous n'en avez pas déjà une.
 
-<<<
-
 [[keys]]
 === Clés
 
@@ -409,8 +407,6 @@ Maximise votre santé et armure à 200%. Dure jusqu'à ce que vous preniez des d
 image:../sprites/pinva0.png[Vanguard Device] |
 Vous immunise contre tous les dégâts, vous permettant de surmonter les défenses écrasantes de l'ennemi et les pièges inévitables. Dure 30 secondes.
 |==========================
-
-<<<
 
 [[enemies]]
 === Ennemis
