@@ -225,6 +225,8 @@ Commencez une nouvelle partie dans Freedoom Phase 1, épisode 1 sur le niveau de
 
 1. Une fois que vous avez fait votre choix, ouvrez la porte et préparez-vous à utiliser le savoir que vous avez acquis.
 
+<<<
+
 === La barre d'état
 
 En bas de l’écran, vous verrez la barre d’état, qui est divisée en plusieurs sections:
@@ -247,6 +249,8 @@ image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",ali
 Dans le jeu, vous trouverez divers objets ramassables : <<weapons,des armes>>, <<ammo,des munitions>>, <<health,de la santé>>, <<armor,de l'armure>>, <<keys,des clés>> et quelques <<specialitems,power-ups plus rares>> qui vous donnent des capacités spéciales.
 
 Pour ramasser quelque chose, il suffit tout simplement de marcher dessus -- un message à l'écran et un bref flash indiquent que vous l'avez bien ramassé. Si vous ne le ramassez pas, il est probable que vous n'en ayez pas besoin actuellement (par exemple, vous ne pouvez pas prendre certains objets qui rechargent votre santé lorsque votre santé est déjà à 100%). Si un objet vous donne plus que ce que vous pouvez transporter, la différence est perdue.
+
+<<<
 
 [[weapons]]
 === Armes
@@ -285,6 +289,8 @@ _Munitions:_ Énergie
 image:../sprites/bfuga0.png[SKAG 1337] |
 7 | Une arme expérimentale qui tire une boule d'énergie polarique massive, puis déclenche une explosion d'énergie secondaire dans la même direction ! Cette arme tire lentement, mais ça en vaut la peine. _Munitions:_ Énergie
 |==========================
+
+<<<
 
 [[ammo]]
 === Munitions
@@ -325,6 +331,8 @@ image:../sprites/stima0.png[Small Health Refill] |
 image:../sprites/media0.png[Large Health Refill] |
 image:../sprites/soula0.png[Ectoplasmic Surge]
 |==========================
+
+<<<
 
 [[armor]]
 === Armure
@@ -464,7 +472,7 @@ image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
 
 En explorant les niveaux de Freedoom, il est possible de se perdre, surtout si le niveau est particulièrement vaste ou complexe. Heureusement, la carte est disponible pour vous aider à trouver votre chemin. Appuyez sur la touche _Tab_ lors d'une partie pour afficher la carte.
 
-image::images/map.png[Map Screenshot,width="640",pdfwidth="70vw",align="center"]
+image::images/map.png[Map Screenshot,width="640",pdfwidth="60vw",align="center"]
 
 Votre position et orientation actuelles sont indiquées par une flèche blanche. Généralement, les zones de la carte sont codées par couleur de la façon suivante :
 
