@@ -3,7 +3,7 @@
 :toc:
 :toc-title:
 
-image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=45vw]
+image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
 Bienvenue sur Freedoom, un jeu complet qui est
 https://www.gnu.org/philosophy/free-sw.html[libre]
@@ -58,11 +58,11 @@ partie multijoueur, veuillez consulter les instructions de votre portage.
 Le menu principal peut être affiché à tout moment en appuyant sur la touche
 _Échap_ de votre clavier.
 
-image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=50vw]
+image::images/menu-mainmenu.png[Freedoom Main Menu,align="center",width=380,pdfwidth=39vw]
 
 [cols="2,5",width="100%",align="center",valign="middle"]
 |==========================
-| <<newgame,**New game**>> | Commencez une nouvelle partie, en abandonnant le jeu actuel
+| <<newgame,**New game**>> | Commencez une nouvelle partie, et mettez fin à la partie actuelle
 (si vous jouez déjà).
 | **Options** | Affiche les options. L'apparence de ce menu et les
 options à disposition varient en fonction du portage que vous utilisez.
@@ -97,7 +97,7 @@ image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwi
 
 [cols="1,3,8",width="90%",align="center",valign="middle"]
 |==========================
-| 1 | **Please Don’t Kill Me!** | Le niveau de difficulté le plus facile. C’est la même chose que _Will This Hurt?_, sauf que les dégâts sont divisés par deux.
+| 1 | **Please Don’t Kill Me!** | Le niveau de difficulté le plus facile. Identique à _Will This Hurt?_, sauf que les dégâts sont divisés par deux.
 | 2 | **Will This Hurt?** | Niveau de difficulté Facile.
 | 3 | **Bring on the Pain.** | Niveau de difficulté par défaut.
 | 4 | **Extreme Carnage.** | Niveau de difficulté Difficile.
@@ -112,13 +112,13 @@ Il est judicieux de sauvegarder votre partie régulièrement -- par exemple, au 
 
 image::images/menu-save-game.png[Save Game Menu,align="center",width=473,pdfwidth=50vw]
 
-Pour sauvegarder votre partie, appuyez sur la touche _Échap_ afin d'afficher le menu, puis sélectionnez _Save Game_ et choisissez l'emplacement pour la sauvegarde. Entrer une description mémorable pour votre sauvegarde (ex.,“E1M3 - Porte Clé Bleue”) et appuyer sur la touche _Entrée_. S'il n'y a plus d'emplacement libre, vous pouvez écraser un emplacement utilisé, ce qui effacera les données précédentes.
+Pour sauvegarder votre partie, appuyez sur _Échap_ afin d'afficher le menu, puis sélectionnez _Save Game_ et choisissez l'emplacement pour la sauvegarde. Entrer une description mémorable pour votre sauvegarde (ex.,“E1M3 - Porte Clé Bleue”) et appuyer sur _Entrée_. S'il n'y a plus d'emplacement libre, vous pouvez écraser un emplacement utilisé, ce qui effacera les données précédentes.
 
 Pour charger une partie sauvegardée, sélectionnez _Load Game_ sur le menu principal et choisissez une sauvegarde.
 
-Si vous sauvegardez fréquemment votre partie, vous allez peut-être vouloir utiliser la fonction _Sauvegarde Rapide_. Appuyez sur la touche _F6_ lors d'une partie pour sauvegarder rapidement. Le menu _Save Game_ apparaîtra comme d’habitude; le choix de cet emplacement fera que cet emplacement sera celui pour vos sauvegardes rapides. À l'avenir, lorsque vous appuierez sur la touche _F6_ à nouveau, cela écrasera votre emplacement de sauvegarde rapide sans passer par le menu.
+Si vous sauvegardez fréquemment votre partie, vous allez peut-être vouloir utiliser la fonction _Sauvegarde Rapide_. Appuyez sur _F6_ lors d'une partie pour sauvegarder rapidement. Le menu _Save Game_ apparaîtra comme d’habitude; le choix de cet emplacement fera que cet emplacement sera celui pour vos sauvegardes rapides. À l'avenir, lorsque vous appuierez sur _F6_ à nouveau, cela écrasera votre emplacement de sauvegarde rapide sans passer par le menu.
 
-Vous pouvez charger la partie de votre emplacement de sauvegarde rapide à travers le menu ou appuyant sur la touche _F9_.
+Vous pouvez charger la partie de votre emplacement de sauvegarde rapide à travers le menu ou appuyant sur _F9_.
 
 [**Attention:** Le portage Chocolate Doom réplique un bug du jeu _Doom_ original qui fait planter le jeu lorsque vous sauvegardez une partie avec trop de choses qui se passent dans le niveau. Ceci peut-être désactiver dans `chocolate-setup` sous la catégorie « Vanilla savegame limit ».]
 
@@ -149,11 +149,11 @@ Quelques raccourcis clavier pour accéder aux fonctions du menu instantanément.
 
 == Comment Jouer
 
-image::images/map01-sshot.png[Freedoom Screenshot,width="640",pdfwidth="70vw",align="center"]
+image::images/map01-sshot.png[Freedoom Screenshot,width="640",pdfwidth="51vw",align="center"]
 
-Freedoom est un jeu de tir à la première personne (FPS) en temps réel. Explorez une série de niveaux dans lesquels devez trouver le chemin vers la sortie. Un assortiment de monstres tentera de vous arrêter, et vous aurez besoin d'utiliser les armes à votre disposition pour vous défendre. Certaines parties des niveaux peuvent demeurer inaccessibles jusqu'à ce que vous trouviez une clé spécifique ou que vous trouviez un interrupteur pour ouvrir un passage. Cela signifie que le gameplay impliquera des puzzles d'exploration pour dénicher des objets cachés ainsi que des puzzles d'action en temps réel sur le placement et le timing de vos tirs.
+Freedoom est un jeu de tir à la première personne (FPS) en temps réel. Explorez une série de niveaux dans lesquels devez trouver le chemin vers la sortie. Un assortiment de monstres tentera de vous arrêter, et vous aurez besoin d'utiliser vos armes pour vous défendre. Certaines parties des niveaux peuvent demeurer inaccessibles jusqu'à ce que vous trouviez une clé spécifique ou un interrupteur pour ouvrir un passage. Le gameplay impliquera des puzzles d'exploration pour dénicher des objets cachés ainsi que des puzzles d'action en temps réel sur le placement et le timing de vos tirs.
 
-Voici un tableau avec les contrôles de base du jeu. **Les contrôles par défaut de Doom sont généralement considérées comme obsolètes ;** vérifiez votre portage pour savoir comment les reconfigurer. Des alternatives courantes sont fournies, mais il n'y a pas de « meilleure » solution qui convient pour tout le monde -- vous allez peut-être devoir expérimenter. Au minimum, vous devez être à l'aise en vous déplaçant dans l'une des quatre directions tout en tournant et en tirant simultanément.
+Voici un tableau avec les contrôles de base du jeu. **Les contrôles par défaut de Doom sont généralement considérées comme obsolètes ;** vérifiez votre portage pour savoir comment les reconfigurer. Des alternatives courantes sont fournies, mais il n'y a pas de « meilleure » solution qui convient pour tout le monde -- vous allez devoir expérimenter. Au minimum, vous devez être à l'aise en vous déplaçant dans l'une des quatre directions tout en tournant et en tirant simultanément.
 
 [options="header",cols="1,1,1,1",width="100%",align="center",halign="center"]
 |==========================
@@ -166,11 +166,11 @@ Voici un tableau avec les contrôles de base du jeu. **Les contrôles par défau
 | Courir ^3^ | Shift | _<rien>_ | Shift
 |==========================
 
-^1^ Sur un clavier AZERTY les touches Z, S, Q et D constituent un deuxième ensemble de touches directionnelles pour la main gauche.
+^1^ Sur un clavier AZERTY les touches Z, S, Q et D forme un second ensemble de touches directionnelles pour la main gauche.
 
 ^2^ Si vous avez un monstre, un baril ou un adversaire en PvP qui traverse le milieu de votre écran lors du coup de feu de votre arme, le jeu ajustera votre visée verticale pour vous. Certains portages vous permettront de désactiver ce comportement et de viser manuellement à la place.
 
-^3^ La plupart des portages ont une option « Toujours courir » (« Always Run » en anglais) où le fait de maintenir cette touche ralentit votre vitesse de déplacement. Puisque le personnage du joueur ne se fatigue pas, se déplacer lentement ne sert qu'à augmenter votre précision.
+^3^ La plupart des portages ont une option « Toujours courir » (« Always Run ») où le fait de maintenir cette touche vous ralentit. Puisque le personnage du joueur ne se fatigue pas, se déplacer lentement ne sert qu'à augmenter votre précision.
 
 <<<
 
@@ -246,11 +246,9 @@ image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",ali
 [[items]]
 === Objets
 
-Dans le jeu, vous trouverez divers objets ramassables : <<weapons,des armes>>, <<ammo,des munitions>>, <<health,de la santé>>, <<armor,de l'armure>>, <<keys,des clés>> et quelques <<specialitems,power-ups plus rares>> qui vous donnent des capacités spéciales.
+Dans le jeu, vous trouverez divers objets ramassables : <<weapons,des armes>>, <<ammo,des munitions>>, <<health,de la santé>>, <<armor,de l'armure>>, <<keys,des clés>> et des <<specialitems,power-ups plus rares>> qui vous donnent des capacités spéciales.
 
-Pour ramasser quelque chose, il suffit tout simplement de marcher dessus -- un message à l'écran et un bref flash indiquent que vous l'avez bien ramassé. Si vous ne le ramassez pas, il est probable que vous n'en ayez pas besoin actuellement (par exemple, vous ne pouvez pas prendre certains objets qui rechargent votre santé lorsque votre santé est déjà à 100%). Si un objet vous donne plus que ce que vous pouvez transporter, la différence est perdue.
-
-<<<
+Pour ramasser quelque chose, il suffit tout simplement de marcher dessus -- un message à l'écran et un bref flash indiquent que vous l'avez bien ramassé. Si vous ne le ramassez pas, il est probable que vous n'en ayez pas besoin actuellement (par exemple, vous ne pouvez pas prendre des objets qui rétablis votre santé lorsque votre santé est à 100%). Si un objet vous donne plus que ce que vous pouvez transporter, la différence est perdue.
 
 [[weapons]]
 === Armes
@@ -259,7 +257,7 @@ Vous commencez le jeu avec seulement un pistolet, 50 balles et vos poings. En ex
 
 En appuyant sur les touches numériques du clavier, vous pouvez basculer vers l'arme liée à la touche (si vous l'avez). En dehors des armes de corps à corps, chaque arme consomme un type de munitions, qui peut être trouvé quelque part dans le niveau.
 
-[options="header",cols="2,2,9",valign="middle",width="100%"]
+[options="header",cols="3,2,9",valign="middle",width="100%"]
 |==========================
 | Arme | Touche | Description
 | **Poing** | 1 | Si vous n'avez plus de munitions, vous pouvez toujours frapper les monstres à mains nues. _Munitions:_ Aucune
@@ -314,14 +312,14 @@ image:../sprites/celpa0.png[Large Energy Recharge]
 image:../sprites/bpaka0.png[Backpack]
 |==========================
 
-Le sac à dos donne l'équivalent d'une petite recharge de munitions pour chaque type de munitions. Une fois que vous en avez un, vous pouvez transporter deux fois plus de munitions que d’habitude pour le reste du jeu.
+Le sac à dos donne l'équivalent d'une petite recharge de munitions pour chaque type de munitions. Une fois que vous en avez un, vous pouvez transporter deux fois plus de munitions que d’habitude durant le reste de la partie.
 
 [[health]]
 === Santé
 
 Vous commencez avec votre santé à 100%. Vous mourez lorsque votre santé atteint 0%.
 
-En ramassant n'importe quel objet de santé, vous récupérerez la quantité de vie indiquée, jusqu’à sa limite. Les recharges sont limitées à 100%, mais les boosts (1% et 100%) sont limités à 200%.
+En ramassant n'importe quel objet de santé, vous récupérerez la valeur indiquée, jusqu’à sa limite. Les recharges sont limitées à 100%, mais les boosts (1% et 100%) sont limités à 200%.
 
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
@@ -383,7 +381,7 @@ image:images/key-icons.png[Key icons,align="center"]
 
 Il est possible que vous les voyiez lorsque vous explorez:
 
-[cols="1,2",width="90%",align="center",valign="middle"]
+[cols="4,10",width="100%",align="center",valign="middle"]
 |==========================
 | **Lunettes Vision Sombre** +
 image:../sprites/pvisa0.png[Low-Light Goggles] |
@@ -396,7 +394,7 @@ image:../sprites/suita0.png[Rescue Operations Suit] |
 Protège contre la chaleur, les toxines et les radiations provenant des sols endommagés. Dure 1 minute.
 | **Symbiote de la Force** +
 image:../sprites/pstra0.png[Strength Symbiote] |
-Rétablis votre santé à 100%, et vos poings font 10x plus de dégâts jusqu'à la fin du niveau. Le bonus de vie dure jusqu'à ce que vous preniez des dégâts, et le bonus de dégâts dure jusqu'à la fin du niveau actuel.
+Rétablis votre santé à 100%, et vos poings font 10x plus de dégâts. La vie dure jusqu'à ce que vous preniez des dégâts, et les dégâts jusqu'à la fin du niveau actuel.
 | **Cape d'Invisibilité** +
 image:../sprites/pinsa0.png[Invisibility Cloak] |
 Vous rend presque invisible. Les monstres détectent toujours votre présence, mais ils auront beaucoup plus de mal à viser. Dure 1 minute.
@@ -405,7 +403,7 @@ image:../sprites/megaa0.png[Negentropic Surge] |
 Maximise votre santé et armure à 200%. Dure jusqu'à ce que vous preniez des dégâts.
 | **Dispositif Vanguard** +
 image:../sprites/pinva0.png[Vanguard Device] |
-Vous immunise contre tous les dégâts, vous permettant de surmonter les défenses écrasantes de l'ennemi et les pièges inévitables. Dure 30 secondes.
+Vous immunise aux dégâts, vous permettant de surmonter les défenses de l'ennemi et les pièges inévitables. Dure 30 secondes.
 |==========================
 
 [[enemies]]
@@ -413,7 +411,7 @@ Vous immunise contre tous les dégâts, vous permettant de surmonter les défens
 
 Les niveaux sont remplis de monstres qui ont pour unique objectif de vous empêcher de terminer votre mission. Voici une sélection des monstres que vous allez rencontrer.
 
-[frame="none",cols="5,2",valign="middle",grid="none",align="center",width="100%"]
+[frame="none",cols="8,3",valign="middle",grid="none",align="center",width="100%"]
 |==========================
 | **Zombie** +
 Ces travailleurs d'iniquité qui n'ont rien dans la tête sont armés d'un pistolet et sont résolus à vous anéantir. Ils lâchent un chargeur de balles lorsqu'ils sont tués. |
@@ -464,7 +462,7 @@ image:images/monster-technospider.png[Technospider,100,100,width=100%]
 Ce char avec des jambes est équipé d'un minigun à haute cadence et il demandera un effort considérable pour l'achever. Immunisé contre les explosions de missiles et de barils. |
 image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
 | **Trépied d'assaut** +
-Le mélange ultime de technologies militaire et de manipulations génétiques, ces créatures à trois pattes sont rapides, lourdement blindés et équipés d'un lance-missiles que vous souhaiterez éviter. Elles sont immunisées aux explosions de missiles et de barils. |
+Le mélange ultime de technologies militaire et de manipulations génétiques, ces créatures à trois pattes sont rapides, lourdement blindés et équipés d'un lance-missiles que vous souhaiterez éviter. Immunisé contre les explosions de missiles et de barils. |
 image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
 |==========================
 
@@ -472,9 +470,9 @@ image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
 
 En explorant les niveaux de Freedoom, il est possible de se perdre, surtout si le niveau est particulièrement vaste ou complexe. Heureusement, la carte est disponible pour vous aider à trouver votre chemin. Appuyez sur la touche _Tab_ lors d'une partie pour afficher la carte.
 
-image::images/map.png[Map Screenshot,width="640",pdfwidth="60vw",align="center"]
+image::images/map.png[Map Screenshot,width="640",pdfwidth="70vw",align="center"]
 
-Votre position et orientation actuelles sont indiquées par une flèche blanche. Généralement, les zones de la carte sont codées par couleur de la façon suivante :
+Votre position et orientation sont indiquées par une flèche blanche. Généralement, les zones de la carte sont codées par couleur de la façon suivante :
 
 [frame="none",cols="3,8",valign="middle",align="center",width="70%"]
 |==========================
@@ -564,12 +562,12 @@ Si vous galérez avec la difficulté du jeu, ça vaut peut-être le coup d'exami
 .Scythe MAP09 en utilisant Freedoom.
 image::images/scythe-map09.png[Scythe MAP09,width="640",pdfwidth="70vw",align="center"]
 
-Une des meilleures fonctionnalités de Freedoom est sa compatibilité avec le catalogue de milliers de niveaux créés par les fans pour les jeux classiques _Doom_ . La plupart des mods et niveaux les plus populaires pour _Doom_ et _Doom II_ peuvent également être joués avec Freedoom. Le plus grand répertoire de mods _Doom_ est l'archive idgames, une interface de navigation pour l'archive https://www.doomworld.com/idgames/[peut être trouvée sur Doomworld].
+Une des meilleures fonctionnalités de Freedoom est sa compatibilité avec le catalogue de milliers de niveaux créés par les fans pour les jeux classiques _Doom_ . La plupart des mods et niveaux pour _Doom_ et _Doom II_ peuvent également être joués avec Freedoom.
 
 Pour les mods conçus pour le premier _Doom_, utilisez Freedoom: Phase 1 (`freedoom1.wad`); pour les autres conçus pour _Doom 2_ ou _Final Doom_, utilisez Freedoom: Phase 2 (`freedoom2.wad`).
 Si vous vous servez de la ligne de commandes, utilisez le paramètre `-file` lorsque vous démarrez le jeu. Par exemple, pour charger le fichier `scythe.wad` :
 
-  mon-portage-favori -iwad freedoom2.wad -file scythe.wad
+  portage-favori -iwad freedoom2.wad -file scythe.wad
 
 Si vous n'utilisez pas la ligne de commandes, vous pouvez cliquer-glisser le fichier `.wad` sur l'icône de votre portage dans votre gestionnaire de fichiers -- plusieurs portages prennent en charge cette fonctionnalité.
 
@@ -619,13 +617,11 @@ Le mot « free » a deux significations différentes en Anglais. On dit « fre
 
 Imaginez un monde où les artistes ne peuvent qu'acheter de la peinture d'une seule compagnie. Un tel monopole signifierait que la peinture couterait plus chères, mais le prix ne serait pas le problème principal. Le plus gros problème serait le pouvoir qu'il accorderait à cette compagnie. La liberté de ces artistes de s'exprimer dépendrait de la compagnie qui leur fournit leurs peintures.
 
-Depuis plus de 30 ans, la communauté de modders Doom a produit des milliers de niveaux, mods et même des jeux entièrement construits avec les jeux Doom originaux comme base. Ce sont des œuvres d'art qui doivent être reconnues comme telles. https://www.youtube.com/watch?v=KxYND6K6u8w[Doom est une scène artistique]. La matière première à partir de laquelle ces œuvres d'art sont fabriquées n'est ni de la peinture ou de l’encre, mais le jeu original lui-même -- sans cesse modifié, réutilisé et remixé en de nouvelles variations.
+Depuis plus de 30 ans, la communauté de modders Doom a produit des milliers de niveaux, mods et même des nouveaux jeux construits à partir des jeux Doom originaux. Ce sont des œuvres d'art qui doivent être reconnues comme telles. https://www.youtube.com/watch?v=KxYND6K6u8w[Doom est une scène artistique]. La matière première à partir de laquelle ces œuvres d'art sont fabriquées n'est ni de la peinture ou de l’encre, mais le jeu original lui-même -- sans cesse modifié, réutilisé et remixé en de nouvelles variations.
 
 Les auteurs de Doom, id Software, ont historiquement été très généreux envers la communauté Doom. Dès la sortie du jeu, ils ont fait de leur mieux pour partager les détails techniques avec les fans, et quelques années après ils ont publié le code source de Doom sous une licence libre -- quelque chose qui était inconnu dans l'industrie du jeu vidéo à l'époque et qui devrait être félicité. Mais malgré cette bienveillance, ils ont toujours occupé une position de pouvoir. Aujourd'hui, au lieu d'être un petit studio indépendant, eux et la franchise Doom appartiennent à une grande multinationale.
 
 Tout le monde mérite de pouvoir apprécier la merveille qu'est Doom et de participer dans sa communauté de modding qui a enduré après tant d'années. Mais cette communauté mérite aussi sa liberté et son indépendance. En fournissant une alternative libre que tout le monde peut jouer, partager, modifier et réutiliser, nous espérons que c'est quelque chose que Freedoom peut aider à offrir.
-
-<<<
 
 == Contribuer à Freedoom ==
 
