@@ -677,6 +677,21 @@ QUITMSG11 = Press Y to let AGM decimate\nEarth with their monstrosities.
 QUITMSG12 = Don't quit!\nMonsters will kill\nyou while you sleep.
 QUITMSG13 = Do you think you can\nwalk away just like that?
 QUITMSG14 = Not even going to\nstay for Deathmatch?
+# Episodes and Difficulty.
+SKILL_BABY = Please Don't Kill Me!
+SKILL_EASY = Will This Hurt?
+SKILL_NORMAL = Bring on The Pain.
+SKILL_HARD = Extreme Carnage.
+SKILL_NIGHTMARE = Mayhem!
+TXT_D1E1 = Outpost Outbreak
+TXT_D1E2 = Military Labs
+TXT_D1E3 = Event Horizon
+TXT_D1E4 = Double Impact
+#ifdef FREEDM
+TXT_D2E1 = FreeDM
+#else
+TXT_D2E1 = Phase 2
+#endif
 
 #ifdef PHASE1
 # Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
