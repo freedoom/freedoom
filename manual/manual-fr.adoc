@@ -182,48 +182,48 @@ Ce tutoriel vous présentera toutes les actions de base dont vous aurez besoin p
 
 Commencez une nouvelle partie dans Freedoom Phase 1, épisode 1 sur le niveau de difficulté facile et suivez les étapes. Ignorez tout ce qui vous ennuie ou vous embrouille, et refaites tout ce que vous trouvez difficile aussi longtemps que vous le souhaitez, avant de passer à l'étape suivante ou de refaire une étape précédente.
 
-1. Essayez de vous déplacer en avant, en arrière, à gauche, et à droite.
+. Essayez de vous déplacer en avant, en arrière, à gauche, et à droite.
   Tracez un carré. Essayez de le faire dans le sens horaire et antihoraire. Essayez de faire le numéro huit. (Ne quittez pas la cage pour l'instant -- il y a des monstres à l'extérieur.)
 
-1. Tournez en rond pour examiner votre environnement. Faites-le à votre propre
+. Tournez en rond pour examiner votre environnement. Faites-le à votre propre
   rythme, en vous arrêtant ou en changeant de direction pour regarder n'importe où quand vous voulez. Faites un deuxième cercle, en vous déplaçant un peu au fur à mesure, et observez comment cela change la perspective et comment le mouvement latéral peut vous aider à voir la longueur d'un mur ou la distance d'un objet.
 
-1. Retournez au milieu de la cage. Tournez et pointez votre pistolet
+. Retournez au milieu de la cage. Tournez et pointez votre pistolet
   sur l'une des colonnes du cadre de porte.
 
-1. Déplacez-vous -- sans tourner -- afin que votre pistolet soit pointé vers 
+. Déplacez-vous -- sans tourner -- afin que votre pistolet soit pointé vers 
   l'autre colonne. (Idéalement, essayez de vous arrêter naturellement sur la cible.)
 
-1. Déplacez-vous un peu à gauche ou à droite, puis tournez à nouveau pour
+. Déplacez-vous un peu à gauche ou à droite, puis tournez à nouveau pour
   pointer vers la colonne. Recommencez, mais tournez avant que votre élan ne s'estompe. Recommencez quelques fois, en utilisant les quatre directions et en tournant de plus en plus tôt jusqu'à ce que vous pointiez et que vous vous déplaciez de façon fluide. (Reculez ou avancez pour réinitialiser si vous vous approchez trop ou si vous courez dans les murs.)
 
-1. Essayez de faire un carré (ou le numéro huit, etc.) tout en pointant
+. Essayez de faire un carré (ou le numéro huit, etc.) tout en pointant
   vers la colonne en même temps. Privilégiez la fluidité au lieu de la précision -- il vaut mieux être proche la plupart du temps que rarement parfait.
 
-1. Déplacez-vous sur un des lits dans les coins afin que la colonne ne
+. Déplacez-vous sur un des lits dans les coins afin que la colonne ne
   soit plus visible. Déplacez-vous afin que la colonne entre et sorte de vue. Expérimentez avec la distance et le timing. Ensuite, tentez de pointer vers la colonne même si vous ne pouvez pas la voir.
 
-1. Jouez un peu avec ce qui a été dit précédemment. Essayez d'appuyer
+. Jouez un peu avec ce qui a été dit précédemment. Essayez d'appuyer
   sur la touche Tirer pour tirer sur la colonne en restant immobile et en vous déplaçant, observez où et quand un petit nuage de fumée se forme. (Arrêtez de tirer avant que votre nombre de munitions tombe en dessous de 30 -- vous en aurez besoin pour plus tard !)
 
-1. Appuyez sur la touche 1 du clavier pour passer à vos poings, et
+. Appuyez sur la touche 1 du clavier pour passer à vos poings, et
   tentez de frapper la colonne et observez jusqu'à quelle distance vous pouvez le faire. Appuyez sur la touche 2 pour retourner à votre pistolet.
 
-1. Maintenant vérifiez si vous pouvez accomplir toutes les tâches
+. Maintenant vérifiez si vous pouvez accomplir toutes les tâches
   tout en maintenant la touche Courir enfoncée.
 
-1. Descendez dans la tranchée et tuez un <<enemies,zombie>>. Essayez
+. Descendez dans la tranchée et tuez un <<enemies,zombie>>. Essayez
   de ne pas prendre de dégâts.
 
-1. Une fois en sécurité, regardez près du corps du zombie pour voir
+. Une fois en sécurité, regardez près du corps du zombie pour voir
   s'il a laissé tomber un <<ammo,chargeur>>. Si oui, déplacez-vous pour le ramasser.
 
-1. Retournez en arrière d'où vous venez. Allez à l'ascenseur comme
+. Retournez en arrière d'où vous venez. Allez à l'ascenseur comme
   si vous alliez le frapper, puis appuyez sur la touche Utiliser pour l'appeler. Montez dessus et il vous sortira de la tranchée. Ramassez les objets dans la zone supérieure pour rétablir ou booster votre santé.
 
-1. Explorez le reste de la zone. Vous trouverez deux portes qui peuvent être utilisées directement, comme l'ascenseur. La porte du bas vous mènera vers un chemin plus proche de la sortie, tandis que celle du haut vous mènera vers un chemin plus dur mais également plus gratifiant.
+. Explorez le reste de la zone. Vous trouverez deux portes qui peuvent être utilisées directement, comme l'ascenseur. La porte du bas vous mènera vers un chemin plus proche de la sortie, tandis que celle du haut vous mènera vers un chemin plus dur mais également plus gratifiant.
 
-1. Une fois que vous avez fait votre choix, ouvrez la porte et préparez-vous à utiliser le savoir que vous avez acquis.
+. Une fois que vous avez fait votre choix, ouvrez la porte et préparez-vous à utiliser le savoir que vous avez acquis.
 
 <<<
 

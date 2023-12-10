@@ -227,63 +227,63 @@ Skip anything that bores or confuses you, and redo anything you find
 challenging as long as you like, before moving on to the next thing or
 redoing a previous thing.
 
-1. Try moving forward, backward, left, and right.
+. Try moving forward, backward, left, and right.
   Trace a square. Try both directions. Try doing a figure eight.
   (Don't leave the cage yet -- there are monsters outside.)
 
-1. Turn around in a circle to examine your surroundings. Go at your own pace,
+. Turn around in a circle to examine your surroundings. Go at your own pace,
   stopping or reversing to look at anything whenever you want.
   Do a second circle, moving a little bit as you go, and watch how that
   changes the perspective and how sideways movement can help you see
   how long a wall or how far away an object is.
 
-1. Move back to the middle of the cage. Turn to point your handgun
+. Move back to the middle of the cage. Turn to point your handgun
   directly at one of the doorframe columns.
 
-1. Move -- without turning -- so that your handgun is pointed at the other column.
+. Move -- without turning -- so that your handgun is pointed at the other column.
  (Bonus points if you can come to a natural stop on target.)
 
-1. Move a bit left or right, then turn to point at the column again.
+. Move a bit left or right, then turn to point at the column again.
   Do it again, but start turning before your momentum wears off.
   Do this again a few times, cycling through all four directions and turning
   sooner and sooner until you are pointing and the moving seamlessly.
   (Move backwards or forwards to reset if you start running into walls.)
 
-1. Try doing a square (or figure eight, etc.) while pointing at the column
+. Try doing a square (or figure eight, etc.) while pointing at the column
   the entire time. Prioritize smoothness over precision -- it's better to
   be close most of the time than perfect some of the time.
 
-1. Move to one of the corners with the beds on them so that the column is
+. Move to one of the corners with the beds on them so that the column is
   no longer in your line of sight. Move in and out of sight with
   the column playing "Peek-A-Boo" with it. Mess with distance and timing.
   Try to stay pointed at the column even when you can't see it.
 
-1. Play around with the above for a bit. Try pressing the Fire key to shoot at
+. Play around with the above for a bit. Try pressing the Fire key to shoot at
   the column, both standing still and moving, and note where and when
   the bullet puffs appear. (Stop shooting before your ammo count goes below
   30 or so -- you will need those for later!)
 
-1. Tap the 1 key on the keyboard to switch to your fist, and try to punch the
+. Tap the 1 key on the keyboard to switch to your fist, and try to punch the
   column and see how far away you can do it. Tap the 2 key to switch back
   to the handgun.
 
-1. Try to do everything while holding down the Run key.
+. Try to do everything while holding down the Run key.
 
-1. Enter the trench and kill a <<enemies,zombie>>. Try not to get hit.
+. Enter the trench and kill a <<enemies,zombie>>. Try not to get hit.
 
-1. Once you're safe, look near the zombie's body to see if it may have left
+. Once you're safe, look near the zombie's body to see if it may have left
   a <<ammo,clip>>. If it has, move over it to pick it up.
 
-1. Go back the way you came. Go up to the lift like you're going to punch it,
+. Go back the way you came. Go up to the lift like you're going to punch it,
   then hit Use to call it down. Get on it and it will take you back up.
   Pick up the items in the upper area to restore or boost your health.
 
-1. Explore the rest of the area. You will find two doors, which can be
+. Explore the rest of the area. You will find two doors, which can be
   opened with the Use key just like the lift. The lower door will take you
   closer to the exit, while the higher one leads to a more
   difficult but more rewarding detour.
 
-1. Once you've decided which way to go, open the door -- and get ready
+. Once you've decided which way to go, open the door -- and get ready
   to start playing Gun Peek-A-Boo again...
 
 <<<
