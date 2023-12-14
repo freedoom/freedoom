@@ -91,7 +91,7 @@ Cluster 3
 	MAP26: "Stormer" by Korp, originally by Samuel "Blastfrog" Oliver
 	MAP27: "Dreamcatcher (Black and Blue)" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
 	MAP28: "Skull Underfoot" by Lola "BlueWorrior" Harvey
-	MAP29: freedoom.mid by Varis Alpha
+	MAP29: "Mists Over the Mire" by Tyler "Picklehammer" Pantella
 	MAP30: "Devoured by the Jaws of Defeat" by Korp
 
 
@@ -170,10 +170,11 @@ MAP11: dave3d02.mid by jute
 MAP12: Doom2Alt.mid by Bradley "BobFromReboot" Lavigne
 MAP20: dave3d05.mid by jute
 MAP21: "Violence Culture" by Jeremy "Vandalorian" Emerson
-MAP22: "Mists Over the Mire" by Tyler "Picklehammer" Pantella
+MAP22: "Mists Over the Mire" by Tyler "Picklehammer" Pantella (moved to Map29, not removed)
 MAP23: dave3d09.mid by jute
 MAP24: "Balancing Act" by Andrew Bassett
 MAP26: "Crawl" by Jeremy "Vandalorian" Emerson
+MAP29: freedoom.mid by Varis Alpha
 MAP30: "Paranoia" by Tyler "Picklehammer" Pantella
 
 DM03: "Music for Freedoom 2" by Jeremy "Vandalorian" Emerson
