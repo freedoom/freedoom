@@ -104,7 +104,7 @@ Story: dave3d25.mid by jute
 	DM01: "Zero Fort" by Ralph "Ralphis" Vickers
 	DM02: "Untitled Jam" by Ralph "Ralphis" Vickers
 	DM03: "Dynamite!" by Korp
-	DM04: "Rush" by Kevin "Velvetic" Martins and Simone Alauk
+	DM04: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
 	DM05: "Music for Freedoom 9" by Jeremy "Vandalorian" Emerson
 	DM06: "Workout" by Korp
 	DM07: "I Fell Off The Stairs" by Korp
@@ -130,7 +130,7 @@ Story: dave3d25.mid by jute
 
 	DM25: "Shoot 'em All" by rostuhan
 	DM26: "World of Pain" by Josephus "DH4050" Astartes
-	DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
+	DM27: "Shells" by Ospaggi
 	DM28: "Bobby Sent Me" by Ralph "Ralphis" Vickers
 	DM29: "SevenFour" by Ralph "Ralphis" Vickers
 	DM30: "Freedom for Your Shooting Skills" by rostuhan
@@ -178,6 +178,7 @@ MAP29: freedoom.mid by Varis Alpha
 MAP30: "Paranoia" by Tyler "Picklehammer" Pantella
 
 DM03: "Music for Freedoom 2" by Jeremy "Vandalorian" Emerson
+DM04: "Rush" by Kevin "Velvetic" Martins and Simone Alauk
 DM05: map01.mid by Ralph "Ralphis" Vickers (moved to MAP07, not removed)
 DM06: "The Heroic Battle" by Tyler "Picklehammer" Pantella (moved to DM14, not removed)
 DM07: dave3d30.mid by jute
@@ -195,6 +196,7 @@ DM21: dave3d12.mid by jute
 DM23: dave3d27.mid by jute
 DM25: dave3d20.mid by jute
 DM26: dave3d09.mid by jute
+DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson (moved to DM04, not removed)
 DM30: dave3d01.mid by jute
 DM32: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
 
