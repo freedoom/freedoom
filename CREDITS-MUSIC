@@ -63,7 +63,7 @@ Cluster 1
 	MAP04: "Indigo" by Korp
 	MAP05: "Under Maintenance" by Lola "BlueWorrior" Harvey
 	MAP06: "Refrigeration" by Korp
-	MAP07: map01.mid by Ralph "Ralphis" Vickers
+	MAP07: "Fun is Infinite at AGM" by continuum.mid
 	MAP08: "Syntax Error" by Lola "BlueWorrior" Harvey
 	MAP09: "Terrible Secrets" by Lola "BlueWorrior" Harvey
 	MAP10: "Soviet Porno" by Jeremy "Vandalorian" Emerson
@@ -83,7 +83,7 @@ Cluster 2
 	MAP20: "Beasts of the Horizon" by Josephus "DH4050" Astartes
 
 Cluster 3
-	MAP21: "Rough Landing" by Korp
+	MAP21: "Rough Landing" by Korp, remix of dave3d08.mid by jute
 	MAP22: "Alien Waltz" by Korp
 	MAP23: "Within the Trilo's Den" by MoonDeLaAxel and Korp
 	MAP24: "Space's Despair" by Korp, remix of "Balancing Act" by Andrew Bassett
@@ -121,8 +121,8 @@ Story: dave3d25.mid by jute
 
 	DM17: "Panic" by Anthony "Ajanddino" Pierce
 	DM18: "Metadata" by Korp
-	DM19: "Tap Water" by Korp
-	DM20: "Quirkspitter" by Korp
+	DM19: "Tap Water" by Korp, remix of dave3d27.mid by jute
+	DM20: "Quirkspitter" by Korp, remix of dave3d16.mid by jute
 	DM21: "Friendly Fire" by Korp
 	DM22: "Red Foot" by Kevin "Velvetic" Martins and Simone Alauk
 	DM23: "White Lights" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins
@@ -180,7 +180,7 @@ MAP30: "Paranoia" by Tyler "Picklehammer" Pantella
 
 DM03: "Music for Freedoom 2" by Jeremy "Vandalorian" Emerson
 DM04: "Rush" by Kevin "Velvetic" Martins and Simone Alauk
-DM05: map01.mid by Ralph "Ralphis" Vickers (moved to MAP07, not removed)
+DM05: map01.mid by Ralph "Ralphis" Vickers
 DM06: "The Heroic Battle" by Tyler "Picklehammer" Pantella (moved to DM14, not removed)
 DM07: dave3d30.mid by jute
 DM08: Dave3d13.mid by jute
