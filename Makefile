@@ -110,7 +110,7 @@ COPYING.txt: COPYING.adoc
 CREDITS.txt: CREDITS
 	unix2dos --add-bom --newfile $< $@
 
-CREDITS-MUSIC.txt: CREDITS-MUSIC.txt
+CREDITS-MUSIC.txt: CREDITS-MUSIC
 	unix2dos --add-bom --newfile $< $@
 
 HTMLDOCS=NEWS.html README.html
