@@ -114,7 +114,7 @@ CREDITS-MUSIC.txt: CREDITS-MUSIC
 	unix2dos --add-bom --newfile $< $@
 
 HTMLDOCS=NEWS.html README.html
-TEXTDOCS=COPYING.txt CREDITS.txt
+TEXTDOCS=COPYING.txt CREDITS.txt CREDITS-MUSIC.txt
 DISTDOCS=$(HTMLDOCS) $(TEXTDOCS) manual/freedoom-manual.pdf
 
 dist: $(OBJS) $(DISTDOCS)
