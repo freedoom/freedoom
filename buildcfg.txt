@@ -324,8 +324,8 @@ DSSKEATK
 DSRADIO
 #endif /* #ifdef PHASE2 */
 
-; Additional player sounds used in Doom Legacy
-DSOUCH
+; Additional player sounds used in Doom Legacy and ZDoom
+DSOUCH ; hit head on ceiling (Doom Legacy only)
 DSJUMP
 
 ; pc speaker effects
