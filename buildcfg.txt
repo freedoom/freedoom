@@ -323,7 +323,6 @@ DSSKESIT
 DSSKEATK
 DSRADIO
 #endif /* #ifdef PHASE2 */
-
 ; Additional player sounds used in Doom Legacy
 DSOUCH	= dsplpain
 DSJUMP
