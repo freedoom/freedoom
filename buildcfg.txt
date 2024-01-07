@@ -324,6 +324,10 @@ DSSKEATK
 DSRADIO
 #endif /* #ifdef PHASE2 */
 
+; Additional player sounds used in Doom Legacy
+DSOUCH
+DSJUMP
+
 ; pc speaker effects
 
 DPPISTOL
@@ -436,9 +440,6 @@ DPSKESIT
 DPSKEATK
 DPRADIO
 
-; Additional player sounds used in Doom Legacy
-DSOUCH	= dsplpain
-DSJUMP
 
 #endif /* #ifdef PHASE2 */
 
