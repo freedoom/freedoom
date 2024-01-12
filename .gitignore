@@ -11,6 +11,7 @@
 *.swp
 *.zip
 *~
+*.dbs
 .DS_Store
 .\#*
 \#*\#
