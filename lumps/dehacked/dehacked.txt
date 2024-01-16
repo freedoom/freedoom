@@ -85,7 +85,7 @@ par  3  120  # 02:00  - Voros for v0.11 - 2017/02
 par  4  120  # 02:00  - Voros for v0.11 - 2017/02
 par  5  150  # 02:30  - Voros for v0.11 - 2017/02
 par  6  195  # 03:15  - uni for v0.13 - 2024/01
-par  7  270  # 02:30  - uni for v0.13 - 2024/01
+par  7  270  # 04:30  - uni for v0.13 - 2024/01
 par  8  330  # 05:30  - Voros for v0.11 - 2017/02
 par  9  150  # 02:30  - Voros for v0.11 - 2017/02
 par 10  120  # 02:00  - Voros for v0.11 - 2017/02
