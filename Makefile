@@ -13,6 +13,8 @@ NODE_BUILDER=ZenNode
 NODE_BUILDER_LEVELS=e?m? dm?? map??
 LEGACY_TRANSPARENCY_INDEX=255
 LEGACY_TRANSPARENCY_REPLACEMENT=133
+MANUAL_ADOC_FILES=$(wildcard manual/freedoom-manual-??.adoc)
+MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
 
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
@@ -101,8 +103,8 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 %.html: %.adoc
 	$(ASCIIDOC) $(ADOCOPTS) $<
 
-manual/freedoom-manual.pdf: manual/manual.adoc
-	$(MAKE) -C manual
+manual/freedoom-manual-%.pdf: manual/freedoom-manual-%.adoc
+	$(MAKE) -C manual $(subst manual/,,$@)
 
 COPYING.txt: COPYING.adoc
 	unix2dos --add-bom --newfile $< $@
@@ -115,7 +117,7 @@ CREDITS-MUSIC.txt: CREDITS-MUSIC
 
 HTMLDOCS=NEWS.html README.html
 TEXTDOCS=COPYING.txt CREDITS.txt CREDITS-MUSIC.txt
-DISTDOCS=$(HTMLDOCS) $(TEXTDOCS) manual/freedoom-manual.pdf
+DISTDOCS=$(HTMLDOCS) $(TEXTDOCS) $(MANUAL_PDF_FILES)
 
 dist: $(OBJS) $(DISTDOCS)
 	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
@@ -249,7 +251,7 @@ mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
 
-install-freedm: $(FREEDM) $(HTMLDOCS) manual/freedoom-manual.pdf \
+install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
                 freedm.6 io.github.freedoom.FreeDM.png
 	install -Dm 644 dist/io.github.freedoom.FreeDM.desktop \
 	                -t "$(target)/share/applications"
@@ -262,10 +264,10 @@ install-freedm: $(FREEDM) $(HTMLDOCS) manual/freedoom-manual.pdf \
 	                -t "$(target)/share/icons"
 	install -Dm 644 CREDITS NEWS.html README.html -t "$(target)$(docdir)/freedm"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
-	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/freedm"
+	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedm"
 
 install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
-                  manual/freedoom-manual.pdf freedoom1.6 freedoom2.6    \
+                  $(MANUAL_PDF_FILES) freedoom1.6 freedoom2.6    \
                   io.github.freedoom.Phase1.png                         \
                   io.github.freedoom.Phase2.png
 	install -Dm 644 dist/io.github.freedoom.Phase1.desktop \
@@ -288,7 +290,10 @@ install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
 	install -Dm 644 CREDITS NEWS.html README.html \
 	                -t "$(target)$(docdir)/freedoom"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedoom/COPYING"
-	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/freedoom"
+	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedoom"
+
+# For the following uninstall targets the manual arguments are intentionally
+# not quoted since they are wildcards.
 
 uninstall-freedm:
 	$(RM)                                                                   \
@@ -302,7 +307,7 @@ uninstall-freedm:
 	      "$(target)$(docdir)/freedm/COPYING"                               \
 	      "$(target)$(docdir)/freedm/NEWS.html"                             \
 	      "$(target)$(docdir)/freedm/README.html"                           \
-	      "$(target)$(docdir)/freedm/freedoom-manual.pdf"
+	       $(target)$(docdir)/freedm/freedoom-manual-??.pdf
 	-rmdir -p "$(target)/share/applications"                    \
 	      "$(target)/share/metainfo" "$(target)/share/icons"    \
 	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \
@@ -326,7 +331,7 @@ uninstall-freedoom:
 	      "$(target)$(docdir)/freedoom/COPYING"                             \
 	      "$(target)$(docdir)/freedoom/NEWS.html"                           \
 	      "$(target)$(docdir)/freedoom/README.html"                         \
-	      "$(target)$(docdir)/freedoom/freedoom-manual.pdf"
+	       $(target)$(docdir)/freedoom/freedoom-manual-??.pdf
 	-rmdir -p "$(target)/share/applications"                    \
 	      "$(target)/share/metainfo" "$(target)/share/icons"    \
 	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \
