@@ -65,7 +65,7 @@ par  2 2    0  # 00:00
 par  2 3    0  # 00:00
 par  2 4    0  # 00:00
 par  2 5  180  # 03:00 - Voros for v0.12 - 2017/03            # 0.12 E2M3 par
-par  2 6  270  # 02:30 - Voros for v0.12 - 2017/03            # 0.12 E2M4 par
+par  2 6  270  # 04:30 - Voros for v0.12 - 2017/03            # 0.12 E2M4 par
 par  2 7    0  # 00:00
 par  2 8  120  # 02:00 - Voros for v0.12 - 2017/03
 par  2 9  300  # 05:00 - Voros for v0.12 - 2017/03            # 0.12 E2M5 par           
