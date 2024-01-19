@@ -104,7 +104,7 @@ Story: "Geoff's Vinyl Collection" by MoonDeLaAxel, remix of "Why?" by Joshua "wa
 	DM01: "Zero Fort" by Ralph "Ralphis" Vickers
 	DM02: "Untitled Jam" by Ralph "Ralphis" Vickers
 	DM03: "Dynamite!" by Korp
-	DM04: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
+	DM04: "Pit" by Anthony "Ajanddino" Pierce
 	DM05: "Music for Freedoom 9" by Jeremy "Vandalorian" Emerson
 	DM06: "Tunnel" by Anthony "Ajanddino" Pierce
 	DM07: "I Fell Off The Stairs" by Korp
@@ -157,7 +157,7 @@ E2M4: "Let 'em Burn" by Kevin "Velvetic" Martins
 E2M5: "Music for Freedoom 1" by Jeremy "Vandalorian" Emerson
 E2M6: "sit on a bench 'n release that tensh'n" by Jazz "jmickle" Mickle
 E2M7: "Music for Freedoom 3" by Jeremy "Vandalorian" Emerson
-E2M8: "Pit" by Anthony "Ajanddino" Pierce
+E2M8: "Pit" by Anthony "Ajanddino" Pierce (moved to DM04, not removed)
 E2M9: dave3d34.mid by jute
 E3M9: "Lipstick" by Jeremy "Vandalorian" Emerson
 
@@ -197,7 +197,7 @@ DM21: dave3d12.mid by jute
 DM23: dave3d27.mid by jute
 DM25: dave3d20.mid by jute
 DM26: dave3d09.mid by jute
-DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson (moved to DM04, not removed)
+DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
 DM30: dave3d01.mid by jute
 DM32: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
 
