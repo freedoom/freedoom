@@ -102,8 +102,8 @@ def read_bex_lump(filename):
 freedoom_bex = read_bex_lump("../../lumps/p2_deh.lmp")
 freedm_bex = read_bex_lump("../../lumps/fdm_deh.lmp")
 
-def read_bex_string(defn):
-    return re.sub("^\w*\d:\s*", "", freedoom_bex[defn])
+def read_bex_string(whichbex,defn):
+    return re.sub("^\w*\d:\s*", "", whichbex[defn])
 
 
 white_graphics = {
@@ -136,15 +136,15 @@ red_graphics = {
     "m_rdthis": "Read This!",
     "m_quitg": "Quit Game",
     "m_newg": "NEW GAME",
-    "m_epi1": read_bex_string("TXT_D1E1"),
-    "m_epi2": read_bex_string("TXT_D1E2"),
-    "m_epi3": read_bex_string("TXT_D1E3"),
-    "m_epi4": read_bex_string("TXT_D1E4"),
-    "m_jkill": read_bex_string("SKILL_BABY"),
-    "m_rough": read_bex_string("SKILL_EASY"),
-    "m_hurt": read_bex_string("SKILL_NORMAL"),
-    "m_ultra": read_bex_string("SKILL_HARD"),
-    "m_nmare": read_bex_string("SKILL_NIGHTMARE"),
+    "m_epi1": read_bex_string(freedoom_bex,"TXT_D1E1"),
+    "m_epi2": read_bex_string(freedoom_bex,"TXT_D1E2"),
+    "m_epi3": read_bex_string(freedoom_bex,"TXT_D1E3"),
+    "m_epi4": read_bex_string(freedoom_bex,"TXT_D1E4"),
+    "m_jkill": read_bex_string(freedoom_bex,"SKILL_BABY"),
+    "m_rough": read_bex_string(freedoom_bex,"SKILL_EASY"),
+    "m_hurt": read_bex_string(freedoom_bex,"SKILL_NORMAL"),
+    "m_ultra": read_bex_string(freedoom_bex,"SKILL_HARD"),
+    "m_nmare": read_bex_string(freedoom_bex,"SKILL_NIGHTMARE"),
     "m_lgttl": "LOAD GAME",
     "m_sgttl": "SAVE GAME",
     "m_endgam": "End Game",
