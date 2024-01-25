@@ -9,17 +9,17 @@ Episode 1 - Outpost Outbreak
 	E1M1: e1m1.mid by Ralph "Ralphis" Vickers
 	E1M2: "Look At Me I'm Underhalls Too" by Mark "TheMisterCat" McGill-Smith
 	E1M3: "Alone with Colors" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
-		E1M9: "Hidden Between Spades" by Korp, a remix of dave3d42.mid by jute
+		E1M9: "Hidden Between Spades" by Korp, remix of dave3d42.mid by jute
 	E1M4: "Flood the City" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
-	E1M5: "The Raging Sun" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
+	E1M5: "The Raging Sun" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins, modified by Goji
 	E1M6: "Oxidine" by Korp, remix of dave3d35.mid by jute
-	E1M7: "Derelict" by continuum.mid
+	E1M7: "Totally Surrounded" by Josephus "DH4050" Astartes
 	E1M8: "On the Next Day" by Kevin "Velvetic" Martins
 
 Episode 2 - Military Labs
 	E2M1: "Moonstone" by Korp
 	E2M2: "Voidgaze" by Korp
-	E2M3: "Tunnel" by Anthony "Ajanddino" Pierce
+	E2M3: "Workout" by Korp
 	E2M4: "Diodine" by Korp
 	E2M5: "Reminiscence" by Korp
 		E2M9: "Nightstorm" by Korp
@@ -67,7 +67,7 @@ Cluster 1
 	MAP08: "Syntax Error" by Lola "BlueWorrior" Harvey
 	MAP09: "Terrible Secrets" by Lola "BlueWorrior" Harvey
 	MAP10: "Soviet Porno" by Jeremy "Vandalorian" Emerson
-	MAP11: "Inside the Ruins" by Korp
+	MAP11: "Undergrowth" by Korp, remix of dave3d01.mid by jute
 
 Cluster 2
 	MAP12: "Sewers" by Discoholic, remix of "Wasteland Scavengers" by Samuel "Blastfrog" Oliver
@@ -80,7 +80,7 @@ Cluster 2
 	MAP17: "Mow Them Down!" by Lola "BlueWorrior" Harvey
 	MAP18: "Realistic Approach" by Kevin "Velvetic" Martins
 	MAP19: "Deceit" by Julian "Julian Hope" Aubourg, modified by m
-	MAP20: "Beasts of the Horizon" by Josephus "DH4050" Astartes
+	MAP20: "Beasts of Horizon" by Josephus "DH4050" Astartes
 
 Cluster 3
 	MAP21: "Rough Landing" by Korp, remix of dave3d08.mid by jute
@@ -104,9 +104,9 @@ Story: "Geoff's Vinyl Collection" by MoonDeLaAxel, remix of "Why?" by Joshua "wa
 	DM01: "Zero Fort" by Ralph "Ralphis" Vickers
 	DM02: "Untitled Jam" by Ralph "Ralphis" Vickers
 	DM03: "Dynamite!" by Korp
-	DM04: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
+	DM04: "Pit" by Anthony "Ajanddino" Pierce
 	DM05: "Music for Freedoom 9" by Jeremy "Vandalorian" Emerson
-	DM06: "Workout" by Korp
+	DM06: "Tunnel" by Anthony "Ajanddino" Pierce
 	DM07: "I Fell Off The Stairs" by Korp
 	DM08: "Jump Is Not Allowed!" by Korp
 
@@ -157,7 +157,7 @@ E2M4: "Let 'em Burn" by Kevin "Velvetic" Martins
 E2M5: "Music for Freedoom 1" by Jeremy "Vandalorian" Emerson
 E2M6: "sit on a bench 'n release that tensh'n" by Jazz "jmickle" Mickle
 E2M7: "Music for Freedoom 3" by Jeremy "Vandalorian" Emerson
-E2M8: "Pit" by Anthony "Ajanddino" Pierce
+E2M8: "Pit" by Anthony "Ajanddino" Pierce (moved to DM04, not removed)
 E2M9: dave3d34.mid by jute
 E3M9: "Lipstick" by Jeremy "Vandalorian" Emerson
 
@@ -197,7 +197,7 @@ DM21: dave3d12.mid by jute
 DM23: dave3d27.mid by jute
 DM25: dave3d20.mid by jute
 DM26: dave3d09.mid by jute
-DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson (moved to DM04, not removed)
+DM27: "Music for Freedoom 7" by Jeremy "Vandalorian" Emerson
 DM30: dave3d01.mid by jute
 DM32: "Munt Battle" by Mark "TheMisterCat" McGill-Smith
 
