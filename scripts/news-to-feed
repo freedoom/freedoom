@@ -189,7 +189,7 @@ def main():
 # Write the feed to feed_xml.
 def output_feed():
     with open(feed_xml, "w") as feed_hand:
-        print(doc.toprettyxml(indent="    "), file=feed_hand)
+        print(doc.toprettyxml(indent="    "), file=feed_hand, end="")
 
 
 # Parse the command line arguments and store the result in 'args'.
