@@ -39,23 +39,24 @@
   </content_rating>
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_01.webp</image>
-      <caption>C1M4: Supply Depot</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e1m6-upstairs-0.13.0.png</image>
+      <caption>E1M6: Training Facility</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_04.webp</image>
-      <caption>C2M3: Archaelogy Site</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e2m8-tripods-0.13.0.png</image>
+      <caption>E2M8: Containment Cell</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_05.webp</image>
-      <caption>C3M3: Derelict Temple</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e3m1-trilobites-worms-0.13.0.png</image>
+      <caption>E3M1: Land of the Lost</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_08.webp</image>
-      <caption>C4M6: Command Center</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e3m3-pain-lord-0.13.0.png</image>
+      <caption>E3M3: Sacrificial Bastion</caption>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.13.0" date="2024-01-29"></release>
     <release version="0.12.1" date="2019-10-22"></release>
     <release version="0.12.0" date="2019-10-10"></release>
     <release version="0.11.3" date="2017-07-18"></release>
