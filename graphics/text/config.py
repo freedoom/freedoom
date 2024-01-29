@@ -72,6 +72,40 @@ FONT_KERNING_RULES = {
     r"[O0][O0]": -1,
 }
 
+
+# Level names are also included in this dictionary, with the
+# data added programatically from the DEHACKED lump.
+
+def read_bex_lump(filename):
+    """Read the BEX (Dehacked) lump from the given filename.
+
+    Returns:
+        Dictionary mapping from name to value.
+    """
+    result = {}
+    with open(filename) as f:
+        for line in f:
+            # Ignore comments:
+            line = line.strip()
+            if len(line) == 0 or line[0] in "#;":
+                continue
+            # Just split on '=' and interpret that as an
+            # assignment. This is primitive and doesn't read
+            # like a full BEX parser should, but it's good
+            # enough for our purposes here.
+            assign = line.split("=", 2)
+            if len(assign) != 2:
+                continue
+            result[assign[0].strip()] = assign[1].strip()
+    return result
+
+freedoom_bex = read_bex_lump("../../lumps/p2_deh.lmp")
+freedm_bex = read_bex_lump("../../lumps/fdm_deh.lmp")
+
+def read_bex_string(whichbex,defn):
+    return re.sub("^\w*\d:\s*", "", whichbex[defn])
+
+
 white_graphics = {
     "wibp1": "P1",
     "wibp2": "P2",
@@ -81,9 +115,6 @@ white_graphics = {
     # These files are for the title screens of Phase 1 and Phase 2
     "t_phase1": "PHASE 1",
     "t_phase2": "PHASE 2",
-    # Note: level names are also included in this dictionary, with
-    # the data added programatically from the DEHACKED lump, see
-    # code below.
 }
 
 blue_graphics = {
@@ -105,15 +136,15 @@ red_graphics = {
     "m_rdthis": "Read This!",
     "m_quitg": "Quit Game",
     "m_newg": "NEW GAME",
-    "m_epi1": "Outpost Outbreak",
-    "m_epi2": "Military Labs",
-    "m_epi3": "Event Horizon",
-    "m_epi4": "Double Impact",
-    "m_jkill": "Please don't kill me!",
-    "m_rough": "Will this hurt?",
-    "m_hurt": "Bring on the pain.",
-    "m_ultra": "Extreme Carnage.",
-    "m_nmare": "MAYHEM!",
+    "m_epi1": read_bex_string(freedoom_bex,"TXT_D1E1"),
+    "m_epi2": read_bex_string(freedoom_bex,"TXT_D1E2"),
+    "m_epi3": read_bex_string(freedoom_bex,"TXT_D1E3"),
+    "m_epi4": read_bex_string(freedoom_bex,"TXT_D1E4"),
+    "m_jkill": read_bex_string(freedoom_bex,"SKILL_BABY"),
+    "m_rough": read_bex_string(freedoom_bex,"SKILL_EASY"),
+    "m_hurt": read_bex_string(freedoom_bex,"SKILL_NORMAL"),
+    "m_ultra": read_bex_string(freedoom_bex,"SKILL_HARD"),
+    "m_nmare": read_bex_string(freedoom_bex,"SKILL_NIGHTMARE"),
     "m_lgttl": "LOAD GAME",
     "m_sgttl": "SAVE GAME",
     "m_endgam": "End Game",
@@ -208,30 +239,6 @@ red_graphics = {
 }
 
 
-def read_bex_lump(filename):
-    """Read the BEX (Dehacked) lump from the given filename.
-
-    Returns:
-        Dictionary mapping from name to value.
-    """
-    result = {}
-    with open(filename) as f:
-        for line in f:
-            # Ignore comments:
-            line = line.strip()
-            if len(line) == 0 or line[0] in "#;":
-                continue
-            # Just split on '=' and interpret that as an
-            # assignment. This is primitive and doesn't read
-            # like a full BEX parser should, but it's good
-            # enough for our purposes here.
-            assign = line.split("=", 2)
-            if len(assign) != 2:
-                continue
-            result[assign[0].strip()] = assign[1].strip()
-    return result
-
-
 def update_level_name(lumpname, bexdata, bexname):
     """Set the level name for the given graphic from BEX file.
 
@@ -247,10 +254,6 @@ def update_level_name(lumpname, bexdata, bexname):
     # Strip "MAP01: " or "E1M2: " etc. from start, if present:
     levelname = re.sub("^\w*\d:\s*", "", bexdata[bexname])
     white_graphics[lumpname] = levelname
-
-
-freedoom_bex = read_bex_lump("../../lumps/p2_deh.lmp")
-freedm_bex = read_bex_lump("../../lumps/fdm_deh.lmp")
 
 for e in range(4):
     for m in range(9):
