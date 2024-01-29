@@ -1,10 +1,56 @@
 = Freedoom project news
 
-== HEAD
-=== Graphics
-  * New ESPI* textures are included as an alternative to the STAR*
-    textures.  These are named after and in honor of Esa Repo (Espi).
+== 0.13.0 (2024-01-29)
+=== General
+  * Improved vanilla compatibility.
+  ** Boom features removed.
+  ** Hall of mirrors greatly reduced.
+  ** Visplane overflows fixed.
+  ** Savegame buffer overflow errors remain.
+
+=== Levels
+  * Relevant Eureka warnings fixed.
+  * New levels E1M9, E2M2, E2M3, E2M4, E2M7, E2M8, E3M5, MAP07, MAP21 and MAP27.
+  * Various level renames.
+  * Numerous vanilla fixes and aesthetic modernizations.
+  * Fixed and standardized secret exits.
+
+=== Manual
+  * French and Spanish translations.
+  * Sections added to highlight project mandate and additional accessibility options.
+
+=== Misc
+  * Adds automatic labeling to pull requests.
+
+=== Monsters
+  * New minigunner.
+  * The hatchling, which replaces the deadflare.
+  * The matribite, which replaces the summoner.
+
+=== Music
+  * Lots of new music including most of FreeDM music.
+
+=== Sounds
+  * New boss brain sounds.
+
+=== Visuals
+  * Colorblind-friendly keys and key indicators.
+  * Various revisions to sprites and textures.
+  * Improved kerning for menu text.
+
+=== Weapons
+  * Improved weapon sprites generally.
+  * SSG replacement restored to updated take on older version.
+  * Revised polaric energy weapon.
+  * Double-barreled shotgun flash timing bug fixed in built-in DeHackEd.
+
+=== Textures
+  * Esa Repo (Espi)'s old STAR* textures are now included under ESPI*.
   * A STARBR1 texture is now included as a counterpart to STARBR2.
+  * Numerous additional grey and METAL2-based textures also available.
+  * Boss brain wall found to have Hexen resources and was re-done.
+  * Wolfenstein replacements completely redone, designed to work as
+    seamlessly with other textures as possible. A few are also added.
 
 == 0.12.1 (2019-10-22)
 === General
