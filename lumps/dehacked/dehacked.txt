@@ -589,8 +589,7 @@ C5TEXT = You step into the teleporter. You feel a\n\
          You'd rather not find out.
 # Before MAP32 (secret level #2):
 C6TEXT = Forcibly uncaged again. Good job.\n\n\
-         But where are you?  It seems you took\n
-         a wrong turn.\n\n\
+         But where are you? This... this isn't the city?!\n\n\
          You look around and the layout triggers\n\
          some old memories from history class.\n\n\
          This is an arena.\n\
