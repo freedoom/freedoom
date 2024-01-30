@@ -60,9 +60,9 @@ par  1 6  390  # 06:30 - Voros for v0.12 - 2017/03
 par  1 7  690  # 11:30 - Voros for v0.12 - 2017/03
 par  1 8   60  # 01:00 - Voros for v0.12 - 2017/03
 par  1 9  240  # 04:00 - m for v0.13 - 2023/04
-par  2 1    0  # 00:00
+par  2 1   75  # 01:15 - Farj for v0.13 - 2024/01
 par  2 2   75  # 01:15 - uni for v0.13 - 2024/01
-par  2 3    0  # 00:00
+par  2 3  120  # 02:00 - Farj for v0.13 - 2024/01
 par  2 4    0  # 00:00
 par  2 5  180  # 03:00 - Voros for v0.12 - 2017/03            # 0.12 E2M3 par
 par  2 6  270  # 04:30 - Voros for v0.12 - 2017/03            # 0.12 E2M4 par
@@ -72,8 +72,8 @@ par  2 9  300  # 05:00 - Voros for v0.12 - 2017/03            # 0.12 E2M5 par
 par  3 1   30  # 00:30 - Voros for v0.12 - 2017/03
 par  3 2  240  # 04:00 - Voros for v0.12 - 2017/03            # 0.12 E3M3 par
 par  3 3  270  # 04:30 - Voros for v0.12 - 2017/03            # 0.12 E3M4 par
-par  3 4    0  # 00:00
-par  3 5    0  # 00:00
+par  3 4  120  # 02:00 - Farj for v0.13 - 2024/01
+par  3 5  105  # 01:45 - Farj for v0.13 - 2024/01
 par  3 6  180  # 03:00 - Voros for v0.12 - 2017/03
 par  3 7  300  # 05:00 - Voros for v0.12 - 2017/03
 par  3 8   60  # 01:00 - Voros for v0.12 - 2017/03
@@ -99,7 +99,7 @@ par 17  120  # 02:00  - Voros for v0.11 - 2017/02
 par 18  90   # 01:30  - Voros for v0.11 - 2017/02             # 0.11 MAP06 par
 par 19  210  # 03:30  - Voros for v0.11 - 2017/02
 par 20  420  # 07:00  - Voros for v0.11 - 2017/02
-par 21    0  # 00:00
+par 21  195  # 03:15  - Farj for v0.13 - 2024/01
 par 22  420  # 07:00  - Voros for v0.11 - 2017/02
 par 23  240  # 04:00  - Voros for v0.11 - 2017/02
 par 24    0  # 00:00
