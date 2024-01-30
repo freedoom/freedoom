@@ -26,6 +26,7 @@
   * New minigunner.
   * The hatchling, which replaces the deadflare.
   * The matribite, which replaces the summoner.
+  * The octaminator, which replaces the dark soldier.
 
 === Music
   * Lots of new music including most of FreeDM music.
