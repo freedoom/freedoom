@@ -13,6 +13,10 @@ There are a few other MIDI files:
   * d_bunny.mid  - Freedoom: Phase 1 Episode 3 end music
   * d_victor.mid - Freedoom: Phase 1 victory screen music
 
-  * d_dm2ttl.mid - Freedoom: Phase 2 / FreeDM title music
-  * d_dm2int.mid - Freedoom: Phase 2 / FreeDM intermission music
-  * d_read_m.mid - Freedoom: Phase 2 / FreeDM text screen music
+  * d_dm2ttl.mid - Freedoom: Phase 2 title music
+  * d_dm2int.mid - Freedoom: Phase 2 intermission music
+  * d_read_m.mid - Freedoom: Phase 2 text screen music
+
+  * d_fdmttl.mid - FreeDM title music
+  * d_fdmint.mid - FreeDM intermission music
+  * d_fdmrdm.mid - FreeDM text screen music

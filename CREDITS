@@ -804,6 +804,7 @@ S: Craneo
 E: memod_99@hotmail.com
 D: sprites (technospider reshade, minigunner, combat slug flash), textures
 
+S: continuum.mid
 S: northivanastan
 N: Ivan Stanton
 E: northivanastan@gmail.com
@@ -820,11 +821,6 @@ S: ajanddino
 N: Anthony Pierce
 E: ajanddino@gmail.com
 D: musics
-
-N: Jaden LeMieux
-S: i"Red"MC
-E: jadenquinn8@hotmail.com
-D: Map balancing fixes, E3M4
 
 S: /dev/urandom
 E: dev.urandom@posteo.org
@@ -1009,5 +1005,26 @@ S: Anonymoister
 D: sprites
 
 N(A): Josephus Astartes
-s: DH4050
+S: DH4050
 D: musics
+
+S: Scragadelic
+D: musics
+
+S: Woolie Wool
+D: musics
+
+S: wastedjamacan
+D: musics
+
+S: SUNPYG Senpai
+D: levels: e2m3, e3m5
+
+S: Ospaggi
+D: musics
+
+S: Stratos
+D: musics
+
+S: Hayden49
+D: levels: e2m2

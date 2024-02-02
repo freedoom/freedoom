@@ -39,23 +39,24 @@
   </content_rating>
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/freedm-0.12_02.webp</image>
-      <caption>DM21: Fourplay</caption>
+      <image>https://freedoom.github.io/img/screenshots/freedm-gzdoom-dm01-banner-0.13.0.png</image>
+      <caption>DM01: Tech Test</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/freedm-0.12_03.webp</image>
+      <image>https://freedoom.github.io/img/screenshots/freedm-gzdoom-dm06-exit-0.13.0.png</image>
       <caption>DM06: Temple of Ammon</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/freedm-0.12_06.webp</image>
-      <caption>DM18: Deserted Courtyard</caption>
+      <image>https://freedoom.github.io/img/screenshots/freedm-gzdoom-dm21-banner-0.13.0.png</image>
+      <caption>DM21: Refinery</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/freedm-0.12_08.webp</image>
-      <caption>DM09: Industrial Outland</caption>
+      <image>https://freedoom.github.io/img/screenshots/freedm-gzdoom-dm22-corner-0.13.0.png</image>
+      <caption>DM22: Fourplay</caption>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.13.0" date="2024-01-29"></release>
     <release version="0.12.1" date="2019-10-22"></release>
     <release version="0.12.0" date="2019-10-10"></release>
     <release version="0.11.3" date="2017-07-18"></release>

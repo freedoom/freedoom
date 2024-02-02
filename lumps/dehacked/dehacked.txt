@@ -222,7 +222,7 @@ HUSTR_E1M3 = E1M3: Waste Disposal
 HUSTR_E1M4 = E1M4: Supply Depot
 HUSTR_E1M5 = E1M5: Armory
 HUSTR_E1M6 = E1M6: Training Facility
-HUSTR_E1M7 = E1M7: Transportation Bay
+HUSTR_E1M7 = E1M7: Xenobiotic Materials Lab
 HUSTR_E1M8 = E1M8: Outpost Quarry
 HUSTR_E1M9 = E1M9: Nutrient Recycling
 HUSTR_E2M1 = E2M1: Elemental Gate
@@ -235,7 +235,7 @@ HUSTR_E2M7 = E2M7: Control Complex
 HUSTR_E2M8 = E2M8: Containment Cell
 HUSTR_E2M9 = E2M9: Fortress 31
 HUSTR_E3M1 = E3M1: Land of the Lost
-HUSTR_E3M2 = E3M2: Derelict Temple
+HUSTR_E3M2 = E3M2: Geothermal Tunnels
 HUSTR_E3M3 = E3M3: Sacrificial Bastion
 HUSTR_E3M4 = E3M4: Oblation Temple
 HUSTR_E3M5 = E3M5: Infernal Hallows
@@ -291,7 +291,7 @@ HUSTR_18 = DM18: Deserted Courtyard
 HUSTR_19 = DM19: Tech Isle
 HUSTR_20 = DM20: Warehouse
 HUSTR_21 = DM21: Refinery
-HUSTR_22 = DM22: Military depot
+HUSTR_22 = DM22: Military Depot
 HUSTR_23 = DM23: Confrontation
 HUSTR_24 = DM24: Flooded Base
 HUSTR_25 = DM25: Mansion Yard
@@ -308,8 +308,8 @@ HUSTR_2 = MAP02: Filtration Tunnels
 HUSTR_3 = MAP03: Crude Processing Center
 HUSTR_4 = MAP04: Containment Bay
 HUSTR_5 = MAP05: Sludge Burrow
-HUSTR_6 = MAP06: Gamma Labs
-HUSTR_7 = MAP07: Outer Storage Warehouse
+HUSTR_6 = MAP06: Janus Terminal
+HUSTR_7 = MAP07: Logic Gate
 HUSTR_8 = MAP08: Astronomy Complex
 HUSTR_9 = MAP09: Datacenter
 HUSTR_10 = MAP10: Deadly Outlands
@@ -326,12 +326,12 @@ HUSTR_20 = MAP20: Blood Ember Fortress
 HUSTR_21 = MAP21: Under Realm
 HUSTR_22 = MAP22: Remanasu
 HUSTR_23 = MAP23: Underground Facility
-HUSTR_24 = MAP24: Tertiary Loading Bay
-HUSTR_25 = MAP25: Red Works
+HUSTR_24 = MAP24: Abandoned Teleporter Lab
+HUSTR_25 = MAP25: Persistence of Memory
 HUSTR_26 = MAP26: Dark Depths
 HUSTR_27 = MAP27: Palace of Red
 HUSTR_28 = MAP28: Grim Redoubt
-HUSTR_29 = MAP29: Last Stand
+HUSTR_29 = MAP29: Melting Point
 HUSTR_30 = MAP30: Jaws of Defeat
 HUSTR_31 = MAP31: Be Quiet
 HUSTR_32 = MAP32: Not Sure
@@ -590,7 +590,7 @@ C5TEXT = You step into the teleporter. You feel a\n\
 # Before MAP32 (secret level #2):
 C6TEXT = Forcibly uncaged again. Good job.\n\n\
          But where are you? The air and gravity\n\
-         still feel like whatever hell-rock that\n\
+         still feel like whatever planet that\n\
          strange prison had been on.\n\n\
          You look around and the layout triggers\n\
          some old memories from history class.\n\n\
@@ -678,11 +678,11 @@ QUITMSG12 = Don't quit!\nMonsters will kill\nyou while you sleep.
 QUITMSG13 = Do you think you can\nwalk away just like that?
 QUITMSG14 = Not even going to\nstay for Deathmatch?
 # Episodes and Difficulty.
-SKILL_BABY = Please Don't Kill Me!
-SKILL_EASY = Will This Hurt?
-SKILL_NORMAL = Bring on The Pain.
+SKILL_BABY = Please don't kill me!
+SKILL_EASY = Will this hurt?
+SKILL_NORMAL = Bring on the pain.
 SKILL_HARD = Extreme Carnage.
-SKILL_NIGHTMARE = Mayhem!
+SKILL_NIGHTMARE = MAYHEM!
 TXT_D1E1 = Outpost Outbreak
 TXT_D1E2 = Military Labs
 TXT_D1E3 = Event Horizon
