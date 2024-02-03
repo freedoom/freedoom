@@ -887,7 +887,7 @@ S: NickZ
 E: nzatkovich@gmail.com
 D: buildcfg.txt, COMPILING.adoc, CREDITS, .gitattributes, .github, .gitignore, graphics, levels, lumps, patches, scripts, sprites
 
-S: ObsidainPlague
+S: Obsidian Plague
 D: musics
 
 N: Perry Fraser
@@ -990,7 +990,7 @@ D: levels
 N: Enzo Carozza
 S: uni
 E: dudetank4@gmail.com
-D: CREDITS-MUSIC
+D: CREDITS-MUSIC, levels, musics, buildcfg.txt, level names
 
 S: MoonDeLaAxel
 D: sounds, musics, textures
