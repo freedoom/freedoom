@@ -590,7 +590,7 @@ C5TEXT = You step into the teleporter. You feel a\n\
 # Before MAP32 (secret level #2):
 C6TEXT = Forcibly uncaged again. Good job.\n\n\
          But where are you? The air and gravity\n\
-         still feel like whatever hell-rock that\n\
+         still feel like whatever planet that\n\
          strange prison had been on.\n\n\
          You look around and the layout triggers\n\
          some old memories from history class.\n\n\
@@ -678,11 +678,11 @@ QUITMSG12 = Don't quit!\nMonsters will kill\nyou while you sleep.
 QUITMSG13 = Do you think you can\nwalk away just like that?
 QUITMSG14 = Not even going to\nstay for Deathmatch?
 # Episodes and Difficulty.
-SKILL_BABY = Please Don't Kill Me!
-SKILL_EASY = Will This Hurt?
-SKILL_NORMAL = Bring on The Pain.
+SKILL_BABY = Please don't kill me!
+SKILL_EASY = Will this hurt?
+SKILL_NORMAL = Bring on the pain.
 SKILL_HARD = Extreme Carnage.
-SKILL_NIGHTMARE = Mayhem!
+SKILL_NIGHTMARE = MAYHEM!
 TXT_D1E1 = Outpost Outbreak
 TXT_D1E2 = Military Labs
 TXT_D1E3 = Event Horizon

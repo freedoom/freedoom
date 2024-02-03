@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
-VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo v0.12.1)
+VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo v0.14.0-alpha-unknown)
 WADS=wads
 ASCIIDOC=asciidoc
 ADOCOPTS=--backend=html5 --conf-file=.adoc-layout.conf

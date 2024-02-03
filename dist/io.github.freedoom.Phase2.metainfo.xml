@@ -38,23 +38,24 @@
   </content_rating>
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_01.webp</image>
-      <caption>MAP18: Aquatics Lab</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map05-shotgun-zombies-0.13.0.png</image>
+      <caption>MAP05: Sludge Burrow</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_04.webp</image>
-      <caption>MAP10: Deadly Outlands</caption>
+      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map11-serpentipede-0.13.0.png</image>
+      <caption>MAP11: Whiplash</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_05.webp</image>
-      <caption>MAP02: Filtration Tunnels</caption>
-    </screenshot>
-    <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-0.12_07.webp</image>
+      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map26-mushrooms-0.13.0.png</image>
       <caption>MAP26: Dark Depths</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map32-matribite-hatchling-0.13.0.png</image>
+      <caption>MAP32: Not Sure</caption>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.13.0" date="2024-01-29"></release>
     <release version="0.12.1" date="2019-10-22"></release>
     <release version="0.12.0" date="2019-10-10"></release>
     <release version="0.11.3" date="2017-07-18"></release>
