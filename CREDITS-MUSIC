@@ -11,7 +11,7 @@ Episode 1 - Outpost Outbreak
 	E1M3: "Alone with Colors" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
 		E1M9: "Hidden Between Spades" by Korp, remix of dave3d42.mid by jute
 	E1M4: "Flood the City" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins
-	E1M5: "The Raging Sun" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins, modified by Goji
+	E1M5: e1m1.mid by Ralph "Ralphis" Vickers
 	E1M6: "Oxidine" by Korp, remix of dave3d35.mid by jute
 	E1M7: "Totally Surrounded" by Josephus "DH4050" Astartes
 	E1M8: "On the Next Day" by Kevin "Velvetic" Martins
@@ -138,6 +138,10 @@ Story: "Geoff's Vinyl Collection" by MoonDeLaAxel, remix of "Why?" by Joshua "wa
 	DM32: "Bullet Hell" by rostuhan
 
 
+--Previously Featured in 0.13.0--
+
+E1M5: "The Raging Sun" by Kevin "Velvetic" Martins & Jonathan "julnen" Martins, modified by Goji
+
 --Previously Featured in 0.12.1--
 
 Phase 1 Title: "Fountain Dance" by Tyler "Picklehammer" Pantella
@@ -145,12 +149,12 @@ Phase 1 OPL Title: "I Hate Fredrik Johansson" by Toby "Tobester" Collins Jr.
 Phase 1 Intermission: "Music for Freedoom 10" by Jeremy "Vandalorian" Emerson
 Victory: "Ominous Theme" by Jared "BlackJar72" Blackburn
 Bunny: "Look At The Bunnies" by RestlessRodent
-E1M1: e1m1.mid by Ralph "Ralphis" Vickers
+E1M1: e1m1.mid by Ralph "Ralphis" Vickers (moved to E1M5, not removed)
 E1M3: "Mortal" by Jeremy "Vandalorian" Emerson
 E1M5: "sit on a bench 'n release that tensh'n" by Jazz "jmickle" Mickle
 E1M6: dave3d35.mid by jute
 E1M7: "Sewers" by Discoholic, remix of "Wasteland Scavengers" by Samuel "Blastfrog" Oliver (moved to MAP12, not removed)
-E1M9: "The Raging Sun" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins (moved to E1M5, not removed)
+E1M9: "The Raging Sun" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins
 E2M1: dave3d38.mid by jute
 E2M2: "Animal Skin" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins
 E2M3: "Alone with Colors" by Kevin "Velvetic" Martins and Jonathan "julnen" Martins (moved to E1M3, not removed)
