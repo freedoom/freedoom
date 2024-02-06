@@ -440,8 +440,8 @@ E1TEXT = Free at last from that dreadful outpost!\n\
          Nothing close to the tech needed for this\n\
          existed at the outpost, meaning there must\n\
          be a starport nearby. To Earth. To freedom.\n\n\
-         Just gotta blast through this complex's\n\
-         legacy zombie corporate anti-patterns...
+         Just gotta hope that ship will launch\n\
+         from these routed, infested ruins...
 E2TEXT = The massive brutes collapse onto the\n\
          ground, falling apart bit by bit.\n\
          The starport is yours.\n\n\
@@ -685,7 +685,7 @@ SKILL_NORMAL = Bring on the pain.
 SKILL_HARD = Extreme Carnage.
 SKILL_NIGHTMARE = MAYHEM!
 TXT_D1E1 = Outpost Outbreak
-TXT_D1E2 = Anti-Pattern
+TXT_D1E2 = Ruin Upon Ruin
 TXT_D1E3 = Event Horizon
 TXT_D1E4 = Double Impact
 #ifdef FREEDM
