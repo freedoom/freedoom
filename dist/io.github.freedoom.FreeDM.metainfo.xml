@@ -37,21 +37,23 @@
     <content_attribute id="language-profanity">mild</content_attribute>
     <content_attribute id="language-humor">mild</content_attribute>
   </content_rating>
+  <!-- Note that some screenshots are PNG and others are JPG. These URLs should
+       not change, but double check them each release. -->
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/tn_dm_1.jpg</image>
+      <image>https://freedoom.github.io/img/screenshots/dm_1.png</image>
       <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/tn_dm_2.jpg</image>
+      <image>https://freedoom.github.io/img/screenshots/dm_2.png</image>
       <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/tn_dm_7.jpg</image>
+      <image>https://freedoom.github.io/img/screenshots/dm_7.jpg</image>
       <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/tn_dm_8.jpg</image>
+      <image>https://freedoom.github.io/img/screenshots/dm_8.jpg</image>
       <caption>Feedoom Screenshot</caption>
     </screenshot>
   </screenshots>
