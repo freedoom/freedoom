@@ -432,15 +432,16 @@ E1TEXT = Free at last from that dreadful outpost!\n\
          AGM and all their monstrous "experiments."\n\
          Best not to dwell on what evil horrors\n\
          they were going to create from you...\n\n\
-         You need a functioning starship to\n\
-         get back to Earth. The best chance at\n\
-         one is the facility they had you in\n\
-         when they first brought you planetside.\n\
-         When they first gave you your powers.\n\n\
-         When the nightmare first began...\n\n\
-         Perfect time for the teleporter to\n\
-         glitch out your gear as you get ready\n\
-         to raid the Military Labs.
+         Damn alien teleporter ate your gear.\n\
+         The air is hot and muggy, and smells of\n\
+         strange, intoxicating vegetation. You see\n\
+         what looks like AGM corpo tech patched\n\
+         over old, overgrown alien structures.\n\
+         Nothing close to the tech needed for this\n\
+         existed at the outpost, meaning there must\n\
+         be a starport nearby. To Earth. To freedom.\n\n\
+         Just gotta hope that ship will launch\n\
+         from these routed, infested ruins...
 E2TEXT = The massive brutes collapse onto the\n\
          ground, falling apart bit by bit.\n\
          The starport is yours.\n\n\
@@ -684,7 +685,7 @@ SKILL_NORMAL = Bring on the pain.
 SKILL_HARD = Extreme Carnage.
 SKILL_NIGHTMARE = MAYHEM!
 TXT_D1E1 = Outpost Outbreak
-TXT_D1E2 = Military Labs
+TXT_D1E2 = Ruin Upon Ruin
 TXT_D1E3 = Event Horizon
 TXT_D1E4 = Double Impact
 #ifdef FREEDM
