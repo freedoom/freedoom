@@ -36,22 +36,24 @@
     <content_attribute id="language-profanity">mild</content_attribute>
     <content_attribute id="language-humor">mild</content_attribute>
   </content_rating>
+  <!-- Note that some screenshots are PNG and others are JPG. These URLs should
+       not change, but double check them each release. -->
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map05-shotgun-zombies-0.13.0.png</image>
-      <caption>MAP05: Sludge Burrow</caption>
+      <image>https://freedoom.github.io/img/screenshots/p2_1.png</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map11-serpentipede-0.13.0.png</image>
-      <caption>MAP11: Whiplash</caption>
+      <image>https://freedoom.github.io/img/screenshots/p2_2.png</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map26-mushrooms-0.13.0.png</image>
-      <caption>MAP26: Dark Depths</caption>
+      <image>https://freedoom.github.io/img/screenshots/p2_7.jpg</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase2-gzdoom-map32-matribite-hatchling-0.13.0.png</image>
-      <caption>MAP32: Not Sure</caption>
+      <image>https://freedoom.github.io/img/screenshots/p2_8.jpg</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
   </screenshots>
   <releases>

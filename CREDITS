@@ -1,6 +1,7 @@
-[2023-10-07: This credits file contains entries some of which are now decades old. If you have contributed to Freedoom and want to update anything on here, please post an issue or reach out to any active maintainer!]
+[Some of the entries on this file are decades old. If you have contributed to Freedoom and want to update anything on here, please post an issue or reach out to any active maintainer!]
 
-[See the CREDITS-MUSIC file for specific track authors and titles.]
+[See the CREDITS-LEVELS file for specific level authors and titles.]
+[See the CREDITS-MUSIC  file for specific track authors and titles.]
 
 N: Colin Phipps
 S: cph
@@ -792,8 +793,8 @@ D: flats, textures
 S: Jared Deberjerak
 D: textures
 
-S: Mortrixs
-D: E3M5
+S: Mortrixs19
+D: levels
 
 S: GooseJelly
 N: Nathaniel Patasky
@@ -879,15 +880,12 @@ S: mkrupczak3
 E: matthew@krupczak.org
 D: manual
 
-S: Mortrixs19
-D: levels
-
 N: Nicholas Zatkovich
 S: NickZ
 E: nzatkovich@gmail.com
 D: buildcfg.txt, COMPILING.adoc, CREDITS, .gitattributes, .github, .gitignore, graphics, levels, lumps, patches, scripts, sprites
 
-S: ObsidainPlague
+S: Obsidian Plague
 D: musics
 
 N: Perry Fraser
@@ -989,8 +987,8 @@ D: levels
 
 N: Enzo Carozza
 S: uni
-E: dudetank4@gmail.com
-D: CREDITS-MUSIC
+E: enzoc@tuta.io
+D: CREDITS-LEVELS, CREDITS-MUSIC, levels, musics, buildcfg.txt, level names
 
 S: MoonDeLaAxel
 D: sounds, musics, textures
@@ -1018,7 +1016,7 @@ S: wastedjamacan
 D: musics
 
 S: SUNPYG Senpai
-D: levels: e2m3, e3m5
+D: levels
 
 S: Ospaggi
 D: musics
@@ -1027,7 +1025,7 @@ S: Stratos
 D: musics
 
 S: Hayden49
-D: levels: e2m2
+D: levels
 
 S: Teh_Bucket
 W: https://opengameart.org/users/tehbucket

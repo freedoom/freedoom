@@ -2,9 +2,11 @@
 Name=FreeDM
 Comment=Fight friends and enemies in competitive deathmatch
 Comment[he]=הילחם בחברים ובאויבים בקרבות מיתה תחרותיים
+Comment[es]=Lucha contra amigos y enemigos en un deathmatch competitivo
 Comment[fr]=Affrontez vos amis et vos ennemis dans un match à mort compétitif
 GenericName=First Person Shooter Game
 GenericName[he]=משחק יריות בגוף ראשון
+GenericName[es]=Juego de disparos en primera persona
 GenericName[fr]=Jeu de tir à la première personne
 Type=Application
 PrefersNonDefaultGPU=true

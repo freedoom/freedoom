@@ -37,22 +37,24 @@
     <content_attribute id="language-profanity">mild</content_attribute>
     <content_attribute id="language-humor">mild</content_attribute>
   </content_rating>
+  <!-- Note that some screenshots are PNG and others are JPG. These URLs should
+       not change, but double check them each release. -->
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e1m6-upstairs-0.13.0.png</image>
-      <caption>E1M6: Training Facility</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_1.png</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e2m8-tripods-0.13.0.png</image>
-      <caption>E2M8: Containment Cell</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_2.png</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e3m1-trilobites-worms-0.13.0.png</image>
-      <caption>E3M1: Land of the Lost</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_7.jpg</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-gzdoom-e3m3-pain-lord-0.13.0.png</image>
-      <caption>E3M3: Sacrificial Bastion</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_8.jpg</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
   </screenshots>
   <releases>
