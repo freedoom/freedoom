@@ -1,7 +1,9 @@
-// UMAPINFO lump for Phase 1. This fixes Episode 4 music playback
-// in non-Crispy/GZDoom ports like Odamex, Eternity and DSDA.
-// Taken from Double Impact MIDI Pack.
+// UMAPINFO lump for Phase 1.
+// Initially adapted from Double Impact MIDI Pack.
 
+// SPDX-License-Identifier: BSD-3-Clause
+
+// Episode 4 music playback
 MAP E4M1
 {
        levelname = "Maintenance Area"
@@ -9,6 +11,7 @@ MAP E4M1
        skytexture = "SKY4"
 	   next = "E4M2"
 	   music = "D_E4M1"
+	   author = "RottKing and Ralphis"
 }
 
 MAP E4M2
@@ -19,6 +22,7 @@ MAP E4M2
 	   next = "E4M3"
 	   nextsecret = "E4M9"
 	   music = "D_E4M2"
+	   author = "RottKing and Ralphis"
 }
 
 MAP E4M3
@@ -28,6 +32,7 @@ MAP E4M3
        skytexture = "SKY4"
 	   next = "E4M4"
 	   music = "D_E4M3"
+	   author = "RottKing and Ralphis"
 }
 
 MAP E4M4
@@ -37,6 +42,7 @@ MAP E4M4
        skytexture = "SKY4"
 	   next = "E4M5"
 	   music = "D_E4M4"
+	   author = "RottKing and Ralphis"
 }
 
 MAP E4M5
@@ -46,6 +52,7 @@ MAP E4M5
        skytexture = "SKY4"
 	   next = "E4M6"
 	   music = "D_E4M5"
+	   author = "RottKing and Ralphis"
 }
 
 MAP E4M6
@@ -55,6 +62,7 @@ MAP E4M6
        skytexture = "SKY4"
 	   next = "E4M7"
 	   music = "D_E4M6"
+	   author = "RottKing and Ralphis"
 }
 
 MAP E4M7
@@ -64,6 +72,7 @@ MAP E4M7
        skytexture = "SKY4"
 	   next = "E4M8"
 	   music = "D_E4M7"
+	   author = "RottKing and Ralphis"
 }
 
 MAP E4M8
@@ -73,6 +82,7 @@ MAP E4M8
        skytexture = "SKY4"
 	   music = "D_E4M8"
 	   interbackdrop = "AQF075"
+	   author = "RottKing and Ralphis"
 	   intertext = "Suppressing fire echoes above as the last
 survivors flee the ship. The launch process
 is irreversible: killing you now would only
@@ -99,4 +109,5 @@ MAP E4M9
        skytexture = "SKY4"
 	   next = "E4M3"
 	   music = "D_E4M9"
+	   author = "RottKing and Ralphis"
 }
