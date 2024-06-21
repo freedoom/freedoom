@@ -146,6 +146,9 @@ FREEDOOM
 ; Big font used by ZDoom-based ports for menu text.
 DBIGFONT
 
+; ANIMDEFS for defining extra animations in ZDoom-based ports and Eternity.
+ANIMDEFS
+
 #ifdef FREEDM
 DEHACKED = fdm_deh
 ZMAPINFO = fdmmpinf
@@ -1071,6 +1074,9 @@ CWILV29
 CWILV24
 CWILV30
 CWILV31
+
+; ZDoom cursor
+DOOMCURS
 
 #else  /* #ifdef FREEDM */
 
@@ -2759,4 +2765,9 @@ SFLR4_4
 SFLR5_1
 SFLR5_4
 SLIME13A
+FLAT14_1
+FLAT22_1
+FLAT22_2
+CRATOP3
+CRATOP4
 

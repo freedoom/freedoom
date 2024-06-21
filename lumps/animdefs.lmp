@@ -1,0 +1,8 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+warp flat SFLR4_1
+warp flat SFLR4_4
+warp flat SFLR5_1
+warp flat SFLR5_4
+warp texture SKSNAKE3
+warp texture SKSNAKE4
