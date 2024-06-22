@@ -1252,7 +1252,7 @@ BSPIM0	64	49
 BSPIN0	64	49
 BSPIO0	64	49
 BSPIP0	64	49
-
+; full rotations required for Doom compatibility
 CPOSA1	18	52	; heavy weapons guy
 CPOSB1	18	52
 CPOSC1	17	52
