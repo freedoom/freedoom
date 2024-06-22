@@ -1115,12 +1115,21 @@ CWILV31 = DMWILV31
 
 ; sprites list
 
+; Warning: Some mods have custom textures that use specific frame lumps as patches.
+; If a mod needs a particular angle and frame but Freedoom uses a different set
+; of rotations for that sprite frame, the mod will break.
+; This means that Freedoom needs to contain every sprite lump that is found in id,
+; which means keeping 8-angle rotations even where it might not make sense for the
+; Freedoom monster. [2024-06-22] TODO: Redesign nobles and spider mastermind to
+; be symmetrical and able to reuse flipped sprites for their entire walk cycle.
+
 [sprites]
 
 #ifdef PHASE2
 
 BBRNA0 25 118					; boss brain
 BBRNB0 31 113
+; non-conformant rotations may result in errors on some mods
 BOS2A1 24 69	; hell knight
 BOS2A2 24 69
 BOS2A3 26 69
@@ -1227,6 +1236,7 @@ BSPIH2H8	64	49
 BSPIH3H7	64	49
 BSPIH4H6	64	49
 BSPIH5	64	49
+; full rotations required for Doom compatibility
 BSPII1	64	49
 BSPII2	64	49
 BSPII3	64	49
@@ -1242,6 +1252,7 @@ BSPIM0	64	49
 BSPIN0	64	49
 BSPIO0	64	49
 BSPIP0	64	49
+; non-conformant rotations may result in errors on some mods
 CPOSA1	18	52	; heavy weapons guy
 CPOSB1	18	52
 CPOSC1	17	52
@@ -1440,6 +1451,7 @@ SKELC5F5	20	62
 SKELC6F4	21	62
 SKELC7F3	26	62
 SKELC8F2	23	62
+; full rotations required for Doom compatibility
 SKELG1	24	60
 SKELG2	22	60
 SKELG3	24	60
@@ -1560,8 +1572,6 @@ SSWVS0   27 39
 SSWVT0   27 32
 SSWVU0   27 22
 SSWVV0   27 17
-; DO NOT try to simplify the rotations.
-; Some maps do use TEXTURES hacks that rely on specific graphics lumps.
 VILEA1D1	20	73	; archvile
 VILEA2D8	26	73
 VILEA3D7	28	72
@@ -1586,6 +1596,7 @@ VILEC5F5	23	72
 VILEC6F4	21	73
 VILEC7F3	21	72
 VILEC8F2	22	74
+; full rotations need to be preserved for Doom compatibility
 VILEG1	36	91	=VILEG0
 VILEG2	36	91	=VILEG0
 VILEG3	36	91	=VILEG0
@@ -1712,6 +1723,7 @@ VILE]8	44	109	=VILE]0
 
 ; The following are normal Doom monsters:
 
+; non-conformant rotations may result in errors on some mods
 BOSSA1 24 69	; baron
 BOSSA2 24 69
 BOSSA3 24 69
@@ -1853,8 +1865,7 @@ SARGD2D8	24	54
 SARGD3D7	25	54
 SARGD4D6	24	53
 SARGD5	19	52
-; DO NOT try to simplify the rotations.
-; Some maps do use TEXTURES hacks that rely on specific graphics lumps.
+; full rotations required for Doom compatibility
 SARGE1	20	54
 SARGE2	23	54
 SARGE3	23	54
@@ -1997,9 +2008,7 @@ TROOS0	30	31
 TROOT0	31	28
 TROOU0	32	28
 
-; DO NOT try to simplify the rotations.
-; While Freedoom's tripod is symmetrical, some maps do use
-; TEXTURES hacks that rely on specific graphics lumps.
+; full rotations required for Doom compatibility
 CYBRA1    47   103  ; Cyberdemon
 CYBRA2    39   103
 CYBRA3    42   103
@@ -2133,6 +2142,7 @@ SKULH0	20	37
 SKULI0	24	40
 SKULJ0	27	42
 SKULK0	30	46
+; non-conformant rotations may result in errors on some mods
 SPIDA1	128	100		; spider mastermind
 SPIDA2	128	100
 SPIDA3	128	100
