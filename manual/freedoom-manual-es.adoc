@@ -11,9 +11,9 @@ y de https://opensource.org/osd/[código abierto].
 Freedoom esta disponible bajo una <<licence,licencia BSD modificada>>, lo que significa
 que cualquiera es libre de compartirlo, modificarlo y reutilizar partes de el.
 
-Para más detalles, ver el sitio web en https://freedoom.github.io/.
+Para más detalles, visita el sitio web en https://freedoom.github.io/.
 
-Traducción: NecSau, DoomguyAlighieri, Alaux
+Traducción: NecSau, DoomguyAlighieri, Alaux, Elsincho
 
 == Instalar Freedoom
 
@@ -25,19 +25,19 @@ Para jugar al juego, puedes usar una de las muchas adaptaciones ("source ports")
 del programa original de Doom que los aficionados han desarrollado para los sistemas modernos.
 
 https://doomwiki.org/wiki/Source_port[La página de source ports] de la
-Wiki de Doom tiene una comprensiva lista. Como un punto inicial, puedes probar:
+Wiki de Doom tiene una lista complete de estos programas. Como un punto inicial, puedes probar:
 
 * https://zdoom.org[GZDoom], un source port moderno que incluye renderización
   por hardware y capacidad ampliada de modificación.
 * https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom],
-  un source port más minimalista que retiente esa sensación de la “vieja
+  un source port más minimalista que conserva esa sensación de la “vieja
   escuela”.
 
 La configuración depende del source port que uses, y lo mejor es referirse
 a las instrucciones de tal source port.
 Sin embargo, en general, puedes probar uno de los siguientes metodos:
 
-* Coloca los archivos Freedoom .wad en el mismo folder que el source port
+* Coloca los archivos Freedoom .wad en la misma carpeta que el source port
   antes de iniciarlo. Pueden ser automaticamente detectados.
 * Al iniciar desde las líneas de comando, probar por ejemplo.
   `my-favorite-port -iwad freedoom1.wad`.
@@ -45,7 +45,7 @@ Sin embargo, en general, puedes probar uno de los siguientes metodos:
 Freedoom esta dividido en _Freedoom: Phase 1_ (`freedoom1.wad`) y
 _Freedoom: Phase 2_ (`freedoom2.wad`). Phase 1 esta dividido en cuatro
 episodios separados de ocho niveles cada uno, mientras que Phase 2 es una
-sola compaña de 30 niveles. Esto da 62 niveles por los cuales jugar, y
+sola compaña de 30 niveles. Esto da 62 niveles que puedes jugar, y
 ademas existen también niveles secretos -- si puedes descubrir cómo llegar
 a ellos.
 
@@ -53,7 +53,6 @@ FreeDM (`freedm.wad`) es un conjunto de niveles sin monstruos, creado
 específicamente para jugador contra jugador. Para saber cómo alojar
 una partida multijugador, consulta su source port.
 
-<<<
 
 [[menus]]
 == Usar los Menús de Freedoom
@@ -69,8 +68,8 @@ image::images/menu-mainmenu.png[Menú principal de Freedoom,align="center",width
 curso (Si ya estas jugando).
 | **Options** | Muestra el menú de opciones. La apariencia de este menú y las
 opciones disponibles dependen del source port que eses usando.
-| <<savegame,**Load Game**>> | Carga un juego guardado.
-| <<savegame,**Save Game**>> | Guarda el juego en curso, para que puedas
+| <<savegame,**Load Game**>> | Carga un juego ahorrado.
+| <<savegame,**Save Game**>> | Ahorra el juego en curso, para que puedas
 continuar jugando después.
 | **Read This!** | Despliega una pantalla de ayuda con los objetos
 que puedes encontrar en el juego.
@@ -82,7 +81,7 @@ que puedes encontrar en el juego.
 
 [**Atajo:** En la mayoría de los source ports, si pulsas repetidamente _Enter_ después
 de que el programa se haya iniciado, empezarás una nueva juego en el nivel de dificultad
-default (en el primer episodio si jugares Phase 1). No necesitas hacerlo rápidamente.]
+por defecto (en el primer episodio si jugares Phase 1). No necesitas hacerlo rápidamente.]
 
 Para empezar un nuevo juego, presiona _Esc_ para mostrar el menú principal, y
 elije _New Game_.
@@ -93,11 +92,11 @@ comenzar a jugar.
 image::images/menu-episode.png[Freedoom Episode Menu,align="center",width=432,pdfwidth=50vw]
 
 Si eres nuevo en el juego, empieza con _Outpost Outbreak_ en Phase 1, el primer episodio
-(y el más fácil). No hay ningún requerimiento para jugar los episodios en orden.
+(y el más fácil). No hay ningún requisito para jugar los episodios en orden.
 
 [[skill]]
 Después de elegir un episodio, necesitas elegir un nivel de dificultad. El
-nivel de dificultad afecta múltiples factores en el juego, más convenientemente
+nivel de dificultad afecta múltiples factores en el juego, sobre todo
 el numero de monstruos con los que te encontraras.
 
 image::images/menu-skill.png[Skill Selection Menu,align="center",width=473,pdfwidth=50vw]
@@ -110,7 +109,7 @@ esencialmente igual a _Will This Hurt?_, excepto que el daño enemigo se reduce
 a la mitad.
 | 2 | **Will This Hurt?** | Nivel de dificultad fácil.
 | 3 | **Bring On +
-The Pain.** | El nivel de dificultad default.
+The Pain.** | El nivel de dificultad por defecto.
 | 4 | **Extreme Carnage.** | Nivel de dificultad difícil.
 | 5 | **MAYHEM!** | **No Recomendado**. Esto es equivalente a _Extreme Carnage_
 con la excepción de que los ataques de los monstruos son el doble de rápidos, y
@@ -118,35 +117,35 @@ los monstruos asesinados regresan a la vida tras aproximadamente 40 segundos.
 |==========================
 
 [[savegame]]
-=== Cargar y guardar el juego
+=== Cargar y ahorrar el juego
 
-Es una Buena idea guardar el juego regularmente -- por ejemplo, al comienzo de
-cada nuevo nivel. También podrías querer guardar el juego tras completar una
+Es una Buena idea ahorrar el juego regularmente -- por ejemplo, al comienzo de
+cada nuevo nivel. También podrías querer ahorrar el juego tras completar una
 sección desafiante de un nivel para que no tengas que repetirlo de nuevo si
 mueres.
 
 image::images/menu-save-game.png[Save Game Menu,align="center",width=473,pdfwidth=50vw]
 
-Para guardar el juego, presiona _Esc_ para mostrar el menú, selecciona _Save
-Game_ y elije un espacio en el cual guardar.  Escribe una descripción fácil de
-recordar para la partida guardada (p. ej., “E1M3 - Puerta de llave azul”) y
+Para ahorrar el juego, presiona _Esc_ para mostrar el menú, selecciona _Save
+Game_ y elije un espacio en el cual ahorrar.  Escribe una descripción fácil de
+recordar para la partida ahorrada (p. ej., “E1M3 - Puerta de llave azul”) y
 presione _Enter_. Si no hay espacios vacantes, puedes sobrescribir uno existente,
 destruyendo los datos antiguos.
 
-Para restaurar tu juego guardado, selecciona _Load Game_
-desde el menú principal y escoge tu juego guardado.
+Para restaurar tu juego ahorrado, selecciona _Load Game_
+desde el menú principal y escoge tu juego ahorrado.
 
-Si te encuentras a ti mismo guardando el juego a menudo, tal vez quieras usar
-la función de Guardado Rápido. Presiona _F6_ durante el juego para hacer un
-guardado rápido. El menú para Guardar Juego aparecerá como es usual; elegir una
-ranura hace que esta se convierta en tú espacio de guardado rápido. Presionar
-_F6_ de nuevo en el futuro sobre-escribirá en tu espacio de guardado rápido
+Si te encuentras a ti mismo ahorrando el juego a menudo, tal vez quieras usar
+la función de ahorrado Rápido. Presiona _F6_ durante el juego para hacer un
+ahorrado rápido. El menú para ahorrar Juego aparecerá como es usual; elegir una
+ranura hace que esta se convierta en tú espacio de ahorrado rápido. Presionar
+_F6_ de nuevo en el futuro sobre-escribirá en tu espacio de ahorrado rápido
 sin navegar por el menú.
 
-Puedes restaurar tu espacio de guardado rápido con el menú o al presionar _F9_.
+Puedes restaurar tu espacio de ahorrado rápido con el menú o al presionar _F9_.
 
 [**Advertencia:** el programa Doom original tiene un error que hace que
-se bloquee cuando guardas una partida mientras están pasando demasiadas
+se bloquee cuando ahorras una partida mientras están pasando demasiadas
 cosas en el nivel. Chocolate Doom emula intencionadamente este
 error. Es posible que desee ir a chocolate-setup y desactivar
 "Vanilla savegame limit" antes de jugar.]
@@ -155,7 +154,7 @@ error. Es posible que desee ir a chocolate-setup y desactivar
 
 Cuando hayas terminado de jugar Freedoom, presiona _Esc_ para mostrar el menú
 principal y selecciona _Quit Game_ para salir. Puede que quieras seleccionar
-_Save Game_ primero para guardar tú progreso para que puedas regresar a donde
+_Save Game_ primero para ahorrar tú progreso para que puedas regresar a donde
 lo dejaste la próxima vez que juegues.
 
 === Atajos del teclado
@@ -168,11 +167,11 @@ tiempo para acceder a funciones comunes del menú.
 | **Esc** | <<menus,Menu>> | Muestra el menú principal.
 | **F1** | Help | Muestra la pantalla de ayuda que muestra información de los
 objetos dentro del juego.
-| **F2** | <<savegame,Save>> | Muestra el menú de _Guardar Juego_.
+| **F2** | <<savegame,Save>> | Muestra el menú de _ahorrar Juego_.
 | **F3** | <<savegame,Load>> | Muestra el menú de _Cargar Juego_.
 | **F4** | Volume | Muestra un menú para controlar los niveles de volumen.
-| **F6** | <<savegame,Quicksave>> | Guarda el juego en tu ranura de _guardado
-rápido_, lo que guarda tiempo si estas guardando tu progreso repetidamente
+| **F6** | <<savegame,Quicksave>> | Ahorra el juego en tu ranura de _ahorrado
+rápido_, lo que ahorra tiempo si estas ahorrando tu progreso repetidamente
 mientras juegas.
 | **F7** | End Game | Termina el juego en curso y regresas a la pantalla de
 titulo.
@@ -194,14 +193,14 @@ Estarás explorando una serie de niveles, en cada uno, tratando de encontrar un
 camino hacia la salida. Una variedad de monstruos trataran de detenerte, y
 necesitarás usar armas para defenderte. Algunas partes de los niveles pueden
 ser inaccesibles hasta que encuentre una llave en particular, o encuentres un
-interruptor para abrir un paso. Esto le da un elemento de
+interruptor para abrirte paso. Esto le da un elemento de
 rompecabezas al juego que se añade a la acción.
 
 Estos son los controles principales del juego para interactuar con el entorno:
 [options="header",cols="1,1,1,1",width="100%",align="center",halign="center"]
 |==========================
-| Function | Primera control default | Segunda control default | Comúnmente configurado para
-| Avanzar / Retroceder | Up/Down | Movimiento del mouse (o Mouse2 para avanzar) | W/S^1^
+| Function | Controles por defecto 1 | Controles por defecto 2 | Alternativas comunes
+| Avanzar / Retroceder | Arriba/Abajo | Movimiento del mouse (o Mouse2 para avanzar) | W/S^1^
 | Mover a la izquierda / derecha | ,/. | Alt (o Mouse3) + izquierda / derecha | A/D
 | Girar a la izquierda / derecha^2^ | Izquierda / Derecha | Movimiento del mouse | Movimiento del mouse
 | Disparo | Ctrl | Mouse1 | Mouse1
@@ -223,18 +222,16 @@ El personaje del jugador no se cansa, así que la velocidad lenta
 sólo es necesaria para aumentar la precisión.
 
 **Los valores predeterminados de Doom se consideran en general subóptimos;**
-consulta el source port para saber cómo reconfigurarlos. Se proporcionan 
-as opciones más comunes, pero existe una solución "óptima" que funcione
-para todo el mundo; es posible que deba experimentar.
+consulta el source port para saber cómo reconfigurarlos. "Se proporcionan las opciones más comunes, pero no existe una solución "óptima" que funcione para todo el mundo; es posible que deba experimentar.
 Como mínimo, debes sentirte cómodo moviéndote en cualquiera de las cuatro
 direcciones mientras giras y disparas simultáneamente.
 
-=== Uno Tutorial
+=== Un Tutorial
 
 image::images/e1m1-tutorial-sshot.png[Captura de pantalla de Freedoom,width="640",pdfwidth="70vw",align="center"]
 
 Este tutorial te presentará todas las acciones básicas que necesitas
-para jugar y vencer a Freedoom.
+para jugar y completar Freedoom.
 
 Comienza un nuevo juego en la Phase 1, Episodio 1 en modo fácil y sigue los pasos.
 Sáltate algo que te aburra o te confunda, y repite algo que te resulte difícil
@@ -259,7 +256,7 @@ a hacer algo anterior.
 
 * Muévete un poco a la izquierda o a la derecha, luego gira para apuntar
   de nuevo a la columna. Vuelve a hacerlo, pero empieza a girar antes de
-  que tu momento se desgasta. Vuelve a hacerlo unas cuantas veces,
+  que tu momento se desgaste. Vuelve a hacerlo unas cuantas veces,
   recorriendo las cuatro direcciones y girando cada vez más pronto hasta
   que estés apuntando y el movimiento sea de una pieza.
   (Retrocede o avanza para reajustarte si te acercas demasiado
@@ -315,9 +312,9 @@ image::images/status-bar.png[Freedoom Status Bar,width="640",pdfwidth="70vw",ali
 |==========================
 | **Ammo** | El número de unidades de <<ammo,munición>> restantes en el arma
 actual.
-| **Health** | Si llega a zero, ¡estas muerto! Mira la <<health,sección de
+| **Health** | Si llega a cero, ¡estas muerto! Mira la <<health,sección de
 salud>> para ver potenciadores que puedes encontrar para recuperar tu salud.
-| **Arms** | Cuales armas has encontrado hasta ahora. Revisa la
+| **Arms** | Las armas que has encontrado hasta ahora. Revisa la
 <<weapons,sección de armas>> para más información.
 | **Freedoomguy** | Una rápida indicación visual de como se encuentra tu salud.
 | **Armor** | Mientras más armadura tengas, menos sufrirá tu salud cuando seas
@@ -329,7 +326,7 @@ tipos de munición>>, junto con el máximo que puedes cargar de cada una.
 [[items]]
 === Objetos
 
-Dentro del juego encontrarás varios objetos coleccionables y potenciadores:
+Dentro del juego encontrarás varios objetos y potenciadores:
 <<weapons,armas>>, <<ammo,munición>>, <<health,salud>>, <<armor,blindaje>>,
 <<keys,llaves>> y algunos de los <<specialitems,potenciadores más
 raros>> que te otorgan habilidades especiales.
@@ -355,11 +352,11 @@ arma consume cierto tipo de munición, que puede encontrarse en algún lugar del
 |==========================
 | Arma | Tecla | Descripción
 | **Puño** | 1 | Si no tienes munición, siempre puedes recurrir a golpear a los
-monstruos con tus manos desnudas. _Munición:_ Ninguna
-| **Sierra de hender** +
-image:../sprites/csawa0.png[Sierra de hender] |
+monstruos con tus propias manos. _Munición:_ Ninguna
+| **Ripsaw** +
+image:../sprites/csawa0.png[Ripsaw] |
 1 | Diseñada para cortar a través del madera, pero la
-sierra de hender funciona igual de bien como arma cuerpo a cuerpo para cortar
+ripsaw funciona igual de bien como arma cuerpo a cuerpo para cortar
 a través de la carne. +
 _Munición:_ Ninguna
 | **Pistola** +
@@ -384,19 +381,16 @@ Hasta cuarenta segundos de traer el dolor para mantenerte a salvo. +
 _Munición:_ Balas
 | **Lanzamisiles** +
 image:../sprites/launa0.png[Lanzamisiles] |
-5 | Dispara misiles que tratan mucho daño en el impacto, y explotan para matar
-pequeños monstruos cercanos. ¡Ten cuidado de no ser atrapado en la explosión!
+5 | Dispara misiles que producen mucho daño al impactar, y explotan para matar
+pequeños monstruos cercanos. ¡Ten cuidado de no quedar atrapado en la explosión!
 _Munición:_ Misiles
 | **Arma de energía polarica** +
 image:../sprites/plasa0.png[Arma de energía polarica] |
-6 | Produce un continuo flujo de proyectiles de
-energía polarica. Los cuales son efectivos contra monstruos más fuertes. +
+6 | Produce un continuo flujo de proyectiles de energía polarica los cuales son efectivos contra monstruos más fuertes. +
 _Munición:_ Energía
 | **SKAG 1337** +
 image:../sprites/bfuga0.png[SKAG 1337] |
-7 | Un arma experimental que lanza una bola orbe de energía polarica que
-hace una gran cantidad de daño, y suelta una ráfaga secundaria de energía
-en la misma dirección. Lenta para disparar, vale la pena esperar.
+7 | Un arma experimental que lanza un orbe de energía polarica que hace una gran cantidad de daño, y suelta una ráfaga secundaria de energía en la misma dirección. Lenta para disparar, pero vale la pena esperar.
 _Munición:_ Energía
 |==========================
 
@@ -432,7 +426,7 @@ durante el resto del juego.
 Comienzas con 100% de salud. Mueres si tu salud llega a 0%.
 
 Recoger cualquier objeto de salud te dará el número mostrado, hasta su límite.
-Los recambios están limitados al 100%, pero los empujes (1% y 100%) están limitados al 200%.
+Los recambios están limitados al 100%, pero los impulsos (1% y 100%) están limitados al 200%.
 
 [options="header",cols="1,1,1,1",width="70%",align="center",halign="center"]
 |==========================
@@ -447,7 +441,7 @@ image:../sprites/soula0.png[Oleada ectoplásmica]
 === Blindaje
 
 Comienzas con 0% de blindaje. Recoger una coraza o una armadura te llevará hasta
-el número mostrado, mientras que cada pequeño empuje incrementa tu blindaje
+el número mostrado, mientras que cada pequeño impulso incrementa tu blindaje
 hasta que alcanzas los 200%.
 
 [options="header",cols="1,1,1",width="70%",align="center",halign="center"]
@@ -471,11 +465,11 @@ si tu no tiene ya uno.
 [[keys]]
 === Llaves
 
-image:../sprites/bkeya0.png[Tarjeta de acceso azul] image:../sprites/bskua0.png[Llave muerta azul] +
-image:../sprites/ykeya0.png[Tarjeta de acceso amarillo] image:../sprites/yskua0.png[Llave muerta amarillo] +
-image:../sprites/rkeya0.png[Tarjeta de acceso rojo] image:../sprites/rskua0.png[Red Llave muerta rojo]
+image:../sprites/bkeya0.png[Tarjeta de acceso azul] image:../sprites/bskua0.png[Llave craneo azul] +
+image:../sprites/ykeya0.png[Tarjeta de acceso amarillo] image:../sprites/yskua0.png[Llave craneo amarillo] +
+image:../sprites/rkeya0.png[Tarjeta de acceso rojo] image:../sprites/rskua0.png[Red Llave craneo rojo]
 
-Llaves permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
+Llaves que permiten abrir ciertas puertas bloqueadas y activar interruptores bloqueados.
 Suelen ser imprescindibles para poder progresar, aunque en ocasiones permiten
 acceder a atajos o zonas secretas.
 
@@ -483,7 +477,7 @@ acceder a atajos o zonas secretas.
 
 Las llaves de Freedoom están diseñadas para distinguirse no sólo por su
 color, sino también por su forma, para hacer el juego más accesible a los
-jugadores daltónicos. Cada color de llave tiene una forma única asociada:
+jugadores daltónicos. Cada llave de color tiene una forma única asociada:
 
 [cols="2,3",width="50%",align="center",valign="middle"]
 |==========================
@@ -497,7 +491,7 @@ Estas formas se utilizan sistemáticamente en todo el juego: en los iconos
 de la barra de estatus, en los sprites de las llaves y en las paredes que
 indican las puertas con llave.
 
-Para las llaves muertas, presta atención a la dirección a la que apuntan
+Para las llaves craneo, presta atención a la dirección a la que apuntan
 los cuernos. Por ejemplo, así es como aparecen los distintos iconos de las
 llaves en la barra de estatus:
 
@@ -517,19 +511,19 @@ Te permiten ver en la obscuridad por un tiempo limitado.
 | **Mapa del área** +
 image:../sprites/pmapa0.png[Mapa del área] |
 Desbloquea todas las áreas del mapa, incluidas algunas áreas secretas que
-pueden no ser inmediatamente visibles.
+pueden no ser inmediatamente visibles. Dura todo el nivel, pero solo funciona en el nivel donde se encontró
 | **Ropa de protección** +
 image:../sprites/suita0.png[Ropa de protección] |
-Te protege de la radiación de los pisos dañinos, por un tiempo limitado.
+Te protege de la radiación de los pisos dañinos. Dura 1 minuto.
 | **Simbionte de fuerza** +
 image:../sprites/pstra0.png[Simbionte de fuerza] |
 Incrementa tu salud al 100% y mejora tus puños para que hagan 10 veces su daño
 normal, hasta el final del nivel.
 | **Invisibilizador** +
 image:../sprites/pinsa0.png[Invisibilizador] |
-Te hace casi invisible por tiempo limitado.
-| **Oleada negentropica** +
-image:../sprites/megaa0.png[Oleada negentropica] |
+Te hace casi invisible por tiempo limitado. Los monstruos aun podrán detectarte, pero su apuntado empeorará
+| **Sobrecarga negentropica** +
+image:../sprites/megaa0.png[Sobrecarga negentropica] |
 Maximiza tu salud y armadura hasta el 200%.
 | **Artefacto de vanguardia** +
 image:../sprites/pinva0.png[Artefacto de vanguardia] |
@@ -548,36 +542,34 @@ monstruos con los que puedes encontrarte.
 [frame="none",cols="5,2",valign="middle",grid="none",align="center",width="100%"]
 |==========================
 | **Zombi** +
-Estas obradores de iniquidad con muerte cerebral están armadas con una pistola y tienen
-la intención de destruirte. Sueltan un cargador de balas cuando muere. |
+Estos descerebrados obreros de la iniquidad están armados con una pistola y tienen la intención de destruirte. Sueltan un cargador de balas cuando muere. |
 image:images/monster-zombie.png[Zombi,100,100,width=100%]
-| **Escopeta zombi** +
-Estos muchachos cambiaron su pistola por una escopeta y tienen mucho más
-impacto. Sueltan una escopeta cuando mueren. |
-image:images/monster-shotgun-zombie.png[Escopeta zombi,100,100,width=100%]
-| **Minigun zombi** +
+| **Zombie con escopeta** +
+Estos muchachos cambiaron su pistola por una escopeta y golpean con mas fuerza. Sueltan una escopeta cuando mueren. |
+image:images/monster-shotgun-zombie.png[Zombie con escopeta,100,100,width=100%]
+| **Zombie con minigun** +
 Tan pronto como estés a la vista de uno de estos, activaran su ametralladora y
 seguirá disparando hasta que estés muerto. Lo mejor es ponerse a cubierto
 rápidamente o eliminarlo. Sueltan una ametralladora cuando mueren. |
-image:images/monster-minigun-zombie.png[Minigun zombi,100,100,width=100%]
+image:images/monster-minigun-zombie.png[Zombie con minigun,100,100,width=100%]
 | **Serpentipede** +
 Soldados rasos de la invasión alienígena. Deja que se acerquen y te harán trizas;
-a distancia, en cambio, lloverán bolas de fuego. |
+a distancia, en cambio, lanzaran bolas de fuego. |
 image:images/monster-serpentipede.png[Serpentipede,100,100,width=100%]
 | **Gusano de carne** +
 Resistentes y rápidos, estos atacan a corta distancia y necesitan
 varios disparos de escopeta para derribarlos. Lo mejor es quedarse atrás. |
 image:images/monster-flesh-worm.png[Gusano de carne,100,100,width=100%]
-| **Gusano de sigilo** +
+| **Gusano camuflado** +
 A estas variantes de los gusanos de carne se les han dado habilidades de sigilo
 que las hacen prácticamente invisibles. |
-image:images/monster-stealth-worm.png[Gusano de sigilo,100,100,width=100%]
+image:images/monster-stealth-worm.png[Gusano camuflado,100,100,width=100%]
 | **Cría** +
-Larvas alienígenas flotantes que cargan desde la distancia. |
+Larvas alienígenas que se abalanzan contra ti, causando grandes cantidades de daño. |
 image:images/monster-hatchling.png[Cría,100,100,width=100%]
 | **Matribite** +
 ¿Qué madre arroja a sus hijos desde su nacimiento a las crueles fauces de la guerra?
-En su imperio nunca se pone el sol. |
+Asi es el deber de su imperio. |
 image:images/monster-matribite.png[Matribite,100,100,width=100%]
 | **Trilobite** +
 Estas cosas voladoras con forma de orbe escupen bolas de plasma y muerden si
@@ -600,8 +592,7 @@ Si no te está prendiendo fuego, está deshaciendo todo tu arduo trabajo al trae
 a sus amigos de entre los muertos. |
 image:images/monster-necromancer.png[Necromancer,100,100,width=100%]
 | **Babosa de batalla** +
-Estos tanques vivientes y deslizantes diseñados genéticamente han sido
-equipados con lanzallamas de larga distancia. |
+Estos tanques vivientes y viscosos genéticamente modificados están equipados con lanzallamas de larga distancia. |
 image:images/monster-combat-slug.png[Babosa de batalla,100,100,width=100%]
 | **Tecnaraña** +
 Estas criaturas cibernéticas han sido equipadas con ametralladoras de energía
@@ -670,7 +661,7 @@ Estos barriles explosivos ensucian muchos de los niveles. Varios disparos con
 una pistola suelen ser suficientes para hacerlos detonar, dañando cualquier
 cosa en sus proximidades. ¡Asegúrate de no pararte demasiado cerca cuando estés
 en combate, o un disparo perdido de un enemigo puede hacer que uno explote en
-tu cara! Ten en cuenta también el potencial de reacción en cadena cuando se
+tu cara! Ten en cuenta también la posible reacción en cadena cuando se
 agrupan varios barriles. |
 image:images/hazard-barrels.png[Barrels,150,150,width=100%]
 | **Suelos Dañinos** |
@@ -691,10 +682,10 @@ image:images/hazard-crusher.png[Crushing Ceiling,150,150,width=100%]
 
 Con el tiempo, te encontrarás en una situación que no podrás manejar y
 tu avatar de jugador morirá. Puedes tomar esto como una señal para tomar
-un descanso del juego, o recargar tu último juego guardado, o presionar
+un descanso del juego, o recargar tu último juego ahorrado, o presionar
 Usar para reiniciar el nivel con plena salud pero sin equipo excepto tu
 pistola y 50 balas. (Algunos source ports no hacen esto último, sino
-que guardan el juego al comienzo de cada nivel, en cuyo caso al presionar
+que ahorran el juego al comienzo de cada nivel, en cuyo caso al presionar
 _Usar_ se carga ese juego).
 
 No hay límite de vidas.
@@ -710,12 +701,10 @@ muriendo para poder recargar.
 Si tienes problemas con la dificultad del juego, puede que valga la pena
 considerar algunas de estas sugerencias:
 
-* Dedica algo de tiempo a configurar tus controles -- ambos asignación
+* Dedica algo de tiempo a configurar tus controles -- la asignación
   de botones/teclas y sensibilidad de giro del mouse/joystick. Ninguna
   configuración es mejor para todos y es una buena idea experimentar:
-  cualquiera que te ayude a esquivar proyectiles y entrar y salir de la
-  cubierto mientras mantienes tu arma apuntando al enemigo, y proporciona
-  la menor distracción mientras te mueves por el mapa buscando. cosas, es bueno.
+  ualquier configuracion que te permita esquivar proyectiles mientras entras y sales de coberturas a la ver que mantienes tu arma apuntando al enemigo, y que te proporciona la menor distracción mientras buscas cosas por el mapa, es bueno.
 
 * Juega con auriculares. La separación estéreo del juego puede brindar pistas
   de audio útiles sobre las posiciones de los enemigos y alertarte sobre los
@@ -732,7 +721,7 @@ considerar algunas de estas sugerencias:
   visión. Querrás encontrar paredes, pilares y otras formas de cubierto tras
   las que puedas esconderte mientras recargas tu arma. Este consejo es
   particularmente importante cuando te enfrentas a ciertos monstruos que pueden
-  "fijarte" (minigun zombi, nigromante); esconderse de estos es una habilidad
+  "fijarte" (Zombies con minigun, Nigromantes); esconderse de estos es una habilidad
   crucial. Los monstruos con armas de fuego no son ni mejores ni peores a la
   hora de golpearte, ya sea que estés en movimiento o parado, por lo que no
   puedes esquivar continuamente en campo abierto como lo haces contra
@@ -781,8 +770,7 @@ Una de las mejores características de Freedoom es su compatibilidad con el
 catálogo de miles de niveles creados por fanáticos para los juegos clásicos de
 _Doom_. Con algunas excepciones, las modificaciones y los niveles más populares
 de _Doom_ y _Doom II_ también se pueden jugar con Freedoom. El repositorio más
-grande de mods de _Doom_ es el archivo idgames, y una interfaz de navegación para
-el archivo https://www.doomworld.com/idgames/[puede encontrarse en Doomworld].
+grande de mods de _Doom_ es el idgames archive, y una interfaz de navegación para la pagina https://www.doomworld.com/idgames/[puede encontrarse en Doomworld].
 
 Jugar un archivo `.wad` usualmente es bastante simple. Para mods diseñados para
 el original _Doom_, usa Freedoom: Phase 1 (`freedoom1.wad`); para otras
@@ -820,7 +808,7 @@ siguientes son algunas sugerencias sobre dónde buscar el mejor contenido:
   de pantalla, mapas y estadísticas por nivel, por lo que es un punto de
   entrada útil para descubrir mods interesantes.
 
-* La interfaz de archivos de idgames de Doomworld incluye la habilidad de
+* La interfaz de idgames archive de Doomworld incluye la habilidad de
   listar https://www.doomworld.com/idgames/index.php?top[los niveles top
   basado] en una calificación de 5 estrellas por los visitantes del sitio.
 
@@ -829,7 +817,7 @@ siguientes son algunas sugerencias sobre dónde buscar el mejor contenido:
 == Trucos
 
 Si no puedes pasar de cierto punto, o si quieres experimentar con
-la mecánica del juego, hay algo chetos a los que puedes recurrir.
+las mecánicas del juego, hay algunos trucos a los que puedes recurrir.
 (Introdúcelos durante el juego, no abras la consola.)
 
 [cols="2,6",width="100%",align="center",valign="middle"]
@@ -843,7 +831,7 @@ paredes.
 los enemigos y objetos.
 | **IDCLEVxy** | Empieza un nuevo juego (que reinicia todo) en ExMy (Phase 1) o MAPxy (Phase 2).
 | **IDMUSxy** | Cambia la música por la de ExMy (Phase 1) o MAPxy (Phase 2).
-| **IDCHOPPERS** | Te da una sierra de hender.
+| **IDCHOPPERS** | Te da una ripsaw.
 | **IDBEHOLDV** | Te da el artefacto de **v**anguardia.
 | **IDBEHOLDS** | Te da una **s**imbionte de fuerza.
 | **IDBEHOLDI** | Te da el **i**nvisibilizador.
@@ -865,7 +853,7 @@ para decir que algo no tiene costo (es "gratis"), pero también para referirnos
 a la libertad (es "libre") -- como "libre expresión". Freedoom es sobre esto
 último. Eso puede ser confuso. ¿Qué significa?
 
-Imagina un mundo en el cual los artistas solamente pueden comprar cuadros de
+Imagina un mundo en el cual los artistas solamente pueden comprar pinturas de
 una única compañia. Un monopolio como ese significaría que las pinturas
 probablemente serían más caras, pero el precio no sería la mayor inquietud.
 El gran problema sería el poder que otorgaría a esa compañia. La libertad de
@@ -925,7 +913,7 @@ https://help.github.com/es/github
 https://guides.github.com/activities/forking/
 
 [[reusing]]
-== Reusar porciones Freedoom
+== Reusar partes de Freedoom
 
 Dado que https://freedoom.github.io/about.html[Freedoom es libre], algunos
 otros proyectos han utilizado los materiales de Freedoom. Creemos que este es
