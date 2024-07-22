@@ -1,0 +1,1084 @@
+/* U.S. English. (Sorry, it's not English English.) */
+
+// SPDX-License-Identifier: BSD-3-Clause
+
+[enu default]
+
+SECRETMESSAGE = "Found a secret!";
+
+QUITMSG = "AGM's investors are planning\nan even worse nightmare.\nPress Y if you don't care.";
+
+// Quit Phase 1 messages
+QUITMSG1 = "Why would you...";
+QUITMSG2 = "Hey buddy, there's still\nwork to be done.\nAre you sure you want to quit?";
+QUITMSG3 = "Press N to keep\nannihilating aliens.\nPress Y to surrender.";
+QUITMSG4 = "I wouldn't press Y if I were you.\nSocial media is much worse.";
+QUITMSG5 = "If you leave now, it's over.";
+QUITMSG6 = "If you give up, this\nfight will never end.\nWe still need you\nto restore our freedom.";
+QUITMSG7 = "They'll never rest.\nWill you rest?";
+
+// Quit Phase 2 messages
+QUITMSG8 = "What do you do with your life?";
+QUITMSG9 = "Don't press Y!\nThere's an army of\nzombies on your desktop!";
+QUITMSG10 = "Your revenge is unsatisfied.\nAre you sure you want to quit?";
+QUITMSG11 = "Press Y to let AGM decimate\nEarth with their monstrosities.";
+QUITMSG12 = "Don't quit!\nMonsters will kill\nyou while you sleep.";
+QUITMSG13 = "Do you think you can\nwalk away just like that?";
+QUITMSG14 = "Not even going to\nstay for Deathmatch?";
+
+NIGHTMARE = "The game is not designed to be\n"
+            "beatable at this skill level.\n"
+            "\n"
+            "Not recommended unless you're\n"
+            "really that good - or bored.\n"
+            "\n"
+            "(Press Y to confirm)";
+DOSY = "(Press Y to exit the program.)";
+GOTARMOR = "Put on a force field vest.";
+GOTMEGA = "Put on the attuned force field armor!";
+GOTHTHBONUS = "Health boosted!";
+GOTARMBONUS = "Armor boosted!";
+GOTSTIM = "Took a health refill.";
+GOTMEDINEED = "Took a large health refill. Never give up!";
+GOTMEDIKIT = "Took a large health refill.";
+GOTSUPER = "Ectoplasmic surge!";
+GOTBLUECARD = "Blue passcard secured!";
+GOTYELWCARD = "Yellow passcard secured!";
+GOTREDCARD = "Red passcard secured!";
+GOTBLUESKUL = "Blue skeleton key secured!";
+GOTYELWSKUL = "Yellow skeleton key secured!";
+GOTREDSKUL = "Red skeleton key secured!";
+GOTINVUL = "Vanguard of the gods!";
+GOTBERSERK = "Smash them to pieces!";
+GOTINVIS = "Invisibility!";
+GOTSUIT = "Rescue operations suit.";
+GOTMAP = "Area survey map.";
+GOTVISOR = "Low-light goggles.";
+GOTMSPHERE = "Negentropic surge!";
+GOTCLIP = "Picked up some bullets.";
+GOTCLIPBOX = "Picked up a case of bullets.";
+GOTROCKET = "Picked up a missile.";
+GOTROCKBOX = "Picked up a crate of missiles.";
+GOTCELL = "Picked up an energy recharge.";
+GOTCELLBOX = "Picked up a large energy recharge.";
+GOTSHELLS = "Picked up some shotgun shells.";
+GOTSHELLBOX = "Picked up a box of shotgun shells.";
+GOTBACKPACK = "A backpack for all your ammo storage needs!";
+GOTBFG9000 = "Got the SKAG 1337... time to kick some ass!";
+GOTCHAINGUN = "Got the minigun!";
+GOTCHAINSAW = "Got the ripsaw!";
+GOTLAUNCHER = "Got the missile launcher!";
+GOTPLASMA = "Got the polaric energy weapon!";
+GOTSHOTGUN = "Got the pump-action shotgun!";
+GOTSHOTGUN2 = "Got the double-barrelled shotgun!";
+PD_BLUEO = "Blue key needed.";
+PD_REDO = "Red key needed.";
+PD_YELLOWO = "Yellow key needed.";
+PD_BLUEK = "Blue key needed for this door.";
+PD_REDK = "Red key needed for this door.";
+PD_YELLOWK = "Yellow key needed for this door.";
+
+PD_BLUECO = "Blue passcard needed for this object.";
+PD_REDCO = "Red passcard needed for this object.";
+PD_YELLOWCO = "Yellow passcard needed for this object.";
+PD_BLUESO = "Blue skeleton key needed for this object.";
+PD_REDSO = "Red skeleton key needed for this object.";
+PD_YELLOWSO = "Yellow skeleton key needed for this object.";
+PICKUP_PISTOL_DROPPED = "Got the handgun!";
+
+// Level names
+HUSTR_E1M1 = "E1M1: Outer Prison";
+HUSTR_E1M2 = "E1M2: Communications Center";
+HUSTR_E1M3 = "E1M3: Waste Disposal";
+HUSTR_E1M4 = "E1M4: Supply Depot";
+HUSTR_E1M5 = "E1M5: Armory";
+HUSTR_E1M6 = "E1M6: Training Facility";
+HUSTR_E1M7 = "E1M7: Xenobiotic Materials Lab";
+HUSTR_E1M8 = "E1M8: Outpost Quarry";
+HUSTR_E1M9 = "E1M9: Nutrient Recycling";
+HUSTR_E2M1 = "E2M1: Elemental Gate";
+HUSTR_E2M2 = "E2M2: Shifter";
+HUSTR_E2M3 = "E2M3: Reclaimed Facilities";
+HUSTR_E2M4 = "E2M4: Flooded Installation";
+HUSTR_E2M5 = "E2M5: Underground Hub";
+HUSTR_E2M6 = "E2M6: Hidden Sector";
+HUSTR_E2M7 = "E2M7: Control Complex";
+HUSTR_E2M8 = "E2M8: Containment Cell";
+HUSTR_E2M9 = "E2M9: Fortress 31";
+HUSTR_E3M1 = "E3M1: Land of the Lost";
+HUSTR_E3M2 = "E3M2: Geothermal Tunnels";
+HUSTR_E3M3 = "E3M3: Sacrificial Bastion";
+HUSTR_E3M4 = "E3M4: Oblation Temple";
+HUSTR_E3M5 = "E3M5: Infernal Hallows";
+HUSTR_E3M6 = "E3M6: Igneous Intrusion";
+HUSTR_E3M7 = "E3M7: No Regrets";
+HUSTR_E3M8 = "E3M8: Ancient Lair";
+HUSTR_E3M9 = "E3M9: Acquainted With Grief";
+HUSTR_E4M1 = "E4M1: Maintenance Area";
+HUSTR_E4M2 = "E4M2: Research Complex";
+HUSTR_E4M3 = "E4M3: Central Computing";
+HUSTR_E4M4 = "E4M4: Hydroponic Facility";
+HUSTR_E4M5 = "E4M5: Engineering Station";
+HUSTR_E4M6 = "E4M6: Command Center";
+HUSTR_E4M7 = "E4M7: Waste Treatment";
+HUSTR_E4M8 = "E4M8: Launch Bay";
+HUSTR_E4M9 = "E4M9: Operations";
+
+HUSTR_1 = "MAP01: Hydroelectric Plant";
+HUSTR_2 = "MAP02: Filtration Tunnels";
+HUSTR_3 = "MAP03: Crude Processing Center";
+HUSTR_4 = "MAP04: Containment Bay";
+HUSTR_5 = "MAP05: Sludge Burrow";
+HUSTR_6 = "MAP06: Janus Terminal";
+HUSTR_7 = "MAP07: Logic Gate";
+HUSTR_8 = "MAP08: Astronomy Complex";
+HUSTR_9 = "MAP09: Datacenter";
+HUSTR_10 = "MAP10: Deadly Outlands";
+HUSTR_11 = "MAP11: Dimensional Rift Observatory";
+HUSTR_12 = "MAP12: Railroads";
+HUSTR_13 = "MAP13: Station Earth";
+HUSTR_14 = "MAP14: Nuclear Zone";
+HUSTR_15 = "MAP15: Hostile Takeover";
+HUSTR_16 = "MAP16: Urban Jungle";
+HUSTR_17 = "MAP17: City Capitol";
+HUSTR_18 = "MAP18: Aquatics Lab";
+HUSTR_19 = "MAP19: Sewage Control";
+HUSTR_20 = "MAP20: Blood Ember Fortress";
+HUSTR_21 = "MAP21: Under Realm";
+HUSTR_22 = "MAP22: Remanasu";
+HUSTR_23 = "MAP23: Underground Facility";
+HUSTR_24 = "MAP24: Abandoned Teleporter Lab";
+HUSTR_25 = "MAP25: Persistence of Memory";
+HUSTR_26 = "MAP26: Dark Depths";
+HUSTR_27 = "MAP27: Palace of Red";
+HUSTR_28 = "MAP28: Grim Redoubt";
+HUSTR_29 = "MAP29: Melting Point";
+HUSTR_30 = "MAP30: Jaws of Defeat";
+HUSTR_31 = "MAP31: Be Quiet";
+HUSTR_32 = "MAP32: Not Sure";
+
+// FreeDM level names
+$ifgame(freedm) HUSTR_1 = "DM01: Tech Test";
+$ifgame(freedm) HUSTR_2 = "DM02: Natural Station";
+$ifgame(freedm) HUSTR_3 = "DM03: Issues of Claveria";
+$ifgame(freedm) HUSTR_4 = "DM04: Steel";
+$ifgame(freedm) HUSTR_5 = "DM05: Dense Fields";
+$ifgame(freedm) HUSTR_6 = "DM06: Temple of Ammon";
+$ifgame(freedm) HUSTR_7 = "DM07: Main Stronghold";
+$ifgame(freedm) HUSTR_8 = "DM08: Artifact Base";
+$ifgame(freedm) HUSTR_9 = "DM09: Industrial Outland";
+$ifgame(freedm) HUSTR_10 = "DM10: Detached Grounds";
+$ifgame(freedm) HUSTR_11 = "DM11: Isolated Facility";
+$ifgame(freedm) HUSTR_12 = "DM12: Up 'n' Down Canyon";
+$ifgame(freedm) HUSTR_13 = "DM13: Unholy Blood";
+$ifgame(freedm) HUSTR_14 = "DM14: Technical Assault";
+$ifgame(freedm) HUSTR_15 = "DM15: Shallow Complex";
+$ifgame(freedm) HUSTR_16 = "DM16: Barren Alleys";
+$ifgame(freedm) HUSTR_17 = "DM17: Underwoods";
+$ifgame(freedm) HUSTR_18 = "DM18: Deserted Courtyard";
+$ifgame(freedm) HUSTR_19 = "DM19: Tech Isle";
+$ifgame(freedm) HUSTR_20 = "DM20: Warehouse";
+$ifgame(freedm) HUSTR_21 = "DM21: Refinery";
+$ifgame(freedm) HUSTR_22 = "DM22: Military Depot";
+$ifgame(freedm) HUSTR_23 = "DM23: Confrontation";
+$ifgame(freedm) HUSTR_24 = "DM24: Flooded Base";
+$ifgame(freedm) HUSTR_25 = "DM25: Mansion Yard";
+$ifgame(freedm) HUSTR_26 = "DM26: Acidic Crypt";
+$ifgame(freedm) HUSTR_27 = "DM27: The Exile";
+$ifgame(freedm) HUSTR_28 = "DM28: Weapons Factory";
+$ifgame(freedm) HUSTR_29 = "DM29: Unusual Territory";
+$ifgame(freedm) HUSTR_30 = "DM30: Last Man Standing";
+$ifgame(freedm) HUSTR_31 = "DM31: Desolated Fort";
+$ifgame(freedm) HUSTR_32 = "DM32: Fourplay";
+
+AMSTR_FOLLOWON = "Map following player.";
+AMSTR_FOLLOWOFF = "Map no longer following player.";
+AMSTR_GRIDON = "Map grid on.";
+AMSTR_GRIDOFF = "Map grid off.";
+AMSTR_MARKEDSPOT = "Added map bookmark.";
+AMSTR_MARKSCLEARED = "All map bookmarks cleared.";
+STSTR_MUS = "Music changed.";
+STSTR_NOMUS = "Unknown music track?";
+STSTR_DQDON = "God mode on.";
+STSTR_DQDOFF = "God mode off.";
+STSTR_DQD2ON = "Ultimate God mode on.";
+STSTR_DQD2OFF = "Ultimate God mode off.";
+STSTR_KFAADDED = "Keys, weapons and ammo added.";
+STSTR_FAADDED = "Weapons and ammo added.";
+STSTR_NCON = "Noclip on.";
+STSTR_NCOFF = "Noclip off.";
+STSTR_NC2ON = "Noclip 2 on.";
+STSTR_BEHOLD = "vanguard, smash, invis, rescue, area or light?";
+STSTR_CHOPPERS = "Vroom!";
+
+// End-of-episode texts, now with a consistent story. Feel free to edit them.
+E1TEXT =
+	"Free at last from that dreadful outpost!\n"
+        "But you're still stuck on this rock, with\n"
+        "AGM and all their monstrous 'experiments.'\n"
+        "Best not to dwell on what evil horrors\n"
+        "they were going to create from you...\n"
+        "\n"
+        "Damn alien teleporter ate your gear.\n"
+        "The air is hot and muggy, and smells of\n"
+        "strange, intoxicating vegetation. You see\n"
+        "what looks like AGM corpo tech patched\n"
+        "over old, overgrown alien structures.\n"
+        "Nothing close to the tech needed for this\n"
+        "existed at the outpost, meaning there must\n"
+        "be a starport nearby. To Earth. To freedom.\n"
+        "\n"
+        "Just gotta hope that ship will launch\n"
+        "from these routed, infested ruins...";
+E2TEXT =
+	"The massive brutes collapse onto the\n"
+        "ground, falling apart bit by bit.\n"
+        "The starport is yours.\n"
+        "\n"
+        "But no ship: the launch bay sits empty,\n"
+        "leaving only a massive teleporter pad.\n"
+        "Limited inorganics. Fixed destination.\n"
+        "\n"
+        "The name suggests it's probably the new\n"
+        "AGM ship hub in this remote star cluster.\n"
+        "Bastards owe you for what they've done,\n"
+        "so what even is interstellar piracy\n"
+        "but a bit of D.I.Y. law enforcement?\n"
+        "\n"
+        "You board the platform and fade away.\n"
+        "Next stop: Horizon.";
+E3TEXT =
+	"The abomination explodes into oblivion.\n"
+        "What the hell even was that?\n"
+        "\n"
+        "As the shadow sets over this red rock,\n"
+        "you realize that you're now trapped here.\n"
+        "At least you've got more space in this\n"
+        "wasteland than your old cell.\n"
+        "\n"
+        "You kick the corpse in anger, and it feels\n"
+        "good. You kick it again, and a remote falls\n"
+        "out. You press the button, and the ground\n"
+        "gives way to reveal a teleporter. You look\n"
+        "at the gizmo - it says 'To Double Impact.'\n"
+        "\n"
+        "Wherever or whatever that is, you pray\n"
+        "to any listening deity that there's\n"
+        "a working ship on the other side.";
+E4TEXT =
+	"Suppressing fire echoes above as the last\n"
+        "survivors flee the ship. The launch process\n"
+        "is irreversible: killing you now would only\n"
+        "bring a slow death drifting through space.\n"
+        "\n"
+        "Fifty-nine. Fifty-eight. Fifty-seven. .  .\n"
+        "You melt into the pilot's seat, lost in the\n"
+        "voice of an automated assembly of angels\n"
+        "delivering you from this wretched rock.\n"
+        "\n"
+        "The ship rumbles as she wakes up;\n"
+        "you think of Earth as she lifts off.\n"
+        "Hopefully AGM won't find you there:\n"
+        "they've got the outbreak to deal with,\n"
+        "so that'll give you some time.\n"
+        "\n"
+        "Destination: Earth!";
+// After MAP06, before MAP07:
+C1TEXT =
+	"Not even Earth is safe. The monsters show\n"
+        "up ahead of you everywhere you run.\n"
+        "Where are they even coming from?\n"
+        "Despite all the other destruction they've\n"
+        "wrought, the teleportation infrastructure\n"
+        "remains intact - you might be able to\n"
+        "get back to civilization this way.\n"
+        "\n"
+        "You find an old pad and boot it up.\n"
+        "Connection live. Handshake established.\n"
+        "\n"
+        "Growling and chittering on the intercom.\n"
+        "\n"
+        "Planted your feet.\n"
+        "Checked your weapons.\n"
+        "Time to punch through.";
+// After MAP11, before MAP12:
+C2TEXT =
+	"You didn't find anyone alive. Again.\n"
+	"\n"
+        "The fighting is taking its toll on you.\n"
+        "The pain. The brutality. The loneliness.\n"
+        "There's got to be a way to somewhere,\n"
+        "something that isn't... this.\n"
+        "\n"
+        "A train rumbles in the distance.\n"
+        "\n"
+        "You follow the sound down the empty road\n"
+        "and reach the edge of a railyard.\n"
+        "\n"
+        "Trains mean cities.\n"
+        "Cities mean people.\n"
+        "\n"
+        "Right?";
+// After MAP20, before MAP21:
+C3TEXT =
+	"Here is no AGM but only monsters.\n"
+        "Monsters, no humans and dusty days\n"
+        "sleeping in old ruins and eating scraps.\n"
+        "No one has escaped this wasteland alive.\n"
+        "\n"
+        "You've been tracking their movements.\n"
+        "AGM records and alien scrawlings point\n"
+        "to something big worming its way through\n"
+        "the entire teleportation network.\n"
+        "Sending its nightmare armies of brain-\n"
+        "scrambled sapients - including humans -\n"
+        "to conquer all known space.\n"
+        "\n"
+        "And now you're fighting at its doorstep.\n"
+        "\n"
+        "This could be the beginning\n"
+        "of your freedom - or your doom.";
+// After MAP30 (endgame text):
+C4TEXT =
+	"The evil thing becomes unstable.\n"
+        "Its final roars echo throughout the room\n"
+        "until it crumples into scrap metal.\n"
+        "\n"
+        "A targeting portal opens, blissfully\n"
+        "unaware of its master's demise.\n"
+        "\n"
+        "On the other side you see a small town.\n"
+        "You ditch your weapons and slip through,\n"
+        "leaving AGM and all its horrors behind.\n"
+        "\n"
+        "No one will know who saved them.\n"
+        "\n"
+        "No one will know what happened here.\n"
+        "\n"
+        "No one will ever find you again.";
+// Before MAP31 (secret level #1):
+C5TEXT =
+	"You step into the teleporter. You feel a\n"
+        "familiar flash and... you're in a cage?\n"
+        "Jailed?\n"
+        "\n"
+        "There are other cages in here. Occupied.\n"
+        "So is this how they capture humans?\n"
+        "Or did they set this up specially for you,\n"
+        "as a reward for being such a monkey wrench\n"
+        "in their plans?\n"
+        "\n"
+        "The guards haven't noticed you - yet.\n"
+        "Any noise could mean death. Or worse.\n"
+        "\n"
+        "When they zombify you, are you awake the\n"
+        "entire time, locked inside of your brain?\n"
+        "\n"
+        "You'd rather not find out.";
+// Before MAP32 (secret level #2):
+C6TEXT =
+	"Forcibly uncaged again. Good job.\n"
+	"\n"
+        "But where are you? The air and gravity\n"
+        "still feel like whatever planet that\n"
+        "strange prison had been on.\n"
+        "\n"
+        "You look around and the layout triggers\n"
+        "some old memories from history class.\n"
+        "\n"
+        "This is an arena.\n"
+        "Where they send prisoners to die.\n"
+        "That wasn't an exit - but an entrance.\n"
+        "\n"
+        "You will find your way back to the city,\n"
+        "but it will have to be on the other side\n"
+        "of a few homicidal mutants...";
+
+// Cast list (must appear in this order)
+CC_ZOMBIE = "zombie";
+CC_SHOTGUN = "shotgun zombie";
+CC_HEAVY = "minigun zombie";
+CC_IMP = "serpentipede";
+CC_DEMON = "flesh worm";
+CC_LOST = "hatchling";
+CC_CACO = "trilobite";
+CC_HELL = "pain bringer";
+CC_BARON = "pain lord";
+CC_ARACH = "technospider";
+CC_PAIN = "matribite";
+CC_REVEN = "octaminator";
+CC_MANCU = "combat slug";
+CC_ARCH = "necromancer";
+CC_SPIDER = "large technospider";
+CC_CYBER = "assault tripod";
+CC_HERO = "savior of humanity";
+
+// Friendly names
+FN_ZOMBIE = "Zombie";
+FN_SHOTGUN = "Shotgun Zombie";
+FN_HEAVY = "Minigun Zombie";
+FN_IMP = "Serpentipede";
+FN_DEMON = "Flesh Worm";
+FN_SPECTRE = "Stealth Worm";
+FN_LOST = "Hatchling";
+FN_CACO = "Trilobite";
+FN_HELL = "Pain Bringer";
+FN_BARON = "Pain Lord";
+FN_ARACH = "Technospider";
+FN_PAIN = "Matribute";
+FN_REVEN = "Octaminator";
+FN_MANCU = "Combat Slug";
+FN_ARCH = "Necromancer";
+FN_SPIDER = "Large Technospider";
+FN_CYBER = "Assault Tripod";
+FN_WOLFSS = "Spanish Sailor";
+
+// New strings from BOOM
+PD_BLUEC = "Blue passcard needed for this door.";
+PD_REDC = "Red passcard needed for this door.";
+PD_YELLOWC = "Yellow passcard needed for this door.";
+PD_BLUES = "Blue skeleton key needed for this door.";
+PD_REDS = "Red skeleton key needed for this door.";
+PD_YELLOWS = "Yellow skeleton key needed for this door.";
+PD_ANY = "Any key will open this door.";
+PD_ANYOBJ = "Any key will activate this object.";
+PD_ALL3 = "This door requires all three keys.";
+PD_ALL3O = "This object requires all three keys.";
+PD_ALL6 = "This door requires all six keys!";
+PD_ALL6O = "This object requires all six keys!";
+PD_ALLKEYS = "You need all the keys!";
+
+// Obituary strings
+OB_STEALTHBABY = "%o thought %g saw a technospider.";
+OB_STEALTHVILE = "%o thought %g saw a necromancer.";
+OB_STEALTHBARON = "%o thought %g saw a pain lord.";
+OB_STEALTHCACO = "%o thought %g saw a trilobite.";
+OB_STEALTHCHAINGUY = "%o thought %g saw a minigun zombie.";
+OB_STEALTHDEMON = "%o thought %g saw a flesh worm.";
+OB_STEALTHKNIGHT = "%o thought %g saw a pain bringer.";
+OB_STEALTHIMP = "%o thought %g saw a serpentipede.";
+OB_STEALTHFATSO = "%o thought %g saw a combat slug.";
+OB_STEALTHUNDEAD = "%o thought %g saw an octaminator.";
+OB_STEALTHSHOTGUY = "%o thought %g saw a shotgun zombie.";
+OB_STEALTHZOMBIE = "%o thought %g saw a zombie.";
+OB_UNDEADHIT = "%o was beaten up by an octaminator.";
+OB_IMPHIT = "%o was lacerated by a serpentipede.";
+OB_CACOHIT = "%o got trilo-bitten.";
+OB_DEMONHIT = "%o was eaten by a flesh worm.";
+OB_SPECTREHIT = "%o was eaten by a stealth worm.";
+OB_BARONHIT = "%o was torn open by a pain lord.";
+OB_KNIGHTHIT = "%o was gutted by a pain bringer.";
+OB_ZOMBIE = "%o was killed by a zombie.";
+OB_SHOTGUY = "%o was perforated by a shotgun zombie.";
+OB_VILE = "%o was raised by a necromancer.";
+OB_UNDEAD = "%o couldn't evade an octaminator's fireball.";
+OB_FATSO = "%o was blasted by a combat slug.";
+OB_CHAINGUY = "%o was ventilated by a minigun zombie.";
+OB_SKULL = "%o was slammed by a hatchling.";
+OB_IMP = "%o was scorched by a serpentipede.";
+OB_CACO = "%o was zapped by a trilobite.";
+OB_BARON = "%o was nuked by a pain lord.";
+OB_KNIGHT = "%o was fried by a pain bringer.";
+OB_SPIDER = "%o stood in awe of the large technospider.";
+OB_BABY = "%o was immolated by a technospider.";
+OB_CYBORG = "%o was mutilated by an assault tripod.";
+OB_WOLFSS = "%o met a sailor.";
+
+OB_MPFIST = "%o was beaten up by %k.";
+OB_MPCHAINSAW = "%o was shredded by %k's ripsaw.";
+OB_MPPISTOL = "%o was killed by %k's handgun.";
+OB_MPSHOTGUN = "%o was perforated by %k's pump-action shotgun.";
+OB_MPSSHOTGUN = "%o was permeated by %k's double-barreled shotgun.";
+OB_MPCHAINGUN = "%o was ventilated by %k's minigun.";
+OB_MPROCKET = "%o was mutilated by %k's missile.";
+OB_MPR_SPLASH = "%o couldn't dodge %k's missile.";
+OB_MPPLASMARIFLE = "%o was immolated by %k's polaric energy weapon.";
+OB_MPBFG_BOOM = "%o had %p ass kicked by %k's SKAG!";
+OB_MPBFG_SPLASH = "%o couldn't hide from %k's SKAG.";
+OB_MPTELEFRAG = "%o stood where %k was teleporting.";
+OB_RAILGUN = "%o was sniped by %k's railgun.";
+OB_MPBFG_MBF = "%o had %p ass kicked by %k's SKAG!";
+
+/*
+Text shown on startup in Boom-compatible ports. This is all in
+STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+*/
+STARTUP5 = "============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================";
+$ifgame(freedm) STARTUP5 = "============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================";
+
+// Item tags: Freedoom weapons
+TAG_FIST = "fist";
+TAG_CHAINSAW = "ripsaw";
+TAG_PISTOL = "handgun";
+TAG_SHOTGUN = "pump-action shotgun";
+TAG_SUPERSHOTGUN = "double-barrelled shotgun";
+TAG_CHAINGUN = "minigun";
+TAG_ROCKETLAUNCHER = "missile launcher";
+TAG_PLASMARIFLE = "polaric energy weapon";
+TAG_BFG9000 = "SKAG 1337";
+
+AMMO_CLIP			= "Bullets";
+AMMO_SHELLS			= "Shotgun Shells";
+AMMO_ROCKETS		= "Missiles";
+AMMO_CELLS			= "Energy Recharges";
+
+// Menu Strings
+
+// Skills
+SKILL_BABY			= "Please don't kill me!";
+SKILL_EASY			= "Will this hurt?";
+SKILL_NORMAL		= "Bring on the pain.";
+SKILL_HARD			= "Extreme Carnage.";
+SKILL_NIGHTMARE		= "MAYHEM!";
+
+// Episodes
+TXT_D1E1 = "Outpost Outbreak";
+TXT_D1E2 = "Ruin Upon Ruin";
+TXT_D1E3 = "Event Horizon";
+TXT_D1E4 = "Double Impact";
+
+TXT_D2E1 = "Phase 2";
+$ifgame(freedm) TXT_D2E1 = "FreeDM";
+
+/*
+Russian translation
+by Georgy Samoilov (GeorgePieVG) and Julia Nechaevskaya (JNechaevsky)
+*/
+
+[ru]
+
+SECRETMESSAGE = "Нашёл секрет!";
+
+QUITMSG = "Инвесторы AGM планируют кошмары похуже. Нажми Y, если тебе всё равно.";
+
+// Quit Phase 1 messages
+QUITMSG1 = "Почему ты...";
+QUITMSG2 = "Ей, приятель, здесь есть\nнезаконченные дела.\nУверен, что хочешь выйти?";
+QUITMSG3 = "Нажмите N, чтобы\nуничтожать пришельцев.\nНажмите Y, чтобы сдаться.";
+QUITMSG4 = "На твоём месте, я бы не нажимал Y.\nСоциальные сети гораздо хуже.";
+QUITMSG5 = "Уйдёшь сейчас - всё пропало.";
+QUITMSG6 = "Если сдашься,\nбитва никогда не закончится.\nТы всё ещё нужен нам,\nчтобы обрести свободу.";
+QUITMSG7 = "Они не дремлют.\nА ты будешь?";
+
+// Quit Phase 2 messages
+QUITMSG8 = "Что ты делаешь со своей жизнью?";
+QUITMSG9 = "Не нажимай Y!\nНа твоём рабочем\nстоле армия зомби!";
+QUITMSG10 = "Ваша месть неудовлетворена.\nВы уверены, что хотите выйти?";
+QUITMSG11 = "Нажмите Y, чтобы позволить AGM уничтожить\nЗемлю своими чудовищами.";
+QUITMSG12 = "Не уходи!\nМонстры убьют\nтебя, пока ты спишь.";
+QUITMSG13 = "Ты думаешь, что можешь\nвот так просто уйти?";
+QUITMSG14 = "Не собираешься\nостаться даже на Deathmatch?";
+
+NIGHTMARE = "Игра не задумана быть\n"
+            "проходимой на этой сложности.\n"
+            "\n"
+            "Не рекомендуется, если ты не настолько\n"
+            "хорош - или тебе нечем заняться.\n"
+            "\n"
+            "(Нажми Y для подтверждения)";
+DOSY = "(Нажми Y, чтобы выйти из программы.)";
+GOTARMOR = "Надел жилет с силовым полем.";
+GOTMEGA = "Надел доспехи с настроенным силовым полем!";
+GOTHTHBONUS = "Здоровье укреплено!";
+GOTARMBONUS = "Броня укреплена!";
+GOTSTIM = "Взял восполнитель здоровья.";
+GOTMEDINEED = "Взял крупный восполнитель здоровья. Никогда не сдавайся!";
+GOTMEDIKIT = "Взял крупный восполнитель здоровья.";
+GOTSUPER = "Эктоплазменный всплеск!";
+GOTBLUECARD = "Синий пропуск под защитой!";
+GOTYELWCARD = "Жёлтый пропуск под защитой!";
+GOTREDCARD = "Красный пропуск под защитой!";
+GOTBLUESKUL = "Синий скелетный ключ под защитой!";
+GOTYELWSKUL = "Жёлтый скелетный ключ под защитой!";
+GOTREDSKUL = "Красный скелетный ключ под защитой!";
+GOTINVUL = "Авангард богов!";
+GOTBERSERK = "Разорви их на куски!";
+GOTINVIS = "Невидимость!";
+GOTSUIT = "Костюм для спасательных операций.";
+GOTMAP = "Обзорная карта местности.";
+GOTVISOR = "Очки для слабого освещения.";
+GOTMSPHERE = "Негэнтропийный всплеск!";
+GOTCLIP = "Подобрал немного пуль.";
+GOTCLIPBOX = "Подобрал ящик пуль.";
+GOTROCKET = "Подобрал ракету.";
+GOTROCKBOX = "Подобрал ящик ракет.";
+GOTCELL = "Подобрал энергетическую подпитку.";
+GOTCELLBOX = "Подобрал большую энергетическую подпитку.";
+GOTSHELLS = "Подобрал несколько патронов для дробовика.";
+GOTSHELLBOX = "Подобрал коробку патронов для дробовика.";
+GOTBACKPACK = "Рюкзак для хранения любых патронов!";
+GOTBFG9000 = "Получил SKAG 1337... пора надрать задницы!";
+GOTCHAINGUN = "Получил миниган!";
+GOTCHAINSAW = "Получил циркулярную пилу!";
+GOTLAUNCHER = "Получил ракетницу!";
+GOTPLASMA = "Получил поляризованное энергоружьё!";
+GOTSHOTGUN = "Получил помповый дробовик!";
+GOTSHOTGUN2 = "Получил двуствольный дробовик!";
+PD_BLUEO = "Нужен синий ключ.";
+PD_REDO = "Нужен красный ключ.";
+PD_YELLOWO = "Нужен жёлтый ключ.";
+PD_BLUEK = "Для этой двери нужен синий ключ.";
+PD_REDK = "Для этой двери нужен красный ключ.";
+PD_YELLOWK = "Для этой двери нужен жёлтый ключ.";
+
+PD_BLUECO = "Для этого объекта нужен синий пропуск.";
+PD_REDCO = "Для этого объекта нужен красный пропуск.";
+PD_YELLOWCO = "Для этого объекта нужен жёлтый пропуск.";
+PD_BLUESO = "Для этого объекта нужен синий скелетный ключ.";
+PD_REDSO = "Для этого объекта нужен красный скелетный ключ.";
+PD_YELLOWSO = "Для этого объекта нужен жёлтый скелетный ключ.";
+PICKUP_PISTOL_DROPPED = "Получил пистолет!";
+
+// Level names
+HUSTR_E1M1 = "E1M1: Внешняя тюрьма";
+HUSTR_E1M2 = "E1M2: Центр связи";
+HUSTR_E1M3 = "E1M3: Утилизация отходов";
+HUSTR_E1M4 = "E1M4: Депо снабжения";
+HUSTR_E1M5 = "E1M5: Оружейная";
+HUSTR_E1M6 = "E1M6: Центр подготовки";
+HUSTR_E1M7 = "E1M7: Лаборатория ксенобиотических материалов";
+HUSTR_E1M8 = "E1M8: Аванпост каменоломни";
+HUSTR_E1M9 = "E1M9: Переработка нутриента";
+HUSTR_E2M1 = "E2M1: Элементальные врата";
+HUSTR_E2M2 = "E2M2: Шифтер";
+HUSTR_E2M3 = "E2M3: Восстановленные объекты";
+HUSTR_E2M4 = "E2M4: Затопленная установка";
+HUSTR_E2M5 = "E2M5: Подземный хаб";
+HUSTR_E2M6 = "E2M6: Скрытый сектор";
+HUSTR_E2M7 = "E2M7: Управляющий комплекс";
+HUSTR_E2M8 = "E2M8: Камера содержания";
+HUSTR_E2M9 = "E2M9: Крепость 31";
+HUSTR_E3M1 = "E3M1: Земля потерянных";
+HUSTR_E3M2 = "E3M2: Геотермальные туннели";
+HUSTR_E3M3 = "E3M3: Жертвенный бастион";
+HUSTR_E3M4 = "E3M4: Храм воздаяния";
+HUSTR_E3M5 = "E3M5: Инфернальные дары";
+HUSTR_E3M6 = "E3M6: Внезапное извержение";
+HUSTR_E3M7 = "E3M7: Без сожалений";
+HUSTR_E3M8 = "E3M8: Древнее логово";
+HUSTR_E3M9 = "E3M9: Изведавший горе";
+HUSTR_E4M1 = "E4M1: Зона обслуживания";
+HUSTR_E4M2 = "E4M2: Исследовательский комплекс";
+HUSTR_E4M3 = "E4M3: Главный вычислительный центр";
+HUSTR_E4M4 = "E4M4: Гидропонная ферма";
+HUSTR_E4M5 = "E4M5: Проектировочная станция";
+HUSTR_E4M6 = "E4M6: Командный пункт";
+HUSTR_E4M7 = "E4M7: Переработка отходов";
+HUSTR_E4M8 = "E4M8: Стартовая площадка";
+HUSTR_E4M9 = "E4M9: Оперативный отдел";
+
+HUSTR_1 = "MAP01: Гидроэлектростанция";
+HUSTR_2 = "MAP02: Фильтрационные туннели";
+HUSTR_3 = "MAP03: Центр обработки сырья";
+HUSTR_4 = "MAP04: Секция хранения";
+HUSTR_5 = "MAP05: Шлаковая яма";
+HUSTR_6 = "MAP06: Терминал Януса";
+HUSTR_7 = "MAP07: Логические ворота";
+HUSTR_8 = "MAP08: Астрономический комплекс";
+HUSTR_9 = "MAP09: Дата-центр";
+HUSTR_10 = "MAP10: Смертельное запределье";
+HUSTR_11 = "MAP11: Обсерватория пространственных разломов";
+HUSTR_12 = "MAP12: Железные дороги";
+HUSTR_13 = "MAP13: Станция 'Земля'";
+HUSTR_14 = "MAP14: Ядерная зона";
+HUSTR_15 = "MAP15: Враждебное поглощение";
+HUSTR_16 = "MAP16: Городские джунгли";
+HUSTR_17 = "MAP17: Капитолий";
+HUSTR_18 = "MAP18: Лаборатория 'Акватика'";
+HUSTR_19 = "MAP19: Канализационный коллектор";
+HUSTR_20 = "MAP20: Янтарно-кровавая крепость";
+HUSTR_21 = "MAP21: Подземный мир";
+HUSTR_22 = "MAP22: Реманасу";
+HUSTR_23 = "MAP23: Подземная фабрика";
+HUSTR_24 = "MAP24: Заброшенная лаборатория телепортации";
+HUSTR_25 = "MAP25: Постоянство памяти";
+HUSTR_26 = "MAP26: Тёмные глубины";
+HUSTR_27 = "MAP27: Дворец красного";
+HUSTR_28 = "MAP28: Зловещий редут";
+HUSTR_29 = "MAP29: Точка плавления";
+HUSTR_30 = "MAP30: Оскал Поражения";
+HUSTR_31 = "MAP31: Будь спокоен";
+HUSTR_32 = "MAP32: Неразбериха";
+
+// FreeDM level names
+$ifgame(freedm) HUSTR_1 = "DM01: Технологический тест";
+$ifgame(freedm) HUSTR_2 = "DM02: Станция 'Природа'";
+$ifgame(freedm) HUSTR_3 = "DM03: Вопрошания Клаверии";
+$ifgame(freedm) HUSTR_4 = "DM04: Сталь";
+$ifgame(freedm) HUSTR_5 = "DM05: Густые поля";
+$ifgame(freedm) HUSTR_6 = "DM06: Гробница Аммона";
+$ifgame(freedm) HUSTR_7 = "DM07: Главная крепость";
+$ifgame(freedm) HUSTR_8 = "DM08: База артефактов";
+$ifgame(freedm) HUSTR_9 = "DM09: Промышленная глушь";
+$ifgame(freedm) HUSTR_10 = "DM10: Отдельная территория";
+$ifgame(freedm) HUSTR_11 = "DM11: Изолированная фабрика";
+$ifgame(freedm) HUSTR_12 = "DM12: Вверх и вниз по каньону";
+$ifgame(freedm) HUSTR_13 = "DM13: Несвятая кровь";
+$ifgame(freedm) HUSTR_14 = "DM14: Технический штурм";
+$ifgame(freedm) HUSTR_15 = "DM15: Малый комплекс";
+$ifgame(freedm) HUSTR_16 = "DM16: Бесплодные аллеи";
+$ifgame(freedm) HUSTR_17 = "DM17: Подлесок";
+$ifgame(freedm) HUSTR_18 = "DM18: Пустынный двор";
+$ifgame(freedm) HUSTR_19 = "DM19: Техноостров";
+$ifgame(freedm) HUSTR_20 = "DM20: Склад";
+$ifgame(freedm) HUSTR_21 = "DM21: Завод по переработке нефти";
+$ifgame(freedm) HUSTR_22 = "DM22: Военное депо";
+$ifgame(freedm) HUSTR_23 = "DM23: Противостояние";
+$ifgame(freedm) HUSTR_24 = "DM24: Затопленная база";
+$ifgame(freedm) HUSTR_25 = "DM25: Двор особнка";
+$ifgame(freedm) HUSTR_26 = "DM26: Кислотный склеп";
+$ifgame(freedm) HUSTR_27 = "DM27: Изгнание";
+$ifgame(freedm) HUSTR_28 = "DM28: Оружейный завод";
+$ifgame(freedm) HUSTR_29 = "DM29: Необычная территория";
+$ifgame(freedm) HUSTR_30 = "DM30: Последний герой";
+$ifgame(freedm) HUSTR_31 = "DM31: Опустевший форт";
+$ifgame(freedm) HUSTR_32 = "DM32: Четырехсторонняя игра";
+
+AMSTR_FOLLOWON = "Карта следует за игроком.";
+AMSTR_FOLLOWOFF = "Карта больше не следует за игроком.";
+AMSTR_GRIDON = "Сетка карты вкл.";
+AMSTR_GRIDOFF = "Сетка карты выкл.";
+AMSTR_MARKEDSPOT = "Добавлена закладка для карты.";
+AMSTR_MARKSCLEARED = "Все закладки для карты убраны.";
+STSTR_MUS = "Музыка изменена.";
+STSTR_NOMUS = "Что это за музыка?";
+STSTR_DQDON = "Режим бога вкл.";
+STSTR_DQDOFF = "Режим бога выкл.";
+STSTR_DQD2ON = "Ультимативный режим бога вкл.";
+STSTR_DQD2OFF = "Ультимативный режим бога выкл.";
+STSTR_KFAADDED = "Ключи, оружие и патроны добавлены.";
+STSTR_FAADDED = "Оружие и патроны добавлены.";
+STSTR_NCON = "Noclip вкл.";
+STSTR_NCOFF = "Noclip выкл.";
+STSTR_NC2ON = "Noclip 2 вкл.";
+STSTR_BEHOLD = "авангард, разгром, инвиз, спасение, область или свет?";
+STSTR_CHOPPERS = "Врум-врум!";
+
+// End-of-episode texts, now with a consistent story. Feel free to edit them.
+E1TEXT =
+	"Наконец-то свободен от страшного аванпоста!\n"
+        "Но ты всё ещё торчишь на этом камне, с\n"
+        "AGM и их чудовищными 'экспериментами.'\n"
+        "Лучше не думать о том, какие злобные ужасы\n"
+        "они собирались создать из тебя...\n"
+        "\n"
+        "Чёртов инопланетный телепортатор сожрал твоё снаряжение.\n"
+        "Воздух горячий и душный, пахнет странной,\n"
+        "пьянящей растительностью. Ты видишь\n"
+        "что-то похожее на технологии AGM, наложенное\n"
+        "на старые, заросшие инопланетные строения.\n"
+        "На аванпосте не было ничего похожего на технику,\n"
+        "необходимую для подобного, значит, поблизости\n"
+        "должен быть звёздный порт. На Землю. К свободе.\n"
+        "\n"
+        "Остается только надеяться, что корабль стартует\n"
+        "из этих разгромленных, заражённых руин...";
+E2TEXT =
+	"Крупные звери рухнули на\n"
+        "землю, разваливаясь на части.\n"
+        "Звёздный порт в твоём распоряжении.\n"
+        "\n"
+        "Но корабля нет: стартовый отсек пуст,\n"
+        "осталась лишь массивная площадка для телепортации.\n"
+        "Ограничение на неорганику. Фиксированный пункт назначения.\n"
+        "\n"
+        "Судя по названию, это, вероятно, новый центр\n"
+        "кораблей AGM в этом удалённом звёздном скоплении.\n"
+        "Ублюдки ответят тебе за содеянное,\n"
+        "так что какое ещё межзвёздное пиратство,\n"
+        "кроме как вершения правосудия своими руками?\n"
+        "\n"
+        "Ты садишься на платформу и исчезаешь.\n"
+        "Следующая остановка: Горизонт.";
+E3TEXT =
+	"Мерзость взрывается в небытие.\n"
+        "Что это вообще было?\n"
+        "\n"
+        "Когда тень опустилась на красную скалу,\n"
+        "ты понимаешь, что попал в ловушку.\n"
+        "По крайней мере, в этой пустоши больше места,\n"
+        "чем в старой камере.\n"
+        "\n"
+        "В гневе ты пинаешь труп, и это оказалось\n"
+        "приятно. Ты пинаешь снова и из него выпадает\n"
+        "пульт. Ты нажимаешь на кнопку, и земля уходит\n"
+        "из-под ног, открывая телепортатор. Ты смотришь\n"
+        "на штуковину - на ней написано 'К Двойному Удару'.\n"
+        "\n"
+        "Где бы или что бы это ни было, ты молишься\n"
+        "любому слышащему божеству,\n"
+        "чтобы на той стороне был работающий корабль.";
+E4TEXT =
+	"Огонь свехру прекращается, потому как последний\n"
+        "выживший бежит на корабле. Процесс запуска\n"
+        "необратим: убив тебя сейчас,\n"
+        "ты лишь медленно умрёшь, дрейфуя в космосе.\n"
+        "\n"
+        "Пятьдесят девять. Пятьдесят восемь. Пятьдесят семь. .  .\n"
+        "Ты растворяешься в кресле пилота, теряясь в,\n"
+        "голосе автоматического собрания ангелов,\n"
+        "уносящих тебя с этого жалкого камня.\n"
+        "\n"
+        "Корабль урчит, просыпаясь;\n"
+        "ты думаешь о Земле, когда он взлетает.\n"
+        "Хоть бы AGM не нашли тебя там:\n"
+        "им нужно разобраться с вторжением,\n"
+        "так что у тебя будет немного времени.\n"
+        "\n"
+        "Пункт назначения: Земля!";
+// After MAP06, before MAP07:
+C1TEXT =
+	"Даже Земля небезопасна. Монстры появляются\n"
+        "перед тобой, куда бы ты ни побежал..\n"
+        "Откуда они вообще взялись?\n"
+        "Несмотря на все разрушения, что они\n"
+        "учинили, инфраструктура телепортации\n"
+        "осталась нетронутой - возможно, тебе удастся\n"
+        "вернуться к цивилизации этим путём.\n"
+        "\n"
+        "Ты нашёл старую платформу и запустил её.\n"
+        "Соединение установлено. Рукопожатие налажено.\n"
+        "\n"
+        "Рычание и щебетание по внутренней связи.\n"
+        "\n"
+        "Встал в стойку.\n"
+        "Проверил оружие.\n"
+        "Пришло время пробиваться.";
+// After MAP11, before MAP12:
+C2TEXT =
+	"Ты не нашёл ни одной живой души. Опять.\n"
+	"\n"
+        "Бой берет свое.\n"
+        "Боль. Жестокость. Одиночество.\n"
+        "Должен быть путь куда-то,\n"
+        "где не будет всего... этого.\n"
+        "\n"
+        "Вдалеке грохочет поезд.\n"
+        "\n"
+        "Ты идёшь на звук по пустой дороге\n"
+        "и достигаешь конца железнодорожной станции.\n"
+        "\n"
+        "Поезда - это города.\n"
+        "Города - это люди.\n"
+        "\n"
+        "Ведь так?";
+// After MAP20, before MAP21:
+C3TEXT =
+	"Здесь нет AGM, только монстры.\n"
+        "Монстры, отсутствие людей и пыльные дни,\n"
+        "когда ты спишь в старых развалинах и питаешься объедками.\n"
+        "Никому не удалось выбраться из этой пустоши живым.\n"
+        "\n"
+        "Ты отслеживал их передвижения.\n"
+        "Записи AGM и инопланетные каракули указывают\n"
+        "на то, что нечто огромное прокладывает себе путь\n"
+        "через всю телепортационную сеть.\n"
+        "Посылает свои кошмарные армии гуманоидов с\n"
+        "промытыми мозгами, включая людей,\n"
+        "чтобы завоевать весь известный космос.\n"
+        "\n"
+        "А теперь ты сражаешься у его порога.\n"
+        "\n"
+        "Это может стать началом\n"
+        "твоей свободы - или твоего рока.";
+// After MAP30 (endgame text):
+C4TEXT =
+	"Злое нечто становится нестабильным.\n"
+        "Его последние рыки раздались эхом по комнате,\n"
+        "пока оно не превратилось в металлолом.\n"
+        "\n"
+        "Открывается целевой портал, не подозревающий\n"
+        "о гибели своего хозяина.\n"
+        "\n"
+        "По ту сторону виднеется небольшой город.\n"
+        "Ты бросаешь оружие и проскальзываешь через портал,\n"
+        "оставив AGM и все их ужасы позади.\n"
+        "\n"
+        "Никто не узнает своего спасителя.\n"
+        "\n"
+        "Никто не узнает, что здесь произошло.\n"
+        "\n"
+        "Никто и никогда не найдёт тебя снова.";
+// Before MAP31 (secret level #1):
+C5TEXT =
+	"Ты заходишь в телепорт. Ты чувствуешь\n"
+        "знакомую вспышку и... оказываешься в клетке?\n"
+        "В тюрьме?\n"
+        "\n"
+        "Здесь есть и другие клетки. Заняты.\n"
+        "Так вот как они отлавливают людей?\n"
+        "Или они устроили это специально для тебя,\n"
+        "в награду за то, что ты вставлял палки\n"
+        "в колёса их планов?\n"
+        "\n"
+        "Стража не заметила тебя - пока что.\n"
+        "Любой шум может означать смерть. Или ещё хуже.\n"
+        "\n"
+        "Когда тебя зомбируют, ты будешь всё время бодр,\n"
+        "заперт в собственном мозге?\n"
+        "\n"
+        "Лучше тебе не знать.";
+// Before MAP32 (secret level #2):
+C6TEXT =
+	"Насильственно пойман в клетку, снова. Молодец.\n"
+	"\n"
+        "Но где ты? Воздух и гравитация\n"
+        "всё ещё напоминают планету, на которой\n"
+        "находилась та странная тюрьма.\n"
+        "\n"
+        "Ты осматриваешься, планировка вызывает\n"
+        "старые воспоминания с уроков истории.\n"
+        "\n"
+        "Это арена.\n"
+        "Куда они отправляют заключённых на смерть.\n"
+        "Это был не выход - но вход.\n"
+        "\n"
+        "Ты найдёшь обратную дорогу в город,\n"
+        "но для этого придется оказаться по другую сторону\n"
+        "от нескольких мутантов-убийц...";
+
+// Cast list (must appear in this order)
+CC_ZOMBIE = "зомби";
+CC_SHOTGUN = "зомби-ружейник";
+CC_HEAVY = "зомби-пулемётчик";
+CC_IMP = "змееножка";
+CC_DEMON = "червеплоть";
+CC_LOST = "вылуплёныш";
+CC_CACO = "трилобит";
+CC_HELL = "вестник боли";
+CC_BARON = "лорд боли";
+CC_ARACH = "технопаук";
+CC_PAIN = "матрибьют";
+CC_REVEN = "осьминатор";
+CC_MANCU = "боевой слизняк";
+CC_ARCH = "некромант";
+CC_SPIDER = "огромный технопаук";
+CC_CYBER = "штурмовой триног";
+CC_HERO = "спаситель человечества";
+
+// Friendly names
+FN_ZOMBIE = "Зомби";
+FN_SHOTGUN = "Зомби-ружейник";
+FN_HEAVY = "Зомби-пулемётчик";
+FN_IMP = "Змееножка";
+FN_DEMON = "Червеплоть";
+FN_SPECTRE = "Скрытоплоть";
+FN_LOST = "Вылуплёныш";
+FN_CACO = "Трилобит";
+FN_HELL = "Вестник Боли";
+FN_BARON = "Лорд Боли";
+FN_ARACH = "Технопаук";
+FN_PAIN = "Матрибьют";
+FN_REVEN = "Осьминатор";
+FN_MANCU = "Боевой Слизняк";
+FN_ARCH = "Некромант";
+FN_SPIDER = "Огромный Технопаук";
+FN_CYBER = "Штурмовой Триног";
+FN_WOLFSS = "Испанский Моряк";
+
+// New strings from BOOM
+PD_BLUEC = "Для этой двери нужен синий пропуск.";
+PD_REDC = "Для этой двери нужен красный пропуск.";
+PD_YELLOWC = "Для этой двери нужен жёлтый пропуск.";
+PD_BLUES = "Для этой двери нужен синий скелетный ключ.";
+PD_REDS = "Для этой двери нужен красный скелетный ключ.";
+PD_YELLOWS = "Для этой двери нужен жёлтый скелетный ключ.";
+PD_ANY = "Для этой двери подойдёт любой ключ.";
+PD_ANYOBJ = "Для этого объекта подойдёт любой ключ.";
+PD_ALL3 = "Для этой двери нужны все три ключа.";
+PD_ALL3O = "Для этого объекта нужны все три ключа.";
+PD_ALL6 = "Для этой двери нужны все шесть ключей!";
+PD_ALL6O = "Для этого объекта нужны все шесть ключей!";
+PD_ALLKEYS = "Тебе нужны все ключи";
+
+// Obituary strings
+OB_STEALTHBABY = "%o краем глаза заметил технопаука.";
+OB_STEALTHVILE = "%o краем глаза заметил некроманта.";
+OB_STEALTHBARON = "%o краем глаза заметил лорда боли.";
+OB_STEALTHCACO = "%o краем глаза заметил трилобита.";
+OB_STEALTHCHAINGUY = "%o краем глаза заметил зомби-пулемётчика.";
+OB_STEALTHDEMON = "%o краем глаза заметил червеплоть.";
+OB_STEALTHKNIGHT = "%o краем глаза заметил вестника боли.";
+OB_STEALTHIMP = "%o краем глаза заметил змееножку.";
+OB_STEALTHFATSO = "%o краем глаза заметил боевого слизняка.";
+OB_STEALTHUNDEAD = "%o краем глаза заметил осьминатора.";
+OB_STEALTHSHOTGUY = "%o краем глаза заметил зомби-ружейника.";
+OB_STEALTHZOMBIE = "%o краем глаза заметил зомби.";
+OB_UNDEADHIT = "%o был побит осьминатором.";
+OB_IMPHIT = "%o был разорван змееножкой.";
+OB_CACOHIT = "%o был трило-избит.";
+OB_DEMONHIT = "%o был съеден червеплотью.";
+OB_SPECTREHIT = "%o был съеден скрытоплотью.";
+OB_BARONHIT = "%o был порван лордом боли.";
+OB_KNIGHTHIT = "%o был выпотрошен вестником боли.";
+OB_ZOMBIE = "%o был убит зомби.";
+OB_SHOTGUY = "%o был продырявлен зомби-ружейником.";
+OB_VILE = "%o был поднят некромантом.";
+OB_UNDEAD = "%o не уклонился от огненного шара осьминатора.";
+OB_FATSO = "%o был взорван боевым слизняком.";
+OB_CHAINGUY = "%o был изрешечён зомби-пулемётчиком.";
+OB_SKULL = "%o был прихлопнут вылуплёнышем.";
+OB_IMP = "%o был опален змееножкой.";
+OB_CACO = "%o был поражён трилобитом.";
+OB_BARON = "%o был испепелён лордом боли.";
+OB_KNIGHT = "%o был поджарен вестником боли.";
+OB_SPIDER = "%o с благоговением смотрел на огромного технопаука.";
+OB_BABY = "%o был обездвижен технопауком.";
+OB_CYBORG = "%o был изувечен штурмовым триногом.";
+OB_WOLFSS = "%o встретил моряка.";
+
+OB_MPFIST = "%o был побит %k.";
+OB_MPCHAINSAW = "%o был измельчён циркуляркой %k.";
+OB_MPPISTOL = "%o был убит пистолетом %k.";
+OB_MPSHOTGUN = "%o был продырявлен помбовым дробовиком %k.";
+OB_MPSSHOTGUN = "%o был пронизан двуствольным дробовиком %k.";
+OB_MPCHAINGUN = "%o был изрешечён миниганом %k.";
+OB_MPROCKET = "%o был изувечен ракетой %k.";
+OB_MPR_SPLASH = "%o не смог увернуться от ракеты %k.";
+OB_MPPLASMARIFLE = "%o был обездвижен поляризованным энергоружьём %k.";
+OB_MPBFG_BOOM = "Задница %o была надрана SKAGом %k!";
+OB_MPBFG_SPLASH = "%o не смог спрятаться от SKAGа %k.";
+OB_MPTELEFRAG = "%o стоял там, куда телепортировался %k.";
+OB_RAILGUN = "%o был подстрелен рельсотроном %k.";
+OB_MPBFG_MBF = "Задница %o была надрана SKAGом %k!";
+
+/*
+Text shown on startup in Boom-compatible ports. This is all in
+STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+*/
+STARTUP5 = "============================================================================\nЭто Freedoom, шутер от первого лица со свободным контентом.\n\nFreedoom распространяется свободно на условиях модифицированной\nлицензии BSD. Зайдите на сайт Freedoom за подробной информацией:\n\n    https://freedoom.github.io/\n============================================================================";
+$ifgame(freedm) STARTUP5 = "============================================================================\nЭто FreeDM, Deathmatch шутер от первого лица со свободным контентом.\n\n FreeDM распространяется свободно на условиях модифицированной\nлицензии BSD. Зайдите на сайт Freedoom за подробной информацией:\n\n    https://freedoom.github.io/\n============================================================================";
+
+// Item tags: Freedoom weapons
+TAG_FIST = "кулак";
+TAG_CHAINSAW = "циркулярная пила";
+TAG_PISTOL = "пистолет";
+TAG_SHOTGUN = "помповый дробовик";
+TAG_SUPERSHOTGUN = "двуствольный дробовик";
+TAG_CHAINGUN = "миниган";
+TAG_ROCKETLAUNCHER = "ракетница";
+TAG_PLASMARIFLE = "полярическое энергоружьё";
+TAG_BFG9000 = "SKAG 1337";
+
+AMMO_CLIP			= "Пули";
+AMMO_SHELLS			= "Патроны для Дробовика";
+AMMO_ROCKETS		= "Ракеты";
+AMMO_CELLS			= "Энергетические Подпитки";
+
+// Menu Strings
+
+// Skills
+SKILL_BABY			= "Прошу, не убивайте!";
+SKILL_EASY			= "А это не больно?";
+SKILL_NORMAL		= "Полная готовность.";
+SKILL_HARD			= "Жестокая бойня.";
+SKILL_NIGHTMARE		= "ПОГРОМ!";
+
+// Episodes
+TXT_D1E1 = "Вторжение на Аванпост";
+TXT_D1E2 = "Руины за Руинами";
+TXT_D1E3 = "Горизонт Событий";
+TXT_D1E4 = "Двойной Удар";
+
+TXT_D2E1 = "Фаза 2";
+$ifgame(freedm) TXT_D2E1 = "FreeDM";
