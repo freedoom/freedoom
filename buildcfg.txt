@@ -154,6 +154,7 @@ FREEDM
 #else
 #ifdef PHASE1
 DEHACKED = p1_deh
+UMAPINFO = p1umpinf
 #else
 DEHACKED = p2_deh
 #endif
