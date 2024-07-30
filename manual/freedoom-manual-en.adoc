@@ -13,6 +13,19 @@ anyone is free to share it, modify it and reuse parts of it.
 
 For more details, see the website at https://freedoom.github.io/.
 
+[[story]]
+== The story
+
+Join us at AGM's star colony, see the galaxy! Heh. What a joke. The job offer sounded good on paper, and you really did get to see the galaxy - but briefly. Once you landed in the fancy spaceport on the other shore, they took you straight to your quarters (a tiny cell) and began your job training (brutal genetic experimentation). "It's all in the contract" they said! It wasn't, not even in the fine print. But there's no courts of law in space, are there now?
+
+So you sat meekly in your cell, slowly losing track of time, and looking back at your life on Earth. Not that there was much to look back on. "What kind of soldier doesn't want to kill?" - you looked back at your officer saying, as he dishonorably discharged you from your short-lived army career. Well, this kind. And now word's going around your fellow inmates that you're being prepared into some kind of private AGM super-soldiers. Some of these poor saps are actually looking forward to this! But not you - so for weeks now you've been planning an escape.
+
+Which didn't go very well. The AGM guys charged you with mutiny and transferred you to an outpost to await "trial" - but before you've even had time to process your new situation, the outpost had... Some issues in operation. That's what the loudspeakers said at least, urging everyone to remain calm. But then they've stopped. And you heard screams coming from beyond the corridor. And then the screams all suddenly stopped, as if on command.
+
+Well then - no use sitting around and waiting for whatever's going on over there to happen to you! You bend the bars and walk out, grab a pistol some guard dropped in the panic, and feel a slight smirk coming onto your face.
+
+Escape attempt 2.0, here we come! Destination: Earth! 
+
 == Installing Freedoom
 
 Freedoom is distributed as three files named `freedoom1.wad`, `freedoom2.wad`
