@@ -1,0 +1,70 @@
+Here's a minimal list of lore points necessary to establish certain important things.
+
+- The aliens are an evil, genocidal empire. They are technologically advanced (mostly in biotechnology,
+psychic powers and dimensional stuff), but they are culturally very backwards, with their society
+dominated by dark religions and brutality. This is most likely the best path of least resistance
+to explain why the "alien" levels look the way they do.
+
+- The aliens are basically irredeemably evil bastards. From the highest Pain Lord to the lowest Serpentipede,
+they are thoroughly soaked in the vileness of the empire. This is necessary to get rid of any moral objections to shooting them.
+
+- The aliens come not from planet Horizon, but from an entire Horizon star system (where the planets are named
+Horizon-1, Horizon-2, etc). This is a minor change that makes them feel more threatening and also allows for
+extending the plot indefinitely (f.eg. "Oh, their planet got blown up last time? Well that was Horizon-4,
+this time it's Horizon-5"). It also feels more logical for human astronomers to name a whole system "Horizon"
+(because it's on the "horizon") rather than just a single planet.
+
+- JoD's nature and status can be left ambiguous. What's important here is that a) it is important
+enough to the aliens that losing it halts the invasion of Earth (ending Phase 2's story), and
+b) it is never portrayed as a tyrant that rules the aliens through fear or mind control,
+because that would diminish the aliens' evil and introduce objections to shooting them.
+
+- AGM first found the aliens 10 years ago by digging up their ancient ruins (and then building
+their bases over them for ease of access). They hid this fact from the world and have since
+exploited the lower aliens for top-secret genetics and combat research (especially their super-soldier program).
+This is necessary to explain the look of Phase 1 E2 maps, and the timeframe is just right for them to
+a) develop their research b) popularize the teleport pads on Earth (see below) and
+c) get too confident when unsealing the Pain Lords (also see below).
+
+- AGM is a secondary antagonist who caused the alien invasion through their greed and stupidity.
+Specifically, they ignored all warnings when unsealing the four Pain Lords (who called in the invasion)
+because they got too confident at this point. They should stay as a secondary antagonist because having
+them as major antagonists would be kind of a stretch, considering all of the stuff the player actually
+fights is aliens and alien-controlled zombies.
+
+- Teleport pads are alien technology which AGM sold as their own, and remotely hijacking them is how
+the aliens invaded their colony and later Earth. This is necessary because a) aliens use the teleport pads too,
+and b) it reinforces the "AGM caused the invasion through their greed" bit.
+
+- AGM is hunting Karl because they don't want him to reveal the truth about their inhumane super-soldier
+program to the world (or worse, reveal the fact that they covered up their first contact with aliens and
+are to blame for the invasion). This is important to reinforce the whole "Karl is searching for freedom"
+subplot that was carried over from the original story.
+
+
+Below there's some extra lore points that may or may not have been mentioned anywhere, but are important for explaining plot holes.
+
+- Despite teleport pads being AGM's greatest source of income, they cannot fully control them.
+They brush this off as a technical flaw, but in reality they still do not fully understand how they work.
+Most of their teleporters are strictly linked to each other. Aliens on the other hand can do whatever
+they want with the teleporters, including make interstellar jumps (which AGM cannot do).
+This patches up the plot hole of "why doesn't Karl just teleport wherever he needs to".
+
+- The remote teleport hijacking is done with the large Technospiders' psychic powers. This explains
+why E3 ends specifically after Karl kills a large Technospider. Karl knew the Technospider was doing this
+because his modified alien DNA allowed him to sense its psychic energy.
+
+- Warp-travel spaceships exist but they are expensive, unreliable, limited in size and easy to shoot down.
+They are used by humans for interstellar travel only. This patches up the plot hole of "why doesn't Karl
+just fly wherever he needs to with a spaceship".
+
+
+Here's some extra lore points that were never mentioned and are not important but they're interesting and fit the other lore.
+
+- The reason aliens occasionally use the AGM infinity symbol (and sometimes even the letters too)
+is because they think it's some sort of holy symbol or ward, and this is their way of "stealing" it for their own uses.
+
+- In Phase 2, AGM is not fighting the aliens because they're secretly considering joining them to be on the winning side.
+
+- Tripods, small Technospiders and Combat Slugs were secretly created by the AGM for combat research.
+The aliens liked the idea and started making more of their own using stolen technology.
