@@ -427,62 +427,74 @@ NIGHTMARE = The game is not designed to be\n\
             really that good - or bored.\n\n\
             (Press Y to confirm)
 # End-of-episode texts, now with a consistent story. Feel free to edit them.
-E1TEXT = Free at last from that dreadful outpost!\n\
-         But you're still stuck on this rock, with\n\
-         AGM and all their monstrous "experiments."\n\
-         Best not to dwell on what evil horrors\n\
-         they were going to create from you...\n\n\
-         Damn alien teleporter ate your gear.\n\
-         The air is hot and muggy, and smells of\n\
-         strange, intoxicating vegetation. You see\n\
-         what looks like AGM corpo tech patched\n\
-         over old, overgrown alien structures.\n\
-         Nothing close to the tech needed for this\n\
-         existed at the outpost, meaning there must\n\
-         be a starport nearby. To Earth. To freedom.\n\n\
-         Just gotta hope that ship will launch\n\
-         from these routed, infested ruins...
-E2TEXT = The massive brutes collapse onto the\n\
-         ground, falling apart bit by bit.\n\
-         The starport is yours.\n\n\
-         But no ship: the launch bay sits empty,\n\
-         leaving only a massive teleporter pad.\n\
-         Limited inorganics. Fixed destination.\n\n\
-         The name suggests it's probably the new\n\
-         AGM ship hub in this remote star cluster.\n\
-         Bastards owe you for what they've done,\n\
-         so what even is interstellar piracy\n\
-         but a bit of D.I.Y. law enforcement?\n\n\
-         You board the platform and fade away.\n\
-         Next stop: Horizon.
-E3TEXT = The abomination explodes into oblivion.\n\
-         What the hell even was that?\n\n\
-         As the shadow sets over this red rock,\n\
-         you realize that you're now trapped here.\n\
-         At least you've got more space in this\n\
-         wasteland than your old cell.\n\n\
-         You kick the corpse in anger, and it feels\n\
-         good. You kick it again, and a remote falls\n\
-         out. You press the button, and the ground\n\
-         gives way to reveal a teleporter. You look\n\
-         at the gizmo - it says "To Double Impact."\n\n\
-         Wherever or whatever that is, you pray\n\
-         to any listening deity that there's\n\
-         a working ship on the other side.
-E4TEXT = Suppressing fire echoes above as the last\n\
-         survivors flee the ship. The launch process\n\
-         is irreversible: killing you now would only\n\
-         bring a slow death drifting through space.\n\n\
-         Fifty-nine. Fifty-eight. Fifty-seven. .  .\n\
-         You melt into the pilot's seat, lost in the\n\
-         voice of an automated assembly of angels\n\
-         delivering you from this wretched rock.\n\n\
-         The ship rumbles as she wakes up;\n\
-         you think of Earth as she lifts off.\n\
-         Hopefully AGM won't find you there:\n\
-         they've got the outbreak to deal with,\n\
-         so that'll give you some time.\n\n\
-         Destination: Earth!
+E1TEXT = As the last brute falls to the ground,\n\
+         you only now notice how much your whole\n\
+         body is quivering. Just what the hell are\n\
+         those things? Aliens? Did AGM really make\n\
+         first contact and hide it from the world?\n\
+         Well, whatever it is they did, it bit them\n\
+         in the ass hard. There's not a single human\n\
+         left alive on this whole rock - and no\n\
+         spaceships to take you home, either.\n\
+         You step onto one of those stupid\n\
+         AGM teleport pads that give you nausea,\n\
+         and arrive at the facility where they first\n\
+         brought you. The place is already in ruins,\n\
+         ancient-looking alien marble peering from\n\
+         the cracks. Ruins built upon ruins.\n\
+         Whatever - the spaceport better still be\n\
+         there, you're in no mood for more detours!
+E2TEXT = Now that these monstrosities are dead\n\
+         and done with, this whole place is yours\n\
+         for the taking - including a shiny new\n\
+         spaceship, and access to AGM data logs!\n\
+         And who would've guessed - these bastards\n\
+         really did make first contact, 10 years ago,\n\
+         and decided to privatize it. They dug up\n\
+         the ruins and found the alien bugs, which\n\
+         they've since bred for genetics and combat\n\
+         research. They also stole their teleport\n\
+         pad technology. But then they found those\n\
+         bird-faced bruisers a month ago. These guys\n\
+         somehow remotely hijacked the portals to\n\
+         route to the Horizon star system, which is\n\
+         where the invasion force is coming from.\n\
+         Your instincts are clear - Earth can wait,\n\
+         someone's got to clean up this mess ASAP!
+E3TEXT = Before you reached Horizon, you thought\n\
+         maybe the aliens could be reasoned with.\n\
+         But then you saw humans being tortured for\n\
+         sport. Or half-eaten while still alive.\n\
+         And slaves, thousands of slaves worked\n\
+         to death building their bizarre temples.\n\
+         No, these guys are not the victims here.\n\
+         Hard to believe, but they're worse than AGM!\n\
+         Well, at least it's over now - the thing you\n\
+         just killed was some sort of psychic beacon\n\
+         homed in on AGM's colony. As the hijacked\n\
+         portals slowly lose target, you make your\n\
+         way back. Thinking of Earth the entire time.\n\
+         Your ship's non-precise warp travel might\n\
+         force a pit-stop at Saturn's Double Impact\n\
+         moon base, but it's no problem, right?\n\
+         Surely they'll welcome you with open arms!
+E4TEXT = Well, this is not good at all.\n\
+         If Double Impact was overrun, it means\n\
+         the aliens have found our solar system.\n\
+         You try to contact Earth, but to no avail.\n\
+         As you try to calm yourself by blaming\n\
+         the damaged equipment, something else\n\
+         catches your attention - an AGM digital\n\
+         wanted poster, featuring your own face!\n\
+         They're still after you, after all this?\n\
+         You smash the console in anger and leave.\n\
+         Between AGM and the aliens, you're just\n\
+         completely done with space at this point.\n\
+         Your DNA is all scrambled up, you might\n\
+         have alien genes inside you even,\n\
+         but you don't even care anymore - let's\n\
+         just go home, and look for a quiet life.\n\
+         A quiet life, and freedom.
 #ifdef FREEDM
 # After MAP06, before MAP07:
 C1TEXT = You're playing FreeDM, the Freedoom\n\
@@ -522,85 +534,110 @@ C6TEXT = You're playing FreeDM, the Freedoom\n\
          https://freedoom.github.io/
 #else
 # After MAP06, before MAP07:
-C1TEXT = Not even Earth is safe. The monsters show\n\
-         up ahead of you everywhere you run.\n\
-         Where are they even coming from?\n\n\
-         Despite all the other destruction they've\n\
-         wrought, the teleportation infrastructure\n\
-         remains intact - you might be able to\n\
-         get back to civilization this way.\n\n\
-         You find an old pad and boot it up.\n\
-         Connection live. Handshake established.\n\n\
-         Growling and chittering on the intercom.\n\n\
-         Planted your feet.\n\
-         Checked your weapons.\n\
-         Time to punch through.
+C1TEXT = This is certainly not how you were hoping\n\
+         your return to Earth would look like. Ever\n\
+         since landing in this complex it's been a\n\
+         non-stop deja vu of aliens and zombified\n\
+         AGM soldiers - and not a single person to\n\
+         talk to, either... At least you've had a lot\n\
+         of time for some light reading on AGM logs.\n\
+         You're already wanted for knowing too much,\n\
+         so why not? There's concerningly little on\n\
+         what's happening to the world, and the last\n\
+         entry from two days ago just reads\n\
+         "The eye it raised the dead" over and over.\n\
+         Huh. You take a deep breath, curse AGM\n\
+         once again for starting this, and continue\n\
+         to the research sector. Saving the world?\n\
+         You never signed up for this. But so be it -\n\
+         Earth is your home, aliens better beware!
 # After MAP11, before MAP12:
-C2TEXT = You didn't find anyone alive. Again.\n\n\
-         The fighting is taking its toll on you.\n\
-         The pain. The brutality. The loneliness.\n\
-         There's got to be a way to somewhere,\n\
-         something that isn't... this.\n\n\
-         A train rumbles in the distance.\n\n\
-         You follow the sound down the empty road\n\
-         and reach the edge of a railyard.\n\n\
-         Trains mean cities.\n\
-         Cities mean people.\n\n\
-         Right?
+C2TEXT = Entering the conquered facility's comms\n\
+         center, you attempt to contact the world.\n\
+         "This is the resistance, do you copy?"\n\
+         - you're overjoyed to finally hear!\n\
+         You then get to hear all the latest news.\n\
+         All major AGM teleporters are hijacked,\n\
+         world's military is losing ground, AGM has\n\
+         holed up on the moon and isn't helping...\n\
+         "So where's the nearest major teleporter?"\n\
+         You're directed to a nearby city. They ask\n\
+         who exactly you are, but you cut the comms.\n\
+         As you arrive in the city you realize you\n\
+         forgot to ask for precise coords - but...\n\
+         That won't be necessary. An alien fortress\n\
+         now looms among the skyline, in the place\n\
+         where AGM's headquarters used to stand.\n\
+         All right, then - that's the destination!
 # After MAP20, before MAP21:
-C3TEXT = Here is no AGM but only monsters.\n\
-         Monsters, no humans and dusty days\n\
-         sleeping in old ruins and eating scraps.\n\
-         No one has escaped this wasteland alive.\n\n\
-         You've been tracking their movements.\n\
-         AGM records and alien scrawlings point\n\
-         to something big worming its way through\n\
-         the entire teleportation network.\n\
-         Sending its nightmare armies of brain-\n\
-         scrambled sapients - including humans -\n\
-         to conquer all known space.\n\n\
-         And now you're fighting at its doorstep.\n\n\
-         This could be the beginning\n\
-         of your freedom - or your doom.
+C3TEXT = As you stand before the gate to the alien\n\
+         homeworld, you get startled by AGM copters\n\
+         approaching. Thankfully their logos are\n\
+         crossed out - must be the resistance.\n\
+         With your back now secured, you step into\n\
+         the portal, and end up... in a black void.\n\
+         You sense being watched. Then suddenly, you\n\
+         feel overwhelming power before you as a\n\
+         titanic skull-thing appears in the void.\n\
+         "Who are you to deny the sacred empire?"\n\
+         - you hear inside your mind. "The fate of\n\
+         your kind is sealed. Accept this and die..."\n\
+         The last word reverberates through your\n\
+         body as you wake up in a sweat, on the other\n\
+         side of the portal. Was that... a god? You\n\
+         might be completely out of your league here.\n\
+         But it is too late to turn back now...
 # After MAP30 (endgame text):
-C4TEXT = The evil thing becomes unstable.\n\
-         Its final roars echo throughout the room\n\
-         until it crumples into scrap metal.\n\n\
-         A targeting portal opens, blissfully\n\
-         unaware of its master's demise.\n\n\
-         On the other side you see a small town.\n\
-         You ditch your weapons and slip through,\n\
-         leaving AGM and all its horrors behind.\n\n\
-         No one will know who saved them.\n\n\
-         No one will know what happened here.\n\n\
-         No one will ever find you again.
+C4TEXT = The moment before entering this chamber\n\
+         was perhaps the greatest fear you've ever\n\
+         felt in your life. After all, can a god even\n\
+         be killed? But this thing was no god.\n\
+         It could be killed. And it has been.\n\
+         And, uh, it's about to explode now. Wasting\n\
+         no time, you commandeer an alien spaceship\n\
+         and lift off, just in time to see the blast\n\
+         take out a sizable chunk of the planet!!\n\
+         Now that'll put a dent in their plans...\n\n\
+         Back on Earth, as the panicked aliens are\n\
+         being dealt with, you at long last doff\n\
+         your armor, and disappear into the crowds.\n\
+         No one will know who saved them.\n\
+         No one will ever find you again.\n\
+         You are free.
 # Before MAP31 (secret level #1):
-C5TEXT = You step into the teleporter. You feel a\n\
-         familiar flash and... you're in a cage?\n\
-         Jailed?\n\n\
-         There are other cages in here. Occupied.\n\
-         So is this how they capture humans?\n\
-         Or did they set this up specially for you,\n\
-         as a reward for being such a monkey wrench\n\
-         in their plans?\n\n\
-         The guards haven't noticed you - yet.\n\
-         Any noise could mean death. Or worse.\n\n\
-         When they zombify you, are you awake the\n\
-         entire time, locked inside of your brain?\n\n\
-         You'd rather not find out.
+C5TEXT = Well, this was bound to happen sooner or\n\
+         later. The enticing-looking teleporter that\n\
+         promised to take you straight to the alien\n\
+         fortress turned out to be a primitive trap.\n\
+         Your fault for not double-checking the\n\
+         destination in all the excitement!\n\
+         Wherever you now are, you've been thrown\n\
+         into a cramped cage and left there, for now.\n\
+         The caged alien bugs all around you seem\n\
+         excited by this - forgetting about their\n\
+         own situation and making all sorts of\n\
+         taunting noises and gestures at you. It's\n\
+         clear they all know you. And they hate you.\n\
+         But never mind that - escape is the goal.\n\
+         You wait until the bugs are asleep, then\n\
+         start looking for a way to open the cage.\n\
+         And quietly. Any noise now means death!
 # Before MAP32 (secret level #2):
-C6TEXT = Forcibly uncaged again. Good job.\n\n\
-         But where are you? The air and gravity\n\
-         still feel like whatever planet that\n\
-         strange prison had been on.\n\n\
-         You look around and the layout triggers\n\
-         some old memories from history class.\n\n\
-         This is an arena.\n\
-         Where they send prisoners to die.\n\
-         That wasn't an exit - but an entrance.\n\n\
-         You will find your way back to the city,\n\
-         but it will have to be on the other side\n\
-         of a few homicidal mutants...
+C6TEXT = Two portals to choose from - one of them\n\
+         was the one you arrived through, but you\n\
+         forgot which was which!! And you chose...\n\
+         Poorly. This must be where they intended\n\
+         to throw you in later, because you found\n\
+         yourself right in the middle of an arena.\n\
+         So primitive. Suits these guys, heh.\n\
+         You look at the sky above you - well,\n\
+         doesn't look like Earth. But as you\n\
+         make up another plan to get out of here,\n\
+         you're interrupted by the first wave of\n\
+         gladiators arriving.\n\n\
+         Well then! If it's bloodsports they want,\n\
+         It's bloodsports they get! Just don't\n\
+         complain if there's too much blood, idiots!
 #endif
 BGFLATE1 = AQF051
 BGFLATE2 = AQF054
