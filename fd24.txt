@@ -88,3 +88,48 @@ CSPIM0
 CSPIN0
 CSPIO0
 CSPIP0
+
+CYB2A1      47      102  ; Tyrant
+CYB2A2A8    46      101
+CYB2A3A7    34      103
+CYB2A4A6    22      101
+CYB2A5      32      105
+CYB2B1      50      100
+CYB2B2B8    46      100
+CYB2B3B7    54      103
+CYB2B4B6    49      99
+CYB2B5      52      103
+CYB2C1      42      98
+CYB2C2C8    30      102
+CYB2C3C7    33      102
+CYB2C4C6    40      102
+CYB2C5      47      102
+CYB2D1      48      96
+CYB2D2D8    36      102
+CYB2D3D7    45      103
+CYB2D4D6    31      99
+CYB2D5      37      100
+CYB2E1      46      98
+CYB2E2E8    37      101
+CYB2E3E7    45      103
+CYB2E4E6    41      101
+CYB2E5      48      103
+CYB2F1      46      96
+CYB2F2F8    35      100
+CYB2F3F7    43      100
+CYB2F4F6    40      99
+CYB2F5      45      101
+CYB2G1      46      96
+CYB2G2G8    34      100
+CYB2G3G7    41      100
+CYB2G4G6    39      99
+CYB2G5      46      101
+CYB2H0      47      99
+CYB2I0      47      99
+CYB2J0      44      99
+CYB2K0      52      84
+CYB2L0      55      74
+CYB2M0      56      80
+CYB2N0      56      83
+CYB2O0      56      76
+CYB2P0      56      36
