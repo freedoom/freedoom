@@ -19,8 +19,9 @@ MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
 FREEDM=$(WADS)/freedm.wad
+FD24RES=$(WADS)/fd24res.wad
 
-OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
+OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2) $(FD24RES)
 
 .PHONY: clean dist pngs-modified-check
 
@@ -99,6 +100,14 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
+
+#---------------------------------------------------------
+# ID24 resource wad
+
+$(FD24RES): fd24.txt subdirs
+	@mkdir -p $(WADS)
+	$(RM) $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build fd24.txt $@
 
 %.html: %.adoc
 	$(ASCIIDOC) $(ADOCOPTS) $<
