@@ -273,3 +273,10 @@ PPOSU0      26      12
 PPOSV0
 PPOSW0
 PPOSX0
+
+GOR6A0      12      67     ; Gore sprites
+GOR7A0      15      81
+GOR8A0      12      83
+GORAA0      19      67
+POB6A0
+POLAA0      20      44
