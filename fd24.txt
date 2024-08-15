@@ -220,3 +220,56 @@ CHR1A2A8    19      43
 CHR1A3A7    16      43
 CHR1A4A6    18      43
 CHR1A5      16      41
+
+PPOSA1      18      52    ; shocktrooper
+PPOSA2A8    16      51
+PPOSA3A7    17      52
+PPOSA4A6    24      52
+PPOSA5      25      52
+PPOSB1      18      52
+PPOSB2B8    18      53
+PPOSB3B7    21      52
+PPOSB4B6    27      53
+PPOSB5      26      51
+PPOSC1      17      52
+PPOSC2C8    16      52
+PPOSC3C7    13      52
+PPOSC4C6    26      53
+PPOSC5      26      52
+PPOSD1      18      52
+PPOSD2D8    16      53
+PPOSD3D7    21      52
+PPOSD4D6    26      54
+PPOSD5      25      51
+PPOSE1      13      52
+PPOSE2E8    30      52
+PPOSE3E7    44      52
+PPOSE4E6    27      53
+PPOSE5      15      52
+PPOSF1      13      52
+PPOSF2F8    30      52
+PPOSF3F7    44      52
+PPOSF4F6    27      53
+PPOSF5      15      52
+PPOSG1      16      53
+PPOSG2G8    23      52
+PPOSG3G7    24      52
+PPOSG4G6    29      53
+PPOSG5      27      52
+PPOSH0      15      56
+PPOSI0      16      47
+PPOSJ0      15      36
+PPOSK0      15      21
+PPOSL0      18      17
+PPOSM0      18      15
+PPOSN0      21      52
+PPOSO0      20      49
+PPOSP0      22      45
+PPOSQ0      24      35
+PPOSR0      24      31
+PPOSS0      26      12
+PPOST0      26      12
+PPOSU0      26      12
+PPOSV0
+PPOSW0
+PPOSX0
