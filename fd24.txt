@@ -210,6 +210,11 @@ CHR1A3A7    16      43
 CHR1A4A6    18      43
 CHR1A5      16      41
 
+LAMPA0       5      55     ; office lamp
+LAMPB0       5      34
+LAMPC0       8      28
+LAMPD0       8      28
+
 PPOSA1      18      52    ; shocktrooper
 PPOSA2A8    16      51
 PPOSA3A7    17      52
