@@ -215,6 +215,8 @@ LAMPB0       5      34
 LAMPC0       8      28
 LAMPD0       8      28
 
+CBR2A0       7      38    ; small candelabra
+
 PPOSA1      18      52    ; shocktrooper
 PPOSA2A8    16      51
 PPOSA3A7    17      52
