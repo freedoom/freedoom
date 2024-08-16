@@ -1,6 +1,10 @@
 ; Build configuration for fd24res.wad, our free replacement for the
 ; non-free id24res.wad
 
+[graphics]
+STARMS24
+STAMMO24
+
 [sounds]
 DSBANACT
 DSBANDTH
