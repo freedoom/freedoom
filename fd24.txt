@@ -295,3 +295,10 @@ GOR8A0      12      83
 GORAA0      19      67
 POB6A0
 POLAA0      20      44
+
+INCNA0                     ; Incinerator (flamethrower)
+FLMGA0      -58     -111
+FLMGB0      -58     -115
+FLMGC0      -58     -115
+FLMFA0      -59     -61
+FLMFB0      -58     -61
