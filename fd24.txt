@@ -278,6 +278,17 @@ PPOSV0
 PPOSW0
 PPOSX0
 
+PHEDA0                     ; Shocktrooper head
+PHEDB0
+PHEDC0
+PHEDD0
+PHEDE0
+PHEDF0
+PHEDG0
+PHEDH0
+PHEDI0
+PHEDJ0
+
 GOR6A0      12      67     ; Gore sprites
 GOR7A0      15      81
 GOR8A0      12      83
