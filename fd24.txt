@@ -289,8 +289,8 @@ POB6A0
 POLAA0      20      44
 
 INCNA0                     ; Incinerator (flamethrower)
-FLMGA0      -58     -111
-FLMGB0      -58     -115
-FLMGC0      -58     -115
-FLMFA0      -59     -61
-FLMFB0      -58     -61
+FLMGA0     -58    -104
+FLMGB0     -58    -104
+FLMGC0     -58    -104
+FLMFA0     -59     -50
+FLMFB0     -58     -50
