@@ -294,3 +294,5 @@ FLMGB0     -58    -104
 FLMGC0     -58    -104
 FLMFA0     -59     -50
 FLMFB0     -58     -50
+
+CBLDA0      32      19     ; Calamity Blade
