@@ -27,22 +27,22 @@ Sprite subnumber = 32773
 Frame 689
 Sprite subnumber = 32773
 
-# The RNG code for the minigunner's / SS's attack
-# does the same thing as the zombieman's, the only
-# substantive difference being the sound played.
-# By calling the zombieman attack instead, the
-# minigunner and sailor no longer sound confusingly
-# similar to the large technospider's much more
-# powerful shotgunguy-like attack.
+# A_PosAttack and A_CPosAttack use identical formulae
+# and the same number of RNG calls to determine the
+# attack; the only difference other than the way the
+# information is organized is the sound being played.
+# Having the minigunner and sailor call A_PosAttack
+# makes them not sound confusingly similar to the large
+# technospider's much more powerful shotgunguy-like attack.
 
-# Minigunner using pistol attack
+# Minigunner using A_PosAttack
 Pointer 234 (Frame 417)
 Codep Frame = 185
 
 Pointer 235 (Frame 418)
 Codep Frame = 185
 
-# Sailor using pistol attack
+# Sailor using A_PosAttack
 Pointer 234 (Frame 738)
 Codep Frame = 185
 
