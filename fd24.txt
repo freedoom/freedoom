@@ -204,11 +204,11 @@ VASSO0      33      40
 VASSP0      33      32
 VASSQ0      33      32
 
-CHR1A1      19      40     ; office chair
-CHR1A2A8    19      43
-CHR1A3A7    16      43
-CHR1A4A6    18      43
-CHR1A5      16      41
+CHR1A1      10      31     ; office chair
+CHR1A8A2     9      31
+CHR1A7A3     8      31
+CHR1A6A4     9      31
+CHR1A5      10      31
 
 LAMPA0       5      55     ; office lamp
 LAMPB0       5      34
