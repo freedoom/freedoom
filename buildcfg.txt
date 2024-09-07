@@ -154,6 +154,7 @@ FREEDM
 #else
 #ifdef PHASE1
 DEHACKED = p1_deh
+MUSINFO = p1_msinf
 #else
 DEHACKED = p2_deh
 #endif
