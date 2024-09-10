@@ -19,8 +19,9 @@ MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
 FREEDM=$(WADS)/freedm.wad
+FDEXTRAS=$(WADS)/fd-extras.wad
 
-OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
+OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2) $(FDEXTRAS)
 
 .PHONY: clean dist pngs-modified-check
 
@@ -99,6 +100,14 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
+
+#---------------------------------------------------------
+# extras pwad
+
+$(FDEXTRAS): fd-extras.txt subdirs
+	@mkdir -p $(WADS)
+	$(RM) $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build fd-extras.txt $@
 
 %.html: %.adoc
 	$(ASCIIDOC) $(ADOCOPTS) $<
