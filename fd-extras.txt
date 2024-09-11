@@ -60,6 +60,9 @@ M_CRISPY	0	1
 ; sprites list
 
 [sprites]
+; ZDoom pistol pickup
+PISTA0	10	15
+
 ; player crouch sprites
 PLYCA1	13	37
 PLYCA2A8	22	35
