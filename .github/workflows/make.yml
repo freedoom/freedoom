@@ -44,12 +44,12 @@ jobs:
         fi
         echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
     - name: Upload Freedoom
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         path: "artifacts/freedoom"
         name: freedoom-${{steps.buildstep.outputs.VERSION}}
     - name: Upload Freedm
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         path: "artifacts/freedm"
         name: freedm-${{steps.buildstep.outputs.VERSION}}
