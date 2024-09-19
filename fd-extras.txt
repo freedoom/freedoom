@@ -1,0 +1,4 @@
+; List of Pictures (with insertion point)
+[graphics]
+; Widescreen graphics
+STBAR	0	0	= STBAR_WS
