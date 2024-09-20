@@ -9,9 +9,8 @@
     "description": "The Freedoom project aims to create a complete, free content first person shooter game.",
     "version": "0.13.0",
     "iwad": null,
-    "pwadfiles": null,
-    "dehfiles": null,
-    "executable": "doom1.9",
+    "pwads": null,
+    "executable": "limitremoving",
     "mode": "retail",
     "options": null
   }

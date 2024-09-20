@@ -55,23 +55,23 @@ map MAP06
 	skytexture = "SKY1"
 	music = "D_THE_DA"
 	interbackdrop = "AQF016"
-	intertext = "Not even Earth is safe. The monsters show
-up ahead of you everywhere you run.
-Where are they even coming from?
-         
-Despite all the other destruction they've
-wrought, the teleportation infrastructure
-remains intact - you might be able to
-get back to civilization this way.
-         
-You find an old pad and boot it up.
-Connection live. Handshake established.
-         
-Growling and chittering on the intercom.
-         
-Planted your feet.
-Checked your weapons.
-Time to punch through."
+	intertext = "Not even Earth is safe. The monsters show",
+		"up ahead of you everywhere you run.",
+		"Where are they even coming from?",
+		" ",
+		"Despite all the other destruction they've",
+		"wrought, the teleportation infrastructure",
+		"remains intact - you might be able to",
+		"get back to civilization this way.",
+		" ",
+		"You find an old pad and boot it up.",
+		"Connection live. Handshake established.",
+		" ",
+		"Growling and chittering on the intercom.",
+		" ",
+		"Planted your feet.",
+		"Checked your weapons.",
+		"Time to punch through."
 }
 
 map MAP07
@@ -118,22 +118,22 @@ map MAP11
 	skytexture = "SKY1"
 	music = "D_STLKS2"
 	interbackdrop = "AQF001"
-	intertext = "You didn't find anyone alive. Again.
-
-The fighting is taking its toll on you.
-The pain. The brutality. The loneliness.
-There's got to be a way to somewhere,
-something that isn't... this.
-
-A train rumbles in the distance.
-
-You follow the sound down the empty road
-and reach the edge of a railyard.
-
-Trains mean cities.
-Cities mean people.
-
-Right?"
+	intertext = "You didn't find anyone alive. Again.",
+		" ",
+		"The fighting is taking its toll on you.",
+		"The pain. The brutality. The loneliness.",
+		"There's got to be a way to somewhere,",
+		"something that isn't... this.",
+		" ",
+		"A train rumbles in the distance.",
+		" ",
+		"You follow the sound down the empty road",
+		"and reach the edge of a railyard.",
+		" ",
+		"Trains mean cities.",
+		"Cities mean people.",
+		" ",
+		"Right?"
 }
 
 map MAP12
@@ -172,23 +172,23 @@ map MAP15
 	skytexture = "SKY2"
 	music = "D_RUNNI2"
 	interbackdrop = "AQF004"
-	intertextsecret = "You step into the teleporter. You feel a
-familiar flash and... you're in a cage?
-Jailed?
-
-There are other cages in here. Occupied.
-So is this how they capture humans?
-Or did they set this up specially for you,
-as a reward for being such a monkey wrench
-in their plans?
-
-The guards haven't noticed you - yet.
-Any noise could mean death. Or worse.
-
-When they zombify you, are you awake the
-entire time, locked inside of your brain?
-
-You'd rather not find out."
+	intertextsecret = "You step into the teleporter. You feel a",
+		"familiar flash and... you're in a cage?",
+		"Jailed?",
+		" ",
+		"There are other cages in here. Occupied.",
+		"So is this how they capture humans?",
+		"Or did they set this up specially for you,",
+		"as a reward for being such a monkey wrench",
+		"in their plans?",
+		" ",
+		"The guards haven't noticed you - yet.",
+		"Any noise could mean death. Or worse.",
+		" ",
+		"When they zombify you, are you awake the",
+		"entire time, locked inside of your brain?",
+		" ",
+		"You'd rather not find out."
 }
 
 map MAP16
@@ -235,23 +235,23 @@ map MAP20
 	skytexture = "SKY2"
 	music = "D_MESSAG"
 	interbackdrop = "FLAT5_6"
-	intertext = "Here is no AGM but only monsters.
-Monsters, no humans and dusty days
-sleeping in old ruins and eating scraps.
-No one has escaped this wasteland alive.
-
-You've been tracking their movements.
-AGM records and alien scrawlings point
-to something big worming its way through
-the entire teleportation network.
-Sending its nightmare armies of brain-
-scrambled sapients - including humans -
-to conquer all known space.
-
-And now you're fighting at its doorstep.
-
-This could be the beginning
-of your freedom - or your doom."
+	intertext = "Here is no AGM but only monsters.",
+		"Monsters, no humans and dusty days",
+		"sleeping in old ruins and eating scraps.",
+		"No one has escaped this wasteland alive.",
+		" ",
+		"You've been tracking their movements.",
+		"AGM records and alien scrawlings point",
+		"to something big worming its way through",
+		"the entire teleportation network.",
+		"Sending its nightmare armies of brain-",
+		"scrambled sapients - including humans -",
+		"to conquer all known space.",
+		" ",
+		"And now you're fighting at its doorstep.",
+		" ",
+		"This could be the beginning",
+		"of your freedom - or your doom."
 }
 
 map MAP21
@@ -343,22 +343,22 @@ map MAP30
 	endcast = true
 	music = "D_OPENIN"
 	interbackdrop = "SLIME13"
-	intertext = "The evil thing becomes unstable.
-Its final roars echo throughout the room
-until it crumples into scrap metal.
-
-A targeting portal opens, blissfully
-unaware of its master's demise.
-
-On the other side you see a small town.
-You ditch your weapons and slip through,
-leaving AGM and all its horrors behind.
-
-No one will know who saved them.
-
-No one will know what happened here.
-
-No one will ever find you again."
+	intertext = "The evil thing becomes unstable.",
+		"Its final roars echo throughout the room",
+		"until it crumples into scrap metal.",
+		" ",
+		"A targeting portal opens, blissfully",
+		"unaware of its master's demise.",
+		" ",
+		"On the other side you see a small town.",
+		"You ditch your weapons and slip through,",
+		"leaving AGM and all its horrors behind.",
+		" ",
+		"No one will know who saved them.",
+		" ",
+		"No one will know what happened here.",
+		" ",
+		"No one will ever find you again."
 }
 
 map MAP31
@@ -370,22 +370,22 @@ map MAP31
 	skytexture = "SKY2"
 	music = "D_EVIL"
 	interbackdrop = "AQF021"
-	intertextsecret = "Forcibly uncaged again. Good job.
-
-But where are you? The air and gravity
-still feel like whatever planet that
-strange prison had been on.
-
-You look around and the layout triggers
-some old memories from history class.
-
-This is an arena.
-Where they send prisoners to die.
-That wasn't an exit - but an entrance.
-
-You will find your way back to the city,
-but it will have to be on the other side
-of a few homicidal mutants..."
+	intertextsecret = "Forcibly uncaged again. Good job.",
+		" ",
+		"But where are you? The air and gravity",
+		"still feel like whatever planet that",
+		"strange prison had been on.",
+		" ",
+		"You look around and the layout triggers",
+		"some old memories from history class.",
+		" ",
+		"This is an arena.",
+		"Where they send prisoners to die.",
+		"That wasn't an exit - but an entrance.",
+		" ",
+		"You will find your way back to the city,",
+		"but it will have to be on the other side",
+		"of a few homicidal mutants..."
 }
 
 map MAP32

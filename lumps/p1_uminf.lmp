@@ -3,111 +3,120 @@
 
 // SPDX-License-Identifier: BSD-3-Clause
 
-// Episode 4 music playback
-MAP E4M1
+// Episode 4, fixes music playback
+map E4M1
 {
-       levelname = "Maintenance Area"
-	   levelpic = "WILV30"
-       skytexture = "SKY4"
-	   next = "E4M2"
-	   music = "D_E4M1"
-	   author = "RottKing and Ralphis"
+	levelname = "Maintenance Area"
+	levelpic = "WILV30"
+	label = "E4M1"
+	skytexture = "SKY4"
+	next = "E4M2"
+	music = "D_E4M1"
+	author = "RottKing and Ralphis"
 }
 
-MAP E4M2
+map E4M2
 {
-       levelname = "Research Complex"
-	   levelpic = "WILV31"
-       skytexture = "SKY4"
-	   next = "E4M3"
-	   nextsecret = "E4M9"
-	   music = "D_E4M2"
-	   author = "RottKing and Ralphis"
+	levelname = "Research Complex"
+	levelpic = "WILV31"
+	label = "E4M2"
+	skytexture = "SKY4"
+	next = "E4M3"
+	nextsecret = "E4M9"
+	music = "D_E4M2"
+	author = "RottKing and Ralphis"
 }
 
-MAP E4M3
+map E4M3
 {
-       levelname = "Central Computing"
-	   levelpic = "WILV32"
-       skytexture = "SKY4"
-	   next = "E4M4"
-	   music = "D_E4M3"
-	   author = "RottKing and Ralphis"
+	levelname = "Central Computing"
+	levelpic = "WILV32"
+	label = "E4M3"
+	skytexture = "SKY4"
+	next = "E4M4"
+	music = "D_E4M3"
+	author = "RottKing and Ralphis"
 }
 
-MAP E4M4
+map E4M4
 {
-       levelname = "Hydroponic Facility"
-	   levelpic = "WILV33"
-       skytexture = "SKY4"
-	   next = "E4M5"
-	   music = "D_E4M4"
-	   author = "RottKing and Ralphis"
+	levelname = "Hydroponic Facility"
+	levelpic = "WILV33"
+	label = "E4M4"
+	skytexture = "SKY4"
+	next = "E4M5"
+	music = "D_E4M4"
+	author = "RottKing and Ralphis"
 }
 
-MAP E4M5
+map E4M5
 {
-       levelname = "Engineering Station"
-	   levelpic = "WILV34"
-       skytexture = "SKY4"
-	   next = "E4M6"
-	   music = "D_E4M5"
-	   author = "RottKing and Ralphis"
+	levelname = "Engineering Station"
+	levelpic = "WILV34"
+	label = "E4M5"
+	skytexture = "SKY4"
+	next = "E4M6"
+	music = "D_E4M5"
+	author = "RottKing and Ralphis"
 }
 
-MAP E4M6
+map E4M6
 {
-       levelname = "Command Center"
-	   levelpic = "WILV35"
-       skytexture = "SKY4"
-	   next = "E4M7"
-	   music = "D_E4M6"
-	   author = "RottKing and Ralphis"
+	levelname = "Command Center"
+	levelpic = "WILV35"
+	label = "E4M6"
+	skytexture = "SKY4"
+	next = "E4M7"
+	music = "D_E4M6"
+	author = "RottKing and Ralphis"
 }
 
-MAP E4M7
+map E4M7
 {
-       levelname = "Waste Treatment"
-	   levelpic = "WILV36"
-       skytexture = "SKY4"
-	   next = "E4M8"
-	   music = "D_E4M7"
-	   author = "RottKing and Ralphis"
+	levelname = "Waste Treatment"
+	levelpic = "WILV36"
+	label = "E4M7"
+	skytexture = "SKY4"
+	next = "E4M8"
+	music = "D_E4M7"
+	author = "RottKing and Ralphis"
 }
 
-MAP E4M8
+map E4M8
 {
-       levelname = "Launch Bay"
-	   levelpic = "WILV37"
-       skytexture = "SKY4"
-	   music = "D_E4M8"
-	   interbackdrop = "AQF075"
-	   author = "RottKing and Ralphis"
-	   intertext = "Suppressing fire echoes above as the last
-survivors flee the ship. The launch process
-is irreversible: killing you now would only
-bring a slow death drifting through space.
- 
-Fifty-nine. Fifty-eight. Fifty-seven. .  .
-You melt into the pilot's seat, lost in the
-voice of an automated assembly of angels
-delivering you from this wretched rock.
- 
-The ship rumbles as she wakes up;
-you think of Earth as she lifts off.
-Hopefully AGM won't find you there:
-they've got the outbreak to deal with,
-so that'll give you some time.
- 
-Destination: Earth!"
+	levelname = "Launch Bay"
+	levelpic = "WILV37"
+	label = "E4M8"
+	skytexture = "SKY4"
+	music = "D_E4M8"
+	interbackdrop = "AQF075"
+	author = "RottKing and Ralphis"
+	intertext = "Suppressing fire echoes above as the last",
+		"survivors flee the ship. The launch process",
+		"is irreversible: killing you now would only",
+		"bring a slow death drifting through space.",
+		" ",
+		"Fifty-nine. Fifty-eight. Fifty-seven. .  .",
+		"You melt into the pilot's seat, lost in the",
+		"voice of an automated assembly of angels",
+		"delivering you from this wretched rock.",
+		" ",
+		"The ship rumbles as she wakes up;",
+		"you think of Earth as she lifts off.",
+		"Hopefully AGM won't find you there:",
+		"they've got the outbreak to deal with,",
+		"so that'll give you some time.",
+		" ",
+		"Destination: Earth!"
 }
 
-MAP E4M9
+map E4M9
 {
-       levelname = "Operations"
-	   levelpic = "WILV38"
-       skytexture = "SKY4"
-	   next = "E4M3"
-	   music = "D_E4M9"
-	   author = "RottKing and Ralphis"
+	levelname = "Operations"
+	levelpic = "WILV38"
+	label = "E4M9"
+	skytexture = "SKY4"
+	next = "E4M3"
+	music = "D_E4M9"
+	author = "RottKing and Ralphis"
 }
