@@ -1,0 +1,18 @@
+{
+  "type": "gameconf",
+  "version": "1.0.0",
+  "metadata": { },
+  "data":
+  {
+    "title": "Freedoom: Phase 2",
+    "author": "The Freedoom Project",
+    "description": "The Freedoom project aims to create a complete, free content first person shooter game.",
+    "version": "0.13.0",
+    "iwad": null,
+    "pwadfiles": null,
+    "dehfiles": null,
+    "executable": "doom1.9",
+    "mode": "commercial",
+    "options": null
+  }
+}

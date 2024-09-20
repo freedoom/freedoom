@@ -1,0 +1,398 @@
+// UMAPINFO lump for FreeDM.
+
+// SPDX-License-Identifier: BSD-3-Clause
+
+map MAP01
+{
+	levelpic = "CWILV00"
+	levelname = "Hydroelectric Plant"
+	next = "MAP02"
+	skytexture = "SKY1"
+	music = "D_RUNNIN"
+}
+
+map MAP02
+{
+	levelpic = "CWILV01"
+	levelname = "Filtration Tunnels"
+	next = "MAP03"
+	skytexture = "SKY1"
+	music = "D_STALKS"
+}
+
+map MAP03
+{
+	levelpic = "CWILV02"
+	levelname = "Crude Processing Center"
+	next = "MAP04"
+	skytexture = "SKY1"
+	music = "D_COUNTD"
+}
+
+map MAP04
+{
+	levelpic = "CWILV03"
+	levelname = "Containment Bay"
+	next = "MAP05"
+	skytexture = "SKY1"
+	music = "D_BETWEE"
+}
+
+map MAP05
+{
+	levelpic = "CWILV04"
+	levelname = "Sludge Burrow"
+	next = "MAP06"
+	skytexture = "SKY1"
+	music = "D_DOOM"
+}
+
+map MAP06
+{
+	levelpic = "CWILV05"
+	levelname = "Janus Terminal"
+	next = "MAP07"
+	skytexture = "SKY1"
+	music = "D_THE_DA"
+	interbackdrop = "AQF016"
+	intertext = "Not even Earth is safe. The monsters show
+up ahead of you everywhere you run.
+Where are they even coming from?
+         
+Despite all the other destruction they've
+wrought, the teleportation infrastructure
+remains intact - you might be able to
+get back to civilization this way.
+         
+You find an old pad and boot it up.
+Connection live. Handshake established.
+         
+Growling and chittering on the intercom.
+         
+Planted your feet.
+Checked your weapons.
+Time to punch through."
+}
+
+map MAP07
+{
+	levelpic = "CWILV06"
+	levelname = "Logic Gate"
+	next = "MAP08"
+	skytexture = "SKY1"
+	music = "D_SHAWN"
+}
+
+map MAP08
+{
+	levelpic = "CWILV07"
+	levelname = "Astronomy Complex"
+	next = "MAP09"
+	skytexture = "SKY1"
+	music = "D_DDTBLU"
+}
+
+map MAP09
+{
+	levelpic = "CWILV08"
+	levelname = "Datacenter"
+	next = "MAP10"
+	skytexture = "SKY1"
+	music = "D_IN_CIT"
+}
+
+map MAP10
+{
+	levelpic = "CWILV09"
+	levelname = "Deadly Outlands"
+	next = "MAP11"
+	skytexture = "SKY1"
+	music = "D_DEAD"
+}
+
+map MAP11
+{
+	levelpic = "CWILV10"
+	levelname = "Dimensional Rift Observatory"
+	next = "MAP12"
+	skytexture = "SKY1"
+	music = "D_STLKS2"
+	interbackdrop = "AQF001"
+	intertext = "You didn't find anyone alive. Again.
+
+The fighting is taking its toll on you.
+The pain. The brutality. The loneliness.
+There's got to be a way to somewhere,
+something that isn't... this.
+
+A train rumbles in the distance.
+
+You follow the sound down the empty road
+and reach the edge of a railyard.
+
+Trains mean cities.
+Cities mean people.
+
+Right?"
+}
+
+map MAP12
+{
+	levelpic = "CWILV11"
+	levelname = "Railroads"
+	next = "MAP13"
+	skytexture = "SKY2"
+	music = "D_THEDA2"
+}
+
+map MAP13
+{
+	levelpic = "CWILV12"
+	levelname = "Station Earth"
+	next = "MAP14"
+	skytexture = "SKY2"
+	music = "D_DOOM2"
+}
+
+map MAP14
+{
+	levelpic = "CWILV13"
+	levelname = "Nuclear Zone"
+	next = "MAP15"
+	skytexture = "SKY2"
+	music = "D_DDTBL2"
+}
+
+map MAP15
+{
+	levelpic = "CWILV14"
+	levelname = "Hostile Takeover"
+	next = "MAP16"
+	nextsecret = "MAP31"
+	skytexture = "SKY2"
+	music = "D_RUNNI2"
+	interbackdrop = "AQF004"
+	intertextsecret = "You step into the teleporter. You feel a
+familiar flash and... you're in a cage?
+Jailed?
+
+There are other cages in here. Occupied.
+So is this how they capture humans?
+Or did they set this up specially for you,
+as a reward for being such a monkey wrench
+in their plans?
+
+The guards haven't noticed you - yet.
+Any noise could mean death. Or worse.
+
+When they zombify you, are you awake the
+entire time, locked inside of your brain?
+
+You'd rather not find out."
+}
+
+map MAP16
+{
+	levelpic = "CWILV15"
+	levelname = "Urban Jungle"
+	next = "MAP17"
+	skytexture = "SKY2"
+	music = "D_DEAD2"
+}
+
+map MAP17
+{
+	levelpic = "CWILV16"
+	levelname = "City Capitol"
+	next = "MAP18"
+	skytexture = "SKY2"
+	music = "D_STLKS3"
+}
+
+map MAP18
+{
+	levelpic = "CWILV17"
+	levelname = "Aquatics Lab"
+	next = "MAP19"
+	skytexture = "SKY2"
+	music = "D_ROMERO"
+}
+
+map MAP19
+{
+	levelpic = "CWILV18"
+	levelname = "Sewage Control"
+	next = "MAP20"
+	skytexture = "SKY2"
+	music = "D_SHAWN2"
+}
+
+map MAP20
+{
+	levelpic = "CWILV19"
+	levelname = "Blood Ember Fortress"
+	next = "MAP21"
+	skytexture = "SKY2"
+	music = "D_MESSAG"
+	interbackdrop = "FLAT5_6"
+	intertext = "Here is no AGM but only monsters.
+Monsters, no humans and dusty days
+sleeping in old ruins and eating scraps.
+No one has escaped this wasteland alive.
+
+You've been tracking their movements.
+AGM records and alien scrawlings point
+to something big worming its way through
+the entire teleportation network.
+Sending its nightmare armies of brain-
+scrambled sapients - including humans -
+to conquer all known space.
+
+And now you're fighting at its doorstep.
+
+This could be the beginning
+of your freedom - or your doom."
+}
+
+map MAP21
+{
+	levelpic = "CWILV20"
+	levelname = "Under Realm"
+	next = "MAP22"
+	skytexture = "SKY3"
+	music = "D_COUNT2"
+}
+
+map MAP22
+{
+	levelpic = "CWILV21"
+	levelname = "Remanasu"
+	next = "MAP23"
+	skytexture = "SKY3"
+	music = "D_DDTBL3"
+}
+
+map MAP23
+{
+	levelpic = "CWILV22"
+	levelname = "Underground Facility"
+	next = "MAP24"
+	skytexture = "SKY3"
+	music = "D_AMPIE"
+}
+
+map MAP24
+{
+	levelpic = "CWILV23"
+	levelname = "Abandoned Teleporter Lab"
+	next = "MAP25"
+	skytexture = "SKY3"
+	music = "D_THEDA3"
+}
+
+map MAP25
+{
+	levelpic = "CWILV24"
+	levelname = "Persistence of Memory"
+	next = "MAP26"
+	skytexture = "SKY3"
+	music = "D_ADRIAN"
+}
+
+map MAP26
+{
+	levelpic = "CWILV25"
+	levelname = "Dark Depths"
+	next = "MAP27"
+	skytexture = "SKY3"
+	music = "D_MESSG2"
+}
+
+map MAP27
+{
+	levelpic = "CWILV26"
+	levelname = "Palace of Red"
+	next = "MAP28"
+	skytexture = "SKY3"
+	music = "D_ROMER2"
+}
+
+map MAP28
+{
+	levelpic = "CWILV27"
+	levelname = "Grim Redoubt"
+	next = "MAP29"
+	skytexture = "SKY3"
+	music = "D_TENSE"
+}
+
+map MAP29
+{
+	levelpic = "CWILV28"
+	levelname = "Melting Point"
+	next = "MAP30"
+	skytexture = "SKY3"
+	music = "D_SHAWN3"
+}
+
+map MAP30
+{
+	levelpic = "CWILV29"
+	levelname = "Jaws of Defeat"
+	skytexture = "SKY3"
+	endcast = true
+	music = "D_OPENIN"
+	interbackdrop = "SLIME13"
+	intertext = "The evil thing becomes unstable.
+Its final roars echo throughout the room
+until it crumples into scrap metal.
+
+A targeting portal opens, blissfully
+unaware of its master's demise.
+
+On the other side you see a small town.
+You ditch your weapons and slip through,
+leaving AGM and all its horrors behind.
+
+No one will know who saved them.
+
+No one will know what happened here.
+
+No one will ever find you again."
+}
+
+map MAP31
+{
+	levelpic = "CWILV30"
+	levelname = "Be Quiet"
+	next = "MAP16"
+	nextsecret = "MAP32"
+	skytexture = "SKY2"
+	music = "D_EVIL"
+	interbackdrop = "AQF021"
+	intertextsecret = "Forcibly uncaged again. Good job.
+
+But where are you? The air and gravity
+still feel like whatever planet that
+strange prison had been on.
+
+You look around and the layout triggers
+some old memories from history class.
+
+This is an arena.
+Where they send prisoners to die.
+That wasn't an exit - but an entrance.
+
+You will find your way back to the city,
+but it will have to be on the other side
+of a few homicidal mutants..."
+}
+
+map MAP32
+{
+	levelpic = "CWILV31"
+	levelname = "Not Sure"
+	next = "MAP16"
+	skytexture = "SKY2"
+	music = "D_ULTIMA"
+}

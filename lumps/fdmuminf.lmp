@@ -1,0 +1,299 @@
+// UMAPINFO lump for FreeDM.
+
+// SPDX-License-Identifier: BSD-3-Clause
+
+map MAP01
+{
+	levelpic = "CWILV00"
+	levelname = "Tech Test"
+	next = "MAP02"
+	skytexture = "SKY1"
+	music = "D_RUNNIN"
+}
+
+map MAP02
+{
+	levelpic = "CWILV01"
+	levelname = "Natural Station"
+	next = "MAP03"
+	skytexture = "SKY1"
+	music = "D_STALKS"
+}
+
+map MAP03
+{
+	levelpic = "CWILV02"
+	levelname = "Issues of Claveria"
+	next = "MAP04"
+	skytexture = "SKY1"
+	music = "D_COUNTD"
+}
+
+map MAP04
+{
+	levelpic = "CWILV03"
+	levelname = "Steel"
+	next = "MAP05"
+	skytexture = "SKY1"
+	music = "D_BETWEE"
+}
+
+map MAP05
+{
+	levelpic = "CWILV04"
+	levelname = "Dense Fields"
+	next = "MAP06"
+	skytexture = "SKY1"
+	music = "D_DOOM"
+}
+
+map MAP06
+{
+	levelpic = "CWILV05"
+	levelname = "Temple of Ammon"
+	next = "MAP07"
+	skytexture = "SKY1"
+	music = "D_THE_DA"
+	intertext = clear
+}
+
+map MAP07
+{
+	levelpic = "CWILV06"
+	levelname = "Main Stronghold"
+	next = "MAP08"
+	skytexture = "SKY1"
+	music = "D_SHAWN"
+}
+
+map MAP08
+{
+	levelpic = "CWILV07"
+	levelname = "Artifact Base"
+	next = "MAP09"
+	skytexture = "SKY1"
+	music = "D_DDTBLU"
+}
+
+map MAP09
+{
+	levelpic = "CWILV08"
+	levelname = "Industrial Outland"
+	next = "MAP10"
+	skytexture = "SKY1"
+	music = "D_IN_CIT"
+}
+
+map MAP10
+{
+	levelpic = "CWILV09"
+	levelname = "Detached Grounds"
+	next = "MAP11"
+	skytexture = "SKY1"
+	music = "D_DEAD"
+}
+
+map MAP11
+{
+	levelpic = "CWILV10"
+	levelname = "Isolated Facility"
+	next = "MAP12"
+	skytexture = "SKY1"
+	music = "D_STLKS2"
+	intertext = clear
+}
+
+map MAP12
+{
+	levelpic = "CWILV11"
+	levelname = "Up 'n' Down Canyon"
+	next = "MAP13"
+	skytexture = "SKY2"
+	music = "D_THEDA2"
+}
+
+map MAP13
+{
+	levelpic = "CWILV12"
+	levelname = "Unholy Blood"
+	next = "MAP14"
+	skytexture = "SKY2"
+	music = "D_DOOM2"
+}
+
+map MAP14
+{
+	levelpic = "CWILV13"
+	levelname = "Technical Assault"
+	next = "MAP15"
+	skytexture = "SKY2"
+	music = "D_DDTBL2"
+}
+
+map MAP15
+{
+	levelpic = "CWILV14"
+	levelname = "Shallow Complex"
+	next = "MAP16"
+	nextsecret = "MAP31"
+	skytexture = "SKY2"
+	music = "D_RUNNI2"
+	intertextsecret = clear
+}
+
+map MAP16
+{
+	levelpic = "CWILV15"
+	levelname = "Barren Alleys"
+	next = "MAP17"
+	skytexture = "SKY2"
+	music = "D_DEAD2"
+}
+
+map MAP17
+{
+	levelpic = "CWILV16"
+	levelname = "Underwoods"
+	next = "MAP18"
+	skytexture = "SKY2"
+	music = "D_STLKS3"
+}
+
+map MAP18
+{
+	levelpic = "CWILV17"
+	levelname = "Deserted Courtyard"
+	next = "MAP19"
+	skytexture = "SKY2"
+	music = "D_ROMERO"
+}
+
+map MAP19
+{
+	levelpic = "CWILV18"
+	levelname = "Tech Isle"
+	next = "MAP20"
+	skytexture = "SKY2"
+	music = "D_SHAWN2"
+}
+
+map MAP20
+{
+	levelpic = "CWILV19"
+	levelname = "Warehouse"
+	next = "MAP21"
+	skytexture = "SKY2"
+	music = "D_MESSAG"
+	intertext = clear
+}
+
+map MAP21
+{
+	levelpic = "CWILV20"
+	levelname = "Refinery"
+	next = "MAP22"
+	skytexture = "SKY3"
+	music = "D_COUNT2"
+}
+
+map MAP22
+{
+	levelpic = "CWILV21"
+	levelname = "Military Depot"
+	next = "MAP23"
+	skytexture = "SKY3"
+	music = "D_DDTBL3"
+}
+
+map MAP23
+{
+	levelpic = "CWILV22"
+	levelname = "Confrontation"
+	next = "MAP24"
+	skytexture = "SKY3"
+	music = "D_AMPIE"
+}
+
+map MAP24
+{
+	levelpic = "CWILV23"
+	levelname = "Flooded Base"
+	next = "MAP25"
+	skytexture = "SKY3"
+	music = "D_THEDA3"
+}
+
+map MAP25
+{
+	levelpic = "CWILV24"
+	levelname = "Mansion Yard"
+	next = "MAP26"
+	skytexture = "SKY3"
+	music = "D_ADRIAN"
+}
+
+map MAP26
+{
+	levelpic = "CWILV25"
+	levelname = "Acidic Crypt"
+	next = "MAP27"
+	skytexture = "SKY3"
+	music = "D_MESSG2"
+}
+
+map MAP27
+{
+	levelpic = "CWILV26"
+	levelname = "The Exile"
+	next = "MAP28"
+	skytexture = "SKY3"
+	music = "D_ROMER2"
+}
+
+map MAP28
+{
+	levelpic = "CWILV27"
+	levelname = "Weapons Factory"
+	next = "MAP29"
+	skytexture = "SKY3"
+	music = "D_TENSE"
+}
+
+map MAP29
+{
+	levelpic = "CWILV28"
+	levelname = "Unusual Territory"
+	next = "MAP30"
+	skytexture = "SKY3"
+	music = "D_SHAWN3"
+}
+
+map MAP30
+{
+	levelpic = "CWILV29"
+	levelname = "Last Man Standing"
+	next = "MAP01"
+	skytexture = "SKY3"
+	music = "D_OPENIN"
+	intertext = clear
+}
+
+map MAP31
+{
+	levelpic = "CWILV30"
+	levelname = "Desolated Fort"
+	next = "MAP16"
+	nextsecret = "MAP32"
+	skytexture = "SKY2"
+	music = "D_EVIL"
+	intertextsecret = clear
+}
+
+map MAP32
+{
+	levelpic = "CWILV31"
+	levelname = "Fourplay"
+	next = "MAP16"
+	skytexture = "SKY2"
+	music = "D_ULTIMA"
+}
