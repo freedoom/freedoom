@@ -1,299 +1,361 @@
-// UMAPINFO lump for FreeDM.
-
 // SPDX-License-Identifier: BSD-3-Clause
+// UMAPINFO definitions for FreeDM
+// Original UMAPINFO template by Devalaous
 
 map MAP01
 {
-	levelpic = "CWILV00"
-	levelname = "Tech Test"
-	next = "MAP02"
-	skytexture = "SKY1"
-	music = "D_RUNNIN"
+	LevelName = "Tech Test"
+	Label = "DM01"
+	LevelPic = "CWILV00"
+	Next = "MAP02"
+	Music = "D_RUNNIN"
+	SkyTexture = "SKY1"
+	ParTime = 0
+	Episode = clear
+	Episode = "M_EPI1", "FreeDM", "1"
 }
 
 map MAP02
 {
-	levelpic = "CWILV01"
-	levelname = "Natural Station"
-	next = "MAP03"
-	skytexture = "SKY1"
-	music = "D_STALKS"
+	LevelName = "Natural Station"
+	Label = "DM02"
+	LevelPic = "CWILV01"
+	Next = "MAP03"
+	Music = "D_STALKS"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP03
 {
-	levelpic = "CWILV02"
-	levelname = "Issues of Claveria"
-	next = "MAP04"
-	skytexture = "SKY1"
-	music = "D_COUNTD"
+	LevelName = "Issues of Claveria"
+	Label = "DM03"
+	LevelPic = "CWILV02"
+	Next = "MAP04"
+	Music = "D_COUNTD"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP04
 {
-	levelpic = "CWILV03"
-	levelname = "Steel"
-	next = "MAP05"
-	skytexture = "SKY1"
-	music = "D_BETWEE"
+	LevelName = "Steel"
+	Label = "DM04"
+	LevelPic = "CWILV03"
+	Next = "MAP05"
+	Music = "D_BETWEE"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP05
 {
-	levelpic = "CWILV04"
-	levelname = "Dense Fields"
-	next = "MAP06"
-	skytexture = "SKY1"
-	music = "D_DOOM"
+	LevelName = "Dense Fields"
+	Label = "DM05"
+	LevelPic = "CWILV04"
+	Next = "MAP06"
+	Music = "D_DOOM"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP06
 {
-	levelpic = "CWILV05"
-	levelname = "Temple of Ammon"
-	next = "MAP07"
-	skytexture = "SKY1"
-	music = "D_THE_DA"
-	intertext = clear
+	LevelName = "Temple of Ammon"
+	Label = "DM06"
+	LevelPic = "CWILV05"
+	Next = "MAP07"
+	Music = "D_THE_DA"
+	SkyTexture = "SKY1"
+	InterText = clear
+	ParTime = 0
 }
 
 map MAP07
 {
-	levelpic = "CWILV06"
-	levelname = "Main Stronghold"
-	next = "MAP08"
-	skytexture = "SKY1"
-	music = "D_SHAWN"
+	LevelName = "Main Stronghold"
+	Label = "DM07"
+	LevelPic = "CWILV06"
+	Next = "MAP08"
+	Music = "D_SHAWN"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP08
 {
-	levelpic = "CWILV07"
-	levelname = "Artifact Base"
-	next = "MAP09"
-	skytexture = "SKY1"
-	music = "D_DDTBLU"
+	LevelName = "Artifact Base"
+	Label = "DM08"
+	LevelPic = "CWILV07"
+	Next = "MAP09"
+	Music = "D_DDTBLU"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP09
 {
-	levelpic = "CWILV08"
-	levelname = "Industrial Outland"
-	next = "MAP10"
-	skytexture = "SKY1"
-	music = "D_IN_CIT"
+	LevelName = "Industrial Outland"
+	Label = "DM09"
+	LevelPic = "CWILV08"
+	Next = "MAP10"
+	Music = "D_IN_CIT"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP10
 {
-	levelpic = "CWILV09"
-	levelname = "Detached Grounds"
-	next = "MAP11"
-	skytexture = "SKY1"
-	music = "D_DEAD"
+	LevelName = "Detached Grounds"
+	Label = "DM10"
+	LevelPic = "CWILV09"
+	Next = "MAP11"
+	Music = "D_DEAD"
+	SkyTexture = "SKY1"
+	ParTime = 0
 }
 
 map MAP11
 {
-	levelpic = "CWILV10"
-	levelname = "Isolated Facility"
-	next = "MAP12"
-	skytexture = "SKY1"
-	music = "D_STLKS2"
-	intertext = clear
+	LevelName = "Isolated Facility"
+	Label = "DM11"
+	LevelPic = "CWILV10"
+	Next = "MAP12"
+	Music = "D_STLKS2"
+	SkyTexture = "SKY1"
+	InterText = clear
 }
 
 map MAP12
 {
-	levelpic = "CWILV11"
-	levelname = "Up 'n' Down Canyon"
-	next = "MAP13"
-	skytexture = "SKY2"
-	music = "D_THEDA2"
+	LevelName = "Up 'n' Down Canyon"
+	Label = "DM12"
+	LevelPic = "CWILV11"
+	Next = "MAP13"
+	Music = "D_THEDA2"
+	SkyTexture = "SKY2"
+	ParTime = 0
 }
 
 map MAP13
 {
-	levelpic = "CWILV12"
-	levelname = "Unholy Blood"
-	next = "MAP14"
-	skytexture = "SKY2"
-	music = "D_DOOM2"
+	LevelName = "Unholy Blood"
+	Label = "DM13"
+	LevelPic = "CWILV12"
+	Next = "MAP14"
+	Music = "D_DOOM2"
+	SkyTexture = "SKY2"
+	ParTime = 0
 }
 
 map MAP14
 {
-	levelpic = "CWILV13"
-	levelname = "Technical Assault"
-	next = "MAP15"
-	skytexture = "SKY2"
-	music = "D_DDTBL2"
+	LevelName = "Technical Assault"
+	Label = "DM14"
+	LevelPic = "CWILV13"
+	Next = "MAP15"
+	Music = "D_DDTBL2"
+	SkyTexture = "SKY2"
+	ParTime = 0
 }
 
 map MAP15
 {
-	levelpic = "CWILV14"
-	levelname = "Shallow Complex"
-	next = "MAP16"
-	nextsecret = "MAP31"
-	skytexture = "SKY2"
-	music = "D_RUNNI2"
-	intertextsecret = clear
+	LevelName = "Shallow Complex"
+	Label = "DM15"
+	LevelPic = "CWILV14"
+	Next = "MAP16"
+	NextSecret = "MAP31"
+	Music = "D_RUNNI2"
+	SkyTexture = "SKY2"
+	InterTextSecret = clear
 }
 
 map MAP16
 {
-	levelpic = "CWILV15"
-	levelname = "Barren Alleys"
-	next = "MAP17"
-	skytexture = "SKY2"
-	music = "D_DEAD2"
+	LevelName = "Barren Alleys"
+	Label = "DM16"
+	LevelPic = "CWILV15"
+	Next = "MAP17"
+	Music = "D_DEAD2"
+	SkyTexture = "SKY2"
+	ParTime = 0
 }
 
 map MAP17
 {
-	levelpic = "CWILV16"
-	levelname = "Underwoods"
-	next = "MAP18"
-	skytexture = "SKY2"
-	music = "D_STLKS3"
+	LevelName = "Underwoods"
+	Label = "DM17"
+	LevelPic = "CWILV16"
+	Next = "MAP18"
+	Music = "D_STLKS3"
+	SkyTexture = "SKY2"
+	ParTime = 0
 }
 
 map MAP18
 {
-	levelpic = "CWILV17"
-	levelname = "Deserted Courtyard"
-	next = "MAP19"
-	skytexture = "SKY2"
-	music = "D_ROMERO"
+	LevelName = "Deserted Courtyard"
+	Label = "DM18"
+	LevelPic = "CWILV17"
+	Next = "MAP19"
+	Music = "D_ROMERO"
+	SkyTexture = "SKY2"
+	ParTime = 0
 }
 
 map MAP19
 {
-	levelpic = "CWILV18"
-	levelname = "Tech Isle"
-	next = "MAP20"
-	skytexture = "SKY2"
-	music = "D_SHAWN2"
+	LevelName = "Tech Isle"
+	Label = "DM19"
+	LevelPic = "CWILV18"
+	Next = "MAP20"
+	Music = "D_SHAWN2"
+	SkyTexture = "SKY2"
+	ParTime = 0
 }
 
 map MAP20
 {
-	levelpic = "CWILV19"
-	levelname = "Warehouse"
-	next = "MAP21"
-	skytexture = "SKY2"
-	music = "D_MESSAG"
-	intertext = clear
+	LevelName = "Warehouse"
+	Label = "DM20"
+	LevelPic = "CWILV19"
+	Next = "MAP21"
+	Music = "D_MESSAG"
+	SkyTexture = "SKY2"
+	InterText = clear
 }
 
 map MAP21
 {
-	levelpic = "CWILV20"
-	levelname = "Refinery"
-	next = "MAP22"
-	skytexture = "SKY3"
-	music = "D_COUNT2"
+	LevelName = "Refinery"
+	Label = "DM21"
+	LevelPic = "CWILV20"
+	Next = "MAP22"
+	Music = "D_COUNT2"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP22
 {
-	levelpic = "CWILV21"
-	levelname = "Military Depot"
-	next = "MAP23"
-	skytexture = "SKY3"
-	music = "D_DDTBL3"
+	LevelName = "Military Depot"
+	Label = "DM22"
+	LevelPic = "CWILV21"
+	Next = "MAP23"
+	Music = "D_DDTBL3"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP23
 {
-	levelpic = "CWILV22"
-	levelname = "Confrontation"
-	next = "MAP24"
-	skytexture = "SKY3"
-	music = "D_AMPIE"
+	LevelName = "Confrontation"
+	Label = "DM23"
+	LevelPic = "CWILV22"
+	Next = "MAP24"
+	Music = "D_AMPIE"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP24
 {
-	levelpic = "CWILV23"
-	levelname = "Flooded Base"
-	next = "MAP25"
-	skytexture = "SKY3"
-	music = "D_THEDA3"
+	LevelName = "Flooded Base"
+	Label = "DM24"
+	LevelPic = "CWILV23"
+	Next = "MAP25"
+	Music = "D_THEDA3"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP25
 {
-	levelpic = "CWILV24"
-	levelname = "Mansion Yard"
-	next = "MAP26"
-	skytexture = "SKY3"
-	music = "D_ADRIAN"
+	LevelName = "Mansion Yard"
+	Label = "DM25"
+	LevelPic = "CWILV24"
+	Next = "MAP26"
+	Music = "D_ADRIAN"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP26
 {
-	levelpic = "CWILV25"
-	levelname = "Acidic Crypt"
-	next = "MAP27"
-	skytexture = "SKY3"
-	music = "D_MESSG2"
+	LevelName = "Acidic Crypt"
+	Label = "DM26"
+	LevelPic = "CWILV25"
+	Next = "MAP27"
+	Music = "D_MESSG2"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP27
 {
-	levelpic = "CWILV26"
-	levelname = "The Exile"
-	next = "MAP28"
-	skytexture = "SKY3"
-	music = "D_ROMER2"
+	LevelName = "The Exile"
+	Label = "DM27"
+	LevelPic = "CWILV26"
+	Next = "MAP28"
+	Music = "D_ROMER2"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP28
 {
-	levelpic = "CWILV27"
-	levelname = "Weapons Factory"
-	next = "MAP29"
-	skytexture = "SKY3"
-	music = "D_TENSE"
+	LevelName = "Weapons Factory"
+	Label = "DM28"
+	LevelPic = "CWILV27"
+	Next = "MAP29"
+	Music = "D_TENSE"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP29
 {
-	levelpic = "CWILV28"
-	levelname = "Unusual Territory"
-	next = "MAP30"
-	skytexture = "SKY3"
-	music = "D_SHAWN3"
+	LevelName = "Unusual Territory"
+	Label = "DM29"
+	LevelPic = "CWILV28"
+	Next = "MAP30"
+	Music = "D_SHAWN3"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
 
 map MAP30
 {
-	levelpic = "CWILV29"
-	levelname = "Last Man Standing"
-	next = "MAP01"
-	skytexture = "SKY3"
-	music = "D_OPENIN"
-	intertext = clear
+	LevelName = "Last Man Standing"
+	Label = "DM30"
+	LevelPic = "CWILV29"
+	Next = "MAP01"
+	Music = "D_OPENIN"
+	SkyTexture = "SKY3"
+	InterText = clear
 }
 
 map MAP31
 {
-	levelpic = "CWILV30"
-	levelname = "Desolated Fort"
-	next = "MAP16"
-	nextsecret = "MAP32"
-	skytexture = "SKY2"
-	music = "D_EVIL"
-	intertextsecret = clear
+	LevelName = "Desolated Fort"
+	Label = "DM31"
+	LevelPic = "CWILV30"
+	Next = "MAP16"
+	NextSecret = "MAP32"
+	Music = "D_EVIL"
+	SkyTexture = "SKY3"
+	ParTime = 0
+	InterTextSecret = clear
 }
 
 map MAP32
 {
-	levelpic = "CWILV31"
-	levelname = "Fourplay"
-	next = "MAP16"
-	skytexture = "SKY2"
-	music = "D_ULTIMA"
+	LevelName = "Fourplay"
+	Label = "DM32"
+	LevelPic = "CWILV31"
+	Next = "MAP16"
+	Music = "D_ULTIMA"
+	SkyTexture = "SKY3"
+	ParTime = 0
 }
