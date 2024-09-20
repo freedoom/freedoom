@@ -13,6 +13,6 @@
     "dehfiles": null,
     "executable": "doom1.9",
     "mode": "commercial",
-    "options": null
+    "options": "comp_soul 0"
   }
 }
