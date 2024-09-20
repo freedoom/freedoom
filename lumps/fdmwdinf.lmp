@@ -35,8 +35,8 @@ Other files required    : None
 * Play Information *
 
 Game                    : Doom 2
-Single Player           : Player start only
-Cooperative 2-4 Player  : Player start only
+Single Player           : Player starts only
+Cooperative 2-4 Player  : Player starts only
 Deathmatch 2-4 Player   : Designed for
 Other game styles       : None
 Difficulty Settings     : Not implemented
