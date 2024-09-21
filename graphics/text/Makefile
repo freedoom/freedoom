@@ -65,6 +65,9 @@ text_strings: config.py fontchars ../../lumps/dehacked/dehacked.txt
 helpbg.png: ../interpic.png
 	./tint.py ../interpic.png '#57b9b0' helpbg.png
 
+helpbgws.png: ../inter_ws.png
+	./tint.py ../inter_ws.png '#57b9b0' helpbgws.png
+
 # Generate transparent image containing text for the HELP screen:
 help.png: text_strings helpbg.png
 	./smtextgen help.png 320x200                 \
@@ -94,7 +97,7 @@ help.png: text_strings helpbg.png
 	   206,84  "file:../../sprites/cella0.png"   \
 	   10,110  "Health"                          \
 	   63,106  "file:../../sprites/bon1a0.png"   \
-	   100,101  "file:../../sprites/media0.png"   \
+	   100,101 "file:../../sprites/media0.png"   \
 	   79,113  "file:../../sprites/stima0.png"   \
 	   132,102 "file:../../sprites/pstra0.png"   \
 	   180,110 "Armor"                           \
@@ -125,10 +128,75 @@ help.png: text_strings helpbg.png
 	   214,192 "<Esc> to return"
 	cp $@ ../
 
+help_ws.png: text_strings helpbgws.png
+	./smtextgen help_ws.png 320x200              \
+	   -background "helpbgws.png"                \
+	   150,2   "file:helpttl.png"                \
+	   10,20   "Weapons"                         \
+	   20,33   "file:../../sprites/csawa0.png"   \
+	   90,25   "file:../../sprites/shota0.png"   \
+	   90,40   "file:../../sprites/sgn2a0.png"   \
+	   154,15  "file:../../sprites/mguna0.png"   \
+	   161,35  "file:../../sprites/launa0.png"   \
+	   235,18  "file:../../sprites/plasa0.png"   \
+	   235,33  "file:../../sprites/bfuga0.png"   \
+	   10,62   "Bullets"                         \
+	   80,57   "file:../../sprites/ammoa0.png"   \
+	   68,62   "file:../../sprites/clipa0.png"   \
+	   113,62  "Shells"                          \
+	   180,57  "file:../../sprites/sboxa0.png"   \
+	   163,62  "file:../../sprites/shela0.png"   \
+	   252,60  "Backpack"                        \
+	   272,69  "file:../../sprites/bpaka0.png"   \
+	   10,85   "Missiles"                        \
+	   90,75   "file:../../sprites/broka0.png"   \
+	   76,75   "file:../../sprites/rocka0.png"   \
+	   158,85  "Energy"                          \
+	   225,76  "file:../../sprites/celpa0.png"   \
+	   206,84  "file:../../sprites/cella0.png"   \
+	   10,110  "Health"                          \
+	   63,106  "file:../../sprites/bon1a0.png"   \
+	   100,101 "file:../../sprites/media0.png"   \
+	   79,113  "file:../../sprites/stima0.png"   \
+	   132,102 "file:../../sprites/pstra0.png"   \
+	   180,110 "Armor"                           \
+	   276,105 "file:../../sprites/arm2b0.png"   \
+	   240,102 "file:../../sprites/arm1b0.png"   \
+	   225,109 "file:../../sprites/bon2b0.png"   \
+	   145,134 "Map"                             \
+	   175,122 "file:../../sprites/pmapa0.png"   \
+	   10,134  "Big Boost"                       \
+	   84,127  "file:../../sprites/soula0.png"   \
+	   110,127 "file:../../sprites/megaa0.png"   \
+	   10,155  "Light"                           \
+	   48,152  "file:../../sprites/pvisa0.png"   \
+	   34,177  "Cloak"                           \
+	   80,161  "file:../../sprites/pinsa0.png"   \
+	   119,177 "Invuln."                         \
+	   174,166 "file:../../sprites/pinva0.png"   \
+	   265,137 "Keys"                            \
+	   254,149 "file:../../sprites/rkeya0.png"   \
+	   271,149 "file:../../sprites/ykeya0.png"   \
+	   288,149 "file:../../sprites/bkeya0.png"   \
+	   255,173 "file:../../sprites/rskua0.png"   \
+	   273,173 "file:../../sprites/yskua0.png"   \
+	   291,173 "file:../../sprites/bskua0.png"   \
+	   130,155 "Rescue suit"                     \
+	   215,137 "file:../../sprites/suita0.png"   \
+	   2,192 "https://freedoom.github.io/"       \
+	   214,192 "<Esc> to return"
+	cp $@ ../
 
 credit.png: text_strings helpbg.png credit.txt
 	./smtextgen credit.png 320x200                \
 	   -background "helpbg.png"                   \
+	   120,5  "file:freettl.png"                  \
+	   10,30  "include:credit.txt"
+	cp $@ ../
+
+credi_ws.png: text_strings helpbgws.png credit.txt
+	./smtextgen credi_ws.png 854x200              \
+	   -background "helpbgws.png"                 \
 	   120,5  "file:freettl.png"                  \
 	   10,30  "include:credit.txt"
 	cp $@ ../
@@ -146,28 +214,45 @@ wivctms.png:
 	    0,0  victims
 	cp $@ ../
 
-titlepic: fd1title.png fd2title.png fdmtitle.png
+titlepic: \
+  fd1title.png fd2title.png fdmtitle.png \
+  fd1wsttl.png fd2wsttl.png fdmwsttl.png
 
-fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png 
+fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png
 	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
+	cp $@ ../
+
+fd1wsttl.png: text_strings ../titlepic/title_ws.png ../m_doom.png
+	./create_caption ../titlepic/title_ws.png ../m_doom.png ../t_phase1.png $@
 	cp $@ ../
 
 fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png
 	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
 	cp $@ ../
 
+fd2wsttl.png: text_strings ../titlepic/title_ws.png ../m_doom.png
+	./create_caption ../titlepic/title_ws.png ../m_doom.png ../t_phase2.png $@
+	cp $@ ../
+
 fdmtitle.png: ../titlepic/freedm_titlepic.png
 	./create_caption $< $@
 	cp $@ ../
 
+fdmwsttl.png: ../titlepic/freedm_title_ws.png
+	./create_caption $< $@
+	cp $@ ../
+
 clean:
-	$(RM) $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
-	    graphics.stamp *.pyc credtext.png	                    \
-	    credtext.png credit.png dmwilv*.png wikilrs.png		    \
-	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
+	$(RM) $(TEXTGEN_GRAPHICS) helpbg.png help.png               \
+	    graphics.stamp *.pyc credtext.png                       \
+	    credtext.png credit.png dmwilv*.png wikilrs.png	        \
+	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png \
+	    credi_ws.png help_ws.png ../credi_ws.png ../help_ws.png \
 	    ../wikilrs.png ../wivctms.png                           \
-		fd1title.png fd2title.png fdmtitle.png                  \
-	    ../fd1title.png ../fd2title.png ../fdmtitle.png 
+	    fd1title.png fd2title.png fdmtitle.png                  \
+	    fd1wsttl.png fd2wsttl.png fdmwsttl.png                  \
+	    ../fd1title.png ../fd2title.png ../fdmtitle.png         \
+	    ../fd1wsttl.png ../fd2wsttl.png ../fdmwsttl.png
 	for graphic in $(TEXTGEN_GRAPHICS); do $(RM) ../$$graphic; done
 	$(RM) __pycache__/*
 	-rmdir __pycache__
