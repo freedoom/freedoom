@@ -51,7 +51,7 @@ TEXTGEN_GRAPHIC_LUMPS = \
 # The full set of graphics outputted by textgen includes a couple of
 # extra files that are just intermediates, and are not lumps to be
 # incuded in the WADs:
-TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
+TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS) \
   helpttl.png  freettl.png
 
 all: text_strings help.png help_ws.png \
@@ -129,36 +129,39 @@ help.png: text_strings helpbg.png
 	   214,192 "<Esc> to return"
 	cp $@ ../
 
+# 32:9, the widest standard, results in a 854px wide image,
+#     854 - 320 = 534 (the total added length from both sides)
+#     534 / 2   = 267 (the added length from one side)
 help_ws.png: text_strings helpbgws.png
 	./smtextgen help_ws.png 854x200              \
 	   -background "helpbgws.png"                \
 	   417,2   "file:helpttl.png"                \
-	   277,20   "Weapons"                         \
-	   287,33   "file:../../sprites/csawa0.png"   \
-	   357,25   "file:../../sprites/shota0.png"   \
-	   357,40   "file:../../sprites/sgn2a0.png"   \
+	   277,20  "Weapons"                         \
+	   287,33  "file:../../sprites/csawa0.png"   \
+	   357,25  "file:../../sprites/shota0.png"   \
+	   357,40  "file:../../sprites/sgn2a0.png"   \
 	   421,15  "file:../../sprites/mguna0.png"   \
 	   428,35  "file:../../sprites/launa0.png"   \
 	   502,18  "file:../../sprites/plasa0.png"   \
 	   502,33  "file:../../sprites/bfuga0.png"   \
-	   277,62   "Bullets"                         \
-	   347,57   "file:../../sprites/ammoa0.png"   \
-	   335,62   "file:../../sprites/clipa0.png"   \
+	   277,62  "Bullets"                         \
+	   347,57  "file:../../sprites/ammoa0.png"   \
+	   335,62  "file:../../sprites/clipa0.png"   \
 	   380,62  "Shells"                          \
 	   447,57  "file:../../sprites/sboxa0.png"   \
 	   430,62  "file:../../sprites/shela0.png"   \
 	   519,60  "Backpack"                        \
 	   539,69  "file:../../sprites/bpaka0.png"   \
-	   277,85   "Missiles"                        \
-	   357,75   "file:../../sprites/broka0.png"   \
-	   343,75   "file:../../sprites/rocka0.png"   \
+	   277,85  "Missiles"                        \
+	   357,75  "file:../../sprites/broka0.png"   \
+	   343,75  "file:../../sprites/rocka0.png"   \
 	   425,85  "Energy"                          \
 	   492,76  "file:../../sprites/celpa0.png"   \
 	   473,84  "file:../../sprites/cella0.png"   \
-	   277,110  "Health"                          \
-	   330,106  "file:../../sprites/bon1a0.png"   \
+	   277,110 "Health"                          \
+	   330,106 "file:../../sprites/bon1a0.png"   \
 	   367,101 "file:../../sprites/media0.png"   \
-	   346,113  "file:../../sprites/stima0.png"   \
+	   346,113 "file:../../sprites/stima0.png"   \
 	   399,102 "file:../../sprites/pstra0.png"   \
 	   447,110 "Armor"                           \
 	   543,105 "file:../../sprites/arm2b0.png"   \
@@ -166,13 +169,13 @@ help_ws.png: text_strings helpbgws.png
 	   492,109 "file:../../sprites/bon2b0.png"   \
 	   412,134 "Map"                             \
 	   442,122 "file:../../sprites/pmapa0.png"   \
-	   277,134  "Big Boost"                       \
-	   351,127  "file:../../sprites/soula0.png"   \
+	   277,134 "Big Boost"                       \
+	   351,127 "file:../../sprites/soula0.png"   \
 	   377,127 "file:../../sprites/megaa0.png"   \
-	   277,155  "Light"                           \
-	   315,152  "file:../../sprites/pvisa0.png"   \
-	   301,177  "Cloak"                           \
-	   347,161  "file:../../sprites/pinsa0.png"   \
+	   277,155 "Light"                           \
+	   315,152 "file:../../sprites/pvisa0.png"   \
+	   301,177 "Cloak"                           \
+	   347,161 "file:../../sprites/pinsa0.png"   \
 	   386,177 "Invuln."                         \
 	   441,166 "file:../../sprites/pinva0.png"   \
 	   532,137 "Keys"                            \
@@ -184,7 +187,7 @@ help_ws.png: text_strings helpbgws.png
 	   558,173 "file:../../sprites/bskua0.png"   \
 	   397,155 "Rescue suit"                     \
 	   482,137 "file:../../sprites/suita0.png"   \
-	   269,192 "https://freedoom.github.io/"       \
+	   269,192 "https://freedoom.github.io/"     \
 	   481,192 "<Esc> to return"
 	cp $@ ../
 
@@ -195,11 +198,14 @@ credit.png: text_strings helpbg.png credit.txt
 	   10,30  "include:credit.txt"
 	cp $@ ../
 
+# 32:9, the widest standard, results in a 854px wide image,
+#     854 - 320 = 534 (the total added length from both sides)
+#     534 / 2   = 267 (the added length from one side)
 credi_ws.png: text_strings helpbgws.png credit.txt
 	./smtextgen credi_ws.png 854x200              \
 	   -background "helpbgws.png"                 \
-	   120,5  "file:freettl.png"                  \
-	   10,30  "include:credit.txt"
+	   387,5  "file:freettl.png"                  \
+	   217,30 "include:credit.txt"
 	cp $@ ../
 
 wikilrs_horiz.png:
@@ -244,14 +250,15 @@ fdmwsttl.png: ../titlepic/freedm_title_ws.png
 	cp $@ ../
 
 clean:
-	$(RM) $(TEXTGEN_GRAPHICS) helpbg.png help.png               \
-	    graphics.stamp *.pyc credtext.png                       \
-	    credtext.png credit.png dmwilv*.png wikilrs.png	        \
-	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png \
+	$(RM) $(TEXTGEN_GRAPHICS) \
+	    graphics.stamp *.pyc credtext.png  dmwilv*.png          \
+	    helpbg.png   helpbgws.png wikilrs_horiz.png             \
+	    credit.png   help.png    ../credit.png   ../help.png    \
 	    credi_ws.png help_ws.png ../credi_ws.png ../help_ws.png \
+	    wikilrs.png       wivctms.png                           \
 	    ../wikilrs.png ../wivctms.png                           \
-	    fd1title.png fd2title.png fdmtitle.png                  \
-	    fd1wsttl.png fd2wsttl.png fdmwsttl.png                  \
+	    fd1title.png       fd2title.png    fdmtitle.png         \
+	    fd1wsttl.png       fd2wsttl.png    fdmwsttl.png         \
 	    ../fd1title.png ../fd2title.png ../fdmtitle.png         \
 	    ../fd1wsttl.png ../fd2wsttl.png ../fdmwsttl.png
 	for graphic in $(TEXTGEN_GRAPHICS); do $(RM) ../$$graphic; done
