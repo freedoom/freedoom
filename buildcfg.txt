@@ -605,13 +605,14 @@ HELP	0	0
 HELP_WS 0	0
 #endif
 #ifndef PHASE2
-HELP1	0	0      = help
-HELP2	0	0      = credit
-HELP1_WS	0	0  = help
-HELP2_WS	0	0  = credit
+HELP1   	0	0 = help
+HELP2   	0	0 = credit
+HELP1_WS	0	0 = help_WS
+HELP2_WS	0	0 = credi_WS
 #endif
 
 CREDIT	0	0
+CREDI_WS	0	0
 BOSSBACK	0	0
 BOSSB_WS	0	0
 AMMNUM0	-1	0

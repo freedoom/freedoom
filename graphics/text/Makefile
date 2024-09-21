@@ -54,7 +54,8 @@ TEXTGEN_GRAPHIC_LUMPS = \
 TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
   helpttl.png  freettl.png
 
-all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
+all: text_strings help.png help_ws.png \
+     credit.png credi_ws.png wikilrs.png wivctms.png titlepic
 
 # Generate the menu and level strings
 text_strings: config.py fontchars ../../lumps/dehacked/dehacked.txt
@@ -129,7 +130,7 @@ help.png: text_strings helpbg.png
 	cp $@ ../
 
 help_ws.png: text_strings helpbgws.png
-	./smtextgen help_ws.png 320x200              \
+	./smtextgen help_ws.png 854x200              \
 	   -background "helpbgws.png"                \
 	   150,2   "file:helpttl.png"                \
 	   10,20   "Weapons"                         \
