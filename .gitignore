@@ -32,13 +32,13 @@ doom.gpl
 /dist/freedm.adoc
 /dist/freedoom?.adoc
 
+/graphics/*_ws.png
 /graphics/*wi*.png
 /graphics/credit.png
 /graphics/fd*title.png
-/graphics/help.png
-/graphics/*_ws.png
-/graphics/fd*wsttl.png
 /graphics/fd*wsint.png
+/graphics/fd*wsttl.png
+/graphics/help.png
 /graphics/m_*.png
 /graphics/prboom.png
 /graphics/t_phase*.png
