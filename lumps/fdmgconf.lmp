@@ -6,7 +6,7 @@
   {
     "title": "FreeDM",
     "author": "The Freedoom Project",
-    "description": "The Freedoom project aims to create a complete, free content first person shooter game.",
+    "description": "A 32-level game designed for competitive deathmatch play.",
     "version": "0.13.0",
     "iwad": null,
     "pwads": null,

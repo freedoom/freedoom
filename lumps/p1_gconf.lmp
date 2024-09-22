@@ -6,7 +6,7 @@
   {
     "title": "Freedoom: Phase 1",
     "author": "The Freedoom Project",
-    "description": "The Freedoom project aims to create a complete, free content first person shooter game.",
+    "description": "Four episodes, nine levels each, totalling 36 levels. This game aims for compatibility with The Ultimate Doom mods, also known as plain Doom or Doom 1.",
     "version": "0.13.0",
     "iwad": null,
     "pwads": null,

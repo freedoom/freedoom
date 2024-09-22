@@ -151,7 +151,7 @@ DEHACKED = fdm_deh
 UMAPINFO = fdmuminf
 GAMECONF = fdmgconf
 WADINFO = fdmwdinf
-ZMAPINFO = fdmmpinf
+ZMAPINFO = fdmzminf
 ENDOOM = endoomdm
 FREEDM
 #else

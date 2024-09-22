@@ -10,7 +10,9 @@ Version                 : 0.13.0
 Other Files By Author   : Freedoom: Phase 1, Freedoom: Phase 2
 Misc. Author Info       : Contributors to the Freedoom Project
 
-Description             : The Freedoom project aims to provide all the
+Description             : A 32-level game designed for competitive deathmatch
+                          play.
+                          The Freedoom project aims to provide all the
                           content needed to form a complete, entirely
                           free/libre game for the Doom engine. It is designed
                           to be compatible with most custom levels, music,
