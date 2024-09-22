@@ -205,7 +205,7 @@ credi_ws.png: text_strings helpbgws.png credit.txt
 	./smtextgen credi_ws.png 854x200              \
 	   -background "helpbgws.png"                 \
 	   387,5  "file:freettl.png"                  \
-	   217,30 "include:credit.txt"
+	   277,30 "include:credit.txt"
 	cp $@ ../
 
 wikilrs_horiz.png:
