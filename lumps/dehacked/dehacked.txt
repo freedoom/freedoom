@@ -27,6 +27,28 @@ Sprite subnumber = 32773
 Frame 689
 Sprite subnumber = 32773
 
+# A_PosAttack and A_CPosAttack use identical formulae
+# and the same number of RNG calls to determine the
+# attack; the only difference other than the way the
+# information is organized is the sound being played.
+# Having the minigunner and sailor call A_PosAttack
+# makes them not sound confusingly similar to the large
+# technospider's much more powerful shotgunguy-like attack.
+
+# Minigunner using A_PosAttack
+Pointer 234 (Frame 417)
+Codep Frame = 185
+
+Pointer 235 (Frame 418)
+Codep Frame = 185
+
+# Sailor using A_PosAttack
+Pointer 234 (Frame 738)
+Codep Frame = 185
+
+Pointer 235 (Frame 740)
+Codep Frame = 185
+
 # The super shotgun's first frame is 7 tics long before it
 # begins its reload sequence, but the muzzle flash animation
 # totals 9 tics, causing the flash to trail behind the gun.
