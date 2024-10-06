@@ -92,23 +92,24 @@ map E1M8
 	ParTime = 60
 	Endgame = true
 	InterBackdrop = "AQF051"
+	InterMusic = "D_VICTOR"
 	InterText = "Free at last from that dreadful outpost!",
 		"But you're still stuck on this rock\, with",
 		"AGM and all their monstrous \"experiments.\"",
 		"Best not to dwell on what evil horrors",
 		"they were going to create from you...",
 		" ",
-		"You need a functioning starship to",
-		"get back to Earth. The best chance at",
-		"one is the facility they had you in",
-		"when they first brought you planetside.",
-		"When they first gave you your powers.",
+		"Damn alien teleporter ate your gear.",
+		"The air is hot and muggy\, and smells of",
+		"strange\, intoxicating vegetation. You see",
+		"what looks like AGM corpo tech patched",
+		"over old\, overgrown alien structures.",
+		"Nothing close to the tech needed for this",
+		"existed at the outpost\, meaning there must",
+		"be a starport nearby. To Earth. To freedom.",
 		" ",
-		"When the nightmare first began...",
-		" ",
-		"Perfect time for the teleporter to",
-		"glitch out your gear as you get ready",
-		"to raid the Military Labs."
+		"Just gotta hope that ship will launch",
+		"from these routed\, infested ruins..."
 }
 
 map E1M9
@@ -131,7 +132,7 @@ map E2M1
 	Music = "D_E2M1"
 	SkyTexture = "SKY2"
 	ParTime = 120
-	Episode = "M_EPI2", "Military Labs", "2"
+	Episode = "M_EPI2", "Ruin Upon Ruin", "2"
 }
 
 map E2M2
@@ -211,6 +212,7 @@ map E2M8
 	ParTime = 120
 	Endgame = true
 	InterBackdrop = "AQF054"
+	InterMusic = "D_VICTOR"
 	InterText = "The massive brutes collapse onto the",
 		"ground\, falling apart bit by bit.",
 		"The starport is yours.",
@@ -329,6 +331,7 @@ map E3M8
 	ParTime = 60
 	Endgame = true
 	InterBackdrop = "FLAT5_2"
+	InterMusic = "D_VICTOR"
 	InterText =  "The abomination explodes into oblivion.",
 		"What the hell even was that?",
 		" ",
@@ -455,7 +458,8 @@ map E4M8
 	ParTime = 0
 	Endgame = true
 	InterBackdrop = "AQF075"
-	Intertext = "Suppressing fire echoes above as the last",
+	InterMusic = "D_VICTOR"
+	InterText = "Suppressing fire echoes above as the last",
 		"survivors flee the ship. The launch process",
 		"is irreversible: killing you now would only",
 		"bring a slow death drifting through space.",
@@ -469,7 +473,9 @@ map E4M8
 		"you think of Earth as she lifts off.",
 		"Hopefully AGM won't find you there:",
 		"they've got the outbreak to deal with,",
-		"so that'll give you some time."
+		"so that'll give you some time.",
+		" ",
+		"Destination: Earth!"
 	Author = "RottKing and Ralphis"
 }
 
