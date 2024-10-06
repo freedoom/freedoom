@@ -141,7 +141,7 @@ map MAP11
 	Music = "D_STLKS2"
 	SkyTexture = "SKY1"
 	Parime = 420
-	InterBackdrop = 
+	InterBackdrop = "AQF001"
 	InterText = "You didn\'t find anyone alive. Again.",
 		" ",
 		"The fighting is taking its toll on you.",
@@ -420,7 +420,7 @@ map MAP30
 		" ",
 		"No one will know what happened here.",
 		" ",
-		"No one will ever find you again.",
+		"No one will ever find you again."
 }
 
 map MAP31
@@ -449,7 +449,7 @@ map MAP31
 		" ",
 		"You will find your way back to the city,",
 		"but it will have to be on the other side",
-		"of a few homicidal mutants...",
+		"of a few homicidal mutants..."
 }
 
 map MAP32
