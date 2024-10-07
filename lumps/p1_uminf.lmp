@@ -329,7 +329,7 @@ map E3M8
 	Music = "D_E3M8"
 	SkyTexture = "SKY3"
 	ParTime = 60
-	Endgame = true
+	Endbunny = true
 	InterBackdrop = "FLAT5_2"
 	InterMusic = "D_VICTOR"
 	InterText =  "The abomination explodes into oblivion.",
@@ -485,7 +485,7 @@ map E4M9
 	LevelPic = "WILV38"
 	Label = "E4M9"
 	Next = "E4M3"
-	Music = "D_E1M9"
+	Music = "D_E4M9"
 	SkyTexture = "SKY4"
 	ParTime = 0
 	Author = "RottKing and Ralphis"
