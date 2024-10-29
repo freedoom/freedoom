@@ -34,8 +34,8 @@ import re
 debug = False
 defines = {}
 
-command_re = re.compile("\#(\w+)(\s+(.*))?")
-include_re = re.compile('\s*"(.*)"\s*')
+command_re = re.compile(r"\#(\w+)(\s+(.*))?")
+include_re = re.compile(r'\s*"(.*)"\s*')
 
 
 def debug_msg(message):
