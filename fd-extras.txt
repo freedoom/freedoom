@@ -1,0 +1,35 @@
+; List of Pictures (with insertion point)
+[graphics]
+; Widescreen graphics
+STBAR	0	0	= STBAR_WS
+
+; Weapon carousel
+SMFIST0		17	10
+SMLAUN0		30	11
+SMMGUN0		26	13
+SMPISG0		12	8
+SMPLAS0		26	9
+SMSGN20		22	8
+SMSHOT0		20	7
+SMBFGG0		29	13
+SMCSAW0		22	11
+SMUNKN0		6	7
+SMFIST1		17	10
+SMLAUN1		30	11
+SMMGUN1		26	13
+SMPISG1		12	8
+SMPLAS1		26	9
+SMSGN21		22	8
+SMSHOT1		20	7
+SMBFGG1		29	13
+SMCSAW1		22	11
+SMUNKN1		6	7
+
+; Minimap icons
+SECRETS
+ITEMS
+KILLS
+
+; Small menu skull
+M_SKULS1
+M_SKULS2
