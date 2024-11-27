@@ -62,6 +62,7 @@ doom.gpl
 /lumps/freedoom.lmp
 /lumps/genmidi.lmp
 /lumps/playpal.lmp
+/lumps/*wdinf.lmp
 
 /lumps/colormap/*.lmp
 
