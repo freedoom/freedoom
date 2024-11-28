@@ -1,18 +1,52 @@
 ===========================================================================
 Advanced engine needed  : Vanilla-compatible
+#ifndef FREEDM
 Primary purpose         : Single + coop play
+#else
+Primary purpose         : Deathmatch
+#endif
 ===========================================================================
+#ifndef FREEDM
+#ifdef PHASE1
+Title                   : Freedoom: Phase 1
+Filename                : freedoom1.wad
+#else
 Title                   : Freedoom: Phase 2
 Filename                : freedoom2.wad
+#endif
+#else
+Title                   : FreeDM
+Filename                : freedm.wad
+#endif
 Release date            : 2024-01-29
 Author                  : The Freedoom Project
 Version                 : 0.13.0
+#ifndef FREEDM
+#ifdef PHASE1
+Other Files By Author   : Freedoom: Phase 2, FreeDM
+#else
 Other Files By Author   : Freedoom: Phase 1, FreeDM
+#endif
+#else
+Other Files By Author   : Freedoom: Phase 1, Freedoom: Phase 2
+#endif
 Misc. Author Info       : Contributors to the Freedoom Project
 
+#ifndef FREEDM
+#ifdef PHASE1
+Description             : Four episodes, nine levels each, totalling 36
+                          levels. This game aims for compatibility with The
+                          Ultimate Doom mods, also known as plain Doom or
+                          Doom 1.
+#else
 Description             : 32 levels in one long episode, featuring extra
                           monsters and a double-barrelled shotgun. This
                           project aims for compatibility with Doom II mods.
+#endif
+#else
+Description             : A 32-level game designed for competitive deathmatch
+                          play.
+#endif
                           The Freedoom project aims to provide all the
                           content needed to form a complete, entirely
                           free/libre game for the Doom engine. It is designed
@@ -25,7 +59,11 @@ Additional Credits to   : See the CREDITS file
 ===========================================================================
 * What is included *
 
+#ifdef PHASE1
+New levels              : 36
+#else
 New levels              : 32
+#endif
 Sounds                  : Yes
 Music                   : Yes
 Graphics                : Yes
@@ -37,9 +75,18 @@ Other files required    : None
 
 * Play Information *
 
+#ifdef PHASE1
+Game                    : Doom
+#else
 Game                    : Doom 2
+#endif
+#ifndef FREEDM
 Single Player           : Designed for
 Cooperative 2-4 Player  : Designed for
+#else
+Single Player           : Player starts only
+Cooperative 2-4 Player  : Player starts only
+#endif
 Deathmatch 2-4 Player   : Designed for
 Other game styles       : None
 Difficulty Settings     : Not implemented

@@ -1,0 +1,11 @@
+This directory contains the source wadinfo text file used for Freedoom.
+
+WadInfo (not to be confused with DeuTex wadinfo) is a traditional
+text file format distributed with Doom wads. It contains information
+about the authors, the contents of the WAD, the requirements for
+running it, and permissions for use.
+Freedoom embeds one in each of its IWADs to ensure that the information
+reaches all players.
+
+The Makefile in this directory splits the wadinfo into three parts
+for each IWAD to match their description and technical details.

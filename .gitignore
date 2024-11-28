@@ -14,7 +14,7 @@
 .DS_Store
 .\#*
 \#*\#
-wad*.txt
+wadinfo_*.txt
 doom.gpl
 
 # Per directory patterns to ignore. These do not apply recursively to
@@ -62,6 +62,7 @@ doom.gpl
 /lumps/freedoom.lmp
 /lumps/genmidi.lmp
 /lumps/playpal.lmp
+/lumps/*wdinf.lmp
 
 /lumps/colormap/*.lmp
 
