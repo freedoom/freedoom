@@ -10,6 +10,7 @@
   <developer_name>Freedoom Project</developer_name>
   <url type="homepage">https://freedoom.github.io/</url>
   <url type="bugtracker">https://github.com/freedoom/freedoom/issues</url>
+  <launchable type="desktop-id">io.github.freedoom.FreeDM.desktop</launchable>
   <description>
     <p>
       FreeDM is a fast-paced set of levels designed for multiplayer
