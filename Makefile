@@ -34,6 +34,7 @@ subdirs:
 	$(MAKE) -C lumps/genmidi
 	$(MAKE) -C lumps/dmxgus
 	$(MAKE) -C lumps/textures
+	$(MAKE) -C lumps/wadinfo
 	$(MAKE) -C bootstrap
 
 
@@ -159,6 +160,7 @@ clean:
 	$(MAKE) -C lumps/genmidi clean
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
+	$(MAKE) -C lumps/wadinfo clean
 	$(MAKE) -C manual clean
 
 # Test targets some of which are a dependency of "test".
