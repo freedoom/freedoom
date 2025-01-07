@@ -565,15 +565,15 @@ image:images/monster-matribite.png[Matribite,100,100,width=100%]
 These flying orb-like things spit plasma and bite if you get too close. |
 image:images/monster-trilobite.png[Trilobite,100,100,width=100%]
 | **Pain Bringer** +
-These guys take at least three rocket blasts to take down, and
+These guys take at least three missile blasts to take down, and
 while you’re trying they’ll shower you with energy projectiles. |
 image:images/monster-pain-bringer.png[Pain Bringer,100,100,width=100%]
 | **Pain Lord** +
-If the Pain Bringer wasn’t tough enough, this one can take five rocket
+If the Pain Bringer wasn’t tough enough, this one can take five missile
 blasts. |
 image:images/monster-pain-lord.png[Pain Lord,100,100,width=100%]
 | **Octaminator** +
-Fast moving, tough, and fires homing missiles. Do not get into a boxing
+Fast moving, tough, and can fire homing fireballs. Do not get into a boxing
 match with one of these guys. |
 image:images/monster-octaminator.png[Octaminator,100,100,width=100%]
 | **Necromancer** +
@@ -590,12 +590,12 @@ making them a deadly challenge. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
 | **Large Technospider** +
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
-of effort to bring down. Immune to explosions from rockets and barrels. |
+of effort to bring down. Immune to explosions from missiles and barrels. |
 image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
 | **Assault Tripod** +
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
-missile launcher that you’ll want to avoid. Immune to explosions from rockets and barrels. |
+missile launcher that you’ll want to avoid. Immune to explosions from missiles and barrels. |
 image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
 |==========================
 
@@ -704,7 +704,7 @@ into some of these suggestions:
   any weapon continuously until your ammo runs out or you let go.
 
 * Take cover! Monsters only attack when you’re in their line of sight. You’ll
-  want to find hard cover (most opaque things that show up on your automap
+  want to find hard cover (most opaque things that show up on your map
   without cheat codes) that you can put between yourself and any enemy you're not
   actively hitting with your own weapon. Cover is particularly important
   when facing certain monsters which can “lock on” to you (minigun zombie;
@@ -815,7 +815,7 @@ of these ingame (case insensitive, do not use any console):
 | **IDBEHOLDS** | Gives the strength powerup.
 | **IDBEHOLDI** | Gives the invisibility powerup.
 | **IDBEHOLDR** | Gives the rescue suit powerup.
-| **IDBEHOLDM** | Gives the area survey map.
+| **IDBEHOLDA** | Gives the area survey map.
 | **IDBEHOLDL** | Gives the low-light goggles.
 |==========================
 

@@ -1038,3 +1038,16 @@ D: levels
 
 S: MrFlibble
 D: textures
+
+S: Richard Stayman
+D: textures, levels
+
+N: Georgy Samoilov
+S: GeorgePieVG
+D: textures, lumps
+
+S: elf-alchemist
+D: lumps
+
+S: Devalaous
+D: umapinfo template

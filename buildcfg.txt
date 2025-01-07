@@ -148,14 +148,23 @@ DBIGFONT
 
 #ifdef FREEDM
 DEHACKED = fdm_deh
-ZMAPINFO = fdmmpinf
+UMAPINFO = fdmuminf
+GAMECONF = fdmgconf
+WADINFO = fdmwdinf
+ZMAPINFO = fdmzminf
 ENDOOM = endoomdm
 FREEDM
 #else
 #ifdef PHASE1
 DEHACKED = p1_deh
+UMAPINFO = p1_uminf
+GAMECONF = p1_gconf
+WADINFO = p1_wdinf
 #else
 DEHACKED = p2_deh
+UMAPINFO = p2_uminf
+GAMECONF = p2_gconf
+WADINFO = p2_wdinf
 #endif
 ENDOOM
 #endif

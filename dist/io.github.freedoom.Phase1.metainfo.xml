@@ -10,6 +10,7 @@
   <developer_name>Freedoom Project</developer_name>
   <url type="homepage">https://freedoom.github.io/</url>
   <url type="bugtracker">https://github.com/freedoom/freedoom/issues</url>
+  <launchable type="desktop-id">io.github.freedoom.Phase1.desktop</launchable>
   <description>
     <p>
       Freedoom: Phase 1 contains four episodes, nine levels each, to
