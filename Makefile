@@ -34,6 +34,7 @@ subdirs:
 	$(MAKE) -C lumps/genmidi
 	$(MAKE) -C lumps/dmxgus
 	$(MAKE) -C lumps/textures
+	$(MAKE) -C lumps/wadinfo
 	$(MAKE) -C bootstrap
 
 
@@ -112,11 +113,14 @@ COPYING.txt: COPYING.adoc
 CREDITS.txt: CREDITS
 	unix2dos --add-bom --newfile $< $@
 
+CREDITS-LEVELS.txt: CREDITS-LEVELS
+	unix2dos --add-bom --newfile $< $@
+
 CREDITS-MUSIC.txt: CREDITS-MUSIC
 	unix2dos --add-bom --newfile $< $@
 
 HTMLDOCS=NEWS.html README.html
-TEXTDOCS=COPYING.txt CREDITS.txt CREDITS-MUSIC.txt
+TEXTDOCS=COPYING.txt CREDITS.txt CREDITS-LEVELS.txt CREDITS-MUSIC.txt
 DISTDOCS=$(HTMLDOCS) $(TEXTDOCS) $(MANUAL_PDF_FILES)
 
 dist: $(OBJS) $(DISTDOCS)
@@ -139,7 +143,7 @@ gimp-palette: doom.gpl
 
 clean:
 	$(RM) *.html doom.gpl $(OBJS) \
-	      ./COPYING.txt ./CREDITS.txt ./CREDITS-MUSIC.txt \
+	      ./COPYING.txt ./CREDITS.txt ./CREDITS-LEVELS.txt ./CREDITS-MUSIC.txt \
 	      ./wadinfo_phase1.txt \
 	      ./wadinfo_phase2.txt \
 	      ./wadinfo_freedm.txt \
@@ -156,6 +160,7 @@ clean:
 	$(MAKE) -C lumps/genmidi clean
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
+	$(MAKE) -C lumps/wadinfo clean
 	$(MAKE) -C manual clean
 
 # Test targets some of which are a dependency of "test".
@@ -262,7 +267,7 @@ install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
 	install -Dm 644 $(FREEDM) -t "$(target)$(waddir)"
 	install -Dm 644 dist/io.github.freedoom.FreeDM.png \
 	                -t "$(target)/share/icons"
-	install -Dm 644 CREDITS CREDITS-MUSIC NEWS.html README.html -t "$(target)$(docdir)/freedm"
+	install -Dm 644 CREDITS CREDITS-LEVELS CREDITS-MUSIC NEWS.html README.html -t "$(target)$(docdir)/freedm"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
 	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedm"
 
@@ -287,7 +292,7 @@ install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
 	                -t "$(target)/share/icons"
 	install -Dm 644 dist/io.github.freedoom.Phase2.png \
 	                -t "$(target)/share/icons"
-	install -Dm 644 CREDITS CREDITS-MUSIC NEWS.html README.html \
+	install -Dm 644 CREDITS CREDITS-LEVELS CREDITS-MUSIC NEWS.html README.html \
 	                -t "$(target)$(docdir)/freedoom"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedoom/COPYING"
 	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedoom"
@@ -304,6 +309,7 @@ uninstall-freedm:
 	      "$(target)$(mandir)/man6/freedm.6"                                \
 	      "$(target)$(waddir)/freedm.wad"                                   \
 	      "$(target)$(docdir)/freedm/CREDITS"                               \
+	      "$(target)$(docdir)/freedm/CREDITS-LEVELS"                        \
 	      "$(target)$(docdir)/freedm/CREDITS-MUSIC"                         \
 	      "$(target)$(docdir)/freedm/COPYING"                               \
 	      "$(target)$(docdir)/freedm/NEWS.html"                             \
@@ -329,6 +335,7 @@ uninstall-freedoom:
 	      "$(target)$(waddir)/freedoom1.wad"                                \
 	      "$(target)$(waddir)/freedoom2.wad"                                \
 	      "$(target)$(docdir)/freedoom/CREDITS"                             \
+	      "$(target)$(docdir)/freedoom/CREDITS-LEVELS"                      \
 	      "$(target)$(docdir)/freedoom/CREDITS-MUSIC"                       \
 	      "$(target)$(docdir)/freedoom/COPYING"                             \
 	      "$(target)$(docdir)/freedoom/NEWS.html"                           \

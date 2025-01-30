@@ -2,9 +2,11 @@
 Name=Freedoom 2
 Comment=Battle monsters in one massive 32-level episode
 Comment[he]=הילחם במפלצות בפרק אדיר אחד בעל 32 שלבים
+Comment[es]=Pelea contra monstruos en un episodio masivo de 32 niveles
 Comment[fr]=Affrontez des monstres dans un épisode massif de 32 niveaux
 GenericName=First Person Shooter Game
 GenericName[he]=משחק יריות בגוף ראשון
+GenericName[es]=Juego de disparos en primera persona
 GenericName[fr]=Jeu de tir à la première personne
 Type=Application
 PrefersNonDefaultGPU=true

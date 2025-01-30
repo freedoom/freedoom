@@ -27,6 +27,28 @@ Sprite subnumber = 32773
 Frame 689
 Sprite subnumber = 32773
 
+# A_PosAttack and A_CPosAttack use identical formulae
+# and the same number of RNG calls to determine the
+# attack; the only difference other than the way the
+# information is organized is the sound being played.
+# Having the minigunner and sailor call A_PosAttack
+# makes them not sound confusingly similar to the large
+# technospider's much more powerful shotgunguy-like attack.
+
+# Minigunner using A_PosAttack
+Pointer 234 (Frame 417)
+Codep Frame = 185
+
+Pointer 235 (Frame 418)
+Codep Frame = 185
+
+# Sailor using A_PosAttack
+Pointer 234 (Frame 738)
+Codep Frame = 185
+
+Pointer 235 (Frame 740)
+Codep Frame = 185
+
 # The super shotgun's first frame is 7 tics long before it
 # begins its reload sequence, but the muzzle flash animation
 # totals 9 tics, causing the flash to trail behind the gun.
@@ -220,7 +242,7 @@ HUSTR_E1M1 = E1M1: Outer Prison
 HUSTR_E1M2 = E1M2: Communications Center
 HUSTR_E1M3 = E1M3: Waste Disposal
 HUSTR_E1M4 = E1M4: Supply Depot
-HUSTR_E1M5 = E1M5: Armory
+HUSTR_E1M5 = E1M5: Cloudspire Keep
 HUSTR_E1M6 = E1M6: Training Facility
 HUSTR_E1M7 = E1M7: Xenobiotic Materials Lab
 HUSTR_E1M8 = E1M8: Outpost Quarry
@@ -271,7 +293,7 @@ CC_CYBER = assault tripod
 CC_HERO = savior of humanity
 #ifdef FREEDM
 HUSTR_1 = DM01: Tech Test
-HUSTR_2 = DM02: Natural Station
+HUSTR_2 = DM02: Sauna Fissure
 HUSTR_3 = DM03: Issues of Claveria
 HUSTR_4 = DM04: Steel
 HUSTR_5 = DM05: Dense Fields
@@ -288,14 +310,14 @@ HUSTR_15 = DM15: Shallow Complex
 HUSTR_16 = DM16: Barren Alleys
 HUSTR_17 = DM17: Underwoods
 HUSTR_18 = DM18: Deserted Courtyard
-HUSTR_19 = DM19: Tech Isle
-HUSTR_20 = DM20: Warehouse
+HUSTR_19 = DM19: Unwanted Backyard
+HUSTR_20 = DM20: Terra Mortis
 HUSTR_21 = DM21: Refinery
 HUSTR_22 = DM22: Military Depot
-HUSTR_23 = DM23: Confrontation
+HUSTR_23 = DM23: Testing Grounds
 HUSTR_24 = DM24: Flooded Base
 HUSTR_25 = DM25: Mansion Yard
-HUSTR_26 = DM26: Acidic Crypt
+HUSTR_26 = DM26: Crater Excavation
 HUSTR_27 = DM27: The Exile
 HUSTR_28 = DM28: Weapons Factory
 HUSTR_29 = DM29: Unusual Territory
@@ -432,15 +454,16 @@ E1TEXT = Free at last from that dreadful outpost!\n\
          AGM and all their monstrous "experiments."\n\
          Best not to dwell on what evil horrors\n\
          they were going to create from you...\n\n\
-         You need a functioning starship to\n\
-         get back to Earth. The best chance at\n\
-         one is the facility they had you in\n\
-         when they first brought you planetside.\n\
-         When they first gave you your powers.\n\n\
-         When the nightmare first began...\n\n\
-         Perfect time for the teleporter to\n\
-         glitch out your gear as you get ready\n\
-         to raid the Military Labs.
+         Damn alien teleporter ate your gear.\n\
+         The air is hot and muggy, and smells of\n\
+         strange, intoxicating vegetation. You see\n\
+         what looks like AGM corpo tech patched\n\
+         over old, overgrown alien structures.\n\
+         Nothing close to the tech needed for this\n\
+         existed at the outpost, meaning there must\n\
+         be a starport nearby. To Earth. To freedom.\n\n\
+         Just gotta hope that ship will launch\n\
+         from these routed, infested ruins...
 E2TEXT = The massive brutes collapse onto the\n\
          ground, falling apart bit by bit.\n\
          The starport is yours.\n\n\
@@ -684,7 +707,7 @@ SKILL_NORMAL = Bring on the pain.
 SKILL_HARD = Extreme Carnage.
 SKILL_NIGHTMARE = MAYHEM!
 TXT_D1E1 = Outpost Outbreak
-TXT_D1E2 = Military Labs
+TXT_D1E2 = Ruin Upon Ruin
 TXT_D1E3 = Event Horizon
 TXT_D1E4 = Double Impact
 #ifdef FREEDM
