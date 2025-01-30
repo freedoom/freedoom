@@ -293,7 +293,7 @@ CC_CYBER = assault tripod
 CC_HERO = savior of humanity
 #ifdef FREEDM
 HUSTR_1 = DM01: Tech Test
-HUSTR_2 = DM02: Natural Station
+HUSTR_2 = DM02: Sauna Fissure
 HUSTR_3 = DM03: Issues of Claveria
 HUSTR_4 = DM04: Steel
 HUSTR_5 = DM05: Dense Fields
