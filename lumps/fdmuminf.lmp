@@ -17,7 +17,7 @@ map MAP01
 
 map MAP02
 {
-	LevelName = "Natural Station"
+	LevelName = "Sauna Fissure"
 	Label = "DM02"
 	LevelPic = "CWILV01"
 	Next = "MAP03"
@@ -206,7 +206,7 @@ map MAP18
 
 map MAP19
 {
-	LevelName = "Tech Isle"
+	LevelName = "Unwanted Backyard"
 	Label = "DM19"
 	LevelPic = "CWILV18"
 	Next = "MAP20"
@@ -217,7 +217,7 @@ map MAP19
 
 map MAP20
 {
-	LevelName = "Warehouse"
+	LevelName = "Terra Mortis"
 	Label = "DM20"
 	LevelPic = "CWILV19"
 	Next = "MAP21"
@@ -250,7 +250,7 @@ map MAP22
 
 map MAP23
 {
-	LevelName = "Confrontation"
+	LevelName = "Testing Grounds"
 	Label = "DM23"
 	LevelPic = "CWILV22"
 	Next = "MAP24"
@@ -283,7 +283,7 @@ map MAP25
 
 map MAP26
 {
-	LevelName = "Acidic Crypt"
+	LevelName = "Crater Excavation"
 	Label = "DM26"
 	LevelPic = "CWILV25"
 	Next = "MAP27"
