@@ -1,0 +1,55 @@
+; SPDX-License-Identifier: BSD-3-Clause
+;
+; Freedoom Extras wadinfo build file
+;
+; This is parsed by cpp which allows configuring for Phase 1, Phase 2,
+; and FreeDM
+;
+; -DPHASE2 to build for Phase 2
+; -DPHASE1 to build for Phase 1
+;
+
+[lumps]
+FREEDOOM
+#ifdef FREEDM
+FREEDM
+#endif
+
+[graphics]
+
+; Official port Minimap icons
+SECRETS
+ITEMS
+KILLS
+
+; Official port small menu skull
+M_SKULS1
+M_SKULS2
+
+; Widescreen graphics
+STBAR    = stbar_ws
+CREDIT   = credi_ws
+INTERPIC = inter_ws
+
+#ifdef PHASE1
+TITLEPIC = p1ttl_ws
+HELP1    = help_ws
+HELP2    = credi_ws
+WIMAP0   = inter_ws
+WIMAP1   = inter_ws
+WIMAP2   = inter_ws
+VICTORY2 = victo_ws
+PFUB1    = pfub1_ws
+PFUB2    = pfub2_ws
+ENDPIC   = endpi_ws
+#else
+#ifdef FREEDM
+TITLEPIC = dmttl_ws
+BOSSBACK = bossb_ws
+HELP     = help_ws
+#else
+TITLEPIC = p2ttl_ws
+BOSSBACK = bossb_ws
+HELP     = help_ws
+#endif
+#endif

@@ -34,8 +34,11 @@ doom.gpl
 
 /graphics/*wi*.png
 /graphics/credit.png
+/graphics/credi_ws.png
 /graphics/fd*title.png
+/graphics/*ttl_ws.png
 /graphics/help.png
+/graphics/help_ws.png
 /graphics/m_*.png
 /graphics/prboom.png
 /graphics/t_phase*.png

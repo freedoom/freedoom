@@ -19,8 +19,12 @@ MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
 FREEDM=$(WADS)/freedm.wad
+FD1_EXTRAS=$(WADS)/fd1-extras.wad
+FD2_EXTRAS=$(WADS)/fd2-extras.wad
+FDM_EXTRAS=$(WADS)/fdm-extras.wad
 
-OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
+OBJS=$(FREEDOOM1)  $(FREEDOOM2)  $(FREEDM) \
+     $(FD1_EXTRAS) $(FD2_EXTRAS) $(FDM_EXTRAS)
 
 .PHONY: clean dist pngs-modified-check
 
@@ -79,6 +83,14 @@ $(FREEDM): wadinfo_freedm.txt subdirs
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
 
+wadinfo_fdm_extras.txt : buildcfg-extras.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
+	$(CPP) -P -DFREEDM < $< > $@
+
+$(FDM_EXTRAS): wadinfo_fdm_extras.txt subdirs
+	@mkdir -p $(WADS)
+	$(RM) $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_fdm_extras.txt $@
+
 #---------------------------------------------------------
 # phase 1 (udoom) iwad
 
@@ -90,6 +102,14 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase1.txt $@
 
+wadinfo_fd1_extras.txt : buildcfg-extras.txt subdirs lumps/freedoom.lmp
+	$(CPP) -P -DPHASE1 < $< > $@
+
+$(FD1_EXTRAS): wadinfo_fd1_extras.txt subdirs
+	@mkdir -p $(WADS)
+	$(RM) $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_fd1_extras.txt $@
+
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
 
@@ -100,6 +120,14 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
+
+wadinfo_fd2_extras.txt : buildcfg-extras.txt subdirs lumps/freedoom.lmp
+	$(CPP) -P -DPHASE2 < $< > $@
+
+$(FD2_EXTRAS): wadinfo_fd2_extras.txt subdirs
+	@mkdir -p $(WADS)
+	$(RM) $@
+	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_fd2_extras.txt $@
 
 %.html: %.adoc
 	$(ASCIIDOC) $(ADOCOPTS) $<
@@ -147,6 +175,9 @@ clean:
 	      ./wadinfo_phase1.txt \
 	      ./wadinfo_phase2.txt \
 	      ./wadinfo_freedm.txt \
+	      ./wadinfo_fd1_extras.txt \
+	      ./wadinfo_fd2_extras.txt \
+	      ./wadinfo_fdm_extras.txt \
 	      ./lumps/freedoom.lmp \
 	      ./lumps/freedm.lmp
 	-rmdir $(WADS)
@@ -256,7 +287,7 @@ mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
 
-install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
+install-freedm: $(FREEDM) $(FDM_EXTRAS) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
                 freedm.6 io.github.freedoom.FreeDM.png
 	install -Dm 644 dist/io.github.freedoom.FreeDM.desktop \
 	                -t "$(target)/share/applications"
@@ -271,9 +302,11 @@ install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
 	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedm"
 
-install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
-                  $(MANUAL_PDF_FILES) freedoom1.6 freedoom2.6    \
-                  io.github.freedoom.Phase1.png                         \
+install-freedoom: $(FREEDOOM1)  $(FREEDOOM2)        \
+                  $(FD1_EXTRAS) $(FD2_EXTRAS)       \
+                  $(HTMLDOCS)   $(MANUAL_PDF_FILES) \
+                  freedoom1.6 freedoom2.6           \
+                  io.github.freedoom.Phase1.png     \
                   io.github.freedoom.Phase2.png
 	install -Dm 644 dist/io.github.freedoom.Phase1.desktop \
 	                -t "$(target)/share/applications"
@@ -287,7 +320,8 @@ install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
 	install -Dm 755 dist/freedoom "$(target)$(bindir)/freedoom2"
 	install -Dm 644 dist/freedoom1.6 -t "$(target)$(mandir)/man6"
 	install -Dm 644 dist/freedoom2.6 -t "$(target)$(mandir)/man6"
-	install -Dm 644 $(FREEDOOM1) $(FREEDOOM2) -t "$(target)$(waddir)"
+	install -Dm 644 $(FREEDOOM1) $(FREEDOOM2) $(FD1_EXTRAS) $(FD2_EXTRAS) \
+                    -t "$(target)$(waddir)"
 	install -Dm 644 dist/io.github.freedoom.Phase1.png \
 	                -t "$(target)/share/icons"
 	install -Dm 644 dist/io.github.freedoom.Phase2.png \
