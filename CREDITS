@@ -1055,3 +1055,6 @@ D: umapinfo template
 S: WishedTomato200
 S: quarry24
 D: patches
+
+S: PhobosVB
+D: widescreen graphics
