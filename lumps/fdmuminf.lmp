@@ -28,7 +28,7 @@ map MAP02
 
 map MAP03
 {
-	LevelName = "Issues of Claveria"
+	LevelName = "Plain Arena"
 	Label = "DM03"
 	LevelPic = "CWILV02"
 	Next = "MAP04"
