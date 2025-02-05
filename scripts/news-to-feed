@@ -1,0 +1,210 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# new-to-feed - Convert NEWS.adoc to feed.xml
+#
+# This script converts from "NEWS.adoc" in the main Freedoom repository to
+# "feed.xml" on the Freedoom website, which is an RSS feed.
+#
+# It's possible that there is no need for this script given that GitHub
+# generates an Atom feed based on the releases done on GitHub. It can be
+# found at:
+#   https://github.com/freedoom/freedoom/releases.atom
+# Perhaps the website should link to the above in place of the current
+# "atom.xml", and "feed.xml" should be abandon.
+
+import datetime
+import os
+import re
+import sys
+from xml.dom.minidom import Document
+
+# Globals
+
+channel = None
+leading_whitespace = "            "
+date = None
+desc_lines = []
+doc = None
+pubdate = None
+ver = None
+
+# Regular expressions
+
+# A regular expression that matches version / date lines.
+ver_date_patt = re.compile(r'\s*==\s+((?:\d+\.)+\d+)\s+\((\d{4}-\d{2}-\d{2})\)')
+
+# Initial document processing and header prior to the first version.
+def add_header():
+    global channel
+    global doc
+
+    doc = Document()
+
+    rss = doc.createElement('rss')
+    rss.setAttribute('version', '2.0')
+    doc.appendChild(rss)
+
+    channel = doc.createElement('channel')
+    rss.appendChild(channel)
+
+    title = doc.createElement('title')
+    title.appendChild(doc.createTextNode('Freedoom Feed'))
+    channel.appendChild(title)
+
+    link = doc.createElement('link')
+    link.appendChild(doc.createTextNode('https://freedoom.github.io'))
+    channel.appendChild(link)
+
+    description = doc.createElement('description')
+    description.appendChild(doc.createTextNode('The latest news from Freedoom'))
+    channel.appendChild(description)
+
+    language = doc.createElement('language')
+    language.appendChild(doc.createTextNode('en-us'))
+    channel.appendChild(language)
+
+    image = doc.createElement('image')
+    channel.appendChild(image)
+
+    url = doc.createElement('url')
+    url.appendChild(doc.createTextNode('https://freedoom.github.io/favicon.ico'))
+    image.appendChild(url)
+
+
+# Called each time we have a complete version section
+def add_version():
+    item = doc.createElement('item')
+    channel.appendChild(item)
+
+    title_elem = doc.createElement('title')
+    title_elem.appendChild(doc.createTextNode(date + ": Freedoom " + ver + " released"))
+    item.appendChild(title_elem)
+
+    pubdate_elem = doc.createElement('pubDate')
+    pubdate_elem.appendChild(doc.createTextNode(pubdate))
+    item.appendChild(pubdate_elem)
+
+    link_elem = doc.createElement('link')
+    link_elem.appendChild(doc.createTextNode("https://freedoom.github.io/#freedoom-" + ver))
+    item.appendChild(link_elem)
+
+    # Avoid join() in order to treat newlines specially.
+    nl_ws = "\n" + leading_whitespace
+    desc_text = "\n"
+    for desc_line in desc_lines:
+        if desc_line:
+            desc_text += leading_whitespace + desc_line + "\n" + leading_whitespace + "<p/>\n"
+        else:
+            desc_text += "\n"
+    desc_elem = doc.createElement('description')
+    desc_elem.appendChild(doc.createTextNode(desc_text))
+    item.appendChild(desc_elem)
+
+
+# Iterates through news_adoc in order to process each version found.
+def add_versions():
+    global date
+    global desc_lines
+    global pubdate
+    global ver
+
+    first_section = True
+    desc_line = ""
+    with open(news_adoc) as news_hand:
+        line_num = 0
+        for line in news_hand:
+            line_num += 1
+            line = line.rstrip()
+            ver_date_match = ver_date_patt.match(line)
+            if ver_date_match:
+                ver_date_match_groups = ver_date_match.groups()
+                if len(ver_date_match_groups) != 2:
+                    # Should not happen.
+                    print("Line number", line_num, "has", len(ver_date_match_groups),
+                        "groups.", file=sys.stderr)
+                    sys.exit(1)
+                # With the exception of the "HEAD" each new version line indicates
+                # that the previous one is complete, so output it before setting
+                # "pubdate" to the new value.
+                if pubdate:
+                    add_version()
+                    desc_lines = []
+                ver, date = ver_date_match.groups()
+                pubdate = datetime.datetime.strptime(date, '%Y-%m-%d').strftime('%d %b %Y')
+                first_section = True
+            else:
+                # Possible description text, but only after the first version date line.
+                if not pubdate:
+                    continue
+                line = line.strip()
+                if line.startswith("=== "):
+                    # Add the existing line, if any.
+                    if desc_line:
+                        desc_lines.append(desc_line)
+                        desc_line = ""
+                    if first_section:
+                        first_section = False
+                    else:
+                        desc_lines.append("")
+                    desc_lines.append("> " + line[4:])
+                    first_section = False
+                elif line.startswith("*"):
+                    if desc_line:
+                        desc_lines.append(desc_line)
+                        desc_line = ""
+                    try:
+                        space_index = line.index(" ")
+                    except ValueError:
+                        # Should not happen.
+                        print("Line number", line_num, "begins with \"*\", but has no space.")
+                        sys.exit(1)
+                    desc_line = ("- " * (space_index - 1) if (space_index > 1) \
+                                else "") + line[space_index + 1:]
+                elif line:
+                    # Assume it's a continuation of the previous "*" line.
+                    desc_line += (" " + line)
+                else:
+                    # Blank line marking the end of a bullet.
+                    if desc_line:
+                        desc_lines.append(desc_line)
+                        desc_line = ""
+        if not pubdate:
+            print("No pubdate at the end.", file=sys.stderr)
+            sys.exit(1)
+        if desc_line:
+            desc_lines.append(desc_line)
+            desc_line = ""
+        add_version()
+
+
+# Main enty point.
+def main():
+    parse_args()
+    add_header()
+    add_versions()
+    output_feed()
+
+
+# Write the feed to feed_xml.
+def output_feed():
+    with open(feed_xml, "w") as feed_hand:
+        print(doc.toprettyxml(indent="    "), file=feed_hand, end="")
+
+
+# Parse the command line arguments and store the result in 'args'.
+def parse_args():
+    global news_adoc
+    global feed_xml
+
+    if len(sys.argv) != 3:
+        print("Usage:", os.path.basename(sys.argv[0]), \
+            "news-file feed-xml", file=sys.stderr)
+        sys.exit(1)
+    news_adoc = sys.argv[1]
+    feed_xml = sys.argv[2]
+
+
+# So that this script may be accessed as a module.
+if __name__ == "__main__":
+    main()

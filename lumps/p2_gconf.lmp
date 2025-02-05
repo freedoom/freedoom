@@ -1,0 +1,17 @@
+{
+  "type": "gameconf",
+  "version": "1.0.0",
+  "metadata": { },
+  "data":
+  {
+    "title": "Freedoom: Phase 2",
+    "author": "The Freedoom Project",
+    "description": "32 levels in one long episode, featuring extra monsters and a double-barrelled shotgun. This project aims for compatibility with Doom II mods.",
+    "version": "0.13.0",
+    "iwad": null,
+    "pwads": null,
+    "executable": "limitremoving",
+    "mode": "commercial",
+    "options": "comp_soul 0"
+  }
+}

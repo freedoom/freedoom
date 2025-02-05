@@ -1,3 +1,8 @@
+[Some of the entries on this file are decades old. If you have contributed to Freedoom and want to update anything on here, please post an issue or reach out to any active maintainer!]
+
+[See the CREDITS-LEVELS file for specific level authors and titles.]
+[See the CREDITS-MUSIC  file for specific track authors and titles.]
+
 N: Colin Phipps
 S: cph
 E: cph@cph.demon.co.uk
@@ -122,11 +127,6 @@ E: jonr@frad.org
 W: http://destruct.alkali.org/
 D: textures
 
-N: Richard M. Stallman
-E: rms@gnu.org
-W: http://www.gnu.org/
-D: for being the final boss!
-
 N: Vincent Fong
 S: Vicious
 E: vincentfong@freecall-uk.co.uk
@@ -232,9 +232,9 @@ S: Nrkn
 E: nrkn@ihug.co.nz
 D: textures
 
-N: Tyler Pantella
-S: Pickle Hammer
-E: pickle_hammer@hotmail.com
+N: Tyler P.
+S: Picklehammer
+E: picklehammer@msn.com
 D: musics
 
 N: Alberto Bonis
@@ -384,9 +384,9 @@ D: sprites
 
 N: Simon Howard
 S: fraggle
-E: idgames@soulsphere.org
+E: fraggle@soulsphere.org
 W: https://soulsphere.org
-D: project admin, scripting and build system, textures, sprites
+D: project admin, scripting, build system, textures, sprites, graphics, lumps, manual, patches
 
 N: Joe Dowland
 E: jon+joefreedoom@alcopop.org
@@ -552,7 +552,7 @@ D: levels
 N: Alexandre-Xavier Labonté-Lamoureux
 S: AXDOOMER
 E: alexandrexavier@live.ca
-D: patches
+D: patches, levels, graphics, sprites
 
 N: Daniel Jewell
 S: Jewellds
@@ -644,11 +644,6 @@ E: eriance@gmail.com
 W: http://amuscaria.deviantart.com/
 D: sprites
 
-S: horrormovieguy
-N: Reinaldo
-E: crumbscrunchydelights@gmail.com
-D: sprites
-
 S: zrrion
 N: Roth Smith
 E: zrrion@gmail.com
@@ -682,7 +677,7 @@ E: luckypunk322@gmail.com
 D: sprites
 
 S: Blueworrior
-N: Lewis Harvey
+N: Lola Harvey
 E: BlueWorrior@hotmail.co.uk
 D: musics
 
@@ -777,7 +772,7 @@ D: graphics (titlepic)
 N: Kevin Caccamo
 S: Talon1024
 E: kevin@ciinet.org
-D: textures
+D: textures, flats, sounds
 
 S: BobFromReboot
 N: Bradley Lavigne
@@ -798,26 +793,265 @@ D: flats, textures
 S: Jared Deberjerak
 D: textures
 
-S: Mortrixs
-D: c3m5
+S: Mortrixs19
+D: levels
 
 S: GooseJelly
 N: Nathaniel Patasky
-E: n.patasky
-D: map26
+E: n.patasky@gmail.com
+D: buildcfg.txt, CREDITS, levels
 
 S: Craneo
 E: memod_99@hotmail.com
-D: sprites: technospider reshading
+D: sprites (technospider reshade, minigunner, combat slug flash), textures
 
+S: continuum.mid
 S: northivanastan
 N: Ivan Stanton
 E: northivanastan@gmail.com
-D: musics: d_e1m5
+D: musics
 
 S: MothraMaster
 D: sprites: Zombieman/Shotgunners boots update
 
 S: Korp
 E: korpkat@gmail.com
-D: Sprites, Textures and Musics
+D: Sprites, Textures, Musics, buildcfg.txt, patches, sounds
+
+S: ajanddino
+N: Anthony Pierce
+E: ajanddino@gmail.com
+D: musics
+
+S: /dev/urandom
+E: dev.urandom@posteo.org
+D: graphics, patches, sprites
+
+S: AerialB
+D: COPYING.adoc
+
+S: basedSkeleton
+D: sprites
+
+S: boogiebogus
+D: buildcfg.txt, sprites
+
+S: Chexter
+D: patches
+
+S: ConsumingCritic
+D: levels
+
+S: Eonfge
+E: contact@kevindegeling.nl
+D: dist
+
+N: Erick Tenorio
+S: guynamederick
+E: guynamederick@gmail.com
+D: graphics, levels, lumps, sounds, sprites
+
+N: Fabian Greffrath
+E: fabian@greffrath.com
+D: buildcfg.txt, graphics, levels, lumps
+
+S: Rei
+N: Reinaldo
+E: crumbscrunchydelights@gmail.com
+D: buildcfg.txt, lumps, manual, sounds, sprites, flats
+
+N: Hugo Locurcio
+E: hugo.locurcio@hugo.pro
+D: buildcfg.txt, dist, manual
+
+N: Jason Yundt
+E: swagfortress@gmail.com
+D: levels
+
+S: kitchen-ace
+E: 68k@quikphix.org
+D: levels, patches
+
+S: m
+E: verdantdregs@shaw.ca
+D: levels, sounds, sprites, textures, manual
+
+S: mkrupczak3
+E: matthew@krupczak.org
+D: manual
+
+N: Nicholas Zatkovich
+S: NickZ
+E: nzatkovich@gmail.com
+D: buildcfg.txt, COMPILING.adoc, CREDITS, .gitattributes, .github, .gitignore, graphics, levels, lumps, patches, scripts, sprites
+
+S: Obsidian Plague
+D: musics
+
+N: Perry Fraser
+S: perry
+E: me@pprogs.blog
+D: levels
+
+N: Ada Mackiewicz
+S: Shinosarna
+E: nobody.shinobi@gmail.com
+D: buildcfg.txt, levels, sprites
+
+N: Steven Elliott
+E: selliott512@gmail.com
+D: buildcfg.txt, BUILD-SYSTEM.adoc, levels, Makefile, README.adoc, scripts, sprites
+
+N: Tyler True
+D: Makefile
+
+S: BeachThunder
+D: levels
+
+N: Clayton Sobrino
+E: ClaytonSobrino@yahoo.com
+D: patches
+
+N: Colton G. Rushton
+E: colton51919@gmail.com
+D: lumps
+
+S: drbugbait
+E: arlesschill@hotmail.com
+D: lumps
+
+S: igdegoo
+D: COPYING.adoc, lumps, musics
+
+S: inkoalawetrust
+D: levels
+
+S: MissLav
+D: patches
+
+S: unfa
+E: unfa00@gmail.com
+D: sounds
+
+N: William Breathitt Gray
+E: vilhelm.gray@gmail.com
+D: dist
+
+S: DOGB01
+D: levels
+
+S: arborix
+D: sprites
+
+S: Inuk
+E: inuquire@gmail.com
+D: levels
+
+S: GojiBerry
+E: gojidoesit@proton.me
+D: sounds, musics, textures
+
+N: Jaden LeMieux
+S: iRedMC
+E: jadenquinn8@hotmail.com
+W: http://iredmc.us.to/
+D: levels, musics
+
+N: Cass Python
+S: Owly
+E: owlgal69@protonmail.com
+W: https://owly.fans
+D: Freedoom website
+
+S: Matzu
+D: musics
+
+S: ZeMystic
+D: musics
+
+S: R0rque
+D: musics
+
+S: rostuhan
+E: rostuhan123@gmail.com
+D: musics
+
+S: SuperDave938
+D: textures
+
+S: Cascade
+D: sprites
+
+S: Berubaretto
+D: levels
+
+N: Enzo Carozza
+S: uni
+E: enzoc@tuta.io
+D: CREDITS-LEVELS, CREDITS-MUSIC, levels, musics, buildcfg.txt, level names
+
+S: MoonDeLaAxel
+D: sounds, musics, textures
+
+S: klickach
+D: textures
+
+S: Magnolia
+D: sprites
+
+S: Anonymoister
+D: sprites
+
+N(A): Josephus Astartes
+S: DH4050
+D: musics
+
+S: Scragadelic
+D: musics
+
+S: Woolie Wool
+D: musics
+
+S: wastedjamacan
+D: musics
+
+S: SUNPYG Senpai
+D: levels
+
+S: Ospaggi
+D: musics
+
+S: Stratos
+D: musics
+
+S: Hayden49
+D: levels
+
+S: Teh_Bucket
+W: https://opengameart.org/users/tehbucket
+D: sprites
+
+N: Dmytro Moskovchenko
+S: Dimon12321
+E: d.moskowchenko@gmail.com
+D: levels
+
+S: MrFlibble
+D: textures
+
+S: Richard Stayman
+D: textures, levels
+
+N: Georgy Samoilov
+S: GeorgePieVG
+D: textures, lumps
+
+S: elf-alchemist
+D: lumps
+
+S: Devalaous
+D: umapinfo template
+
+S: WishedTomato200
+S: quarry24
+D: patches

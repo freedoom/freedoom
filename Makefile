@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
-VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo v0.12.1)
+VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null || echo v0.14.0-alpha-unknown)
 WADS=wads
 ASCIIDOC=asciidoc
 ADOCOPTS=--backend=html5 --conf-file=.adoc-layout.conf
@@ -10,7 +10,11 @@ DEUTEX=deutex
 DEUTEX_BASIC_ARGS=-v0 -rate accept
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 NODE_BUILDER=ZenNode
-NODE_BUILDER_LEVELS=c?m? dm?? map??
+NODE_BUILDER_LEVELS=e?m? dm?? map??
+LEGACY_TRANSPARENCY_INDEX=255
+LEGACY_TRANSPARENCY_REPLACEMENT=133
+MANUAL_ADOC_FILES=$(wildcard manual/freedoom-manual-??.adoc)
+MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
 
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
@@ -18,7 +22,7 @@ FREEDM=$(WADS)/freedm.wad
 
 OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 
-.PHONY: clean dist
+.PHONY: clean dist pngs-modified-check
 
 all: deutex-check $(OBJS)
 
@@ -30,6 +34,7 @@ subdirs:
 	$(MAKE) -C lumps/genmidi
 	$(MAKE) -C lumps/dmxgus
 	$(MAKE) -C lumps/textures
+	$(MAKE) -C lumps/wadinfo
 	$(MAKE) -C bootstrap
 
 
@@ -55,6 +60,12 @@ deutex-check:
 	echo "deutex can be downloaded from https://github.com/Doom-Utils/deutex."; \
 	echo "The full path to duetex can be specified by passing"; \
 	echo "DEUTEX=/the/path/to/deutex to make when building Freedoom."; \
+	exit 1; }
+
+# Make sure that no PNG files are modified if scripts are to modify them.
+pngs-modified-check:
+	@{ ! git status -s | grep -q \\.png$ ; }  || { \
+	echo "PNG fix targets can not be run if there are modified PNGs." ; \
 	exit 1; }
 
 #---------------------------------------------------------
@@ -93,8 +104,8 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 %.html: %.adoc
 	$(ASCIIDOC) $(ADOCOPTS) $<
 
-manual/freedoom-manual.pdf: manual/manual.adoc
-	$(MAKE) -C manual
+manual/freedoom-manual-%.pdf: manual/freedoom-manual-%.adoc
+	$(MAKE) -C manual $(subst manual/,,$@)
 
 COPYING.txt: COPYING.adoc
 	unix2dos --add-bom --newfile $< $@
@@ -102,9 +113,15 @@ COPYING.txt: COPYING.adoc
 CREDITS.txt: CREDITS
 	unix2dos --add-bom --newfile $< $@
 
+CREDITS-LEVELS.txt: CREDITS-LEVELS
+	unix2dos --add-bom --newfile $< $@
+
+CREDITS-MUSIC.txt: CREDITS-MUSIC
+	unix2dos --add-bom --newfile $< $@
+
 HTMLDOCS=NEWS.html README.html
-TEXTDOCS=COPYING.txt CREDITS.txt
-DISTDOCS=$(HTMLDOCS) $(TEXTDOCS) manual/freedoom-manual.pdf
+TEXTDOCS=COPYING.txt CREDITS.txt CREDITS-LEVELS.txt CREDITS-MUSIC.txt
+DISTDOCS=$(HTMLDOCS) $(TEXTDOCS) $(MANUAL_PDF_FILES)
 
 dist: $(OBJS) $(DISTDOCS)
 	LC_ALL=C VERSION=$(VERSION) scripts/makepkgs freedm $(FREEDM) $(DISTDOCS)
@@ -126,7 +143,7 @@ gimp-palette: doom.gpl
 
 clean:
 	$(RM) *.html doom.gpl $(OBJS) \
-	      ./COPYING.txt ./CREDITS.txt \
+	      ./COPYING.txt ./CREDITS.txt ./CREDITS-LEVELS.txt ./CREDITS-MUSIC.txt \
 	      ./wadinfo_phase1.txt \
 	      ./wadinfo_phase2.txt \
 	      ./wadinfo_freedm.txt \
@@ -143,24 +160,74 @@ clean:
 	$(MAKE) -C lumps/genmidi clean
 	$(MAKE) -C lumps/dmxgus clean
 	$(MAKE) -C lumps/textures clean
+	$(MAKE) -C lumps/wadinfo clean
 	$(MAKE) -C manual clean
 
-# Test targets all of which are a dependency of "test".
+# Test targets some of which are a dependency of "test".
 
-# Test that WAD files have the expected map names.
+# Test that the level WAD files have the expected map names.
 test-map-names:
-	scripts/fix-map-names -t levels
+	scripts/test-vanilla-compliance -n levels
+
+# Test that the level WAD files have vanilla compliance. This is a superset of
+# the "test-map-names" build target.
+test-vanilla-compliance:
+	scripts/test-vanilla-compliance levels
 
 # Run all tests. Add test-* targets above, and then as a dependency here.
-test: test-map-names
+test: test-vanilla-compliance
 	@echo
 	@echo "All tests passed."
 
-# Non-test targets that run scripts in the "scripts" directory.
+# Fix targets some of which are a dependency of "fix".
 
-# Fix the map names.
+# Fix the level WAD files so that they have the expected map names.
 fix-map-names:
-	scripts/fix-map-names levels
+	scripts/test-vanilla-compliance -fn levels
+
+# Fix the level WAD files so that they have vanilla compliance. This is a
+# superset of the "fix-map-names" build target.
+fix-vanilla-compliance:
+	scripts/test-vanilla-compliance -f levels
+
+# TODO: I'm not sure we want to run this routinely, but I thought I'd put it
+# here for completeness. Currently it makes a lot of changes to buildcfg.txt
+# that don't have an obvious impact. Consequently "fix" does not depend on this
+# target. Just delete this TODO and target if we don't want this. Maybe add a
+# proper description in any case.
+fix-gfx-offsets:
+	scripts/fix-gfx-offsets sprites/*.png
+
+# Overwrite PNGs with what deutex extracts from the WADs produced.
+fix-deutex-pngs: pngs-modified-check
+	scripts/fix-deutex-pngs $(OBJS)
+
+# For each PNG replace the legacy transparency index with a similar color, but
+# only if the PNG matches the playpal palette specified. It may be helpful to
+# run target fix-deutex-pngs before this one.
+fix-legacy-transparency-pngs: pngs-modified-check
+	scripts/map-color-index -p lumps/playpal/playpal-base.lmp . \
+		$(LEGACY_TRANSPARENCY_INDEX) $(LEGACY_TRANSPARENCY_REPLACEMENT)
+
+# Fix targets that fix PNGs. Note that because of the interaction between the
+# scripts that are run it can be necessary to run this more than once:
+#	make  # Optional, but make sure the IWADs (wads dir) is up-to-date.
+#   make fix-pngs
+#   git commit -m 'Fix the PNGs' -- '*.png'  # So the tree is clean for the next run.
+#	make  # Required - so the IWADs are updated.
+#   make fix-pngs
+#   git commit --amend --no-edit -- '*.png'
+#	make  # Optional - the PNGs should be stable.
+#	make fix-pngs  # Optional - should not have an effect.
+# The final invocation of "fix-pngs" is not needed, but doing so, and seeing
+# a clean build tree, is reassuring. If "fix-pngs" needs to be run more than
+# twice then something is wrong.
+fix-pngs: fix-deutex-pngs fix-legacy-transparency-pngs
+
+# Run all fixes. Add fix-* targets above, and then as a dependency here.
+fix: fix-vanilla-compliance fix-pngs
+	@echo
+	@echo "All fixable errors fixed."
 
 # Rebuild the nodes for the level WADs. By default this invokes "ZenNode" on
 # all 100 level WADs. Override the "NODE_BUILDER" prefixed variables to
@@ -170,6 +237,11 @@ rebuild-nodes: $(addprefix levels/,$(addsuffix .wad,$(NODE_BUILDER_LEVELS)))
 	do \
 		$(NODE_BUILDER) $$level -o $$level; \
 	done
+	
+# Update feed.mxl (RSS feed) on the website based on NEWS.adoc. This assumes
+# that the website has the same parent directory as this build.
+news-to-feed: NEWS.adoc
+	scripts/news-to-feed NEWS.adoc ../freedoom.github.io/feed.xml
 
 %.6:
 	$(MAKE) ASCIIDOC_MAN="$(ASCIIDOC_MAN)" -C dist $@
@@ -184,7 +256,7 @@ mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
 
-install-freedm: $(FREEDM) $(HTMLDOCS) manual/freedoom-manual.pdf \
+install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
                 freedm.6 io.github.freedoom.FreeDM.png
 	install -Dm 644 dist/io.github.freedoom.FreeDM.desktop \
 	                -t "$(target)/share/applications"
@@ -195,12 +267,12 @@ install-freedm: $(FREEDM) $(HTMLDOCS) manual/freedoom-manual.pdf \
 	install -Dm 644 $(FREEDM) -t "$(target)$(waddir)"
 	install -Dm 644 dist/io.github.freedoom.FreeDM.png \
 	                -t "$(target)/share/icons"
-	install -Dm 644 CREDITS NEWS.html README.html -t "$(target)$(docdir)/freedm"
+	install -Dm 644 CREDITS CREDITS-LEVELS CREDITS-MUSIC NEWS.html README.html -t "$(target)$(docdir)/freedm"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
-	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/freedm"
+	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedm"
 
 install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
-                  manual/freedoom-manual.pdf freedoom1.6 freedoom2.6    \
+                  $(MANUAL_PDF_FILES) freedoom1.6 freedoom2.6    \
                   io.github.freedoom.Phase1.png                         \
                   io.github.freedoom.Phase2.png
 	install -Dm 644 dist/io.github.freedoom.Phase1.desktop \
@@ -220,10 +292,13 @@ install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
 	                -t "$(target)/share/icons"
 	install -Dm 644 dist/io.github.freedoom.Phase2.png \
 	                -t "$(target)/share/icons"
-	install -Dm 644 CREDITS NEWS.html README.html \
+	install -Dm 644 CREDITS CREDITS-LEVELS CREDITS-MUSIC NEWS.html README.html \
 	                -t "$(target)$(docdir)/freedoom"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedoom/COPYING"
-	-install -Dm 644 manual/freedoom-manual.pdf -t "$(target)$(docdir)/freedoom"
+	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedoom"
+
+# For the following uninstall targets the manual arguments are intentionally
+# not quoted since they are wildcards.
 
 uninstall-freedm:
 	$(RM)                                                                   \
@@ -234,10 +309,12 @@ uninstall-freedm:
 	      "$(target)$(mandir)/man6/freedm.6"                                \
 	      "$(target)$(waddir)/freedm.wad"                                   \
 	      "$(target)$(docdir)/freedm/CREDITS"                               \
+	      "$(target)$(docdir)/freedm/CREDITS-LEVELS"                        \
+	      "$(target)$(docdir)/freedm/CREDITS-MUSIC"                         \
 	      "$(target)$(docdir)/freedm/COPYING"                               \
 	      "$(target)$(docdir)/freedm/NEWS.html"                             \
 	      "$(target)$(docdir)/freedm/README.html"                           \
-	      "$(target)$(docdir)/freedm/freedoom-manual.pdf"
+	       $(target)$(docdir)/freedm/freedoom-manual-??.pdf
 	-rmdir -p "$(target)/share/applications"                    \
 	      "$(target)/share/metainfo" "$(target)/share/icons"    \
 	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \
@@ -258,10 +335,12 @@ uninstall-freedoom:
 	      "$(target)$(waddir)/freedoom1.wad"                                \
 	      "$(target)$(waddir)/freedoom2.wad"                                \
 	      "$(target)$(docdir)/freedoom/CREDITS"                             \
+	      "$(target)$(docdir)/freedoom/CREDITS-LEVELS"                      \
+	      "$(target)$(docdir)/freedoom/CREDITS-MUSIC"                       \
 	      "$(target)$(docdir)/freedoom/COPYING"                             \
 	      "$(target)$(docdir)/freedoom/NEWS.html"                           \
 	      "$(target)$(docdir)/freedoom/README.html"                         \
-	      "$(target)$(docdir)/freedoom/freedoom-manual.pdf"
+	       $(target)$(docdir)/freedoom/freedoom-manual-??.pdf
 	-rmdir -p "$(target)/share/applications"                    \
 	      "$(target)/share/metainfo" "$(target)/share/icons"    \
 	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \

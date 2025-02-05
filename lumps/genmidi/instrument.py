@@ -9,6 +9,8 @@ import sys
 import sbi_file
 import a2i_file
 
+DO_OPL2_CHECK = False
+
 # Check the specified instrument data is OPL2-compatible and does not
 # use any OPL3 features. Returns an error message, or 'None' if data
 # is valid.
@@ -50,13 +52,14 @@ def load_instrument(filename):
     else:
         raise Exception("Unknown instrument file type: '%s'" % filename)
 
-    check_opl2(filename, result)
+    if DO_OPL2_CHECK:
+        check_opl2(filename, result)
 
     return result
 
 
 class Instrument:
-    def __init__(self, file1, file2=None, off1=0, off2=0, note=None):
+    def __init__(self, file1, file2=None, off1=0, off2=0, note=None, tune=0):
         self.voice1 = load_instrument(file1)
 
         if file2 is not None:
@@ -67,6 +70,7 @@ class Instrument:
         self.fixed_note = note
         self.offset1 = off1
         self.offset2 = off2
+        self.tune = tune
 
 
 NullInstrument = Instrument("dummy.sbi")

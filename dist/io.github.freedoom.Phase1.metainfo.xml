@@ -10,6 +10,7 @@
   <developer_name>Freedoom Project</developer_name>
   <url type="homepage">https://freedoom.github.io/</url>
   <url type="bugtracker">https://github.com/freedoom/freedoom/issues</url>
+  <launchable type="desktop-id">io.github.freedoom.Phase1.desktop</launchable>
   <description>
     <p>
       Freedoom: Phase 1 contains four episodes, nine levels each, to
@@ -37,25 +38,28 @@
     <content_attribute id="language-profanity">mild</content_attribute>
     <content_attribute id="language-humor">mild</content_attribute>
   </content_rating>
+  <!-- Note that some screenshots are PNG and others are JPG. These URLs should
+       not change, but double check them each release. -->
   <screenshots>
     <screenshot type="default">
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_01.webp</image>
-      <caption>C1M4: Supply Depot</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_1.png</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_04.webp</image>
-      <caption>C2M3: Archaelogy Site</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_2.png</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_05.webp</image>
-      <caption>C3M3: Derelict Temple</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_7.jpg</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://freedoom.github.io/img/screenshots/phase1-0.12_08.webp</image>
-      <caption>C4M6: Command Center</caption>
+      <image>https://freedoom.github.io/img/screenshots/p1_8.jpg</image>
+      <caption>Feedoom Screenshot</caption>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.13.0" date="2024-01-29"></release>
     <release version="0.12.1" date="2019-10-22"></release>
     <release version="0.12.0" date="2019-10-10"></release>
     <release version="0.11.3" date="2017-07-18"></release>

@@ -1,12 +1,13 @@
 # textgen outputs these files which are included in the built WADs
 # as lumps.
+# m_pause.png is intentionally omitted.
 TEXTGEN_GRAPHIC_LUMPS = \
   m_detail.png m_disopt.png m_disp.png   m_endgam.png m_epi1.png   \
   m_epi2.png   m_epi3.png   m_epi4.png   m_episod.png m_gdhigh.png \
   m_gdlow.png  m_hurt.png   m_jkill.png  m_lgttl.png  m_loadg.png  \
   m_messg.png  m_msens.png  m_msgoff.png m_msgon.png  m_musvol.png \
   m_newg.png   m_ngame.png  m_nmare.png  m_option.png m_optttl.png \
-  m_pause.png  m_quitg.png  m_rdthis.png m_rough.png  m_saveg.png  \
+  m_quitg.png  m_rdthis.png m_rough.png  m_saveg.png  \
   m_scrnsz.png m_sfxvol.png m_sgttl.png  m_skill.png  m_svol.png   \
   m_about.png  m_accel.png  m_auto.png   m_chat.png   m_chatm.png  \
   m_compat.png m_demos.png  m_dmflag.png m_enem.png   m_etcopt.png \
@@ -68,58 +69,60 @@ helpbg.png: ../interpic.png
 help.png: text_strings helpbg.png
 	./smtextgen help.png 320x200                 \
 	   -background "helpbg.png"                  \
-	   150,5   "file:helpttl.png"                \
-	   10,25   "Weapons"                         \
-	   80,23   "file:../../sprites/shota0.png"   \
-	   150,23  "file:../../sprites/sgn2a0.png"   \
-	   210,18  "file:../../sprites/mguna0.png"   \
-	   10,38   "file:../../sprites/launa0.png"   \
-	   80,38   "file:../../sprites/plasa0.png"   \
-	   150,38  "file:../../sprites/bfuga0.png"   \
-	   240,38  "file:../../sprites/csawa0.png"   \
-	   10,67   "Ammo"                            \
-	   53,67   "file:../../sprites/clipa0.png"   \
-	   68,62   "file:../../sprites/ammoa0.png"   \
-	   110,67  "Shells"                          \
-	   160,67  "file:../../sprites/shela0.png"   \
-	   180,62  "file:../../sprites/sboxa0.png"   \
-	   220,67  "Backpack"                        \
-	   290,55  "file:../../sprites/bpaka0.png"   \
-	   10,90   "Missiles"                        \
-	   76,80   "file:../../sprites/rocka0.png"   \
-	   95,84   "file:../../sprites/broka0.png"   \
-	   170,90  "Energy"                          \
-	   220,90  "file:../../sprites/cella0.png"   \
-	   240,81  "file:../../sprites/celpa0.png"   \
-	   10,115  "Health"                          \
-	   63,113  "file:../../sprites/bon1a0.png"   \
-	   78,112  "file:../../sprites/stima0.png"   \
-	   96,107  "file:../../sprites/media0.png"   \
-	   128,107 "file:../../sprites/pstra0.png"   \
-	   170,115 "Armor"                           \
-	   220,113 "file:../../sprites/bon2a0.png"   \
-	   240,113 "file:../../sprites/arm1b0.png"   \
-	   280,110 "file:../../sprites/arm2b0.png"   \
-	   145,140 "Map"                             \
-	   175,130 "file:../../sprites/pmapa0.png"   \
-	   10,140  "Overdrive"                       \
-	   84,132  "file:../../sprites/soula0.png"   \
-	   110,132 "file:../../sprites/megaa0.png"   \
-	   10,163  "Night vis."                      \
-	   80,160  "file:../../sprites/pvisa0.png"   \
-	   10,182  "Stealth"                         \
-	   67,172  "file:../../sprites/pinsa0.png"   \
-	   115,182 "Invuln."                         \
-	   170,174 "file:../../sprites/pinva0.png"   \
-	   255,182 "Keys"                            \
-	   246,142 "file:../../sprites/rkeya0.png"   \
-	   261,142 "file:../../sprites/ykeya0.png"   \
-	   276,142 "file:../../sprites/bkeya0.png"   \
-	   246,162 "file:../../sprites/rskua0.png"   \
-	   261,162 "file:../../sprites/yskua0.png"   \
-	   276,162 "file:../../sprites/bskua0.png"   \
-	   130,163 "Hazard suit"                     \
-	   215,142 "file:../../sprites/suita0.png"
+	   150,2   "file:helpttl.png"                \
+	   10,20   "Weapons"                         \
+	   20,33   "file:../../sprites/csawa0.png"   \
+	   90,25   "file:../../sprites/shota0.png"   \
+	   90,40   "file:../../sprites/sgn2a0.png"   \
+	   154,15  "file:../../sprites/mguna0.png"   \
+	   161,35  "file:../../sprites/launa0.png"   \
+	   235,18  "file:../../sprites/plasa0.png"   \
+	   235,33  "file:../../sprites/bfuga0.png"   \
+	   10,62   "Bullets"                         \
+	   80,57   "file:../../sprites/ammoa0.png"   \
+	   68,62   "file:../../sprites/clipa0.png"   \
+	   113,62  "Shells"                          \
+	   180,57  "file:../../sprites/sboxa0.png"   \
+	   163,62  "file:../../sprites/shela0.png"   \
+	   252,60  "Backpack"                        \
+	   272,69  "file:../../sprites/bpaka0.png"   \
+	   10,85   "Missiles"                        \
+	   90,75   "file:../../sprites/broka0.png"   \
+	   76,75   "file:../../sprites/rocka0.png"   \
+	   158,85  "Energy"                          \
+	   225,76  "file:../../sprites/celpa0.png"   \
+	   206,84  "file:../../sprites/cella0.png"   \
+	   10,110  "Health"                          \
+	   63,106  "file:../../sprites/bon1a0.png"   \
+	   100,101  "file:../../sprites/media0.png"   \
+	   79,113  "file:../../sprites/stima0.png"   \
+	   132,102 "file:../../sprites/pstra0.png"   \
+	   180,110 "Armor"                           \
+	   276,105 "file:../../sprites/arm2b0.png"   \
+	   240,102 "file:../../sprites/arm1b0.png"   \
+	   225,109 "file:../../sprites/bon2b0.png"   \
+	   145,134 "Map"                             \
+	   175,122 "file:../../sprites/pmapa0.png"   \
+	   10,134  "Big Boost"                       \
+	   84,127  "file:../../sprites/soula0.png"   \
+	   110,127 "file:../../sprites/megaa0.png"   \
+	   10,155  "Light"                           \
+	   48,152  "file:../../sprites/pvisa0.png"   \
+	   34,177  "Cloak"                           \
+	   80,161  "file:../../sprites/pinsa0.png"   \
+	   119,177 "Invuln."                         \
+	   174,166 "file:../../sprites/pinva0.png"   \
+	   265,137 "Keys"                            \
+	   254,149 "file:../../sprites/rkeya0.png"   \
+	   271,149 "file:../../sprites/ykeya0.png"   \
+	   288,149 "file:../../sprites/bkeya0.png"   \
+	   255,173 "file:../../sprites/rskua0.png"   \
+	   273,173 "file:../../sprites/yskua0.png"   \
+	   291,173 "file:../../sprites/bskua0.png"   \
+	   130,155 "Rescue suit"                     \
+	   215,137 "file:../../sprites/suita0.png"   \
+	   2,192 "https://freedoom.github.io/"       \
+	   214,192 "<Esc> to return"
 	cp $@ ../
 
 

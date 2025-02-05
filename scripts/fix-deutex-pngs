@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# deutex-pngs - Use deutex to process the PNGs in order to standardize them.
+#
+# Often there are PNG files that are not in the preferred format (that are not
+# indexed, or that are indexed with something other than PLAYPAL, that have
+# chunks that are not supported, etc.). For example, gAMA and similar color
+# correction chunks only cause the PNG to look different in image editors than
+# they do in game engines, which is bad. It's also for the palette to have
+# invalid colors, or to be missing colors, which makes the PNG hard to work
+# with. The solution is to use deutex to extract the WADs produced by the build,
+# and apply the PNGs exctracted to the build.
+#
+# This programs strives to be safe by only applying PNGs to the build when the
+# PNG already exists in the build since otherwise the relationship between the
+# extracted PNG and the build PNG is not clear. If -a, --all is specified then
+# the PNG will be be copied regardless.
+
+# When multiple WADs are passed to the script the each WAD effectively
+# overwrites the previous ones, so the preferred WAD should be passed last.
+
+# Normally this script is invoked by "make":
+#   make fix-deutex-pngs
+
+# Imports
+
+import argparse
+import os
+import shutil
+import sys
+import tempfile
+import time
+
+# Globals. Alphabetical.
+
+# Command line arguments.
+args = {}
+
+# A count of unexpected errors. These are errors other than what this script
+# intends to check for, such as the file not being readable. These errors
+# suggest that something is fundamentally wrong, and that the results should
+# not be trusted.
+unexpected_count = 0
+
+# Parse the command line arguments and store the result in 'args'.
+def parse_args():
+    global args
+
+    parser = argparse.ArgumentParser(
+        description="Use deutex to process the PNGs in order to standardize them.",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+    # The following is sorted by long argument.
+
+    parser.add_argument(
+        "-a",
+        "--all",
+        action="store_true",
+        help="Copy all PNGs, not just the ones that already exist in the build.")
+    parser.add_argument(
+        "-d",
+        "--doom2",
+        default="bootstrap",
+        help="The '-doom2' deutex argument.")
+
+    parser.add_argument(
+        "wads",
+        metavar="WAD",
+        nargs="+",
+        help="WAD files to apply. The preferred WAD should be last.")
+
+    args = parser.parse_args()
+
+    return args
+
+# Main enty point.
+def main():
+    parse_args()
+    process_wads()
+    summarize()
+
+# Process a WAD file.
+def process_wad(wad_path):
+    global unexpected_count
+
+    wad_dir = os.path.dirname(wad_path)
+    wad_name = os.path.basename(wad_path).split(".")[0]
+    print()
+    print("Processing WAD", wad_path)
+    pngs_copied = 0
+    with tempfile.TemporaryDirectory(prefix=wad_name + "-") as tmp_dir:
+        print('created temporary directory', tmp_dir)
+        ec = os.system("deutex -doom2 " + args.doom2 + " -dir " + tmp_dir +
+            " -x " + wad_path)
+        if ec:
+            print("deutex failed with exit code", ec, "for WAD", wad_path,
+                file=sys.stderr)
+            unexpected_count += 1
+            return
+        # Successful deutex from this point forward.
+        before = time.time()
+        for dirpath, dirnames, filenames in os.walk(tmp_dir):
+            for png_base in filenames:
+                if not png_base.lower().endswith(".png"):
+                    continue
+                png_source_path = os.path.join(dirpath, png_base)
+                png_relative = os.path.relpath(png_source_path, tmp_dir)
+                if args.all or os.path.exists(png_relative):
+                    shutil.copyfile(png_source_path, png_relative)
+                    pngs_copied += 1
+        print("Processed WAD", wad_path, "copied", pngs_copied, "PNG files.")
+
+# Process multiple WAD files.
+def process_wads():
+    for wad_path in args.wads:
+        process_wad(wad_path)
+
+# Summarize what happened, and then exit with the appropriate exit code.
+def summarize():
+    print()
+    print("Processed", len(args.wads), "WAD files.")
+    if unexpected_count:
+        print("There were", unexpected_count, "unexpected errors - see above. " +
+              "The output produced should not be trusted.", file=sys.stderr)
+        sys.exit(1)
+
+# So that this script may be accessed as a module.
+if __name__ == "__main__":
+    main()

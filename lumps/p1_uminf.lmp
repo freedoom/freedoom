@@ -1,0 +1,492 @@
+// SPDX-License-Identifier: BSD-3-Clause
+// UMAPINFO definitions for Freedoom: Phase 1
+// Original UMAPINFO template by Devalaous
+
+map E1M1
+{
+	LevelName = "Outer Prison"
+	LevelPic = "WILV00"
+	Label = "E1M1"
+	Next = "E1M2"
+	Music = "D_E1M1"
+	SkyTexture = "SKY1"
+	ParTime = 30
+	Episode = clear
+	Episode = "M_EPI1", "Outpost Outbreak", "1"
+}
+
+map E1M2
+{
+	LevelName = "Communications Center"
+	LevelPic = "WILV01"
+	Label = "E1M2"
+	Next = "E1M3"
+	Music = "D_E1M2"
+	SkyTexture = "SKY1"
+	ParTime = 120
+}
+
+map E1M3
+{
+	LevelName = "Waste Disposal"
+	LevelPic = "WILV02"
+	Label = "E1M3"
+	Next = "E1M4"
+	NextSecret = "E1M9"
+	Music = "D_E1M3"
+	SkyTexture = "SKY1"
+	ParTime = 150
+}
+
+map E1M4
+{
+	LevelName = "Supply Depot"
+	LevelPic = "WILV03"
+	Label = "E1M4"
+	Next = "E1M5"
+	Music = "D_E1M4"
+	SkyTexture = "SKY1"
+	ParTime = 180
+}
+
+map E1M5
+{
+	LevelName = "Armory"
+	LevelPic = "WILV04"
+	Label = "E1M5"
+	Next = "E1M6"
+	Music = "D_E1M5"
+	SkyTexture = "SKY1"
+	ParTime = 90
+}
+
+map E1M6
+{
+	LevelName = "Training Facility"
+	LevelPic = "WILV05"
+	Label = "E1M6"
+	Next = "E1M7"
+	Music = "D_E1M6"
+	SkyTexture = "SKY1"
+	ParTime = 390
+}
+
+map E1M7
+{
+	LevelName = "Xenobiotic Materials Lab"
+	LevelPic = "WILV06"
+	Label = "E1M7"
+	Next = "E1M8"
+	Music = "D_E1M7"
+	SkyTexture = "SKY1"
+	ParTime = 690
+}
+
+map E1M8
+{
+	LevelName = "Outpost Quarry"
+	LevelPic = "WILV07"
+	Label = "E1M8"
+	Music = "D_E1M8"
+	SkyTexture = "SKY1"
+	ParTime = 60
+	Endgame = true
+	InterBackdrop = "AQF051"
+	InterMusic = "D_VICTOR"
+	InterText = "Free at last from that dreadful outpost!",
+		"But you're still stuck on this rock\, with",
+		"AGM and all their monstrous \"experiments.\"",
+		"Best not to dwell on what evil horrors",
+		"they were going to create from you...",
+		" ",
+		"Damn alien teleporter ate your gear.",
+		"The air is hot and muggy\, and smells of",
+		"strange\, intoxicating vegetation. You see",
+		"what looks like AGM corpo tech patched",
+		"over old\, overgrown alien structures.",
+		"Nothing close to the tech needed for this",
+		"existed at the outpost\, meaning there must",
+		"be a starport nearby. To Earth. To freedom.",
+		" ",
+		"Just gotta hope that ship will launch",
+		"from these routed\, infested ruins..."
+}
+
+map E1M9
+{
+	LevelName = "Nutrient Recycling"
+	LevelPic = "WILV08"
+	Label = "E1M9"
+	Next = "E1M4"
+	Music = "D_E1M9"
+	SkyTexture = "SKY1"
+	ParTime = 240
+}
+
+map E2M1
+{
+	LevelName = "Elemental Gate"
+	LevelPic = "WILV10"
+	Label = "E2M1"
+	Next = "E2M2"
+	Music = "D_E2M1"
+	SkyTexture = "SKY2"
+	ParTime = 120
+	Episode = "M_EPI2", "Ruin Upon Ruin", "2"
+}
+
+map E2M2
+{
+	LevelName = "Shifter"
+	LevelPic = "WILV11"
+	Label = "E2M2"
+	Next = "E2M3"
+	Music = "D_E2M2"
+	SkyTexture = "SKY2"
+	ParTime = 150
+}
+
+map E2M3
+{
+	LevelName = "Reclaimed Facilities"
+	LevelPic = "WILV12"
+	Label = "E2M3"
+	Next = "E2M4"
+	Music = "D_E2M3"
+	SkyTexture = "SKY2"
+	ParTime = 180
+}
+
+map E2M4
+{
+	LevelName = "Flooded Installation"
+	LevelPic = "WILV13"
+	Label = "E2M4"
+	Next = "E2M5"
+	Music = "D_E2M4"
+	SkyTexture = "SKY2"
+	ParTime = 270
+}
+
+map E2M5
+{
+	LevelName = "Underground Hub"
+	LevelPic = "WILV14"
+	Label = "E2M5"
+	Next = "E2M6"
+	NextSecret = "E2M9"
+	Music = "D_E2M5"
+	SkyTexture = "SKY2"
+	ParTime = 300
+}
+
+map E2M6
+{
+	LevelName = "Hidden Sector"
+	LevelPic = "WILV15"
+	Label = "E2M6"
+	Next = "E2M7"
+	Music = "D_E2M6"
+	SkyTexture = "SKY2"
+	ParTime = 150
+}
+
+map E2M7
+{
+	LevelName = "Control Complex"
+	LevelPic = "WILV16"
+	Label = "E2M7"
+	Next = "E2M8"
+	Music = "D_E2M7"
+	SkyTexture = "SKY2"
+	ParTime = 120
+}
+
+map E2M8
+{
+	LevelName = "Containment Cell"
+	LevelPic = "WILV17"
+	Label = "E2M8"
+	Music = "D_E2M8"
+	SkyTexture = "SKY2"
+	ParTime = 120
+	Endgame = true
+	InterBackdrop = "AQF054"
+	InterMusic = "D_VICTOR"
+	InterText = "The massive brutes collapse onto the",
+		"ground\, falling apart bit by bit.",
+		"The starport is yours.",
+		" ",
+		"But no ship: the launch bay sits empty\,",
+		"leaving only a massive teleporter pad.",
+		"Limited inorganics. Fixed destination.",
+		" ",
+		"The name suggests it's probably the new",
+		"AGM ship hub in this remote star cluster.",
+		"Bastards owe you for what they've done\,",
+		"so what even is interstellar piracy",
+		"but a bit of D.I.Y. law enforcement?",
+		" ",
+		"You board the platform and fade away.",
+		"Next stop: Horizon."
+}
+
+map E2M9
+{
+	LevelName = "Fortress 31"
+	LevelPic = "WILV18"
+	Label = "E2M9"
+	Next = "E2M6"
+	Music = "D_E2M9"
+	SkyTexture = "SKY2"
+	ParTime = 360
+}
+
+map E3M1
+{
+	LevelName = "Land of the Lost"
+	LevelPic = "WILV20"
+	Label = "E3M1"
+	Next = "E3M2"
+	Music = "D_E3M1"
+	SkyTexture = "SKY3"
+	ParTime = 30
+	Episode = "M_EPI3", "Event Horizon", "3"
+}
+
+map E3M2
+{
+	LevelName = "Geothermal Tunnels"
+	LevelPic = "WILV21"
+	Label = "E3M2"
+	Next = "E3M3"
+	Music = "D_E3M2"
+	SkyTexture = "SKY3"
+	ParTime = 120
+}
+
+map E3M3
+{
+	LevelName = "Sacrificial Bastion"
+	LevelPic = "WILV22"
+	Label = "E3M3"
+	Next = "E3M4"
+	Music = "D_E3M3"
+	SkyTexture = "SKY3"
+	ParTime = 240
+}
+
+map E3M4
+{
+	LevelName = "Oblation Temple"
+	LevelPic = "WILV23"
+	Label = "E3M4"
+	Next = "E3M5"
+	Music = "D_E3M4"
+	SkyTexture = "SKY3"
+	ParTime = 270
+}
+
+map E3M5
+{
+	LevelName = "Infernal Hallows"
+	LevelPic = "WILV24"
+	Label = "E3M5"
+	Next = "E3M6"
+	Music = "D_E3M5"
+	SkyTexture = "SKY3"
+	ParTime = 0
+}
+
+map E3M6
+{
+	LevelName = "Igneous Intrusion"
+	LevelPic = "WILV25"
+	Label = "E3M6"
+	Next = "E3M7"
+	NextSecret = "E3M9"
+	Music = "D_E3M6"
+	SkyTexture = "SKY3"
+	ParTime = 180
+}
+
+map E3M7
+{
+	LevelName = "No Regrets"
+	LevelPic = "WILV26"
+	Label = "E3M7"
+	Next = "E3M8"
+	Music = "D_E3M7"
+	SkyTexture = "SKY3"
+	ParTime = 300
+}
+
+map E3M8
+{
+	LevelName = "Ancient Lair"
+	LevelPic = "WILV27"
+	Label = "E3M8"
+	Music = "D_E3M8"
+	SkyTexture = "SKY3"
+	ParTime = 60
+	Endbunny = true
+	InterBackdrop = "FLAT5_2"
+	InterMusic = "D_VICTOR"
+	InterText =  "The abomination explodes into oblivion.",
+		"What the hell even was that?",
+		" ",
+		"As the shadow sets over this red rock\,",
+		"you realize that you're now trapped here.",
+		"At least you've got more space in this",
+		"wasteland than your old cell.",
+		" ",
+		"You kick the corpse in anger\, and it feels",
+		"good. You kick it again\, and a remote falls",
+		"out. You press the button\, and the ground",
+		"gives way to reveal a teleporter. You look",
+		"at the gizmo - it says \"To Double Impact.\"",
+		" ",
+		"Wherever or whatever that is, you pray",
+		"to any listening deity that there's",
+		"a working ship on the other side."
+}
+
+map E3M9
+{
+	LevelName = "Acquainted With Grief"
+	LevelPic = "WILV28"
+	Label = "E3M9"
+	Next = "E3M7"
+	Music = "D_E3M9"
+	SkyTexture = "SKY3"
+	ParTime = 570
+}
+
+map E4M1
+{
+	LevelName = "Maintenance Area"
+	LevelPic = "WILV30"
+	Label = "E4M1"
+	Next = "E4M2"
+	Music = "D_E4M1"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Episode = "M_EPI4", "Double Impact", "4"
+	Author = "RottKing and Ralphis"
+}
+
+map E4M2
+{
+	LevelName = "Research Complex"
+	LevelPic = "WILV31"
+	Label = "E4M2"
+	Next = "E4M3"
+	NextSecret = "E4M9"
+	Music = "D_E4M2"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Author = "RottKing and Ralphis"
+}
+
+map E4M3
+{
+	LevelName = "Central Computing"
+	LevelPic = "WILV32"
+	Label = "E4M3"
+	Next = "E4M4"
+	Music = "D_E4M3"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Author = "RottKing and Ralphis"
+}
+
+map E4M4
+{
+	LevelName = "Hydroponic Facility"
+	LevelPic = "WILV33"
+	Label = "E4M4"
+	Next = "E4M5"
+	Music = "D_E4M4"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Author = "RottKing and Ralphis"
+}
+
+map E4M5
+{
+	LevelName = "Engineering Station"
+	LevelPic = "WILV34"
+	Label = "E4M5"
+	Next = "E4M6"
+	Music = "D_E4M5"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Author = "RottKing and Ralphis"
+}
+
+map E4M6
+{
+	LevelName = "Command Center"
+	LevelPic = "WILV35"
+	Label = "E4M6"
+	Next = "E4M7"
+	Music = "D_E4M6"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Author = "RottKing and Ralphis"
+}
+
+map E4M7
+{
+	LevelName = "Waste Treatment"
+	LevelPic = "WILV36"
+	Label = "E4M7"
+	Next = "E4M8"
+	Music = "D_E4M7"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Author = "RottKing and Ralphis"
+}
+
+map E4M8
+{
+	LevelName = "Launch Bay"
+	LevelPic = "WILV37"
+	Label = "E4M8"
+	Music = "D_E4M8"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Endgame = true
+	InterBackdrop = "AQF075"
+	InterMusic = "D_VICTOR"
+	InterText = "Suppressing fire echoes above as the last",
+		"survivors flee the ship. The launch process",
+		"is irreversible: killing you now would only",
+		"bring a slow death drifting through space.",
+		" ",
+		"Fifty-nine. Fifty-eight. Fifty-seven. .  .",
+		"You melt into the pilot's seat\, lost in the",
+		"voice of an automated assembly of angels",
+		"delivering you from this wretched rock.",
+		" ",
+		"The ship rumbles as she wakes up;",
+		"you think of Earth as she lifts off.",
+		"Hopefully AGM won't find you there:",
+		"they've got the outbreak to deal with,",
+		"so that'll give you some time.",
+		" ",
+		"Destination: Earth!"
+	Author = "RottKing and Ralphis"
+}
+
+map E4M9
+{
+	LevelName = "Operations"
+	LevelPic = "WILV38"
+	Label = "E4M9"
+	Next = "E4M3"
+	Music = "D_E4M9"
+	SkyTexture = "SKY4"
+	ParTime = 0
+	Author = "RottKing and Ralphis"
+}
