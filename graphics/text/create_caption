@@ -11,7 +11,7 @@ import os
 font = ImageFont.load_default()
 
 
-txt1 = "© 2001-2024"
+txt1 = "© 2001-2025"
 txt2 = os.environ["VERSION"]
 background_image = Image.open(sys.argv[1])
 background_image.load()
@@ -34,15 +34,26 @@ except:
     txt1_size = draw.textsize(txt1, font=font)
     txt2_size = draw.textsize(txt2, font=font)
 
+# Account for widescreen assets
+if (image.width > 320):
+    left_padding_width = int((image.width - 320) / 2)
+else:
+    left_padding_width = 0
+
+right_padding_width = left_padding_width + 320
+
 draw.text(
-    (5, int(image.height - txt1_size[1] - 5)),
+    (
+        int(left_padding_width + 5) ,
+        int(image.height - txt1_size[1] - 5),
+    ),
     txt1,
     font=font,
     fill=(255, 165, 0, 255),
 )
 draw.text(
     (
-        int(image.width - txt2_size[0] - 10),
+        int(right_padding_width - txt2_size[0] - 10),
         int(image.height - txt2_size[1] - 5),
     ),
     txt2,
