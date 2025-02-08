@@ -220,6 +220,9 @@ PNAMES   = fd2pname
 #endif
 
 
+; light definitions for ports that use them
+GLDEFS
+
 ; List of Sounds
 [sounds]
 DSPISTOL
