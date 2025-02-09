@@ -19,12 +19,8 @@ MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
 FREEDOOM1=$(WADS)/freedoom1.wad
 FREEDOOM2=$(WADS)/freedoom2.wad
 FREEDM=$(WADS)/freedm.wad
-FD1_EXTRAS=$(WADS)/fd1-extras.wad
-FD2_EXTRAS=$(WADS)/fd2-extras.wad
-FDM_EXTRAS=$(WADS)/fdm-extras.wad
 
-OBJS=$(FREEDOOM1)  $(FREEDOOM2)  $(FREEDM) \
-     $(FD1_EXTRAS) $(FD2_EXTRAS) $(FDM_EXTRAS)
+OBJS=$(FREEDM) $(FREEDOOM1) $(FREEDOOM2)
 
 .PHONY: clean dist pngs-modified-check
 
@@ -260,7 +256,7 @@ mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
 
-install-freedm: $(FREEDM) $(FDM_EXTRAS) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
+install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
                 freedm.6 io.github.freedoom.FreeDM.png
 	install -Dm 644 dist/io.github.freedoom.FreeDM.desktop \
 	                -t "$(target)/share/applications"
@@ -275,11 +271,9 @@ install-freedm: $(FREEDM) $(FDM_EXTRAS) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
 	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedm"
 
-install-freedoom: $(FREEDOOM1)  $(FREEDOOM2)        \
-                  $(FD1_EXTRAS) $(FD2_EXTRAS)       \
-                  $(HTMLDOCS)   $(MANUAL_PDF_FILES) \
-                  freedoom1.6 freedoom2.6           \
-                  io.github.freedoom.Phase1.png     \
+install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)       \
+                  $(MANUAL_PDF_FILES) freedoom1.6 freedoom2.6 \
+                  io.github.freedoom.Phase1.png               \
                   io.github.freedoom.Phase2.png
 	install -Dm 644 dist/io.github.freedoom.Phase1.desktop \
 	                -t "$(target)/share/applications"
@@ -293,8 +287,7 @@ install-freedoom: $(FREEDOOM1)  $(FREEDOOM2)        \
 	install -Dm 755 dist/freedoom "$(target)$(bindir)/freedoom2"
 	install -Dm 644 dist/freedoom1.6 -t "$(target)$(mandir)/man6"
 	install -Dm 644 dist/freedoom2.6 -t "$(target)$(mandir)/man6"
-	install -Dm 644 $(FREEDOOM1) $(FREEDOOM2) $(FD1_EXTRAS) $(FD2_EXTRAS) \
-                    -t "$(target)$(waddir)"
+	install -Dm 644 $(FREEDOOM1) $(FREEDOOM2) -t "$(target)$(waddir)"
 	install -Dm 644 dist/io.github.freedoom.Phase1.png \
 	                -t "$(target)/share/icons"
 	install -Dm 644 dist/io.github.freedoom.Phase2.png \
