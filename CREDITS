@@ -1056,9 +1056,8 @@ S: WishedTomato200
 S: quarry24
 D: patches
 
-S: PhobosVB
-D: widescreen graphics (graphics/w_*.png)
-
 S: NightFright2k19
-D: widescreen status bar (graphics/w_stbar.png)
+D: original widescreen status bar (graphics/w_stbar.png)
 
+S: PhobosVB
+D: widescreen graphics edits (graphics/w_*.png)

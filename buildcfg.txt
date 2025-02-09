@@ -592,30 +592,39 @@ D_READ_M = D_FDMRDM
 
 #ifdef PHASE1
 TITLEPIC 0 0          = fd1title
+W_TITLEP 0 0          = w_p1ttl
 M_DOOM   13 -16
 #else
 #ifdef FREEDM
 TITLEPIC 0 0          = fdmtitle
+W_TITLEP 0 0          = w_dmttl
 M_DOOM   40 -5        = m_dm
 #else
 TITLEPIC 0 0          = fd2title
+W_TITLEP 0 0          = w_p2ttl
 M_DOOM   13 -16
 #endif
 #endif
 
 ; Used both in phase 2 and phase 1 (E4):
 INTERPIC	0	0
+W_INTERP	0	0
 
 #ifdef PHASE2
 HELP	0	0
+W_HELP	0	0
 #endif
 #ifndef PHASE2
 HELP1	0	0     = help
 HELP2	0	0     = credit
+W_HELP1	0	0     = W_help
+W_HELP2	0	0     = W_credit
 #endif
 
 CREDIT	0	0
+W_CREDIT	0	0
 BOSSBACK	0	0
+W_BOSSBA	0	0
 AMMNUM0	-1	0
 AMMNUM1	-1	0
 AMMNUM2	-1	0
@@ -627,6 +636,7 @@ AMMNUM7	-1	0
 AMMNUM8	-1	0
 AMMNUM9	-1	0
 STBAR	0	0
+W_STBAR	0	0
 STGNUM0	0	0
 STGNUM1	0	0
 STGNUM2	0	0
@@ -935,6 +945,15 @@ SMLAUN1		30	11
 SMPLAS1		26	9
 SMBFGG1		29	13
 
+; Official port Minimap icons
+SECRETS
+ITEMS
+KILLS
+
+; Official port small menu skull
+M_SKULS1
+M_SKULS2
+
 #ifndef PHASE2
 M_EPI1	0	0
 M_EPI2	0	0
@@ -980,9 +999,13 @@ WILV38  0       0
 
 ; Endgame screens:
 VICTORY2
+W_VICTOR
 PFUB1
+W_PFUB1
 PFUB2
+W_PFUB2
 ENDPIC
+W_ENDPIC
 
 ; "The End" animation from E3 endgame screen:
 END0	-77	-123
@@ -1002,6 +1025,7 @@ WISPLAT  = empty
 ; We don't have "map" graphics for the E1-3 intermission screens.
 ; Just use the normal interpic instead.
 WIMAP0   = interpic
+W_WIMAP0 = w_interp
 WIA00900 = empty
 WIA00901 = empty
 WIA00902 = empty
@@ -1034,6 +1058,7 @@ WIA00001 = empty
 WIA00002 = empty
 
 WIMAP1   = interpic
+W_WIMAP1 = w_interp
 WIA10000 = empty
 WIA10100 = empty
 WIA10200 = empty
@@ -1047,6 +1072,7 @@ WIA10702 = empty
 WIA20000 = empty
 
 WIMAP2   = interpic
+W_WIMAP2 = w_interp
 WIA20001 = empty
 WIA20002 = empty
 WIA20100 = empty

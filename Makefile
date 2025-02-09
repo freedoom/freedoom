@@ -83,14 +83,6 @@ $(FREEDM): wadinfo_freedm.txt subdirs
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_freedm.txt $@
 
-wadinfo_fdm_extras.txt : buildcfg-extras.txt subdirs lumps/freedoom.lmp lumps/freedm.lmp
-	$(CPP) -P -DFREEDM < $< > $@
-
-$(FDM_EXTRAS): wadinfo_fdm_extras.txt subdirs
-	@mkdir -p $(WADS)
-	$(RM) $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_fdm_extras.txt $@
-
 #---------------------------------------------------------
 # phase 1 (udoom) iwad
 
@@ -102,14 +94,6 @@ $(FREEDOOM1): wadinfo_phase1.txt subdirs
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase1.txt $@
 
-wadinfo_fd1_extras.txt : buildcfg-extras.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DPHASE1 < $< > $@
-
-$(FD1_EXTRAS): wadinfo_fd1_extras.txt subdirs
-	@mkdir -p $(WADS)
-	$(RM) $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_fd1_extras.txt $@
-
 #---------------------------------------------------------
 # phase 2 (doom2) iwad
 
@@ -120,14 +104,6 @@ $(FREEDOOM2): wadinfo_phase2.txt subdirs
 	@mkdir -p $(WADS)
 	$(RM) $@
 	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_phase2.txt $@
-
-wadinfo_fd2_extras.txt : buildcfg-extras.txt subdirs lumps/freedoom.lmp
-	$(CPP) -P -DPHASE2 < $< > $@
-
-$(FD2_EXTRAS): wadinfo_fd2_extras.txt subdirs
-	@mkdir -p $(WADS)
-	$(RM) $@
-	$(DEUTEX) $(DEUTEX_ARGS) -iwad -build wadinfo_fd2_extras.txt $@
 
 %.html: %.adoc
 	$(ASCIIDOC) $(ADOCOPTS) $<
@@ -175,9 +151,6 @@ clean:
 	      ./wadinfo_phase1.txt \
 	      ./wadinfo_phase2.txt \
 	      ./wadinfo_freedm.txt \
-	      ./wadinfo_fd1_extras.txt \
-	      ./wadinfo_fd2_extras.txt \
-	      ./wadinfo_fdm_extras.txt \
 	      ./lumps/freedoom.lmp \
 	      ./lumps/freedm.lmp
 	-rmdir $(WADS)
