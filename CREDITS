@@ -1057,8 +1057,8 @@ S: quarry24
 D: patches
 
 S: PhobosVB
-D: widescreen graphics (graphics/*_ws.png)
+D: widescreen graphics (graphics/w_*.png)
 
 S: NightFright2k19
-D: widescreen status bar (graphics/stbar_ws.png)
+D: widescreen status bar (graphics/w_stbar.png)
 

@@ -55,7 +55,7 @@ TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
   helpttl.png  freettl.png
 
 all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic \
-     help_ws.png credi_ws.png titlepic_ws
+     w_help.png w_credit.png w_titlepic
 
 # Generate the menu and level strings
 text_strings: config.py fontchars ../../lumps/dehacked/dehacked.txt
@@ -162,8 +162,8 @@ fdmtitle.png: ../titlepic/freedm_titlepic.png
 	cp $@ ../
 
 # Widescreen version of the above assets
-helpbg_ws.png: ../inter_ws.png
-	./tint.py ../inter_ws.png '#57b9b0' helpbg_ws.png
+w_helpbg.png: ../w_interp.png
+	./tint.py ../w_interp.png '#57b9b0' w_helpbg.png
 
 # These magic values require adjustment from the default 4:3.
 # To determine the required "padding length" for the new values,
@@ -174,9 +174,9 @@ helpbg_ws.png: ../inter_ws.png
 #   21:9 -> 576 -> 128
 #   32:9 -> 854 -> 267
 
-help_ws.png: text_strings helpbg_ws.png
-	./smtextgen help_ws.png 854x200            \
-	   -background "helpbg_ws.png"             \
+w_help.png: text_strings w_helpbg.png
+	./smtextgen w_help.png 854x200            \
+	   -background "w_helpbg.png"             \
 	   417,2   "file:helpttl.png"              \
 	   277,20  "Weapons"                       \
 	   287,33  "file:../../sprites/csawa0.png" \
@@ -233,24 +233,24 @@ help_ws.png: text_strings helpbg_ws.png
 	   481,192 "<Esc> to return"
 	cp $@ ../
 
-credi_ws.png: text_strings helpbg_ws.png credit.txt
-	./smtextgen credi_ws.png 854x200 \
-	   -background "helpbg_ws.png"   \
+w_credit.png: text_strings w_helpbg.png credit.txt
+	./smtextgen w_credit.png 854x200 \
+	   -background "w_helpbg.png"    \
 	   387,5  "file:freettl.png"     \
 	   277,30  "include:credit.txt"
 	cp $@ ../
 
-titlepic_ws: p1ttl_ws.png p2ttl_ws.png dmttl_ws.png
+w_titlepic: w_p1ttl.png w_p2ttl.png w_dmttl.png
 
-p1ttl_ws.png: text_strings ../titlepic/titlepic_ws.png ../m_doom.png 
-	./create_caption ../titlepic/titlepic_ws.png ../m_doom.png ../t_phase1.png $@
+w_p1ttl.png: text_strings ../titlepic/w_titlep.png ../m_doom.png 
+	./create_caption ../titlepic/w_titlep.png ../m_doom.png ../t_phase1.png $@
 	cp $@ ../
 
-p2ttl_ws.png: text_strings ../titlepic/titlepic_ws.png ../m_doom.png
-	./create_caption ../titlepic/titlepic_ws.png ../m_doom.png ../t_phase2.png $@
+w_p2ttl.png: text_strings ../titlepic/w_titlep.png ../m_doom.png
+	./create_caption ../titlepic/w_titlep.png ../m_doom.png ../t_phase2.png $@
 	cp $@ ../
 
-dmttl_ws.png: ../titlepic/freedm_titlepic.png
+w_dmttl.png: ../titlepic/freedm_titlepic.png
 	./create_caption $< $@
 	cp $@ ../
 
@@ -259,15 +259,15 @@ clean:
 		graphics.stamp *.pyc credtext.png               \
 		wikilrs.png wikilrs_horiz.png wivctms.png       \
 		../wikilrs.png ../wivctms.png                   \
-		credit.png credi_ws.png                         \
-		../credit.png ../credi_ws.png                   \
-		helpbg.png helpbg_ws.png                        \
-		help.png help_ws.png                            \
-		../help.png ../help_ws.png                      \
+		credit.png w_credit.png                         \
+		../credit.png ../w_credit.png                   \
+		helpbg.png w_helpbg.png                         \
+		help.png w_help.png                             \
+		../help.png ../w_help.png                       \
 		fd1title.png fd2title.png fdmtitle.png          \
-		p1ttl_ws.png p2ttl_ws.png dmttl_ws.png          \
+		w_p1ttl.png w_p2ttl.png w_dmttl.png             \
 		../fd1title.png ../fd2title.png ../fdmtitle.png \
-		../p1ttl_ws.png ../p2ttl_ws.png ../dmttl_ws.png
+		../w_p1ttl.png ../w_p2ttl.png ../w_dmttl.png
 	for graphic in $(TEXTGEN_GRAPHICS); do $(RM) ../$$graphic; done
 	$(RM) __pycache__/*
 	-rmdir __pycache__

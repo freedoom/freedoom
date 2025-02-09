@@ -27,29 +27,29 @@ M_SKULS1
 M_SKULS2
 
 ; Widescreen graphics
-STBAR    = stbar_ws
-CREDIT   = credi_ws
-INTERPIC = inter_ws
+STBAR    = w_stbar
+CREDIT   = w_credit
+INTERPIC = w_interp
 
 #ifdef PHASE1
-TITLEPIC = p1ttl_ws
-HELP1    = help_ws
-HELP2    = credi_ws
-WIMAP0   = inter_ws
-WIMAP1   = inter_ws
-WIMAP2   = inter_ws
-VICTORY2 = victo_ws
-PFUB1    = pfub1_ws
-PFUB2    = pfub2_ws
-ENDPIC   = endpi_ws
+TITLEPIC = w_p1ttl
+HELP1    = w_help
+HELP2    = w_credit
+WIMAP0   = w_interp
+WIMAP1   = w_interp
+WIMAP2   = w_interp
+VICTORY2 = w_victor
+PFUB1    = w_pfub1
+PFUB2    = w_pfub2
+ENDPIC   = w_endpic
 #else
 #ifdef FREEDM
-TITLEPIC = dmttl_ws
-BOSSBACK = bossb_ws
-HELP     = help_ws
+TITLEPIC = w_dmttl
+BOSSBACK = w_bossba
+HELP     = w_help
 #else
-TITLEPIC = p2ttl_ws
-BOSSBACK = bossb_ws
-HELP     = help_ws
+TITLEPIC = w_p2ttl
+BOSSBACK = w_bossba
+HELP     = w_help
 #endif
 #endif
