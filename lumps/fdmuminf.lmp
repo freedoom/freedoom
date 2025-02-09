@@ -272,7 +272,7 @@ map MAP24
 
 map MAP25
 {
-	LevelName = "Mansion Yard"
+	LevelName = "Tripod keep"
 	Label = "DM25"
 	LevelPic = "CWILV24"
 	Next = "MAP26"
