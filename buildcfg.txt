@@ -617,8 +617,8 @@ W_HELP	0	0
 #ifndef PHASE2
 HELP1	0	0     = help
 HELP2	0	0     = credit
-W_HELP1	0	0     = W_help
-W_HELP2	0	0     = W_credit
+W_HELP1	0	0     = w_help
+W_HELP2	0	0     = w_credit
 #endif
 
 CREDIT	0	0
