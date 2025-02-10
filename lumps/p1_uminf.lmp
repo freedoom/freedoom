@@ -386,7 +386,7 @@ map E3M9
 	Music = "D_E3M9"
 	SkyTexture = "SKY3"
 	ParTime = 570
-	Author = Angry Saint""
+	Author = "Angry Saint"
 }
 
 map E4M1
