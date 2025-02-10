@@ -13,6 +13,7 @@ map MAP01
 	ParTime = 30
 	Episode = clear
 	Episode = "M_EPI1", "Phase 2", "1"
+	Author = "Blastfrog, Xindage & Jon Dowland"
 }
 
 map MAP02
@@ -24,6 +25,7 @@ map MAP02
 	Music = "D_STALKS"
 	SkyTexture = "SKY1"
 	ParTime = 90
+	Author = "Siggi"
 }
 
 map MAP03
@@ -35,6 +37,7 @@ map MAP03
 	Music = "D_COUNTD"
 	SkyTexture = "SKY1"
 	ParTime = 120
+	Author = "SgtCrispy"
 }
 
 map MAP04
@@ -46,6 +49,7 @@ map MAP04
 	Music = "D_BETWEE"
 	SkyTexture = "SKY1"
 	ParTime = 120
+	Author = "Macro11_1"
 }
 
 map MAP05
@@ -57,6 +61,7 @@ map MAP05
 	Music = "D_DOOM"
 	SkyTexture = "SKY1"
 	ParTime = 150
+	Author = "Amarande"
 }
 
 map MAP06
@@ -87,6 +92,7 @@ map MAP06
 		"Planted your feet.",
 		"Checked your weapons.",
 		"Time to punch through."
+	Author = "Jayextee"
 }
 
 map MAP07
@@ -98,6 +104,7 @@ map MAP07
 	Music = "D_SHAWN"
 	SkyTexture = "SKY1"
 	ParTime = 150
+	Author = "Mortrixs19"
 }
 
 map MAP08
@@ -109,6 +116,7 @@ map MAP08
 	Music = "D_DDTBLU"
 	SkyTexture = "SKY1"
 	ParTime = 330
+	Author = "Boris Iwanski"
 }
 
 map MAP09
@@ -120,6 +128,7 @@ map MAP09
 	Music = "D_IN_CIT"
 	SkyTexture = "SKY1"
 	ParTime = 150
+	Author = "sajbear"
 }
 
 map MAP10
@@ -131,6 +140,7 @@ map MAP10
 	Music = "D_DEAD"
 	SkyTexture = "SKY1"
 	ParTime = 120
+	Author = "Xerent"
 }
 
 map MAP11
@@ -160,6 +170,7 @@ map MAP11
 		"Cities mean people.",
 		" ",
 		"Right?"
+	Author = "Kaiser"
 }
 
 map MAP12
@@ -171,6 +182,7 @@ map MAP12
 	Music = "D_THEDA2"
 	SkyTexture = "SKY2"
 	ParTime = 630
+	Author = "Z0k"
 }
 
 map MAP13
@@ -182,6 +194,7 @@ map MAP13
 	Music = "D_DOOM2"
 	SkyTexture = "SKY2"
 	ParTime = 180
+	Author = "Jayextee"
 }
 
 map MAP14
@@ -193,6 +206,7 @@ map MAP14
 	Music = "D_DDTBL2"
 	SkyTexture = "SKY2"
 	ParTime = 150
+	Author = "Jayextee"
 }
 
 map MAP15
@@ -224,6 +238,7 @@ map MAP15
 		"entire time\, locked inside of your brain?",
 		" ",
 		"You\'d rather not find out."
+	Author = "Z0k"
 }
 
 map MAP16
@@ -235,6 +250,7 @@ map MAP16
 	Music = "D_DEAD2"
 	SkyTexture = "SKY2"
 	ParTime = 120
+	Author = "Hyena"
 }
 
 map MAP17
@@ -246,6 +262,7 @@ map MAP17
 	Music = "D_STLKS3"
 	SkyTexture = "SKY2"
 	ParTime = 120
+	Author = "Jayextee"
 }
 
 map MAP18
@@ -257,6 +274,7 @@ map MAP18
 	Music = "D_ROMERO"
 	SkyTexture = "SKY2"
 	ParTime = 180
+	Author = "Jimmy"
 }
 
 map MAP19
@@ -268,6 +286,7 @@ map MAP19
 	Music = "D_SHAWN2"
 	SkyTexture = "SKY2"
 	ParTime = 210
+	Author = "Jayextee"
 }
 
 map MAP20
@@ -298,6 +317,7 @@ map MAP20
 		" ",
 		"This could be the beginning",
 		"of your freedom - or your doom."
+	Author = "Lazer"
 }
 
 map MAP21
@@ -309,6 +329,7 @@ map MAP21
 	Music = "D_COUNT2"
 	SkyTexture = "SKY3"
 	ParTime = 330
+	Author = "Mortrixs19"
 }
 
 map MAP22
@@ -320,6 +341,7 @@ map MAP22
 	Music = "D_DDTBL3"
 	SkyTexture = "SKY3"
 	ParTime = 420
+	Author = "Boris Iwanski"
 }
 
 map MAP23
@@ -331,6 +353,7 @@ map MAP23
 	Music = "D_AMPIE"
 	SkyTexture = "SKY3"
 	ParTime = 240
+	Author = "Submerge"
 }
 
 map MAP24
@@ -342,6 +365,7 @@ map MAP24
 	Music = "D_THEDA3"
 	SkyTexture = "SKY3"
 	ParTime = 420
+	Author = "Jayextee"
 }
 
 map MAP25
@@ -353,6 +377,7 @@ map MAP25
 	Music = "D_ADRIAN"
 	SkyTexture = "SKY3"
 	ParTime = 600
+	Author = "Cyb"
 }
 
 map MAP26
@@ -364,6 +389,7 @@ map MAP26
 	Music = "D_MESSG2"
 	SkyTexture = "SKY3"
 	ParTime = 270
+	Author = "GooseJelly"
 }
 
 map MAP27
@@ -375,6 +401,7 @@ map MAP27
 	Music = "D_ROMER2"
 	SkyTexture = "SKY3"
 	ParTime = 690
+	Author = "DOGB01"
 }
 
 map MAP28
@@ -386,6 +413,7 @@ map MAP28
 	Music = "D_TENSE"
 	SkyTexture = "SKY3"
 	ParTime = 450
+	Author = "Z0k"
 }
 
 map MAP29
@@ -397,6 +425,7 @@ map MAP29
 	Music = "D_SHAWN3"
 	SkyTexture = "SKY3"
 	ParTime = 300
+	Author = "Amarande"
 }
 
 map MAP30
@@ -426,6 +455,7 @@ map MAP30
 		"No one will know what happened here.",
 		" ",
 		"No one will ever find you again."
+	Author = "Cacodemon Leader"
 }
 
 map MAP31
@@ -456,6 +486,7 @@ map MAP31
 		"You will find your way back to the city,",
 		"but it will have to be on the other side",
 		"of a few homicidal mutants..."
+	Author = "Jayextee"
 }
 
 map MAP32
@@ -467,4 +498,5 @@ map MAP32
 	Music = "D_ULTIMA"
 	SkyTexture = "SKY3"
 	ParTime = 210
+	Author = "Catoptromancy"
 }
