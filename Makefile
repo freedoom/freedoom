@@ -271,9 +271,9 @@ install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
 	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedm"
 
-install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
-                  $(MANUAL_PDF_FILES) freedoom1.6 freedoom2.6    \
-                  io.github.freedoom.Phase1.png                         \
+install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)       \
+                  $(MANUAL_PDF_FILES) freedoom1.6 freedoom2.6 \
+                  io.github.freedoom.Phase1.png               \
                   io.github.freedoom.Phase2.png
 	install -Dm 644 dist/io.github.freedoom.Phase1.desktop \
 	                -t "$(target)/share/applications"

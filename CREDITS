@@ -1056,3 +1056,9 @@ D: umapinfo template
 S: WishedTomato200
 S: quarry24
 D: patches
+
+S: NightFright2k19
+D: original widescreen status bar (graphics/w_stbar.png)
+
+S: PhobosVB
+D: widescreen graphics edits (graphics/w_*.png)

@@ -54,7 +54,8 @@ TEXTGEN_GRAPHIC_LUMPS = \
 TEXTGEN_GRAPHICS = $(TEXTGEN_GRAPHIC_LUMPS)                                \
   helpttl.png  freettl.png
 
-all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic
+all: text_strings help.png credit.png wikilrs.png wivctms.png titlepic \
+     w_help.png w_credit.png w_titlepic
 
 # Generate the menu and level strings
 text_strings: config.py fontchars ../../lumps/dehacked/dehacked.txt
@@ -94,7 +95,7 @@ help.png: text_strings helpbg.png
 	   206,84  "file:../../sprites/cella0.png"   \
 	   10,110  "Health"                          \
 	   63,106  "file:../../sprites/bon1a0.png"   \
-	   100,101  "file:../../sprites/media0.png"   \
+	   100,101 "file:../../sprites/media0.png"   \
 	   79,113  "file:../../sprites/stima0.png"   \
 	   132,102 "file:../../sprites/pstra0.png"   \
 	   180,110 "Armor"                           \
@@ -160,14 +161,113 @@ fdmtitle.png: ../titlepic/freedm_titlepic.png
 	./create_caption $< $@
 	cp $@ ../
 
+# Widescreen version of the above assets
+w_helpbg.png: ../w_interp.png
+	./tint.py ../w_interp.png '#57b9b0' w_helpbg.png
+
+# These magic values require adjustment from the default 4:3.
+# To determine the required "padding length" for the new values,
+# the following formula is to be used:
+#   ( widescreen_length - 320 ) / 2
+# This formula yields the following padding values:
+#   16:9 -> 428 ->  54
+#   21:9 -> 576 -> 128
+#   32:9 -> 854 -> 267
+
+w_help.png: text_strings w_helpbg.png
+	./smtextgen w_help.png 854x200            \
+	   -background "w_helpbg.png"             \
+	   417,2   "file:helpttl.png"              \
+	   277,20  "Weapons"                       \
+	   287,33  "file:../../sprites/csawa0.png" \
+	   357,25  "file:../../sprites/shota0.png" \
+	   357,40  "file:../../sprites/sgn2a0.png" \
+	   421,15  "file:../../sprites/mguna0.png" \
+	   428,35  "file:../../sprites/launa0.png" \
+	   502,18  "file:../../sprites/plasa0.png" \
+	   502,33  "file:../../sprites/bfuga0.png" \
+	   277,62  "Bullets"                       \
+	   347,57  "file:../../sprites/ammoa0.png" \
+	   335,62  "file:../../sprites/clipa0.png" \
+	   380,62  "Shells"                        \
+	   447,57  "file:../../sprites/sboxa0.png" \
+	   430,62  "file:../../sprites/shela0.png" \
+	   519,60  "Backpack"                      \
+	   539,69  "file:../../sprites/bpaka0.png" \
+	   277,85  "Missiles"                      \
+	   357,75  "file:../../sprites/broka0.png" \
+	   343,75  "file:../../sprites/rocka0.png" \
+	   425,85  "Energy"                        \
+	   492,76  "file:../../sprites/celpa0.png" \
+	   473,84  "file:../../sprites/cella0.png" \
+	   277,110 "Health"                        \
+	   330,106 "file:../../sprites/bon1a0.png" \
+	   367,101 "file:../../sprites/media0.png" \
+	   346,113 "file:../../sprites/stima0.png" \
+	   399,102 "file:../../sprites/pstra0.png" \
+	   447,110 "Armor"                         \
+	   543,105 "file:../../sprites/arm2b0.png" \
+	   507,102 "file:../../sprites/arm1b0.png" \
+	   492,109 "file:../../sprites/bon2b0.png" \
+	   412,134 "Map"                           \
+	   442,122 "file:../../sprites/pmapa0.png" \
+	   277,134 "Big Boost"                     \
+	   351,127 "file:../../sprites/soula0.png" \
+	   377,127 "file:../../sprites/megaa0.png" \
+	   277,155 "Light"                         \
+	   315,152 "file:../../sprites/pvisa0.png" \
+	   301,177 "Cloak"                         \
+	   347,161 "file:../../sprites/pinsa0.png" \
+	   386,177 "Invuln."                       \
+	   441,166 "file:../../sprites/pinva0.png" \
+	   532,137 "Keys"                          \
+	   521,149 "file:../../sprites/rkeya0.png" \
+	   538,149 "file:../../sprites/ykeya0.png" \
+	   555,149 "file:../../sprites/bkeya0.png" \
+	   522,173 "file:../../sprites/rskua0.png" \
+	   540,173 "file:../../sprites/yskua0.png" \
+	   558,173 "file:../../sprites/bskua0.png" \
+	   397,155 "Rescue suit"                   \
+	   482,137 "file:../../sprites/suita0.png" \
+	   269,192 "https://freedoom.github.io/"   \
+	   481,192 "<Esc> to return"
+	cp $@ ../
+
+w_credit.png: text_strings w_helpbg.png credit.txt
+	./smtextgen w_credit.png 854x200 \
+	   -background "w_helpbg.png"    \
+	   387,5  "file:freettl.png"     \
+	   277,30  "include:credit.txt"
+	cp $@ ../
+
+w_titlepic: w_p1ttl.png w_p2ttl.png w_dmttl.png
+
+w_p1ttl.png: text_strings ../titlepic/w_titlep.png ../m_doom.png 
+	./create_caption ../titlepic/w_titlep.png ../m_doom.png ../t_phase1.png $@
+	cp $@ ../
+
+w_p2ttl.png: text_strings ../titlepic/w_titlep.png ../m_doom.png
+	./create_caption ../titlepic/w_titlep.png ../m_doom.png ../t_phase2.png $@
+	cp $@ ../
+
+w_dmttl.png: ../titlepic/freedm_titlepic.png
+	./create_caption $< $@
+	cp $@ ../
+
 clean:
-	$(RM) $(TEXTGEN_GRAPHICS) helpbg.png help.png	            \
-	    graphics.stamp *.pyc credtext.png	                    \
-	    credtext.png credit.png dmwilv*.png wikilrs.png		    \
-	    wivctms.png wikilrs_horiz.png ../credit.png ../help.png	\
-	    ../wikilrs.png ../wivctms.png                           \
-		fd1title.png fd2title.png fdmtitle.png                  \
-	    ../fd1title.png ../fd2title.png ../fdmtitle.png 
+	$(RM) $(TEXTGEN_GRAPHICS)                           \
+		graphics.stamp *.pyc credtext.png               \
+		wikilrs.png wikilrs_horiz.png wivctms.png       \
+		../wikilrs.png ../wivctms.png                   \
+		credit.png w_credit.png                         \
+		../credit.png ../w_credit.png                   \
+		helpbg.png w_helpbg.png                         \
+		help.png w_help.png                             \
+		../help.png ../w_help.png                       \
+		fd1title.png fd2title.png fdmtitle.png          \
+		w_p1ttl.png w_p2ttl.png w_dmttl.png             \
+		../fd1title.png ../fd2title.png ../fdmtitle.png \
+		../w_p1ttl.png ../w_p2ttl.png ../w_dmttl.png
 	for graphic in $(TEXTGEN_GRAPHICS); do $(RM) ../$$graphic; done
 	$(RM) __pycache__/*
 	-rmdir __pycache__
