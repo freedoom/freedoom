@@ -294,7 +294,7 @@ CC_HERO = savior of humanity
 #ifdef FREEDM
 HUSTR_1 = DM01: Tech Test
 HUSTR_2 = DM02: Sauna Fissure
-HUSTR_3 = DM03: Issues of Claveria
+HUSTR_3 = DM03: Plain Arena
 HUSTR_4 = DM04: Steel
 HUSTR_5 = DM05: Dense Fields
 HUSTR_6 = DM06: Temple of Ammon
@@ -316,7 +316,7 @@ HUSTR_21 = DM21: Refinery
 HUSTR_22 = DM22: Military Depot
 HUSTR_23 = DM23: Testing Grounds
 HUSTR_24 = DM24: Flooded Base
-HUSTR_25 = DM25: Mansion Yard
+HUSTR_25 = DM25: Tripod keep
 HUSTR_26 = DM26: Crater Excavation
 HUSTR_27 = DM27: The Exile
 HUSTR_28 = DM28: Weapons Factory
