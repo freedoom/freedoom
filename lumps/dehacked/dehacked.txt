@@ -321,7 +321,7 @@ HUSTR_26 = DM26: Crater Excavation
 HUSTR_27 = DM27: The Exile
 HUSTR_28 = DM28: Weapons Factory
 HUSTR_29 = DM29: Unusual Territory
-HUSTR_30 = DM30: Last Man Standing
+HUSTR_30 = DM30: Violent Vicinity
 HUSTR_31 = DM31: Desolated Fort
 HUSTR_32 = DM32: Fourplay
 #else
