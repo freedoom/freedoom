@@ -13,28 +13,31 @@ map MAP01
 	ParTime = 0
 	Episode = clear
 	Episode = "M_EPI1", "FreeDM", "1"
+	Author = "Xindage"
 }
 
 map MAP02
 {
-	LevelName = "Natural Station"
+	LevelName = "Sauna Fissure"
 	Label = "DM02"
 	LevelPic = "CWILV01"
 	Next = "MAP03"
 	Music = "D_STALKS"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "Hellbent"
 }
 
 map MAP03
 {
-	LevelName = "Issues of Claveria"
+	LevelName = "Plain Arena"
 	Label = "DM03"
 	LevelPic = "CWILV02"
 	Next = "MAP04"
 	Music = "D_COUNTD"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP04
@@ -46,6 +49,7 @@ map MAP04
 	Music = "D_BETWEE"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "deathz0r"
 }
 
 map MAP05
@@ -57,6 +61,7 @@ map MAP05
 	Music = "D_DOOM"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP06
@@ -69,6 +74,7 @@ map MAP06
 	SkyTexture = "SKY1"
 	InterText = clear
 	ParTime = 0
+	Author = "Catoptromancy& Xindage"
 }
 
 map MAP07
@@ -80,6 +86,7 @@ map MAP07
 	Music = "D_SHAWN"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "Rellik"
 }
 
 map MAP08
@@ -91,6 +98,7 @@ map MAP08
 	Music = "D_DDTBLU"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "AXDOOMER"
 }
 
 map MAP09
@@ -102,6 +110,7 @@ map MAP09
 	Music = "D_IN_CIT"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP10
@@ -113,6 +122,7 @@ map MAP10
 	Music = "D_DEAD"
 	SkyTexture = "SKY1"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP11
@@ -124,6 +134,7 @@ map MAP11
 	Music = "D_STLKS2"
 	SkyTexture = "SKY1"
 	InterText = clear
+	Author = "Xindage"
 }
 
 map MAP12
@@ -135,6 +146,7 @@ map MAP12
 	Music = "D_THEDA2"
 	SkyTexture = "SKY2"
 	ParTime = 0
+	Author = "Catoptromancy"
 }
 
 map MAP13
@@ -146,6 +158,7 @@ map MAP13
 	Music = "D_DOOM2"
 	SkyTexture = "SKY2"
 	ParTime = 0
+	Author = "Catoptromancy & Xindage"
 }
 
 map MAP14
@@ -157,6 +170,7 @@ map MAP14
 	Music = "D_DDTBL2"
 	SkyTexture = "SKY2"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP15
@@ -169,6 +183,7 @@ map MAP15
 	Music = "D_RUNNI2"
 	SkyTexture = "SKY2"
 	InterTextSecret = clear
+	Author = "Xindage"
 }
 
 map MAP16
@@ -180,6 +195,7 @@ map MAP16
 	Music = "D_DEAD2"
 	SkyTexture = "SKY2"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP17
@@ -191,6 +207,7 @@ map MAP17
 	Music = "D_STLKS3"
 	SkyTexture = "SKY2"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP18
@@ -202,28 +219,31 @@ map MAP18
 	Music = "D_ROMERO"
 	SkyTexture = "SKY2"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP19
 {
-	LevelName = "Tech Isle"
+	LevelName = "Unwanted Backyard"
 	Label = "DM19"
 	LevelPic = "CWILV18"
 	Next = "MAP20"
 	Music = "D_SHAWN2"
 	SkyTexture = "SKY2"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP20
 {
-	LevelName = "Warehouse"
+	LevelName = "Terra Mortis"
 	Label = "DM20"
 	LevelPic = "CWILV19"
 	Next = "MAP21"
 	Music = "D_MESSAG"
 	SkyTexture = "SKY2"
 	InterText = clear
+	Author = "Xindage"
 }
 
 map MAP21
@@ -235,6 +255,7 @@ map MAP21
 	Music = "D_COUNT2"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Rellik"
 }
 
 map MAP22
@@ -246,17 +267,19 @@ map MAP22
 	Music = "D_DDTBL3"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "AXDOOMER"
 }
 
 map MAP23
 {
-	LevelName = "Confrontation"
+	LevelName = "Testing Grounds"
 	Label = "DM23"
 	LevelPic = "CWILV22"
 	Next = "MAP24"
 	Music = "D_AMPIE"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP24
@@ -268,28 +291,31 @@ map MAP24
 	Music = "D_THEDA3"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Mechadon"
 }
 
 map MAP25
 {
-	LevelName = "Mansion Yard"
+	LevelName = "Tripod keep"
 	Label = "DM25"
 	LevelPic = "CWILV24"
 	Next = "MAP26"
 	Music = "D_ADRIAN"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Catoptromancy"
 }
 
 map MAP26
 {
-	LevelName = "Acidic Crypt"
+	LevelName = "Crater Excavation"
 	Label = "DM26"
 	LevelPic = "CWILV25"
 	Next = "MAP27"
 	Music = "D_MESSG2"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP27
@@ -301,6 +327,7 @@ map MAP27
 	Music = "D_ROMER2"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Rellik"
 }
 
 map MAP28
@@ -312,6 +339,7 @@ map MAP28
 	Music = "D_TENSE"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Rellik"
 }
 
 map MAP29
@@ -323,6 +351,7 @@ map MAP29
 	Music = "D_SHAWN3"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Xindage"
 }
 
 map MAP30
@@ -334,6 +363,7 @@ map MAP30
 	Music = "D_OPENIN"
 	SkyTexture = "SKY3"
 	InterText = clear
+	Author = "deathz0r"
 }
 
 map MAP31
@@ -347,6 +377,7 @@ map MAP31
 	SkyTexture = "SKY3"
 	ParTime = 0
 	InterTextSecret = clear
+	Author = "Xindage"
 }
 
 map MAP32
@@ -358,4 +389,5 @@ map MAP32
 	Music = "D_ULTIMA"
 	SkyTexture = "SKY3"
 	ParTime = 0
+	Author = "Mechadon"
 }
