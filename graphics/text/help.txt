@@ -1,0 +1,20 @@
+Build up your arsenal!
+Always look out for
+new weapons and ammo.
+
+                    You die if your health reaches
+                    zero. Health packs replenish
+                    your strength.
+
+Some rare items will
+give special powers
+and abilities.
+
+                    Some doors are locked! To open
+                    them you will have to find
+                    the right colored key.
+
+
+For more info, see the Freedoom manual:
+
+ https://freedoom.github.io/manual.pdf
