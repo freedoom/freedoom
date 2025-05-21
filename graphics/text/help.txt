@@ -17,4 +17,4 @@ and abilities.
 
 For more info, see the Freedoom manual:
 
- https://freedoom.github.io/manual.txt
+ https://freedoom.github.io/manual.html
