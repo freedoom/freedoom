@@ -236,6 +236,10 @@ red_graphics = {
     "m_multi": "Multiplayer",
     # Crispy Doom's Crispness menu:
     "m_crispy": "Crispness",
+    # DSDA's Level Table
+    "m_lvltbl": "Level Table",
+    # Nugget's Custom Skill
+    "m_cstskl": "Custom Skill...",
 }
 
 
