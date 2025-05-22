@@ -21,7 +21,7 @@ image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=
 <<<
 
 Copyright © 2001-2025 Contributors to the Freedoom project.
-Ce manuel est sous licence BSD à 3 clauses.
+Ce manuel est sous licence BSD-3-Clause.
 
 <<<
 
