@@ -18,7 +18,8 @@ jobs:
     - name: Install Prerequisites
       run: |
         sudo apt update
-        sudo apt install python3-pil asciidoc unzip zip ruby dos2unix
+        sudo apt install python3-pil asciidoc unzip zip ruby dos2unix \
+                         inkscape
         sudo gem install asciidoctor-pdf --pre
     - name: Install Deutex
       run: |
@@ -43,6 +44,10 @@ jobs:
           export VERSION=${VERSION:1}
         fi
         echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+    - name: Make manual cover PDFs
+      run: |
+        cd manual
+        make covers
     - name: Upload Freedoom
       uses: actions/upload-artifact@v4
       with:
