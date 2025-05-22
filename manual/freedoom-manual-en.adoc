@@ -1,7 +1,38 @@
 = Freedoom Manual
 // SPDX-License-Identifier: BSD-3-Clause
-:toc:
+:toc: macro
 :toc-title:
+:showtitle!:
+
+// This is the title page; it looks weird in Asciidoc but makes more
+// sense in the PDF output.
+
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+
+image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=70vw]
+[.text-center]
+*Game Manual*
+
+
+// We leave a blank page before the Table of Contents.
+
+[%always]
+<<<
+
+[%always]
+<<<
+
+toc::[]
+
+[%always]
+<<<
+
+== Introduction
 
 image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
