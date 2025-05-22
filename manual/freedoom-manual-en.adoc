@@ -14,22 +14,26 @@
 {empty} +
 {empty} +
 
-image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=70vw]
+image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=50vw]
 [.text-center]
 *Game Manual*
 
 
-// We leave a blank page before the Table of Contents.
-
-[%always]
 <<<
 
-[%always]
+{empty} +
+{empty} +
+
+Copyright © 2001-2024 Contributors to the Freedoom project.
+This manual is licensed under the 3-clause BSD license.
+
+This is the English version of the Freedoom manual. Translations into other
+languages can be found on the Freedoom website.
+
 <<<
 
 toc::[]
 
-[%always]
 <<<
 
 == Introduction
