@@ -11,7 +11,8 @@
 ASCIIDOCTOR_FLAGS = -a pdf-page-size=A5
 MANUAL_ADOC_FILES=$(wildcard freedoom-manual-??.adoc)
 MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
-COVER_PDF_FILES=cover.pdf
+COVER_PDF_FILES=cover-en.pdf
+COVER_SVG_FILES=$(patsubst %.pdf,cover/%.svg,$(COVER_PDF_FILES))
 
 all: $(MANUAL_PDF_FILES)
 
@@ -24,8 +25,11 @@ covers: $(COVER_PDF_FILES)
 freedoom-manual-%.pdf: freedoom-manual-%.adoc
 	-asciidoctor-pdf $(ASCIIDOCTOR_FLAGS) $< -o $@
 
-cover.pdf: cover/cover.svg cover/serpentipede.png cover/minigunner.png
+cover/cover-%.svg: cover/cover-%.sed cover/template.svg
+	sed -f $< < cover/template.svg > $@
+
+cover-%.pdf: cover/cover-%.svg cover/serpentipede.png cover/minigunner.png
 	inkscape -o $@ $<
 
 clean:
-	$(RM) $(MANUAL_PDF_FILES) $(COVER_PDF_FILES)
+	$(RM) $(MANUAL_PDF_FILES) $(COVER_PDF_FILES) $(COVER_SVG_FILES)
