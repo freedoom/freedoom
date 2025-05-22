@@ -24,7 +24,7 @@ image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=
 {empty} +
 {empty} +
 
-Copyright © 2001-2024 Contributors to the Freedoom project.
+Copyright © 2001-2025 Contributors to the Freedoom project.
 This manual is licensed under the 3-clause BSD license.
 
 This is the English version of the Freedoom manual. Translations into other
@@ -938,7 +938,7 @@ Freedoom’s website project page at https://github.com/freedoom/freedoom.github
 [[licence]]
 === BSD 3-Clause copyright licence
 
-Copyright © 2001-2024
+Copyright © 2001-2025
 Contributors to the Freedoom project.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

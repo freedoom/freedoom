@@ -689,7 +689,7 @@ https://github.com/freedoom/freedoom .
 [[licence]]
 === BSD 3-Clause copyright licence
 
-Copyright © 2001-2024
+Copyright © 2001-2025
 Contributors to the Freedoom project.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
