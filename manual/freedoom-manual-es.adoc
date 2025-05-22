@@ -18,17 +18,18 @@ image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=
 [.text-center]
 *Manual del Juego*
 
-// We leave a blank page before the Table of Contents.
-
-[%always]
 <<<
 
-[%always]
+{empty} +
+{empty} +
+
+Copyright © 2001-2025 Contributors to the Freedoom project.
+Este manual está licenciado bajo la licencia BSD de 3 cláusulas.
+
 <<<
 
 toc::[]
 
-[%always]
 <<<
 
 == Introducción
