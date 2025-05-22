@@ -17,5 +17,8 @@ all: $(MANUAL_PDF_FILES)
 freedoom-manual-%.pdf: freedoom-manual-%.adoc
 	-asciidoctor-pdf $(ASCIIDOCTOR_FLAGS) $< -o $@
 
+cover.pdf: cover/cover.svg cover/serpentipede.png cover/minigunner.png
+	inkscape -o $@ $<
+
 clean:
 	$(RM) $(MANUAL_PDF_FILES)
