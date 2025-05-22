@@ -11,7 +11,7 @@
 ASCIIDOCTOR_FLAGS = -a pdf-page-size=A5
 MANUAL_ADOC_FILES=$(wildcard freedoom-manual-??.adoc)
 MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
-COVER_PDF_FILES=cover-en.pdf
+COVER_PDF_FILES=cover-en.pdf cover-es.pdf cover-fr.pdf
 COVER_SVG_FILES=$(patsubst %.pdf,cover/%.svg,$(COVER_PDF_FILES))
 
 all: $(MANUAL_PDF_FILES)
@@ -33,3 +33,6 @@ cover-%.pdf: cover/cover-%.svg cover/serpentipede.png cover/minigunner.png
 
 clean:
 	$(RM) $(MANUAL_PDF_FILES) $(COVER_PDF_FILES) $(COVER_SVG_FILES)
+
+# Inkscape can't process files in parallel, it has to be sequential:
+.NOTPARALLEL: covers
