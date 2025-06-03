@@ -3,6 +3,7 @@
 :toc: macro
 :toc-title:
 :showtitle!:
+:build-version: (unknown)
 
 // This is the title page; it looks weird in Asciidoc but makes more
 // sense in the PDF output.
@@ -29,6 +30,8 @@ This manual is licensed under the 3-clause BSD license.
 
 This is the English version of the Freedoom manual. Translations into other
 languages can be found on the Freedoom website.
+
+This is version {build-version} of the manual.
 
 <<<
 

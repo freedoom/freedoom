@@ -3,6 +3,7 @@
 :toc: macro
 :toc-title:
 :showtitle!:
+:build-version: (desconocida)
 
 // This is the title page; it looks weird in Asciidoc but makes more
 // sense in the PDF output.
@@ -25,6 +26,8 @@ image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=
 
 Copyright © 2001-2025 Contributors to the Freedoom project.
 Este manual está licenciado bajo la licencia BSD de 3 cláusulas.
+
+Esta es la versión {build-version} del manual.
 
 <<<
 

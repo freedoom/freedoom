@@ -8,7 +8,8 @@
 #                 es    Spanish
 #                 fr    French
 
-ASCIIDOCTOR_FLAGS = -a pdf-page-size=A5
+BUILD_VERSION=$(shell git describe --abbrev=8 --dirty 2>/dev/null)
+ASCIIDOCTOR_FLAGS = -a pdf-page-size=A5 -a build-version=$(BUILD_VERSION)
 MANUAL_ADOC_FILES=$(wildcard freedoom-manual-??.adoc)
 MANUAL_PDF_FILES=$(subst .adoc,.pdf,$(MANUAL_ADOC_FILES))
 PRINT_PDF_FILES=$(subst .adoc,-print.pdf,$(MANUAL_ADOC_FILES))
