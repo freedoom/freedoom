@@ -44,10 +44,10 @@ jobs:
           export VERSION=${VERSION:1}
         fi
         echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
-    - name: Make manual cover PDFs
+    - name: Make print manual PDFs
       run: |
         cd manual
-        make covers
+        make print
     - name: Upload Freedoom
       uses: actions/upload-artifact@v4
       with:
