@@ -41,8 +41,8 @@ toc::[]
 image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
 Welcome to Freedoom, a complete game that is
-https://www.gnu.org/philosophy/free-sw.html[free]
-and https://opensource.org/osd/[open source software].
+https://www.gnu.org/philosophy/free-sw.html[free,role=bare]
+and https://opensource.org/osd/[open source software,role=bare].
 Freedoom is made available under the <<licence,modified BSD license>>, meaning that
 anyone is free to share it, modify it and reuse parts of it.
 
@@ -876,7 +876,7 @@ would depend on the company supplying them their paints.
 For over 30 years now, the Doom modding community has produced thousands upon
 thousands of levels, mods and even entirely new games built upon the original
 Doom games. These are works of art and ought to be recognised as such.
-https://www.youtube.com/watch?v=KxYND6K6u8w[Doom is an art scene].
+https://www.youtube.com/watch?v=KxYND6K6u8w[Doom is an art scene,role=bare].
 The raw material these works of art are made from is not paint or ink, but the
 original game itself -- endlessly modified, reused and remixed into new
 variations.
@@ -898,12 +898,12 @@ something that Freedoom can help to provide.
 
 == Contributing to Freedoom ==
 
-Freedoom is a https://www.gnu.org/philosophy/free-sw.html[free content]
-project contributed to by many users around the world. It is available as both
-free in cost (free as in free beer) and in modification and redistribution
-rights (free as in free speech) to end users, provided that the original
-software license is included and/or viewable by users of modified or
-redistributed versions.
+Freedoom is a
+https://www.gnu.org/philosophy/free-sw.html[free content,role=bare] project
+contributed to by many users around the world. It is available as both free in
+cost (free as in free beer) and in modification and redistribution rights (free
+as in free speech) to end users, provided that the original software license is
+included and/or viewable by users of modified or redistributed versions.
 
 If you’d like to contribute to the Freedoom project, please check out
 the following community hubs:
@@ -929,9 +929,9 @@ https://guides.github.com/activities/forking/
 [[reusing]]
 == Reusing portions of Freedoom ==
 
-Since https://freedoom.github.io/about.html[Freedoom is free], some other
-projects have used Freedoom’s assets.  We think this is a great use of the
-project and should be encouraged. If you use portions of Freedoom in your
+Since https://freedoom.github.io/about.html[Freedoom is free,role=bare], some
+other projects have used Freedoom’s assets.  We think this is a great use of
+the project and should be encouraged. If you use portions of Freedoom in your
 project, please let us know by filing an issue or pull request on
 Freedoom’s website project page at https://github.com/freedoom/freedoom.github.io.
 
