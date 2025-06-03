@@ -28,6 +28,8 @@ Este manual está licenciado bajo la licencia BSD de 3 cláusulas.
 
 <<<
 
+[big]*Sumario*
+
 toc::[]
 
 <<<

@@ -32,6 +32,9 @@ languages can be found on the Freedoom website.
 
 <<<
 
+// Note this is not a heading, so the ToC does not appear in itself.
+[big]*Table of Contents*
+
 toc::[]
 
 <<<

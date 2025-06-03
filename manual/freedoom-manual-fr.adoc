@@ -25,6 +25,8 @@ Ce manuel est sous licence BSD-3-Clause.
 
 <<<
 
+[big]*Sommaire*
+
 toc::[]
 
 <<<
