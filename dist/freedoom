@@ -6,7 +6,7 @@
 
 # "doom" is Debian’s generic name for their alternatives system.
 
-PORTS="doom odamex gzdoom crispy-doom chocolate-doom prboom-plus"
+PORTS="doom odamex gzdoom dsda-doom woof crispy-doom chocolate-doom prboom-plus"
 
 # Just a single argument starting the command is allowed, -p, in order
 # to explicitly set a port on the command line. -- is also supported
