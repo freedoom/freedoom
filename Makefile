@@ -252,6 +252,7 @@ news-to-feed: NEWS.adoc
 prefix?=/usr/local
 bindir?=/bin
 docdir?=/share/doc
+icodir?=/share/icons/hicolor/64x64/apps
 mandir?=/share/man
 waddir?=/share/games/doom
 target=$(DESTDIR)$(prefix)
@@ -266,7 +267,7 @@ install-freedm: $(FREEDM) $(HTMLDOCS) $(MANUAL_PDF_FILES) \
 	install -Dm 644 dist/freedm.6 -t "$(target)$(mandir)/man6"
 	install -Dm 644 $(FREEDM) -t "$(target)$(waddir)"
 	install -Dm 644 dist/io.github.freedoom.FreeDM.png \
-	                -t "$(target)/share/icons"
+	                -t "$(target)$(icodir)"
 	install -Dm 644 CREDITS CREDITS-LEVELS CREDITS-MUSIC NEWS.html README.html -t "$(target)$(docdir)/freedm"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedm/COPYING"
 	-install -Dm 644 $(MANUAL_PDF_FILES) -t "$(target)$(docdir)/freedm"
@@ -289,9 +290,9 @@ install-freedoom: $(FREEDOOM1) $(FREEDOOM2) $(HTMLDOCS)                 \
 	install -Dm 644 dist/freedoom2.6 -t "$(target)$(mandir)/man6"
 	install -Dm 644 $(FREEDOOM1) $(FREEDOOM2) -t "$(target)$(waddir)"
 	install -Dm 644 dist/io.github.freedoom.Phase1.png \
-	                -t "$(target)/share/icons"
+	                -t "$(target)$(icodir)"
 	install -Dm 644 dist/io.github.freedoom.Phase2.png \
-	                -t "$(target)/share/icons"
+	                -t "$(target)$(icodir)"
 	install -Dm 644 CREDITS CREDITS-LEVELS CREDITS-MUSIC NEWS.html README.html \
 	                -t "$(target)$(docdir)/freedoom"
 	install -Dm 644 COPYING.adoc "$(target)$(docdir)/freedoom/COPYING"
@@ -304,7 +305,7 @@ uninstall-freedm:
 	$(RM)                                                                   \
 	      "$(target)/share/applications/io.github.freedoom.FreeDM.desktop"  \
 	      "$(target)/share/metainfo/io.github.freedoom.FreeDM.metainfo.xml" \
-	      "$(target)/share/icons/io.github.freedoom.FreeDM.png"             \
+	      "$(target)$(icodir)/io.github.freedoom.FreeDM.png"             \
 	      "$(target)$(bindir)/freedm"                                       \
 	      "$(target)$(mandir)/man6/freedm.6"                                \
 	      "$(target)$(waddir)/freedm.wad"                                   \
@@ -316,7 +317,7 @@ uninstall-freedm:
 	      "$(target)$(docdir)/freedm/README.html"                           \
 	       $(target)$(docdir)/freedm/freedoom-manual-??.pdf
 	-rmdir -p "$(target)/share/applications"                    \
-	      "$(target)/share/metainfo" "$(target)/share/icons"    \
+	      "$(target)/share/metainfo" "$(target)$(icodir)"    \
 	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \
 	      "$(target)$(waddir)" "$(target)$(docdir)/freedm"
 
@@ -326,8 +327,8 @@ uninstall-freedoom:
 	      "$(target)/share/applications/io.github.freedoom.Phase2.desktop"  \
 	      "$(target)/share/metainfo/io.github.freedoom.Phase1.metainfo.xml" \
 	      "$(target)/share/metainfo/io.github.freedoom.Phase2.metainfo.xml" \
-	      "$(target)/share/icons/io.github.freedoom.Phase1.png"             \
-	      "$(target)/share/icons/io.github.freedoom.Phase2.png"             \
+	      "$(target)$(icodir)/io.github.freedoom.Phase1.png"             \
+	      "$(target)$(icodir)/io.github.freedoom.Phase2.png"             \
 	      "$(target)$(bindir)/freedoom1"                                    \
 	      "$(target)$(bindir)/freedoom2"                                    \
 	      "$(target)$(mandir)/man6/freedoom1.6"                             \
@@ -342,7 +343,7 @@ uninstall-freedoom:
 	      "$(target)$(docdir)/freedoom/README.html"                         \
 	       $(target)$(docdir)/freedoom/freedoom-manual-??.pdf
 	-rmdir -p "$(target)/share/applications"                    \
-	      "$(target)/share/metainfo" "$(target)/share/icons"    \
+	      "$(target)/share/metainfo" "$(target)$(icodir)"    \
 	      "$(target)$(bindir)" "$(target)$(mandir)/man6"        \
 	      "$(target)$(waddir)" "$(target)$(docdir)/freedoom"
 
