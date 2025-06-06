@@ -1,13 +1,49 @@
 = Manual de Freedoom
 // SPDX-License-Identifier: BSD-3-Clause
-:toc:
+:toc: macro
 :toc-title:
+:showtitle!:
+:build-version: (desconocida)
+
+// This is the title page; it looks weird in Asciidoc but makes more
+// sense in the PDF output.
+
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+
+image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=70vw]
+[.text-center]
+*Manual del Juego*
+
+<<<
+
+{empty} +
+{empty} +
+
+Copyright © 2001-2025 Contributors to the Freedoom project.
+Este manual está licenciado bajo la licencia BSD de 3 cláusulas.
+
+Esta es la versión {build-version} del manual.
+
+<<<
+
+[big]*Sumario*
+
+toc::[]
+
+<<<
+
+== Introducción
 
 image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
 Bienvenido a Freedoom, un juego completo que es software
-https://www.gnu.org/philosophy/free-sw.html[libre]
-y de https://opensource.org/osd/[código abierto].
+https://www.gnu.org/philosophy/free-sw.html[libre,role=bare]
+y de https://opensource.org/osd/[código abierto,role=bare].
 Freedoom esta disponible bajo una <<licence,licencia BSD modificada>>, lo que significa
 que cualquiera es libre de compartirlo, modificarlo y reutilizar partes de el.
 
@@ -864,7 +900,7 @@ Por más de 30 años, la comunidad de modding de Doom ha producido miles y miles
 de niveles, mods e incluso juegos completamente nuevos hechos en base a los
 juegos de Doom originales. Estos son obras de artes y deberían ser reconocidos
 como tales.
-https://www.youtube.com/watch?v=KxYND6K6u8w[Doom es una escena artística].
+https://www.youtube.com/watch?v=KxYND6K6u8w[Doom es una escena artística,role=bare].
 La materia prima de estas obras de arte no es pintura ni tinta, sino el juego
 original -- modificado, reutilizado y reversionado sin cesar para dar nuevas
 variaciones.
@@ -887,10 +923,10 @@ y reutilizar, esperamos que eso sea algo que Freedoom pueda otorgar.
 == Contribuir a Freedoom
 
 Freedoom es un proyecto de
-https://www.gnu.org/philosophy/free-sw.es.html[contenido libre] al que
-contribuyen muchos usuarios de todo el mundo. Está disponible tanto como sin
-costo (gratis) y en derechos de modificación y redistribución (libre como en
-libertad de expresión) para los usuarios finales, siempre que la licencia de
+https://www.gnu.org/philosophy/free-sw.es.html[contenido libre,role=bare] al
+que contribuyen muchos usuarios de todo el mundo. Está disponible tanto como
+sin costo (gratis) y en derechos de modificación y redistribución (libre como
+en libertad de expresión) para los usuarios finales, siempre que la licencia de
 software original esté incluida y/o sea visible para los usuarios del software
 modificado o versiones redistribuidas.
 
@@ -915,17 +951,18 @@ https://guides.github.com/activities/forking/
 [[reusing]]
 == Reusar partes de Freedoom
 
-Dado que https://freedoom.github.io/about.html[Freedoom es libre], algunos
-otros proyectos han utilizado los materiales de Freedoom. Creemos que este es
-un gran uso del proyecto y debe fomentarse. Si tu usas partes de Freedoom en tu
-proyecto, puedes informarnos presentando una solicitud a
-la página web del proyecto Freedoom en https://github.com/freedoom/freedoom.github.io.
+Dado que https://freedoom.github.io/about.html[Freedoom es libre,role=bare],
+algunos otros proyectos han utilizado los materiales de Freedoom. Creemos que
+este es un gran uso del proyecto y debe fomentarse. Si tu usas partes de
+Freedoom en tu proyecto, puedes informarnos presentando una solicitud a
+la página web del proyecto Freedoom en
+https://github.com/freedoom/freedoom.github.io.
 
 
 [[licence]]
 === Licencia BSD modificada (inglés)
 
-Copyright © 2001-2024
+Copyright © 2001-2025
 Contributors to the Freedoom project.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
