@@ -1,13 +1,46 @@
 = Manuel Freedoom
 // SPDX-License-Identifier: BSD-3-Clause
-:toc:
+:toc: macro
 :toc-title:
+:showtitle!:
+:build-version: (inconnue)
+
+// This is the title page; it looks weird in Asciidoc but makes more
+// sense in the PDF output.
+
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+
+image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=70vw]
+[.text-center]
+*Manuel du Jeu*
+
+<<<
+
+Copyright © 2001-2025 Contributors to the Freedoom project.
+Ce manuel est sous licence BSD-3-Clause.
+
+Il s'agit de la version {build-version} du manuel.
+
+<<<
+
+[big]*Sommaire*
+
+toc::[]
+
+<<<
+
+== Introduction
 
 image::../graphics/titlepic/titlepic.png[Freedoom Title Image,align="center",width=380,pdfwidth=50vw]
 
 Bienvenue sur Freedoom, un jeu complet qui est
-https://www.gnu.org/philosophy/free-sw.html[libre]
-et https://opensource.org/osd/[open source].
+https://www.gnu.org/philosophy/free-sw.html[libre,role=bare]
+et https://opensource.org/osd/[open source,role=bare].
 Freedoom est disponible sous <<licence, la licence BSD Modifiée>>, permettant
 n'importe qui de partager, de modifier et de réutiliser des parties du jeu.
 
@@ -617,7 +650,7 @@ Le mot « free » a deux significations différentes en Anglais. On dit « fre
 
 Imaginez un monde où les artistes ne peuvent qu'acheter de la peinture d'une seule compagnie. Un tel monopole signifierait que la peinture couterait plus chères, mais le prix ne serait pas le problème principal. Le plus gros problème serait le pouvoir qu'il accorderait à cette compagnie. La liberté de ces artistes de s'exprimer dépendrait de la compagnie qui leur fournit leurs peintures.
 
-Depuis plus de 30 ans, la communauté de modders Doom a produit des milliers de niveaux, mods et même des nouveaux jeux construits à partir des jeux Doom originaux. Ce sont des œuvres d'art qui doivent être reconnues comme telles. https://www.youtube.com/watch?v=KxYND6K6u8w[Doom est une scène artistique]. La matière première à partir de laquelle ces œuvres d'art sont fabriquées n'est ni de la peinture ou de l’encre, mais le jeu original lui-même -- sans cesse modifié, réutilisé et remixé en de nouvelles variations.
+Depuis plus de 30 ans, la communauté de modders Doom a produit des milliers de niveaux, mods et même des nouveaux jeux construits à partir des jeux Doom originaux. Ce sont des œuvres d'art qui doivent être reconnues comme telles. https://www.youtube.com/watch?v=KxYND6K6u8w[Doom est une scène artistique,role=bare]. La matière première à partir de laquelle ces œuvres d'art sont fabriquées n'est ni de la peinture ou de l’encre, mais le jeu original lui-même -- sans cesse modifié, réutilisé et remixé en de nouvelles variations.
 
 Les auteurs de Doom, id Software, ont historiquement été très généreux envers la communauté Doom. Dès la sortie du jeu, ils ont fait de leur mieux pour partager les détails techniques avec les fans, et quelques années après ils ont publié le code source de Doom sous une licence libre -- quelque chose qui était inconnu dans l'industrie du jeu vidéo à l'époque et qui devrait être félicité. Mais malgré cette bienveillance, ils ont toujours occupé une position de pouvoir. Aujourd'hui, au lieu d'être un petit studio indépendant, eux et la franchise Doom appartiennent à une grande multinationale.
 
@@ -625,7 +658,7 @@ Tout le monde mérite de pouvoir apprécier la merveille qu'est Doom et de parti
 
 == Contribuer à Freedoom ==
 
-Freedoom est un projet au https://www.gnu.org/philosophy/free-sw.html[contenu libre] avec de nombreux contributeurs venant du monde entier. Il est disponible à la fois "free" ^1^ en coût ("free" ^1^ comme une bière gratuite) et en droit de modification et de redistribution ("free" ^1^ comme la liberté d'expression) aux utilisateurs finaux, à condition que la licence originale soit incluse et/ou visible aux utilisateurs de versions modifiées ou redistribuées. 
+Freedoom est un projet au https://www.gnu.org/philosophy/free-sw.html[contenu libre,role=bare] avec de nombreux contributeurs venant du monde entier. Il est disponible à la fois "free" ^1^ en coût ("free" ^1^ comme une bière gratuite) et en droit de modification et de redistribution ("free" ^1^ comme la liberté d'expression) aux utilisateurs finaux, à condition que la licence originale soit incluse et/ou visible aux utilisateurs de versions modifiées ou redistribuées. 
 
 Si vous souhaitez contribuer au projet Freedoom, veuillez consulter
 les hubs communautaires suivants:
@@ -653,7 +686,7 @@ https://guides.github.com/activities/forking/
 [[reusing]]
 == Réutilisation de portions de Freedoom ==
 
-Puisque https://freedoom.github.io/about.html[Freedoom est libre], d'autres projets ont utilisé des éléments de Freedom.  Nous pensons que c'est une excellente utilisation du projet et nous l'encourageons. Si vous utilisez des portions de Freedoom dans votre projet, veuillez nous informer en formulant une « issue » ou un « pull request » sur la page du projet Freedoom
+Puisque https://freedoom.github.io/about.html[Freedoom est libre,role=bare], d'autres projets ont utilisé des éléments de Freedom.  Nous pensons que c'est une excellente utilisation du projet et nous l'encourageons. Si vous utilisez des portions de Freedoom dans votre projet, veuillez nous informer en formulant une « issue » ou un « pull request » sur la page du projet Freedoom
 https://github.com/freedoom/freedoom .
 
 <<<
@@ -661,7 +694,7 @@ https://github.com/freedoom/freedoom .
 [[licence]]
 === BSD 3-Clause copyright licence
 
-Copyright © 2001-2024
+Copyright © 2001-2025
 Contributors to the Freedoom project.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

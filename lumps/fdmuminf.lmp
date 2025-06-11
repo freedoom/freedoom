@@ -356,14 +356,14 @@ map MAP29
 
 map MAP30
 {
-	LevelName = "Last Man Standing"
+	LevelName = "Violent Vicinity"
 	Label = "DM30"
 	LevelPic = "CWILV29"
 	Next = "MAP01"
 	Music = "D_OPENIN"
 	SkyTexture = "SKY3"
 	InterText = clear
-	Author = "deathz0r"
+	Author = "deathz0r & Xindage"
 }
 
 map MAP31
