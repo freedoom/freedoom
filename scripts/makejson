@@ -42,14 +42,15 @@ if json_file is None:
     sys.stderr.write("JSON file not specified!\n")
     sys.exit(1)
 
-with open("wads/freedoom1.wad", "rb") as f:
-    iwads["freedoom1.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
+for filename in iwads:
+    with open(os.path.join("wads", filename), "rb") as f:
+        data = f.read()
+        # TODO: MD5 is long-deprecated throughout the industry; this hash
+        # will be removed in a future version.
+        iwads[filename]["md5"] = hashlib.md5(data).hexdigest()
+        iwads[filename]["sha3"] = hashlib.sha3_512(data).hexdigest()
+        iwads[filename]["blake2b"] = hashlib.blake2b(data).hexdigest()
 
-with open("wads/freedoom2.wad", "rb") as f:
-    iwads["freedoom2.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
-
-with open("wads/freedm.wad", "rb") as f:
-    iwads["freedm.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
 
 iwads["freedoom1.wad"]["url"] = (
     "https://github.com/freedoom/freedoom/releases/download/v"
