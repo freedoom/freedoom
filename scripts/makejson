@@ -51,6 +51,7 @@ for filename in iwads:
         iwads[filename]["sha3"] = hashlib.sha3_512(data).hexdigest()
         iwads[filename]["blake2b"] = hashlib.blake2b(data).hexdigest()
 
+    iwads[filename]["version"] = version
 
 iwads["freedoom1.wad"]["url"] = (
     "https://github.com/freedoom/freedoom/releases/download/v"
@@ -59,15 +60,7 @@ iwads["freedoom1.wad"]["url"] = (
     + version
     + ".zip"
 )
-iwads["freedoom1.wad"]["version"] = version
-iwads["freedoom2.wad"]["url"] = (
-    "https://github.com/freedoom/freedoom/releases/download/v"
-    + version
-    + "/freedoom-"
-    + version
-    + ".zip"
-)
-iwads["freedoom2.wad"]["version"] = version
+iwads["freedoom2.wad"]["url"] = iwads["freedoom1.wad"]["url"]
 iwads["freedm.wad"]["url"] = (
     "https://github.com/freedoom/freedoom/releases/download/v"
     + version
@@ -75,7 +68,6 @@ iwads["freedm.wad"]["url"] = (
     + version
     + ".zip"
 )
-iwads["freedm.wad"]["version"] = version
 
 with open(json_file, "w") as f:
     json.dump(iwads, f, indent=2, sort_keys=True)
