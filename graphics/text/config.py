@@ -103,7 +103,7 @@ freedoom_bex = read_bex_lump("../../lumps/p2_deh.lmp")
 freedm_bex = read_bex_lump("../../lumps/fdm_deh.lmp")
 
 def read_bex_string(whichbex,defn):
-    return re.sub("^\w*\d:\s*", "", whichbex[defn])
+    return re.sub(r"^\w*\d:\s*", "", whichbex[defn])
 
 
 white_graphics = {
@@ -236,6 +236,10 @@ red_graphics = {
     "m_multi": "Multiplayer",
     # Crispy Doom's Crispness menu:
     "m_crispy": "Crispness",
+    # DSDA's Level Table
+    "m_lvltbl": "Level Table",
+    # Nugget's Custom Skill
+    "m_cstskl": "Custom Skill...",
 }
 
 
@@ -252,7 +256,7 @@ def update_level_name(lumpname, bexdata, bexname):
             "Level name %s not defined in " "DEHACKED lump!" % bexname
         )
     # Strip "MAP01: " or "E1M2: " etc. from start, if present:
-    levelname = re.sub("^\w*\d:\s*", "", bexdata[bexname])
+    levelname = re.sub(r"^\w*\d:\s*", "", bexdata[bexname])
     white_graphics[lumpname] = levelname
 
 for e in range(4):
