@@ -146,6 +146,10 @@ FREEDOOM
 ; Big font used by ZDoom-based ports for menu text.
 DBIGFONT
 
+; Language used by ZDoom-based ports for string replacement
+; and internationalization.
+LANGUAGE
+
 #ifdef FREEDM
 DEHACKED = fdm_deh
 UMAPINFO = fdmuminf
@@ -871,6 +875,8 @@ M_VIDEO		0	1
 M_WAD		0	1
 M_WADOPT	0	1
 M_CRISPY	0	1
+M_LVLTBL	0	1
+M_CSTSKL	0	1
 
 BRDR_TL	-5	-5
 BRDR_T	0	-5
@@ -2465,9 +2471,9 @@ COL4A0 18 40
 COL5A0 18 53
 COL5B0 18 53
 COL6A0 18 49
-FCANA0	12	62
-FCANB0	12	62
-FCANC0	12	62
+FCANA0	12	57
+FCANB0	12	57
+FCANC0	12	57
 FSKUA0 17 47
 FSKUB0 17 47
 FSKUC0 17 47
