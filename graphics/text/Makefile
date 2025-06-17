@@ -7,7 +7,7 @@ TEXTGEN_GRAPHIC_LUMPS = \
   m_gdlow.png  m_hurt.png   m_jkill.png  m_lgttl.png  m_loadg.png  \
   m_messg.png  m_msens.png  m_msgoff.png m_msgon.png  m_musvol.png \
   m_newg.png   m_ngame.png  m_nmare.png  m_option.png m_optttl.png \
-  m_quitg.png  m_rdthis.png m_rough.png  m_saveg.png  \
+  m_quitg.png  m_rdthis.png m_rough.png  m_saveg.png               \
   m_scrnsz.png m_sfxvol.png m_sgttl.png  m_skill.png  m_svol.png   \
   m_about.png  m_accel.png  m_auto.png   m_chat.png   m_chatm.png  \
   m_compat.png m_demos.png  m_dmflag.png m_enem.png   m_etcopt.png \
@@ -16,7 +16,7 @@ TEXTGEN_GRAPHIC_LUMPS = \
   m_mess.png   m_mouse.png  m_multi.png  m_player.png m_serial.png \
   m_setup.png  m_sound.png  m_stat.png   m_status.png m_tcpip.png  \
   m_versen.png m_video.png  m_wad.png    m_wadopt.png m_weap.png   \
-  m_crispy.png                                                     \
+  m_crispy.png m_lvltbl.png m_cstskl.png                           \
   prboom.png   t_phase1.png t_phase2.png                           \
   m_ultra.png  wibp1.png    wibp2.png    wibp3.png    wibp4.png    \
   wicolon.png  wienter.png  wif.png      wifrgs.png   wipcnt.png   \
