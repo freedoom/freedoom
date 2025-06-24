@@ -5,11 +5,6 @@ person shooter game, but _Freedoom_ by itself is just the raw material
 for a game.  It must be paired with a compatible _Doom_ engine to be
 played.
 
-There is a massive https://doomwiki.org/wiki/Idgames_archive[back
-catalog], spanning over two decades, containing thousands of _Doom_
-levels and other modifications (“mods”) made by fans of the game.
-_Freedoom_ aims to be compatible with these and allows most to be
-played without the need to use non-free software.
 
 _Freedoom_ is actually three games in one, consisting of two
 single-player oriented campaigns and one set of levels designed
@@ -83,6 +78,16 @@ named +freedoom1+, +freedoom2+, and +freedm+ that automatically run an
 engine for proper play.  Desktop files may also be installed so that
 you can start the game using a graphical interface and avoid the
 command line altogether.
+
+== Compatibility
+
+A secondary goal of Freedoom is _compatibility_ with modifications
+("mods") for the original Doom.  There is a massive
+https://doomwiki.org/wiki/Idgames_archive[back catalog], spanning over
+two decades, containing thousands of _Doom_ levels and other
+mods made by fans of the game. _Freedoom_ aims to be compatible with
+these and allows most to be played without the need to use non-free
+software.
 
 == What “free” means
 
