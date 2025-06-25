@@ -64,7 +64,7 @@ Printed, physical manuals are also available for purchase.
 A secondary goal of Freedoom is _compatibility_ with modifications
 ("mods") for the original Doom.  There is a massive
 https://doomwiki.org/wiki/Idgames_archive[back catalog], spanning over
-two decades, containing thousands of _Doom_ levels and other
+three decades, containing thousands of _Doom_ levels and other
 mods made by fans of the game. _Freedoom_ aims to be compatible with
 these and allows most to be played without the need to use non-free
 software.
