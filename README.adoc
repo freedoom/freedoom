@@ -50,6 +50,15 @@ for proper play. Desktop files may also be installed so that you can
 start the game using a graphical interface and avoid the command line
 a ltogether.
 
+== Manual
+
+Freedoom has a complete PDF format manual that describes how to play the
+game, including an introductory tutorial and some tactical tips. It also
+has information on the monsters and power-ups you'll encounter during
+play. The manual is available in multiple languages and can be
+downloaded https://freedoom.github.io/manual.html[on the website].
+Printed, physical manuals are also available for purchase.
+
 == Compatibility
 
 A secondary goal of Freedoom is _compatibility_ with modifications
