@@ -1,7 +1,7 @@
 = Freedoom
 
-The Freedoom project aims to create a complete, free content first
-person shooter game, based on the _Doom_ engine.
+_Freedoom_ is a complete, free content first person shooter game,
+based on the _Doom_ engine.
 
 _Freedoom_ is not a program - rather, it consists of the levels,
 artwork, sound effects and music that make up the game. To play
