@@ -1,10 +1,12 @@
 = Freedoom
 
 The Freedoom project aims to create a complete, free content first
-person shooter game, but _Freedoom_ by itself is just the raw material
-for a game.  It must be paired with a compatible _Doom_ engine to be
-played.
+person shooter game, based on the _Doom_ engine.
 
+_Freedoom_ is not a program - rather, it consists of the levels,
+artwork, sound effects and music that make up the game. To play
+_Freedoom_, <<How-to-play,it must be paired with an engine>> that
+can play it.
 
 _Freedoom_ is actually three games in one, consisting of two
 single-player oriented campaigns and one set of levels designed
@@ -18,15 +20,6 @@ mods, also known as plain _Doom_ or _Doom 1_.
 monsters and a double-barrelled shotgun.  This project aims for
 compatibility with _Doom II_ mods.
 *FreeDM*:: A 32-level game designed for competitive deathmatch play.
-
-The engine uses a single file, such as +freedoom2.wad+, that contains
-all the game data such as graphics, sound effects, music, and so on.
-This file is often called an “IWAD” by those in the _Doom_ and
-_Freedoom_ communities.  While the _Doom_ engine source code is free,
-you would normally still need one of the proprietary data files from
-https://www.idsoftware.com/[id Software] to play _Doom_.  _Freedoom_
-aims to create a free alternative: combined with the GPL-licensed
-_Doom_ source code, this results in a completely free game.
 
 For more information, see https://freedoom.github.io/.
 
