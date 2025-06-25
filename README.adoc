@@ -99,10 +99,11 @@ The general rules go as follows:
     permission to include it in the _Freedoom_ project.  They may not
     place additional restrictions compared to the normal _Freedoom_
     license.
-  * Do not try to emulate _Doom_ resources exactly.  Where possible,
-    put effort to make new versions look visibly different from
-    _Doom_.  This is a tough call, because our compatibility with
-    _Doom_ mods limits how far we can deviate, but it is feasible.
+  * Freedoom's name often leads some people to think that the project's
+    goal is to make a "free clone of Doom". This is not the case! While
+    compatibility with Doom is a goal, we are our building our own game.
+    Please make an effort to ensure your work is original and distinct,
+    and not just a copy of anything from Doom.
   * Be especially careful of “free textures” (or “free sounds” or
     “free graphics”) sites.  Although these would appear at first to
     be okay to use, many are free for “non-commercial use only.”
