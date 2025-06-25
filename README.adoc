@@ -43,34 +43,12 @@ or your home directory.  If _Freedoom_ comes packaged as part of your
 operating system distribution, it should already be installed into the
 proper location.
 
-Hopefully, your engine of choice should already be capable of running
-_Freedoom_ without extra configuration.  This may not be the case,
-however, if the engine does not recognize any of the filenames for
-_Freedoom_, and might require manual intervention to make it so.  One
-of the following options should solve it:
-
-  * Use the +-iwad+ command line parameter.  For example, to play
-    Phase 2, you can enter +-iwad freedoom2.wad+ either at a command
-    line, or adding it to an application shortcut.
-  * Use the +DOOMWADPATH+ environment variable.  Many engines support
-    this variable to add directories and/or files to their search
-    path.  The exact syntax matches your operating system’s normal
-    +PATH+ environment variable.
-  * Rename the game files.  This may be a bit crude, but you can
-    rename the files to match those of _Doom_’s.  This is often the
-    easiest quick-fix, although it is normally desirable to use one of
-    the above methods if possible.
-
-    ** +freedoom1.wad+ can be renamed to +doom.wad+
-    ** +freedoom2.wad+ can be renamed to +doom2.wad+
-    ** +freedm.wad+ can be renamed to +doom2.wad+
-
-Additionally, for Unix-like operating systems, such as GNU/Linux or a
-BSD variant, _Freedoom_ may be packaged and installed with programs
-named +freedoom1+, +freedoom2+, and +freedm+ that automatically run an
-engine for proper play.  Desktop files may also be installed so that
-you can start the game using a graphical interface and avoid the
-command line altogether.
+For Unix-like operating systems, such as GNU/Linux or a BSD variant,
+_Freedoom_ may be packaged and installed with programs named
++freedoom1+, +freedoom2+, and +freedm+ that automatically run an engine
+for proper play. Desktop files may also be installed so that you can
+start the game using a graphical interface and avoid the command line
+a ltogether.
 
 == Compatibility
 
