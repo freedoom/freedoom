@@ -34,7 +34,7 @@ json_file = os.getenv("JSON")
 if version is None:
     sys.stderr.write("Version is not specified for release\n")
     sys.exit(1)
-if version[0] is "v":
+if version.startswith("v"):
     # Strip the leading "v" from versioning
     version = version[1:]
 
@@ -42,14 +42,16 @@ if json_file is None:
     sys.stderr.write("JSON file not specified!\n")
     sys.exit(1)
 
-with open("wads/freedoom1.wad", "rb") as f:
-    iwads["freedoom1.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
+for filename in iwads:
+    with open(os.path.join("wads", filename), "rb") as f:
+        data = f.read()
+        # TODO: MD5 is long-deprecated throughout the industry; this hash
+        # will be removed in a future version.
+        iwads[filename]["md5"] = hashlib.md5(data).hexdigest()
+        iwads[filename]["sha3"] = hashlib.sha3_512(data).hexdigest()
+        iwads[filename]["blake2b"] = hashlib.blake2b(data).hexdigest()
 
-with open("wads/freedoom2.wad", "rb") as f:
-    iwads["freedoom2.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
-
-with open("wads/freedm.wad", "rb") as f:
-    iwads["freedm.wad"]["md5"] = hashlib.md5(f.read()).hexdigest()
+    iwads[filename]["version"] = version
 
 iwads["freedoom1.wad"]["url"] = (
     "https://github.com/freedoom/freedoom/releases/download/v"
@@ -58,15 +60,7 @@ iwads["freedoom1.wad"]["url"] = (
     + version
     + ".zip"
 )
-iwads["freedoom1.wad"]["version"] = version
-iwads["freedoom2.wad"]["url"] = (
-    "https://github.com/freedoom/freedoom/releases/download/v"
-    + version
-    + "/freedoom-"
-    + version
-    + ".zip"
-)
-iwads["freedoom2.wad"]["version"] = version
+iwads["freedoom2.wad"]["url"] = iwads["freedoom1.wad"]["url"]
 iwads["freedm.wad"]["url"] = (
     "https://github.com/freedoom/freedoom/releases/download/v"
     + version
@@ -74,7 +68,6 @@ iwads["freedm.wad"]["url"] = (
     + version
     + ".zip"
 )
-iwads["freedm.wad"]["version"] = version
 
 with open(json_file, "w") as f:
     json.dump(iwads, f, indent=2, sort_keys=True)

@@ -19,18 +19,8 @@ jobs:
       run: |
         sudo apt update
         sudo apt install python3-pil asciidoc unzip zip ruby dos2unix \
-                         inkscape
+                         inkscape deutex
         sudo gem install asciidoctor-pdf --pre
-    - name: Install Deutex
-      run: |
-        git clone https://github.com/Doom-Utils/deutex.git
-        cd deutex
-        git checkout v5.2.1
-        sudo apt install libpng-dev
-        ./bootstrap
-        ./configure
-        make
-        sudo make install
     - name: Build
       id: buildstep
       run: |
