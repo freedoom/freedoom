@@ -28,7 +28,7 @@ def read(filename):
     with open(filename, "rb") as f:
         data = f.read()
 
-    header, name = struct.unpack("4s32s", data[0:36])
+    header, name = struct.unpack("<4s32s", data[0:36])
     header = header.decode("ascii")
 
     if header != HEADER_VALUE:
@@ -38,20 +38,20 @@ def read(filename):
     result = {"name": name.decode("ascii").rstrip("\0").rstrip()}
 
     for i in range(len(FIELDS)):
-        result[FIELDS[i]], = struct.unpack("B", instr_data[i : i + 1])
+        result[FIELDS[i]], = struct.unpack("<B", instr_data[i : i + 1])
 
     return result
 
 
 def write(filename, data):
     with open(filename, "wb") as f:
-        f.write(struct.pack("4s", HEADER_VALUE.encode("ascii")))
-        f.write(struct.pack("32s", data["name"].encode("ascii")))
+        f.write(struct.pack("<4s", HEADER_VALUE.encode("ascii")))
+        f.write(struct.pack("<32s", data["name"].encode("ascii")))
 
         for field in FIELDS:
-            f.write(struct.pack("B", data[field]))
+            f.write(struct.pack("<B", data[field]))
         for x in range(16 - len(FIELDS)):
-            f.write(struct.pack("B", 0))
+            f.write(struct.pack("<B", 0))
 
 
 if __name__ == "__main__":
