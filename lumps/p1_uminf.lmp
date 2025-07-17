@@ -4,16 +4,16 @@
 
 map E1M1
 {
-	LevelName = "Outer Prison"
+	LevelName = "Filtration System"
 	LevelPic = "WILV00"
 	Label = "E1M1"
 	Next = "E1M2"
 	Music = "D_E1M1"
 	SkyTexture = "SKY1"
-	ParTime = 30
+	ParTime = 90
 	Episode = clear
 	Episode = "M_EPI1", "Outpost Outbreak", "1"
-	Author = "YukiHerz"
+	Author = "Charli Reef"
 }
 
 map E1M2
