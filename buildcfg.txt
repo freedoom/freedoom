@@ -599,7 +599,7 @@ D_READ_M = D_FDMRDM
 
 #ifdef PHASE1
 TITLEPIC 0 0          = fd1title
-M_DOOM   13 -16
+M_DOOM   12 -20
 #else
 #ifdef FREEDM
 TITLEPIC 0 0          = fdmtitle
