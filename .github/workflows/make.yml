@@ -18,18 +18,9 @@ jobs:
     - name: Install Prerequisites
       run: |
         sudo apt update
-        sudo apt install python3-pil asciidoc unzip zip ruby dos2unix
+        sudo apt install python3-pil asciidoc unzip zip ruby dos2unix \
+                         inkscape deutex
         sudo gem install asciidoctor-pdf --pre
-    - name: Install Deutex
-      run: |
-        git clone https://github.com/Doom-Utils/deutex.git
-        cd deutex
-        git checkout v5.2.1
-        sudo apt install libpng-dev
-        ./bootstrap
-        ./configure
-        make
-        sudo make install
     - name: Build
       id: buildstep
       run: |
@@ -43,6 +34,10 @@ jobs:
           export VERSION=${VERSION:1}
         fi
         echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+    - name: Make print manual PDFs
+      run: |
+        cd manual
+        make print
     - name: Upload Freedoom
       uses: actions/upload-artifact@v4
       with:

@@ -1,15 +1,12 @@
 = Freedoom
 
-The Freedoom project aims to create a complete, free content first
-person shooter game, but _Freedoom_ by itself is just the raw material
-for a game.  It must be paired with a compatible _Doom_ engine to be
-played.
+_Freedoom_ is a complete, free content first person shooter game,
+based on the _Doom_ engine.
 
-There is a massive https://doomwiki.org/wiki/Idgames_archive[back
-catalog], spanning over two decades, containing thousands of _Doom_
-levels and other modifications (“mods”) made by fans of the game.
-_Freedoom_ aims to be compatible with these and allows most to be
-played without the need to use non-free software.
+_Freedoom_ is not a program - rather, it consists of the levels,
+artwork, sound effects and music that make up the game. To play
+_Freedoom_, <<How-to-play,it must be paired with an engine>> that
+can play it.
 
 _Freedoom_ is actually three games in one, consisting of two
 single-player oriented campaigns and one set of levels designed
@@ -23,15 +20,6 @@ mods, also known as plain _Doom_ or _Doom 1_.
 monsters and a double-barrelled shotgun.  This project aims for
 compatibility with _Doom II_ mods.
 *FreeDM*:: A 32-level game designed for competitive deathmatch play.
-
-The engine uses a single file, such as +freedoom2.wad+, that contains
-all the game data such as graphics, sound effects, music, and so on.
-This file is often called an “IWAD” by those in the _Doom_ and
-_Freedoom_ communities.  While the _Doom_ engine source code is free,
-you would normally still need one of the proprietary data files from
-https://www.idsoftware.com/[id Software] to play _Doom_.  _Freedoom_
-aims to create a free alternative: combined with the GPL-licensed
-_Doom_ source code, this results in a completely free game.
 
 For more information, see https://freedoom.github.io/.
 
@@ -55,34 +43,31 @@ or your home directory.  If _Freedoom_ comes packaged as part of your
 operating system distribution, it should already be installed into the
 proper location.
 
-Hopefully, your engine of choice should already be capable of running
-_Freedoom_ without extra configuration.  This may not be the case,
-however, if the engine does not recognize any of the filenames for
-_Freedoom_, and might require manual intervention to make it so.  One
-of the following options should solve it:
+For Unix-like operating systems, such as GNU/Linux or a BSD variant,
+_Freedoom_ may be packaged and installed with programs named
++freedoom1+, +freedoom2+, and +freedm+ that automatically run an engine
+for proper play. Desktop files may also be installed so that you can
+start the game using a graphical interface and avoid the command line
+a ltogether.
 
-  * Use the +-iwad+ command line parameter.  For example, to play
-    Phase 2, you can enter +-iwad freedoom2.wad+ either at a command
-    line, or adding it to an application shortcut.
-  * Use the +DOOMWADPATH+ environment variable.  Many engines support
-    this variable to add directories and/or files to their search
-    path.  The exact syntax matches your operating system’s normal
-    +PATH+ environment variable.
-  * Rename the game files.  This may be a bit crude, but you can
-    rename the files to match those of _Doom_’s.  This is often the
-    easiest quick-fix, although it is normally desirable to use one of
-    the above methods if possible.
+== Manual
 
-    ** +freedoom1.wad+ can be renamed to +doom.wad+
-    ** +freedoom2.wad+ can be renamed to +doom2.wad+
-    ** +freedm.wad+ can be renamed to +doom2.wad+
+Freedoom has a complete PDF format manual that describes how to play the
+game, including an introductory tutorial and some tactical tips. It also
+has information on the monsters and power-ups you'll encounter during
+play. The manual is available in multiple languages and can be
+downloaded https://freedoom.github.io/manual.html[on the website].
+Printed, physical manuals are also available for purchase.
 
-Additionally, for Unix-like operating systems, such as GNU/Linux or a
-BSD variant, _Freedoom_ may be packaged and installed with programs
-named +freedoom1+, +freedoom2+, and +freedm+ that automatically run an
-engine for proper play.  Desktop files may also be installed so that
-you can start the game using a graphical interface and avoid the
-command line altogether.
+== Compatibility
+
+A secondary goal of Freedoom is _compatibility_ with modifications
+("mods") for the original Doom.  There is a massive
+https://doomwiki.org/wiki/Idgames_archive[back catalog], spanning over
+three decades, containing thousands of _Doom_ levels and other
+mods made by fans of the game. _Freedoom_ aims to be compatible with
+these and allows most to be played without the need to use non-free
+software.
 
 == What “free” means
 
@@ -123,10 +108,11 @@ The general rules go as follows:
     permission to include it in the _Freedoom_ project.  They may not
     place additional restrictions compared to the normal _Freedoom_
     license.
-  * Do not try to emulate _Doom_ resources exactly.  Where possible,
-    put effort to make new versions look visibly different from
-    _Doom_.  This is a tough call, because our compatibility with
-    _Doom_ mods limits how far we can deviate, but it is feasible.
+  * Freedoom's name often leads some people to think that the project's
+    goal is to make a "free clone of Doom". This is not the case! While
+    compatibility with Doom is a goal, we are our building our own game.
+    Please make an effort to ensure your work is original and distinct,
+    and not just a copy of anything from Doom.
   * Be especially careful of “free textures” (or “free sounds” or
     “free graphics”) sites.  Although these would appear at first to
     be okay to use, many are free for “non-commercial use only.”

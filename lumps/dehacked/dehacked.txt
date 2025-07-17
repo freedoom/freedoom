@@ -238,7 +238,7 @@ PD_YELLOWS = Yellow skeleton key needed for this door.
 PD_ANY = Any key will open this door.
 PD_ALL3 = This door requires all three keys.
 PD_ALL6 = This door requires all six keys!
-HUSTR_E1M1 = E1M1: Outer Prison
+HUSTR_E1M1 = E1M1: Filtration System
 HUSTR_E1M2 = E1M2: Communications Center
 HUSTR_E1M3 = E1M3: Waste Disposal
 HUSTR_E1M4 = E1M4: Supply Depot
@@ -321,7 +321,7 @@ HUSTR_26 = DM26: Crater Excavation
 HUSTR_27 = DM27: The Exile
 HUSTR_28 = DM28: Weapons Factory
 HUSTR_29 = DM29: Unusual Territory
-HUSTR_30 = DM30: Last Man Standing
+HUSTR_30 = DM30: Violent Vicinity
 HUSTR_31 = DM31: Desolated Fort
 HUSTR_32 = DM32: Fourplay
 #else
