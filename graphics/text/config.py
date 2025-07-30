@@ -190,55 +190,56 @@ red_graphics = {
     "wiminus": "-",
     "wienter": "ENTERING",
 #    "m_pause": "pause",  # Doom is hard-coded to assume M_PAUSE is 68px, FD's font makes it 52
-    # Extra graphics used in PrBoom's menus. Generate these as well
-    # so that when we play in PrBoom the menus look consistent.
-    "prboom": "PrBoom",
-    "m_generl": "General",
-    "m_setup": "Setup",
-    "m_keybnd": "Key Bindings",
-    "m_weap": "Weapons",
-    "m_stat": "Status Bar/HUD",
-    "m_auto": "Automap",
-    "m_enem": "Enemies",
-    "m_mess": "Messages",
-    "m_chat": "Chat Strings",
+
+    # Source port specific graphics start here
+    # Boom:
     "m_horsen": "horizontal",
     "m_versen": "vertical",
+    "m_setup": "Setup",
+    "m_keybnd": "Key Bindings",
+    "m_auto": "Automap",
+    "m_chat": "Chat Strings",
+    "m_enem": "Enemies",
+    "m_stat": "Status Bar/HUD",
+    "m_weap": "Weapons",
+    "m_mess": "Messages",
+    # MBF:
+    "m_compat": "Compatibility",
+    "mbftext": "Marine's Best Friend",
+    # PrBoom/PrBoom+:
+    "prboom": "PrBoom",
+    "m_generl": "General",
     "m_loksen": "mouse look",
     "m_accel": "acceleration",
-    # Extra graphics from SMMU/Eternity Engine:
+    # SMMU:
     "m_about": "about",
-    "m_chatm": "Chat Strings",
-    "m_compat": "Compatibility",
     "m_demos": "demos",
-    "m_dmflag": "deathmatch flags",
-    "m_etcopt": "eternity options",
+    "m_multi": "Multiplayer",
     "m_feat": "Features",
-    "m_gset": "game settings",
     "m_hud": "heads up display",
-    "m_joyset": "joysticks",
     "m_ldsv": "Load/Save",
-    "m_menus": "Menu Options",
     "m_mouse": "mouse options",
-    "m_player": "player setup",
     "m_serial": "serial connection",
     "m_sound": "sound options",
-    "m_status": "status bar",
     "m_tcpip": "tcp/ip connection",
     "m_video": "video options",
     "m_wad": "load wad",
+    # Eternity:
+    "m_chatm": "Chat Strings",
+    "m_dmflag": "deathmatch flags",
+    "m_etcopt": "eternity options",
+    "m_gset": "game settings",
+    "m_menus": "Menu Options",
+    "m_player": "player setup",
+    "m_status": "status bar",
     "m_wadopt": "wad options",
-    # This is from SMMU too, and if we follow things to the letter,
-    # ought to be all lower-case. However, same lump name is used
-    # by other ports (Zandronum) which expect a taller graphic to
-    # match the other main menu graphics. Eternity Engine doesn't
-    # use it any more, and on SMMU there's enough space for it.
-    "m_multi": "Multiplayer",
+    # Unknown:
+    "m_joyset": "joysticks",
     # Crispy Doom's Crispness menu:
     "m_crispy": "Crispness",
-    # DSDA's Level Table
+    # DSDA's Level Table:
     "m_lvltbl": "Level Table",
-    # Nugget's Custom Skill
+    # Woof & Nugget's Custom Skill:
     "m_cstskl": "Custom Skill...",
 }
 
