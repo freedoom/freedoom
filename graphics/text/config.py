@@ -218,6 +218,7 @@ red_graphics = {
     "m_feat": "Features",
     "m_hud": "heads up display",
     "m_ldsv": "Load/Save",
+    "m_misc": "misc. game options",
     "m_mouse": "mouse options",
     "m_serial": "serial connection",
     "m_sound": "sound options",
