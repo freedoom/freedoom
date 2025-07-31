@@ -629,10 +629,10 @@ image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 These cybernetic creatures fire high-capacity polaric energy support weapons,
 making them a deadly challenge. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
-| **Large Technospider** +
+| **Dreadnought** +
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
 of effort to bring down. Immune to explosions from missiles and barrels. |
-image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
+image:images/monster-dreadnought.png[Dreadnought,100,100,width=100%]
 | **Assault Tripod** +
 The ultimate blend of military technology and genetic engineering, these
 three-legged creatures are fast-moving, heavily armored and equipped with a
