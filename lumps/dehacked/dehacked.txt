@@ -288,7 +288,7 @@ CC_PAIN = matribite
 CC_REVEN = octaminator
 CC_MANCU = combat slug
 CC_ARCH = necromancer
-CC_SPIDER = large technospider
+CC_SPIDER = dreadnought
 CC_CYBER = assault tripod
 CC_HERO = savior of humanity
 #ifdef FREEDM
@@ -665,7 +665,7 @@ OB_IMP = %o was scorched by a serpentipede.
 OB_CACO = %o was zapped by a trilobite.
 OB_BARON = %o was nuked by a pain lord.
 OB_KNIGHT = %o was fried by a pain bringer.
-OB_SPIDER = %o stood in awe of the large technospider.
+OB_SPIDER = %o stood in awe of the dreadnought.
 OB_BABY = %o was immolated by a technospider.
 OB_CYBORG = %o was mutilated by an assault tripod.
 OB_WOLFSS = %o met a sailor.
