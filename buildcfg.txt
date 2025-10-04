@@ -145,6 +145,7 @@ FREEDOOM
 
 ; Big font used by ZDoom-based ports for menu text.
 DBIGFONT
+TEXTCOLO
 
 ; Language used by ZDoom-based ports for string replacement
 ; and internationalization.
