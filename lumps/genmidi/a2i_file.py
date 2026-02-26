@@ -23,7 +23,7 @@ class BitReader:
                 "Reached end of decompress stream "
                 + "(%i bytes)" % len(self.data)
             )
-        result, = struct.unpack("B", self.data[self.index : self.index + 1])
+        result, = struct.unpack("<B", self.data[self.index : self.index + 1])
         self.index += 1
         return result
 
@@ -155,7 +155,7 @@ def decompress(data, data_len):
 
         # print "len: %i" % len(result)
 
-    return struct.pack("%iB" % len(result), *result)
+    return struct.pack("<%iB" % len(result), *result)
 
 
 FIELDS = [
@@ -187,13 +187,13 @@ def decode_type_9(data):
 
     for i in range(len(FIELDS)):
         instr_data[FIELDS[i]], = struct.unpack(
-            "B", decompressed_data[i : i + 1]
+            "<B", decompressed_data[i : i + 1]
         )
 
     # Decode instrument name
 
     ps = decompressed_data[14:]
-    instr_name, = struct.unpack("%ip" % len(ps), ps)
+    instr_name, = struct.unpack("<%ip" % len(ps), ps)
     instr_data["name"] = instr_name.decode("ascii")
 
     return instr_data
