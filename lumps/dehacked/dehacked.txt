@@ -49,16 +49,38 @@ Codep Frame = 185
 Pointer 235 (Frame 740)
 Codep Frame = 185
 
-# The super shotgun's first frame is 7 tics long before it
-# begins its reload sequence, but the muzzle flash animation
-# totals 9 tics, causing the flash to trail behind the gun.
-# This shortens the flash down to exactly 7 tics.
+# The Shotgun and SSG have a reversed order to their flash states.
+# To keep the code simpler, swap the order and adjust the durations,
+# rather than changing everything about both states.
+
+Weapon 2 (Shotgun)
+Firing frame = 31
+
+Weapon 8 (Super-shotgun)
+Firing frame = 48
+
+Frame 30
+Next frame = 1
+Duration = 3
+
+Frame 31
+Next frame = 30
+Duration = 5
+
+# Additionally, the super shotgun's first frame is 7 tics
+# long before it begins its reload sequence, but the muzzle
+# flash animation totals 9 tics, causing the flash to trail 
+# behind the gun. This shortens the flash down to exactly 7 tics.
+# Remember that the engine drops the first tic, so DeHackEd needs
+# to tell the engine it's actually eight.
 
 Frame 47
-Duration = 4
+Next frame = 1
+Duration = 3
 
 Frame 48
-Duration = 3
+Next frame = 47
+Duration = 5
 
 # This is a magic comment recognized by Chocolate Doom, so that the
 # BEX [STRINGS] section below will be parsed:
