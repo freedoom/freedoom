@@ -49,38 +49,16 @@ Codep Frame = 185
 Pointer 235 (Frame 740)
 Codep Frame = 185
 
-# The Shotgun and SSG have a reversed order to their flash states.
-# To keep the code simpler, swap the order and adjust the durations,
-# rather than changing everything about both states.
-
-Weapon 2 (Shotgun)
-Firing frame = 31
-
-Weapon 8 (Super-shotgun)
-Firing frame = 48
-
-Frame 30
-Next frame = 1
-Duration = 3
-
-Frame 31
-Next frame = 30
-Duration = 5
-
-# Additionally, the super shotgun's first frame is 7 tics
-# long before it begins its reload sequence, but the muzzle
-# flash animation totals 9 tics, causing the flash to trail 
-# behind the gun. This shortens the flash down to exactly 7 tics.
-# Remember that the engine drops the first tic, so DeHackEd needs
-# to tell the engine it's actually eight.
+# The super shotgun's first frame is 7 tics long before it
+# begins its reload sequence, but the muzzle flash animation
+# totals 9 tics, causing the flash to trail behind the gun.
+# This shortens the flash down to exactly 7 tics.
 
 Frame 47
-Next frame = 1
-Duration = 3
+Duration = 4
 
 Frame 48
-Next frame = 47
-Duration = 5
+Duration = 3
 
 # This is a magic comment recognized by Chocolate Doom, so that the
 # BEX [STRINGS] section below will be parsed:
@@ -88,41 +66,11 @@ Duration = 5
 #   *allow-extended-strings*
 
 [PARS]
-#ifndef FREEDM
 # Par times. The BEX format requires these to be specified in number
 # of seconds, but for convenience we include the min:sec value in a
 # comment. Comment also indicates when the run was done - ideally
 # this should be re-done for every new release. Times are rounded
 # to nearest half-minute.
-#ifdef PHASE1
-par  1 1   30  # 00:30 - Voros for v0.12 - 2017/03
-par  1 2  120  # 02:00 - Voros for v0.12 - 2017/03
-par  1 3  150  # 02:30 - Voros for v0.12 - 2017/03
-par  1 4  180  # 03:00 - Voros for v0.12 - 2017/03
-par  1 5   90  # 01:30 - Voros for v0.12 - 2017/03
-par  1 6  390  # 06:30 - Voros for v0.12 - 2017/03
-par  1 7  690  # 11:30 - Voros for v0.12 - 2017/03
-par  1 8   60  # 01:00 - Voros for v0.12 - 2017/03
-par  1 9  240  # 04:00 - m for v0.13 - 2023/04
-par  2 1  120  # 02:00 - Voros for v0.12 - 2017/03
-par  2 2  150  # 02:30 - Voros for v0.12 - 2017/03
-par  2 3  180  # 03:00 - Voros for v0.12 - 2017/03
-par  2 4  270  # 04:30 - Voros for v0.12 - 2017/03
-par  2 5  300  # 05:00 - Voros for v0.12 - 2017/03
-par  2 6  150  # 02:30 - Voros for v0.12 - 2017/03
-par  2 7  120  # 02:00 - Voros for v0.12 - 2017/03
-par  2 8  120  # 02:00 - Voros for v0.12 - 2017/03
-par  2 9  360  # 06:00 - Voros for v0.12 - 2017/03
-par  3 1   30  # 00:30 - Voros for v0.12 - 2017/03
-par  3 2  120  # 02:00 - Voros for v0.12 - 2017/03
-par  3 3  240  # 04:00 - Voros for v0.12 - 2017/03
-par  3 4  270  # 04:30 - Voros for v0.12 - 2017/03
-par  3 5    0  # 00:00
-par  3 6  180  # 03:00 - Voros for v0.12 - 2017/03
-par  3 7  300  # 05:00 - Voros for v0.12 - 2017/03
-par  3 8   60  # 01:00 - Voros for v0.12 - 2017/03
-par  3 9  570  # 09:30 - Voros for v0.12 - 2017/03
-#else
 par  1   30  # 00:30  - Voros for v0.11 - 2017/02
 par  2   90  # 01:30  - Voros for v0.11 - 2017/02
 par  3  120  # 02:00  - Voros for v0.11 - 2017/02
@@ -155,51 +103,11 @@ par 29  300  # 05:00  - Voros for v0.11 - 2017/02
 par 30   60  # 01:00  - Voros for v0.11 - 2017/02
 par 31   60  # 01:00  - Voros for v0.11 - 2017/02
 par 32  210  # 03:30  - Voros for v0.11 - 2017/02
-#endif
-#else
-# Par times don't matter so much for FreeDM, just set all to zero.
-par  1 0
-par  2 0
-par  3 0
-par  4 0
-par  5 0
-par  6 0
-par  7 0
-par  8 0
-par  9 0
-par 10 0
-par 11 0
-par 12 0
-par 13 0
-par 14 0
-par 15 0
-par 16 0
-par 17 0
-par 18 0
-par 19 0
-par 20 0
-par 21 0
-par 22 0
-par 23 0
-par 24 0
-par 25 0
-par 26 0
-par 27 0
-par 28 0
-par 29 0
-par 30 0
-par 31 0
-par 32 0
-#endif
 
 [STRINGS]
 # Text shown on startup in Boom-compatible ports. This is all in
 # STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
-#ifdef FREEDM
-STARTUP5============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
-#else
 STARTUP5============================================================================\nThis is Freedoom, the free content first person shooter.\n\nFreedoom is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================
-#endif
 GOTARMOR = Put on a force field vest.
 GOTMEGA = Put on the attuned force field armor!
 GOTHTHBONUS = Health boosted!
@@ -313,40 +221,6 @@ CC_ARCH = necromancer
 CC_SPIDER = dreadnought
 CC_CYBER = assault tripod
 CC_HERO = savior of humanity
-#ifdef FREEDM
-HUSTR_1 = DM01: Tech Test
-HUSTR_2 = DM02: Sauna Fissure
-HUSTR_3 = DM03: Plain Arena
-HUSTR_4 = DM04: Steel
-HUSTR_5 = DM05: Dense Fields
-HUSTR_6 = DM06: Temple of Ammon
-HUSTR_7 = DM07: Main Stronghold
-HUSTR_8 = DM08: Artifact Base
-HUSTR_9 = DM09: Industrial Outland
-HUSTR_10 = DM10: Detached Grounds
-HUSTR_11 = DM11: Isolated Facility
-HUSTR_12 = DM12: Up 'n' Down Canyon
-HUSTR_13 = DM13: Unholy Blood
-HUSTR_14 = DM14: Technical Assault
-HUSTR_15 = DM15: Shallow Complex
-HUSTR_16 = DM16: Barren Alleys
-HUSTR_17 = DM17: Underwoods
-HUSTR_18 = DM18: Deserted Courtyard
-HUSTR_19 = DM19: Unwanted Backyard
-HUSTR_20 = DM20: Terra Mortis
-HUSTR_21 = DM21: Refinery
-HUSTR_22 = DM22: Military Depot
-HUSTR_23 = DM23: Testing Grounds
-HUSTR_24 = DM24: Flooded Base
-HUSTR_25 = DM25: Tripod keep
-HUSTR_26 = DM26: Crater Excavation
-HUSTR_27 = DM27: The Exile
-HUSTR_28 = DM28: Weapons Factory
-HUSTR_29 = DM29: Unusual Territory
-HUSTR_30 = DM30: Violent Vicinity
-HUSTR_31 = DM31: Desolated Fort
-HUSTR_32 = DM32: Fourplay
-#else
 HUSTR_1 = MAP01: Hydroelectric Plant
 HUSTR_2 = MAP02: Filtration Tunnels
 HUSTR_3 = MAP03: Crude Processing Center
@@ -379,7 +253,6 @@ HUSTR_29 = MAP29: Melting Point
 HUSTR_30 = MAP30: Jaws of Defeat
 HUSTR_31 = MAP31: Be Quiet
 HUSTR_32 = MAP32: Not Sure
-#endif
 # Final Doom level strings, left blank
 PHUSTR_1 = MAP01
 PHUSTR_2 = MAP02
@@ -527,44 +400,6 @@ E4TEXT = Suppressing fire echoes above as the last\n\
          they've got the outbreak to deal with,\n\
          so that'll give you some time.\n\n\
          Destination: Earth!
-#ifdef FREEDM
-# After MAP06, before MAP07:
-C1TEXT = You're playing FreeDM, the Freedoom\n\
-         deathmatch spinoff project.\n\n\
-         For more information about Freedoom\n\
-         and FreeDM, see:\n\n\
-         https://freedoom.github.io/
-# After MAP11, before MAP12:
-C2TEXT = You're playing FreeDM, the Freedoom\n\
-         deathmatch spinoff project.\n\n\
-         For more information about Freedoom\n\
-         and FreeDM, see:\n\n\
-         https://freedoom.github.io/
-# After MAP20, before MAP21:
-C3TEXT = You're playing FreeDM, the Freedoom\n\
-         deathmatch spinoff project.\n\n\
-         For more information about Freedoom\n\
-         and FreeDM, see:\n\n\
-         https://freedoom.github.io/
-# After MAP30 (endgame text):
-C4TEXT = Thank you for playing FreeDM, the\n\
-         Freedoom deathmatch spinoff project.\n\n\
-         For more information about Freedoom\n\
-         and FreeDM, see:\n\n\
-         https://freedoom.github.io/
-# Before MAP31 (secret level #1):
-C5TEXT = You're playing FreeDM, the Freedoom\n\
-         deathmatch spinoff project.\n\n\
-         For more information about Freedoom\n\
-         and FreeDM, see:\n\n\
-         https://freedoom.github.io/
-# Before MAP32 (secret level #2):
-C6TEXT = You're playing FreeDM, the Freedoom\n\
-         deathmatch spinoff project.\n\n\
-         For more information about Freedoom\n\
-         and FreeDM, see:\n\n\
-         https://freedoom.github.io/
-#else
 # After MAP06, before MAP07:
 C1TEXT = Not even Earth is safe. The monsters show\n\
          up ahead of you everywhere you run.\n\
@@ -645,7 +480,6 @@ C6TEXT = Forcibly uncaged again. Good job.\n\n\
          You will find your way back to the city,\n\
          but it will have to be on the other side\n\
          of a few homicidal mutants...
-#endif
 BGFLATE1 = AQF051
 BGFLATE2 = AQF054
 BGFLATE3 = FLAT5_2
@@ -732,18 +566,6 @@ TXT_D1E1 = Outpost Outbreak
 TXT_D1E2 = Ruin Upon Ruin
 TXT_D1E3 = Event Horizon
 TXT_D1E4 = Double Impact
-#ifdef FREEDM
-TXT_D2E1 = FreeDM
-#else
 TXT_D2E1 = Phase 2
-#endif
 
-#ifdef PHASE1
-# Redefine the no-clipping cheats, so that IDCLIP may be used in Phase 1.
-# IDSPISPOPD is swapped into the slot normally for Phase 2, in case of
-# engines that would otherwise try to apply the cheat twice.
 
-Cheat 0
-No Clipping 1 = idclip
-No Clipping 2 = idspispopd
-#endif
