@@ -634,11 +634,11 @@ image:images/monster-combat-slug.png[Babosa de batalla,100,100,width=100%]
 Estas criaturas cibernéticas han sido equipadas con ametralladoras de energía
 polarica. |
 image:images/monster-technospider.png[Tecnaraña,100,100,width=100%]
-| **Tecnaraña grande** +
+| **Dreadnought** +
 Este tanque con patas está equipado con una ametralladora de fuego rápido y
 requerirá mucho esfuerzo para derribarlo.
 Inmune a las explosiones de misiles y barriles. |
-image:images/monster-large-technospider.png[Tecnaraña grande,100,100,width=100%]
+image:images/monster-dreadnought.png[Dreadnought,100,100,width=100%]
 | **Trípode de asalto** +
 La combinación definitiva de tecnología militar e ingeniería genética, estas
 criaturas de tres patas se mueven rápidamente, están fuertemente blindadas y

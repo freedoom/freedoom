@@ -240,6 +240,8 @@ red_graphics = {
     "m_lvltbl": "Level Table",
     # Nugget's Custom Skill
     "m_cstskl": "Custom Skill...",
+    # DOOM Retro's Console
+    "m_consol": "Console",
 }
 
 

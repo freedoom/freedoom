@@ -491,9 +491,9 @@ image:images/monster-combat-slug.png[Combat Slug,100,100,width=100%]
 | **Technospider** +
 Ces créatures cybernétiques tirent des armes à haute capacité d'énergie poliarque, ce qui fait d'eux un défi mortel. |
 image:images/monster-technospider.png[Technospider,100,100,width=100%]
-| **Grosse Technospider** +
+| **Dreadnought** +
 Ce char avec des jambes est équipé d'un minigun à haute cadence et il demandera un effort considérable pour l'achever. Immunisé contre les explosions de missiles et de barils. |
-image:images/monster-large-technospider.png[Large Technospider,100,100,width=100%]
+image:images/monster-dreadnought.png[dreadnought,100,100,width=100%]
 | **Trépied d'assaut** +
 Le mélange ultime de technologies militaire et de manipulations génétiques, ces créatures à trois pattes sont rapides, lourdement blindés et équipés d'un lance-missiles que vous souhaiterez éviter. Immunisé contre les explosions de missiles et de barils. |
 image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
