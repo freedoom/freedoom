@@ -55,14 +55,14 @@ map E1M4
 
 map E1M5
 {
-	LevelName = "Armory"
+	LevelName = "Cloudspire Keep"
 	LevelPic = "WILV04"
 	Label = "E1M5"
 	Next = "E1M6"
 	Music = "D_E1M5"
 	SkyTexture = "SKY1"
 	ParTime = 90
-	Author = "Wereknight"
+	Author = "Anonymous"
 }
 
 map E1M6
