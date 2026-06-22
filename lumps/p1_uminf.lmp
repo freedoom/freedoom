@@ -4,7 +4,7 @@
 
 map E1M1
 {
-	LevelName = "First Floor Facility"
+	LevelName = "Containment Complex"
 	LevelPic = "WILV00"
 	Label = "E1M1"
 	Next = "E1M2"
