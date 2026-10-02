@@ -31,8 +31,8 @@ def main():
     # three lumps needed - see bootstrap/README.txt
     lumps = [
         (b"PLAYPAL", read()),
-        (b"TEXTURE1", struct.pack("i", 0)),  # empty texture1
-        (b"PNAMES", struct.pack("i8s", 1, b"")),
+        (b"TEXTURE1", struct.pack("<i", 0)),  # empty texture1
+        (b"PNAMES", struct.pack("<i8s", 1, b"")),
     ]  # single pname
 
     # calculate wad directory (lump offsets etc.)
@@ -43,7 +43,7 @@ def main():
         pos += len(data)
 
     # write wad header
-    write(struct.pack("4sii", b"IWAD", len(waddir), pos))
+    write(struct.pack("<4sii", b"IWAD", len(waddir), pos))
 
     # write lump contents
     for name, data in lumps:
@@ -51,7 +51,7 @@ def main():
 
     # write wad directory
     for i in waddir:
-        write(struct.pack("ii8s", *i))
+        write(struct.pack("<ii8s", *i))
 
 
 if __name__ == "__main__":

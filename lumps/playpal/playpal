@@ -83,7 +83,7 @@ def read_palette(filename):
 
     for i in range(256):
         data = f.read(3)
-        color = struct.unpack("BBB", data)
+        color = struct.unpack("<BBB", data)
 
         colors.append(color)
 
@@ -164,7 +164,7 @@ def output_palette(pal):
     for color in palette:
         color = tuple(map(clamp_pixval, color))
 
-        encoded = struct.pack("BBB", *color)
+        encoded = struct.pack("<BBB", *color)
         os.write(sys.stdout.fileno(), encoded)
 
 
