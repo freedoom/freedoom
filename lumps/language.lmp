@@ -507,14 +507,14 @@ STARTUP5 = "====================================================================
 $ifgame(freedm) STARTUP5 = "============================================================================\nThis is FreeDM, the free content deathmatch FPS.\n\nFreeDM is freely redistributable under the terms of the modified BSD\nlicense. Check out the Freedoom website for more information:\n\n    https://freedoom.github.io/\n============================================================================";
 
 // Item tags: Freedoom weapons
-TAG_FIST = "fist";
-TAG_CHAINSAW = "ripsaw";
-TAG_PISTOL = "handgun";
-TAG_SHOTGUN = "pump-action shotgun";
-TAG_SUPERSHOTGUN = "double-barrelled shotgun";
-TAG_CHAINGUN = "minigun";
-TAG_ROCKETLAUNCHER = "missile launcher";
-TAG_PLASMARIFLE = "polaric energy weapon";
+TAG_FIST = "Fist";
+TAG_CHAINSAW = "Ripsaw";
+TAG_PISTOL = "Handgun";
+TAG_SHOTGUN = "Pump-Action Shotgun";
+TAG_SUPERSHOTGUN = "Double-Barrelled Shotgun";
+TAG_CHAINGUN = "Minigun";
+TAG_ROCKETLAUNCHER = "Missile Launcher";
+TAG_PLASMARIFLE = "Polaric Energy Weapon";
 TAG_BFG9000 = "SKAG 1337";
 
 AMMO_CLIP			= "Bullets";
