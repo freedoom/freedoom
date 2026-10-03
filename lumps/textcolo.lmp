@@ -1,0 +1,9 @@
+//GZDoom lump to fix the bigfont colour.
+Red{
+	#000000  #FF0000
+Console:
+	#000000  #7F0000    0 127
+	#FF0000  #FFFEFE  128 256
+Flat:
+	#FF5566
+}
