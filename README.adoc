@@ -32,7 +32,7 @@ available, a lengthy list of which is available on the
 https://doomwiki.org/wiki/Source_port[Doom Wiki].
 
 One particularly recommended by the _Freedoom_ project is
-https://zdoom.org/[GZDoom].  This engine offers good support for
+https://zdoom.org/[UZDoom].  This engine offers good support for
 single-player, multi-player, and the majority of mods created for both
 _Doom_ and _Freedoom_.
 

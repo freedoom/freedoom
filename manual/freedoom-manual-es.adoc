@@ -24,7 +24,7 @@ image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=
 {empty} +
 {empty} +
 
-Copyright © 2001-2025 Contributors to the Freedoom project.
+Copyright © 2001-2026 Contributors to the Freedoom project.
 Este manual está licenciado bajo la licencia BSD de 3 cláusulas.
 
 Esta es la versión {build-version} del manual.
@@ -63,7 +63,7 @@ del programa original de Doom que los aficionados han desarrollado para los sist
 https://doomwiki.org/wiki/Source_port[La página de source ports] de la
 Wiki de Doom tiene una lista complete de estos programas. Como un punto inicial, puedes probar:
 
-* https://zdoom.org[GZDoom], un source port moderno que incluye renderización
+* https://zdoom.org[UZDoom], un source port moderno que incluye renderización
   por hardware y capacidad ampliada de modificación.
 * https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom],
   un source port más minimalista que conserva esa sensación de la “vieja
