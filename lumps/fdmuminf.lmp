@@ -12,7 +12,7 @@ map MAP01
 	SkyTexture = "SKY1"
 	ParTime = 0
 	Episode = clear
-	Episode = "M_EPI1", "FreeDM", "1"
+	Episode = "", "FreeDM", "1"
 	Author = "Xindage"
 }
 
