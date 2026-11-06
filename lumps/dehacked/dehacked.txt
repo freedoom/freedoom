@@ -17,7 +17,7 @@ Sprite subnumber = 32773
 Frame 419
 Sprite subnumber = 32773
 
-# Assault tripod
+# Warbrute
 Frame 685
 Sprite subnumber = 32773
 
@@ -32,8 +32,8 @@ Sprite subnumber = 32773
 # attack; the only difference other than the way the
 # information is organized is the sound being played.
 # Having the minigunner and sailor call A_PosAttack
-# makes them not sound confusingly similar to the large
-# technospider's much more powerful shotgunguy-like attack.
+# makes them not sound confusingly similar to the dread-
+# -nought's much more powerful shotgunguy-like attack.
 
 # Minigunner using A_PosAttack
 Pointer 234 (Frame 417)
@@ -289,7 +289,7 @@ CC_REVEN = octaminator
 CC_MANCU = combat slug
 CC_ARCH = necromancer
 CC_SPIDER = dreadnought
-CC_CYBER = assault tripod
+CC_CYBER = warbrute
 CC_HERO = savior of humanity
 #ifdef FREEDM
 HUSTR_1 = DM01: Tech Test
@@ -667,7 +667,7 @@ OB_BARON = %o was nuked by a pain lord.
 OB_KNIGHT = %o was fried by a pain bringer.
 OB_SPIDER = %o stood in awe of the dreadnought.
 OB_BABY = %o was immolated by a technospider.
-OB_CYBORG = %o was mutilated by an assault tripod.
+OB_CYBORG = %o was mutilated by a warbrute.
 OB_WOLFSS = %o met a sailor.
 OB_MPFIST = %o was beaten up by %k.
 OB_MPCHAINSAW = %o was shredded by %k's ripsaw.
