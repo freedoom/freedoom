@@ -633,11 +633,11 @@ image:images/monster-technospider.png[Technospider,100,100,width=100%]
 This tank on legs is equipped with a rapid-fire minigun and will take a lot
 of effort to bring down. Immune to explosions from missiles and barrels. |
 image:images/monster-dreadnought.png[Dreadnought,100,100,width=100%]
-| **Assault Tripod** +
-The ultimate blend of military technology and genetic engineering, these
-three-legged creatures are fast-moving, heavily armored and equipped with a
-missile launcher that you’ll want to avoid. Immune to explosions from missiles and barrels. |
-image:images/monster-assault-tripod.png[Assault Tripod,100,100,width=100%]
+| **Warbrute** +
+The most menacing foe of all. Armed with a powerful missile launcher, they'll
+reside to agressively blasting missiles your way while remaining completely
+expressionless. Immune to explosions from missiles and barrels. |
+image:images/monster-assault-tripod.png[Warbrute,100,100,width=100%]
 |==========================
 
 === Using the map
