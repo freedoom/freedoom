@@ -11,4 +11,18 @@ Columns: 16
 #
 EOF
 
-od -An -w3 -tu1 playpal-base.lmp >> doom.gpl
+od -An -tu1 -v playpal-base.lmp | 
+awk '
+{
+    for (i = 1; i <= NF; i++) {
+        rgb[count % 3] = $i
+        if (count % 3 == 2)
+            printf "%4d%4d%4d\n", rgb[0], rgb[1], rgb[2]
+        count++
+    }
+}
+END {
+    if (count % 3 != 0)
+        exit 1
+}
+' >> doom.gpl
