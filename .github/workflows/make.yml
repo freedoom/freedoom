@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
       with:
         fetch-depth: 0
     - name: Get full repository history
@@ -39,12 +39,12 @@ jobs:
         cd manual
         make print
     - name: Upload Freedoom
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
       with:
         path: "artifacts/freedoom"
         name: freedoom-${{steps.buildstep.outputs.VERSION}}
     - name: Upload Freedm
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
       with:
         path: "artifacts/freedm"
         name: freedm-${{steps.buildstep.outputs.VERSION}}
