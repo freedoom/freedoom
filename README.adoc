@@ -48,7 +48,7 @@ _Freedoom_ may be packaged and installed with programs named
 +freedoom1+, +freedoom2+, and +freedm+ that automatically run an engine
 for proper play. Desktop files may also be installed so that you can
 start the game using a graphical interface and avoid the command line
-a ltogether.
+altogether.
 
 == Manual
 
