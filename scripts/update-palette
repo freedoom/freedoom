@@ -1,0 +1,311 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# update-palette - Update the palettes of all PNG graphics
+#
+# All of the PNGs in Freedoom are paletted, and the palettes of each PNG match
+# the colours in the PLAYPAL lump. If a user wants to make changes to the
+# palette, they would have to update the palette in all of Freedoom's graphics
+# for consistency.
+#
+# This script takes a new PLAYPAL as an argument, compares the old and new
+# palettes, and modifies every paletted PNG file in the repo so that the new
+# colours are used.
+#
+# Dependencies:
+# - pypng: https://gitlab.com/drj11/pypng (retrieved Sept 10 2023)
+
+import argparse
+import array
+from functools import reduce
+from itertools import cycle, zip_longest
+import struct
+from operator import eq
+import os
+from os.path import dirname, relpath, realpath, join, normpath
+import png
+from sys import argv
+import zlib
+
+# Misc. utility functions
+# https://docs.python.org/3.8/library/itertools.html#itertools-recipes
+def grouper(iterable, n, fillvalue=None):
+    "Collect data into fixed-length chunks or blocks"
+    # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
+    args = [iter(iterable)] * n
+    return zip_longest(*args, fillvalue=fillvalue)
+
+
+# Parse the command line arguments, and return a dict with the arguments
+def parse_args():
+    parser = argparse.ArgumentParser(
+        "update-palette",
+        description="This script takes a new palette, compares the new "
+        "palette with the old one, and scans and updates images in the repo "
+        "which use the colours that were replaced in the new palette."
+    )
+    parser.add_argument("palette", help="The new palette to use")
+    # This is a potential vulnerability, and besides, it doesn't make
+    # sense to update the palette for images which aren't in the repo.
+    # parser.add_argument(
+    #     "--dir", "-d", help=(
+    #         "The directory to recursively process. "
+    #         "Defaults to repository root directory."),
+    #     default=normpath(join(dirname(realpath(argv[0])), "..")))
+    parser.add_argument(
+        "-d", "--dry-run",
+        help="Do not modify any PNGs, just show which ones would be modified",
+        action='store_true')
+    args = parser.parse_args()
+    return args
+
+
+# Compare the old palette and the new palette, and return a dict with the
+# differences.
+def compare_palettes(directory, new_palette):
+    old_palette = join(directory, "lumps", "playpal", "playpal-base.lmp")
+
+    # The "new" palette is the old palette?
+    old_pal_full_path = relpath(normpath(old_palette), directory)
+    new_pal_full_path = relpath(normpath(new_palette), directory)
+    if old_pal_full_path == new_pal_full_path:
+        raise ValueError("You're trying to replace the old palette with "
+                         "itself! Try another palette.")
+
+    # Read both palettes into a more usable format
+    with open(old_palette, "rb") as handle:
+        old_palette = handle.read(768)
+        if len(old_palette) < 768:
+            raise ValueError("Old palette is too short!")
+        old_palette = list(grouper(old_palette[:768], 3))
+
+    with open(new_palette, "rb") as handle:
+        new_palette = handle.read(768)
+        if len(new_palette) < 768:
+            raise ValueError("New palette is too short!")
+        new_palette = list(grouper(new_palette[:768], 3))
+
+    # Given a colour palette and a dict, return a dict with the indexes of
+    # each colour. This function is meant to be used with functools.reduce.
+    def get_duplicate_colours(value, index_colour):
+        index, colour = index_colour
+        value.setdefault(colour, []).append(index)
+        return value
+
+    # Scan the old palette for duplicate colours
+    old_palette_duplicates = reduce(
+        get_duplicate_colours, enumerate(old_palette), {})
+    # Eliminate unique colours
+    old_palette_duplicates = dict(filter(
+        # kv[1] is the value, and it's unique if it's length is 1
+        lambda kv: None if len(kv[1]) == 1 else kv,
+        old_palette_duplicates.items()
+    ))
+
+    # Map old indices to new colours for now.
+    old_to_new = {}
+    for index, zipper in enumerate(zip(old_palette, new_palette)):
+        old_colour, new_colour = zipper
+        if old_colour != new_colour:
+            old_to_new[index] = new_colour
+
+    # Does the new palette replace ALL instances of a duplicate colour in the
+    # old palette? If so, map the old colour to the first replacement in the
+    # new palette, but if not, leave the old colour unchanged.
+    replaced = {}
+    for colour, indices in old_palette_duplicates.items():
+        if all(map(lambda i: i in old_to_new.keys(), indices)):
+            replaced[colour] = old_to_new[min(indices)]
+    print("replaced", replaced)
+
+    # Find the closest colour in the old palette for each grayscale colour
+    def is_grayscale(colour):
+        return all(map(eq, colour[1], cycle((colour[1][0],))))
+    # def to_grayscale(colour):
+    #     return colour[0] if is_grayscale(colour) else colour
+    grayscale_colours_in_palette = dict(
+        map(lambda g: (g[0], g[1][0]),
+        filter(is_grayscale, enumerate(new_palette)))
+    )
+    def closest_grayscale(grayscale):
+        nonlocal grayscale_colours_in_palette
+        distances = sorted(map(
+            lambda kv: (kv[0], abs(kv[1] - grayscale)),
+            grayscale_colours_in_palette.items()
+        ), key=lambda kv: kv[1])
+        closest = distances[0][1]
+        distances = sorted(
+            filter(lambda kv: kv[1] == closest, distances),
+            key=lambda kv: kv[0])
+        return distances[0][0]
+    # This is a map from grayscale to palette index
+    gray_map = array.array('B', map(closest_grayscale, range(256)))
+    # Turn it into a grayscale to colour map, in case any grayscale colours
+    # were changed in the new palette
+    gray_map = dict(
+        map(lambda g: (g[0], old_to_new[g[1]]),
+            filter(
+                lambda g: g[1] in old_to_new,
+                enumerate(gray_map))))
+    print(len(gray_map), gray_map)
+
+    # Replace the keys in old_to_new, which are indices, with the old palette
+    # colours they correspond to. This way, we have a colour-to-colour dict.
+    old_to_new = dict(filter(lambda kv: kv[1], map(
+        lambda iv: (old_palette[iv[0]],
+                    replaced.get(old_palette[iv[0]], iv[1])),
+        old_to_new.items()
+    )))
+    return old_to_new, gray_map
+
+
+# "Stolen" from the map-color-index script
+# Process a directory recursively for PNG files.
+def process_dir(colour_map, gray_map, dry_run, directory, palette):
+    pngs_changed_count = 0
+    pngs_examined_count = 0
+
+    for dirpath, dirnames, filenames in os.walk(directory):
+        for png_base in filenames:
+            if not png_base.lower().endswith(".png"):
+                continue
+            png_path = os.path.join(dirpath, png_base)
+            pngs_examined_count += 1
+            if process_png(colour_map, gray_map, png_path, dry_run, directory):
+                pngs_changed_count += 1
+
+
+# Process a PNG file in place.
+def process_png(colour_map, gray_map, png_path, dry, directory):
+    # Read the PNG file
+    png_reader = png.Reader(filename=png_path)
+
+    # Change the old colours to the new colours
+    modified_palette_colours = set()
+    def maybe_modify_plte(plte_data):
+        nonlocal colour_map
+        nonlocal modified_palette_colours
+        modified = False
+
+        # A pypng palette colour is 3 elements long, or 4 if the image has
+        # transparent colours.
+        if len(plte_data[0]) > 3:
+            alphas = list(map(lambda co: co[3], plte_data))
+        else:
+            alphas = [None] * len(plte_data)
+
+        colours = list(map(lambda co: co[0:3], plte_data))
+        # Scan the palette for colours that should be changed, and change them
+        # according to colour_map
+        for index, colour in enumerate(colours):
+            if colour in colour_map:
+                modified = True
+                modified_palette_colours.add(index)
+                colours[index] = colour_map[colour]
+        # pypng needs the palette as an iterable of 3-tuples for opaque
+        # paletted images, or 4-tuples for transparent paletted images
+        colours = list(map(lambda c, a: (*c,) if a is None else (*c, a),
+                           colours, alphas))
+        return modified, colours
+
+    def is_paletted_colour_changed(row):
+        nonlocal modified_palette_colours
+        return any(map(lambda colour_index: \
+            colour_index in modified_palette_colours, row))
+
+    def maybe_modify_truecolour_image(rows, channels, transparent_colour):
+        nonlocal colour_map
+        modified = False
+
+        def maybe_modify_row(row):
+            nonlocal colour_map
+            nonlocal channels
+            nonlocal transparent_colour
+            nonlocal modified
+            def maybe_modify_colour(co):
+                nonlocal colour_map
+                nonlocal transparent_colour
+                nonlocal modified
+                # Seperate RGB and alpha
+                co_rgb = co[0:3]
+                co_alpha = co[3] if len(co) > 3 else None
+                # Get the new colour from the colour map
+                new_colour = (
+                    colour_map.get(co_rgb, co_rgb)
+                    if co_rgb != transparent_colour else co_rgb
+                )
+                if co_alpha is not None:
+                    new_colour = (*new_colour, co_alpha)
+                modified = modified or new_colour != co
+                return new_colour
+            pixels = map(maybe_modify_colour,
+                         grouper(row, channels))
+            pixels = bytearray(b"".join(map(bytes, pixels)))
+            return pixels
+
+        new_rows = list(map(maybe_modify_row, rows))
+
+        return modified, new_rows
+
+    def maybe_modify_grayscale_image(rows, channels):
+        pass
+
+    plte_modified = False
+    idat_modified = False
+    width, height, rows, info = png_reader.read()
+    # "rows" is an iterator, so it needs to be a list so that it can be
+    # modified if the image is true-colour, or scanned if the image is
+    # paletted
+    rows = list(rows)
+    grayscale = info.get("greyscale")
+    is_paletted = info.get("palette")
+    bit_depth = info.get("bitdepth")
+    transparent_colour = info.get("transparent")
+    has_alpha = info.get("alpha", False)
+    channels = info.get("planes")
+    if is_paletted:
+        # Modify the PLTE chunk if necessary, and check if the PLTE
+        # modifications affect the colours used in the IDAT chunk.
+        plte_modified, new_palette = maybe_modify_plte(info["palette"])
+        if plte_modified:
+            idat_modified = any(map(is_paletted_colour_changed, rows))
+    elif not grayscale:
+        new_palette = None
+        idat_modified, rows = maybe_modify_truecolour_image(
+            rows, channels, transparent_colour)
+    else:
+        idat_modified, rows = maybe_modify_grayscale_image(rows, channels)
+
+    # Write the modified PNG file
+    if idat_modified:
+        print("{} was changed".format(relpath(png_path, start=directory)))
+        if not dry:
+            with open(png_path, "wb") as png_file:
+                png_writer = png.Writer(
+                    width, height, bitdepth=bit_depth, palette=new_palette,
+                    alpha=has_alpha, transparent=transparent_colour,
+                    greyscale=grayscale)
+                png_writer.write(png_file, rows)
+
+    return idat_modified
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    directory = normpath(join(dirname(realpath(argv[0])), ".."))
+    colour_map, gray_map = compare_palettes(directory, args.palette)
+    print("The rest of the script is disabled for development right now")
+    exit(0)
+
+    process_dir(colour_map, gray_map, directory=directory, **vars(args))
+    # Replace old playpal-base.lmp
+    if not args.dry_run:
+        playpal_base_path = (
+            join(directory, "lumps", "playpal", "playpal-base.lmp"))
+        # The old/new palette being the same is checked in compare_palettes
+        with  open(args.palette, "rb") as new_palfile, \
+              open(playpal_base_path, "wb") as old_palfile:
+            # Only copy the first 768 bytes of the new palette to playpal-base
+            new_pal = new_palfile.read(768)
+            # Palette length is checked in compare_palettes
+            old_palfile.write(new_pal)
