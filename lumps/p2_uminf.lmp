@@ -12,7 +12,7 @@ map MAP01
 	SkyTexture = "SKY1"
 	ParTime = 30
 	Episode = clear
-	Episode = "M_EPI1", "Phase 2", "1"
+	Episode = "", "Phase 2", "1"
 	Author = "Blastfrog, Xindage & Jon Dowland"
 }
 
