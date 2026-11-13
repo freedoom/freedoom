@@ -49,7 +49,7 @@ def read_palette(filename):
     for i in range(256):
         data = f.read(3)
 
-        color = struct.unpack("BBB", data)
+        color = struct.unpack("<BBB", data)
         colors.append(color)
 
     return colors
@@ -159,7 +159,7 @@ def solid_color_list(color):
 def output_colormap(colormap):
     """Output the given palette to stdout."""
     for c in colormap:
-        x = struct.pack("B", c)
+        x = struct.pack("<B", c)
         os.write(sys.stdout.fileno(), x)
 
 

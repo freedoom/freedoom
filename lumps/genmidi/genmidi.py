@@ -97,14 +97,14 @@ def encode_instrument_names(instruments):
 
     for instrument in instruments:
         instr_name = instrument.voice1["name"].encode("ascii")
-        result.append(struct.pack("32s", instr_name))
+        result.append(struct.pack("<32s", instr_name))
 
     return b"".join(result)
 
 
 def write(filename, instruments):
     header = struct.pack(
-        "%is" % len(GENMIDI_HEADER), GENMIDI_HEADER.encode("ascii")
+        "<%is" % len(GENMIDI_HEADER), GENMIDI_HEADER.encode("ascii")
     )
 
     with open(filename, "wb") as f:
