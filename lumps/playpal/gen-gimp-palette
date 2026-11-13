@@ -11,4 +11,8 @@ Columns: 16
 #
 EOF
 
-od -An -w3 -tu1 playpal-base.lmp >> doom.gpl
+# -v disables od's suppression of duplicate lines, which would
+# otherwise replace consecutive identical colors with a '*'.
+# -w is a GNU extension, so group bytes into RGB triples with xargs
+# instead, which also works on macOS and BSD.
+od -An -v -tu1 playpal-base.lmp | xargs -n 3 printf '%4d%4d%4d\n' >> doom.gpl
