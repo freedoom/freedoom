@@ -25,7 +25,7 @@ image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=
 {empty} +
 {empty} +
 
-Copyright © 2001-2025 Contributors to the Freedoom project.
+Copyright © 2001-2026 Contributors to the Freedoom project.
 This manual is licensed under the 3-clause BSD license.
 
 This is the English version of the Freedoom manual. Translations into other
@@ -67,7 +67,7 @@ The Doom Wiki
 https://doomwiki.org/wiki/Source_port[source ports page] has a
 comprehensive list of such programs. As a starting point, you can try:
 
-* https://zdoom.org[GZDoom], a modern source port that includes hardware
+* https://zdoom.org[UZDoom], a modern source port that includes hardware
   rendering and extended mod capability.
 * https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom],
   a more minimalist source port that retains an “old school” feel.
