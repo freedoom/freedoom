@@ -110,7 +110,7 @@ The general rules go as follows:
     license.
   * Freedoom's name often leads some people to think that the project's
     goal is to make a "free clone of Doom". This is not the case! While
-    compatibility with Doom is a goal, we are our building our own game.
+    compatibility with Doom is a goal, we are building our own game.
     Please make an effort to ensure your work is original and distinct,
     and not just a copy of anything from Doom.
   * Be especially careful of “free textures” (or “free sounds” or
@@ -158,7 +158,7 @@ _Doom_ graphics, as to remain compatible with mods.  Otherwise, levels
 may end up looking like a nightmare in design.  They may be
 thematically different as long as it doesn’t clash.
 
-_Doom_ uses a fictional corporation abbreviated as “UAC:” this is
+_Doom_ uses a fictional corporation abbreviated as “UAC”: this is
 trademarked by id Software and cannot be used in _Freedoom_.  Instead,
 use the initials “AGM” for _Freedoom_.
 
@@ -203,7 +203,7 @@ simple to use.
 ==== Crediting information
 
 _Freedoom_ is made up of submissions from many people all over the
-globe.  All of them, and you, deserve credit!  Please do not forget to
+globe.  All of them, and you, deserve credit! Please do not forget to
 provide your name and email when submitting resources.
 
 ==== Using Git
