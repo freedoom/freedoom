@@ -116,8 +116,8 @@ fd1title.png: text_strings ../titlepic/titlepic.png ../m_doom.png
 	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase1.png $@
 	cp $@ ../
 
-fd2title.png: text_strings ../titlepic/titlepic.png ../m_doom.png
-	./create_caption ../titlepic/titlepic.png ../m_doom.png ../t_phase2.png $@
+fd2title.png: text_strings ../titlepic/titlepic_2.png ../m_doom.png
+	./create_caption ../titlepic/titlepic_2.png ../m_doom.png ../t_phase2.png $@
 	cp $@ ../
 
 fdmtitle.png: ../titlepic/freedm_titlepic.png
