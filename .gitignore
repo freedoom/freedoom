@@ -37,6 +37,7 @@ doom.gpl
 /graphics/fd*title.png
 /graphics/help.png
 /graphics/m_*.png
+/graphics/mbftext.png
 /graphics/prboom.png
 /graphics/t_phase*.png
 !/graphics/m_dm.png
