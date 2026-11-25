@@ -7,7 +7,7 @@ ADOCOPTS=--backend=html5 --conf-file=.adoc-layout.conf
 ASCIIDOC_MAN=a2x -f manpage
 CPP=scripts/simplecpp
 DEUTEX=deutex
-DEUTEX_BASIC_ARGS=-v0 -rate accept
+DEUTEX_BASIC_ARGS=-iwad -v0 -rate accept
 DEUTEX_ARGS=$(DEUTEX_BASIC_ARGS) -doom2 bootstrap/
 NODE_BUILDER=ZenNode
 NODE_BUILDER_LEVELS=e?m? dm?? map??
