@@ -21,7 +21,7 @@ image::images/freedoom-logo.svg[Freedoom Logo,align="center",width=500,pdfwidth=
 
 <<<
 
-Copyright © 2001-2025 Contributors to the Freedoom project.
+Copyright © 2001-2026 Contributors to the Freedoom project.
 Ce manuel est sous licence BSD-3-Clause.
 
 Il s'agit de la version {build-version} du manuel.
@@ -59,7 +59,7 @@ Le Doom Wiki possède une
 https://doomwiki.org/wiki/Source_port[page dédiée aux portages], où vous pouvez trouver
 une liste exhaustive de ces programmes. Comme point de départ, vous pouvez essayer:
 
-* https://zdoom.org[GZDoom], un portage moderne qui intègre le rendu
+* https://zdoom.org[UZDoom], un portage moderne qui intègre le rendu
   matériel et offre une plus grande flexibilité pour les modifications.
 * https://www.chocolate-doom.org/wiki/index.php/Crispy_Doom[Crispy Doom],
   un portage minimaliste qui préserve une atmosphère « old school ».
